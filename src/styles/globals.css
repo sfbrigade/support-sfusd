@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+.delay-400 {
+  transition-delay: 400ms;
+}
+.delay-500 {
+  transition-delay: 500ms;
+}
+.delay-600 {
+  transition-delay: 600ms;
+}
+.delay-800 {
+  transition-delay: 800ms;
+}
+.delay-1000 {
+  transition-delay: 1000ms;
+}
+.delay-1200 {
+  transition-delay: 1200ms;
+}
+.delay-1400 {
+  transition-delay: 1400ms;
+}
+.delay-1600 {
+  transition-delay: 1600ms;
+}
+.delay-2000 {
+  transition-delay: 2000ms;
+}
+.delay-2400 {
+  transition-delay: 2400ms;
+}
+.delay-2800 {
+  transition-delay: 2800ms;
+}
+.delay-3200 {
+  transition-delay: 3200ms;
+}
