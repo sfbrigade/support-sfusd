@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MapMain from "./Map/MapMain";
+import MapMain from ".";
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
