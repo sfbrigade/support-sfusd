@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link href="/">
             <span className="cursor-pointer">
               <Image
-                src="/img/logo_placeholder.png"
+                src="/path-to-your-home-icon.png"
                 alt="Home"
                 width={24}
                 height={24}
@@ -57,14 +57,14 @@ const Navbar = () => {
             Nav 2
           </Link>
           <Link
-            href="/about"
+            href="/nav3"
             className={`py-4 transform transition-all duration-1000 ${
               isOpen
                 ? "translate-y-0 opacity-100 delay-600"
                 : "translate-y-[-10px] opacity-0"
             }`}
           >
-            About
+            Nav 3
           </Link>
 
           {/* Social Icons */}
