@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        fredoka: ["Fredoka", "sans-serif"],
-        lato: ["Lato", "sans-serif"],
+        fredoka: ["var(--font-fredoka)", "sans-serif"],
+        lato: ["var(--font-lato)", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
