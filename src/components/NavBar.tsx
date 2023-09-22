@@ -38,7 +38,7 @@ const Navbar = () => {
         >
           <Link
             href="/nav1"
-            className={`py-4 transform transition-all duration-1000 ${
+            className={`font-fredoka py-4 transform transition-all duration-1000 ${
               isOpen
                 ? "translate-y-0 opacity-100 delay-200"
                 : "translate-y-[-10px] opacity-0"
@@ -48,7 +48,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/nav2"
-            className={`py-4 transform transition-all duration-1000 ${
+            className={`font-fredoka py-4 transform transition-all duration-1000 ${
               isOpen
                 ? "translate-y-0 opacity-100 delay-400"
                 : "translate-y-[-10px] opacity-0"
@@ -58,7 +58,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/nav3"
-            className={`py-4 transform transition-all duration-1000 ${
+            className={`font-fredoka py-4 transform transition-all duration-1000 ${
               isOpen
                 ? "translate-y-0 opacity-100 delay-600"
                 : "translate-y-[-10px] opacity-0"
