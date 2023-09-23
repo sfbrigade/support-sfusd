@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import MapMain from "./Map/MapMain";
+import MapBase from "./MapBase";
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
 
   return (
-    // <div className="flex items-start h-[calc(100vh-54px)] flex-grow relative md:block">
     <div className="block md:hidden">
       <svg
         className="w-auto h-full"
@@ -14,7 +13,7 @@ const MapComponent = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clip-path="url(#clip0_2046_3404)">
-          <MapMain />
+          <MapBase />
 
           <path
             d="M82.6379 471.887C79.7879 469.337 76.0379 467.987 72.1379 468.437C66.1379 468.887 61.1879 473.237 60.1379 478.787C59.3879 482.387 60.1379 485.987 62.3879 488.987L70.0379 499.637C70.6379 500.687 71.9879 501.287 73.3379 501.287C74.6879 501.287 76.0379 500.687 76.7879 499.487L84.4379 488.837C86.0879 486.587 86.8379 484.037 86.8379 481.337C86.8379 477.737 85.3379 474.287 82.6379 471.887Z"

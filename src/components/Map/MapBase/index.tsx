@@ -1,4 +1,4 @@
-const MapMain = () => {
+const MapBase = () => {
   return (
     <>
       <rect width="390" height="844" fill="#82DCF6" />
@@ -317,4 +317,4 @@ const MapMain = () => {
   );
 };
 
-export default MapMain;
+export default MapBase;

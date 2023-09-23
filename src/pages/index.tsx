@@ -1,6 +1,6 @@
 // import CounterComponent from "../components/counter"; // example for redux
 import Navbar from "../components/NavBar";
-import MapComponent from "@/components/Map";
+import MapComponent from "../components/Map";
 import Image from "next/image";
 
 export default function Home() {
