@@ -1,20 +1,178 @@
-import React, { useState } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  MouseEvent as ReactMouseEvent,
+} from "react";
 import MapBase from "./MapBase";
+import ZoomControls from "./ZoomControls";
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
+  const [viewBoxDimensions, setViewBoxDimensions] = useState({
+    x: 0,
+    y: 0,
+    width: 390,
+    height: 844,
+  });
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [startY, setStartY] = useState(0);
+
+  const svgRef = React.useRef<SVGSVGElement | null>(null);
+  const viewBoxRef = useRef(viewBoxDimensions);
+
+  React.useEffect(() => {
+    viewBoxRef.current = viewBoxDimensions;
+  }, [viewBoxDimensions]);
+
+  const handleZoomIn = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const bbox = e.currentTarget.getBoundingClientRect();
+
+    const mouseX = e.clientX - bbox.left;
+    const mouseY = e.clientY - bbox.top;
+
+    const svgX =
+      (mouseX / bbox.width) * viewBoxDimensions.width + viewBoxDimensions.x;
+    const svgY =
+      (mouseY / bbox.height) * viewBoxDimensions.height + viewBoxDimensions.y;
+
+    const newWidth = viewBoxDimensions.width / 1.1;
+    const newHeight = viewBoxDimensions.height / 1.1;
+
+    const newX = svgX - (mouseX / bbox.width) * newWidth;
+    const newY = svgY - (mouseY / bbox.height) * newHeight;
+
+    setViewBoxDimensions({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight,
+    });
+  };
+
+  const handleZoomOut = () => {
+    setViewBoxDimensions((prevDimensions) => {
+      const newWidth = Math.min(prevDimensions.width * 1.1, 390);
+      const newHeight = Math.min(prevDimensions.height * 1.1, 844);
+
+      const dWidth = newWidth - prevDimensions.width;
+      const dHeight = newHeight - prevDimensions.height;
+
+      let newX = prevDimensions.x - dWidth / 2;
+      let newY = prevDimensions.y - dHeight / 2;
+
+      newX = Math.min(Math.max(newX, 0), 390 - newWidth);
+      newY = Math.min(Math.max(newY, 0), 844 - newHeight);
+
+      return {
+        x: newX,
+        y: newY,
+        width: newWidth,
+        height: newHeight,
+      };
+    });
+  };
+
+  const handleMouseDown = (e: ReactMouseEvent<SVGSVGElement>) => {
+    console.log("Mouse Move Event Triggered");
+
+    setStartX(e.clientX);
+    setStartY(e.clientY);
+    setIsDragging(true);
+  };
+
+  const handleMouseMove = (e: ReactMouseEvent<SVGSVGElement>) => {
+    if (!isDragging) return;
+
+    const dx = (e.clientX - startX) / (viewBoxDimensions.width / 390);
+    const dy = (e.clientY - startY) / (viewBoxDimensions.height / 844);
+
+    setStartX(e.clientX);
+    setStartY(e.clientY);
+
+    setViewBoxDimensions((prev) => {
+      const newX = Math.min(Math.max(prev.x - dx, 0), 390 - prev.width);
+      const newY = Math.min(Math.max(prev.y - dy, 0), 844 - prev.height);
+
+      return {
+        x: newX,
+        y: newY,
+        width: prev.width,
+        height: prev.height,
+      };
+    });
+  };
+
+  const handleMouseUp = (e: ReactMouseEvent<SVGSVGElement>) => {
+    console.log("Mouse Up Event Triggered - handleMouseUp");
+
+    setIsDragging(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<SVGSVGElement>) => {
+    console.log("Touch Start Event Triggered");
+
+    const touch = e.touches[0];
+    setStartX(touch.clientX);
+    setStartY(touch.clientY);
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<SVGSVGElement>) => {
+    if (!isDragging) return;
+
+    const touch = e.touches[0];
+    const dx = (touch.clientX - startX) / (viewBoxDimensions.width / 390);
+    const dy = (touch.clientY - startY) / (viewBoxDimensions.height / 844);
+
+    setStartX(touch.clientX);
+    setStartY(touch.clientY);
+
+    setViewBoxDimensions((prev) => {
+      const newX = Math.min(Math.max(prev.x - dx, 0), 390 - prev.width);
+      const newY = Math.min(Math.max(prev.y - dy, 0), 844 - prev.height);
+
+      return {
+        x: newX,
+        y: newY,
+        width: prev.width,
+        height: prev.height,
+      };
+    });
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<SVGSVGElement>) => {
+    console.log("Touch End Event Triggered - handleTouchEnd");
+
+    setIsDragging(false);
+  };
+
+  const disableZoomOut =
+    viewBoxDimensions.width >= 390 && viewBoxDimensions.height >= 844;
 
   return (
     <div className="block md:hidden">
+      <ZoomControls
+        onZoomIn={handleZoomIn}
+        onZoomOut={handleZoomOut}
+        disableZoomOut={disableZoomOut}
+      />
       <svg
+        ref={svgRef}
         className="w-auto h-full"
-        viewBox="0 0 390 844"
+        viewBox={`${viewBoxDimensions.x} ${viewBoxDimensions.y} ${viewBoxDimensions.width} ${viewBoxDimensions.height}`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <g clip-path="url(#clip0_2046_3404)">
           <MapBase />
-
           <path
             d="M82.6379 471.887C79.7879 469.337 76.0379 467.987 72.1379 468.437C66.1379 468.887 61.1879 473.237 60.1379 478.787C59.3879 482.387 60.1379 485.987 62.3879 488.987L70.0379 499.637C70.6379 500.687 71.9879 501.287 73.3379 501.287C74.6879 501.287 76.0379 500.687 76.7879 499.487L84.4379 488.837C86.0879 486.587 86.8379 484.037 86.8379 481.337C86.8379 477.737 85.3379 474.287 82.6379 471.887Z"
             fill="#3A86FF"
