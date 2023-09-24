@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/mapbox-gl": "^2.7.14",
     "hamburger-react": "^2.5.0",
+    "mapbox-gl": "^2.15.0",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
