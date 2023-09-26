@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link href="/">
             <span className="cursor-pointer">
               <Image
-                src="/path-to-your-home-icon.png"
+                src="/logo_placeholder.png"
                 alt="Home"
                 width={24}
                 height={24}
