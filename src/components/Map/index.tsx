@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import MapBase from "./MapBase";
 import ZoomControls from "./ZoomControls";
+import MapCard from "../MapCard/MapCard"
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
@@ -323,11 +324,7 @@ const MapComponent = () => {
         </defs>
       </svg>
       {hoveredSchool === "School1" && (
-        <div className="small-box absolute bottom-3 left-3 bg-white p-2 shadow-lg rounded z-50 flex flex-col">
-          <span>School1 Details School1 Details School1 Details</span>
-          <span>School1 Details School1 Details School1 Details</span>
-          <span>School1 Details School1 Details School1 Details</span>
-        </div>
+        <MapCard />
       )}
     </div>
   );
