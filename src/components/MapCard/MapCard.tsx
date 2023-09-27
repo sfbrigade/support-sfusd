@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
 
 
-const MapCard = (props) => {
+const MapCard = (props: { img: string; name: string; district: string ; students: string; frl: string; ell: string ; }) => {
     return (
         <>
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl z:40">
