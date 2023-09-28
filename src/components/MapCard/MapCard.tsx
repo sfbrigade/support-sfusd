@@ -6,10 +6,10 @@ import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLik
 const MapCard = (props: { img: string; name: string; district: string ; students: string; frl: string; ell: string ; }) => {
     return (
         <>
-        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl z-40">
+        <div className="fixed mx-auto bottom-4 left-20 max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl z-40">
             <div className="grid grid-cols-4 gap-3 md:flex">
                 <div className="sm:shrink-0">
-                    <img className="h-48 object-cover h-full md:w-48" src={props.img} alt="Modern building architecture" />
+                    <img className="h-48 object-cover h-full md:w-48" src={props.img} alt={props.name} />
                 </div>
                 <div className="col-span-3">
                     <div className="tracking-wide text-lg text-indigo-500 hover:underline font-semibold font-sans">{props.name}</div>
