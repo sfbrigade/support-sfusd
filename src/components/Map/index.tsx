@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import MapBase from "./MapBase";
 import ZoomControls from "./ZoomControls";
+import MapCard from "../MapCard/MapCard"
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
@@ -152,7 +153,7 @@ const MapComponent = () => {
     viewBoxDimensions.width >= 390 && viewBoxDimensions.height >= 844;
 
   return (
-    <div className="block md:hidden">
+    <div className="block md:hidden z-0">
       <ZoomControls
         onZoomIn={handleZoomIn}
         onZoomOut={handleZoomOut}
@@ -323,11 +324,9 @@ const MapComponent = () => {
         </defs>
       </svg>
       {hoveredSchool === "School1" && (
-        <div className="small-box absolute bottom-3 left-3 bg-white p-2 shadow-lg rounded z-50 flex flex-col">
-          <span>School1 Details School1 Details School1 Details</span>
-          <span>School1 Details School1 Details School1 Details</span>
-          <span>School1 Details School1 Details School1 Details</span>
-        </div>
+       
+       <MapCard name="Galileo Academy of Science & Technology" district="Russian Hill" students="1840" frl="61" ell="21.2" img="/img/galileo.jpg"/>
+    
       )}
     </div>
   );

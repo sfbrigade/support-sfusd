@@ -11,7 +11,6 @@ export default function Home() {
       <main>
         <Navbar />
         <MapComponent />
-        <MapCard />
       </main>
     </div>
   );
