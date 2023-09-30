@@ -14,10 +14,10 @@ const MapView = () => {
     <div className="relative">
       <div
         onClick={toggleView}
-        className={`absolute right-4 p-1 rounded-full bg-black flex items-center md:hidden ${
+        className={`fixed right-4 p-1 rounded-full bg-black flex items-center md:hidden top-24 ${
           isMapView
-            ? "top-24"
-            : "md:flex md:items-end md:justify-end md:bottom-4 top-0"
+            ? ""
+            : "md:flex md:items-end md:justify-end md:bottom-4"
         }`}
       >
         <div

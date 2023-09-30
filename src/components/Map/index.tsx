@@ -6,7 +6,7 @@ import React, {
 } from "react";
 import MapBase from "./MapBase";
 import ZoomControls from "./ZoomControls";
-import MapCard from "../MapCard/MapCard"
+import MapCard from "../MapCard/MapCard";
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
@@ -324,9 +324,14 @@ const MapComponent = () => {
         </defs>
       </svg>
       {hoveredSchool === "School1" && (
-       
-       <MapCard name="Galileo Academy of Science & Technology" district="Russian Hill" students="1840" frl="61" ell="21.2" img="/img/galileo.jpg"/>
-    
+        <MapCard
+          name="Galileo Academy of Science & Technology"
+          district="Russian Hill"
+          students="1840"
+          frl="61"
+          ell="21.2"
+          img="/img/galileo.jpg"
+        />
       )}
     </div>
   );
