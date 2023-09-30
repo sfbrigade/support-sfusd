@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="fixed w-full bg-white text-black p-4">
+    <div className="fixed w-full bg-white text-black p-4 z-50">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Home Icon */}
@@ -56,7 +56,7 @@ const Navbar = () => {
 
           {/* Social Icons */}
           <div
-            className={`flex space-x-4 mt-8 transform transition-all duration-1000 ${
+            className={`flex space-x-4 py-4 transform transition-all duration-1000 ${
               isOpen
                 ? "translate-y-0 opacity-100 delay-800"
                 : "translate-y-[-10px] opacity-0"
