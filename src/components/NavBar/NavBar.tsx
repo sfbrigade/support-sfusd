@@ -18,17 +18,15 @@ const Navbar = () => {
               <Image
                 src="/logo_placeholder.png"
                 alt="Home"
-                width={24}
-                height={24}
+                width={32}
+                height={32}
               />
             </span>
           </Link>
 
           {/* About Link on desktop */}
           <div className="hidden md:block">
-            <Link href="/about">
-              About
-            </Link>
+            <Link href="/about">About</Link>
           </div>
 
           {/* Hamburger Icon */}
@@ -45,7 +43,8 @@ const Navbar = () => {
               : "opacity-0 pointer-events-none"
           }`}
         >
-          <Link href="/about"
+          <Link
+            href="/about"
             className={`py-4 transform transition-all duration-1000 ${
               isOpen
                 ? "translate-y-0 opacity-100 delay-200"
