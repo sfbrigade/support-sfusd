@@ -1,4 +1,4 @@
-const MapListCard = (props: {
+const MapCard = (props: {
   img: string;
   name: string;
   district: string;
@@ -44,4 +44,4 @@ const MapListCard = (props: {
   );
 };
 
-export default MapListCard;
+export default MapCard;
