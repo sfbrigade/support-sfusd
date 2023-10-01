@@ -7,7 +7,7 @@ const schools = [
     frl: "59",
     ell: "",
     color: "#ff7701",
-    img: "https://noehill.com/sf/landmarks/excelsior/balboa_high_school_cayuga_elevation.jpg",
+    img: "img/balboa.jpg",
   },
   {
     name: "Burton High School",
@@ -17,7 +17,7 @@ const schools = [
     frl: "64",
     ell: "",
     color: "#ea4335",
-    img: "https://www.altenconstruction.com/projects/images/Burton_02.jpg",
+    img: "img/Burton_01a.jpg",
   },
   {
     name: "Downtown High School",
@@ -27,7 +27,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ea4335",
-    img: "https://www.sfusd.edu/sites/default/files/inline-images/DHS%20exterior_1.png",
+    img: "img/downtown.jpg",
   },
   {
     name: "Galileo Academy of Science & Technology",
@@ -37,7 +37,8 @@ const schools = [
     frl: "61",
     ell: "21.2",
     color: "#ff7701",
-    img: "https://upload.wikimedia.org/wikipedia/commons/7/71/Galileo_Academy_of_Science_and_Technology_entrance.jpg",
+    // img: "https://upload.wikimedia.org/wikipedia/commons/7/71/Galileo_Academy_of_Science_and_Technology_entrance.jpg",
+    img: 'img/galileo.jpg'
   },
   {
     name: "Ida B. Wells High School",
@@ -47,7 +48,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ff7701",
-    img: "https://www.sfusd.edu/sites/default/files/styles/embed_large/public/2022-08/Ida%20B%20Wells%20HS_201608_10.jpg?itok=dwK0US5l",
+    img: "img/idabwells.jpg",
   },
   {
     name: "Independence High School",
@@ -57,7 +58,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#3986ff",
-    img: "https://imagescdn.homes.com/i2/Bja8EAZWUhAgtWxKUqtKXFhS2qBCl3sbo3G_sQMRuNw/114/image.jpg?p=1",
+    img: "img/independence.jpg",
   },
   {
     name: "International High School",
@@ -67,7 +68,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ff7701",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/66pageSF.jpg/1920px-66pageSF.jpg",
+    img: "img/intl.png",
   },
   {
     name: "June Jordan School for Equity",
@@ -77,7 +78,7 @@ const schools = [
     frl: "65",
     ell: "48",
     color: "#ea4335",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/june_jordan_school.png",
   },
   {
     name: "Lincoln High School",
@@ -87,7 +88,7 @@ const schools = [
     frl: "48",
     ell: "",
     color: "#3986ff",
-    img: "https://media.cnn.com/api/v1/images/stellar/prod/210127152221-abraham-lincoln-high-school-file.jpg?q=x_3,y_164,h_1684,w_2993,c_crop/h_270,w_480/f_webp",
+    img: "img/lincoln.jpg",
   },
   {
     name: "Lowell High School",
@@ -97,7 +98,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#3986ff",
-    img: "https://s.hdnux.com/photos/01/15/16/60/20245522/5/1440x0.webp",
+    img: "img/lowell.jpg",
   },
   {
     name: "Mission High School",
@@ -107,7 +108,7 @@ const schools = [
     frl: "56",
     ell: "",
     color: "#ea4335",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/Mission-High-School.jpg",
   },
   {
     name: "John O'Connell Technical High School",
@@ -117,7 +118,7 @@ const schools = [
     frl: "65",
     ell: "",
     color: "#ff7701",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/johnoconnell.png",
   },
   {
     name: "Ruth Asawa School of the Arts (SOTA)",
@@ -127,7 +128,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#3986ff",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/ruthasawa.jpg"
   },
   {
     name: "The Academy",
@@ -137,7 +138,7 @@ const schools = [
     frl: "55",
     ell: "",
     color: "#3986ff",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/theacademy.png",
   },
   {
     name: "Thurgood Marshall High School",
@@ -147,7 +148,7 @@ const schools = [
     frl: "62",
     ell: "",
     color: "#ea4335",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/Thurgood-Marshall-Academic-High-School.jpg",
   },
   {
     name: "Wallenberg High School",
@@ -157,7 +158,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ff7701",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/raoulwallenberg.jpg",
   },
   {
     name: "George Washington High School",
@@ -167,7 +168,7 @@ const schools = [
     frl: "46",
     ell: "",
     color: "#ff7701",
-    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
+    img: "img/georgewashington.jpg",
   },
 ];
 

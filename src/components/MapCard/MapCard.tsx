@@ -1,3 +1,5 @@
+import {BiSolidUserAccount} from 'react-icons/bi'
+
 const MapListCard = (props: {
   img: string;
   name: string;
@@ -17,7 +19,7 @@ const MapListCard = (props: {
         <div className="text-gray-600">{props.district}</div>
         <div className="flex items-center mt-2">
           <img
-            src="/icons/student-icon.png"
+            src="student.png"
             alt="Student Icon"
             className="w-5 h-5 mr-2"
           />
@@ -25,7 +27,7 @@ const MapListCard = (props: {
         </div>
         <div className="flex items-center mt-2">
           <img
-            src="/icons/lunch-icon.png"
+            src="/frl.png"
             alt="Lunch Icon"
             className="w-5 h-5 mr-2"
           />
@@ -33,7 +35,7 @@ const MapListCard = (props: {
         </div>
         <div className="flex items-center mt-2">
           <img
-            src="/icons/ell-icon.png"
+            src="/language.png"
             alt="ELL Icon"
             className="w-5 h-5 mr-2"
           />
