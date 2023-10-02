@@ -7,6 +7,7 @@ const schools = [
     frl: "59",
     ell: "",
     color: "#ff7701",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Burton High School",
@@ -16,6 +17,7 @@ const schools = [
     frl: "64",
     ell: "",
     color: "#ea4335",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Downtown High School",
@@ -25,6 +27,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ea4335",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Galileo Academy of Science & Technology",
@@ -34,6 +37,7 @@ const schools = [
     frl: "61",
     ell: "21.2",
     color: "#ff7701",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Ida B. Wells High School",
@@ -43,6 +47,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ff7701",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Independence High School",
@@ -52,6 +57,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#3986ff",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "International High School",
@@ -61,6 +67,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ff7701",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "June Jordan School for Equity",
@@ -70,6 +77,7 @@ const schools = [
     frl: "65",
     ell: "48",
     color: "#ea4335",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Lincoln High School",
@@ -79,6 +87,7 @@ const schools = [
     frl: "48",
     ell: "",
     color: "#3986ff",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Lowell High School",
@@ -88,6 +97,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#3986ff",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Mission High School",
@@ -97,6 +107,7 @@ const schools = [
     frl: "56",
     ell: "",
     color: "#ea4335",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "John O'Connell Technical High School",
@@ -106,6 +117,7 @@ const schools = [
     frl: "65",
     ell: "",
     color: "#ff7701",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Ruth Asawa School of the Arts (SOTA)",
@@ -115,6 +127,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#3986ff",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "The Academy",
@@ -124,6 +137,7 @@ const schools = [
     frl: "55",
     ell: "",
     color: "#3986ff",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Thurgood Marshall High School",
@@ -133,6 +147,7 @@ const schools = [
     frl: "62",
     ell: "",
     color: "#ea4335",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "Wallenberg High School",
@@ -142,6 +157,7 @@ const schools = [
     frl: "",
     ell: "",
     color: "#ff7701",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
   {
     name: "George Washington High School",
@@ -151,6 +167,7 @@ const schools = [
     frl: "46",
     ell: "",
     color: "#ff7701",
+    img: "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1",
   },
 ];
 

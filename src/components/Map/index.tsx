@@ -325,9 +325,14 @@ const MapComponent = () => {
         </defs>
       </svg>
       {hoveredSchool === "School1" && (
-       
-       <MapCard name="Galileo Academy of Science & Technology" district="Russian Hill" students="1840" frl="61" ell="21.2" img="/img/galileo.jpg"/>
-    
+        <MapCard
+          name="Galileo Academy of Science & Technology"
+          district="Russian Hill"
+          students="1840"
+          frl="61"
+          ell="21.2"
+          img="/img/galileo.jpg"
+        />
       )}
     </div>
   );
