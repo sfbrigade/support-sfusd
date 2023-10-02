@@ -7,6 +7,7 @@ import React, {
 import MapBase from "./MapBase";
 import ZoomControls from "./ZoomControls";
 import MapCard from "../MapCard/MapCard"
+import SearchBar from "../SearchBar/SearchBar";
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);

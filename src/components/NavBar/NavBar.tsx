@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="fixed w-full bg-gray-800 text-white p-4">
+    <div className="fixed w-full bg-white text-black p-4 z-60">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Home Icon */}

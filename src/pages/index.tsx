@@ -3,6 +3,7 @@ import Navbar from "../components/NavBar/NavBar";
 import MapComponent from "../components/Map";
 import MapCard from "../components/MapCard/MapCard"
 import Image from "next/image";
+import SearchBar from "../components/SearchBar/SearchBar";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       
       <main>
         <Navbar />
+        <SearchBar />
         <MapComponent />
       </main>
     </div>
