@@ -5,6 +5,7 @@ import Navbar from "../components/NavBar/NavBar";
 import MapComponent from "../components/Map";
 import MapCard from "../components/MapCard/MapCard"
 import SearchBar from "../components/SearchBar/SearchBar";
+import MapView from "../components/MapView/MapView";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <main>
         <Navbar />
         <SearchBar />
-        <MapComponent />
+        <MapView />
       </main>
     </div>
   );

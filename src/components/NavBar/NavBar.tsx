@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
 
-    <div className="fixed w-full bg-white text-black p-4 z-60">
+    <div className="fixed w-full bg-white text-black p-4 z-50">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Home Icon */}
