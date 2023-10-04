@@ -8,7 +8,7 @@ const MapCard = (props: {
 }) => {
     return (
         <>
-        <div className="fixed mx-auto bottom-4 max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl z-40">
+        <div className="absolute mx-auto bottom-4 max-w-md bg-white rounded-xl shadow-md overflow-hidden z-40">
             <div className="grid grid-cols-4 gap-3 md:flex">
                 <div className="sm:shrink-0">
                     <img className="h-48 object-cover h-full md:w-48" src={props.img} alt={props.name} />

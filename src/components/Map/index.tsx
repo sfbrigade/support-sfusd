@@ -210,6 +210,7 @@ const MapComponent = () => {
             <path
               d="M124.99 494.437C127.807 494.437 130.09 492.154 130.09 489.337C130.09 486.521 127.807 484.237 124.99 484.237C122.174 484.237 119.89 486.521 119.89 489.337C119.89 492.154 122.174 494.437 124.99 494.437Z"
               fill="white"
+              onMouseDown={() => clickedSchool === "sota" ? setClickedSchool(null) : setClickedSchool("sota")}
             />
           </>
           <>
@@ -445,7 +446,7 @@ const MapComponent = () => {
           students="134"
           frl="75"
           ell="17.8"
-          img="/img/johnoconnell.png"
+          img="/img/downtown.jpg"
         />
       )}
       {clickedSchool === "international" && (

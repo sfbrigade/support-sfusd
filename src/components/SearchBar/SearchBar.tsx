@@ -4,7 +4,7 @@ import Schools from "../../data/schools"
 export default function SearchBar() {
     const [searchInput, setSearchInput] = useState("");
 
-    const handleChange = (e) => {
+    const handleChange = (e: { preventDefault: () => void; target: { value: React.SetStateAction<string>; }; }) => {
         e.preventDefault();
         setSearchInput(e.target.value);
       };
@@ -35,7 +35,7 @@ export default function SearchBar() {
                 <input
                     type="text"
                     placeholder="Search Schools"
-                    className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-full outline-none bg-gray-50 focus:bg-white focus:border-red"
+                    className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-full outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
                 />
             </div>
         </form>
