@@ -7,6 +7,18 @@ import React, {
 import MapBase from "./MapBase";
 import ZoomControls from "./ZoomControls";
 import MapCard from "../MapCard/MapCard";
+import MapLayer1 from "./MapLayers/MapLayer1";
+import MapLayer2 from "./MapLayers/MapLayer2";
+import MapLayer3 from "./MapLayers/MapLayer3";
+
+const getMapLayer = (width: number) => {
+  if (width < 130) {
+    return "MapLayer3";
+  } else if (width < 260) {
+    return "MapLayer2";
+  }
+  return "MapLayer1";
+};
 
 const MapComponent = () => {
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
@@ -19,6 +31,8 @@ const MapComponent = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
+
+  const mapLayer = getMapLayer(viewBoxDimensions.width);
 
   const svgRef = React.useRef<SVGSVGElement | null>(null);
   const viewBoxRef = useRef(viewBoxDimensions);
@@ -66,6 +80,8 @@ const MapComponent = () => {
       newX = Math.min(Math.max(newX, 0), 390 - newWidth);
       newY = Math.min(Math.max(newY, 0), 844 - newHeight);
 
+      console.log("newWidth:", newWidth);
+
       return {
         x: newX,
         y: newY,
@@ -86,8 +102,8 @@ const MapComponent = () => {
   const handleMouseMove = (e: ReactMouseEvent<SVGSVGElement>) => {
     if (!isDragging) return;
 
-    const dx = (e.clientX - startX) / (viewBoxDimensions.width / 390);
-    const dy = (e.clientY - startY) / (viewBoxDimensions.height / 844);
+    const dx = ((e.clientX - startX) * 0.25) / (viewBoxDimensions.width / 390);
+    const dy = ((e.clientY - startY) * 0.25) / (viewBoxDimensions.height / 844);
 
     setStartX(e.clientX);
     setStartY(e.clientY);
@@ -124,8 +140,10 @@ const MapComponent = () => {
     if (!isDragging) return;
 
     const touch = e.touches[0];
-    const dx = (touch.clientX - startX) / (viewBoxDimensions.width / 390);
-    const dy = (touch.clientY - startY) / (viewBoxDimensions.height / 844);
+    const dx =
+      ((touch.clientX - startX) * 0.25) / (viewBoxDimensions.width / 390);
+    const dy =
+      ((touch.clientY - startY) * 0.25) / (viewBoxDimensions.height / 844);
 
     setStartX(touch.clientX);
     setStartY(touch.clientY);
@@ -173,8 +191,11 @@ const MapComponent = () => {
         onTouchEnd={handleTouchEnd}
       >
         <g clip-path="url(#clip0_2046_3404)">
-          <MapBase />
-          <path
+          {/* <MapBase /> */}
+          {mapLayer === "MapLayer1" && <MapLayer1 />}
+          {mapLayer === "MapLayer2" && <MapLayer2 />}
+          {mapLayer === "MapLayer3" && <MapLayer3 />}
+          {/* <path
             d="M82.6379 471.887C79.7879 469.337 76.0379 467.987 72.1379 468.437C66.1379 468.887 61.1879 473.237 60.1379 478.787C59.3879 482.387 60.1379 485.987 62.3879 488.987L70.0379 499.637C70.6379 500.687 71.9879 501.287 73.3379 501.287C74.6879 501.287 76.0379 500.687 76.7879 499.487L84.4379 488.837C86.0879 486.587 86.8379 484.037 86.8379 481.337C86.8379 477.737 85.3379 474.287 82.6379 471.887Z"
             fill="#3A86FF"
           />
@@ -315,7 +336,7 @@ const MapComponent = () => {
               onMouseEnter={() => setHoveredSchool("School1")}
               onMouseLeave={() => setHoveredSchool(null)}
             />
-          </>
+          </> */}
         </g>
         <defs>
           <clipPath id="clip0_2046_3404">
