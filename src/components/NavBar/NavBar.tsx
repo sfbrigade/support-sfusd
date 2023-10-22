@@ -9,24 +9,27 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="fixed w-full bg-white text-black p-4 z-50">
+    <div className="sticky w-full bg-white text-black p-4 z-50">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Home Icon */}
           <Link href="/">
-            <span className="cursor-pointer">
-              <Image
-                src="/logo_placeholder.png"
-                alt="Home"
-                width={32}
-                height={32}
-              />
-            </span>
+            <Image
+              src="/logo_placeholder.png"
+              alt="Home"
+              width={32}
+              height={32}
+            />
           </Link>
 
-          {/* About Link on desktop */}
-          <div className="hidden md:block">
-            <Link href="/about">About</Link>
+          {/* Links on desktop */}
+          <div className="hidden md:flex space-x-10">
+            <Link href="/map">
+              Schools
+            </Link>
+            <Link href="/about">
+              About
+            </Link>
           </div>
 
           {/* Hamburger Icon */}
@@ -43,15 +46,27 @@ const Navbar = () => {
               : "opacity-0 pointer-events-none"
           }`}
         >
-          <Link
-            href="/about"
-            className={`py-4 transform transition-all duration-1000 ${
-              isOpen
-                ? "translate-y-0 opacity-100 delay-200"
-                : "translate-y-[-10px] opacity-0"
-            }`}
-          >
-            About
+          <Link href="/about">
+            <div
+              className={`py-4 transform transition-all duration-1000 ${
+                isOpen
+                  ? "translate-y-0 opacity-100 delay-200"
+                  : "translate-y-[-10px] opacity-0"
+              }`}
+            >
+              About
+            </div>
+          </Link>
+          <Link href="/map">
+            <div
+              className={`py-4 transform transition-all duration-1000 ${
+                isOpen
+                  ? "translate-y-0 opacity-100 delay-400"
+                  : "translate-y-[-10px] opacity-0"
+              }`}
+            >
+              Schools
+            </div>
           </Link>
 
           {/* Social Icons */}

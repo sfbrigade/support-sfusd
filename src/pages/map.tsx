@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import MapComponent from "../Map/index";
-import MapList from "../MapList/MapList";
+import MapComponent from "../components/Map";
+import MapList from "../components/MapList/MapList";
+import Navbar from "../components/NavBar/NavBar";
 import { MdMap, MdViewList } from "react-icons/md";
 
 const MapView = () => {
@@ -11,13 +12,17 @@ const MapView = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative h-screen flex flex-col">
+      <Navbar />
+      <div
+        className={`flex-1 ${isMapView ? "overflow-hidden" : "overflow-auto"}`}
+      >
+        {isMapView ? <MapComponent /> : <MapList />}
+      </div>
       <div
         onClick={toggleView}
         className={`fixed right-4 p-1 rounded-full bg-black flex items-center md:hidden top-24 ${
-          isMapView
-            ? ""
-            : "md:flex md:items-end md:justify-end md:bottom-4"
+          isMapView ? "" : "md:flex md:items-end md:justify-end md:bottom-4"
         }`}
       >
         <div
@@ -35,7 +40,6 @@ const MapView = () => {
           <MdViewList className="text-white text-lg" />
         </div>
       </div>
-      {isMapView ? <MapComponent /> : <MapList />}
     </div>
   );
 };

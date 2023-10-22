@@ -4,7 +4,7 @@ import schools from "../../data/schools";
 
 const MapList = () => {
   return (
-    <div className="block md:hidden flex flex-col p-4 mt-24">
+    <div className="block md:hidden flex flex-col p-4 mt-2">
       <div className="flex justify-start items-center mb-4">
         <h1 className="text-2xl font-bold">List of Schools</h1>
       </div>
