@@ -1,6 +1,6 @@
 # About Support SFUSD
 
-Hello! Thanks for checking out Support SFUSD. We started this project in summer 2022 to solve a big problem in San Francisco. Schools need help. And people who live or work in SF want to support local schools, but they don’t know how. We are building a [website](https://supportsfusd.vercel.app/) to help solve that.
+Hello! Thanks for checking out Support SFUSD. We started this project in summer 2022 to solve a big problem in San Francisco. Schools need help. And people who live or work in SF want to support local schools, but they don’t know how. We are building a [website](https://support-sfusd.vercel.app/) to help solve that.
 
 <br>
 
