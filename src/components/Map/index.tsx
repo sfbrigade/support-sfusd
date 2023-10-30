@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import MapBase from "./MapBase";
 import ZoomControls from "./ZoomControls";
+import schools from "@/data/schools";
 import MapCard from "../MapCard/MapCard";
 import MapLayer1 from "./MapLayers/MapLayer1";
 import MapLayer2 from "./MapLayers/MapLayer2";
@@ -31,6 +32,7 @@ const MapComponent = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
+  const [school, setSchool] = useState<string>('');
 
   const mapLayer = getMapLayer(viewBoxDimensions.width);
 
@@ -96,6 +98,7 @@ const MapComponent = () => {
 
     setStartX(e.clientX);
     setStartY(e.clientY);
+    console.log(startX, "x", startY, "y")
     setIsDragging(true);
   };
 
