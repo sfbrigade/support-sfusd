@@ -29,6 +29,10 @@ const MapComponent = () => {
     width: 390,
     height: 844,
   });
+
+  // getting all elements by ID
+  console.log(schools);
+
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
