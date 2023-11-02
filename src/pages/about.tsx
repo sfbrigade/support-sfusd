@@ -44,11 +44,14 @@ const About = () => {
           <p className="text-lg mb-4">
             If you have any questions or would like to learn more about how you
             can support SFUSD, please do not hesitate to{" "}
-            <a href="" className="text-blue-600">
+            <a href="https://www.codeforsanfrancisco.org/about" target="_blank" rel="noopener noreferer" className="text-blue-600">
               contact us
             </a>
             .
           </p>
+
+          <img src="https://www.sfusd.edu/sites/default/files/styles/max_590/public/Volunteer.jpg?itok=eqCsOfgA" alt="Colorful hands reaching up towards the word 'VOLUNTEER'" />
+
         </div>
       </main>
     </div>
