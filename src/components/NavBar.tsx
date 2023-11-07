@@ -9,8 +9,8 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="sticky w-full bg-white text-black p-4 z-50">
-      <div className="container mx-auto">
+    <div className="sticky w-full text-black p-4 z-50">
+      <div className="container mx-auto max-w-[1280px]">
         <div className="flex justify-between items-center">
           {/* Home Icon */}
           <Link href="/">
@@ -24,12 +24,8 @@ const Navbar = () => {
 
           {/* Links on desktop */}
           <div className="hidden md:flex space-x-10">
-            <Link href="/map">
-              Schools
-            </Link>
-            <Link href="/about">
-              About
-            </Link>
+            <Link href="/map">Schools</Link>
+            <Link href="/about">About</Link>
           </div>
 
           {/* Hamburger Icon */}
@@ -40,7 +36,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-16 left-0 w-full flex flex-col items-center justify-start bg-white text-black h-screen pt-4 transition-opacity duration-1000 ${
+          className={`fixed top-16 left-0 w-full flex flex-col items-center justify-start bg-[#F5F5F5] text-black h-screen pt-4 transition-opacity duration-1000 ${
             isOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"

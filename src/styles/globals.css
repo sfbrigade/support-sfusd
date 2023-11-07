@@ -22,6 +22,19 @@ h6 * {
   font-family: var(--font-fredoka), sans-serif;
 }
 
+body {
+  background-color: #f5f5f5;
+}
+
+.marker {
+  background-image: url("/school_marker.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
 .delay-100 {
   transition-delay: 100ms;
 }
