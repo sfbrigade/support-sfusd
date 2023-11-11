@@ -22,11 +22,11 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
     isMapView, toggleView
 }) => {
     return (
-        <div className={`bg-${isMapView ? 'white' : 'blue-600'} flex items-center space-x-2
+        <div className={`bg-white flex items-center space-x-2
         fixed right-4 p-1 rounded-xl md:hidden top-24 px-3 py-2 shadow-lg focus:outline-none`}>
-            <span className={`text-${isMapView ? 'black' : 'white'}`}>Map</span>
+            <span className={`text-black`}>Map</span>
             <label
-                className={`bg-${isMapView ? 'purple-600' : 'pink-600'} cursor-pointer rounded-full
+                className={`bg-purple-600 cursor-pointer rounded-full
                 w-14 h-8 flex items-center p-1 relative `}
                 role="switch"
                 aria-checked={isMapView}
@@ -38,8 +38,13 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
                     transition-transform ease-in-out duration-300`}>
                 </span>
             </label>
-            <span className={`text-${isMapView ? 'black' : 'white'}`}>List</span>
+            <span className={`text-black`}>List</span>
         </div>
+
+        //bg-${isMapView ? 'white' : 'blue-600'}
+        //bg-${isMapView ? 'purple-600' : 'pink-600'}
+        //text-${isMapView ? 'black' : 'white'}
+
 
         // <div
         //     onClick={toggleView}
