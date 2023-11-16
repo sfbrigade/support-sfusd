@@ -22,7 +22,8 @@ const getMapLayer = (width: number) => {
 };
 
 const MapComponent = () => {
-  const [hoveredSchool, setHoveredSchool] = useState<string | null>(null);
+  const [hoveredSchool, setHoveredSchool] = useState<object | null>(null);
+  const [selectedSchool, setSelectedSchool] = useState<number| null>(null);
   const [viewBoxDimensions, setViewBoxDimensions] = useState({
     x: 0,
     y: 0,
@@ -30,14 +31,20 @@ const MapComponent = () => {
     height: 844,
   });
 
-  // getting all elements by ID
-  console.log(schools);
+  //creating map cards
+
+  useEffect(() => {
+    setHoveredSchool(schools[selectedSchool]);
+  },[selectedSchool])
+
+  console.log(hoveredSchool, 'hoveredSchool');
+  console.log(selectedSchool, 'selectedSchool')
+
 
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
-  const [school, setSchool] = useState<string>('');
-
+  
   const mapLayer = getMapLayer(viewBoxDimensions.width);
 
   const svgRef = React.useRef<SVGSVGElement | null>(null);
@@ -199,9 +206,9 @@ const MapComponent = () => {
       >
         <g clip-path="url(#clip0_2046_3404)">
           {/* <MapBase /> */}
-          {mapLayer === "MapLayer1" && <MapLayer1 />}
-          {mapLayer === "MapLayer2" && <MapLayer2 />}
-          {mapLayer === "MapLayer3" && <MapLayer3 />}
+          {mapLayer === "MapLayer1" && <MapLayer1 selectSchool={selectedSchool} setSelectedSchool={setSelectedSchool}/>}
+          {mapLayer === "MapLayer2" && <MapLayer2 selectSchool={selectedSchool} setSelectedSchool={setSelectedSchool}/>}
+          {mapLayer === "MapLayer3" && <MapLayer3 selectSchool={selectedSchool} setSelectedSchool={setSelectedSchool}/>}
           {/* <path
             d="M82.6379 471.887C79.7879 469.337 76.0379 467.987 72.1379 468.437C66.1379 468.887 61.1879 473.237 60.1379 478.787C59.3879 482.387 60.1379 485.987 62.3879 488.987L70.0379 499.637C70.6379 500.687 71.9879 501.287 73.3379 501.287C74.6879 501.287 76.0379 500.687 76.7879 499.487L84.4379 488.837C86.0879 486.587 86.8379 484.037 86.8379 481.337C86.8379 477.737 85.3379 474.287 82.6379 471.887Z"
             fill="#3A86FF"
@@ -351,14 +358,14 @@ const MapComponent = () => {
           </clipPath>
         </defs>
       </svg>
-      {hoveredSchool === "School1" && (
+      {hoveredSchool && (
         <MapCard
-          name="Galileo Academy of Science & Technology"
-          district="Russian Hill"
-          students="1840"
-          frl="61"
-          ell="21.2"
-          img="/img/galileo.jpg"
+          name={hoveredSchool?.name}
+          district={hoveredSchool?.district}
+          students={hoveredSchool?.students}
+          frl={hoveredSchool?.frl}
+          ell={hoveredSchool?.ell}
+          img={hoveredSchool?.img}
         />
       )}
     </div>

@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 
-const MapLayer1 = () => {
+const MapLayer1 = ({selectedSchool, setSelectedSchool}) => {
 
-  const [ clickedSchool, setClickedSChool] = useState<string>("");
 
   const handleMarkerClick = (e: object) => {
-    let schoolId = e.target?.id;
-    setClickedSChool(`${schoolId}`);
-    console.log(parseInt(schoolId.split(" ")[1]))
+    let schoolId = e?.target?.id;
+    schoolId = schoolId.split(' ')[1];
+    setSelectedSchool(parseInt(`${schoolId}`));
   }
-
-  console.log(clickedSchool);
 
 
   return (

@@ -6,6 +6,7 @@ const MapCard = (props: {
   frl: string;
   ell: string;
 }) => {
+
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
       <div
