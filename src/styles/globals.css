@@ -35,6 +35,22 @@ body {
   cursor: pointer;
 }
 
+.golden-gate-marker {
+  background-image: url("/GoldenGate.png");
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.bay-bridge-marker {
+  background-image: url("/BayBridge.png");
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
 .delay-100 {
   transition-delay: 100ms;
 }

@@ -29,7 +29,13 @@ const Map = () => {
       container: mapContainer.current,
       style: "mapbox://styles/hamiltontruong/clomceri8002i01rbfzt1hrdm",
       center: [-122.437, 37.75],
-      zoom: 11,
+      zoom: 11, // Start with more zoomed-out view but not too far
+      minZoom: 10.5, // Allow users to zoom out more
+      maxZoom: 15, // Increase max zoom to allow closer inspection
+      maxBounds: [
+        [-122.6, 37.65], // Southwest coordinates
+        [-122.25, 37.85], // Northeast coordinates
+      ],
     });
 
     mapRef.current = map;
@@ -54,15 +60,34 @@ const Map = () => {
           console.error(`Coordinates are missing for ${school.name}`);
         }
       });
+
+      // Golden Gate Bridge Marker
+      const goldenGateEl = document.createElement("div");
+      goldenGateEl.className = "golden-gate-marker";
+      new mapboxgl.Marker(goldenGateEl)
+        .setLngLat([-122.4783, 37.8199])
+        .addTo(map);
+
+      // Bay Bridge Marker
+      const bayBridgeEl = document.createElement("div");
+      bayBridgeEl.className = "bay-bridge-marker";
+      new mapboxgl.Marker(bayBridgeEl)
+        .setLngLat([-122.3778, 37.7983])
+        .addTo(map);
     });
   }, []);
 
   return (
-    <div className="flex flex-row relative w-full h-[calc(100vh-64px)] px-4">
-      <div className="w-1/2 h-full flex justify-center items-center">
-        {selectedSchool ? (
-          <SchoolCard school={selectedSchool} />
-        ) : (
+    <div className="flex flex-col md:flex-row relative w-full h-[calc(100vh-80px)]">
+      <div className="w-full h-1/6 md:w-1/2 md:h-full flex justify-center items-center">
+        {selectedSchool && (
+          <div className="hidden md:block">
+            {" "}
+            {/* Hide SchoolCard on screens smaller than md */}
+            <SchoolCard school={selectedSchool} />
+          </div>
+        )}
+        {!selectedSchool && (
           <div className="flex flex-col justify-center items-center h-full">
             <h1 className="text-4xl font-bold mb-4">Select a School</h1>
             <p className="text-lg mb-4">
@@ -71,10 +96,13 @@ const Map = () => {
           </div>
         )}
       </div>
-      <div
-        ref={mapContainer}
-        className="relative w-1/2 flex justify-center items-center max-h-[600px] rounded-xl border-2 border-gray-300"
-      />
+
+      <div className="w-full md:w-1/2 h-full flex justify-center items-center">
+        <div
+          ref={mapContainer}
+          className="w-full h-full md:rounded-3xl rounded-t-3xl border-2 border-gray-300 md:max-h-[600px]"
+        />
+      </div>
     </div>
   );
 };
