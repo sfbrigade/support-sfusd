@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled sorted 
+3ff4110bd3a21b549d7c0479c51d076adc80c30a refs/heads/about_page
+851ad76e2ab45706e85be30182a833af5b6f7d8b refs/heads/feature/cards
+445b9a9b46402de63376940cc1bb8a9af7dd6ea0 refs/heads/feature/list-view
+234b4e953f7425af98e4f18c24546b7f3d2d1476 refs/heads/feature/mapcard
+89be22ded385fba57b58600f96bda6ef8bb96524 refs/heads/feature/searchbar
+4d4e0577b6dd5159db06fc27a91b20495a8f7245 refs/heads/josh-map-cards
+ecd77fa52cdbe4abf9d1c9cb5c368d42ebc64685 refs/heads/main
+d3b3de68a78ac11487051240093269d749c11cac refs/heads/revert-1-feature/cards

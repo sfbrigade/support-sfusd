@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <Navbar />
         <SearchBar />
-        <MapView />
+        {/* <MapView />*/}
       </main>
     </div>
   );

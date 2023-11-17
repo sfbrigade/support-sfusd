@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Schools from "../../data/schools"
+import Schools from "../../data/schools" 
+import MapListCard from "../MapList/MapListCard";
 
 export default function SearchBar() {
     const [searchInput, setSearchInput] = useState("");
@@ -36,7 +37,30 @@ export default function SearchBar() {
                     type="text"
                     placeholder="Search Schools"
                     className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-full outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
+                    onChange={handleChange}
                 />
+            </div>
+            <div className="top-[200px] text-lg absolute width-full">
+                {
+                    Schools.filter(school => {
+                        if (searchInput === '') {
+                          return school;
+                        } else if (school.name.toLowerCase().includes(searchInput.toLowerCase())) {
+                          return school;
+                        }
+                      }).map((school, index) => {
+                        return (
+                        <div key={index}>
+                            <MapListCard  key={index}
+                            img={school.img}
+                            name={school.name}
+                            district={school.district}
+                            students={school.students}
+                            frl={school.frl}
+                            ell={school.ell} />                  
+                        </div>)
+                    })
+                }
             </div>
         </form>
     );

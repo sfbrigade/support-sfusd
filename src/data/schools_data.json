@@ -1,0 +1,173 @@
+[
+    {
+      "name": "Balboa High School",
+      "address": "1000 Cayuga Ave, San Francisco, CA",
+      "district": "Cayuga Terrace",
+      "students": "1230",
+      "frl": "59",
+      "ell": "20.9",
+      "color": "#ff7701",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Burton High School",
+      "address": "400 Mansell St, San Francisco, CA",
+      "district": "Portola",
+      "students": "1175",
+      "frl": "64",
+      "ell": "22.4",
+      "color": "#ea4335",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Downtown High School",
+      "address": "693 Vermont St, San Francisco, CA",
+      "district": "Potrero Hill",
+      "students": "134",
+      "frl": "75",
+      "ell": "17.8",
+      "color": "#ea4335",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Galileo Academy of Science & Technology",
+      "address": "1150 Francisco St, San Francisco, CA",
+      "district": "Russian Hill",
+      "students": "1840",
+      "frl": "61",
+      "ell": "21.2",
+      "color": "#ff7701",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Ida B. Wells High School",
+      "address": "1099 Hayes St, San Francisco, CA",
+      "district": "Alamo Square",
+      "students": "1540",
+      "frl": "65",
+      "ell": "15.5",
+      "color": "#ff7701",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Independence High School",
+      "address": "1350 7th Ave, San Francisco, CA",
+      "district": "Inner Sunset",
+      "students": "2434",
+      "frl": "47",
+      "ell": "3",
+      "color": "#3986ff",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "International High School",
+      "address": "655 De Haro St, San Francisco, CA",
+      "district": "Potrero Hill",
+      "students": "420",
+      "frl": "66",
+      "ell": "86",
+      "color": "#ff7701",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "June Jordan School for Equity",
+      "address": "325 La Grande Ave, San Francisco, CA",
+      "district": "Excelsior",
+      "students": "324",
+      "frl": "65",
+      "ell": "48",
+      "color": "#ea4335",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Abraham Lincoln High School",
+      "address": "2162 24th Ave, San Francisco, CA",
+      "district": "Parkside",
+      "students": "1990",
+      "frl": "48",
+      "ell": "14.9",
+      "color": "#3986ff",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Lowell High School",
+      "address": "1101 Eucalyptus Dr, San Francisco, CA",
+      "district": "Lakeshore",
+      "students": "2786",
+      "frl": "39.7",
+      "ell": "1.9",
+      "color": "#3986ff",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Mission High School",
+      "address": "3750 18th St, San Francisco, CA",
+      "district": "Mission Dolores",
+      "students": "1040",
+      "frl": "56",
+      "ell": "33.4",
+      "color": "#ea4335",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "John O'Connell Technical High School",
+      "address": "2355 Folsom St, San Francisco, CA",
+      "district": "Mission",
+      "students": "525",
+      "frl": "65",
+      "ell": "31.3",
+      "color": "#ff7701",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Ruth Asawa School of the Arts (SOTA)",
+      "address": "555 Portola Dr, San Francisco, CA",
+      "district": "Glen Park",
+      "students": "795",
+      "frl": "17",
+      "ell": "1.5",
+      "color": "#3986ff",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "The Academy at McAteer",
+      "address": "550 Portola Dr, San Francisco, CA",
+      "district": "Glen Park",
+      "students": "360",
+      "frl": "55",
+      "ell": "16.4",
+      "color": "#3986ff",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Thurgood Marshall High School",
+      "address": "45 Conkling St, San Francisco, CA",
+      "district": "Silver Terrace",
+      "students": "525",
+      "frl": "62",
+      "ell": "58.7",
+      "color": "#ea4335",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "Raoul Wallenberg High School",
+      "address": "40 Vega St, San Francisco, CA",
+      "district": "Anza Vista",
+      "students": "659",
+      "frl": "44.8",
+      "ell": "71",
+      "color": "#ff7701",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    },
+    {
+      "name": "George Washington High School",
+      "address": "600 32nd Ave, San Francisco, CA",
+      "district": "Richmond",
+      "students": "2070",
+      "frl": "46",
+      "ell": "11.7",
+      "color": "#ff7701",
+      "img": "https://i0.wp.com/smallschoolsforequity.org//wp-content/uploads/2018/08/JJSE-banner-shot.png?resize=640%2C301&ssl=1"
+    }
+]
+  
