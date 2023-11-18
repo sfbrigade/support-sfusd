@@ -30,6 +30,9 @@ const Navbar = () => {
             <Link href="/about">
               About
             </Link>
+            <Link href="/profile">
+              Profile
+            </Link>
           </div>
 
           {/* Hamburger Icon */}
@@ -55,6 +58,17 @@ const Navbar = () => {
               }`}
             >
               About
+            </div>
+          </Link>
+          <Link href="/profile">
+            <div
+              className={`py-4 transform transition-all duration-1000 ${
+                isOpen
+                  ? "translate-y-0 opacity-100 delay-200"
+                  : "translate-y-[-10px] opacity-0"
+              }`}
+            >
+              Profile
             </div>
           </Link>
           <Link href="/map">
