@@ -1,6 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 
-/** ToggleButton renders a toggle button with styling and text dependent on the view
+/** ToggleButton renders a toggle button with icon and text dependent on the view
  * state of our map component (Map or List views).
  *
  * props:
@@ -22,61 +23,27 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
     isMapView, toggleView
 }) => {
     return (
-        <div className={`bg-white flex items-center space-x-2
-        fixed right-4 p-1 rounded-xl md:hidden top-24 px-3 py-2 shadow-lg focus:outline-none`}>
-            <span className={`text-black`}>Map</span>
-            <label
-                className={`bg-purple-600 cursor-pointer rounded-full
-                w-14 h-8 flex items-center p-1 relative `}
+        <div className={`bg-stone-800 flex items-center space-x-2 fixed right-4 p-1
+        rounded-full md:hidden top-24 px-4 py-2 shadow-lg focus:outline-visible`}>
+            <button
+                className={`flex`}
+                onClick={toggleView}
+                type="button"
                 role="switch"
                 aria-checked={isMapView}
-                onClick={toggleView}
+                aria-label={isMapView ? "Switch to list view" : "Switch to map view"}
             >
-                <span
-                    className={`${isMapView ? 'left-1' : 'right-1'}
-                    absolute inline-block w-6 h-6 bg-white rounded-full shadow-md transform
-                    transition-transform ease-in-out duration-300`}>
+                <span className={`text-gray-50 pr-2`}>
+                    {isMapView ? "Show List" : "Show Map"}
                 </span>
-            </label>
-            <span className={`text-black`}>List</span>
+                <Image
+                    src={isMapView ? "./icons/listview.svg" : "./icons/mapview.svg"}
+                    alt=""
+                    width={25}
+                    height={25}
+                />
+            </button>
         </div>
-
-        //bg-${isMapView ? 'white' : 'blue-600'}
-        //bg-${isMapView ? 'purple-600' : 'pink-600'}
-        //text-${isMapView ? 'black' : 'white'}
-
-
-        // <div
-        //     onClick={toggleView}
-        //     className={`fixed right-4 p-1 rounded-full bg-white flex items-center md:hidden top-24
-        //     ${isMapView ?
-        //             ""
-        //             :
-        //             "md:flex md:items-end md:justify-end md:bottom-4"
-        //         }`}
-        // >
-        //    <p>{isMapView? "List View" : "Map View"}</p>
-        //     <div
-        //         className={`flex items-center justify-center w-8 h-8
-        //         ${isMapView ?
-        //                 "bg-black"
-        //                 :
-        //                 ""
-        //             } rounded-full`}
-        //     >
-        //         {/* <MdMap className="text-white text-lg" /> */}
-        //     </div>
-        //     <div
-        //         className={`flex items-center justify-center w-8 h-8
-        //         ${isMapView ?
-        //                 ""
-        //                 :
-        //                 "bg-black"
-        //             } rounded-full`}
-        //     >
-        //         {/* <MdViewList className="text-white text-lg" /> */}
-        //     </div>
-        // </div>
     );
 };
 

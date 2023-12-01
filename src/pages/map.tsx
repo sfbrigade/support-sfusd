@@ -3,7 +3,6 @@ import MapComponent from "../components/Map";
 import MapList from "../components/MapList/MapList";
 import Navbar from "../components/NavBar/NavBar";
 import ToggleButton from "../components/ToggleButton/ToggleButton";
-import { MdMap, MdViewList } from "react-icons/md";
 
 const MapView = () => {
   const [isMapView, setIsMapView] = useState(true);
