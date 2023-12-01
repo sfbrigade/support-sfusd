@@ -7,19 +7,26 @@ import { CiGlobe } from "react-icons/ci"
 import { FaHandPaper } from "react-icons/fa";
 import { FaMoneyBill } from "react-icons/fa";
 
+//const imageStyle = {
+    
+//}
 
 const SchoolProfile = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-            {/*<div className="container mx-auto w-full h-[100px]">
-                <Image 
-                    src='/img/june_jordan_school.png'
-                    alt="June Jordan Image"
-                    fill={true}
-                /> 
-            </div> */}
-            <main className="flex-1 p-4">  
+
+            <div className="absolute w-screen h-1/2">
+                    <Image 
+                        priority={true}
+                        className="object-fill object-center"
+                        src={"/img/june-jordan-top.jpg"}
+                        alt="june jordan image"
+                        fill={true}
+                    /> 
+            </div>
+            
+            <main className="absolute flex-1 p-4">  
                 <div className="container mx-auto">
                     <div className="w-full mb-4 flex items-center">
                         <h1 className="text-5xl mb-4 text-pink-600 font-bold">
@@ -45,6 +52,7 @@ const SchoolProfile = () => {
                         <p>325 La Grande Avenue, San Francisco, CA 94112</p>
                     </div>
 
+                    {/* add anchor links to scroll down to sections */}
                     <div className="w-full mb-12 flex items-center">
                         {/* change black border for icons */}
                         <button className="flex mr-2 rounded-lg px-3 py-1 items-center text-white bg-blue-500 font-semibold hover:opacity-75">
