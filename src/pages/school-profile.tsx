@@ -16,17 +16,19 @@ const SchoolProfile = () => {
         <div className="flex flex-col min-h-screen">
             <Navbar />
 
-            <div className="absolute w-screen h-1/2">
+            {/*<div className="absolute w-screen h-1/2">
+            </div>*/}
+            
+            <main> 
+                <div className="absolute w-full h-1/2">
                     <Image 
                         priority={true}
                         className="object-fill object-center"
                         src={"/img/june-jordan-top.jpg"}
                         alt="june jordan image"
                         fill={true}
-                    /> 
-            </div>
-            
-            <main className="absolute flex-1 p-4">  
+                    />  
+                </div>
                 <div className="container mx-auto">
                     <div className="w-full mb-4 flex items-center">
                         <h1 className="text-5xl mb-4 text-pink-600 font-bold">
@@ -76,7 +78,6 @@ const SchoolProfile = () => {
                     </div>
 
                     <div className="flex mb-8">
-                        {/* fix p wording to center */}
                         <div className="w-[75px] flex flex-col mr-16 text-center">
                             <h1 className="text-violet-700 text-5xl font-bold">325</h1>
                             <p className="text-pink-600 text-xs">Students Enrolled</p>
@@ -103,7 +104,7 @@ const SchoolProfile = () => {
                     <div className="flex mb-12">
                         <div className="rounded-xl mr-8">
                             <Image 
-                                src="/img/june_jordan_school.png"
+                                src="/img/group-pic.jpg"
                                 alt="June Jordan Students"
                                 width={600}
                                 height={300}
@@ -260,7 +261,7 @@ const SchoolProfile = () => {
                     </div>*/}
                 </div>
 
-                <div className="w-full h-[200px] bg-amber-400">
+                <div className="w-full h-[200px] bg-amber-400 m-0">
                     {/* add links */}
                     <div className="flex flex-col px-8 py-8">
                         <h1 className="font-semibold">SupportSFSchools.org</h1>
