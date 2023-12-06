@@ -15,26 +15,19 @@ const SchoolProfile = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-
-            {/*<div className="absolute w-screen h-1/2">
-            </div>*/}
             
-            <main> 
-                <div className="absolute w-full h-1/2">
-                    <Image 
-                        priority={true}
-                        className="object-fill object-center"
-                        src={"/img/june-jordan-top.jpg"}
-                        alt="june jordan image"
-                        fill={true}
-                    />  
-                </div>
+            <img 
+                className="w-full h-1/6 mb-16"
+                src="/img/june-jordan-top.jpg" 
+                alt="June Jordan header picture" 
+            />
+
+            <main>
                 <div className="container mx-auto">
                     <div className="w-full mb-4 flex items-center">
                         <h1 className="text-5xl mb-4 text-pink-600 font-bold">
                             June Jordan School for Equity
                         </h1>
-                        {/* fix icons */}
                         <button>
                             <RiInstagramFill className="text-blue-600 ml-32 mr-8" size={35} />
                         </button>
@@ -54,9 +47,7 @@ const SchoolProfile = () => {
                         <p>325 La Grande Avenue, San Francisco, CA 94112</p>
                     </div>
 
-                    {/* add anchor links to scroll down to sections */}
                     <div className="w-full mb-12 flex items-center">
-                        {/* change black border for icons */}
                         <button className="flex mr-2 rounded-lg px-3 py-1 items-center text-white bg-blue-500 font-semibold hover:opacity-75">
                             <FaHandPaper className="mr-2" size={30} /> Volunteer
                         </button>
@@ -67,7 +58,6 @@ const SchoolProfile = () => {
 
                     <div className="flex flex-col mb-12">
                         <h1 className="text-4xl text-pink-600 font-semibold py-1">About</h1>
-                        {/* figure out bullet points */}
                         <ul>
                             <li>Small highschool in San Francisco&apos;s Excelsior neighborhood.</li>
                             <li>Named after activist June Jordan, praised by Alice Walker as &quot;universal poet&quot;.</li>
@@ -112,7 +102,6 @@ const SchoolProfile = () => {
                         </div>
                         <div className="flex flex-col mt-20">
                             <h1 className="text-4xl text-pink-600 font-semibold py-1">Volunteering</h1>
-                            {/* add links to sf ed fund and form*/}
                             <p className="w-[700px]">
                                 June Jordan values community volunteers and has volunteer needs and opportunities throughout the school year. 
                                 You sign up to volunteer through the SF Ed Fund or fill out this form to connect directly with the school.
@@ -121,10 +110,8 @@ const SchoolProfile = () => {
                     </div>
 
                     <div className="flex mb-6">
-                        {/* fix vertical center */}
                         <div className="flex flex-col mt-24">
                             <h1 className="text-4xl text-pink-600 font-semibold py-1">Donations</h1>
-                            {/* add link to small schools for equity*/}
                             <p className="w-[700px]">
                                 You can donate directly to June Jordan on the Small Schools for Equity website.
                             </p>
@@ -138,14 +125,6 @@ const SchoolProfile = () => {
                             />    
                         </div>
                     </div>
-
-                    {/*<div className="container mx-auto w-full h-[400px]">
-                        <Image 
-                            src='/img/june_jordan_school.png'
-                            alt="June Jordan Image"
-                            fill={true}
-                        />
-                    </div>*/}
 
                     <div className="flex mb-6">
                         <div className="w-full py-4 text-center">
@@ -179,14 +158,6 @@ const SchoolProfile = () => {
                         </div>
                     </div>
 
-                    {/*<div className="container mx-auto w-full h-[400px]">
-                        <Image 
-                            src='/img/june_jordan_school.png'
-                            alt="June Jordan Image"
-                            fill={true}
-                        />
-                    </div>*/}
-
                     <div className="flex mb-12">
                         <div className="rounded-xl mr-8">
                             <Image 
@@ -198,7 +169,6 @@ const SchoolProfile = () => {
                         </div>
                         <div className="flex flex-col mt-20">
                             <h1 className="text-xl text-pink-600 font-semibold py-1 mb-2">2023-2024 Principal</h1>
-                            {/* add links to sf ed fund and form*/}
                             <p className="mb-2 font-semibold">Amanda Chui</p>
                             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">Contact</button>
                         </div>
@@ -233,7 +203,6 @@ const SchoolProfile = () => {
                             <h1 className="text-pink-600 font-semibold text-xl mt-4">Enrichment Opportunities</h1>
                             <p>Music</p>
                             <p>Arts</p>
-                            {/* add links to bottom 3 */}
                             <p>Sports: Jaguar Athletics</p>
                             <p>Programs: JJSE Motorcycle</p>
                             <p>Mechanics program</p>
@@ -252,17 +221,9 @@ const SchoolProfile = () => {
                         </div>
                     </div>
 
-                    {/*<div className="container mx-auto w-full h-[400px]">
-                        <Image 
-                            src='/img/june_jordan_school.png'
-                            alt="June Jordan Image"
-                            fill={true}
-                        />
-                    </div>*/}
                 </div>
 
                 <div className="w-full h-[200px] bg-amber-400 m-0">
-                    {/* add links */}
                     <div className="flex flex-col px-8 py-8">
                         <h1 className="font-semibold">SupportSFSchools.org</h1>
                         <h1 className="font-semibold">About Us</h1>
