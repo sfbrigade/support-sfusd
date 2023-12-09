@@ -132,7 +132,7 @@ const SchoolProfile = () => {
                         </div>
                     </div>
 
-                    <div className="flex w-full mb-20 items-center">
+                    <div className="flex justify-around w-full mb-20 items-center">
                         <img 
                             className="w-[550px] h-[350px] rounded-xl mr-8"
                             src="/img/group-pic.jpg"
@@ -210,8 +210,80 @@ const SchoolProfile = () => {
                         />
                     </div>
 
+                    <div className="flex mb-6">
+                        <div className="w-full">
+                            <h1 className="text-blue-500 font-semibold text-3xl text-center">Donations</h1>
+                        </div>
+                    </div>
+                    <div className="flex justify-around mb-16">
+                        <div className="w-[300px] flex flex-col">
+                            <img 
+                                className="w-66 h-52"
+                                src="/img/placeholder.png"
+                                alt="Donation image"
+                            />
+                            <h1 className="text-pink-600 text-2xl font-semibold mt-2">Donation Information</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque varius justo eu nisl tincidunt, id fermentum turpis imperdiet. 
+                                Ut ac metus in justo fringilla malesuada. Vestibulum at cursus odio.
+                                Learn more 
+                            </p>
+                        </div>
+                        <div className="w-[300px] flex flex-col">
+                            <img 
+                                className="w-66 h-52"
+                                src="/img/placeholder.png"
+                                alt="Donation image"
+                            />
+                            <h1 className="text-pink-600 text-2xl font-semibold mt-2">Donation Information</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque varius justo eu nisl tincidunt, id fermentum turpis imperdiet. 
+                                Ut ac metus in justo fringilla malesuada. Vestibulum at cursus odio.
+                                Learn more 
+                            </p>
+                        </div>
+                        <div className="w-[300px] flex flex-col">
+                            <img 
+                                className="w-66 h-52"
+                                src="/img/placeholder.png"
+                                alt="Donation image"
+                            />
+                            <h1 className="text-pink-600 text-2xl font-semibold mt-2">Donation Information</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque varius justo eu nisl tincidunt, id fermentum turpis imperdiet. 
+                                Ut ac metus in justo fringilla malesuada. Vestibulum at cursus odio.
+                                Learn more 
+                            </p>
+                        </div>
+                    </div>
 
-                    <div className="flex mb-12">
+                    <div className="flex justify-around mb-20">
+                            <img
+                                className="rounded-xl mr-8 w-[400px]"
+                                src="/img/testimonial.png"
+                                alt="Testimonial Image"
+                            />    
+                        <div className="flex flex-col w-1/2 self-center">
+                            <h1 className="text-3xl text-blue-500 font-semibold py-1 mb-2">Testimonial</h1>
+                            <p className="mb-2">
+                            &quot;As a student at June Jordan High School, my educational journey has been nothing short of transformative. The supportive environment and dedicated teachers 
+                            have empowered me to explore my passions and excel academically. The diverse and inclusive community at June Jordan fosters a sense of belonging, making each 
+                            day an opportunity for growth and collaboration. I appreciate the emphasis on critical thinking and real-world skills that will undoubtedly prepare me for future success. 
+                            June Jordan High School isn&apos;t just a place of learning; it&apos;s a place where I&apos;ve discovered my potential and built lasting connections.&quot;
+                            </p>
+                            <p className="text-violet-700 text-xl font-semibold">Jorge Rodriguez</p>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center mb-20">
+                        <img 
+                            className="w-[1000px] h-[400px] rounded-xl"
+                            src="/img/students.png"
+                            alt="June Jordan students"
+                        />
+                    </div>
+
+                    <div className="flex mb-20 justify-center">
                         <div className="rounded-xl mr-8">
                             <Image 
                                 src="/img/june_jordan_school.png"
@@ -222,18 +294,17 @@ const SchoolProfile = () => {
                         </div>
                         <div className="flex flex-col mt-20">
                             <h1 className="text-xl text-pink-600 font-semibold py-1 mb-2">2023-2024 Principal</h1>
-                            <p className="mb-2 font-semibold">Amanda Chui</p>
-                            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">Contact</button>
+                            <p className="mb-2 font-semibold">Sharimar Manilang</p>
                         </div>
                     </div>
 
                     <div className="flex mb-6">
                         <div className="w-full py-4 text-center">
-                            <h1 className="text-4xl text-pink-600 font-semibold">Resources</h1>
+                            <h1 className="text-4xl text-pink-600 font-semibold">Enrichment Opportunities</h1>
                         </div>
                     </div>
 
-                    <div className="flex mb-12 justify-center">
+                    <div className="flex mb-20 justify-center">
                         <div className="w-[350px] flex flex-col mr-12">
                             <Image
                                 src="/img/june_jordan_school.png"
@@ -241,10 +312,8 @@ const SchoolProfile = () => {
                                 width={325}
                                 height={150}
                             />
-                            <h1 className="text-pink-600 font-semibold text-xl mt-4">School Resources</h1>
-                            <p>College Counselors</p>
-                            <p>Librarian</p>
-                            <p>On-site nurse</p>
+                            <h1 className="text-pink-600 font-semibold text-xl mt-4">Student Newspaper</h1>
+                            <p>N/A</p>
                         </div>
                         <div className="w-[350px] flex flex-col mr-12">
                             <Image
@@ -253,12 +322,8 @@ const SchoolProfile = () => {
                                 width={325}
                                 height={150}
                             />
-                            <h1 className="text-pink-600 font-semibold text-xl mt-4">Enrichment Opportunities</h1>
-                            <p>Music</p>
-                            <p>Arts</p>
-                            <p>Sports: Jaguar Athletics</p>
-                            <p>Programs: JJSE Motorcycle</p>
-                            <p>Mechanics program</p>
+                            <h1 className="text-pink-600 font-semibold text-xl mt-4">Afterschool Program</h1>
+                            <p>Extended Day Program</p>
                         </div>
                         <div className="w-[350px] flex flex-col">
                             <Image
@@ -267,21 +332,24 @@ const SchoolProfile = () => {
                                 width={325}
                                 height={150}
                             />
-                            <h1 className="text-pink-600 font-semibold text-xl mt-4">After School Program</h1>
-                            <p>College Counselors</p>
-                            <p>Librarian</p>
-                            <p>On-site nurse</p>
+                            <h1 className="text-pink-600 font-semibold text-xl mt-4">Sports</h1>
+                            <p>Jaguar Athletics</p>
                         </div>
                     </div>
 
+                    <img 
+                        className="w-full h-[500px] rounded-lg mb-16"
+                        src="/img/bottom-img.png"
+                        alt="June Jordan students"
+                    />
                 </div>
 
-                <div className="w-full h-[200px] bg-amber-400 m-0">
+                <div className="w-full h-[250px] bg-amber-400 m-0">
                     <div className="flex flex-col px-8 py-8">
-                        <h1 className="font-semibold">SupportSFSchools.org</h1>
-                        <h1 className="font-semibold">About Us</h1>
-                        <h1 className="font-semibold">Contact Us</h1>
-                        <h1 className="font-semibold">Sitemap</h1>
+                        <h1 className="font-semibold mb-1">SupportSFSchools.org</h1>
+                        <h1 className="font-semibold mb-1">About Us</h1>
+                        <h1 className="font-semibold mb-1">Contact Us</h1>
+                        <h1 className="font-semibold mb-1">Sitemap</h1>
                         <div className="flex">
                             <RiInstagramFill size={35} className="mr-4" />
                             <FaTwitter size={35} className="mr-4" />
