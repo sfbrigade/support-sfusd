@@ -16,6 +16,22 @@ interface SchoolCardProps {
   school: School;
 }
 
+/**
+ * SchoolCard: Renders school image and details depending on school clicked on map
+ *
+ * Props:
+ *  - school
+ *    {
+ *      name: "Balboa High School",
+ *      address: "1000 Cayuga Ave,...
+ *      ...
+ *    }
+ *
+ * State: none
+ *
+ * Map => SchoolCardMap
+ *
+ */
 const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
   return (
     <div className="flex flex-col items-center justify-center p-4 bg-white border border-gray-300 rounded-lg max-w-[400px] max-h-[400px]">
