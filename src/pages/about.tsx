@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "../components/NavBar/NavBar";
+import Navbar from "../components/NavBar";
 
 const About = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
+    <div className="flex flex-col mx-auto max-w-[1280px] h-[calc(100vh-64px)]">
       <main className="flex-1 p-4">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-4">About Us</h1>
