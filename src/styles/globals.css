@@ -7,6 +7,10 @@ body * {
   font-family: var(--font-lato), sans-serif;
 }
 
+body {
+  background-color: #c5e2e6;
+}
+
 h1,
 h2,
 h3,
@@ -20,10 +24,6 @@ h4 *,
 h5 *,
 h6 * {
   font-family: var(--font-fredoka), sans-serif;
-}
-
-body {
-  background-color: #f5f5f5;
 }
 
 .marker {

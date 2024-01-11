@@ -17,8 +17,8 @@ export default function Home() {
         <section className="flex-1 flex flex-col justify-center items-center pr-4 gap-11">
           <header className="text-center">
             <h1 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-[48px] xl:leading-[60px] tracking-wider">
-              Get <span className="text-amber-400">Involved</span> with <br />
-              <span className="text-amber-400">SFUSD</span> Schools
+              Get <span style={{ color: "#F15437" }}>Involved</span> with <br />
+              <span style={{ color: "#F15437" }}>SFUSD</span> Schools
             </h1>
           </header>
 
