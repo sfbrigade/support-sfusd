@@ -8,6 +8,6 @@ CREATE TABLE schools (
     ell TEXT,
     color TEXT,
     img TEXT,
-    lat POINT,
-    lng POINT
+    lat NUMERIC,
+    lng NUMERIC
 )
