@@ -1,4 +1,4 @@
-INSERT INTO schools (name, address, district, students, frl, ell, color, img, lat, lng)
+INSERT INTO schools (name, address, sf_district, students, free_reduced_lunch, ell, color, img, latitude, longitude)
 VALUES ('Balboa High School',
         '1000 Cayuga Ave, San Francisco, CA',
         'Cayuga Terrace',
