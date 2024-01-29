@@ -1,3 +1,5 @@
+-- run "psql -f schools.sql" in your terminal to drop/add schools db
+
 \echo 'Delete and recreate schools db?'
 \prompt 'Return for yes or control-C to cancel > ' foo
 
