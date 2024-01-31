@@ -30,38 +30,28 @@ const MapListCard: React.FC<MapListCardProps> = ({
   img, name, district, students, frl, ell
 }) => {
   return (
-    <div className="bg-white border-2 rounded-lg mb-4">
-      <div
-        className="bg-cover bg-center h-40 rounded-t-lg"
-        style={{ backgroundImage: `url(${img})` }}
-      ></div>
-      <div className="p-4">
-        <div className="font-bold text-xl">{name}</div>
-        <div className="text-gray-600">{district}</div>
-        <div className="flex items-center mt-2">
-          <Image
-            src="/icons/student-icon.png"
-            alt="Student Icon"
-            className="w-5 h-5 mr-2"
-          />
+    <div className="bg-white border-2 rounded-lg mb-4 flex">
+      <div className="p-4 flex-grow">
+        <div className="flex justify-between">
+      <div className="font-bold text-xl mb-2">{name}</div>
+      <div className="text-gray-600 mb-4 mr-14">{district}</div>
+      </div>
+      <div className="flex items-center mt-2">
           {students ? `${students} Students` : "N/A"}
         </div>
         <div className="flex items-center mt-2">
-          <Image
-            src="/icons/lunch-icon.png"
-            alt="Lunch Icon"
-            className="w-5 h-5 mr-2"
-          />
           {frl ? `${frl}% Free and Reduced Lunch` : "N/A"}
         </div>
         <div className="flex items-center mt-2">
-          <Image
-            src="/icons/language-icon.png"
-            alt="ELL Icon"
-            className="w-5 h-5 mr-2"
-          />
           {ell ? `${ell}% English Language Learners` : "N/A"}
         </div>
+        <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+          Learn More
+        </button>
+      </div>
+      <div
+        className="bg-cover bg-center h-62 w-60 rounded-r-lg"
+        style={{ backgroundImage: `url(${img})` }}>
       </div>
     </div>
   );
