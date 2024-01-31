@@ -1,3 +1,5 @@
+import React from 'react';
+import Image from 'next/image';
 
 type MapListCardProps = {
   img: string;
@@ -8,7 +10,22 @@ type MapListCardProps = {
   ell: string;
 };
 
-
+/**
+ * MapListCard: Renders a card with school image and details.
+ *
+ * Props:
+ *  - img
+ *  - name
+ *  - district
+ *  - students
+ *  - frl
+ *  - ell
+ *
+ * State: none
+ *
+ * MapList => MapListCard
+ *
+ */
 const MapListCard: React.FC<MapListCardProps> = ({
   img, name, district, students, frl, ell
 }) => {
@@ -22,7 +39,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
         <div className="font-bold text-xl">{name}</div>
         <div className="text-gray-600">{district}</div>
         <div className="flex items-center mt-2">
-          <img
+          <Image
             src="/icons/student-icon.png"
             alt="Student Icon"
             className="w-5 h-5 mr-2"
@@ -30,7 +47,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
           {students ? `${students} Students` : "N/A"}
         </div>
         <div className="flex items-center mt-2">
-          <img
+          <Image
             src="/icons/lunch-icon.png"
             alt="Lunch Icon"
             className="w-5 h-5 mr-2"
@@ -38,7 +55,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
           {frl ? `${frl}% Free and Reduced Lunch` : "N/A"}
         </div>
         <div className="flex items-center mt-2">
-          <img
+          <Image
             src="/icons/language-icon.png"
             alt="ELL Icon"
             className="w-5 h-5 mr-2"
