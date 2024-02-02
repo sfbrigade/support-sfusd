@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-row justify-between p-4 relative h-[calc(100vh-160px)]">
+      <main className="flex flex-row justify-between p-4 relative h-screen">
         <section className="flex-1 flex flex-col justify-center items-center gap-8 lg:gap-11">
           <header className="text-center">
             <h1 className="text-3xl xl:text-5xl xl:leading-normal font-medium tracking-wider">
