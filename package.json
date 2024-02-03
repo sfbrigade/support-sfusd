@@ -21,6 +21,7 @@
     "redux": "^4.2.1"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/next": "^9.0.0",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
@@ -28,6 +29,7 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "file-loader": "^6.2.0",
     "postcss": "8.4.29",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"

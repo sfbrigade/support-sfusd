@@ -40,8 +40,15 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
         alt={school.name}
         className="w-full h-40 object-cover rounded-lg mb-4"
       />
-      <h3 className="text-xl font-bold mb-2">{school.name}</h3>
-      <h3 className="text-base mb-2 text-slate-400">{school.district} District</h3>
+      <a
+        className="text-xl font-bold mb-2"
+        href={"/school?name=" + school.name}
+      >
+        {school.name}
+      </a>
+      <h3 className="text-base mb-2 text-slate-400">
+        {school.district} District
+      </h3>
       <div className="flex flex-col items-left">
         <div className="flex flex-row items-center mb-2">
           <img
@@ -49,7 +56,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             alt="student icon"
             className="max-w-[35px] max-h-[35px] mr-2"
           />
-          <h3 className="text-base">{school.students  ? school.students : "N/A"} Students</h3>
+          <h3 className="text-base">
+            {school.students ? school.students : "N/A"} Students
+          </h3>
         </div>
         <div className="flex flex-row items-center mb-2">
           <img
@@ -57,7 +66,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             alt="lunch icon"
             className="max-w-[30px] max-h-[30px] mr-2"
           />
-          <h3 className="text-base">{school.frl  ? school.frl : "N/A"}% Free and Reduced Lunch</h3>
+          <h3 className="text-base">
+            {school.frl ? school.frl : "N/A"}% Free and Reduced Lunch
+          </h3>
         </div>
         <div className="flex flex-row items-center mb-2">
           <img
@@ -65,7 +76,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             alt="language icon"
             className="max-w-[30px] max-h-[30px] mr-2"
           />
-          <h3 className="text-base">{school.ell  ? school.ell : "N/A"}% English Language Learners</h3>
+          <h3 className="text-base">
+            {school.ell ? school.ell : "N/A"}% English Language Learners
+          </h3>
         </div>
         <p>{school.description}</p>
       </div>

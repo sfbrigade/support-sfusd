@@ -1,5 +1,8 @@
 import Image from "next/image";
-
+import InstagramIcon from "../../public/icons/instagram-icon.svg";
+import TwitterIcon from "../../public/icons/twitter-icon.svg";
+import FacebookIcon from "../../public/icons/facebook-icon.svg";
+import GlobeIcon from "../../public/icons/globe-icon.svg";
 const Footer = () => {
   return (
     <footer className="bg-[#FFC627] p-8 font-medium text-sm">
@@ -17,50 +20,23 @@ const Footer = () => {
           <a href="">Sitemap</a>
         </li>
       </ul>
-      <ul className="flex gap-2 mt-2">
-        <li>
-          <a href="">
-            <Image
-              src="/icons/instagram-icon.svg"
-              alt="Arrow Icon"
-              width={32}
-              height={32}
-            />
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <Image
-              src="/icons/twitter-icon.svg"
-              alt="Arrow Icon"
-              width={32}
-              height={32}
-            />
-          </a>
-        </li>
-        <li>
-          {" "}
-          <a href="">
-            <Image
-              src="/icons/facebook-icon.svg"
-              alt="Arrow Icon"
-              width={32}
-              height={32}
-            />
-          </a>
-        </li>
-        <li>
-          {" "}
-          <a href="">
-            <Image
-              src="/icons/globe-icon.svg"
-              alt="Arrow Icon"
-              width={32}
-              height={32}
-            />
-          </a>
-        </li>
-      </ul>
+      <div className="flex gap-2 mt-2 fill-gray-800">
+        <a>
+          <InstagramIcon className="fill-inherit" height="32" width="32" />
+        </a>
+
+        <a>
+          <TwitterIcon className="fill-inherit" height="32" width="32" />
+        </a>
+
+        <a>
+          <FacebookIcon className="fill-inherit" height="32" width="32" />
+        </a>
+
+        <a>
+          <GlobeIcon className="fill-inherit" height="32" width="32" />
+        </a>
+      </div>
     </footer>
   );
 };
