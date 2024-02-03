@@ -7,7 +7,9 @@ const StatisticList = (props: any) => {
       {statistics.map(
         (stat: any) =>
           stat.number &&
-          stat.text && <Statistic number={stat.number} text={stat.text} />
+          stat.text && (
+            <Statistic key={stat.text} number={stat.number} text={stat.text} />
+          )
       )}
     </div>
   );

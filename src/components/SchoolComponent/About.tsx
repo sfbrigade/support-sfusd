@@ -16,11 +16,11 @@ const About = (props: any) => {
         <li>
           <a href="https://www.cde.ca.gov/sp/eo/as/faqs.asp">
             Alternative school by choice
-          </a>{" "}
-          in San Francisco's Excelsior neighborhood.
+          </a>
+          in San Francisco&#39;s Excelsior neighborhood.
         </li>
         <li>
-          Named after activist June Jordan, the school's three pillars are
+          Named after activist June Jordan, the school&#39;s three pillars are
           Community, Social Justice, and Independent Thinkers
         </li>
         <li>
