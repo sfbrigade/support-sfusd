@@ -49,12 +49,12 @@ export default function Home() {
         </section>
       </main>
       {/* Image Container */}
-      <div className="fixed inset-x-0 bottom-0 z-[-1]">
+      <div className="fixed h-full inset-x-0 bottom-0 z-[-1] bg-[#c5e2e6]">
         {/* Homepage Background */}
         <img
           src="/homepage-background.png"
           alt="Homepage Background"
-          className="w-full bg-[#c5e2e6]"
+          className="fixed w-full bottom-0"
         />
       </div>
     </>
