@@ -54,7 +54,7 @@ export default function Home() {
         <img
           src="/homepage-background.png"
           alt="Homepage Background"
-          className="w-full"
+          className="w-full bg-[#c5e2e6]"
         />
       </div>
     </>
