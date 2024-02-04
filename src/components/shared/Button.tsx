@@ -7,6 +7,7 @@ import { MouseEvent } from "react";
  * text: content of the button
  * disabled: sets the button to disabled
  * href: hyperlink to navigate to
+ * className: adding any other classes to the element
  * onClick: custom click Handler
  * rest: allows you to apply other button attributes as you would with a regular button element
  */
@@ -16,6 +17,7 @@ interface ButtonProps {
   text: string;
   disabled?: boolean;
   href?: string;
+  className?: string;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   [key: string]: any;
 }
@@ -26,10 +28,12 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   href,
   onClick,
+  className = "",
   ...rest
 }) => {
   var styleClass =
-    "rounded-md w-36 h-10 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-25 disabled:grayscale ";
+    className +
+    " rounded-md px-6 h-10 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-25 disabled:grayscale ";
 
   switch (style) {
     case "Secondary":
@@ -56,11 +60,17 @@ const Button: React.FC<ButtonProps> = ({
       }
       break;
     case "Primary":
-    default:
-      styleClass += "bg-blue-500 text-white";
+      styleClass += "bg-blue-500 text-white ";
       if (!disabled) {
         styleClass +=
-          " hover:drop-shadow-md hover:bg-blue-400 focus:bg-blue-400 active:bg-blue-600";
+          "hover:drop-shadow-md hover:bg-blue-400 focus:bg-blue-400 active:bg-blue-600";
+      }
+      break;
+    default:
+      styleClass += "text-blue-500 ";
+      if (!disabled) {
+        styleClass +=
+          "hover:text-blue-400 focus:text-blue-400 active:text-blue-600";
       }
       break;
   }

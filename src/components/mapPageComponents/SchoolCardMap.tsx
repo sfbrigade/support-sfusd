@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../shared/Button";
 
 interface School {
   name: string;
@@ -40,12 +41,11 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
         alt={school.name}
         className="w-full h-40 object-cover rounded-lg mb-4"
       />
-      <a
-        className="text-xl font-bold mb-2"
+      <Button
+        text={school.name}
         href={"/school?name=" + school.name}
-      >
-        {school.name}
-      </a>
+        className="text-xl font-bold mb-2"
+      />
       <h3 className="text-base mb-2 text-slate-400">
         {school.district} District
       </h3>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { BiLogoFacebookCircle } from "react-icons/bi";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { Squeeze as Hamburger } from "hamburger-react";
+import Button from "../shared/Button";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -23,9 +24,9 @@ const Navbar = () => {
           </Link>
 
           {/* Links on desktop */}
-          <div className="hidden md:flex space-x-10">
-            <Link href="/map">Schools</Link>
-            <Link href="/about">About</Link>
+          <div className="hidden md:flex">
+            <Button text="Schools" href="/map" />
+            <Button text="About" href="/about" />
           </div>
 
           {/* Hamburger Icon */}
@@ -59,6 +60,7 @@ const Navbar = () => {
               About
             </div>
           </Link>
+
           <Link href="/map">
             <div
               className={`py-4 transform transition-all duration-1000 ${

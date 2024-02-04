@@ -45,8 +45,8 @@ const Header = (props: any) => {
 
       {/* hide buttons if link doesn't exist*/}
       <div className="flex gap-2">
-        <Button text="Volunteer" />
-        <Button style="Secondary" text="Volunteer" />
+        <Button style="Primary" text="Volunteer" className="w-36" />
+        <Button style="Secondary" text="Donate" className="w-36" />
       </div>
     </div>
   );
