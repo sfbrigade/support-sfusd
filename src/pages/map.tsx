@@ -1,30 +1,30 @@
-import React, { useEffect, useRef, useState } from 'react'
-import 'mapbox-gl/dist/mapbox-gl.css'
-import mapboxgl from 'mapbox-gl'
-import schools from '../data/schools'
-import SchoolCard from '../components/SchoolCardMap'
-import MapList from '@/components/MapList'
-import MapboxMap from '@/components/MapboxMap'
+import React, { useEffect, useRef, useState } from "react";
+import "mapbox-gl/dist/mapbox-gl.css";
+import mapboxgl from "mapbox-gl";
+import schools from "../data/schools";
+import SchoolCard from "../components/mapPageComponents/SchoolCardMap";
+import MapList from "@/components/mapPageComponents/MapList";
+import MapboxMap from "@/components/mapPageComponents/MapboxMap";
 
 export interface School {
-  name: string
-  lat?: number
-  lng?: number
-  description?: string
-  img?: string
+  name: string;
+  lat?: number;
+  lng?: number;
+  description?: string;
+  img?: string;
 }
 
 const Map = () => {
-  const [selectedSchool, setSelectedSchool] = useState<School | null>(null)
+  const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   // probably need to rename this state isList for toggle of map or list component
-  const [isList, setIsList] = useState(false)
+  const [isList, setIsList] = useState(false);
 
   return (
     <div className="flex flex-col md:flex-row relative w-full h-[calc(100vh-80px)]">
       <div className="w-full h-1/6 md:w-1/2 md:h-full flex justify-center items-center">
         {selectedSchool && (
           <div className="hidden md:block">
-            {' '}
+            {" "}
             {/* Hide SchoolCard on screens smaller than md */}
             <SchoolCard school={selectedSchool} />
           </div>
@@ -44,7 +44,7 @@ const Map = () => {
         <MapboxMap setSelectedSchool={setSelectedSchool} />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Map
+export default Map;

@@ -1,6 +1,6 @@
-import Button from "../Material/Button";
-import CardList from "../Material/CardList";
-import HeadingContentWrapper from "../Material/HeadingContentWrapper";
+import Button from "../shared/Button";
+import CardList from "../shared/CardList";
+import HeadingContentWrapper from "../shared/HeadingContentWrapper";
 
 const Volunteer = () => {
   const volunteerList = [

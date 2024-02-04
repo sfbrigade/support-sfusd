@@ -1,5 +1,5 @@
-import HeadingContentWrapper from "../Material/HeadingContentWrapper";
-import StatisticList from "../Material/StatisticList";
+import HeadingContentWrapper from "../shared/HeadingContentWrapper";
+import StatisticList from "../shared/StatisticList";
 
 const StudentOutcomes = () => {
   const stats = [

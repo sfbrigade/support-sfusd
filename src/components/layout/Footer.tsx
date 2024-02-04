@@ -1,8 +1,7 @@
-import Image from "next/image";
-import InstagramIcon from "../../public/icons/instagram-icon.svg";
-import TwitterIcon from "../../public/icons/twitter-icon.svg";
-import FacebookIcon from "../../public/icons/facebook-icon.svg";
-import GlobeIcon from "../../public/icons/globe-icon.svg";
+import InstagramIcon from "../../../public/icons/instagram-icon.svg";
+import TwitterIcon from "../../../public/icons/twitter-icon.svg";
+import FacebookIcon from "../../../public/icons/facebook-icon.svg";
+import GlobeIcon from "../../../public/icons/globe-icon.svg";
 const Footer = () => {
   return (
     <footer className="bg-[#FFC627] p-8 font-medium text-sm">

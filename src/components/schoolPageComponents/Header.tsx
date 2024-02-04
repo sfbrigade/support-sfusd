@@ -3,7 +3,7 @@ import InstagramIcon from "../../../public/icons/instagram-icon.svg";
 import TwitterIcon from "../../../public/icons/twitter-icon.svg";
 import FacebookIcon from "../../../public/icons/facebook-icon.svg";
 import GlobeIcon from "../../../public/icons/globe-icon.svg";
-import Button from "../Material/Button";
+import Button from "../shared/Button";
 
 const Header = (props: any) => {
   const { school } = props;

@@ -51,10 +51,12 @@ export default function Home() {
       {/* Image Container */}
       <div className="fixed h-full inset-x-0 bottom-0 z-[-1] bg-[#c5e2e6]">
         {/* Homepage Background */}
-        <img
+        <Image
           src="/homepage-background.png"
           alt="Homepage Background"
           className="fixed w-full bottom-0"
+          width={0}
+          height={0}
         />
       </div>
     </>

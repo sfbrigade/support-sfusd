@@ -1,6 +1,6 @@
-import HeadingContentWrapper from "../Material/HeadingContentWrapper";
-import Statistic from "../Material/Statistic";
-import StatisticList from "../Material/StatisticList";
+import HeadingContentWrapper from "../shared/HeadingContentWrapper";
+import Statistic from "../shared/Statistic";
+import StatisticList from "../shared/StatisticList";
 
 const About = (props: any) => {
   const { school } = props;

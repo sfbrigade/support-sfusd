@@ -1,4 +1,4 @@
-import HeadingContentWrapper from "../Material/HeadingContentWrapper";
+import HeadingContentWrapper from "../shared/HeadingContentWrapper";
 
 const Mission = () => {
   const innerContent = (
