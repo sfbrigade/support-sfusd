@@ -42,16 +42,8 @@ const Volunteer = () => {
             connect directly with the school.
           </p>
           <div className="flex gap-2">
-            <Button
-              style="Primary"
-              text="Fill out form"
-              className="w-36 px-0"
-            />
-            <Button
-              style="Secondary"
-              text="Contact SF Ed Fund"
-              className="w-36 px-0"
-            />
+            <Button style="Primary" text="Fill out form" className="w-36" />
+            <Button style="Secondary" text="Contact SF Ed Fund" className="" />
           </div>
         </div>
       </div>

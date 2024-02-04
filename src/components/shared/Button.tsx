@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   var styleClass =
     className +
-    " rounded-md px-6 h-10 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-25 disabled:grayscale ";
+    " rounded-md px-4 h-10 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-25 disabled:grayscale ";
 
   switch (style) {
     case "Secondary":
