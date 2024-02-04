@@ -29,8 +29,8 @@ const Volunteer = () => {
   ];
   return (
     <div className="flex flex-col gap-4">
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="border-2 border-black h-56">pic filler</div>
+      <div className="grid md:grid-cols-2 gap-4 auto-rows-auto">
+        <div className="border-2 border-black h-auto">pic filler</div>
         <div className="flex flex-col gap-4">
           <h1 className="text-blue-500 font-medium text-2xl md:text-5xl">
             Volunteer today!
@@ -42,8 +42,8 @@ const Volunteer = () => {
             connect directly with the school.
           </p>
           <div className="flex gap-2">
-            <Button fill text="Fill out form" />
-            <Button text="Contact SF Ed Fund" />
+            <Button text="Fill out form" />
+            <Button style="Secondary" text="Contact SF Ed Fund" />
           </div>
         </div>
       </div>

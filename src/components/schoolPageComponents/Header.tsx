@@ -16,6 +16,7 @@ const Header = (props: any) => {
         >
           {school.name}
         </h1>
+        {/* hide socials if not exist */}
         <div className="flex gap-2 fill-blue-500">
           <a>
             <InstagramIcon className="fill-inherit" height="30" width="30" />
@@ -42,9 +43,10 @@ const Header = (props: any) => {
         <p>{school.address}</p>
       </div>
 
+      {/* hide buttons if link doesn't exist*/}
       <div className="flex gap-2">
-        <Button fill text="Volunteer" />
-        <Button text="Donate" />
+        <Button text="Volunteer" />
+        <Button style="Secondary" text="Volunteer" />
       </div>
     </div>
   );
