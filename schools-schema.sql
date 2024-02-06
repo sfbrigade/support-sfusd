@@ -3,7 +3,7 @@ CREATE TABLE schools (
     name TEXT NOT NULL,
     address TEXT NOT NULL,
     sf_district TEXT NOT NULL,
-    students TEXT,
+    students NUMERIC,
     free_reduced_lunch TEXT,
     ell TEXT,
     color TEXT,
