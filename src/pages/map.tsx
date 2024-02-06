@@ -33,7 +33,7 @@ const Map = () => {
           <div className="flex flex-col justify-center items-center h-full">
             <h1 className="text-4xl font-bold mb-4">Select a School</h1>
             <p className="text-lg mb-4">
-              Click on a marker to view more information.
+              Click on a { isList? 'school' : 'marker '} to view more information.
             </p>
           </div>
         )}
