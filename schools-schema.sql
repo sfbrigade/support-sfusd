@@ -1,5 +1,5 @@
 CREATE TABLE schools (
-    id SERIAL PRIMARY KEY,
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
     name TEXT NOT NULL,
     address TEXT NOT NULL,
     sf_district TEXT NOT NULL,
