@@ -24,11 +24,13 @@ You need to sign up for Mapbox to run the project locally.
 
 2. It will ask you for billing information, but it is pay as you go. You have 500 instances before you are charged. 
 
-3. Note the default public token you are given
+3. Note the default public token you are given  
 
-<br>  
+<br>
 
-Create an environment file to pass the default public token into the project.  
+# Environment File
+
+Create an environment file to pass your default public token from Mapbox
 
 1. Create a new file, .env,  in the main directory (with the README.md file) 
 
