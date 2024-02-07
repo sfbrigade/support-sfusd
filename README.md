@@ -12,6 +12,30 @@ Hello! Thanks for checking out Support SFUSD. We started this project in summer 
 [![Tailwind CSS][tailwind.js]][tailwind-url]
 [![HTML][html.js]][html-url]
 [![CSS][css.js]][css-url]
+[![Mapbox][mapbox.js]][mapbox-url]
+
+<br>
+
+# Mapbox 
+
+You need to sign up for Mapbox to run the project locally.   
+
+1. Goto https://www.mapbox.com and sign up  
+
+2. It will ask you for billing information, but it is pay as you go. You have 500 instances before you are charged. 
+
+3. Note the default public token you are given
+
+<br>  
+
+Create an environment file to pass the default public token into the project.  
+
+1. Create a new file, .env,  in the main directory (with the README.md file) 
+
+2. Add your decault public token to your .env 
+   '''sh
+   NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_default_public_token
+   '''
 
 <br>
 
@@ -54,4 +78,6 @@ To run this project locally, please perform the following steps:
 [tailwind.js]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [tailwind-url]: https://tailwindcss.com/
 [next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[nextjs-url]: https://nextjs.org/
+[nextjs-url]: https://nextjs.org/ 
+[mapbox.js]: https://img.shields.io/badge/mapbox-purple
+[mapbox-url]: https://www.mapbox.com/
