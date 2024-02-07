@@ -33,9 +33,9 @@ Create an environment file to pass the default public token into the project.
 1. Create a new file, .env,  in the main directory (with the README.md file) 
 
 2. Add your decault public token to your .env 
-   '''sh
+   ```sh
    NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_default_public_token
-   '''
+   ```
 
 <br>
 
