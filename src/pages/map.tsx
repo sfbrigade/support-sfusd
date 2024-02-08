@@ -5,6 +5,7 @@ import schools from '../data/schools'
 import SchoolCard from '../components/SchoolCardMap'
 import MapList from '@/components/MapList'
 import MapboxMap from '@/components/MapboxMap'
+import ToggleButton from '@/components/ToggleButton/ToggleButton'
 
 export interface School {
   name: string
@@ -18,6 +19,10 @@ const Map = () => {
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null)
   // probably need to rename this state isList for toggle of map or list component
   const [isList, setIsList] = useState(false)
+
+  function toggleIsList(){
+    setIsList(prevIsList => !prevIsList)
+  }
 
   return (
     <div className="flex flex-col md:flex-row relative w-full h-[calc(100vh-80px)]">
@@ -38,6 +43,8 @@ const Map = () => {
           </div>
         )}
       </div>
+      <ToggleButton isMapView={!isList} toggleView={toggleIsList} />
+      
       {isList ? (
         <MapList setSelectedSchool={setSelectedSchool} />
       ) : (
