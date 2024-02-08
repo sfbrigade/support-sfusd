@@ -12,7 +12,6 @@ Hello! Thanks for checking out Support SFUSD. We started this project in summer 
 [![Tailwind CSS][tailwind.js]][tailwind-url]
 [![HTML][html.js]][html-url]
 [![CSS][css.js]][css-url]
-[![Mapbox][mapbox.js]][mapbox-url]
 
 <br>
 
@@ -81,5 +80,4 @@ To run this project locally, please perform the following steps:
 [tailwind-url]: https://tailwindcss.com/
 [next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [nextjs-url]: https://nextjs.org/ 
-[mapbox.js]: https://img.shields.io/badge/mapbox-purple
-[mapbox-url]: https://www.mapbox.com/
+
