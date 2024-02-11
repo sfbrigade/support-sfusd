@@ -64,7 +64,9 @@ To run this project locally, please perform the following steps:
 
 <br>
 
-# Contact
+# Further Notes to help you out 
+
+Visit our [notion-url](Notion) for Engineers 
 
 <!-- References and Icons -->
 
@@ -80,4 +82,5 @@ To run this project locally, please perform the following steps:
 [tailwind-url]: https://tailwindcss.com/
 [next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [nextjs-url]: https://nextjs.org/ 
+[notion-url]: https://www.notion.so/Engineering-Start-5cddd23f2ab0494cba2edcc93764f27f?pvs=4
 
