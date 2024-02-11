@@ -66,7 +66,7 @@ To run this project locally, please perform the following steps:
 
 # Further Notes to help you out 
 
-Visit our [notion-url](Notion) for Engineers 
+Visit our [Notion](notion-url) for Engineers 
 
 <!-- References and Icons -->
 
