@@ -66,7 +66,7 @@ To run this project locally, please perform the following steps:
 
 # Further Notes to help you out 
 
-Visit our [Notion](notion-url) for Engineers 
+Visit our [Notion](https://aquatic-magpie-a51.notion.site/Engineering-Guide-5cddd23f2ab0494cba2edcc93764f27f) for Engineers 
 
 <!-- References and Icons -->
 
