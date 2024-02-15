@@ -15,16 +15,15 @@ export interface School {
 
 const Map = () => {
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null)
-  // probably need to rename this state isList for toggle of map or list component
-  const [isList, setIsList] = useState(false)
+  const [isMap, setIsMap] = useState(true)
 
-  const handleToggle = () => {
-    setIsList(!isList)
+  const setToggle = () => {
+    setIsMap(!isMap)
   }
   return (
     <div className="flex flex-col relative w-full h-[calc(100vh-80px)]">
       <div className="flex mt-16 justify-center">
-        <ToggleButton isMapView={!isList} toggleView={handleToggle} />
+        <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
       <div className="flex flex-col md:flex-row h-full">
         <div className="w-full h-1/6 md:w-1/2 md:h-full flex justify-center items-center">
@@ -39,16 +38,16 @@ const Map = () => {
             <div className="flex flex-col justify-center items-center">
               <h1 className="text-4xl font-bold mb-4">Select a School</h1>
               <p className="text-lg mb-4">
-                Click on a {isList ? 'school' : 'marker '} to view more
+                Click on a {isMap ? 'school' : 'marker '} to view more
                 information.
               </p>
             </div>
           )}
         </div>
-        {isList ? (
-          <MapList setSelectedSchool={setSelectedSchool} />
-        ) : (
+        {isMap ? (
           <MapboxMap setSelectedSchool={setSelectedSchool} />
+        ) : (
+          <MapList setSelectedSchool={setSelectedSchool} />
         )}
       </div>
     </div>
