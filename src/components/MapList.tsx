@@ -1,7 +1,7 @@
-import React from "react";
-import MapListCard from "./MapListCard";
-import schools from "../data/schools";
-import { School } from '@/pages/map';
+import React from 'react'
+import MapListCard from './MapListCard'
+import schools from '../data/schools'
+import { School } from '@/pages/map'
 
 type MapListProps = {
   setSelectedSchool: (school: School) => void
@@ -18,7 +18,7 @@ type MapListProps = {
  * map => MapList => MapListCard
  *
  */
-const MapList = ( { setSelectedSchool }: MapListProps) => {
+const MapList = ({ setSelectedSchool }: MapListProps) => {
   /* NOTE: Will need to create expandable card functionality in future version.
   Currently the MapListCard is the "expanded" design. */
   return (
@@ -38,7 +38,7 @@ const MapList = ( { setSelectedSchool }: MapListProps) => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default MapList;
+export default MapList
