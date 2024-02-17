@@ -9,9 +9,9 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="fixed w-full text-black p-4 z-50 backdrop-blur">
+    <div className="fixed z-50 w-full  p-4 text-black backdrop-blur">
       <div className="container mx-auto max-w-[1280px]">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           {/* Home Icon */}
           <Link href="/">
             <Image
@@ -23,7 +23,7 @@ const Navbar = () => {
           </Link>
 
           {/* Links on desktop */}
-          <div className="hidden md:flex space-x-10">
+          <div className="hidden space-x-10 md:flex">
             <Link href="/map">Schools</Link>
             <Link href="/about">About</Link>
           </div>
@@ -36,15 +36,15 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-16 left-0 w-full flex flex-col items-center justify-start bg-[#F5F5F5] text-black h-screen pt-4 transition-opacity duration-1000 ${
+          className={`fixed left-0 top-16 flex h-screen w-full flex-col items-center justify-start bg-[#F5F5F5] pt-4 text-black transition-opacity duration-1000 ${
             isOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "pointer-events-auto opacity-100"
+              : "pointer-events-none opacity-0"
           }`}
         >
           <Link href="/about">
             <div
-              className={`py-4 transform transition-all duration-1000 ${
+              className={`transform py-4 transition-all duration-1000 ${
                 isOpen
                   ? "translate-y-0 opacity-100 delay-200"
                   : "translate-y-[-10px] opacity-0"
@@ -55,9 +55,9 @@ const Navbar = () => {
           </Link>
           <Link href="/map">
             <div
-              className={`py-4 transform transition-all duration-1000 ${
+              className={`transform py-4 transition-all duration-1000 ${
                 isOpen
-                  ? "translate-y-0 opacity-100 delay-400"
+                  ? "delay-400 translate-y-0 opacity-100"
                   : "translate-y-[-10px] opacity-0"
               }`}
             >
@@ -67,9 +67,9 @@ const Navbar = () => {
 
           {/* Social Icons */}
           <div
-            className={`flex space-x-4 py-4 transform transition-all duration-1000 ${
+            className={`flex transform space-x-4 py-4 transition-all duration-1000 ${
               isOpen
-                ? "translate-y-0 opacity-100 delay-800"
+                ? "delay-800 translate-y-0 opacity-100"
                 : "translate-y-[-10px] opacity-0"
             }`}
           >
