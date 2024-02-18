@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
-import SchoolCard from "../components/SchoolCardMap";
-import MapList from "@/components/MapList";
-import MapboxMap from "@/components/MapboxMap";
-import ToggleButton from "@/components/ToggleButton";
+import SchoolCard from "../components/mapPageComponents/SchoolCardMap";
+import MapList from "@/components/mapPageComponents/MapList";
+import MapboxMap from "@/components/mapPageComponents/MapboxMap";
+import ToggleButton from "@/components/mapPageComponents/ToggleButton";
 
 export interface School {
   name: string;

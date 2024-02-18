@@ -1,6 +1,6 @@
 import React from "react";
 import MapListCard from "./MapListCard";
-import schools from "../data/schools";
+import schools from "../../data/schools";
 import { School } from "@/pages/map";
 
 type MapListProps = {

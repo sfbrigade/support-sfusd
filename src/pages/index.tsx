@@ -1,3 +1,4 @@
+import Button from "@/components/shared/Button";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -46,6 +47,7 @@ export default function Home() {
               />
             </div>
           </button>
+          <Button text="test" style="Secondary" />
         </section>
       </main>
       {/* Image Container */}
