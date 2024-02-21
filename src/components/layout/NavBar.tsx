@@ -4,6 +4,7 @@ import Image from "next/image";
 import { BiLogoFacebookCircle } from "react-icons/bi";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { Squeeze as Hamburger } from "hamburger-react";
+import Button from "../shared/Button";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -24,8 +25,12 @@ const Navbar = () => {
 
           {/* Links on desktop */}
           <div className="hidden space-x-10 md:flex">
-            <Link href="/map">Schools</Link>
-            <Link href="/about">About</Link>
+            <Button style="Tertiary" className="p-0 px-0">
+              <Link href="/map">Schools</Link>
+            </Button>
+            <Button style="Tertiary" className="p-0 px-0">
+              <Link href="/map">About</Link>
+            </Button>
           </div>
 
           {/* Hamburger Icon */}

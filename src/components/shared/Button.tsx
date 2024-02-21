@@ -1,10 +1,10 @@
-import { MouseEvent } from "react";
+import { Children, MouseEvent, ReactNode } from "react";
 
 /**
  * Buttons following design system
  *
  * style: selects a specific design style of button listed in our figma
- * text: content of the button
+ * children: content of the button
  * disabled: sets the button to disabled
  * destructive: sets the button in the state of destructive
  * href: hyperlink to navigate to
@@ -14,8 +14,8 @@ import { MouseEvent } from "react";
  */
 
 interface ButtonProps {
-  style?: "Primary" | "Secondary" | "Tertiary";
-  text: string;
+  style?: "Primary" | "Secondary" | "Tertiary" | "Customize";
+  children?: ReactNode;
   disabled?: boolean;
   destructive?: boolean;
   href?: string;
@@ -26,7 +26,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
   style,
-  text,
+  children,
   disabled,
   destructive,
   href,
@@ -35,10 +35,11 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   var styleClass =
-    className +
-    " rounded-full px-4 p-2 text-md font-semibold disabled:cursor-not-allowed disabled:opacity-50 disabled:grayscale ";
+    "rounded-full px-4 p-2 text-md disabled:cursor-not-allowed disabled:opacity-50 disabled:grayscale ";
 
   switch (style) {
+    case "Customize":
+      break;
     case "Secondary":
       styleClass += "border-2 border-blue-500 ";
     case "Tertiary":
@@ -85,10 +86,10 @@ const Button: React.FC<ButtonProps> = ({
     <button
       onClick={onButtonClick}
       disabled={disabled}
-      className={styleClass}
+      className={styleClass + " " + className}
       {...rest}
     >
-      {text}
+      {children}
     </button>
   );
 };

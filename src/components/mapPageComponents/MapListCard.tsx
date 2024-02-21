@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../shared/Button";
 
 type MapListCardProps = {
   img: string;
@@ -49,9 +50,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
         <div className="mt-2 flex items-center">
           {ell ? `${ell}% English Language Learners` : "N/A"}
         </div>
-        <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
-          Learn More
-        </button>
+        <Button className="mt-4">Learn More</Button>
       </div>
       <div
         className="h-62 w-60 rounded-r-lg bg-cover bg-center"

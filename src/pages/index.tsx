@@ -30,9 +30,9 @@ export default function Home() {
             <li>2. Discover Opportunities</li>
             <li>3. Volunteer/Donate</li>
           </ul>
-
-          <button
-            className="flex items-center justify-center gap-3 rounded-[10px] bg-amber-400 px-4 py-4 lg:px-8"
+          <Button
+            className="flex items-center justify-center gap-3 bg-amber-400 px-4 hover:bg-amber-500 focus:bg-amber-500 active:bg-amber-500 lg:px-8 lg:py-4"
+            style="Customize"
             onClick={handleClick}
           >
             <span className="text-sm font-medium leading-7 tracking-wide text-zinc-950 sm:text-base md:text-lg lg:text-xl">
@@ -46,8 +46,7 @@ export default function Home() {
                 height={20}
               />
             </div>
-          </button>
-          <Button text="test" style="Secondary" />
+          </Button>
         </section>
       </main>
       {/* Image Container */}
