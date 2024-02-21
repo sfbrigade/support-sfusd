@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative flex h-screen flex-row justify-between p-4">
+      <main className="relative flex h-[calc(100vh-64px)] flex-row justify-between p-4">
         <section className="flex flex-1 flex-col items-center justify-center gap-8 lg:gap-11">
           <header className="text-center">
             <h1 className="text-3xl font-medium tracking-wider xl:text-5xl xl:leading-normal">
@@ -49,12 +49,19 @@ export default function Home() {
         </section>
       </main>
       {/* Image Container */}
-      <div className="fixed inset-x-0 bottom-0 z-[-1]">
+      <div className="fixed inset-x-0 bottom-0 z-[-1] h-full bg-[#c5e2e6]">
         {/* Homepage Background */}
-        <img
+        {/* <img
           src="/homepage-background.png"
           alt="Homepage Background"
-          className="w-full"
+          className="fixed bottom-0 w-full"
+        /> */}
+        <Image
+          src="/homepage-background.png"
+          alt="Homepage Background"
+          className="fixed bottom-0 w-full"
+          width={2000}
+          height={2000}
         />
       </div>
     </>

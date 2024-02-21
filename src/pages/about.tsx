@@ -1,9 +1,10 @@
 import React from "react";
+
 import Navbar from "../components/NavBar";
 
 const About = () => {
   return (
-    <div className="mx-auto flex h-[calc(100vh-64px)] max-w-[1280px] flex-col">
+    <div className="mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] flex-col">
       <main className="flex-1 p-4">
         <div className="container mx-auto">
           <h1 className="mb-4 text-4xl font-bold">About Us</h1>
@@ -41,8 +42,8 @@ const About = () => {
           <h2 className="mb-3 text-3xl font-bold">Contact Us</h2>
 
           <p className="mb-4 text-lg">
-            If you have any questions or would like to learn more about how you
-            can support SFUSD, please do not hesitate to{" "}
+            ould like to learn more about how you can support SFUSD, please do
+            not hesitate to{" "}
             <a href="" className="text-blue-600">
               contact us
             </a>

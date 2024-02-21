@@ -25,7 +25,7 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
 }) => {
   return (
     <div
-      className={`focus:outline-visible fixed right-4 top-24 flex items-center space-x-2
+      className={`focus:outline-visible space-x-2
         rounded-full bg-stone-800 p-1 px-4 py-2 shadow-lg`}
     >
       <button

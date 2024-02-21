@@ -71,10 +71,10 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
   }, []);
   return (
     <>
-      <div className="flex h-full w-full items-center justify-center md:w-1/2">
+      <div className="flex h-full w-full items-center justify-center">
         <div
           ref={mapContainer}
-          className="h-full w-full rounded-t-3xl border-2 border-gray-300 md:max-h-[600px] md:rounded-3xl"
+          className="h-full w-full rounded-t-3xl border-2 border-gray-300 md:rounded-3xl"
         />
       </div>
     </>

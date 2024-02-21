@@ -20,35 +20,52 @@ const Map = () => {
   const setToggle = () => {
     setIsMap(!isMap);
   };
+
   return (
-    <div className="relative flex h-[calc(100vh-80px)] w-full flex-col">
-      <div className="mt-16 flex justify-center">
+    <div
+      className={
+        "relative flex w-full flex-col gap-4 overflow-auto p-8 md:h-[calc(100vh-64px)] " +
+        (isMap && " h-[calc(100vh-64px)]")
+      }
+    >
+      <div className="flex justify-end">
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
-      <div className="flex h-full flex-col md:flex-row">
-        <div className="flex h-1/6 w-full items-center justify-center md:h-full md:w-1/2">
-          {selectedSchool && (
-            <div className="hidden md:block">
-              {" "}
-              {/* Hide SchoolCard on screens smaller than md */}
-              <SchoolCard school={selectedSchool} />
+      <div className="flex h-[90%] grid-cols-10 flex-col items-center md:grid">
+        <div className="col-span-4 flex justify-center">
+          {isMap ? (
+            <div>
+              {selectedSchool && (
+                <div className="hidden md:block">
+                  {/* Hide SchoolCard on screens smaller than md */}
+                  <SchoolCard school={selectedSchool} />
+                </div>
+              )}
+              {!selectedSchool && (
+                <div className="align-center flex flex-col items-center gap-4">
+                  <h1 className="text-4xl font-bold">Select a School</h1>
+                  <p className="text-lg">
+                    Click on a marker to view more information.
+                  </p>
+                </div>
+              )}
             </div>
-          )}
-          {!selectedSchool && (
-            <div className="flex flex-col items-center justify-center">
-              <h1 className="mb-4 text-4xl font-bold">Select a School</h1>
-              <p className="mb-4 text-lg">
-                Click on a {isMap ? "school" : "marker "} to view more
-                information.
+          ) : (
+            <div className="align-center flex flex-col items-center gap-4">
+              <h1 className="text-4xl font-bold">Select a School</h1>
+              <p className="text-lg">
+                Click on a school to view more information.
               </p>
             </div>
           )}
         </div>
-        {isMap ? (
-          <MapboxMap setSelectedSchool={setSelectedSchool} />
-        ) : (
-          <MapList setSelectedSchool={setSelectedSchool} />
-        )}
+        <div className="col-span-6 h-full w-full overflow-auto">
+          {isMap ? (
+            <MapboxMap setSelectedSchool={setSelectedSchool} />
+          ) : (
+            <MapList setSelectedSchool={setSelectedSchool} />
+          )}
+        </div>
       </div>
     </div>
   );
