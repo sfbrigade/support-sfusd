@@ -26,7 +26,7 @@ const MapList = ({ setSelectedSchool }: MapListProps) => {
       <div className="mb-4 flex items-center justify-start">
         <h1 className="text-2xl font-bold">List of Schools</h1>
       </div>
-      <div className="h-full overflow-auto">
+      <div className="flex h-full flex-col gap-4 overflow-auto">
         {schools.map((school, index) => (
           <MapListCard
             key={index}

@@ -24,7 +24,7 @@ const Map = () => {
   return (
     <div
       className={
-        "relative flex w-full flex-col gap-4 overflow-auto p-8 md:h-[calc(100vh-64px)] " +
+        "relative flex w-full flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 " +
         (isMap && " h-[calc(100vh-64px)]")
       }
     >
