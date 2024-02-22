@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="fixed z-50 w-full  p-4 text-black backdrop-blur">
+    <nav className="sticky top-0 z-50 w-full p-2 px-4 text-black backdrop-blur md:p-4">
       <div className="container mx-auto max-w-[1280px]">
         <div className="flex items-center justify-between">
           {/* Home Icon */}
@@ -30,7 +30,12 @@ const Navbar = () => {
 
           {/* Hamburger Icon */}
           <div className="md:hidden">
-            <Hamburger toggled={isOpen} toggle={setOpen} color="black" />
+            <Hamburger
+              toggled={isOpen}
+              toggle={setOpen}
+              color="black"
+              size={32}
+            />
           </div>
         </div>
 
@@ -97,7 +102,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

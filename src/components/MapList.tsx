@@ -22,21 +22,23 @@ const MapList = ({ setSelectedSchool }: MapListProps) => {
   /* NOTE: Will need to create expandable card functionality in future version.
   Currently the MapListCard is the "expanded" design. */
   return (
-    <div className="mt-2 block flex flex-col p-4 md:hidden">
+    <div className="flex h-full flex-col p-4">
       <div className="mb-4 flex items-center justify-start">
         <h1 className="text-2xl font-bold">List of Schools</h1>
       </div>
-      {schools.map((school, index) => (
-        <MapListCard
-          key={index}
-          img={school.img}
-          name={school.name}
-          district={school.district}
-          students={school.students}
-          frl={school.frl}
-          ell={school.ell}
-        />
-      ))}
+      <div className="h-full overflow-auto">
+        {schools.map((school, index) => (
+          <MapListCard
+            key={index}
+            img={school.img}
+            name={school.name}
+            district={school.district}
+            students={school.students}
+            frl={school.frl}
+            ell={school.ell}
+          />
+        ))}
+      </div>
     </div>
   );
 };
