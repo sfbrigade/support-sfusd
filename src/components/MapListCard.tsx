@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 type MapListCardProps = {
   img: string;
@@ -40,21 +41,25 @@ const MapListCard: React.FC<MapListCardProps> = ({
   }
   return (
     <div
-      className={`grid cursor-pointer grid-cols-10 rounded-lg  border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"} transition-max-height duration-[700ms] `}
+      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"} transition-max-height duration-[700ms] `}
       onClick={onClick}
     >
-      <div className="col-span-7 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out">
-        <div className="grid h-[88px] grid-cols-6 items-center">
+      <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
+        <div className="flex h-[88px] grid-cols-6 flex-col justify-center md:grid md:items-center md:gap-2">
           <div className="col-span-4 font-bold md:text-xl">{name}</div>
-          <div className="col-span-2 text-gray-600">{district}</div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <div className="">{students ? `${students} Students` : "N/A"}</div>
-          <div className="">
-            {frl ? `${frl}% Free and Reduced Lunch` : "N/A"}
+          <div className="col-span-2 text-gray-600 max-md:text-sm">
+            {district}
           </div>
-          <div className="">
-            {ell ? `${ell}% English Language Learners` : "N/A"}
+        </div>
+        <div className="flex flex-col gap-2 max-md:text-sm">
+          <div>
+            <strong>{students ? students : "N/A"}</strong> Students
+          </div>
+          <div>
+            <strong>{frl ? frl : "N/A"}%</strong> Free and Reduced Lunch
+          </div>
+          <div>
+            <strong>{ell ? ell : "N/A"}%</strong> English Language Learners
           </div>
           <button className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
             Learn More
@@ -62,9 +67,17 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
       </div>
       <div
-        className="col-span-3 rounded-r-lg bg-cover bg-center"
+        className={`transition-max-height relative col-span-4 rounded-r-lg bg-cover bg-center duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"}`}
         style={{ backgroundImage: `url(${img})` }}
-      ></div>
+      >
+        <Image
+          src="/icons/dropdown-icon.svg"
+          alt="Arrow Icon"
+          width={24}
+          height={24}
+          className={`absolute bottom-1.5 right-1.5 transition duration-[700ms] ${isExpanded ? "rotate-[-180deg]" : "rotate-0"}`}
+        />
+      </div>
     </div>
   );
 };

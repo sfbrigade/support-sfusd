@@ -31,7 +31,7 @@ const Map = () => {
       <div className="flex justify-end">
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
-      <div className="flex h-[90%] grid-cols-10 flex-col items-center md:grid">
+      <div className="flex h-[90%] grid-cols-10 flex-col items-center gap-2 md:grid">
         <div className="col-span-4 flex justify-center">
           {isMap ? (
             <div>
@@ -42,24 +42,28 @@ const Map = () => {
                 </div>
               )}
               {!selectedSchool && (
-                <div className="align-center flex flex-col items-center gap-4">
-                  <h1 className="text-4xl font-bold">Select a School</h1>
-                  <p className="text-lg">
+                <div className="align-center flex flex-col items-center md:gap-4">
+                  <h1 className="text-2xl font-bold md:text-4xl">
+                    Select a School
+                  </h1>
+                  <p className="md:text-lg">
                     Click on a marker to view more information.
                   </p>
                 </div>
               )}
             </div>
           ) : (
-            <div className="align-center flex flex-col items-center gap-4">
-              <h1 className="text-4xl font-bold">Select a School</h1>
-              <p className="text-lg">
+            <div className="align-center flex flex-col items-center md:gap-4">
+              <h1 className="text-2xl font-bold md:text-4xl">
+                Select a School
+              </h1>
+              <p className="md:text-lg">
                 Click on a school to view more information.
               </p>
             </div>
           )}
         </div>
-        <div className="col-span-6 h-full w-full overflow-auto">
+        <div className="h-full w-full overflow-auto md:col-span-6">
           {isMap ? (
             <MapboxMap setSelectedSchool={setSelectedSchool} />
           ) : (
