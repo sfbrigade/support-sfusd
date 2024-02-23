@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Schools {
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name               String
+  address            String
+  sf_district        String
+  students           Decimal? @db.Decimal
+  free_reduced_lunch String?
+  ell                String?
+  color              String?
+  img                String?
+  latitude           Decimal? @db.Decimal
+  longitude          Decimal? @db.Decimal
+}
