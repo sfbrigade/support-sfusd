@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BiLogoFacebookCircle } from "react-icons/bi";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { Squeeze as Hamburger } from "hamburger-react";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const router = useRouter();
 
+  useEffect(() => {
+    const handleRouteChange = (url: any) => {
+      setOpen(false);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+  }, []);
   return (
     <nav className="sticky top-0 z-50 w-full p-2 px-4 text-black backdrop-blur md:p-4">
       <div className="container mx-auto max-w-[1280px]">
