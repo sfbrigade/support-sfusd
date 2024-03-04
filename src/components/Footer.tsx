@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FFC627] p-8 font-medium text-sm">
+    <footer className="bg-[#FFC627] p-8 text-sm font-medium">
       <ul className="flex flex-col gap-0.5">
         <li>
           <a href="">SupportSFschool.org</a>
@@ -17,7 +17,7 @@ const Footer = () => {
           <a href="">Sitemap</a>
         </li>
       </ul>
-      <ul className="flex gap-2 mt-2">
+      <ul className="mt-2 flex gap-2">
         <li>
           <a href="">
             <Image
