@@ -68,7 +68,7 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
         .setLngLat([-122.3778, 37.7983])
         .addTo(map);
     });
-  }, []);
+  });
   return (
     <>
       <div className="flex h-full w-full items-center justify-center">
