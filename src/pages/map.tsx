@@ -36,10 +36,7 @@ const Map = () => {
           {isMap ? (
             <div>
               {selectedSchool && (
-                <div className="hidden md:block">
-                  {/* Hide SchoolCard on screens smaller than md */}
-                  <SchoolCard school={selectedSchool} />
-                </div>
+                <SchoolCard school={selectedSchool} />
               )}
               {!selectedSchool && (
                 <div className="align-center flex flex-col items-center md:gap-4">
