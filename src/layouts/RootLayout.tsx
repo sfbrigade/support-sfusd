@@ -9,7 +9,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${inter.className}px-0 md:px-4`}>
       <Navbar />
-      <div className="mx-auto lg:w-4/5 2xl:w-2/3">{children}</div>
+      <div className="">{children}</div>
       <Footer />
     </div>
   );
