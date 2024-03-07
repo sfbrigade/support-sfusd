@@ -4,16 +4,32 @@ import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
+import { GetStaticProps } from "next";
+import prisma from "@/lib/prisma";
 
 export interface School {
   name: string;
-  lat?: number;
-  lng?: number;
+  latitude: string;
+  longitude: string;
   description?: string;
-  img?: string;
+  img: string;
+  students: string;
+  district: string;
+  frl: string;
+  ell: string;
 }
 
-const Map = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const schools = await prisma.schools.findMany()
+  return {props: {schools}}
+}
+
+type Props = {
+  schools: School[]
+}
+
+const Map: React.FC<Props> = (props) => {
+
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   const [isMap, setIsMap] = useState(true);
 
@@ -65,9 +81,9 @@ const Map = () => {
         </div>
         <div className="h-full w-full overflow-auto md:col-span-6">
           {isMap ? (
-            <MapboxMap setSelectedSchool={setSelectedSchool} />
+            <MapboxMap setSelectedSchool={setSelectedSchool} schools={props.schools}/>
           ) : (
-            <MapList setSelectedSchool={setSelectedSchool} />
+            <MapList schools={props.schools}/>
           )}
         </div>
       </div>

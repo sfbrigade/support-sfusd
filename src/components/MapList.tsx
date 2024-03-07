@@ -1,24 +1,23 @@
 import React from "react";
 import MapListCard from "./MapListCard";
-import schools from "../data/schools";
 import { School } from "@/pages/map";
 
 type MapListProps = {
-  setSelectedSchool: (school: School) => void;
+  schools: School[]
 };
 
 /**
  * MapList: Renders a collection of expandable school cards in the map's list view.
  *
  * Props:
- *   - setSelectedSchool
+ *   - schools
  *
  * State: none
  *
  * map => MapList => MapListCard
  *
  */
-const MapList = ({ setSelectedSchool }: MapListProps) => {
+const MapList = ({ schools }: MapListProps) => {
   /* NOTE: Will need to create expandable card functionality in future version.
   Currently the MapListCard is the "expanded" design. */
   return (
@@ -27,17 +26,7 @@ const MapList = ({ setSelectedSchool }: MapListProps) => {
         <h1 className="text-2xl font-bold">List of Schools</h1>
       </div>
       <div className="flex h-full flex-col gap-2 overflow-auto md:gap-4">
-        {schools.map((school, index) => (
-          <MapListCard
-            key={index}
-            img={school.img}
-            name={school.name}
-            district={school.district}
-            students={school.students}
-            frl={school.frl}
-            ell={school.ell}
-          />
-        ))}
+        {schools.map((school, index) => <MapListCard key={index} {...school}/>)}
       </div>
     </div>
   );

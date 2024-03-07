@@ -2,6 +2,9 @@
   "name": "supportsfusd",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +16,7 @@
     "@prisma/client": "^5.10.2",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/mapbox-gl": "^2.7.14",
+    "@vercel/postgres": "^0.7.2",
     "hamburger-react": "^2.5.0",
     "mapbox-gl": "^2.15.0",
     "next": "13.4.19",
@@ -20,7 +24,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "react-redux": "^8.1.2",
-    "redux": "^4.2.1"
+    "redux": "^4.2.1",
+    "vercel": "^33.5.3"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
