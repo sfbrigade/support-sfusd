@@ -24,14 +24,14 @@ const Map = () => {
   return (
     <div
       className={
-        "relative flex w-full flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 " +
+        "relative mx-auto flex flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-4/5 2xl:w-2/3 " +
         (isMap && " h-[calc(100vh-64px)]")
       }
     >
-      <div className="flex justify-end">
+      <div className="flex justify-end max-md:p-4">
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
-      <div className="flex h-[90%] grid-cols-10 flex-col items-center gap-2 md:grid">
+      <div className="flex h-[90%] grid-cols-10 flex-col items-center gap-2 max-md:h-full md:grid">
         <div className="col-span-4 flex justify-center">
           {isMap ? (
             <div>
