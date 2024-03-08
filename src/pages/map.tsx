@@ -4,6 +4,7 @@ import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
+import SearchBar from "@/components/SearchBar";
 
 export interface School {
   name: string;
@@ -11,6 +12,12 @@ export interface School {
   lng?: number;
   description?: string;
   img?: string;
+}
+
+interface DropdownItem<ItemType> {
+  label: string;
+  value: string;
+  item: ItemType;
 }
 
 const Map = () => {
@@ -28,7 +35,12 @@ const Map = () => {
         (isMap && " h-[calc(100vh-64px)]")
       }
     >
-      <div className="flex justify-end">
+      <div className="flex justify-end space-x-20">
+        <SearchBar onItemSelect={function (item: DropdownItem<any>): void {
+          throw new Error("Function not implemented.");
+        } } onSearch={function (searchTerm: string): Promise<DropdownItem<any>[]> {
+          throw new Error("Function not implemented.");
+        } } />
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
       <div className="flex h-[90%] grid-cols-10 flex-col items-center gap-2 md:grid">
