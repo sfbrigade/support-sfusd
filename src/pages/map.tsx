@@ -29,7 +29,7 @@ const Map = () => {
   return (
     <div
       className={
-        "relative flex w-full flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 " +
+        "relative mx-auto flex flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 lg:w-4/5 2xl:w-2/3 " +
         (isMap && " h-[calc(100vh-64px)]")
       }
     >
