@@ -6,17 +6,7 @@ import MapListCard from "@/components/MapListCard";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
 
-export interface School {
-  name: string;
-  lat?: number;
-  lng?: number;
-  description?: string;
-  img?: string;
-  district?: string;
-  students?: string;
-  frl?: string;
-  ell?: string;
-}
+import { School } from "@/types/school";
 
 const Map = () => {
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null);

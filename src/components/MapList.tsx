@@ -1,7 +1,7 @@
 import React from "react";
 import MapListCard from "./MapListCard";
 import schools from "../data/schools";
-import { School } from "@/pages/map";
+import { School } from "@/types/school";
 
 type MapListProps = {
   setSelectedSchool: (school: School) => void;

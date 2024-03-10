@@ -1,16 +1,5 @@
 import React from "react";
-
-interface School {
-  name: string;
-  lat?: number;
-  lng?: number;
-  description?: string;
-  img?: string;
-  district?: string;
-  students?: string;
-  frl?: string;
-  ell?: string;
-}
+import { School } from "@/types/school";
 
 interface SchoolCardProps {
   school: School;
