@@ -1,5 +1,5 @@
 import schools from "@/data/schools";
-import { School } from "@/pages/map";
+import { School } from "@/types/school";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
