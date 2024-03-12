@@ -20,7 +20,7 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/hamiltontruong/clomceri8002i01rbfzt1hrdm",
+      style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
       center: [-122.437, 37.75],
       zoom: 11, // Start with more zoomed-out view but not too far
       minZoom: 10.5, // Allow users to zoom out more
