@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
+import MapListCard from "@/components/MapListCard";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
 import { GetStaticProps } from "next";
@@ -40,7 +41,7 @@ const Map: React.FC<Props> = (props) => {
   return (
     <div
       className={
-        "relative flex w-full flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 " +
+        "relative mx-auto flex flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 lg:w-4/5 2xl:w-2/3 " +
         (isMap && " h-[calc(100vh-64px)]")
       }
     >
@@ -79,7 +80,7 @@ const Map: React.FC<Props> = (props) => {
             </div>
           )}
         </div>
-        <div className="h-full w-full overflow-auto md:col-span-6">
+        <div className="relative h-full w-full overflow-auto md:col-span-6">
           {isMap ? (
             <MapboxMap setSelectedSchool={setSelectedSchool} schools={props.schools}/>
           ) : (
