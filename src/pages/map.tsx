@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
+import MapListCard from "@/components/MapListCard";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
 
@@ -11,6 +12,10 @@ export interface School {
   lng?: number;
   description?: string;
   img?: string;
+  district?: string;
+  students?: string;
+  frl?: string;
+  ell?: string;
 }
 
 const Map = () => {
@@ -24,7 +29,7 @@ const Map = () => {
   return (
     <div
       className={
-        "relative flex w-full flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 " +
+        "relative mx-auto flex flex-col gap-4 overflow-auto p-2 md:h-[calc(100vh-64px)] md:p-8 lg:w-4/5 2xl:w-2/3 " +
         (isMap && " h-[calc(100vh-64px)]")
       }
     >
@@ -63,9 +68,23 @@ const Map = () => {
             </div>
           )}
         </div>
-        <div className="h-full w-full overflow-auto md:col-span-6">
+        <div className="relative h-full w-full overflow-auto md:col-span-6">
           {isMap ? (
-            <MapboxMap setSelectedSchool={setSelectedSchool} />
+            <>
+              <MapboxMap setSelectedSchool={setSelectedSchool} />
+              {selectedSchool && (
+                <div className="absolute bottom-8 md:hidden">
+                  <MapListCard
+                  img={selectedSchool.img ? selectedSchool.img : ""}
+                  name={selectedSchool.name ? selectedSchool.name : ""}
+                  district={selectedSchool.district ? selectedSchool.district : ""}
+                  students={selectedSchool.students ? selectedSchool.students : ""}
+                  frl={selectedSchool.frl ? selectedSchool.frl : ""}
+                  ell={selectedSchool.ell ? selectedSchool.ell : ""}
+                />
+                </div>
+              )}
+            </>
           ) : (
             <MapList setSelectedSchool={setSelectedSchool} />
           )}

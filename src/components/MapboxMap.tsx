@@ -16,6 +16,7 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
       console.error("Mapbox access token or container is not set!");
       return;
     }
+    if (mapRef.current) return
 
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
