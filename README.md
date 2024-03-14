@@ -61,10 +61,10 @@ Create an environment file to pass your default public token from Mapbox
    NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_default_public_token
    ```
 
-3. For the prisma configuration you're going to need the vercel postgres URL, add both of these to your `.env` file
+3. For the prisma configuration you're going to need the vercel postgres URL, add both of these to your `.env` file, for security we will be adding these to the notion
    ```sh
-   POSTGRES_PRISMA_URL="postgres://default:1Na6IcVJvdRK@ep-shy-scene-a6ofl045-pooler.us-west-2.aws.neon.tech/verceldb?pgbouncer=true&connect_timeout=15&sslmode=require"
-   POSTGRES_URL_NON_POOLING="postgres://default:1Na6IcVJvdRK@ep-shy-scene-a6ofl045.us-west-2.aws.neon.tech/verceldb?sslmode=require"
+   POSTGRES_PRISMA_URL=check_notion_page
+   POSTGRES_URL_NON_POOLING=check_notion_page
    ```
 
 <br>
