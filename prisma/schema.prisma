@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Schools {
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name               String
+  address            String
+  sf_district        String
+  // students           Decimal? @db.Decimal
+  students           Int?
+  free_reduced_lunch String?
+  ell                String?
+  color              String?
+  img                String?
+  latitude           String
+  longitude          String
+}
