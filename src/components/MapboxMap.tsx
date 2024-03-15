@@ -5,9 +5,10 @@ import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School) => void;
+  schools: School[]
 };
 
-const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
+const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   useEffect(() => {
@@ -16,6 +17,7 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
       console.error("Mapbox access token or container is not set!");
       return;
     }
+    if (mapRef.current) return
 
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
@@ -39,10 +41,9 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
         const el = document.createElement("div");
         el.className = "marker";
         el.addEventListener("click", () => setSelectedSchool(school));
-
-        if (school.lat && school.lng) {
+        if (school.latitude && school.longitude) {
           new mapboxgl.Marker(el)
-            .setLngLat([school.lng, school.lat])
+            .setLngLat([Number(school.longitude), Number(school.latitude)])
             .setPopup(
               new mapboxgl.Popup({ offset: 25 }).setHTML(
                 `<h3>${school.name}</h3>`,
