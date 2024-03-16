@@ -19,7 +19,7 @@ type MapListProps = {
  */
 const MapList = ({ schools }: MapListProps) => {
   return (
-    <div className="flex h-full flex-col ">
+    <div className="flex h-full flex-col p-4">
       <div className="mb-4 flex items-center justify-start max-md:hidden">
         <h1 className="text-2xl font-bold">List of Schools</h1>
       </div>
