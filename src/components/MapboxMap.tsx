@@ -16,6 +16,7 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
       console.error("Mapbox access token or container is not set!");
       return;
     }
+    // prevents rerender
     if (mapRef.current) return
 
     mapboxgl.accessToken = accessToken;
@@ -53,6 +54,16 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
           console.error(`Coordinates are missing for ${school.name}`);
         }
       });
+
+      map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true,
+        })
+    );
+
 
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
