@@ -17,7 +17,7 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
       return;
     }
     // prevents rerender
-    if (mapRef.current) return
+    // if (mapRef.current) return
 
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
@@ -55,15 +55,18 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
         }
       });
 
-      map.addControl(
-        new mapboxgl.GeolocateControl({
-            positionOptions: {
-                enableHighAccuracy: true
-            },
-            trackUserLocation: true,
-        })
-    );
-
+      const geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        // fitBoundsOptions: {maxZoom: 0}
+      })
+      map.addControl(geolocate);
+      geolocate.on('outofmaxbounds', () => {
+        console.log('An outofmaxbounds event has occurred.');
+      })
+    
 
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
