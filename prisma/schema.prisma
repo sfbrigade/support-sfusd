@@ -21,13 +21,17 @@ model Schools {
   img                String?
   latitude           String
   longitude          String
+  profile            SchoolProfiles?
+  metrics            Metrics[]
+  programs           Programs[]
 }
 
 model SchoolProfiles {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  schoolId           String   @unique @db.Uuid
   school		         Schools @relation(fields: [schoolId], references: [id])
   about			         String
-  mission		          String
+  mission		         String
   testimonial        String?
   principal		       String
   x_url			         String?
@@ -38,6 +42,7 @@ model SchoolProfiles {
 
 model Metrics {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  schoolId           String   @db.Uuid
   school		         Schools @relation(fields: [schoolId], references: [id])
   name			         String
   percentage		     Int
@@ -47,6 +52,7 @@ model Metrics {
 
 model Programs {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  schoolId           String   @db.Uuid
   school		         Schools @relation(fields: [schoolId], references: [id])
   name			         String
   details		         String
