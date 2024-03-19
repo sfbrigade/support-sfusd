@@ -210,6 +210,13 @@ async function main() {
     ],
     skipDuplicates: true,
   })
+
+  // await prisma.schools.createMany({
+  //   data: [
+
+  //   ],
+  //   skipDuplicates: true,
+  // })
 }
 main()
   .then(async () => {

@@ -23,7 +23,7 @@ model Schools {
   longitude          String
 }
 
-model School-Profile {
+model SchoolProfile {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   school		         School @relation(fields: [schoolId], references: [id])
   about			         String
