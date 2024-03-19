@@ -23,11 +23,11 @@ model Schools {
   longitude          String
 }
 
-model SchoolProfile {
+model SchoolProfiles {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  school		         School @relation(fields: [schoolId], references: [id])
+  school		         Schools @relation(fields: [schoolId], references: [id])
   about			         String
-  mission		         String
+  mission		          String
   testimonial        String?
   principal		       String
   x_url			         String?
@@ -36,18 +36,18 @@ model SchoolProfile {
   website_url		     String?
 }
 
-model Metric {
+model Metrics {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  school		         School @relation(fields: [schoolId], references: [id])
+  school		         Schools @relation(fields: [schoolId], references: [id])
   name			         String
   percentage		     Int
   category		       String?
 }
 
 
-model Program {
+model Programs {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  school		         School @relation(fields: [schoolId], references: [id])
+  school		         Schools @relation(fields: [schoolId], references: [id])
   name			         String
   details		         String
   url			           String?
