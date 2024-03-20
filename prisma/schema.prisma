@@ -21,15 +21,15 @@ model School {
   img                String?
   latitude           String
   longitude          String
-  profile            SchoolProfiles?
-  metrics            Metrics[]
-  programs           Programs[]
+  profile            SchoolProfile?
+  metrics            Metric[]
+  programs           Program[]
 }
 
 model SchoolProfile {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @unique @db.Uuid
-  school		         Schools @relation(fields: [schoolId], references: [id])
+  school		         School @relation(fields: [schoolId], references: [id])
   about			         String
   mission		         String
   testimonial        String?
@@ -43,7 +43,7 @@ model SchoolProfile {
 model Metric {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @db.Uuid
-  school		         Schools @relation(fields: [schoolId], references: [id])
+  school		         School @relation(fields: [schoolId], references: [id])
   name			         String
   percentage		     Int
   category		       String?
@@ -53,7 +53,7 @@ model Metric {
 model Program {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @db.Uuid
-  school		         Schools @relation(fields: [schoolId], references: [id])
+  school		         School @relation(fields: [schoolId], references: [id])
   name			         String
   details		         String
   url			           String?
