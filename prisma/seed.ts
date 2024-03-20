@@ -226,15 +226,16 @@ async function main() {
     data: {
       profile: {
         create: {
-          about:`Small high school in San Francisco&apos;s Excelsior
+          about:`Alternative school by choice in San Francisco&#39;s Excelsior
           neighborhood.\n
-          Named after activist June Jordan, praised by Alice Walker as
-          &quot;universal poet&quot;.\n
-          Engages with southeast San Francisco communities, aligned with
-          social justice movement.\n
-          Aims to prepare students for college whilepreserving community
-          traditions.\n
-          Fosters next-generation leaders for a more equitable world.`,
+          Named after activist June Jordan, the school&#39;s three pillars are
+          Community, Social Justice, and Independent Thinkers.\n
+          Founded through community organizing by a group of teachers, parents,
+          and youth.\n
+          Engages with southeast San Francisco communities, aligned with social
+          justice movement.\n
+          Aims to prepare students for college while preserving community
+          traditions.`,
           mission: `As a school for Social Justice serving predominantly
           working class communities of color, the mission of JJSE is not just
           to prepare students for college but also to prepare our graduates to
@@ -252,7 +253,7 @@ async function main() {
           High School isn&apos;t just a place of learning; it&apos;s a place
           where I&apos;ve discovered my potential and built lasting
           connections.&quot; - Jorge Rodriguez`,
-          principal: "Sharimar Manilang",
+          principal: "Amanda Chui",
           x_url: "",
           instagram_url: "",
           facebook_url: "",
@@ -272,7 +273,7 @@ async function main() {
           data:[
             {
               name: "Students with Special Needs",
-              percentage: 11,
+              percentage: 28,
               category: "demographics",
             },
             {
@@ -317,10 +318,8 @@ async function main() {
         createMany: {
           data:[
             {
-              name: "Gratitude Day",
-              details: `Participate as a volunteer in this interactive community
-              gathering which aims to cultivate joy and a positive school
-              culture through the practice of gratitude. Learn more`,
+              name: "Remote Friendly Tasks",
+              details: "Volunteer from home!",
               url: "",
               category: "volunteer",
             },
@@ -333,12 +332,9 @@ async function main() {
               category: "volunteer",
             },
             {
-              name: "School Clean Up",
-              details: `Be a force for good! Join us in transforming our school
-               by volunteering for a Clean-Up Day, a small effort for a big
-               impact. Let&apos;s come together to create a brighter, more
-               vibrant space for learning and community pride.
-              Learn more`,
+              name: "Event volunteers",
+              details: `Participate in community gatherings which cultivate joy
+              and a positive school culture`,
               url: "",
               category: "volunteer",
             },
@@ -350,11 +346,65 @@ async function main() {
               category: "donate",
             },
             {
-              name: "Donate",
-              details: `You can donate directly to June Jordan on the Small
-              Schools for Equity website.`,
+              name: "Volunteer",
+              details: `June Jordan values community volunteers and has
+              volunteer needs and opportunities throughout the school year. You
+              can sign up to volunteer through the San Francisco Ed Fund or fill
+              out this form to connect directly with the school.`,
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "JJSE Moto Shop",
+              details: `June Jordan has the only motorcycle repair class in the
+              country.`,
               url: "",
               category: "donate",
+            },
+            {
+              name: "Intersession",
+              details: `JJSE's Intersession is comprised of three weeks of
+              experiential learning courses where students learn by doing and
+              actively engage in a variety of real-world experiences that
+              challenge them physically, emotionally, intellectually, and
+              spiritually.`,
+              url: "",
+              category: "donate",
+            },
+            {
+              name: "Student Activities",
+              details: `Although JJSE is a small school and therefore does not
+              offer the same breadth of courses as larger high schools, we do
+              have a rich series of elective courses students may choose from.`,
+              url: "",
+              category: "donate",
+            },
+            {
+              name: "Advisory",
+              details: `All students are part of an advisory: a small and
+              intimate group of students with 1-2 teachers who serve as their
+              support system at school.`,
+              url: "",
+              category: "enrichment",
+            },
+            {
+              name: "Extended Day Program",
+              details: `The June Jordan Extended-Day Program (EDP)
+              provides a wide array of opportunities for our students to develop
+               the essential skills needed for both academic success and
+               personal growth.`,
+              url: "",
+              category: "enrichment",
+            },
+            {
+              name: "Sports",
+              details: `Jaguar Athletics is a small but strong program where
+              students can come together to develop themselves as
+              scholar-athletes. Students from our neighboring school City Arts
+              and Tech High School play on Jaguar teams along with June Jordan
+              students.`,
+              url: "",
+              category: "enrichment",
             },
           ],
           skipDuplicates: true,
