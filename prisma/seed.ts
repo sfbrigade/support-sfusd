@@ -306,6 +306,62 @@ async function main() {
       }
     }
   });
+
+
+  await prisma.schools.update({
+    where: {
+      id: juneJordan.id
+    },
+    data: {
+      programs: {
+        createMany: {
+          data:[
+            {
+              name: "Gratitude Day",
+              details: `Participate as a volunteer in this interactive community
+              gathering which aims to cultivate joy and a positive school
+              culture through the practice of gratitude. Learn more`,
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "Math Tutors",
+              details: `Our students need help in this subject now more than
+              ever before. A strong commitment can make a huge lifetime change.
+              Learn more`,
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "School Clean Up",
+              details: `Be a force for good! Join us in transforming our school
+               by volunteering for a Clean-Up Day, a small effort for a big
+               impact. Let&apos;s come together to create a brighter, more
+               vibrant space for learning and community pride.
+              Learn more`,
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "Donate",
+              details: `You can donate directly to June Jordan on the Small
+              Schools for Equity website.`,
+              url: "",
+              category: "donate",
+            },
+            {
+              name: "Donate",
+              details: `You can donate directly to June Jordan on the Small
+              Schools for Equity website.`,
+              url: "",
+              category: "donate",
+            },
+          ],
+          skipDuplicates: true,
+        }
+      }
+    }
+  });
 }
 
 
