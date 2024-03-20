@@ -8,7 +8,7 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model School {
+model Schools {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name               String
   address            String
