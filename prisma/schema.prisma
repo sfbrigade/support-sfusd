@@ -8,7 +8,7 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model Schools {
+model School {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name               String
   address            String
@@ -26,7 +26,7 @@ model Schools {
   programs           Programs[]
 }
 
-model SchoolProfiles {
+model SchoolProfile {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @unique @db.Uuid
   school		         Schools @relation(fields: [schoolId], references: [id])
@@ -40,7 +40,7 @@ model SchoolProfiles {
   website_url		     String?
 }
 
-model Metrics {
+model Metric {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @db.Uuid
   school		         Schools @relation(fields: [schoolId], references: [id])
@@ -50,7 +50,7 @@ model Metrics {
 }
 
 
-model Programs {
+model Program {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @db.Uuid
   school		         Schools @relation(fields: [schoolId], references: [id])
