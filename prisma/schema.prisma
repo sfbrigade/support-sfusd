@@ -10,7 +10,7 @@ datasource db {
 
 model Schools {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name               String
+  name               String   @unique
   address            String
   sf_district        String
   // students           Decimal? @db.Decimal

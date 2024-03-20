@@ -211,8 +211,104 @@ async function main() {
     skipDuplicates: true,
   })
 
+  const juneJordan = await prisma.schools.findFirstOrThrow({
+    where: {
+      name: {
+        contains: "June Jordan"
+      }
+    }
+  });
 
+  await prisma.schools.update({
+    where: {
+      id: juneJordan.id
+    },
+    data: {
+      profile: {
+        create: {
+          about:`Small high school in San Francisco&apos;s Excelsior
+          neighborhood.\n
+          Named after activist June Jordan, praised by Alice Walker as
+          &quot;universal poet&quot;.\n
+          Engages with southeast San Francisco communities, aligned with
+          social justice movement.\n
+          Aims to prepare students for college whilepreserving community
+          traditions.\n
+          Fosters next-generation leaders for a more equitable world.`,
+          mission: `As a school for Social Justice serving predominantly
+          working class communities of color, the mission of JJSE is not just
+          to prepare students for college but also to prepare our graduates to
+          be agents of positive change in the world. Our mission and vision
+          is to prepare young people in three key areas: community, social
+          justice, and independent thinkers.`,
+          testimonial:`&quot;As a student at June Jordan High School, my
+          educational journey has been nothing short of transformative. The
+          supportive environment and dedicated teachers have empowered me to
+          explore my passions and excel academically. The diverse and
+          inclusive community at June Jordan fosters a sense of belonging,
+          making each day an opportunity for growth and collaboration. I
+          appreciate the emphasis on critical thinking and real-world skills
+          that will undoubtedly prepare me for future success. June Jordan
+          High School isn&apos;t just a place of learning; it&apos;s a place
+          where I&apos;ve discovered my potential and built lasting
+          connections.&quot; - Jorge Rodriguez`,
+          principal: "Sharimar Manilang",
+          x_url: "",
+          instagram_url: "",
+          facebook_url: "",
+          website_url: "",
+        }
+      }
+    }
+  });
+
+  await prisma.schools.update({
+    where: {
+      id: juneJordan.id
+    },
+    data: {
+      metrics: {
+        createMany: {
+          data:[
+            {
+              name: "Students with Special Needs",
+              percentage: 11,
+              category: "demographics",
+            },
+            {
+              name: "High School Graduation Rate",
+              percentage: 83,
+              category: "outcomes",
+            },
+            {
+              name: "Accepted into 4-year colleges",
+              percentage: 56,
+              category: "outcomes",
+            },
+            {
+              name: "Accepted into 2-year colleges",
+              percentage: 68,
+              category: "outcomes",
+            },
+            {
+              name: "SBAC English proficiency",
+              percentage: 11,
+              category: "outcomes",
+            },
+            {
+              name: "SBAC Math proficiency",
+              percentage: 0,
+              category: "outcomes",
+            },
+          ],
+          skipDuplicates: true,
+        }
+      }
+    }
+  });
 }
+
+
 main()
   .then(async () => {
     await prisma.$disconnect()
