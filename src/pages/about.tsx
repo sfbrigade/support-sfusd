@@ -4,7 +4,7 @@ import Navbar from "../components/NavBar";
 
 const About = () => {
   return (
-    <div className="mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] flex-col">
+    <div className="mx-auto flex h-screen max-w-[1280px] flex-col pt-[64px]">
       <main className="flex-1 p-4">
         <div className="container mx-auto">
           <h1 className="mb-4 text-4xl font-bold">About Us</h1>

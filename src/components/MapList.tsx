@@ -3,7 +3,7 @@ import MapListCard from "./MapListCard";
 import { School } from "@/pages/map";
 
 type MapListProps = {
-  schools: School[]
+  schools: School[];
 };
 
 /**
@@ -19,12 +19,11 @@ type MapListProps = {
  */
 const MapList = ({ schools }: MapListProps) => {
   return (
-    <div className="flex h-full flex-col p-4">
-      <div className="mb-4 flex items-center justify-start max-md:hidden">
-        <h1 className="text-2xl font-bold">List of Schools</h1>
-      </div>
+    <div className="flex h-full flex-col">
       <div className="flex h-full flex-col gap-2 overflow-auto md:gap-4">
-        {schools.map((school, index) => <MapListCard key={index} {...school}/>)}
+        {schools.map((school, index) => (
+          <MapListCard key={index} {...school} />
+        ))}
       </div>
     </div>
   );
