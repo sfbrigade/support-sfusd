@@ -55,10 +55,15 @@ const Map: React.FC<Props> = (props) => {
               {isMap ? (
                 <MapboxMap
                   setSelectedSchool={setSelectedSchool}
+                  selectedSchool={selectedSchool}
                   schools={props.schools}
                 />
               ) : (
-                <MapList schools={props.schools} />
+                <MapList
+                  setSelectedSchool={setSelectedSchool}
+                  selectedSchool={selectedSchool}
+                  schools={props.schools}
+                />
               )}
             </div>
           </div>

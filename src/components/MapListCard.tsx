@@ -1,25 +1,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { School } from "@/pages/map";
 
 type MapListCardProps = {
-  img: string;
-  name: string;
-  district: string;
-  students: string;
-  frl: string;
-  ell: string;
+  school: School;
+  setSelectedSchool: (school: School) => void;
+  isExpanded: Boolean;
 };
 
 /**
  * MapListCard: Renders a card with school image and details.
  *
  * Props:
- *  - img
- *  - name
- *  - district
- *  - students
- *  - frl
- *  - ell
+ *  - school
  *
  * State: none
  *
@@ -27,17 +20,14 @@ type MapListCardProps = {
  *
  */
 const MapListCard: React.FC<MapListCardProps> = ({
-  img,
-  name,
-  district,
-  students,
-  frl,
-  ell,
+  school,
+  setSelectedSchool,
+  isExpanded,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const { img, name, district, students, frl, ell } = school;
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
-    setIsExpanded(!isExpanded);
+    setSelectedSchool(school);
   }
   return (
     <div

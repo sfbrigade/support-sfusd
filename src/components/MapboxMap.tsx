@@ -4,10 +4,15 @@ import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School) => void;
+  selectedSchool: School | null;
   schools: School[];
 };
 
-const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
+const MapboxMap = ({
+  setSelectedSchool,
+  selectedSchool,
+  schools,
+}: MapboxMapProps) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   useEffect(() => {
@@ -41,14 +46,17 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
         el.className = "marker";
         el.addEventListener("click", () => setSelectedSchool(school));
         if (school.latitude && school.longitude) {
+          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+            `<h3>${school.name}</h3>`,
+          );
           new mapboxgl.Marker(el)
             .setLngLat([Number(school.longitude), Number(school.latitude)])
-            .setPopup(
-              new mapboxgl.Popup({ offset: 25 }).setHTML(
-                `<h3>${school.name}</h3>`,
-              ),
-            )
+            .setPopup(popup)
             .addTo(map);
+
+          if (selectedSchool === school) {
+            popup.addTo(map);
+          }
         } else {
           console.error(`Coordinates are missing for ${school.name}`);
         }
