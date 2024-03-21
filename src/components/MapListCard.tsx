@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { SchoolMapList } from "@/types/school";
 
-type MapListCardProps = {
-  img: string;
-  name: string;
-  district: string;
-  students: string;
-  frl: string;
-  ell: string;
-};
 
 /**
  * MapListCard: Renders a card with school image and details.
@@ -26,7 +19,7 @@ type MapListCardProps = {
  * MapList => MapListCard
  *
  */
-const MapListCard: React.FC<MapListCardProps> = ({
+const MapListCard: React.FC<SchoolMapList> = ({
   img,
   name,
   district,

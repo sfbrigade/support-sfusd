@@ -1,9 +1,9 @@
 import React from "react";
 import MapListCard from "./MapListCard";
-import { School } from "@/pages/map";
+import { SchoolMapList } from "@/types/school";
 
 type MapListProps = {
-  schools: School[]
+  schools: SchoolMapList[]
 };
 
 /**

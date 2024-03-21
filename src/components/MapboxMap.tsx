@@ -1,4 +1,4 @@
-import { School } from "@/pages/map";
+import { School } from "@/types/school";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
@@ -33,7 +33,6 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
     });
 
     mapRef.current = map;
-
     map.on("load", () => {
       schools.forEach((school) => {
         // create an HTML element for each school
