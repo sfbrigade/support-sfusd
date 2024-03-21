@@ -27,10 +27,10 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
       zoom: 11, // Start with more zoomed-out view but not too far
       minZoom: 10.5, // Allow users to zoom out more
       maxZoom: 15, // Increase max zoom to allow closer inspection
-      maxBounds: [
-        [-122.6, 37.65], // Southwest coordinates
-        [-122.25, 37.85], // Northeast coordinates
-      ],
+      // maxBounds: [
+      //   [-122.6, 37.65], // Southwest coordinates
+      //   [-122.25, 37.85], // Northeast coordinates
+      // ],
     });
 
     mapRef.current = map;
