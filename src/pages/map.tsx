@@ -42,23 +42,25 @@ const Map: React.FC<Props> = (props) => {
     <div className="bg-[#D7F1FF]">
       <div
         className={
-          "relative mx-auto flex flex-col overflow-auto pt-[64px] md:h-screen md:w-5/6 md:gap-4 md:pb-8 lg:w-4/5 2xl:w-2/3 " +
-          (isMap ? " h-screen" : "max-md:px-2 max-md:pb-2")
+          "relative mx-auto flex flex-col overflow-auto pt-[64px] md:h-screen md:w-11/12 md:gap-4 md:pb-8 lg:w-4/5 2xl:w-2/3 " +
+          (isMap ? " h-screen" : "")
         }
       >
         <div className="flex h-full grid-cols-10 flex-col items-center gap-4 max-md:h-full md:grid">
           <div className="flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
-            <div className="flex justify-end">
+            <div className="flex justify-center max-md:px-2 md:justify-end">
               <ToggleButton isMapView={isMap} toggleView={setToggle} />
             </div>
-            <div className="h-full w-full overflow-auto">
+            <div className="h-full w-full overflow-auto ">
               {isMap ? (
                 <MapboxMap
                   setSelectedSchool={setSelectedSchool}
                   schools={props.schools}
                 />
               ) : (
-                <MapList schools={props.schools} />
+                <div className="max-md:px-2 max-md:pb-2">
+                  <MapList schools={props.schools} />
+                </div>
               )}
             </div>
           </div>
