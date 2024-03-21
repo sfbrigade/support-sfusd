@@ -43,7 +43,7 @@ const Map: React.FC<Props> = (props) => {
       <div
         className={
           "relative mx-auto flex flex-col overflow-auto pt-[64px] md:h-screen md:w-11/12 md:gap-4 md:pb-8 lg:w-4/5 2xl:w-2/3 " +
-          (isMap ? " h-screen" : "")
+          (isMap ? " h-screen" : "max-md:px-2 max-md:pb-2")
         }
       >
         <div className="flex h-full grid-cols-10 flex-col items-center gap-4 max-md:h-full md:grid">
@@ -58,9 +58,7 @@ const Map: React.FC<Props> = (props) => {
                   schools={props.schools}
                 />
               ) : (
-                <div className="max-md:px-2 max-md:pb-2">
-                  <MapList schools={props.schools} />
-                </div>
+                <MapList schools={props.schools} />
               )}
             </div>
           </div>
