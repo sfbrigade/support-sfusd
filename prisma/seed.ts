@@ -211,11 +211,9 @@ async function main() {
     skipDuplicates: true,
   })
 
-  const juneJordan = await prisma.school.findFirstOrThrow({
+  const juneJordan = await prisma.school.findUniqueOrThrow({
     where: {
-      name: {
-        contains: "June Jordan"
-      },
+      id: "26bb1a79-ed75-49d9-bff4-8d558fb29fc6"
     }
   });
 
