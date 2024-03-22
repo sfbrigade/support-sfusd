@@ -46,7 +46,7 @@ const Map: React.FC<Props> = (props) => {
           (isMap ? " h-screen" : "max-md:px-2 max-md:pb-2")
         }
       >
-        <div className="flex h-full grid-cols-10 flex-col items-center gap-4 max-md:h-full md:grid">
+        <div className="flex h-full grid-cols-10 flex-col items-center gap-4 md:grid">
           <div className="flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
             <div className="flex justify-center max-md:px-2 md:justify-end">
               <ToggleButton isMapView={isMap} toggleView={setToggle} />

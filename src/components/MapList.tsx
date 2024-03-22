@@ -34,10 +34,17 @@ const MapList = ({
       const firstChild = containerRef.current.children[0] as HTMLElement | null;
       if (firstChild) {
         const scrollPosition = index * firstChild.offsetHeight;
-        containerRef.current.scrollTo({
-          top: scrollPosition,
-          behavior: "smooth",
-        });
+        if (window.innerWidth > 768) {
+          containerRef.current.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        } else {
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }
       }
     }
   }, [selectedSchool]);

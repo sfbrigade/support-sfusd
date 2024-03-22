@@ -33,6 +33,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
     <div
       className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"} transition-max-height duration-[700ms] `}
       onClick={onClick}
+      id={name}
     >
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
         <div className="flex h-[88px] grid-cols-6 flex-col justify-center md:grid md:items-center md:gap-2">
