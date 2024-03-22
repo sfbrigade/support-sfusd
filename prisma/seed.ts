@@ -211,9 +211,9 @@ async function main() {
     skipDuplicates: true,
   })
 
-  const juneJordan = await prisma.school.findUniqueOrThrow({
+  const juneJordan = await prisma.school.findFirstOrThrow({
     where: {
-      id: "26bb1a79-ed75-49d9-bff4-8d558fb29fc6"
+      name: "June Jordan School for Equity"
     }
   });
 
