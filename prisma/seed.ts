@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 async function main() {
-  await prisma.schools.createMany({
+  await prisma.school.createMany({
     data: [
       {
         name: "Balboa High School",
@@ -211,15 +211,15 @@ async function main() {
     skipDuplicates: true,
   })
 
-  const juneJordan = await prisma.schools.findFirstOrThrow({
+  const juneJordan = await prisma.school.findFirstOrThrow({
     where: {
       name: {
         contains: "June Jordan"
-      }
+      },
     }
   });
 
-  await prisma.schools.update({
+  await prisma.school.update({
     where: {
       id: juneJordan.id
     },
@@ -263,7 +263,7 @@ async function main() {
     }
   });
 
-  await prisma.schools.update({
+  await prisma.school.update({
     where: {
       id: juneJordan.id
     },
@@ -274,32 +274,32 @@ async function main() {
             {
               name: "Students with Special Needs",
               percentage: 28,
-              category: "demographics",
+              category: "demographic",
             },
             {
               name: "High School Graduation Rate",
               percentage: 83,
-              category: "outcomes",
+              category: "outcome",
             },
             {
               name: "Accepted into 4-year colleges",
               percentage: 56,
-              category: "outcomes",
+              category: "outcome",
             },
             {
               name: "Accepted into 2-year colleges",
               percentage: 68,
-              category: "outcomes",
+              category: "outcome",
             },
             {
               name: "SBAC English proficiency",
               percentage: 11,
-              category: "outcomes",
+              category: "outcome",
             },
             {
               name: "SBAC Math proficiency",
               percentage: 0,
-              category: "outcomes",
+              category: "outcome",
             },
           ],
           skipDuplicates: true,
@@ -309,7 +309,7 @@ async function main() {
   });
 
 
-  await prisma.schools.update({
+  await prisma.school.update({
     where: {
       id: juneJordan.id
     },
@@ -359,7 +359,7 @@ async function main() {
               details: `June Jordan has the only motorcycle repair class in the
               country.`,
               url: "",
-              category: "donate",
+              category: "donation_funded",
             },
             {
               name: "Intersession",
@@ -369,7 +369,7 @@ async function main() {
               challenge them physically, emotionally, intellectually, and
               spiritually.`,
               url: "",
-              category: "donate",
+              category: "donation_funded",
             },
             {
               name: "Student Activities",
@@ -377,7 +377,7 @@ async function main() {
               offer the same breadth of courses as larger high schools, we do
               have a rich series of elective courses students may choose from.`,
               url: "",
-              category: "donate",
+              category: "donation_funded",
             },
             {
               name: "Advisory",

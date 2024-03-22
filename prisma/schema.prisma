@@ -8,7 +8,7 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model Schools {
+model School {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name               String
   address            String
@@ -29,7 +29,7 @@ model Schools {
 model SchoolProfile {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @unique @db.Uuid
-  school		         Schools @relation(fields: [schoolId], references: [id])
+  school		         School @relation(fields: [schoolId], references: [id])
   about			         String
   mission		         String
   testimonial        String?
@@ -43,19 +43,32 @@ model SchoolProfile {
 model Metric {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @db.Uuid
-  school		         Schools @relation(fields: [schoolId], references: [id])
+  school		         School @relation(fields: [schoolId], references: [id])
   name			         String
   percentage		     Int
-  category		       String?
+  category           MetricCategory
 }
 
 
 model Program {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @db.Uuid
-  school		         Schools @relation(fields: [schoolId], references: [id])
+  school		         School @relation(fields: [schoolId], references: [id])
   name			         String
   details		         String
   url			           String?
-  category		       String?
+  category		       ProgramCategory
+}
+
+enum MetricCategory {
+  demographic
+  outcome
+}
+
+enum ProgramCategory {
+  volunteer
+  donate
+  enrichment
+  donation_funded
+  donors_choose
 }
