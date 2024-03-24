@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 async function main() {
-  await prisma.schools.createMany({
+  await prisma.school.createMany({
     data: [
       {
         name: "Balboa High School",
