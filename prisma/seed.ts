@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 async function main() {
   await prisma.schools.createMany({
     data: [
@@ -31,7 +31,7 @@ async function main() {
         name: "Downtown High School",
         address: "693 Vermont St, San Francisco, CA",
         sf_district: "Potrero Hill",
-        students:0,
+        students: 0,
         free_reduced_lunch: "",
         ell: "",
         color: "#3986ff",
@@ -55,7 +55,7 @@ async function main() {
         name: "Ida B. Wells High School",
         address: "1099 Hayes St, San Francisco, CA",
         sf_district: "Alamo Square",
-        students:0,
+        students: 0,
         free_reduced_lunch: "",
         ell: "",
         color: "#3986ff",
@@ -67,7 +67,7 @@ async function main() {
         name: "Independence High School",
         address: "1350 7th Ave, San Francisco, CA",
         sf_district: "Inner Sunset",
-        students:0,
+        students: 0,
         free_reduced_lunch: "",
         ell: "",
         color: "#3986ff",
@@ -209,14 +209,14 @@ async function main() {
       },
     ],
     skipDuplicates: true,
-  })
+  });
 }
 main()
   .then(async () => {
-    await prisma.$disconnect()
+    await prisma.$disconnect();
   })
   .catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })
+    console.error(e);
+    await prisma.$disconnect();
+    process.exit(1);
+  });

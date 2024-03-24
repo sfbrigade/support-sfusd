@@ -10,16 +10,15 @@ import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const schools = await prisma.schools.findMany()
-  return {props: {schools}}
-}
+  const schools = await prisma.schools.findMany();
+  return { props: { schools } };
+};
 
 type Props = {
-  schools: School[]
-}
+  schools: School[];
+};
 
 const Map: React.FC<Props> = (props) => {
-
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   const [isMap, setIsMap] = useState(true);
 
@@ -71,9 +70,12 @@ const Map: React.FC<Props> = (props) => {
         </div>
         <div className="relative h-full w-full overflow-auto md:col-span-6">
           {isMap ? (
-            <MapboxMap setSelectedSchool={setSelectedSchool} schools={props.schools}/>
+            <MapboxMap
+              setSelectedSchool={setSelectedSchool}
+              schools={props.schools}
+            />
           ) : (
-            <MapList schools={props.schools}/>
+            <MapList schools={props.schools} />
           )}
         </div>
       </div>
