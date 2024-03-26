@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 async function main() {
-  await prisma.schools.createMany({
+  await prisma.school.createMany({
     data: [
       {
         name: "Balboa High School",
@@ -209,8 +209,210 @@ async function main() {
       },
     ],
     skipDuplicates: true,
+  })
+
+  const juneJordan = await prisma.school.findFirstOrThrow({
+    where: {
+      name: "June Jordan School for Equity"
+    }
+  });
+
+  await prisma.school.update({
+    where: {
+      id: juneJordan.id
+    },
+    data: {
+      profile: {
+        create: {
+          about:`Alternative school by choice in San Francisco&#39;s Excelsior
+          neighborhood.\n
+          Named after activist June Jordan, the school&#39;s three pillars are
+          Community, Social Justice, and Independent Thinkers.\n
+          Founded through community organizing by a group of teachers, parents,
+          and youth.\n
+          Engages with southeast San Francisco communities, aligned with social
+          justice movement.\n
+          Aims to prepare students for college while preserving community
+          traditions.`,
+          mission: `As a school for Social Justice serving predominantly
+          working class communities of color, the mission of JJSE is not just
+          to prepare students for college but also to prepare our graduates to
+          be agents of positive change in the world. Our mission and vision
+          is to prepare young people in three key areas: community, social
+          justice, and independent thinkers.`,
+          testimonial:`&quot;As a student at June Jordan High School, my
+          educational journey has been nothing short of transformative. The
+          supportive environment and dedicated teachers have empowered me to
+          explore my passions and excel academically. The diverse and
+          inclusive community at June Jordan fosters a sense of belonging,
+          making each day an opportunity for growth and collaboration. I
+          appreciate the emphasis on critical thinking and real-world skills
+          that will undoubtedly prepare me for future success. June Jordan
+          High School isn&apos;t just a place of learning; it&apos;s a place
+          where I&apos;ve discovered my potential and built lasting
+          connections.&quot; - Jorge Rodriguez`,
+          principal: "Amanda Chui",
+          x_url: "",
+          instagram_url: "",
+          facebook_url: "",
+          website_url: "",
+        }
+      }
+    }
+  });
+
+  await prisma.school.update({
+    where: {
+      id: juneJordan.id
+    },
+    data: {
+      metrics: {
+        createMany: {
+          data:[
+            {
+              name: "Students with Special Needs",
+              percentage: 28,
+              category: "demographic",
+            },
+            {
+              name: "High School Graduation Rate",
+              percentage: 83,
+              category: "outcome",
+            },
+            {
+              name: "Accepted into 4-year colleges",
+              percentage: 56,
+              category: "outcome",
+            },
+            {
+              name: "Accepted into 2-year colleges",
+              percentage: 68,
+              category: "outcome",
+            },
+            {
+              name: "SBAC English proficiency",
+              percentage: 11,
+              category: "outcome",
+            },
+            {
+              name: "SBAC Math proficiency",
+              percentage: 0,
+              category: "outcome",
+            },
+          ],
+          skipDuplicates: true,
+        }
+      }
+    }
+  });
+
+
+  await prisma.school.update({
+    where: {
+      id: juneJordan.id
+    },
+    data: {
+      programs: {
+        createMany: {
+          data:[
+            {
+              name: "Remote Friendly Tasks",
+              details: "Volunteer from home!",
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "Math Tutors",
+              details: `Our students need help in this subject now more than
+              ever before. A strong commitment can make a huge lifetime change.
+              Learn more`,
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "Event volunteers",
+              details: `Participate in community gatherings which cultivate joy
+              and a positive school culture`,
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "Donate",
+              details: `You can donate directly to June Jordan on the Small
+              Schools for Equity website.`,
+              url: "",
+              category: "donate",
+            },
+            {
+              name: "Volunteer",
+              details: `June Jordan values community volunteers and has
+              volunteer needs and opportunities throughout the school year. You
+              can sign up to volunteer through the San Francisco Ed Fund or fill
+              out this form to connect directly with the school.`,
+              url: "",
+              category: "volunteer",
+            },
+            {
+              name: "JJSE Moto Shop",
+              details: `June Jordan has the only motorcycle repair class in the
+              country.`,
+              url: "",
+              category: "donation_funded",
+            },
+            {
+              name: "Intersession",
+              details: `JJSE's Intersession is comprised of three weeks of
+              experiential learning courses where students learn by doing and
+              actively engage in a variety of real-world experiences that
+              challenge them physically, emotionally, intellectually, and
+              spiritually.`,
+              url: "",
+              category: "donation_funded",
+            },
+            {
+              name: "Student Activities",
+              details: `Although JJSE is a small school and therefore does not
+              offer the same breadth of courses as larger high schools, we do
+              have a rich series of elective courses students may choose from.`,
+              url: "",
+              category: "donation_funded",
+            },
+            {
+              name: "Advisory",
+              details: `All students are part of an advisory: a small and
+              intimate group of students with 1-2 teachers who serve as their
+              support system at school.`,
+              url: "",
+              category: "enrichment",
+            },
+            {
+              name: "Extended Day Program",
+              details: `The June Jordan Extended-Day Program (EDP)
+              provides a wide array of opportunities for our students to develop
+               the essential skills needed for both academic success and
+               personal growth.`,
+              url: "",
+              category: "enrichment",
+            },
+            {
+              name: "Sports",
+              details: `Jaguar Athletics is a small but strong program where
+              students can come together to develop themselves as
+              scholar-athletes. Students from our neighboring school City Arts
+              and Tech High School play on Jaguar teams along with June Jordan
+              students.`,
+              url: "",
+              category: "enrichment",
+            },
+          ],
+          skipDuplicates: true,
+        }
+      }
+    }
   });
 }
+
+
 main()
   .then(async () => {
     await prisma.$disconnect();
