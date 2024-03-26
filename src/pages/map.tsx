@@ -29,7 +29,7 @@ interface DropdownItem<ItemType> {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const schools = await prisma.schools.findMany();
+  const schools = await prisma.school.findMany();
   return { props: { schools } };
 };
 
