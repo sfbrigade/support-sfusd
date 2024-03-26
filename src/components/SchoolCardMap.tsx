@@ -64,7 +64,6 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             {school.ell ? school.ell : "N/A"}% English Language Learners
           </h3>
         </div>
-        <p>{school.description}</p>
       </div>
     </div>
   );
