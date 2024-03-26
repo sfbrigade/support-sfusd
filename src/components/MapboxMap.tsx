@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School) => void;
-  schools: School[]
+  schools: School[];
 };
 
 const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
@@ -16,8 +16,7 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
       console.error("Mapbox access token or container is not set!");
       return;
     }
-    // prevents rerender
-    if (mapRef.current) return
+    if (mapRef.current) return;
 
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
@@ -88,7 +87,7 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
       <div className="flex h-full w-full items-center justify-center">
         <div
           ref={mapContainer}
-          className="h-full w-full rounded-t-3xl border-2 border-gray-300 md:rounded-3xl"
+          className="h-full w-full rounded-t-3xl md:rounded-3xl md:border-2 md:border-gray-300"
         />
       </div>
     </>
