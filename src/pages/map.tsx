@@ -6,11 +6,31 @@ import MapList from "@/components/MapList";
 import MapListCard from "@/components/MapListCard";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
+import SearchBar from "@/components/SearchBar";
 import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 
+export interface School {
+  name: string;
+  latitude: string;
+  longitude: string;
+  description?: string;
+  img: string;
+  students: string;
+  district: string;
+  frl: string;
+  ell: string;
+}
+
+
+interface DropdownItem<ItemType> {
+  label: string;
+  value: string;
+  item: ItemType;
+}
+
 export const getStaticProps: GetStaticProps = async () => {
-  const schools = await prisma.schools.findMany();
+  const schools = await prisma.school.findMany();
   return { props: { schools } };
 };
 
@@ -33,7 +53,13 @@ const Map: React.FC<Props> = (props) => {
         (isMap && " h-[calc(100vh-64px)]")
       }
     >
-      <div className="flex justify-end max-md:p-4">
+      <div className="flex justify-end space-x-20">
+        <SearchBar onItemSelect={function (item: DropdownItem<any>): void {
+          throw new Error("Function not implemented.");
+        } } onSearch={function (searchTerm: string): Promise<DropdownItem<any>[]> {
+          throw new Error("Function not implemented.");
+        } } />
+
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
       <div className="flex h-[90%] grid-cols-10 flex-col items-center gap-2 max-md:h-full md:grid">
