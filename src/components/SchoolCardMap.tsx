@@ -1,16 +1,5 @@
 import React from "react";
-
-interface School {
-  name: string;
-  lat?: number;
-  lng?: number;
-  description?: string;
-  img?: string;
-  district?: string;
-  students?: string;
-  frl?: string;
-  ell?: string;
-}
+import { School } from "@/types/school";
 
 interface SchoolCardProps {
   school: School;
@@ -42,7 +31,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
       />
       <h3 className="mb-2 text-xl font-bold">{school.name}</h3>
       <h3 className="mb-2 text-base text-slate-400">
-        {school.district} District
+        {school.sf_district} District
       </h3>
       <div className="items-left flex flex-col">
         <div className="mb-2 flex flex-row items-center">
@@ -62,7 +51,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             className="mr-2 max-h-[30px] max-w-[30px]"
           />
           <h3 className="text-base">
-            {school.frl ? school.frl : "N/A"}% Free and Reduced Lunch
+            {school.free_reduced_lunch ? school.free_reduced_lunch : "N/A"}% Free and Reduced Lunch
           </h3>
         </div>
         <div className="mb-2 flex flex-row items-center">
@@ -75,7 +64,6 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             {school.ell ? school.ell : "N/A"}% English Language Learners
           </h3>
         </div>
-        <p>{school.description}</p>
       </div>
     </div>
   );

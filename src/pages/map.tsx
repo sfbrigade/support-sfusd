@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { School } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
 import MapListCard from "@/components/MapListCard";
@@ -8,19 +9,6 @@ import ToggleButton from "@/components/ToggleButton";
 import SearchBar from "@/components/SearchBar";
 import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
-
-export interface School {
-  name: string;
-  latitude: string;
-  longitude: string;
-  description?: string;
-  img: string;
-  students: string;
-  district: string;
-  frl: string;
-  ell: string;
-}
-
 
 interface DropdownItem<ItemType> {
   label: string;
