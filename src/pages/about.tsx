@@ -1,51 +1,39 @@
 import React from "react";
+import Image from "next/image";
 
 import Navbar from "../components/NavBar";
 
 const About = () => {
   return (
-    <div className="mx-auto flex min-h-[calc(100vh-64px)] max-w-[1280px] flex-col">
-      <main className="flex-1 p-4">
-        <div className="container mx-auto">
-          <h1 className="mb-4 text-4xl font-bold">About Us</h1>
-
-          <p className="mb-4 text-lg">
-            Welcome to Support SFUSD, a platform dedicated to fostering
-            connections between the community and schools within the San
-            Francisco Unified School District.
+    <div className="mx-auto flex h-[calc(100vh-64px)] max-md:px-8 md:w-3/5">
+      <main className="flex flex-col items-center justify-center gap-4">
+        <Image
+          src="/about-graphic.png"
+          alt="Arrow Icon"
+          className="w-40 sm:w-48 md:w-60"
+          width={240}
+          height={240}
+        />
+        <div className="flex flex-col gap-4 max-md:text-sm">
+          <h1 className="text-center text-4xl font-medium max-md:text-2xl">
+            Hello!
+          </h1>
+          <p>
+            Support SFUSD is run by an all-volunteer team at SF Civic Tech
+            (formerly known as Code for San Francisco). Our diverse group of
+            teachers, designers, engineers, researchers, and curious community
+            members is building this website to make it easier for people who
+            live, work, and play in San Francisco to support local public
+            schools.
           </p>
-
-          <p className="mb-4 text-lg">
-            Our mission is to enhance the educational experience of students by
-            facilitating community involvement and support. We believe in the
-            power of community to make a positive impact on the education and
-            lives of young people.
+          <p>
+            We are always open for feedback and always looking for volunteers to
+            join our effort. We meet Wednesday evenings on Zoom.
           </p>
-
-          <p className="mb-4 text-lg">
-            On our platform, you can discover schools, find opportunities to get
-            involved, and learn about the various ways you can contribute to
-            supporting education in San Francisco. Whether you are a parent,
-            teacher, student, or community member, there is a place for you
-            here.
-          </p>
-
-          <h2 className="mb-3 text-3xl font-bold">Get Involved</h2>
-
-          <p className="mb-4 text-lg">
-            There are numerous ways to get involved and make a difference. From
-            volunteering in schools to donating resources, your support is
-            invaluable. Explore our website to find the best way for you to
-            contribute.
-          </p>
-
-          <h2 className="mb-3 text-3xl font-bold">Contact Us</h2>
-
-          <p className="mb-4 text-lg">
-            ould like to learn more about how you can support SFUSD, please do
-            not hesitate to{" "}
-            <a href="" className="text-blue-600">
-              contact us
+          <p>
+            Learn more about{" "}
+            <a href="https://www.sfcivictech.org/about" className="underline">
+              SF Civic Tech
             </a>
             .
           </p>
