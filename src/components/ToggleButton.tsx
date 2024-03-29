@@ -24,7 +24,7 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
   toggleView,
 }) => {
   return (
-    <label className="fixed z-10 inline-block h-[32px] w-full rounded-md bg-[#CCD8DE] md:relative md:w-[240px]">
+    <label className="w-inherit relative inline-block h-[38px] flex-grow rounded-md bg-[#CCD8DE]">
       <div className="absolute left-0 top-0 flex h-full w-full items-center justify-around">
         <p className="flex items-center justify-center gap-1">
           <Image
@@ -43,8 +43,10 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
       <input
         type="checkbox"
         onClick={toggleView}
+        readOnly
         className="h-0 w-0 opacity-0"
         aria-checked={isMapView}
+        checked={!isMapView}
       />
       <span className="slider absolute left-[3px] top-[2px] flex h-[calc(90%-1px)] w-[calc(50%-3px)] cursor-pointer items-center justify-center gap-1 rounded-md bg-[#3A86FF] text-white transition duration-300">
         <Image

@@ -1,28 +1,23 @@
 import React, { useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { School } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
-import MapListCard from "@/components/MapListCard";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
+import SearchBar from "@/components/SearchBar";
 import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 import Image from "next/image";
 
-export interface School {
-  name: string;
-  latitude: string;
-  longitude: string;
-  description?: string;
-  img: string;
-  students: string;
-  district: string;
-  frl: string;
-  ell: string;
+interface DropdownItem<ItemType> {
+  label: string;
+  value: string;
+  item: ItemType;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const schools = await prisma.schools.findMany();
+  const schools = await prisma.school.findMany();
   return { props: { schools } };
 };
 
@@ -40,18 +35,41 @@ const Map: React.FC<Props> = (props) => {
 
   return (
     <div className="bg-[#D7F1FF]">
+      <div className="top-16 z-10 flex justify-center gap-2 bg-[#D7F1FF] max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
+        <SearchBar
+          onItemSelect={function (item: DropdownItem<any>): void {
+            throw new Error("Function not implemented.");
+          }}
+          onSearch={function (
+            searchTerm: string,
+          ): Promise<DropdownItem<any>[]> {
+            throw new Error("Function not implemented.");
+          }}
+        />
+        <ToggleButton isMapView={isMap} toggleView={setToggle} />
+      </div>
       <div
         className={
-          "relative mx-auto flex flex-col overflow-auto pt-[64px] md:h-screen md:w-11/12 md:gap-4 md:pb-8 lg:w-4/5 2xl:w-2/3 " +
-          (isMap ? " h-screen" : "max-md:px-2 max-md:pb-2")
+          "relative mx-auto flex flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-4/5 2xl:w-2/3 " +
+          (isMap && " h-[calc(100vh-64px)]")
         }
       >
         <div className="flex h-full grid-cols-10 flex-col items-center gap-4 md:grid">
-          <div className="flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
-            <div className="flex justify-center max-md:px-2 md:justify-end">
+          <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
+            <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
+              <SearchBar
+                onItemSelect={function (item: DropdownItem<any>): void {
+                  throw new Error("Function not implemented.");
+                }}
+                onSearch={function (
+                  searchTerm: string,
+                ): Promise<DropdownItem<any>[]> {
+                  throw new Error("Function not implemented.");
+                }}
+              />
               <ToggleButton isMapView={isMap} toggleView={setToggle} />
             </div>
-            <div className="h-full w-full overflow-auto max-md:pt-10">
+            <div className="h-full w-full overflow-auto ">
               {isMap ? (
                 <MapboxMap
                   setSelectedSchool={setSelectedSchool}

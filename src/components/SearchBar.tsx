@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
-interface DropdownItem<ItemType> {
+import Dropdown from "./Dropdown";
+
+export interface DropdownItem<ItemType> {
   label: string;
   value: string;
   item: ItemType;
 }
+
 interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
@@ -26,13 +29,17 @@ export default function SearchBar<DropdownItemType = any>({
     setDropdownItems(searchResults);
   };
   return (
-    <div>
+    <div className="flex-grow">
       <input
         type="text"
         placeholder="Type your school here..."
         value={searchTerm}
+        className="h-[38px] w-full"
         onChange={onInputChange}
       />
+      {dropdownItems.length > 0 && searchTerm.length > 0 && (
+        <Dropdown items={dropdownItems} onItemSelect={onItemSelect} />
+      )}
     </div>
   );
 }

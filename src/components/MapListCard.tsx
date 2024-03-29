@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { School } from "@/pages/map";
+import { School } from "@/types/school";
 
 type MapListCardProps = {
   school: School;
@@ -13,6 +13,12 @@ type MapListCardProps = {
  *
  * Props:
  *  - school
+ *  - img
+ *  - name
+ *  - sf_district
+ *  - students
+ *  - free_reduced_lunch
+ *  - ell
  *
  * State: none
  *
@@ -24,7 +30,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
   setSelectedSchool,
   isExpanded,
 }) => {
-  const { img, name, district, students, frl, ell } = school;
+  const { img, name, sf_district, students, free_reduced_lunch, ell } = school;
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
     setSelectedSchool(school);
@@ -39,7 +45,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
         <div className="flex h-[88px] grid-cols-6 flex-col justify-center md:grid md:items-center md:gap-2">
           <div className="col-span-4 font-bold md:text-xl">{name}</div>
           <div className="col-span-2 text-gray-600 max-md:text-sm">
-            {district}
+            {sf_district}
           </div>
         </div>
         <div className="flex flex-col gap-2 max-md:text-sm">
@@ -47,7 +53,8 @@ const MapListCard: React.FC<MapListCardProps> = ({
             <strong>{students ? students : "N/A"}</strong> Students
           </div>
           <div>
-            <strong>{frl ? frl : "N/A"}%</strong> Free and Reduced Lunch
+            <strong>{free_reduced_lunch ? free_reduced_lunch : "N/A"}%</strong>{" "}
+            Free and Reduced Lunch
           </div>
           <div>
             <strong>{ell ? ell : "N/A"}%</strong> English Language Learners

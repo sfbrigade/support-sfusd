@@ -23,32 +23,38 @@ You need to sign up for Mapbox to run the project locally.
 
 2. It will ask you for billing information, but it is pay as you go. You have 500 instances before you are charged.
 
-
 <br>
 
 # Prisma
 
 We're using Prisma as our ORM. If you're unsure of what it is or what it does here is a [link](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma#how-does-prisma-orm-work) to the prisma documentation regarding how it works and why its used
 
-### Model changes 
+### Model changes
+
 [Prisma documentation on prototyping schema](https://www.prisma.io/docs/orm/prisma-migrate/workflows/prototyping-your-schema)
+
 - If you want to make changes to any model in prisma, the schema file within the prisma folder is where those changes will take place
 - Once you have made the changes to a model you're going to run this command in your terminal
-   - The CLI will ask if you want to continue knowing that you will lose data, because we are seeding data and there is no user changes being made to our data this is completely acceptable
-   ```sh
-      npx prisma db push
-   ```
+
+  - The CLI will ask if you want to continue knowing that you will lose data, because we are seeding data and there is no user changes being made to our data this is completely acceptable
+
+  ```sh
+     npx prisma db push
+  ```
 
 - This will execute the changes required to make the vercel postgres database schema reflect the state of our prisma schema
 
-### Seeding 
-- After running `npx prisma db push` we lose all the data so we need to seed our database with all the school information, run this command in your terminal after making changes to the model
-   - it should be noted that if you're making changes to the model the seed script will also need to be updated to account for the new fields that were added
+### Seeding
 
-   ```sh
-      npx prisma db seed
-   ```
-<br>
+- After running `npx prisma db push` we lose all the data so we need to seed our database with all the school information, run this command in your terminal after making changes to the model
+
+  - it should be noted that if you're making changes to the model the seed script will also need to be updated to account for the new fields that were added
+
+  ```sh
+     npx prisma db seed
+  ```
+
+  <br>
 
 # Environment File
 
@@ -57,6 +63,7 @@ Create an environment file to pass your default public token from Mapbox
 1. Create a new file, `.env`, in the main directory (with the README.md file)
 
 2. Add your default public token to your `.env`
+
    ```sh
    NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_default_public_token
    ```

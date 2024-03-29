@@ -14,21 +14,17 @@ export default function Home() {
         <section className="flex flex-1 flex-col items-center justify-center gap-8 lg:gap-11">
           <header className="text-center">
             <h1 className="text-3xl font-medium tracking-wider xl:text-5xl xl:leading-normal">
-              Get <span style={{ color: "#F15437" }}>Involved</span> with <br />
-              <span style={{ color: "#F15437" }}>SFUSD</span> Schools
+              Get <span className="text-[#F15437]">Involved</span> with <br />
+              <span className="text-[#F15437]">
+                San Francisco Public Schools
+              </span>
             </h1>
           </header>
 
           <div className="max-w-[400px] text-center text-sm tracking-wide text-black sm:text-base md:text-lg lg:text-xl lg:leading-8">
-            Discover how you can make a difference through volunteering and
-            donating. Start exploring schools now.
+            Find public schools near you that need support from the local
+            community.
           </div>
-
-          <ul className="text-center text-sm tracking-wide text-black sm:text-base md:text-lg lg:text-xl lg:leading-8">
-            <li>1. Explore Schools</li>
-            <li>2. Discover Opportunities</li>
-            <li>3. Volunteer/Donate</li>
-          </ul>
 
           <button
             className="flex items-center justify-center gap-3 rounded-[10px] bg-amber-400 px-4 py-4 lg:px-8"
@@ -49,13 +45,8 @@ export default function Home() {
         </section>
       </main>
       {/* Image Container */}
-      <div className="fixed inset-x-0 bottom-0 z-[-1] h-full bg-[#c5e2e6]">
+      <div className="fixed inset-x-0 bottom-0 z-[-1] h-full bg-gradient-to-b from-[#7CE0ED] to-[#E3FCFF]">
         {/* Homepage Background */}
-        {/* <img
-          src="/homepage-background.png"
-          alt="Homepage Background"
-          className="fixed bottom-0 w-full"
-        /> */}
         <Image
           src="/homepage-background.png"
           alt="Homepage Background"

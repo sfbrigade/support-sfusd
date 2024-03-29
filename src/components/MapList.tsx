@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import MapListCard from "./MapListCard";
-import { School } from "@/pages/map";
+import { School } from "@/types/school";
 
 type MapListProps = {
   schools: School[];
@@ -47,7 +47,7 @@ const MapList = ({
         }
       }
     }
-  }, [selectedSchool]);
+  }, [selectedSchool, schools]);
 
   return (
     <div className="flex h-full flex-col">
