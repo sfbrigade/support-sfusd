@@ -31,20 +31,18 @@ const MapList = ({
   useEffect(() => {
     if (selectedSchool && containerRef.current) {
       const index = schools.findIndex((school) => school === selectedSchool);
-      const firstChild = containerRef.current.children[0] as HTMLElement | null;
-      if (firstChild) {
-        const scrollPosition = index * firstChild.offsetHeight;
-        if (window.innerWidth > 768) {
-          containerRef.current.scrollTo({
-            top: scrollPosition,
-            behavior: "smooth",
-          });
-        } else {
-          window.scrollTo({
-            top: scrollPosition,
-            behavior: "smooth",
-          });
-        }
+
+      const scrollPosition = index * 88;
+      if (window.innerWidth > 768) {
+        containerRef.current.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      } else {
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
       }
     }
   }, [selectedSchool, schools]);
@@ -52,7 +50,7 @@ const MapList = ({
   return (
     <div className="flex h-full flex-col">
       <div
-        className="flex h-full flex-col gap-2 overflow-auto md:gap-4"
+        className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4"
         ref={containerRef}
       >
         {schools.map((school, index) => (
