@@ -24,7 +24,7 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
   toggleView,
 }) => {
   return (
-    <label className="relative inline-block h-[32px] w-[200px] rounded-md bg-[#d0d0d0]">
+    <label className="fixed z-10 inline-block h-[32px] w-full rounded-md bg-[#CCD8DE] md:relative md:w-[240px]">
       <div className="absolute left-0 top-0 flex h-full w-full items-center justify-around">
         <p className="flex items-center justify-center gap-1">
           <Image
@@ -46,10 +46,11 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
         className="h-0 w-0 opacity-0"
         aria-checked={isMapView}
       />
-      <span className="slider absolute left-[3px] top-[2px] flex h-[calc(90%-1px)] w-[calc(50%-3px)] cursor-pointer items-center justify-center rounded-md bg-[#f0f0f0] transition duration-300">
+      <span className="slider absolute left-[3px] top-[2px] flex h-[calc(90%-1px)] w-[calc(50%-3px)] cursor-pointer items-center justify-center gap-1 rounded-md bg-[#3A86FF] text-white transition duration-300">
         <Image
           src={isMapView ? "/icons/location-icon.png" : "/icons/list-icon.png"}
           alt=""
+          className="brightness-0 invert"
           width={16}
           height={16}
         />
