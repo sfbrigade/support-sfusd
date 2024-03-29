@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { School } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
@@ -33,6 +33,13 @@ const Map: React.FC<Props> = (props) => {
     setIsMap(!isMap);
   };
 
+  useEffect(() => {
+    if (isMap && window.innerWidth <= 768) {
+      window.scrollTo({
+        top: 0,
+      });
+    }
+  }, [isMap]);
   return (
     <div className="bg-[#D7F1FF]">
       <div className="top-16 z-10 flex justify-center gap-2 bg-[#D7F1FF] max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
