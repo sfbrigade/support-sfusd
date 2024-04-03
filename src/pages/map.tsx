@@ -3,7 +3,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { School } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
-import MapListCard from "@/components/MapListCard";
+import MapViewSchoolCard from "@/components/MapViewSchoolCard";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
 import SearchBar from "@/components/SearchBar";
@@ -56,7 +56,8 @@ const Map: React.FC<Props> = (props) => {
               {selectedSchool && (
                 <div className="hidden md:block">
                   {/* Hide SchoolCard on screens smaller than md */}
-                  <SchoolCard school={selectedSchool} />
+                  <MapViewSchoolCard school={selectedSchool} />
+                  {/* <SchoolCard school={selectedSchool} /> */}
                 </div>
               )}
               {!selectedSchool && (
