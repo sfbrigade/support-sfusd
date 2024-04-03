@@ -3,7 +3,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { School } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
-import MapListCard from "@/components/MapListCard";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
 import SearchBar from "@/components/SearchBar";
@@ -41,11 +40,16 @@ const Map: React.FC<Props> = (props) => {
       }
     >
       <div className="flex justify-end space-x-20">
-        <SearchBar onItemSelect={function (item: DropdownItem<any>): void {
-          throw new Error("Function not implemented.");
-        } } onSearch={function (searchTerm: string): Promise<DropdownItem<any>[]> {
-          throw new Error("Function not implemented.");
-        } } />
+        <SearchBar
+          onItemSelect={function (item: DropdownItem<any>): void {
+            throw new Error("Function not implemented.");
+          }}
+          onSearch={function (
+            searchTerm: string
+          ): Promise<DropdownItem<any>[]> {
+            throw new Error("Function not implemented.");
+          }}
+        />
 
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
