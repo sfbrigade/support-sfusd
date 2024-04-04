@@ -1,13 +1,13 @@
-import schools from "@/data/schools";
-import { School } from "@/pages/map";
+import { School } from "@/types/school";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School) => void;
+  schools: School[];
 };
 
-const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
+const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   useEffect(() => {
@@ -16,7 +16,7 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
       console.error("Mapbox access token or container is not set!");
       return;
     }
-    if (mapRef.current) return
+    if (mapRef.current) return;
 
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
@@ -33,17 +33,15 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
     });
 
     mapRef.current = map;
-
     map.on("load", () => {
       schools.forEach((school) => {
         // create an HTML element for each school
         const el = document.createElement("div");
         el.className = "marker";
         el.addEventListener("click", () => setSelectedSchool(school));
-
-        if (school.lat && school.lng) {
+        if (school.latitude && school.longitude) {
           new mapboxgl.Marker(el)
-            .setLngLat([school.lng, school.lat])
+            .setLngLat([Number(school.longitude), Number(school.latitude)])
             .setPopup(
               new mapboxgl.Popup({ offset: 25 }).setHTML(
                 `<h3>${school.name}</h3>`,
@@ -54,6 +52,27 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
           console.error(`Coordinates are missing for ${school.name}`);
         }
       });
+
+      const geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        showUserLocation: true
+      })
+      map.addControl(geolocate);
+    
+      // disables geolocation icon if user is out of bounds
+      navigator.geolocation.getCurrentPosition((position) => {
+        const bounds = map.getBounds()
+        const {_ne: ne,_sw: sw} = bounds
+        const lng = position.coords.longitude;
+        const lat = position.coords.latitude
+        let isInMapBounds = lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat
+        if (isInMapBounds === false) {
+          map.removeControl(geolocate)
+        }
+      })
+      
 
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
@@ -75,7 +94,7 @@ const MapboxMap = ({ setSelectedSchool }: MapboxMapProps) => {
       <div className="flex h-full w-full items-center justify-center">
         <div
           ref={mapContainer}
-          className="h-full w-full rounded-t-3xl border-2 border-gray-300 md:rounded-3xl"
+          className="h-full w-full rounded-t-3xl md:rounded-3xl md:border-2 md:border-gray-300"
         />
       </div>
     </>

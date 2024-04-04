@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model School {
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name               String
+  address            String
+  sf_district        String
+  // students           Decimal? @db.Decimal
+  students           Int?
+  free_reduced_lunch String?
+  ell                String?
+  color              String?
+  img                String?
+  latitude           String
+  longitude          String
+  profile            SchoolProfile?
+  metrics            Metric[]
+  programs           Program[]
+}
+
+model SchoolProfile {
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  schoolId           String   @unique @db.Uuid
+  school		         School @relation(fields: [schoolId], references: [id])
+  about			         String
+  mission		         String
+  testimonial        String?
+  principal		       String
+  x_url			         String?
+  instagram_url		   String?
+  facebook_url		   String?
+  website_url		     String?
+}
+
+model Metric {
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  schoolId           String   @db.Uuid
+  school		         School @relation(fields: [schoolId], references: [id])
+  name			         String
+  percentage		     Int
+  category           MetricCategory
+}
+
+
+model Program {
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  schoolId           String   @db.Uuid
+  school		         School @relation(fields: [schoolId], references: [id])
+  name			         String
+  details		         String
+  url			           String?
+  category		       ProgramCategory
+}
+
+enum MetricCategory {
+  demographic
+  outcome
+}
+
+enum ProgramCategory {
+  volunteer
+  donate
+  enrichment
+  donation_funded
+  donors_choose
+}
