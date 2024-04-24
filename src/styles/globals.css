@@ -35,8 +35,7 @@ h6 * {
 }
 
 .marker:hover {
-  /* background-color: #3A86FF; */
-  background-image: url("/marker_hover.svg");;
+  background-image: url("/marker_hover.svg");
 }
 
 .golden-gate-marker {
