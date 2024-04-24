@@ -26,7 +26,7 @@ const MapboxMap = ({
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/hamiltontruong/clomceri8002i01rbfzt1hrdm",
+      style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
       center: [-122.437, 37.75],
       zoom: 11, // Start with more zoomed-out view but not too far
       minZoom: 10.5, // Allow users to zoom out more
@@ -60,6 +60,27 @@ const MapboxMap = ({
           console.error(`Coordinates are missing for ${school.name}`);
         }
       });
+
+      const geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        showUserLocation: true
+      })
+      map.addControl(geolocate);
+    
+      // disables geolocation icon if user is out of bounds
+      navigator.geolocation.getCurrentPosition((position) => {
+        const bounds = map.getBounds()
+        const {_ne: ne,_sw: sw} = bounds
+        const lng = position.coords.longitude;
+        const lat = position.coords.latitude
+        let isInMapBounds = lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat
+        if (isInMapBounds === false) {
+          map.removeControl(geolocate)
+        }
+      })
+      
 
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");

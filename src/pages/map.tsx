@@ -43,12 +43,15 @@ const Map: React.FC<Props> = (props) => {
   return (
     <div className="bg-[#D7F1FF]">
       <div className="top-16 z-10 flex justify-center gap-2 bg-[#D7F1FF] max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
+      {/*
+        div className="flex justify-end space-x-20">
+      */}
         <SearchBar
           onItemSelect={function (item: DropdownItem<any>): void {
             throw new Error("Function not implemented.");
           }}
           onSearch={function (
-            searchTerm: string,
+            searchTerm: string
           ): Promise<DropdownItem<any>[]> {
             throw new Error("Function not implemented.");
           }}
