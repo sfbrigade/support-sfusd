@@ -34,6 +34,10 @@ h6 * {
   cursor: pointer;
 }
 
+.marker:hover {
+  background-image: url("/marker_hover.svg");
+}
+
 .golden-gate-marker {
   background-image: url("/GoldenGate.png");
   background-size: cover;
