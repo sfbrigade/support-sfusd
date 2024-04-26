@@ -1,20 +1,11 @@
-export interface School{
+export interface School {
   name: string;
   address?: string;
   sf_district?: string;
-  students?: string;
-  free_reduced_lunch?: string;
-  ell?: string;
-  img?: string;
-  latitude: number;
-  longitude: number;
+  students: number | null;
+  free_reduced_lunch: string | null;
+  ell: string | null;
+  img: string | null;
+  latitude: string;
+  longitude: string;
 }
-
-export interface SchoolMapList {
-  img?: string;
-  name?: string;
-  sf_district?: string;
-  students?: string;
-  free_reduced_lunch?: string;
-  ell?: string;
-};

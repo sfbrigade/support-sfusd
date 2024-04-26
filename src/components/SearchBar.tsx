@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 
 export interface DropdownItem<ItemType> {
-
   label: string;
   value: string;
   item: ItemType;
@@ -14,7 +13,7 @@ interface SearchBarProps<DropdownItemType> {
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
 }
 
-export default function SearchBar <DropdownItemType = any>({
+export default function SearchBar<DropdownItemType = any>({
   onItemSelect,
   onSearch,
 }: SearchBarProps<DropdownItemType>): JSX.Element {
@@ -37,9 +36,10 @@ export default function SearchBar <DropdownItemType = any>({
         value={searchTerm}
         onChange={onInputChange}
       />
-      {dropdownItems.length > 0 && searchTerm.length > 0 && (<Dropdown items={dropdownItems} onItemSelect={onItemSelect}/>)};
+      {dropdownItems.length > 0 && searchTerm.length > 0 && (
+        <Dropdown items={dropdownItems} onItemSelect={onItemSelect} />
+      )}
+      ;
     </div>
-
   );
 }
-

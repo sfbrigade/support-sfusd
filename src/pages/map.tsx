@@ -33,6 +33,22 @@ const Map: React.FC<Props> = (props) => {
     setIsMap(!isMap);
   };
 
+  const handleSchoolSearch = async (searchTerm: string) => {
+    const response = await fetch(
+      `/api/searchSchools?searchTerm=${searchTerm}`,
+    ).then((res) => res.json() as Promise<{ schools: School[] }>);
+
+    return response.schools.map((school) => ({
+      label: school.name,
+      value: school.name,
+      item: school,
+    }));
+  };
+
+  const itemSelect = (selection: DropdownItem<School>) => {
+    setSelectedSchool(selection.item);
+  };
+
   return (
     <div
       className={
@@ -41,11 +57,7 @@ const Map: React.FC<Props> = (props) => {
       }
     >
       <div className="flex justify-end space-x-20">
-        <SearchBar onItemSelect={function (item: DropdownItem<any>): void {
-          throw new Error("Function not implemented.");
-        } } onSearch={function (searchTerm: string): Promise<DropdownItem<any>[]> {
-          throw new Error("Function not implemented.");
-        } } />
+        <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
 
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
