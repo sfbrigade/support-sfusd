@@ -26,12 +26,16 @@ h6 * {
 }
 
 .marker {
-  background-image: url("/school_marker.png");
+  background-image: url("/marker.svg");
   background-size: cover;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   border-radius: 0;
   cursor: pointer;
+}
+
+.marker:hover {
+  background-image: url("/marker_hover.svg");
 }
 
 .golden-gate-marker {
