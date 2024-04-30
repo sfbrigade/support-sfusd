@@ -29,8 +29,9 @@ export default function SearchBar<DropdownItemType = any>({
     setDropdownItems(searchResults);
   };
   return (
-    <div className="p-1 px-4 py-2 shadow-lg border border-black rounded-lg">
+    <div>
       <input
+        className="p-1 px-4 py-2 shadow-lg border border-black rounded-lg"
         type="text"
         placeholder="Type your school here..."
         value={searchTerm}
