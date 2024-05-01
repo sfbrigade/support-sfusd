@@ -31,7 +31,7 @@ export default function SearchBar<DropdownItemType = any>({
   return (
     <div>
       <input
-        className="p-1 px-4 py-2 shadow-lg border border-black rounded-lg"
+        className="p-1 px-4 py-2 shadow-lg border border-black rounded-lg focus:border-blue-400"
         type="text"
         placeholder="Type your school here..."
         value={searchTerm}
