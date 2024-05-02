@@ -1,9 +1,15 @@
 import React from "react";
 import Image from "next/image";
-
+import ContactUs from "../components/ContactUs";
+import {useState} from "react";
 import Navbar from "../components/NavBar";
 
 const About = () => {
+
+  const [showContactForm, setShowContactForm] = useState(false);
+  const handleOpen = () => setShowContactForm(true);
+  const handleClose = () => setShowContactForm(false);
+
   return (
     <div className="mx-auto flex h-[calc(100vh-64px)] max-md:px-8 md:w-3/5">
       <main className="flex flex-col items-center justify-center gap-4">
@@ -38,6 +44,20 @@ const About = () => {
             .
           </p>
         </div>
+        <button onClick={handleOpen}>Contact Us</button>
+        {showContactForm && (
+          <div className="modal-overlay inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center fixed">
+            <div className="modal max-w-md mt-5 p-6 bg-white border rounded-lg shadow-lg">
+              <div className="modal-content">
+                <div className="flex justify-between items-center pb-3">
+                  <h2 className="text-2xl mb-6">Contact Us!</h2>
+                  <button className="close-button text-2xl ml-auto self-start" onClick={handleClose}>&times;</button>
+                </div>
+                <ContactUs/>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );

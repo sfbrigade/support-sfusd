@@ -1,4 +1,7 @@
-function Contact() {
+import React from 'react';
+
+
+function ContactUs() {
     return (
         <div>
             <form className="max-w-md mx-auto mt-5 mb-3 p-6">
@@ -47,4 +50,4 @@ function Contact() {
     );
 }
 
-export default Contact;
+export default ContactUs;
