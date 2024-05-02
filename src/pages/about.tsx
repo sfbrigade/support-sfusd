@@ -47,7 +47,7 @@ const About = () => {
         <button onClick={handleOpen}>Contact Us</button>
         {showContactForm && (
           <div className="modal-overlay inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center fixed">
-            <div className="modal max-w-md mt-5 p-6 bg-white border rounded-lg shadow-lg">
+            <div className="modal md:w-full md:max-w-md mt-5 p-6 bg-white border rounded-lg shadow-lg">
               <div className="modal-content">
                 <div className="flex justify-between items-center pb-3">
                   <h2 className="text-2xl mb-6">Contact Us!</h2>
