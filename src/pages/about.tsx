@@ -46,13 +46,17 @@ const About = () => {
         </div>
         <button onClick={handleOpen}>Contact Us</button>
         {showContactForm && (
-          <div className="modal-overlay inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center fixed">
-            <div className="modal md:w-full md:max-w-md mt-5 p-6 bg-white border rounded-lg shadow-lg">
+          <div className="modal-overlay inset-0 bg-gray-900 bg-opacity-50 flex
+                        justify-center items-center fixed">
+            <div className="modal md:w-full md:max-w-md mt-5 p-6 bg-white border
+                        rounded-lg shadow-lg">
               <div className="modal-content">
-                <div className="flex justify-between items-center pb-3">
+                <div className="flex justify-between items-center">
                   <h2 className="text-2xl mb-6">Contact Us!</h2>
-                  <button className="close-button text-2xl ml-auto self-start" onClick={handleClose}>&times;</button>
+                  <button className="close-button text-2xl ml-auto self-start"
+                          onClick={handleClose}>&times;</button>
                 </div>
+                <h6 className="text-gray-400">Questions or comments? Let us know!</h6>
                 <ContactUs/>
               </div>
             </div>

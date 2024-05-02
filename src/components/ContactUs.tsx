@@ -6,7 +6,7 @@ function ContactUs() {
     <div>
       <form className="max-w-md mx-auto mt-5 mb-3 p-6">
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="name">
+          <label className="block text-gray-500 mb-2" htmlFor="name">
             Name:
           </label>
           <input className="shadow appearance-none border rounded
@@ -18,7 +18,7 @@ function ContactUs() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="email">
+          <label className="block text-gray-500 mb-2" htmlFor="email">
             Email:
           </label>
           <input className="shadow appearance-none border rounded
@@ -30,7 +30,7 @@ function ContactUs() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="message">
+          <label className="block text-gray-500 mb-2" htmlFor="message">
             Message:
           </label>
           <textarea className="shadow appearance-none border rounded
