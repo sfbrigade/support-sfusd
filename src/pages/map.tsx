@@ -115,16 +115,7 @@ const Map: React.FC<Props> = (props) => {
           </div>
           <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
             <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
-              <SearchBar
-                onItemSelect={function (item: DropdownItem<any>): void {
-                  throw new Error("Function not implemented.");
-                }}
-                onSearch={function (
-                  searchTerm: string,
-                ): Promise<DropdownItem<any>[]> {
-                  throw new Error("Function not implemented.");
-                }}
-              />
+            <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
               <ToggleButton isMapView={isMap} toggleView={setToggle} />
             </div>
             <div className="h-full w-full overflow-auto ">
