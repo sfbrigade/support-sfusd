@@ -1,5 +1,6 @@
 import React from "react";
 import { School } from "@/types/school";
+import Link from "next/link";
 
 interface SchoolCardProps {
   school: School;
@@ -65,9 +66,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             </h3>
           </div>
         </div>
-        <button className="bg-blue-500 text-white text-sm w-40 rounded-lg py-2 tracking-wide">
+        <Link className="bg-blue-500 text-white text-sm w-40 rounded-lg py-2 tracking-wide inline-block text-center" href={"/school?name=" + school.name}>
           Learn more
-        </button>
+        </Link>
       </div>
     </div>
   );
