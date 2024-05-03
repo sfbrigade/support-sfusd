@@ -99,3 +99,9 @@ h6 * {
 .delay-3200 {
   transition-delay: 3200ms;
 }
+
+input:checked + .slider {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import MapListCard from "./MapListCard";
-import { SchoolMapList } from "@/types/school";
+import { School } from "@/types/school";
 
 type MapListProps = {
-  schools: SchoolMapList[]
+  schools: School[];
+  setSelectedSchool: (school: School) => void;
+  selectedSchool: School | null;
 };
 
 /**
@@ -17,15 +19,47 @@ type MapListProps = {
  * map => MapList => MapListCard
  *
  */
-const MapList = ({ schools }: MapListProps) => {
+const MapList = ({
+  schools,
+  setSelectedSchool,
+  selectedSchool,
+}: MapListProps) => {
+  // Create a ref for the container div
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to selected school when it changes
+  useEffect(() => {
+    if (selectedSchool && containerRef.current) {
+      const index = schools.findIndex((school) => school === selectedSchool);
+
+      const scrollPosition = index * 88;
+      if (window.innerWidth > 768) {
+        containerRef.current.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      } else {
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [selectedSchool, schools]);
+
   return (
-    <div className="flex h-full flex-col p-4">
-      <div className="mb-4 flex items-center justify-start max-md:hidden">
-        <h1 className="text-2xl font-bold">List of Schools</h1>
-      </div>
-      <div className="flex h-full flex-col gap-2 overflow-auto md:gap-4">
+    <div className="flex h-full flex-col">
+      <div
+        className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4"
+        ref={containerRef}
+      >
         {schools.map((school, index) => (
-          <MapListCard key={index} {...school} />
+          <MapListCard
+            key={index}
+            school={school}
+            setSelectedSchool={setSelectedSchool}
+            isExpanded={school == selectedSchool}
+          />
         ))}
       </div>
     </div>

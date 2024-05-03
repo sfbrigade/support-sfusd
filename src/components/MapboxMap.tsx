@@ -4,10 +4,15 @@ import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School) => void;
+  selectedSchool: School | null;
   schools: School[];
 };
 
-const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
+const MapboxMap = ({
+  setSelectedSchool,
+  selectedSchool,
+  schools,
+}: MapboxMapProps) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   useEffect(() => {
@@ -93,10 +98,11 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
   return (
     <>
       <div className="flex h-full w-full items-center justify-center">
-        <div
+        <div ref={mapContainer} className="h-full w-full md:rounded-2xl" />
+        {/* <div
           ref={mapContainer}
           className="h-full w-full rounded-t-3xl md:rounded-3xl md:border-2 md:border-gray-300"
-        />
+        /> */}
       </div>
     </>
   );
