@@ -9,7 +9,7 @@ interface DropdownProps <ItemType> {
 export default function Dropdown <ItemType=any> ({ items, onItemSelect } : DropdownProps<ItemType>): JSX.Element{
     return (
         <>
-                <div className={`absolute top-30 z-30 w-[250px] min-h-[300px] flex flex-col py-4 bg-white rounded-lg`}>
+                <div className={`absolute top-30 z-30 w-[250px] min-h-[300px] flex flex-col py-4 bg-slate-100 rounded-lg shadow-lg`}>
                     <ul>
                     {
                         items.map(item =>
