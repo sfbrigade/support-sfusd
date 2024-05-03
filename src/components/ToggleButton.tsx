@@ -24,29 +24,41 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
   toggleView,
 }) => {
   return (
-    <div
-      className={`focus:outline-visible space-x-2
-        rounded-full bg-stone-800 p-1 px-4 py-2 shadow-lg`}
-    >
-      <button
-        className={`flex`}
+    <label className="w-inherit relative inline-block h-[38px] flex-grow rounded-md bg-[#CCD8DE]">
+      <div className="absolute left-0 top-0 flex h-full w-full items-center justify-around">
+        <p className="flex items-center justify-center gap-1">
+          <Image
+            src={"/icons/location-icon.png"}
+            alt=""
+            width={16}
+            height={16}
+          />
+          Map
+        </p>
+        <p className="flex items-center justify-center gap-1">
+          <Image src={"/icons/list-icon.png"} alt="" width={16} height={16} />
+          List
+        </p>
+      </div>
+      <input
+        type="checkbox"
         onClick={toggleView}
-        type="button"
-        role="switch"
+        readOnly
+        className="h-0 w-0 opacity-0"
         aria-checked={isMapView}
-        aria-label={isMapView ? "Switch to list view" : "Switch to map view"}
-      >
-        <span className={`pr-2 text-gray-50`}>
-          {isMapView ? "Show List" : "Show Map"}
-        </span>
+        checked={!isMapView}
+      />
+      <span className="slider absolute left-[3px] top-[2px] flex h-[calc(90%-1px)] w-[calc(50%-3px)] cursor-pointer items-center justify-center gap-1 rounded-md bg-[#3A86FF] text-white transition duration-300">
         <Image
-          src={isMapView ? "./icons/listview.svg" : "./icons/mapview.svg"}
+          src={isMapView ? "/icons/location-icon.png" : "/icons/list-icon.png"}
           alt=""
-          width={25}
-          height={25}
+          className="brightness-0 invert"
+          width={16}
+          height={16}
         />
-      </button>
-    </div>
+        {isMapView ? "Map" : "List"}
+      </span>
+    </label>
   );
 };
 

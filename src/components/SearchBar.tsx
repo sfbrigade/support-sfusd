@@ -29,12 +29,12 @@ export default function SearchBar<DropdownItemType = any>({
     setDropdownItems(searchResults);
   };
   return (
-    <div>
+    <div className="flex-grow">
       <input
-        className="p-1 px-4 py-2 shadow-lg border border-black rounded-lg focus:border-blue-400"
         type="text"
         placeholder="Type your school here..."
         value={searchTerm}
+        className="p-1 px-4 py-2 shadow-lg border border-black rounded-lg focus:border-blue-400 h-[38px] w-full"
         onChange={onInputChange}
       />
       {dropdownItems.length > 0 && searchTerm.length > 0 && (
