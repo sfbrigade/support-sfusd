@@ -1,4 +1,4 @@
-export interface School{
+export interface School {
   name: string;
   address?: string;
   sf_district?: string;
