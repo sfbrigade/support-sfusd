@@ -1,28 +1,20 @@
-/*
-  Warnings:
-
-  - You are about to drop the `Schools` table. If the table is not empty, all the data it contains will be lost.
-
-*/
 -- CreateEnum
 CREATE TYPE "MetricCategory" AS ENUM ('demographic', 'outcome');
 
 -- CreateEnum
 CREATE TYPE "ProgramCategory" AS ENUM ('volunteer', 'donate', 'enrichment', 'donation_funded', 'donors_choose');
 
--- DropTable
-DROP TABLE "Schools";
-
 -- CreateTable
 CREATE TABLE "School" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "name" TEXT NOT NULL,
     "address" TEXT NOT NULL,
-    "sf_district" TEXT NOT NULL,
+    "neighborhood" TEXT NOT NULL,
     "students" INTEGER,
-    "free_reduced_lunch" TEXT,
-    "ell" TEXT,
-    "color" TEXT,
+    "frl" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "ell" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "ssn" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "priority" BOOLEAN NOT NULL DEFAULT false,
     "img" TEXT,
     "latitude" TEXT NOT NULL,
     "longitude" TEXT NOT NULL,
@@ -38,7 +30,6 @@ CREATE TABLE "SchoolProfile" (
     "mission" TEXT NOT NULL,
     "testimonial" TEXT,
     "principal" TEXT NOT NULL,
-    "x_url" TEXT,
     "instagram_url" TEXT,
     "facebook_url" TEXT,
     "website_url" TEXT,
@@ -51,7 +42,7 @@ CREATE TABLE "Metric" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "schoolId" UUID NOT NULL,
     "name" TEXT NOT NULL,
-    "percentage" INTEGER NOT NULL,
+    "percentage" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "category" "MetricCategory" NOT NULL,
 
     CONSTRAINT "Metric_pkey" PRIMARY KEY ("id")
