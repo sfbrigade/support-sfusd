@@ -221,22 +221,22 @@ async function main() {
       },
     ],
     skipDuplicates: true,
-  })
+  });
 
   const juneJordan = await prisma.school.findFirstOrThrow({
     where: {
-      name: "June Jordan School for Equity"
-    }
+      name: "June Jordan School for Equity",
+    },
   });
 
   await prisma.school.update({
     where: {
-      id: juneJordan.id
+      id: juneJordan.id,
     },
     data: {
       profile: {
         create: {
-          about:`Alternative school by choice in San Francisco&#39;s Excelsior
+          about: `Alternative school by choice in San Francisco&#39;s Excelsior
           neighborhood.\n
           Named after activist June Jordan, the school&#39;s three pillars are
           Community, Social Justice, and Independent Thinkers.\n
@@ -252,7 +252,7 @@ async function main() {
           be agents of positive change in the world. Our mission and vision
           is to prepare young people in three key areas: community, social
           justice, and independent thinkers.`,
-          testimonial:`&quot;As a student at June Jordan High School, my
+          testimonial: `&quot;As a student at June Jordan High School, my
           educational journey has been nothing short of transformative. The
           supportive environment and dedicated teachers have empowered me to
           explore my passions and excel academically. The diverse and
@@ -267,19 +267,19 @@ async function main() {
           instagram_url: "",
           facebook_url: "",
           website_url: "",
-        }
-      }
-    }
+        },
+      },
+    },
   });
 
   await prisma.school.update({
     where: {
-      id: juneJordan.id
+      id: juneJordan.id,
     },
     data: {
       metrics: {
         createMany: {
-          data:[
+          data: [
             {
               name: "Students with Special Needs",
               percentage: 28,
@@ -312,20 +312,19 @@ async function main() {
             },
           ],
           skipDuplicates: true,
-        }
-      }
-    }
+        },
+      },
+    },
   });
-
 
   await prisma.school.update({
     where: {
-      id: juneJordan.id
+      id: juneJordan.id,
     },
     data: {
       programs: {
         createMany: {
-          data:[
+          data: [
             {
               name: "Remote Friendly Tasks",
               details: "Volunteer from home!",
@@ -417,12 +416,11 @@ async function main() {
             },
           ],
           skipDuplicates: true,
-        }
-      }
-    }
+        },
+      },
+    },
   });
 }
-
 
 main()
   .then(async () => {

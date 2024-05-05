@@ -1,4 +1,4 @@
-export interface School{
+export interface School {
   name: string;
   address?: string;
   neighborhood?: string;
@@ -17,4 +17,4 @@ export interface SchoolMapList {
   students?: string;
   frl?: string;
   ell?: string;
-};
+}
