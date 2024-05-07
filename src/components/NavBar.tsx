@@ -6,16 +6,32 @@ import { useRouter } from "next/router";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const router = useRouter();
+  const [bg, setBg] = useState("");
 
   useEffect(() => {
     const handleRouteChange = (url: any) => {
       setOpen(false);
     };
 
+    const { route } = router;
+
+    switch (route) {
+      case "/map":
+        setBg("bg-[#D7F1FF]");
+        break;
+      default:
+        setBg("");
+        break;
+    }
+
     router.events.on("routeChangeComplete", handleRouteChange);
-  }, []);
+  }, [router]);
   return (
-    <nav className="sticky top-0 z-50 w-full p-2 p-4 px-4 text-black backdrop-blur">
+    <nav
+      className={
+        "sticky top-0 z-50 w-full p-2 p-4 px-4 text-black backdrop-blur " + bg
+      }
+    >
       <div className="container mx-auto max-w-[1280px] font-medium">
         <div className="flex items-center justify-between">
           {/* Home Icon */}
