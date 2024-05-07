@@ -38,6 +38,10 @@ h6 * {
   background-image: url("/marker_hover.svg");
 }
 
+.marker:active, .maker:focus {
+  background-image: url("/marker_selected.svg");
+}
+
 .golden-gate-marker {
   background-image: url("/GoldenGate.png");
   background-size: cover;
