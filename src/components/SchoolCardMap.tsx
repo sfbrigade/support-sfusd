@@ -32,7 +32,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
       />
       <div className="p-4">
         <h2 className="text-xl font-medium">{school.name}</h2>
-        <p className="text-sm">{school.sf_district}</p>
+        <p className="text-sm">{school.neighborhood}</p>
         <div className="items-left mb-2 flex flex-col">
           <div className="mb-2 flex flex-row items-center">
             <img
@@ -51,8 +51,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
               className="mr-2 max-h-[30px] max-w-[30px]"
             />
             <h3 className="text-base">
-              {school.free_reduced_lunch ? school.free_reduced_lunch : "N/A"}%
-              Free and Reduced Lunch
+              {school.frl ? school.frl : "N/A"}% Free and Reduced Lunch
             </h3>
           </div>
           <div className="mb-2 flex flex-row items-center">

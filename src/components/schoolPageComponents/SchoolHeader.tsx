@@ -38,7 +38,7 @@ export default function SchoolHeader({ school }: Props) {
           className="text:xl mr-2.5 font-medium text-pink-600 md:text-2xl"
           style={{ marginBlock: 0 }}
         >
-          {school.sf_district}
+          {school.neighborhood}
         </h2>
         <p>{school.address}</p>
       </div>
