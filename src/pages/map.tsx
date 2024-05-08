@@ -48,7 +48,7 @@ const Map: React.FC<Props> = (props) => {
             throw new Error("Function not implemented.");
           }}
           onSearch={function (
-            searchTerm: string
+            searchTerm: string,
           ): Promise<DropdownItem<any>[]> {
             throw new Error("Function not implemented.");
           }}
@@ -62,7 +62,7 @@ const Map: React.FC<Props> = (props) => {
         }
       >
         <div className="flex h-full grid-cols-10 flex-col items-center gap-4 md:grid">
-        <div className="col-span-4 flex h-full items-center justify-center rounded-2xl bg-white max-md:hidden">
+          <div className="col-span-4 flex h-full items-center justify-center rounded-2xl bg-white max-md:hidden">
             {isMap ? (
               selectedSchool ? (
                 <div className="hidden md:block">
