@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && prisma migrate dev && next build",
+    "build": "npx prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write"
