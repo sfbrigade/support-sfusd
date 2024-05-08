@@ -99,7 +99,7 @@ const MapboxMap = ({
   return (
     <>
       <div className="flex h-full w-full items-center justify-center">
-        <div ref={mapContainer} className="h-full w-full md:rounded-2xl" />
+        <div ref={mapContainer} className="h-full w-full md:rounded-2xl --mobile-new-- w-full" />
         {/* <div
           ref={mapContainer}
           className="h-full w-full rounded-t-3xl md:rounded-3xl md:border-2 md:border-gray-300"

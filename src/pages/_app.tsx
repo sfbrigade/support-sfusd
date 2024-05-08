@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Layout>
-        <div className={`${fredoka.variable} ${lato.variable}`}>
+        <div id="main" className={`${fredoka.variable} ${lato.variable} --mobile-new-- h-full`}>{/* grow-1 */}
           <Component {...pageProps} />
         </div>
       </Layout>

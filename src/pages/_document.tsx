@@ -14,7 +14,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body className="h-screen md:h-auto">
           <Main />
           <NextScript />
         </body>

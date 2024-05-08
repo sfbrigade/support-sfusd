@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       className={
-        "sticky top-0 z-50 w-full p-2 p-4 px-4 text-black backdrop-blur " + bg
+        `sticky selection:top-0 z-50 w-full p-2 p-4 px-4 text-black ${bg} backdrop-blur --mobile-new-- grow-0`
       }
     >
       <div className="container mx-auto max-w-[1280px] font-medium">

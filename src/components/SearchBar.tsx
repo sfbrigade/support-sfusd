@@ -29,7 +29,7 @@ export default function SearchBar<DropdownItemType = any>({
     setDropdownItems(searchResults);
   };
   return (
-    <div className="flex-grow">
+    <div className="flex-grow --mobile-new-- grow-0">
       <input
         type="text"
         placeholder="Type your school here..."
