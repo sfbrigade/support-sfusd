@@ -4,9 +4,6 @@ import emailjs from '@emailjs/browser';
 
 
 function ContactUs() {
-
-  //const form = useRef();
-  //const form = React.useRef<HTMLFormElement>()
   const form = React.useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,7 +27,7 @@ function ContactUs() {
 
   return (
     <div>
-      <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto mt-5 mb-3 p-6">
+      <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto mb-3 p-6">
         <div className="mb-4">
           <label className="block text-gray-500 mb-2" htmlFor="name">
             Name:
@@ -74,7 +71,13 @@ function ContactUs() {
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold
                          py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit">
-          Submit
+          Send
+        </button>
+        <button className="bg-white-500 hover:bg-gray-300 text-gray font-bold
+                         py-2 px-4 rounded focus:outline-none focus:shadow-outline
+                         border border-gray ml-5"
+                type="submit">
+          Cancel
         </button>
       </form>
     </div>

@@ -52,7 +52,7 @@ const About = () => {
                         rounded-lg shadow-lg">
               <div className="modal-content">
                 <div className="flex justify-between items-center">
-                  <h2 className="text-2xl mb-6">Contact Us!</h2>
+                  <h2 className="text-2xl">Contact Us!</h2>
                   <button className="close-button text-2xl ml-auto self-start"
                           onClick={handleClose}>&times;</button>
                 </div>
