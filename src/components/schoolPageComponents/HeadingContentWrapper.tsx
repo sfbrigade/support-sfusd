@@ -4,7 +4,6 @@ const HeadingContentWrapper = (props: any) => {
     <>
       <h1 className="text-2xl font-medium text-blue-500">{heading}</h1>
       {content}
-      <></>
     </>
   );
 };

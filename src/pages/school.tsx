@@ -1,3 +1,4 @@
+import BannerWrapper from "@/components/schoolPageComponents/BannerWrapper";
 import SchoolAbout from "@/components/schoolPageComponents/SchoolAbout";
 import SchoolHeader from "@/components/schoolPageComponents/SchoolHeader";
 import SchoolStudentOutcomes from "@/components/schoolPageComponents/SchoolStudentOutcomes";
@@ -52,10 +53,40 @@ const Profile: React.FC<Props> = (props) => {
             <SchoolHeader school={school} />
             <SchoolAbout school={school} />
             {school.metrics.length && <SchoolStudentOutcomes school={school} />}
-
-            {/* <Mission />
-          <StudentOutcomes />
-          <Volunteer /> */}
+            <BannerWrapper
+              className=" gap-10 rounded-lg md:bg-[#FFF5DA] md:p-8 md:px-12 "
+              left={
+                <div>
+                  <Image
+                    src="/volunteer-graphic.png"
+                    alt="volunteer graphic"
+                    width={500}
+                    height={1000}
+                  />
+                </div>
+              }
+              right={
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-2xl font-medium text-blue-500 md:text-5xl">
+                    Volunteer today!
+                  </h1>
+                  <p>
+                    {school.name} values community volunteers and has volunteer
+                    needs and opportunities throughout the school year. You can
+                    sign up to volunteer through the San Francisco Ed Fund or
+                    fill out this form to connect directly with the school.
+                  </p>
+                  <div className="flex gap-2">
+                    <button className="rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8">
+                      Fill out form
+                    </button>
+                    <button className="rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8">
+                      Contact SF Ed Fund
+                    </button>
+                  </div>
+                </div>
+              }
+            />
           </div>
         </div>
       )}

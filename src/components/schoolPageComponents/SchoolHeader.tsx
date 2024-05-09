@@ -53,10 +53,10 @@ export default function SchoolHeader({ school }: Props) {
 
       {/* hide buttons if link doesn't exist*/}
       <div className="flex gap-2">
-        <button className="rounded bg-blue-500 p-1 px-4 font-medium text-white">
+        <button className="rounded bg-blue-500 p-2 px-8 font-medium text-white">
           Volunteer
         </button>
-        <button className="rounded border-2 border-blue-500 p-1 px-4 font-medium text-blue-500">
+        <button className="rounded border-2 border-blue-500 p-2 px-8 font-medium text-blue-500">
           Donate
         </button>
       </div>
