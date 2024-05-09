@@ -4,10 +4,15 @@ import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School) => void;
+  selectedSchool: School | null;
   schools: School[];
 };
 
-const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
+const MapboxMap = ({
+  setSelectedSchool,
+  selectedSchool,
+  schools,
+}: MapboxMapProps) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   useEffect(() => {
@@ -57,23 +62,24 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
 
       const geolocate = new mapboxgl.GeolocateControl({
         positionOptions: {
-            enableHighAccuracy: true
+          enableHighAccuracy: true,
         },
-        showUserLocation: true
-      })
+        showUserLocation: true,
+      });
       map.addControl(geolocate);
 
       // disables geolocation icon if user is out of bounds
       navigator.geolocation.getCurrentPosition((position) => {
-        const bounds = map.getBounds()
-        const {_ne: ne,_sw: sw} = bounds
+        const bounds = map.getBounds();
+        const { _ne: ne, _sw: sw } = bounds;
         const lng = position.coords.longitude;
-        const lat = position.coords.latitude
-        let isInMapBounds = lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat
+        const lat = position.coords.latitude;
+        let isInMapBounds =
+          lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat;
         if (isInMapBounds === false) {
-          map.removeControl(geolocate)
+          map.removeControl(geolocate);
         }
-      })
+      });
 
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
@@ -93,10 +99,11 @@ const MapboxMap = ({ setSelectedSchool, schools }: MapboxMapProps) => {
   return (
     <>
       <div className="flex h-full w-full items-center justify-center">
-        <div
+        <div ref={mapContainer} className="h-full w-full md:rounded-2xl" />
+        {/* <div
           ref={mapContainer}
           className="h-full w-full rounded-t-3xl md:rounded-3xl md:border-2 md:border-gray-300"
-        />
+        /> */}
       </div>
     </>
   );

@@ -23,7 +23,7 @@ interface SchoolCardProps {
 
 const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
   return (
-    <div className="flex max-w-[400px] flex-col items-start justify-center rounded-[16px] shadow-lg bg-white ">
+    <div className="flex max-w-[400px] flex-col items-start justify-center rounded-[16px] bg-white shadow-lg ">
       <img
         src={school.img}
         alt={school.name}
@@ -31,8 +31,8 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
       />
       <div className="p-4">
         <h2 className="text-xl font-medium">{school.name}</h2>
-        <p className="text-sm">{school.sf_district}</p>
-        <div className="items-left flex flex-col mb-2">
+        <p className="text-sm">{school.neighborhood}</p>
+        <div className="items-left mb-2 flex flex-col">
           <div className="mb-2 flex flex-row items-center">
             <img
               src="icons/student-icon.png"
@@ -50,8 +50,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
               className="mr-2 max-h-[30px] max-w-[30px]"
             />
             <h3 className="text-base">
-              {school.free_reduced_lunch ? school.free_reduced_lunch : "N/A"}%
-              Free and Reduced Lunch
+              {school.frl ? school.frl : "N/A"}% Free and Reduced Lunch
             </h3>
           </div>
           <div className="mb-2 flex flex-row items-center">
@@ -65,7 +64,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
             </h3>
           </div>
         </div>
-        <button className="bg-blue-500 text-white text-sm w-40 rounded-lg py-2 tracking-wide">
+        <button className="w-40 rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white">
           Learn more
         </button>
       </div>

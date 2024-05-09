@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { SchoolMapList } from "@/types/school";
+import { School } from "@/types/school";
 
+type MapListCardProps = {
+  school: School;
+  setSelectedSchool: (school: School) => void;
+  isExpanded: Boolean;
+};
 
 /**
  * MapListCard: Renders a card with school image and details.
  *
  * Props:
+ *  - school
  *  - img
  *  - name
  *  - sf_district
  *  - students
- *  - free_reduced_lunch
+ *  - frl
  *  - ell
  *
  * State: none
@@ -19,29 +25,27 @@ import { SchoolMapList } from "@/types/school";
  * MapList => MapListCard
  *
  */
-const MapListCard: React.FC<SchoolMapList> = ({
-  img,
-  name,
-  sf_district,
-  students,
-  free_reduced_lunch,
-  ell,
+const MapListCard: React.FC<MapListCardProps> = ({
+  school,
+  setSelectedSchool,
+  isExpanded,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const { img, name, neighborhood, students, frl, ell } = school;
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
-    setIsExpanded(!isExpanded);
+    setSelectedSchool(school);
   }
   return (
     <div
       className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"} transition-max-height duration-[700ms] `}
       onClick={onClick}
+      id={name}
     >
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
         <div className="flex h-[88px] grid-cols-6 flex-col justify-center md:grid md:items-center md:gap-2">
           <div className="col-span-4 font-bold md:text-xl">{name}</div>
           <div className="col-span-2 text-gray-600 max-md:text-sm">
-            {sf_district}
+            {neighborhood}
           </div>
         </div>
         <div className="flex flex-col gap-2 max-md:text-sm">
@@ -49,7 +53,7 @@ const MapListCard: React.FC<SchoolMapList> = ({
             <strong>{students ? students : "N/A"}</strong> Students
           </div>
           <div>
-            <strong>{free_reduced_lunch ? free_reduced_lunch : "N/A"}%</strong> Free and Reduced Lunch
+            <strong>{frl ? frl : "N/A"}%</strong> Free and Reduced Lunch
           </div>
           <div>
             <strong>{ell ? ell : "N/A"}%</strong> English Language Learners
