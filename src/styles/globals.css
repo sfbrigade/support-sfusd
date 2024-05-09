@@ -38,7 +38,11 @@ h6 * {
   background-image: url("/marker_hover.svg");
 }
 
-.marker:active, .maker:focus {
+.marker:active, .marker:focus {
+  background-image: url("/marker_selected.svg");
+}
+
+.marker-selected {
   background-image: url("/marker_selected.svg");
 }
 
