@@ -29,9 +29,9 @@ model School {
 model SchoolProfile {
   id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   schoolId           String   @unique @db.Uuid
-  school		         School @relation(fields: [schoolId], references: [id])
+  school		         School   @relation(fields: [schoolId], references: [id])
   about			         String
-  mission		         String
+  about_bp           String[]
   testimonial        String?
   principal		       String
   instagram_url		   String?

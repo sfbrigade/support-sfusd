@@ -27,7 +27,7 @@ CREATE TABLE "SchoolProfile" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "schoolId" UUID NOT NULL,
     "about" TEXT NOT NULL,
-    "mission" TEXT NOT NULL,
+    "about_bp" TEXT[],
     "testimonial" TEXT,
     "principal" TEXT NOT NULL,
     "instagram_url" TEXT,

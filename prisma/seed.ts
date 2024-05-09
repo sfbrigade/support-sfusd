@@ -236,22 +236,12 @@ async function main() {
     data: {
       profile: {
         create: {
-          about: `Alternative school by choice in San Francisco&#39;s Excelsior
-          neighborhood.\n
-          Named after activist June Jordan, the school&#39;s three pillars are
-          Community, Social Justice, and Independent Thinkers.\n
-          Founded through community organizing by a group of teachers, parents,
-          and youth.\n
-          Engages with southeast San Francisco communities, aligned with social
-          justice movement.\n
-          Aims to prepare students for college while preserving community
-          traditions.`,
-          mission: `As a school for Social Justice serving predominantly
-          working class communities of color, the mission of JJSE is not just
-          to prepare students for college but also to prepare our graduates to
-          be agents of positive change in the world. Our mission and vision
-          is to prepare young people in three key areas: community, social
-          justice, and independent thinkers.`,
+          about: `June Jordan is a small alternative high school named after activist June Jordan. The school was founded through community organizing by a group of teachers, parents, and youth.`,
+          about_bp: [
+            `As a school for Social Justice serving primarily working class communities of color, the mission of JJSE is not just to prepare students for college but to also be positive agents of change in the world.`,
+            `The school's three pillars are Community, Social Justice, and Independent Thinking.`,
+            `June Jordan offers a Motorcycle Mechanics class.`,
+          ],
           testimonial: `&quot;As a student at June Jordan High School, my
           educational journey has been nothing short of transformative. The
           supportive environment and dedicated teachers have empowered me to
@@ -281,33 +271,18 @@ async function main() {
         createMany: {
           data: [
             {
-              name: "Students with Special Needs",
-              percentage: 28,
-              category: "demographic",
-            },
-            {
               name: "High School Graduation Rate",
-              percentage: 83,
-              category: "outcome",
-            },
-            {
-              name: "Accepted into 4-year colleges",
-              percentage: 56,
-              category: "outcome",
-            },
-            {
-              name: "Accepted into 2-year colleges",
-              percentage: 68,
+              percentage: 85,
               category: "outcome",
             },
             {
               name: "SBAC English proficiency",
-              percentage: 11,
+              percentage: 19,
               category: "outcome",
             },
             {
               name: "SBAC Math proficiency",
-              percentage: 0,
+              percentage: 8,
               category: "outcome",
             },
           ],

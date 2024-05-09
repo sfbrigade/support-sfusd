@@ -21,15 +21,23 @@ export default function SchoolHeader({ school }: Props) {
         </h1>
         {/* hide socials if not exist */}
         <div className="flex justify-end gap-3 fill-blue-500 max-md:w-full">
-          <a>
-            <InstagramIcon className="fill-inherit" height="36" width="36" />
-          </a>
-          <a>
-            <FacebookIcon className="fill-inherit" height="36" width="36" />
-          </a>
-          <a>
-            <GlobeIcon className="fill-inherit" height="36" width="36" />
-          </a>
+          {school.profile && (
+            <>
+              <a href={school.profile.instagram_url} target="_blank">
+                <InstagramIcon
+                  className="fill-inherit"
+                  height="36"
+                  width="36"
+                />
+              </a>
+              <a href={school.profile.facebook_url}>
+                <FacebookIcon className="fill-inherit" height="36" width="36" />
+              </a>
+              <a href={school.profile.website_url}>
+                <GlobeIcon className="fill-inherit" height="36" width="36" />
+              </a>
+            </>
+          )}
         </div>
       </div>
 
@@ -45,10 +53,10 @@ export default function SchoolHeader({ school }: Props) {
 
       {/* hide buttons if link doesn't exist*/}
       <div className="flex gap-2">
-        <button className="rounded bg-blue-500 p-1 px-4 font-semibold text-white">
+        <button className="rounded bg-blue-500 p-1 px-4 font-medium text-white">
           Volunteer
         </button>
-        <button className="rounded border-2 border-blue-500 p-1 px-4 font-semibold text-blue-500">
+        <button className="rounded border-2 border-blue-500 p-1 px-4 font-medium text-blue-500">
           Donate
         </button>
       </div>

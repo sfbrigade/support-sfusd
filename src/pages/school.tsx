@@ -1,5 +1,6 @@
 import SchoolAbout from "@/components/schoolPageComponents/SchoolAbout";
 import SchoolHeader from "@/components/schoolPageComponents/SchoolHeader";
+import SchoolStudentOutcomes from "@/components/schoolPageComponents/SchoolStudentOutcomes";
 import prisma from "@/lib/prisma";
 import { School } from "@/types/school";
 import { GetStaticProps } from "next";
@@ -11,6 +12,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const schools = await prisma.school.findMany({
     include: {
       profile: true,
+      metrics: true,
     },
   });
   return { props: { schools } };
@@ -49,6 +51,8 @@ const Profile: React.FC<Props> = (props) => {
             />
             <SchoolHeader school={school} />
             <SchoolAbout school={school} />
+            {school.metrics.length && <SchoolStudentOutcomes school={school} />}
+
             {/* <Mission />
           <StudentOutcomes />
           <Volunteer /> */}
