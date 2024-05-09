@@ -67,23 +67,24 @@ const MapboxMap = ({
 
       const geolocate = new mapboxgl.GeolocateControl({
         positionOptions: {
-            enableHighAccuracy: true
+          enableHighAccuracy: true,
         },
-        showUserLocation: true
-      })
+        showUserLocation: true,
+      });
       map.addControl(geolocate);
 
       // disables geolocation icon if user is out of bounds
       navigator.geolocation.getCurrentPosition((position) => {
-        const bounds = map.getBounds()
-        const {_ne: ne,_sw: sw} = bounds
+        const bounds = map.getBounds();
+        const { _ne: ne, _sw: sw } = bounds;
         const lng = position.coords.longitude;
-        const lat = position.coords.latitude
-        let isInMapBounds = lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat
+        const lat = position.coords.latitude;
+        let isInMapBounds =
+          lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat;
         if (isInMapBounds === false) {
-          map.removeControl(geolocate)
+          map.removeControl(geolocate);
         }
-      })
+      });
 
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
