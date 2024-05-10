@@ -26,7 +26,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
   return (
     <div className="flex max-w-[400px] flex-col items-start justify-center rounded-[16px] bg-white shadow-lg ">
       <img
-        src={school.img}
+        src={"/school_img/" + school.img}
         alt={school.name}
         className=" h-40 w-full rounded-[16px] object-cover"
       />

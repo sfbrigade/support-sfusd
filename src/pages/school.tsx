@@ -36,7 +36,7 @@ const Profile: React.FC<Props> = (props) => {
           <div className="relative w-full">
             <Image
               className="relative h-64 w-full object-cover max-md:h-48"
-              src={"/" + school.img}
+              src={"/school_img/" + school.img}
               alt={school.name + " image"}
               width={2000}
               height={2000}
@@ -44,8 +44,8 @@ const Profile: React.FC<Props> = (props) => {
           </div>
           <div className="relative mx-auto flex flex-col gap-10 p-8 pt-2 md:pt-20 lg:w-4/5 2xl:w-2/3">
             <Image
-              className="z-1 absolute -top-20 h-32 w-32 rounded drop-shadow-lg md:-top-32 md:h-44 md:w-44"
-              src={"/" + school.img}
+              className="z-1 absolute -top-20 h-32 w-32 rounded bg-white drop-shadow-lg md:-top-32 md:h-44 md:w-44"
+              src={"/school_img/logo/" + school.img}
               alt={school.name + " logo"}
               width={1000}
               height={1000}
