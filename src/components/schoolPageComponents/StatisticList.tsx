@@ -3,7 +3,7 @@ import Statistic from "./Statistic";
 const StatisticList = (props: any) => {
   const { statistics } = props;
   return (
-    <div className="mt-6 flex flex-wrap gap-6 max-md:justify-center md:gap-12 ">
+    <div className=" flex flex-wrap gap-6 max-md:justify-center md:gap-12 ">
       {statistics.map(
         (stat: any) =>
           stat.number &&

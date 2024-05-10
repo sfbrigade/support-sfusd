@@ -242,6 +242,8 @@ async function main() {
             `The school's three pillars are Community, Social Justice, and Independent Thinking.`,
             `June Jordan offers a Motorcycle Mechanics class.`,
           ],
+          volunteer_form_url:
+            "https://docs.google.com/forms/d/1hVYScQ93TU03a5qh3pyoxVYFp2_xmkAj3-xGH20qNrg/viewform?edit_requested=true",
           testimonial: `&quot;As a student at June Jordan High School, my
           educational journey has been nothing short of transformative. The
           supportive environment and dedicated teachers have empowered me to
@@ -254,9 +256,9 @@ async function main() {
           where I&apos;ve discovered my potential and built lasting
           connections.&quot; - Jorge Rodriguez`,
           principal: "Amanda Chui",
-          instagram_url: "",
-          facebook_url: "",
-          website_url: "",
+          instagram_url: "https://www.instagram.com/officialjjse",
+          facebook_url: "https://www.facebook.com/JuneJordanSchoolforEquity",
+          website_url: "https://www.sfusd.edu/school/june-jordan-school-equity",
         },
       },
     },
@@ -301,23 +303,20 @@ async function main() {
         createMany: {
           data: [
             {
-              name: "Remote Friendly Tasks",
-              details: "Volunteer from home!",
+              name: "Tutoring",
+              details: `Provide one-on-one academic support to students on a range of topics`,
               url: "",
               category: "volunteer",
             },
             {
-              name: "Math Tutors",
-              details: `Our students need help in this subject now more than
-              ever before. A strong commitment can make a huge lifetime change.
-              Learn more`,
+              name: "Event Volunteer",
+              details: `Provide support for school-sponsored events`,
               url: "",
               category: "volunteer",
             },
             {
-              name: "Event volunteers",
-              details: `Participate in community gatherings which cultivate joy
-              and a positive school culture`,
+              name: "Career Prep and Mentoring",
+              details: `Provide students with mentoring, career insight and readiness`,
               url: "",
               category: "volunteer",
             },
@@ -327,15 +326,6 @@ async function main() {
               Schools for Equity website.`,
               url: "",
               category: "donate",
-            },
-            {
-              name: "Volunteer",
-              details: `June Jordan values community volunteers and has
-              volunteer needs and opportunities throughout the school year. You
-              can sign up to volunteer through the San Francisco Ed Fund or fill
-              out this form to connect directly with the school.`,
-              url: "",
-              category: "volunteer",
             },
             {
               name: "JJSE Moto Shop",

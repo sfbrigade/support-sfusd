@@ -25,8 +25,9 @@ const SchoolAbout: React.FC<{ school: School }> = ({ school }) => {
           </ul>
         </>
       )}
-
-      <StatisticList statistics={stats} />
+      <div className="mt-6">
+        <StatisticList statistics={stats} />
+      </div>
     </div>
   );
   return (

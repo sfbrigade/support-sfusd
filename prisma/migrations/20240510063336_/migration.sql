@@ -28,6 +28,7 @@ CREATE TABLE "SchoolProfile" (
     "schoolId" UUID NOT NULL,
     "about" TEXT NOT NULL,
     "about_bp" TEXT[],
+    "volunteer_form_url" TEXT NOT NULL,
     "testimonial" TEXT,
     "principal" TEXT NOT NULL,
     "instagram_url" TEXT,

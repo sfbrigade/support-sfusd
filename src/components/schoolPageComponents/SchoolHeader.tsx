@@ -30,10 +30,10 @@ export default function SchoolHeader({ school }: Props) {
                   width="36"
                 />
               </a>
-              <a href={school.profile.facebook_url}>
+              <a href={school.profile.facebook_url} target="_blank">
                 <FacebookIcon className="fill-inherit" height="36" width="36" />
               </a>
-              <a href={school.profile.website_url}>
+              <a href={school.profile.website_url} target="_blank">
                 <GlobeIcon className="fill-inherit" height="36" width="36" />
               </a>
             </>
@@ -53,9 +53,12 @@ export default function SchoolHeader({ school }: Props) {
 
       {/* hide buttons if link doesn't exist*/}
       <div className="flex gap-2">
-        <button className="rounded bg-blue-500 p-2 px-8 font-medium text-white">
+        <a
+          href="#volunteer"
+          className="rounded bg-blue-500 p-2 px-8 font-medium text-white"
+        >
           Volunteer
-        </button>
+        </a>
         <button className="rounded border-2 border-blue-500 p-2 px-8 font-medium text-blue-500">
           Donate
         </button>

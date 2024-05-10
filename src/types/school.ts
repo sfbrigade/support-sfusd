@@ -12,11 +12,13 @@ export interface School {
   longitude: number;
   profile?: SchoolProfile;
   metrics: Metric[];
+  programs: Program[];
 }
 
 export interface SchoolProfile {
   about: string;
   about_bp: string[];
+  volunteer_form_url: string;
   testimonial?: string;
   principal: string;
   instagram_url?: string;
@@ -27,6 +29,13 @@ export interface SchoolProfile {
 export interface Metric {
   name: string;
   percentage: number;
+  category: string;
+}
+
+export interface Program {
+  name: string;
+  details: string;
+  url?: string;
   category: string;
 }
 

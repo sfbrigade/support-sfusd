@@ -32,6 +32,7 @@ model SchoolProfile {
   school		         School   @relation(fields: [schoolId], references: [id])
   about			         String
   about_bp           String[]
+  volunteer_form_url String
   testimonial        String?
   principal		       String
   instagram_url		   String?
