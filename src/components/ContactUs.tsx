@@ -5,15 +5,25 @@ type ContactUsProps = {
   handleClose: () => void
 };
 
-
+/**
+ * ContactUs: A modal form for users to contact the Support SFUSD team.
+ * - Validates email input before sending the message.
+ * - Sends the message to the Support SFUSD team using emailjs.
+ *
+ * State:
+ * - formData: an object containing the user's name, email, and message
+ * Props:
+ * - "handleClose" function: close the modal when message sent or canceled
+ *
+ * Beta banner (or About page ) => ContactUs
+ *
+ */
 const ContactUs: React.FC<ContactUsProps> = ({
   handleClose,
 }) =>
 {
 
   const [formData, setFormData] = useState({name: "", email: "", message: ""});
-
-  4
 
   function isEmail(emailInput: string) {
       let regEmail =
@@ -27,6 +37,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
   function handleChange(e: React.ChangeEvent<HTMLInputElement> |
      React.ChangeEvent<HTMLTextAreaElement>) {
       e.preventDefault();
+
     const { name, value } = e.target;
     setFormData(d => ({ ...d, [name]: value }));
   }
