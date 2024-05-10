@@ -8,9 +8,7 @@ const About = () => {
 
   const [showContactForm, setShowContactForm] = useState(false);
   const handleOpen = () => setShowContactForm(true);
-  const handleClose = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setShowContactForm(false);
-  };
+  const handleClose = () => setShowContactForm(false);
 
   return (
     <div className="mx-auto flex h-[calc(100vh-64px)] max-md:px-8 md:w-3/5">
