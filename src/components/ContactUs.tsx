@@ -25,6 +25,9 @@ const ContactUs: React.FC<ContactUsProps> = ({
 
   const [formData, setFormData] = useState({name: "", email: "", message: ""});
 
+  /**
+   * isEmail: Validates the email input using a regular expression.
+   */
   function isEmail(emailInput: string) {
       let regEmail =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -33,7 +36,9 @@ const ContactUs: React.FC<ContactUsProps> = ({
       }
       return true;
   }
-
+  /**
+   * handleChange: Updates the form data when the user types in the input fields.
+   */
   function handleChange(e: React.ChangeEvent<HTMLInputElement> |
      React.ChangeEvent<HTMLTextAreaElement>) {
       e.preventDefault();
@@ -44,6 +49,10 @@ const ContactUs: React.FC<ContactUsProps> = ({
 
   const form = React.useRef<HTMLFormElement | null>(null);
 
+  /**
+   * sendEmail: Sends the email to the Support SFUSD team using emailjs.
+   * Validates the email input before sending the message.
+   */
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if(!isEmail(formData.email)){
