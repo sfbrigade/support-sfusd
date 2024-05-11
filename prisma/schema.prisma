@@ -33,6 +33,8 @@ model SchoolProfile {
   about			         String
   about_bp           String[]
   volunteer_form_url String
+  donation_url       String?
+  donation_text      String
   testimonial        String?
   principal		       String
   instagram_url		   String?

@@ -3,7 +3,7 @@ import Card from "./Card";
 const CardList = (props: any) => {
   const { cards } = props;
   return (
-    <div className="grid grid-cols-3 gap-8">
+    <div className="grid gap-8 sm:grid-cols-3">
       {cards.map((card: any) => (
         <Card
           key={card.title}

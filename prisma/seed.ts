@@ -244,6 +244,9 @@ async function main() {
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/1hVYScQ93TU03a5qh3pyoxVYFp2_xmkAj3-xGH20qNrg/viewform?edit_requested=true",
+          donation_url: "https://smallschoolsforequity.org/donate/",
+          donation_text:
+            "Donate to June Jordan on the Small Schools for Equity website. All of your donation goes directly to programs benefitting teachers and youth!",
           testimonial: `&quot;As a student at June Jordan High School, my
           educational journey has been nothing short of transformative. The
           supportive environment and dedicated teachers have empowered me to
@@ -332,7 +335,7 @@ async function main() {
               details: `June Jordan has the only motorcycle repair class in the
               country.`,
               url: "",
-              category: "donation_funded",
+              category: "donate",
             },
             {
               name: "Intersession",
@@ -342,7 +345,7 @@ async function main() {
               challenge them physically, emotionally, intellectually, and
               spiritually.`,
               url: "",
-              category: "donation_funded",
+              category: "donate",
             },
             {
               name: "Student Activities",
@@ -350,7 +353,7 @@ async function main() {
               offer the same breadth of courses as larger high schools, we do
               have a rich series of elective courses students may choose from.`,
               url: "",
-              category: "donation_funded",
+              category: "donate",
             },
             {
               name: "Advisory",

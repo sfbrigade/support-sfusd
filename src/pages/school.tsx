@@ -1,5 +1,6 @@
 import BannerWrapper from "@/components/schoolPageComponents/BannerWrapper";
 import SchoolAbout from "@/components/schoolPageComponents/SchoolAbout";
+import SchoolDonation from "@/components/schoolPageComponents/SchoolDonation";
 import SchoolHeader from "@/components/schoolPageComponents/SchoolHeader";
 import SchoolStudentOutcomes from "@/components/schoolPageComponents/SchoolStudentOutcomes";
 import SchoolVolunteer from "@/components/schoolPageComponents/SchoolVolunteer";
@@ -44,7 +45,7 @@ const Profile: React.FC<Props> = (props) => {
               height={2000}
             />
           </div>
-          <div className="relative mx-auto flex flex-col gap-10 p-8 pt-2 md:pt-20 lg:w-4/5 2xl:w-2/3">
+          <div className="relative mx-auto flex flex-col gap-10 p-6 pt-2 md:pt-20 lg:w-4/5 2xl:w-2/3">
             <Image
               className="z-1 absolute -top-20 h-32 w-32 rounded bg-white drop-shadow-lg md:-top-32 md:h-44 md:w-44"
               src={"/school_img/logo/" + school.img}
@@ -60,6 +61,7 @@ const Profile: React.FC<Props> = (props) => {
               ""
             )}
             <SchoolVolunteer school={school} />
+            <SchoolDonation school={school} />
           </div>
         </div>
       )}

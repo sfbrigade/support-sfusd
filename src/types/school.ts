@@ -19,6 +19,8 @@ export interface SchoolProfile {
   about: string;
   about_bp: string[];
   volunteer_form_url: string;
+  donation_url?: string;
+  donation_text: string;
   testimonial?: string;
   principal: string;
   instagram_url?: string;

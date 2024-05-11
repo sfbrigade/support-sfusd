@@ -29,6 +29,8 @@ CREATE TABLE "SchoolProfile" (
     "about" TEXT NOT NULL,
     "about_bp" TEXT[],
     "volunteer_form_url" TEXT NOT NULL,
+    "donation_url" TEXT,
+    "donation_text" TEXT NOT NULL,
     "testimonial" TEXT,
     "principal" TEXT NOT NULL,
     "instagram_url" TEXT,

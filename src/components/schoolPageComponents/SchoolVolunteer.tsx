@@ -6,22 +6,6 @@ import HeadingContentWrapper from "./HeadingContentWrapper";
 import CardList from "./CardList";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
-  // const volunteerList = [
-  //   {
-  //     title: "Math Tutors",
-  //     description:
-  //       "Our students need help in this subject now more than ever before. A strong commitment can make a huge lifetime change. A strong commitment can make a huge lifetime change. A strong commitment can make a huge lifetime change.",
-  //   },
-  //   {
-  //     title: "Event Volunteers",
-  //     description:
-  //       "Participate in community gatherings which cultivate joy and a positive school culture.",
-  //   },
-  //   {
-  //     title: "Remotely Friendly Tasks",
-  //     description: "Volunteer from home!",
-  //   },
-  // ];
   interface volunteer {
     title: string;
     description: string;
@@ -41,21 +25,17 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
     [],
   );
 
-  console.log(volunteerList);
-
   return (
     <section id="volunteer" className="flex flex-col gap-10">
       <BannerWrapper
         className=" gap-10 rounded-lg md:bg-[#FFF5DA] md:p-8 md:px-12 "
         left={
-          <div>
-            <Image
-              src="/volunteer-graphic.png"
-              alt="volunteer graphic"
-              width={500}
-              height={1000}
-            />
-          </div>
+          <Image
+            src="/volunteer-graphic.png"
+            alt="volunteer graphic"
+            width={500}
+            height={1000}
+          />
         }
         right={
           <div className="flex flex-col gap-4">
