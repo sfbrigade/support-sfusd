@@ -31,7 +31,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
   setSelectedSchool,
   isExpanded,
 }) => {
-  const { img, name, neighborhood, students, frl, ell } = school;
+  const { img, name, neighborhood } = school;
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
     setSelectedSchool(school);
@@ -51,13 +51,13 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
         <div className="flex flex-col gap-2 max-md:text-sm">
           <div>
-            <strong>{students ? students : "N/A"}</strong> Students
+            <strong>N/A</strong> Students
           </div>
           <div>
-            <strong>{frl ? frl : "N/A"}%</strong> Free and Reduced Lunch
+            <strong>N/A</strong> Free and Reduced Lunch
           </div>
           <div>
-            <strong>{ell ? ell : "N/A"}%</strong> English Language Learners
+            <strong>N/A</strong> English Language Learners
           </div>
           <Link
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
