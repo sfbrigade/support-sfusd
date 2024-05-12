@@ -3,10 +3,7 @@ import HeadingContentWrapper from "./HeadingContentWrapper";
 import StatisticList from "./StatisticList";
 
 const SchoolStudentOutcomes: React.FC<{ school: School }> = ({ school }) => {
-  const stats = school.metrics.map((m) => ({
-    number: m.percentage + "%",
-    text: m.name,
-  }));
+  const stats = school.metrics.filter((metric) => metric.category == "outcome");
   return (
     <section id="StudentOutcomes">
       <HeadingContentWrapper

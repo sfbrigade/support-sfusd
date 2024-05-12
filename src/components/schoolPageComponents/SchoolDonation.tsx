@@ -7,10 +7,9 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
   const otherDonations = school.programs.filter(
     (program) => program.category == "donate",
   );
-  console.log(otherDonations);
 
   return (
-    <div>
+    <div id="donate">
       <BannerWrapper
         left={
           <HeadingContentWrapper
@@ -40,30 +39,35 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
             height={1000}
           />
         }
-        className=" gap-10 rounded-t-lg bg-[#D7F1FF] p-8 md:px-16 "
-      />
-      <BannerWrapper
-        left={
-          <HeadingContentWrapper
-            heading={"Or donate through any of our partners"}
-            content={
-              <ul className="flex flex-col">
-                {otherDonations.map((donation, i) => (
-                  <li key={i}>
-                    <a
-                      href={donation.url}
-                      className="underline underline-offset-4"
-                    >
-                      {donation.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            }
-          />
+        className={
+          "gap-4 bg-[#D7F1FF] p-8 md:gap-8 md:px-16 " +
+          (otherDonations.length > 0 ? "rounded-t-lg" : "rounded-lg")
         }
-        className=" gap-10 rounded-b-lg bg-[#FFF5DA] p-8 md:px-16 "
       />
+      {otherDonations.length > 0 && (
+        <BannerWrapper
+          left={
+            <HeadingContentWrapper
+              heading={"Or donate through any of our partners"}
+              content={
+                <ul className="flex flex-col">
+                  {otherDonations.map((donation, i) => (
+                    <li key={i}>
+                      <a
+                        href={donation.url}
+                        className="underline underline-offset-4"
+                      >
+                        {donation.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              }
+            />
+          }
+          className=" gap-10 rounded-b-lg bg-[#FFF5DA] p-8 md:px-16 "
+        />
+      )}
     </div>
   );
 };

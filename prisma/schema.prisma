@@ -13,10 +13,6 @@ model School {
   name               String
   address            String
   neighborhood       String
-  students           Int?
-  frl                Float    @default(0)
-  ell                Float    @default(0)
-  ssn                Float    @default(0)
   priority           Boolean  @default(false)
   img                String?
   latitude           String
@@ -36,6 +32,9 @@ model SchoolProfile {
   donation_url       String?
   donation_text      String
   testimonial        String?
+  testimonial_author String?
+  testimonial_video  String?
+  testimonial_img    String?
   principal		       String
   instagram_url		   String?
   facebook_url		   String?
@@ -47,7 +46,8 @@ model Metric {
   schoolId           String   @db.Uuid
   school		         School @relation(fields: [schoolId], references: [id])
   name			         String
-  percentage		     Float    @default(0)
+  value		           Float    @default(0)
+  unit               String
   category           MetricCategory
 }
 
@@ -63,7 +63,7 @@ model Program {
 }
 
 enum MetricCategory {
-  demographic
+  about
   outcome
 }
 
@@ -71,6 +71,4 @@ enum ProgramCategory {
   volunteer
   donate
   enrichment
-  donation_funded
-  donors_choose
 }

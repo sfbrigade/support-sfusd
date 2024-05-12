@@ -1,8 +1,8 @@
 -- CreateEnum
-CREATE TYPE "MetricCategory" AS ENUM ('demographic', 'outcome');
+CREATE TYPE "MetricCategory" AS ENUM ('about', 'outcome');
 
 -- CreateEnum
-CREATE TYPE "ProgramCategory" AS ENUM ('volunteer', 'donate', 'enrichment', 'donation_funded', 'donors_choose');
+CREATE TYPE "ProgramCategory" AS ENUM ('volunteer', 'donate', 'enrichment');
 
 -- CreateTable
 CREATE TABLE "School" (
@@ -10,10 +10,6 @@ CREATE TABLE "School" (
     "name" TEXT NOT NULL,
     "address" TEXT NOT NULL,
     "neighborhood" TEXT NOT NULL,
-    "students" INTEGER,
-    "frl" DOUBLE PRECISION NOT NULL DEFAULT 0,
-    "ell" DOUBLE PRECISION NOT NULL DEFAULT 0,
-    "ssn" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "priority" BOOLEAN NOT NULL DEFAULT false,
     "img" TEXT,
     "latitude" TEXT NOT NULL,
@@ -32,6 +28,9 @@ CREATE TABLE "SchoolProfile" (
     "donation_url" TEXT,
     "donation_text" TEXT NOT NULL,
     "testimonial" TEXT,
+    "testimonial_author" TEXT,
+    "testimonial_video" TEXT,
+    "testimonial_img" TEXT,
     "principal" TEXT NOT NULL,
     "instagram_url" TEXT,
     "facebook_url" TEXT,
@@ -45,7 +44,8 @@ CREATE TABLE "Metric" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "schoolId" UUID NOT NULL,
     "name" TEXT NOT NULL,
-    "percentage" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "value" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "unit" TEXT NOT NULL,
     "category" "MetricCategory" NOT NULL,
 
     CONSTRAINT "Metric_pkey" PRIMARY KEY ("id")

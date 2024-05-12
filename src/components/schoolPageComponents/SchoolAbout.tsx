@@ -4,12 +4,7 @@ import Statistic from "./Statistic";
 import StatisticList from "./StatisticList";
 
 const SchoolAbout: React.FC<{ school: School }> = ({ school }) => {
-  const stats = [
-    { number: school.students, text: "Students Enroled" },
-    { number: school.frl + "%", text: "Free/Reduced Lunch" },
-    { number: school.ell + "%", text: "English Language Learners" },
-    { number: school.ssn + "%", text: "Students with Special Needs" },
-  ];
+  const stats = school.metrics.filter((metric) => metric.category == "about");
 
   const innerContent = (
     <div>

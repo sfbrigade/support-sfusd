@@ -2,10 +2,6 @@ export interface School {
   name: string;
   address?: string;
   neighborhood?: string;
-  students?: number;
-  frl?: number;
-  ell?: number;
-  ssn?: number;
   priority: boolean;
   img?: string;
   latitude: number;
@@ -22,6 +18,9 @@ export interface SchoolProfile {
   donation_url?: string;
   donation_text: string;
   testimonial?: string;
+  testimonial_author?: string;
+  testimonial_video?: string;
+  testimonial_img?: string;
   principal: string;
   instagram_url?: string;
   facebook_url?: string;
@@ -30,7 +29,8 @@ export interface SchoolProfile {
 
 export interface Metric {
   name: string;
-  percentage: number;
+  value: number;
+  unit: string;
   category: string;
 }
 

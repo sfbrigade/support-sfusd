@@ -59,9 +59,12 @@ export default function SchoolHeader({ school }: Props) {
         >
           Volunteer
         </a>
-        <button className="rounded border-2 border-blue-500 p-2 px-8 font-medium text-blue-500">
+        <a
+          href="#donate"
+          className="rounded border-2 border-blue-500 p-2 px-8 font-medium text-blue-500"
+        >
           Donate
-        </button>
+        </a>
       </div>
     </div>
   );

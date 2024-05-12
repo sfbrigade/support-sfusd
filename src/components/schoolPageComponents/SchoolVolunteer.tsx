@@ -28,7 +28,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
   return (
     <section id="volunteer" className="flex flex-col gap-10">
       <BannerWrapper
-        className=" gap-10 rounded-lg md:bg-[#FFF5DA] md:p-8 md:px-12 "
+        className=" gap-4 rounded-lg md:gap-8 md:bg-[#FFF5DA] md:p-8 md:px-12 "
         left={
           <Image
             src="/volunteer-graphic.png"
@@ -67,11 +67,12 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
           </div>
         }
       />
-
-      <HeadingContentWrapper
-        heading="Opportunities to volunteer, short & long term"
-        content={<CardList cards={volunteerList} />}
-      />
+      {volunteerList.length > 0 && (
+        <HeadingContentWrapper
+          heading="Opportunities to volunteer, short & long term"
+          content={<CardList cards={volunteerList} />}
+        />
+      )}
     </section>
   );
 };

@@ -3,6 +3,7 @@ import SchoolAbout from "@/components/schoolPageComponents/SchoolAbout";
 import SchoolDonation from "@/components/schoolPageComponents/SchoolDonation";
 import SchoolHeader from "@/components/schoolPageComponents/SchoolHeader";
 import SchoolStudentOutcomes from "@/components/schoolPageComponents/SchoolStudentOutcomes";
+import SchoolTestimonial from "@/components/schoolPageComponents/SchoolTestimonial";
 import SchoolVolunteer from "@/components/schoolPageComponents/SchoolVolunteer";
 import prisma from "@/lib/prisma";
 import { School } from "@/types/school";
@@ -62,6 +63,7 @@ const Profile: React.FC<Props> = (props) => {
             )}
             <SchoolVolunteer school={school} />
             <SchoolDonation school={school} />
+            <SchoolTestimonial school={school} />
           </div>
         </div>
       )}
