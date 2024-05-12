@@ -5,8 +5,8 @@ const BannerWrapper: React.FC<{
 }> = ({ left, right, className = "" }) => {
   return (
     <div className={`flex items-center max-md:flex-col ` + className}>
-      {left && <div className="flex-1">{left}</div>}
-      {right && <div className="flex-1">{right}</div>}
+      {left && <div className="w-full flex-1">{left}</div>}
+      {right && <div className="w-full flex-1">{right}</div>}
     </div>
   );
 };

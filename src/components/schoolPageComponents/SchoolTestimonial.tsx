@@ -8,7 +8,6 @@ const SchoolTestimonial: React.FC<{ school: School }> = ({ school }) => {
     if (school.profile?.testimonial_video) {
       return (
         <iframe
-          width="560"
           height="315"
           src={school.profile?.testimonial_video}
           title="YouTube video player"
@@ -16,7 +15,7 @@ const SchoolTestimonial: React.FC<{ school: School }> = ({ school }) => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="rounded-lg"
+          className="w-full rounded-lg"
         ></iframe>
       );
     } else if (school.profile?.testimonial_img) {

@@ -63,7 +63,9 @@ const Profile: React.FC<Props> = (props) => {
             )}
             <SchoolVolunteer school={school} />
             <SchoolDonation school={school} />
-            <SchoolTestimonial school={school} />
+            {school.profile?.testimonial && (
+              <SchoolTestimonial school={school} />
+            )}
           </div>
         </div>
       )}

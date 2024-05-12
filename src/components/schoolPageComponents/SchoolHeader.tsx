@@ -23,19 +23,29 @@ export default function SchoolHeader({ school }: Props) {
         <div className="flex justify-end gap-3 fill-blue-500 max-md:w-full">
           {school.profile && (
             <>
-              <a href={school.profile.instagram_url} target="_blank">
-                <InstagramIcon
-                  className="fill-inherit"
-                  height="36"
-                  width="36"
-                />
-              </a>
-              <a href={school.profile.facebook_url} target="_blank">
-                <FacebookIcon className="fill-inherit" height="36" width="36" />
-              </a>
-              <a href={school.profile.website_url} target="_blank">
-                <GlobeIcon className="fill-inherit" height="36" width="36" />
-              </a>
+              {school.profile.instagram_url && (
+                <a href={school.profile.instagram_url} target="_blank">
+                  <InstagramIcon
+                    className="fill-inherit"
+                    height="36"
+                    width="36"
+                  />
+                </a>
+              )}
+              {school.profile.facebook_url && (
+                <a href={school.profile.facebook_url} target="_blank">
+                  <FacebookIcon
+                    className="fill-inherit"
+                    height="36"
+                    width="36"
+                  />
+                </a>
+              )}
+              {school.profile.website_url && (
+                <a href={school.profile.website_url} target="_blank">
+                  <GlobeIcon className="fill-inherit" height="36" width="36" />
+                </a>
+              )}
             </>
           )}
         </div>

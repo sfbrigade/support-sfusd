@@ -55,6 +55,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                     <li key={i}>
                       <a
                         href={donation.url}
+                        target="_blank"
                         className="underline underline-offset-4"
                       >
                         {donation.name}
