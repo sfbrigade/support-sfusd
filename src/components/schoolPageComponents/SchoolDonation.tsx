@@ -17,8 +17,8 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
         <>
           {donation_txt_split[0]}:<br />
           <b>
-            {address_split.map((a) => (
-              <div>{a}</div>
+            {address_split.map((a, i) => (
+              <div key={i}>{a}</div>
             ))}
           </b>
         </>
