@@ -73,13 +73,19 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                 <ul className="flex flex-col">
                   {otherDonations.map((donation, i) => (
                     <li key={i}>
-                      <a
-                        href={donation.url}
-                        target="_blank"
-                        className="underline underline-offset-4"
-                      >
-                        {donation.name}
-                      </a>
+                      {donation.url ? (
+                        <a
+                          href={donation.url}
+                          target="_blank"
+                          className="underline underline-offset-4"
+                        >
+                          {donation.name}
+                        </a>
+                      ) : (
+                        <p className="underline underline-offset-4">
+                          {donation.name}
+                        </p>
+                      )}
                     </li>
                   ))}
                 </ul>
