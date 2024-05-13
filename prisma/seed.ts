@@ -143,6 +143,8 @@ async function main() {
           testimonial_author: "Daniela Simental, student",
           testimonial_video:
             "https://www.youtube.com/embed/jwMX9zSxaA0?si=ch5T8GWlPJCxJHGz&amp;start=192",
+          noteable_video:
+            "https://www.youtube.com/embed/jwMX9zSxaA0?si=bL4VMGrxRQ_xipUf",
           principal: "Suniqua Thomas",
           instagram_url: "https://www.instagram.com/burtonpumas/",
           facebook_url: "https://www.facebook.com/burtonpumas/",
@@ -370,6 +372,8 @@ async function main() {
           testimonial_author: "Senior in 2021 - Romaissa Khaldi",
           testimonial_video:
             "https://www.youtube.com/embed/KkDW52FEdsg?si=MCUnI9xwh_PhhchA&amp;start=170",
+          noteable_video:
+            "https://www.youtube.com/embed/KkDW52FEdsg?si=lsyO4inn548P7bTE",
           principal: "Ambar Panjabi",
           instagram_url: "https://www.instagram.com/galileoasb/",
           facebook_url: "https://www.facebook.com/GalileoAcademy/",
@@ -925,6 +929,8 @@ async function main() {
           testimonial_author: "Kelly Wong, student",
           testimonial_video:
             "https://www.youtube.com/embed/PfHdxukonSg?si=RvM3VjT_SAPSI0Sb&amp;start=225",
+          noteable_video:
+            "https://www.youtube.com/embed/PfHdxukonSg?si=Q3d3ieVn2fdtD_Ka",
           principal: "Sharimar Manalang",
           instagram_url: "https://www.instagram.com/alhsgreenacademy/",
           facebook_url: "https://www.facebook.com/groups/191813114254895/",
@@ -1042,6 +1048,8 @@ async function main() {
             "https://secure.givelively.org/donate/pta-california-congress-of-parents-teachers-students-inc-san-francisco-ca-8431854/lowell-ptsa-2023-2024-fundraising",
           donation_text:
             "Donate to Lowell's PTSA. Your donation will fund grants for student organizations, clubs, and teachers. It will also fund college readiness, diversity and inclusion, wellness, and hospitality programs. Any remainder at the end of the school year will go into our rainy day fund for next year.",
+          noteable_video:
+            "https://www.youtube.com/embed/c4BiiF55SvU?si=9XB3PhXZAP3ooIZn",
           principal: "Michael Jones",
           instagram_url: "https://www.instagram.com/lowellhs/?hl=en",
           facebook_url:
@@ -1269,6 +1277,8 @@ async function main() {
           testimonial_author: "Lonnie, student",
           testimonial_video:
             "https://www.youtube.com/embed/dHSG-DS_Vko?si=xSmHawJ6IbiQX-rr&amp;start=231",
+          noteable_video:
+            "https://www.youtube.com/embed/dHSG-DS_Vko?si=xlpYHFmZIBAkh4yd",
           principal: "Amy Abero & Susan Ryan (Co-Principals)",
           instagram_url: "https://www.instagram.com/oc_youknow/?hl=en",
           facebook_url: "https://www.facebook.com/OChighschoolSFUSD/",
@@ -1381,6 +1391,8 @@ async function main() {
           testimonial_author: "Ava, Student",
           testimonial_video:
             "https://www.youtube.com/embed/gouN1t1GxE0?si=ovResdGqAYsklGlF",
+          noteable_video:
+            "https://www.youtube.com/embed/zXcnXNEvjoo?si=7-tJ7DywSRThJMw8",
           principal: "Stella Kim",
           instagram_url: "https://www.instagram.com/ruthasawasota/",
           facebook_url: "https://www.facebook.com/AsawaSOTA/",
@@ -1492,6 +1504,8 @@ async function main() {
           donation_url:
             "https://www.paypal.com/paypalme/AcademySFatMcateer?country_x=US&locale_x=en_US",
           donation_text: `Donate to the Academy's PTSA. Your donation is used to support teacher classroom needs, and student events like prom and field trips.`,
+          noteable_video:
+            "https://drive.google.com/file/d/1GdVL6l4z1dCBDBfnwaRlIVvr9o_KxTLe/preview",
           principal: "Hollie Mack",
           instagram_url: "http://www.instagram.com/academywolvessf",
           facebook_url: "https://www.facebook.com/AcademyWolvesSF",
@@ -1606,6 +1620,8 @@ async function main() {
           testimonial_author: "Darlin",
           testimonial_video:
             "https://www.youtube.com/embed/nUIBNpi3VTA?si=2mdebQexdqQuB-Ke",
+          noteable_video:
+            "https://www.youtube.com/embed/NclnGjU3zJM?si=g9bnDzFsl3mvGRgM",
           principal: "Sarah Ballard-Hanson",
           instagram_url: "https://www.instagram.com/marshallphoenix/?hl=en",
           facebook_url: "https://www.facebook.com/groups/20606012934/",
@@ -1720,6 +1736,8 @@ async function main() {
           testimonial_author: "Ryan",
           testimonial_video:
             "https://www.youtube.com/embed/rtSYrHOxN28?si=rEoQTInfas1UBk44",
+          noteable_video:
+            "https://www.youtube.com/embed/rtSYrHOxN28?si=binBgRGAemfDKbzb",
           principal: "Tanya Harris",
           instagram_url: "https://www.instagram.com/wallenberghs/",
           facebook_url:

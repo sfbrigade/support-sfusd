@@ -21,6 +21,7 @@ export interface SchoolProfile {
   testimonial_author?: string;
   testimonial_video?: string;
   testimonial_img?: string;
+  noteable_video?: string;
   principal: string;
   instagram_url?: string;
   facebook_url?: string;

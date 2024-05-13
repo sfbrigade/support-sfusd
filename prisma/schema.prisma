@@ -35,6 +35,7 @@ model SchoolProfile {
   testimonial_author String?
   testimonial_video  String?
   testimonial_img    String?
+  noteable_video     String?
   principal		       String
   instagram_url		   String?
   facebook_url		   String?

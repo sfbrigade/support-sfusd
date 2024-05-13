@@ -31,6 +31,7 @@ CREATE TABLE "SchoolProfile" (
     "testimonial_author" TEXT,
     "testimonial_video" TEXT,
     "testimonial_img" TEXT,
+    "noteable_video" TEXT,
     "principal" TEXT NOT NULL,
     "instagram_url" TEXT,
     "facebook_url" TEXT,
