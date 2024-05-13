@@ -2,6 +2,7 @@ import { MetricCategory, PrismaClient, ProgramCategory } from "@prisma/client";
 const prisma = new PrismaClient();
 async function main() {
   const schools = [
+    // Balboa
     {
       name: "Balboa High School",
       address: "1000 Cayuga Ave, San Francisco, CA",
@@ -117,6 +118,7 @@ async function main() {
         },
       },
     },
+    // Burton
     {
       name: "Burton High School",
       address: "400 Mansell St, San Francisco, CA",
@@ -235,6 +237,7 @@ async function main() {
         },
       },
     },
+    // Downtown
     {
       name: "Downtown High School",
       address: "693 Vermont St, San Francisco, CA",
@@ -343,6 +346,7 @@ async function main() {
         },
       },
     },
+    // Galileo
     {
       name: "Galileo Academy of Science & Technology",
       address: "1150 Francisco St, San Francisco, CA",
@@ -455,6 +459,7 @@ async function main() {
         },
       },
     },
+    // Ida B. Wells
     {
       name: "Ida B. Wells High School",
       address: "1099 Hayes St, San Francisco, CA",
@@ -567,6 +572,7 @@ async function main() {
         },
       },
     },
+    // Independence
     {
       name: "Independence High School",
       address: "1350 7th Ave, San Francisco, CA",
@@ -677,6 +683,7 @@ async function main() {
         },
       },
     },
+    // SF International
     {
       name: "SF International High School",
       address: "655 De Haro St, San Francisco, CA",
@@ -786,6 +793,7 @@ async function main() {
         },
       },
     },
+    // June Jordan
     {
       name: "June Jordan School for Equity",
       address: "325 La Grande Ave, San Francisco, CA",
@@ -889,6 +897,7 @@ async function main() {
         },
       },
     },
+    // Lincoln
     {
       name: "Lincoln High School",
       address: "2162 24th Ave, San Francisco, CA",
@@ -1010,6 +1019,7 @@ async function main() {
         },
       },
     },
+    // Lowell
     {
       name: "Lowell High School",
       address: "1101 Eucalyptus Dr, San Francisco, CA",
@@ -1120,6 +1130,7 @@ async function main() {
         },
       },
     },
+    // Mission
     {
       name: "Mission High School",
       address: "3750 18th St, San Francisco, CA",
@@ -1233,6 +1244,7 @@ async function main() {
         },
       },
     },
+    // John O'Connell
     {
       name: "John O'Connell Technical High School",
       address: "2355 Folsom St, San Francisco, CA",
@@ -1344,6 +1356,7 @@ async function main() {
         },
       },
     },
+    // Ruth Asawa
     {
       name: "Ruth Asawa School of the Arts (SOTA)",
       address: "555 Portola Dr, San Francisco, CA",
@@ -1456,6 +1469,7 @@ async function main() {
         },
       },
     },
+    // The Academy
     {
       name: "The Academy",
       address: "550 Portola Dr #250, San Francisco, CA",
@@ -1477,7 +1491,7 @@ async function main() {
             "https://docs.google.com/forms/d/1px5HE5JPNp5b5emzPVhadVDh6lRy2r_DWLbXxNvzNrA/edit",
           donation_url:
             "https://www.paypal.com/paypalme/AcademySFatMcateer?country_x=US&locale_x=en_US",
-          donation_text: `The Academy prefers online PTSA donations via Paypal.`,
+          donation_text: `Donate to the Academy's PTSA. Your donation is used to support teacher classroom needs, and student events like prom and field trips.`,
           principal: "Hollie Mack",
           instagram_url: "http://www.instagram.com/academywolvessf",
           facebook_url: "https://www.facebook.com/AcademyWolvesSF",
@@ -1566,6 +1580,7 @@ async function main() {
         },
       },
     },
+    // Thurgood Marshall
     {
       name: "Thurgood Marshall High School",
       address: "45 Conkling St, San Francisco, CA",
@@ -1586,7 +1601,7 @@ async function main() {
             "https://docs.google.com/forms/d/1TlrrJZZWcKXeZdAKuF2CQkAmTtRXTmGEe3NkRTFYBNE",
           donation_url:
             "https://thurgood-marshall-academic-high-school-pto.square.site/",
-          donation_text: `Donate to Thurgood Marshall High School to support their educational success`,
+          donation_text: `Donate to Thurgood Marshall's PTSA`,
           testimonial: `“I liked this project because we got to practice English and the other person I was working with got to practice her Spanish.” - Darlin on the “Empathy Project” where native English speakers and English learners practice languages and learn from each other`,
           testimonial_author: "Darlin",
           testimonial_video:
@@ -1674,17 +1689,12 @@ async function main() {
               url: "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/thurgood-marshall-academic-high-school/4394",
               category: ProgramCategory.donate,
             },
-            {
-              name: "SF Education Fund",
-              details: ``,
-              url: "https://sfedfund.org/donate/",
-              category: ProgramCategory.donate,
-            },
           ],
           skipDuplicates: true,
         },
       },
     },
+    // Wallenberg
     {
       name: "Wallenberg High School",
       address: "40 Vega St, San Francisco, CA",
@@ -1705,9 +1715,7 @@ async function main() {
             "https://jointotem.com/ca/san-francisco/raoul-wallenberg-trad-high-pta",
           donation_url:
             "https://www.paypal.com/donate/?hosted_button_id=NX4GK2S6GQAWN",
-          donation_text: `Wallenberg High School prefers online donations to their PTSA via Paypal, Totem, Zelle
-          Or mail a check to Wallenberg High School PTSA, 
-          40 Vega Street, San Francisco, CA 94115 `,
+          donation_text: `Donate to Wallenberg's PTSA. The PTSA aims to fund programs and events that benefit all Wallenberg students and teachers: building community, inclusion, and tolerance, sponsoring the Reflections Arts Program and Wallapalooza Art Festival, supporting technology and athletic programs, and honoring our teachers by providing them with stipends.`,
           testimonial: `"I really like my teachers because they always want you to perform at your best ... I feel like Wallenberg is a great school for students who want to be in a small community where everyone knows each other and where students and teachers have greater relationships"`,
           testimonial_author: "Ryan",
           testimonial_video:
@@ -1797,9 +1805,9 @@ async function main() {
               category: ProgramCategory.donate,
             },
             {
-              name: "Totem",
+              name: "Zelle to the email wallenbergptsa@gmail.com",
               details: ``,
-              url: "https://jointotem.com/ca/san-francisco/raoul-wallenberg-trad-high-pta",
+              url: "",
               category: ProgramCategory.donate,
             },
           ],
@@ -1807,6 +1815,7 @@ async function main() {
         },
       },
     },
+    // Washington
     {
       name: "George Washington High School",
       address: "600 32nd Ave, San Francisco, CA",
