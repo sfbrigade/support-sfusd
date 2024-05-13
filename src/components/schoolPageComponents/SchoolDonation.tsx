@@ -8,6 +8,26 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
     (program) => program.category == "donate",
   );
 
+  function formatDonationText() {
+    const donation_text = school.profile ? school.profile.donation_text : "";
+    const donation_txt_split = donation_text.split(":");
+    if (donation_txt_split.length > 1) {
+      const address_split = donation_txt_split[1].split("\n");
+      return (
+        <>
+          {donation_txt_split[0]}:<br />
+          <b>
+            {address_split.map((a) => (
+              <div>{a}</div>
+            ))}
+          </b>
+        </>
+      );
+    } else {
+      return donation_text;
+    }
+  }
+
   return (
     <div id="donate">
       <BannerWrapper
@@ -16,7 +36,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
             heading={"Donate"}
             content={
               <div className="flex flex-col gap-4">
-                <p>{school.profile?.donation_text}</p>
+                <p>{formatDonationText()}</p>
                 {school.profile?.donation_url && (
                   <a
                     href={school.profile?.donation_url}

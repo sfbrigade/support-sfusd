@@ -22,7 +22,7 @@ async function main() {
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/e/1FAIpQLSd5ZGgHnefy4wTZ4Iasus5MV8H9SM5XxccdBxIgy2R0qVEHFg/viewform",
-          donation_text: `Mail a check made out to Balboa High School and mail it to: Balboa High School 1000 Cayuga Avenue San Francisco, CA 94112`,
+          donation_text: `Mail a check made out to Balboa High School and mail it to:\nBalboa High School\n1000 Cayuga Avenue\nSan Francisco, CA 94112`,
           testimonial: `"We are the only high school to have an on-campus clinic. I find it really convenient, because my doctor is like across town from where I live, and I have to miss a whole day of school when I'm sick. Our clinic is COMPLETELY free, counselors, medicine, sex ed."`,
           principal: "Dr. Catherine Arenson",
           instagram_url: "http://www.instagram.com/balboahs",
@@ -258,10 +258,7 @@ async function main() {
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/e/1FAIpQLSecfLxlYgdHcs4vZLtW-V8CKVT38kY4rc7qqb5ocj-X9J3jLQ/viewform",
-          donation_text: `Mail a check made out to Downtown High School and mail it to: 
-          Downtown High School
-          693 Vermont St.
-          San Francisco, CA 94107`,
+          donation_text: `Mail a check made out to Downtown High School and mail it to:\nDowntown High School\n693 Vermont St.\nSan Francisco, CA 94107`,
           principal: "Todd Williams",
           instagram_url: "www.instagram.com/downtown_hs",
           website_url: "https://www.sfusd.edu/school/downtown-high-school",
@@ -482,10 +479,7 @@ async function main() {
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/e/1FAIpQLSf71Z-9hmWL13xOeIDiVP2atl3Wj4BHMnsOrowM9XAFycvIhg/viewform",
-          donation_text: `Mail a check made out to Ida B. Wells High School and mail it to: 
-          Ida B. Wells
-          1099 Hayes St.
-          San Francisco, CA 94117`,
+          donation_text: `Mail a check made out to Ida B. Wells High School and mail it to:\nIda B. Wells\n1099 Hayes St.\nSan Francisco, CA 94117`,
           testimonial: `"I love this school the teachers are awesome and the students are great!!! I graduated from here on time!! And I was behind like 150 credits and caught up within a year!! Thank you Ida b wells"`,
           testimonial_author: "Reyanna L.",
           principal: "Katie Pringle",
@@ -595,10 +589,7 @@ async function main() {
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/e/1FAIpQLScCyflGm6ePuNRFLQ4rCYYgHwzxWzBLkDtJjf1bgziWwwy7bg/viewform",
-          donation_text: `Mail a check made out to Independence High School and mail it to: 
-          Independence High School
-          1350 7th Ave
-          San Francisco, CA 94122`,
+          donation_text: `Mail a check made out to Independence High School and mail it to:\nIndependence High School\n1350 7th Ave\nSan Francisco, CA 94122\n`,
           testimonial: `"I've met some of the most amazing, resilient people, grown, and had an amazing time all in all----this school is truly a hidden gem in the school system."`,
           principal: "Anastasia (Anna) Klafter",
           instagram_url: "https://www.instagram.com/sfindependence/",
@@ -705,10 +696,7 @@ async function main() {
             `Community volunteers interested in supporting SF International should go through nonprofit RIT (Refugee & Immigrant Transitions).`,
           ],
           volunteer_form_url: "https://www.tfaforms.com/5026463",
-          donation_text: `Mail a check made out to SF Interntional High School and mail it to: 
-          SF International High School
-          655 De Haro St.
-          San Francisco, CA 94107`,
+          donation_text: `Mail a check made out to SF Interntional High School and mail it to:\nSF International High School\n655 De Haro St.\nSan Francisco, CA 94107\n`,
           testimonial: `"I like everything about my school, we all have the same experience that makes us be a good community, we are all English learners with big goals. Our school is small and we receive a lot of attention from the teachers that every day pushes us to be a great student."`,
           principal: "Nick Chan",
           instagram_url: "http://www.instagram.com/sfihuskies",
@@ -1270,9 +1258,7 @@ async function main() {
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/1SEjtZpA_mx6p-7PnUujdyL-skjRQtn07KBgXV0tPo-w",
-          donation_text: `mail a check made out to John O'Connell High School  to
-          2355 Folsom St.
-           San Francisco, CA, 94110`,
+          donation_text: `Mail a check made out to John O'Connell High School to:\nJohn O'Connell High School\n2355 Folsom St.\nSan Francisco, CA, 94110`,
           testimonial: `“A few of the clubs that I participate in are: Black Student Union, Student Body, Yearbook, and a couple more. I really love my school. I really love how they support us unconditionally…”`,
           testimonial_author: "Lonnie, student",
           testimonial_video:
