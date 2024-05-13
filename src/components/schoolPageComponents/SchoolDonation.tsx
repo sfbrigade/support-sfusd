@@ -10,7 +10,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
 
   function formatDonationText() {
     const donation_text = school.profile ? school.profile.donation_text : "";
-    const donation_txt_split = donation_text.split(":");
+    const donation_txt_split = donation_text.split(":\n");
     if (donation_txt_split.length > 1) {
       const address_split = donation_txt_split[1].split("\n");
       return (
