@@ -148,7 +148,6 @@ const Map: React.FC<Props> = (props) => {
               <ToggleButton isMapView={isMap} toggleView={setToggle} />
             </div>
             <div className="h-full w-full overflow-auto "> 
-            {/* <div className={ `${isMap ? 'h-[600px]' : 'h-full'} w-full overflow-auto` }>*/}
               {isMap ? (
                 <MapboxMap
                   setSelectedSchool={setSelectedSchool}
