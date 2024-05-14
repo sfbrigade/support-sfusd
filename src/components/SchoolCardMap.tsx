@@ -4,6 +4,7 @@ import Image from "next/image";
 
 interface SchoolCardProps {
   school: School;
+  onClose: () => void;
 }
 /**
  * SchoolCard: Renders school image and details depending on school clicked on map
@@ -22,11 +23,20 @@ interface SchoolCardProps {
  *
  */
 
-const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
+const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose }) => {
   return (
     <div className="flex md:max-w-[400px] flex-row md:flex-col items-start justify-center rounded-[16px] bg-white shadow-lg">
+      <button onClick={onClose} className="block md:hidden absolute top-2 left-2 z-10">
+        <Image
+          src={`/circle_close.svg`}
+          alt="Close Icon"
+          width={24}
+          height={24}
+        />
+      </button>
+      {/* // className=" h-40 w-full rounded-[16px] object-cover"></Image> */}
       {/*<Image
-        src={`/img/${school.img}`}
+        src={`${school.img}`}
         alt={school.name}
         fill
         className=" h-40 w-full rounded-[16px] object-cover"
@@ -34,7 +44,6 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school }) => {
       <div
         className={`transition-max-height relative col-span-4 rounded-l-2xl md:rounded-t-2xl md:rounded-b-lg bg-cover bg-center duration-[700ms] md:col-span-3 h-40 w-2/5
         md:w-full`}
-        // style={{ backgroundImage: `url(/img/${school.img})` }}
         style={{ backgroundImage: `url(${school.img})` }}
       >
       </div>
