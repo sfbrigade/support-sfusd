@@ -40,6 +40,10 @@ const Map: React.FC<Props> = (props) => {
     root?.classList.add(isMap ? 'h-auto' : 'h-screen' )
   };
 
+  const onClose = () => {
+    setSelectedSchool(null)
+  };
+
   // useEffect(() => {
   //   console.log(isMap ? 'map' : 'list')
   //   const root = document.getElementById('root')
@@ -82,7 +86,7 @@ const Map: React.FC<Props> = (props) => {
             {isMap ? (
               selectedSchool ? (
                 <div className="w-full">
-                  <SchoolCard school={selectedSchool} />
+                  <SchoolCard school={selectedSchool} onClose={onClose} />
                 </div>
               ) : (
                 <div className="gap flex w-3/4 flex-col items-center gap-12">
