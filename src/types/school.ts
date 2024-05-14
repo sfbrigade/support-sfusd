@@ -5,7 +5,7 @@ export interface School {
   students: number | null;
   free_reduced_lunch: string | null;
   ell: string | null;
-  img: string | null;
+  img: string;
   latitude: string;
   longitude: string;
   id: string;
