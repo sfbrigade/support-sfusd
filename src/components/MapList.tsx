@@ -59,7 +59,7 @@ const MapList = ({
             key={index}
             school={school}
             setSelectedSchool={setSelectedSchool}
-            isExpanded={school.id == selectedSchool?.id}
+            isExpanded={school == selectedSchool}
           />
         ))}
       </div>
