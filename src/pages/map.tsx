@@ -26,13 +26,15 @@ type Props = {
 };
 
 const Map: React.FC<Props> = (props) => {
-  const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
+  const [selectedSchool, setSelectedSchool] = useState<School | false |
+  null>(null);
   const [isMap, setIsMap] = useState(true);
 
   const setToggle = () => {
     setIsMap(!isMap);
 
     // base new layout on isMap BEFORE it changes to the new value
+    // (otherwise the h-screen appears to apply too late)
     console.log(isMap ? 'map' : 'list')
     const root = document.getElementById('root')
     // toggle between map and list layout
@@ -41,16 +43,8 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const onClose = () => {
-    setSelectedSchool(null)
+    setSelectedSchool(false)
   };
-
-  // useEffect(() => {
-  //   console.log(isMap ? 'map' : 'list')
-  //   const root = document.getElementById('root')
-  //   // toggle between map and list layout
-  //   root?.classList.remove(isMap ? 'h-auto' : 'h-screen' )
-  //   root?.classList.add(isMap ? 'h-screen' : 'h-auto')
-  // }, [isMap]);
 
   useEffect(() => {
     if (isMap && window.innerWidth <= 768) {
@@ -75,14 +69,13 @@ const Map: React.FC<Props> = (props) => {
         />
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
-      {/* h-[calc(100vh-64px)] */}
       <div
         className={
           `relative mx-auto flex flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-4/5 2xl:w-2/3 ${isMap ? " flex-1 w-full" : ""}`
         }
       >
         <div className="flex h-full grid-cols-10 items-center gap-4 md:grid flex-row-reverse md:flex-col w-full height-full">
-          <div className={ `col-span-4 ${ isMap && selectedSchool ? 'p-0' : 'p-2' } md:p-4 m-4 ${ isMap ? 'flex' : 'hidden' } md:flex h-fit md:h-full absolute md:static bottom-0 z-50 left-0 right-0 items-center justify-center rounded-2xl bg-white` }>
+          <div className={ `col-span-4 ${ isMap && selectedSchool ? 'p-0' : 'p-2' } md:p-4 m-4 ${ isMap && selectedSchool !== false ? 'flex' : 'hidden' } md:flex h-fit md:h-full absolute md:static bottom-0 z-50 left-0 right-0 items-center justify-center rounded-2xl bg-white` }>
             {isMap ? (
               selectedSchool ? (
                 <div className="w-full">

@@ -3,8 +3,8 @@ import mapboxgl from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
-  setSelectedSchool: (school: School | null) => void;
-  selectedSchool: School | null;
+  setSelectedSchool: (school: School | false | null) => void;
+  selectedSchool: School | false | null;
   schools: School[];
 };
 
@@ -39,8 +39,7 @@ const MapboxMap = ({
 
     mapRef.current = map;
     map.on('click', () => {
-      console.log('clicked on map')
-      setSelectedSchool(null);
+      setSelectedSchool(false);
     });
     map.on("load", () => {
       schools.forEach((school) => {
@@ -49,7 +48,6 @@ const MapboxMap = ({
         el.className = "marker";
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
-          console.log('clicked on school');
           e.preventDefault();
           e.stopPropagation();
         });
