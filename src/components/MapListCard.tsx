@@ -69,7 +69,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
       </div>
       <div
         className={`transition-max-height relative col-span-4 rounded-r-lg bg-cover bg-center duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"}`}
-        style={{ backgroundImage: `url(${img})` }}
+        style={{ backgroundImage: `url(school_img/${img})` }}
       >
         <Image
           src="/icons/dropdown-icon.svg"
