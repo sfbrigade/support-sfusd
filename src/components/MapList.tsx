@@ -30,9 +30,8 @@ const MapList = ({
   // Scroll to selected school when it changes
   useEffect(() => {
     if (selectedSchool && containerRef.current) {
-      const index = schools.findIndex(
-        (school) => school.id === selectedSchool.id,
-      );
+      const index = schools.findIndex((school) => school === selectedSchool);
+
 
       const scrollPosition = index * 88;
       if (window.innerWidth > 768) {
