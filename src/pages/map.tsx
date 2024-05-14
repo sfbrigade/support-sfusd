@@ -71,14 +71,14 @@ const Map: React.FC<Props> = (props) => {
       </div>
       <div
         className={
-          `relative mx-auto flex flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-4/5 2xl:w-2/3 ${isMap ? " flex-1 w-full" : ""}`
+          `relative mx-auto flex flex-col overflow-auto h-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-4/5 2xl:w-2/3 ${isMap ? " flex-1 w-full" : ""}`
         }
       >
-        <div className="flex h-full grid-cols-10 items-center gap-4 md:grid flex-row-reverse md:flex-col w-full height-full">
-          <div className={ `col-span-4 ${ isMap && selectedSchool ? 'p-0' : 'p-2' } md:p-4 m-4 ${ isMap && selectedSchool !== false ? 'flex' : 'hidden' } md:flex h-fit md:h-full absolute md:static bottom-0 z-50 left-0 right-0 items-center justify-center rounded-2xl bg-white` }>
+        <div className="flex h-full grid-cols-10 flex-row-reverse md:flex-col items-center gap-4 md:grid justify-center w-full md:w-auto">
+          <div className={ `col-span-4 ${ isMap && selectedSchool ? 'p-0' : 'p-2 md:p-0' }  ${ isMap && selectedSchool !== false ? 'flex' : 'hidden' } m-4 md:m-0 flex md:flex h-fit md:h-full absolute md:static bottom-0 z-50 left-0 right-0 items-center justify-center rounded-2xl bg-white` }>
             {isMap ? (
               selectedSchool ? (
-                <div className="w-full">
+                <div className="w-full md:w-auto">
                   <SchoolCard school={selectedSchool} onClose={onClose} />
                 </div>
               ) : (
