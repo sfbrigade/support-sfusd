@@ -25,6 +25,10 @@ h6 * {
   font-family: var(--font-fredoka), sans-serif;
 }
 
+.map-popup {
+border-radius: 25px;
+}
+
 .marker {
   background-image: url("/marker.svg");
   background-size: cover;
@@ -46,6 +50,19 @@ h6 * {
   border-radius: 0;
   cursor: pointer;
 } 
+
+/* .marker:active, .marker:focus {
+  background-image: url("/marker_selected.svg");
+} */
+
+.marker-selected {
+  background-image: url("/marker_selected.svg");
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 0;
+  cursor: pointer;
+}
 
 .golden-gate-marker {
   background-image: url("/GoldenGate.png");

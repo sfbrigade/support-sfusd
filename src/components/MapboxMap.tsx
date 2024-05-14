@@ -47,14 +47,24 @@ const MapboxMap = ({
           setSelectedSchool(school); 
         });
         if (school.latitude && school.longitude) {
-          const popup = new mapboxgl.Popup({ offset: 25, closeButton: false }).setHTML(
+          const popup = new mapboxgl.Popup({ offset: 25, closeButton: false, className: "map-popup" }).setHTML(
             `<h3>${school.name}</h3>`,
           );
           const schoolMarker = new mapboxgl.Marker(el)
             .setLngLat([Number(school.longitude), Number(school.latitude)])
             .setPopup(popup)
             .addTo(map);
-          
+          schoolMarker.getElement().addEventListener('click', () => {
+            var marker_array = document.getElementsByClassName("marker-selected");
+            var i;
+            for (i = 0; i < marker_array.length; i++) {
+              // TODO: refactor in case we add more classes 
+              marker_array[i].className = "marker mapboxgl-marker mapboxgl-marker-anchor-center"; 
+            }
+            // TODO: refactor in case we add more classes
+            el.className = "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center"; 
+            console.log(el.className);
+          }); 
           el.addEventListener("mouseover", () => schoolMarker.togglePopup());
           el.addEventListener("mouseout", () => schoolMarker.togglePopup());
         } else {
@@ -65,23 +75,24 @@ const MapboxMap = ({
       
       const geolocate = new mapboxgl.GeolocateControl({
         positionOptions: {
-            enableHighAccuracy: true
+          enableHighAccuracy: true,
         },
-        showUserLocation: true
-      })
+        showUserLocation: true,
+      });
       map.addControl(geolocate);
 
       // disables geolocation icon if user is out of bounds
       navigator.geolocation.getCurrentPosition((position) => {
-        const bounds = map.getBounds()
-        const {_ne: ne,_sw: sw} = bounds
+        const bounds = map.getBounds();
+        const { _ne: ne, _sw: sw } = bounds;
         const lng = position.coords.longitude;
-        const lat = position.coords.latitude
-        let isInMapBounds = lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat
+        const lat = position.coords.latitude;
+        let isInMapBounds =
+          lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat;
         if (isInMapBounds === false) {
-          map.removeControl(geolocate)
+          map.removeControl(geolocate);
         }
-      })
+      });
 
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
