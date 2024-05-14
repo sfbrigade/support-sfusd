@@ -28,17 +28,25 @@ export default function SearchBar<DropdownItemType = any>({
     const searchResults = await onSearch(userInput);
     setDropdownItems(searchResults);
   };
+
+  const handleItemSelect = (item: DropdownItem<DropdownItemType>) => {
+    setSearchTerm(item.label);
+    onItemSelect(item);
+    setDropdownItems([]);
+  };
+
   return (
-    <div className="flex-grow">
+    <div className="relative flex-grow">
       <input
         type="text"
         placeholder="Type your school here..."
         value={searchTerm}
-        className="p-1 px-4 py-2 shadow-lg border border-black rounded-lg focus:border-blue-400 h-[38px] w-full"
+        className="h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 shadow-lg focus:border-blue-400"
         onChange={onInputChange}
+        onFocus={() => setSearchTerm("")}
       />
       {dropdownItems.length > 0 && searchTerm.length > 0 && (
-        <Dropdown items={dropdownItems} onItemSelect={onItemSelect} />
+        <Dropdown items={dropdownItems} onItemSelect={handleItemSelect} />
       )}
     </div>
   );

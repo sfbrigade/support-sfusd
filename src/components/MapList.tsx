@@ -30,7 +30,9 @@ const MapList = ({
   // Scroll to selected school when it changes
   useEffect(() => {
     if (selectedSchool && containerRef.current) {
-      const index = schools.findIndex((school) => school === selectedSchool);
+      const index = schools.findIndex(
+        (school) => school.id === selectedSchool.id,
+      );
 
       const scrollPosition = index * 88;
       if (window.innerWidth > 768) {
@@ -58,7 +60,7 @@ const MapList = ({
             key={index}
             school={school}
             setSelectedSchool={setSelectedSchool}
-            isExpanded={school == selectedSchool}
+            isExpanded={school.id == selectedSchool?.id}
           />
         ))}
       </div>
