@@ -43,16 +43,29 @@ const MapboxMap = ({
         // create an HTML element for each school
         const el = document.createElement("div");
         el.className = "marker";
-        el.addEventListener("click", () => setSelectedSchool(school));
+        el.addEventListener("click", () => {
+          setSelectedSchool(school);
+        
+       } );
         if (school.latitude && school.longitude) {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+          const popup = new mapboxgl.Popup({ offset: 25, closeButton: false, className: "map-popup" }).setHTML(
             `<h3>${school.name}</h3>`,
           );
           const schoolMarker = new mapboxgl.Marker(el)
             .setLngLat([Number(school.longitude), Number(school.latitude)])
             .setPopup(popup)
             .addTo(map);
-
+          schoolMarker.getElement().addEventListener('click', () => {
+            var marker_array = document.getElementsByClassName("marker-selected");
+            var i;
+            for (i = 0; i < marker_array.length; i++) {
+              // TODO: refactor in case we add more classes 
+              marker_array[i].className = "marker mapboxgl-marker mapboxgl-marker-anchor-center"; 
+            }
+            // TODO: refactor in case we add more classes
+            el.className = "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center"; 
+            console.log(el.className);
+          }); 
           el.addEventListener("mouseover", () => schoolMarker.togglePopup());
           el.addEventListener("mouseout", () => schoolMarker.togglePopup());
         } else {
