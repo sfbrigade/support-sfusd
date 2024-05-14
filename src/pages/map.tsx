@@ -55,16 +55,6 @@ const Map: React.FC<Props> = (props) => {
       });
     }
   }, [isMap]);
-  
-  /*<style global jsx>{`
-    html,
-    body,
-    body > div:first-child,
-    div#__next,
-    div#__next > div {
-      height: 100%;
-    }
-  `}</style>*/
 
   return (
     <div className="bg-[#D7F1FF] flex flex-col h-full">
@@ -87,13 +77,11 @@ const Map: React.FC<Props> = (props) => {
           `relative mx-auto flex flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-4/5 2xl:w-2/3 ${isMap ? " flex-1 w-full" : ""}`
         }
       >
-        {/* TODO: for above, if map, use the calculation for desktop and the other stuff as mobile */}
-        <div className="flex h-full grid-cols-10 items-center gap-4 md:grid flex-row-reverse md:flex-col --mobile-new-- w-full height-full">
+        <div className="flex h-full grid-cols-10 items-center gap-4 md:grid flex-row-reverse md:flex-col w-full height-full">
           <div className={ `col-span-4 ${ isMap && selectedSchool ? 'p-0' : 'p-2' } md:p-4 m-4 ${ isMap ? 'flex' : 'hidden' } md:flex h-fit md:h-full absolute md:static bottom-0 z-50 left-0 right-0 items-center justify-center rounded-2xl bg-white` }>
             {isMap ? (
               selectedSchool ? (
-                <div className="w-full">{/*className="hidden md:block">*/}
-                  {/* Hide SchoolCard on screens smaller than md */}
+                <div className="w-full">
                   <SchoolCard school={selectedSchool} />
                 </div>
               ) : (
@@ -153,7 +141,6 @@ const Map: React.FC<Props> = (props) => {
                   setSelectedSchool={setSelectedSchool}
                   selectedSchool={selectedSchool}
                   schools={props.schools}
-                  //mapShowing={isMap}
                 />
               ) : (
                 <MapList
