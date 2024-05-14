@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Layout>
-        <div className={`${fredoka.variable} ${lato.variable}`}>
+        <div className={`${fredoka.variable} ${lato.variable} h-full`}>
           <Component {...pageProps} />
         </div>
       </Layout>

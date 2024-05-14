@@ -12,13 +12,13 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const { pathname } = router;
 
   return (
-    <div className={`${inter.className} px-0 md:px-4`}>
+    <div id="root" className={`${inter.className} px-0 md:px-4 flex flex-col ${pathname.includes('/map') ? 'h-screen' : 'h-auto'}`}>
       {
         pathname.includes('/profile') &&
           <Banner><strong>BETA:</strong> This website is in beta - let us know if you have any <a href="#" className="underline">feedback/questions</a><span className="hidden md:inline"> to help us improve it</span>.</Banner>
       }
       <Navbar />
-      <div className="">{children}</div>
+      <div className="flex-1">{children}</div>
     </div>
   );
 }
