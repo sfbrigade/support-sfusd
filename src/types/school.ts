@@ -8,4 +8,5 @@ export interface School {
   img: string | null;
   latitude: string;
   longitude: string;
+  id: string;
 }

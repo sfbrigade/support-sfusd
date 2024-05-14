@@ -69,7 +69,7 @@ const Map: React.FC<Props> = (props) => {
         }
       >
         <div className="flex h-full grid-cols-10 flex-col items-center gap-4 md:grid">
-        <div className="col-span-4 flex h-full items-center justify-center rounded-2xl bg-white max-md:hidden">
+          <div className="col-span-4 flex h-full items-center justify-center rounded-2xl bg-white max-md:hidden">
             {isMap ? (
               selectedSchool ? (
                 <div className="hidden md:block">
@@ -115,7 +115,10 @@ const Map: React.FC<Props> = (props) => {
           </div>
           <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
             <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
-            <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+              <SearchBar
+                onItemSelect={itemSelect}
+                onSearch={handleSchoolSearch}
+              />
               <ToggleButton isMapView={isMap} toggleView={setToggle} />
             </div>
             <div className="h-full w-full overflow-auto ">
