@@ -43,10 +43,9 @@ const MapboxMap = ({
         // create an HTML element for each school
         const el = document.createElement("div");
         el.className = "marker";
-        el.addEventListener("click", () => {
-          setSelectedSchool(school);
-        
-       } );
+        el.addEventListener("click", () => { 
+          setSelectedSchool(school); 
+        });
         if (school.latitude && school.longitude) {
           const popup = new mapboxgl.Popup({ offset: 25, closeButton: false, className: "map-popup" }).setHTML(
             `<h3>${school.name}</h3>`,
@@ -70,9 +69,10 @@ const MapboxMap = ({
           el.addEventListener("mouseout", () => schoolMarker.togglePopup());
         } else {
           console.error(`Coordinates are missing for ${school.name}`);
-        }
+        } 
+        
       });
-
+      
       const geolocate = new mapboxgl.GeolocateControl({
         positionOptions: {
           enableHighAccuracy: true,

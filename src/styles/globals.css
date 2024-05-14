@@ -40,7 +40,16 @@ border-radius: 25px;
 
 .marker:hover {
   background-image: url("/marker_hover.svg");
-}
+}  
+
+.marker-selected {
+  background-image: url("/marker_select.svg");
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 0;
+  cursor: pointer;
+} 
 
 /* .marker:active, .marker:focus {
   background-image: url("/marker_selected.svg");
