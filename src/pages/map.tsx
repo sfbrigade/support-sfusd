@@ -18,7 +18,11 @@ interface DropdownItem<ItemType> {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const schools = await prisma.school.findMany();
+  const schools = await prisma.school.findMany({
+    include: {
+      metrics: true,
+    },
+  });
   return { props: { schools } };
 };
 

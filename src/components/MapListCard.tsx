@@ -31,7 +31,17 @@ const MapListCard: React.FC<MapListCardProps> = ({
   setSelectedSchool,
   isExpanded,
 }) => {
-  const { img, name, neighborhood, students, frl, ell } = school;
+  const { img, name, neighborhood } = school;
+
+  const students = school.metrics.find(
+    (metric) => metric.name == "Students Enrolled",
+  );
+  const frl = school.metrics.find(
+    (metric) => metric.name == "Free/Reduced Lunch",
+  );
+  const ell = school.metrics.find(
+    (metric) => metric.name == "English Language Learners",
+  );
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
     setSelectedSchool(school);
@@ -51,24 +61,25 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
         <div className="flex flex-col gap-2 max-md:text-sm">
           <div>
-            <strong>{students ? students : "N/A"}</strong> Students
+            <b>{students ? students.value : "N/A"}</b> Students
           </div>
           <div>
-            <strong>{frl ? frl : "N/A"}%</strong> Free and Reduced Lunch
+            <b>{frl ? frl.value : "N/A"}%</b> Free and Reduced Lunch
           </div>
           <div>
-            <strong>{ell ? ell : "N/A"}%</strong> English Language Learners
+            <b>{ell ? ell.value : "N/A"}%</b> English Language Learners
           </div>
-          <Link href="#">
-            <button className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
-              Learn more
-            </button>
+          <Link
+            className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+            href={"/school?name=" + encodeURIComponent(school.name)}
+          >
+            Learn More
           </Link>
         </div>
       </div>
       <div
         className={`transition-max-height relative col-span-4 rounded-r-lg bg-cover bg-center duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"}`}
-        style={{ backgroundImage: `url(${img})` }}
+        style={{ backgroundImage: `url(school_img/${img})` }}
       >
         <Image
           src="/icons/dropdown-icon.svg"

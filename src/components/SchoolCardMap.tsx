@@ -1,5 +1,5 @@
 import React from "react";
-import { School } from "@/types/school";
+import { Program, School } from "@/types/school";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,6 +30,15 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   onClose,
   className,
 }) => {
+  const students = school.metrics.find(
+    (metric) => metric.name == "Students Enrolled",
+  );
+  const frl = school.metrics.find(
+    (metric) => metric.name == "Free/Reduced Lunch",
+  );
+  const ell = school.metrics.find(
+    (metric) => metric.name == "English Language Learners",
+  );
   return (
     <div
       className={`flex flex-row items-start justify-center rounded-[16px] bg-white shadow-lg md:max-w-[400px] md:flex-col ${className}`}
@@ -50,9 +59,11 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         className={`transition-max-height relative col-span-4 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
         md:rounded-t-2xl`}
       >
-        <img
-          src={`/${school.img}`}
+        <Image
+          src={"/school_img/" + school.img}
           alt={school.name}
+          width={1000}
+          height={500}
           className=" h-40  max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl"
         />
       </div>
@@ -80,7 +91,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
                 className="mr-2 max-h-[35px] max-w-[35px]"
               />
               <h3 className="text-base">
-                {school.students ? school.students : "N/A"} Students
+                {students ? students.value : "N/A"} Students
               </h3>
             </div>
             <div className="mb-2 flex flex-row items-center">
@@ -90,7 +101,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
                 className="mr-2 max-h-[30px] max-w-[30px]"
               />
               <h3 className="text-base">
-                {school.frl ? school.frl : "N/A"}% Free and Reduced Lunch
+                {frl ? frl.value : "N/A"}% Free and Reduced Lunch
               </h3>
             </div>
             <div className="mb-2 flex flex-row items-center">
@@ -100,12 +111,12 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
                 className="mr-2 max-h-[30px] max-w-[30px]"
               />
               <h3 className="text-base">
-                {school.ell ? school.ell : "N/A"}% English Language Learners
+                {ell ? ell.value : "N/A"}% English Language Learners
               </h3>
             </div>
           </div>
         </div>
-        <Link href="#">
+        <Link href={"/school?name=" + encodeURIComponent(school.name)}>
           <button className="hidden w-full rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white md:block md:w-40">
             Learn more
           </button>

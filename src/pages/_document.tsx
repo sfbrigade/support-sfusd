@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="scroll-smooth">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
@@ -19,7 +19,7 @@ class MyDocument extends Document {
             src="https://plausible.io/js/script.js"
           ></script>
         </Head>
-        <body>
+        <body className="scroll-smooth">
           <Main />
           <NextScript />
         </body>

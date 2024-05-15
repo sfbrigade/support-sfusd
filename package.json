@@ -14,8 +14,8 @@
     "format": "prettier . --write"
   },
   "dependencies": {
+    "@prisma/client": "^5.13.0",
     "@emailjs/browser": "^4.3.3",
-    "@prisma/client": "^5.12.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/mapbox-gl": "^2.7.14",
     "@vercel/postgres": "^0.7.2",
@@ -29,6 +29,7 @@
     "vercel": "^33.5.3"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/next": "^9.0.0",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
@@ -37,10 +38,11 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "^9.1.0",
+    "file-loader": "^6.2.0",
     "postcss": "8.4.29",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "prisma": "^5.12.0",
+    "prisma": "^5.13.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   },
