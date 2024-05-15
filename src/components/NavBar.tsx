@@ -14,10 +14,14 @@ const Navbar = () => {
     };
 
     const { route } = router;
+    console.log(route);
 
     switch (route) {
       case "/map":
         setBg("bg-[#D7F1FF]");
+        break;
+      case "/school":
+        setBg("bg-white drop-shadow");
         break;
       default:
         setBg("");
@@ -27,12 +31,7 @@ const Navbar = () => {
     router.events.on("routeChangeComplete", handleRouteChange);
   }, [router]);
   return (
-    <nav
-      className={
-        "sticky top-0 z-50 w-full bg-white p-2 p-4 px-4 text-black drop-shadow " +
-        bg
-      }
-    >
+    <nav className={"sticky top-0 z-50 w-full p-2 p-4 px-4 text-black " + bg}>
       <div className="container mx-auto max-w-[1280px] font-medium">
         <div className="flex items-center justify-between">
           {/* Home Icon */}
