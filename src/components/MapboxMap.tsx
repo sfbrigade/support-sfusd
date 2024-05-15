@@ -3,8 +3,8 @@ import mapboxgl from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
-  setSelectedSchool: (school: School) => void;
-  selectedSchool: School | null;
+  setSelectedSchool: (school: School | false | null) => void;
+  selectedSchool: School | false | null;
   schools: School[];
 };
 
@@ -38,13 +38,18 @@ const MapboxMap = ({
     });
 
     mapRef.current = map;
+    map.on('click', () => {
+      setSelectedSchool(false);
+    });
     map.on("load", () => {
       schools.forEach((school) => {
         // create an HTML element for each school
         const el = document.createElement("div");
         el.className = "marker";
-        el.addEventListener("click", () => { 
-          setSelectedSchool(school); 
+        el.addEventListener("click", (e) => {
+          setSelectedSchool(school);
+          e.preventDefault();
+          e.stopPropagation();
         });
         if (school.latitude && school.longitude) {
           const popup = new mapboxgl.Popup({ offset: 25, closeButton: false, className: "map-popup" }).setHTML(
