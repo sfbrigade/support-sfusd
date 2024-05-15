@@ -2,6 +2,7 @@ import React from "react";
 import { Program, School } from "@/types/school";
 import Image from "next/image";
 import Link from "next/link";
+import Tag from "./Tag";
 
 interface SchoolCardProps {
   school: School;
@@ -54,7 +55,6 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           height={24}
         />
       </button>
-      {/* max-h-[20vh] md:max-h-none */}
       <div
         className={`transition-max-height relative col-span-4 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
         md:rounded-t-2xl`}
@@ -64,23 +64,12 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           alt={school.name}
           width={1000}
           height={500}
-          className=" h-40  max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl"
+          className="h-40 max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl"
         />
       </div>
       <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
-          {school.priority && (
-            <span className="inline-flex rounded-md bg-[#FFE7D1] px-3 py-1 text-xs font-semibold text-[#FF7700]">
-              <Image
-                alt="High priority icon"
-                src="/circle_priority.svg"
-                width={16}
-                height={17}
-                className="mr-2"
-              ></Image>
-              <span className="flex-1">High Priority</span>
-            </span>
-          )}
+          {school.priority && <Tag />}
           <h2 className="text-xl font-medium">{school.name}</h2>
           <p className="text-sm">{school.neighborhood}</p>
           <div className="items-left mb-2 hidden flex-col md:block">
