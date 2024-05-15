@@ -47,6 +47,22 @@ const Map: React.FC<Props> = (props) => {
     setSelectedSchool(false)
   };
 
+  const handleSchoolSearch = async (searchTerm: string) => {
+    const response = await fetch(
+      `/api/searchSchools?searchTerm=${searchTerm}`,
+    ).then((res) => res.json() as Promise<{ schools: School[] }>);
+
+    return response.schools.map((school) => ({
+      label: school.name,
+      value: school.name,
+      item: school,
+    }));
+  };
+
+  const itemSelect = (selection: DropdownItem<School>) => {
+    setSelectedSchool(selection.item);
+  };
+
   useEffect(() => {
     if (isMap && window.innerWidth <= 768) {
       window.scrollTo({
@@ -58,16 +74,7 @@ const Map: React.FC<Props> = (props) => {
   return (
     <div className="bg-[#D7F1FF] flex flex-col h-full">
       <div className="top-16 z-10 flex justify-center gap-2 bg-[#D7F1FF] max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
-        <SearchBar
-          onItemSelect={function (item: DropdownItem<any>): void {
-            throw new Error("Function not implemented.");
-          }}
-          onSearch={function (
-            searchTerm: string,
-          ): Promise<DropdownItem<any>[]> {
-            throw new Error("Function not implemented.");
-          }}
-        />
+        <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
       <div
@@ -125,14 +132,8 @@ const Map: React.FC<Props> = (props) => {
           <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
             <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
               <SearchBar
-                onItemSelect={function (item: DropdownItem<any>): void {
-                  throw new Error("Function not implemented.");
-                }}
-                onSearch={function (
-                  searchTerm: string,
-                ): Promise<DropdownItem<any>[]> {
-                  throw new Error("Function not implemented.");
-                }}
+                onItemSelect={itemSelect}
+                onSearch={handleSchoolSearch}
               />
               <ToggleButton isMapView={isMap} toggleView={setToggle} />
             </div>
