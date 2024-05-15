@@ -1,6 +1,5 @@
 import React from "react";
 import { Inter } from "next/font/google";
-// import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/router";

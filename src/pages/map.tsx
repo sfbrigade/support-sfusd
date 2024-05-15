@@ -37,7 +37,6 @@ const Map: React.FC<Props> = (props) => {
 
     // base new layout on isMap BEFORE it changes to the new value
     // (otherwise the h-screen appears to apply too late)
-    console.log(isMap ? "map" : "list");
     const root = document.getElementById("root");
     // toggle between map and list layout
     root?.classList.remove(isMap ? "h-screen" : "h-auto");
@@ -45,6 +44,9 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const onClose = () => {
+    // setting this to false ensures dismissal of school card
+    // (whereas setting it to null, the initial value, will show
+    // the empty instruction card)
     setSelectedSchool(false);
   };
 
