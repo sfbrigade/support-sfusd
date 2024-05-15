@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { School } from "@/types/school";
+import Link from "next/link";
 
 type MapListCardProps = {
   school: School;
@@ -58,9 +59,11 @@ const MapListCard: React.FC<MapListCardProps> = ({
           <div>
             <strong>{ell ? ell : "N/A"}%</strong> English Language Learners
           </div>
-          <button className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
-            Learn More
-          </button>
+          <Link href="#">
+            <button className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
+              Learn more
+            </button>
+          </Link>
         </div>
       </div>
       <div

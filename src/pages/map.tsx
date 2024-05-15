@@ -9,6 +9,7 @@ import SearchBar from "@/components/SearchBar";
 import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 import Image from "next/image";
+import Link from "next/link";
 
 interface DropdownItem<ItemType> {
   label: string;
@@ -79,7 +80,10 @@ const Map: React.FC<Props> = (props) => {
             {isMap ? (
               selectedSchool ? (
                 <div className="w-full md:w-auto">
-                  <SchoolCard school={selectedSchool} onClose={onClose} />
+                  <Link href="#" className="block md:hidden">
+                    <SchoolCard school={selectedSchool} onClose={onClose} />
+                  </Link>
+                  <SchoolCard school={selectedSchool} onClose={onClose} className="hidden md:block"/>
                 </div>
               ) : (
                 <div className="gap flex w-3/4 flex-col items-center gap-12">

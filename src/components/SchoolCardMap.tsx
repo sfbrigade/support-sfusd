@@ -1,9 +1,11 @@
 import React from "react";
 import { School } from "@/types/school";
 import Image from "next/image";
+import Link from "next/link";
 
 interface SchoolCardProps {
   school: School;
+  className?: string;
   onClose: () => void;
 }
 /**
@@ -23,9 +25,9 @@ interface SchoolCardProps {
  *
  */
 
-const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose }) => {
+const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose, className }) => {
   return (
-    <div className="flex md:max-w-[400px] flex-row md:flex-col items-start justify-center rounded-[16px] bg-white shadow-lg">
+    <div className={`flex md:max-w-[400px] flex-row md:flex-col items-start justify-center rounded-[16px] bg-white shadow-lg ${className}`}>
       <button onClick={onClose} className="block md:hidden absolute top-2 left-2 z-10">
         <Image
           src={`/circle_close.svg`}
@@ -42,7 +44,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose }) => {
           src={`/${school.img}`}
           alt={school.name}
           fill
-          className=" h-40 w-full rounded-[16px] object-cover"
+          className=" h-40 w-full object-cover rounded-l-2xl md:rounded-t-2xl md:rounded-b-lg"
         />
       </div>
       <div className="p-2 md:p-4 w-3/5 md:w-full flex flex-col h-full">
@@ -82,11 +84,11 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose }) => {
             </div>
           </div>
         </div>
-        <a href="#">
+        <Link href="#">
           <button className="hidden md:block w-full md:w-40 rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white">
             Learn more
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
