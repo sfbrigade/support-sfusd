@@ -32,7 +32,6 @@ const MapList = ({
     if (selectedSchool && containerRef.current) {
       const index = schools.findIndex((school) => school === selectedSchool);
 
-
       const scrollPosition = index * 88;
       if (window.innerWidth > 768) {
         containerRef.current.scrollTo({
