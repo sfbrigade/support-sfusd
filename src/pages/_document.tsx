@@ -13,7 +13,11 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <script defer data-domain="supportsfschools.org" src="https://plausible.io/js/script.js"></script>
+          <script
+            defer
+            data-domain="supportsfschools.org"
+            src="https://plausible.io/js/script.js"
+          ></script>
         </Head>
         <body>
           <Main />

@@ -25,10 +25,19 @@ interface SchoolCardProps {
  *
  */
 
-const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose, className }) => {
+const SchoolCard: React.FC<SchoolCardProps> = ({
+  school,
+  onClose,
+  className,
+}) => {
   return (
-    <div className={`flex md:max-w-[400px] flex-row md:flex-col items-start justify-center rounded-[16px] bg-white shadow-lg ${className}`}>
-      <button onClick={onClose} className="block md:hidden absolute top-2 left-2 z-10">
+    <div
+      className={`flex flex-row items-start justify-center rounded-[16px] bg-white shadow-lg md:max-w-[400px] md:flex-col ${className}`}
+    >
+      <button
+        onClick={onClose}
+        className="absolute left-2 top-2 z-10 block md:hidden"
+      >
         <Image
           src={`/circle_close.svg`}
           alt="Close Icon"
@@ -37,20 +46,20 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose, className }) =
         />
       </button>
       <div
-        className={`transition-max-height relative col-span-4 rounded-l-2xl md:rounded-t-2xl md:rounded-b-lg bg-cover bg-center duration-[700ms] md:col-span-3 h-40 w-2/5
-        md:w-full`}
+        className={`transition-max-height relative col-span-4 h-40 w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:w-full md:rounded-b-lg
+        md:rounded-t-2xl`}
       >
         <img
           src={`/${school.img}`}
           alt={school.name}
-          className=" h-40 w-full object-cover rounded-l-2xl md:rounded-t-2xl md:rounded-b-lg"
+          className=" h-40 w-full rounded-l-2xl object-cover md:rounded-b-lg md:rounded-t-2xl"
         />
       </div>
-      <div className="p-2 md:p-4 w-3/5 md:w-full flex flex-col h-full">
+      <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
-          <h2 className="text-lg md:text-xl font-medium">{school.name}</h2>
+          <h2 className="text-lg font-medium md:text-xl">{school.name}</h2>
           <p className="text-xs md:text-sm">{school.neighborhood}</p>
-          <div className="items-left mb-2 flex flex-col hidden md:block">
+          <div className="items-left mb-2 flex hidden flex-col md:block">
             <div className="mb-2 flex flex-row items-center">
               <img
                 src="icons/student-icon.png"
@@ -84,7 +93,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose, className }) =
           </div>
         </div>
         <Link href="#">
-          <button className="hidden md:block w-full md:w-40 rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white">
+          <button className="hidden w-full rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white md:block md:w-40">
             Learn more
           </button>
         </Link>
