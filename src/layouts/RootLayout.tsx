@@ -11,8 +11,13 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { pathname } = router;
 
+  // NOTE: id="root" is currently needed by the JS view logic in `map.tsx`
+  // to complement the the Tailwind media-query driven classes in
+  // constraining the map height to the viewport for mobile
+
   return (
     <div
+      id="root"
       className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") ? "h-screen" : "h-auto"}`}
     >
       {pathname.includes("/profile") && (
