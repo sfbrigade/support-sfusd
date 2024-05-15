@@ -45,14 +45,15 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           height={24}
         />
       </button>
+      {/* max-h-[20vh] md:max-h-none */}
       <div
-        className={`transition-max-height relative col-span-4 h-40 w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:w-full md:rounded-b-lg
+        className={`transition-max-height relative col-span-4 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
         md:rounded-t-2xl`}
       >
         <img
           src={`/${school.img}`}
           alt={school.name}
-          className=" h-40 w-full rounded-l-2xl object-cover md:rounded-b-lg md:rounded-t-2xl"
+          className=" h-40  max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl"
         />
       </div>
       <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
