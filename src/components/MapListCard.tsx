@@ -33,6 +33,16 @@ const MapListCard: React.FC<MapListCardProps> = ({
 }) => {
   const { img, name, neighborhood } = school;
 
+  const students = school.metrics.find(
+    (metric) => metric.name == "Students Enrolled",
+  );
+  const frl = school.metrics.find(
+    (metric) => metric.name == "Free/Reduced Lunch",
+  );
+  const ell = school.metrics.find(
+    (metric) => metric.name == "English Language Learners",
+  );
+
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
     setSelectedSchool(school);
   }
@@ -51,13 +61,13 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
         <div className="flex flex-col gap-2 max-md:text-sm">
           <div>
-            <strong>N/A</strong> Students
+            <b>{students ? students.value : "N/A"}</b> Students
           </div>
           <div>
-            <strong>N/A</strong> Free and Reduced Lunch
+            <b>{frl ? frl.value : "N/A"}%</b> Free and Reduced Lunch
           </div>
           <div>
-            <strong>N/A</strong> English Language Learners
+            <b>{ell ? ell.value : "N/A"}%</b> English Language Learners
           </div>
           <Link
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
