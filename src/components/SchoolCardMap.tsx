@@ -34,18 +34,16 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose }) => {
           height={24}
         />
       </button>
-      {/* // className=" h-40 w-full rounded-[16px] object-cover"></Image> */}
-      {/*<Image
-        src={`${school.img}`}
-        alt={school.name}
-        fill
-        className=" h-40 w-full rounded-[16px] object-cover"
-      */}
       <div
         className={`transition-max-height relative col-span-4 rounded-l-2xl md:rounded-t-2xl md:rounded-b-lg bg-cover bg-center duration-[700ms] md:col-span-3 h-40 w-2/5
         md:w-full`}
-        style={{ backgroundImage: `url(${school.img})` }}
       >
+        <Image
+          src={`/${school.img}`}
+          alt={school.name}
+          fill
+          className=" h-40 w-full rounded-[16px] object-cover"
+        />
       </div>
       <div className="p-2 md:p-4 w-3/5 md:w-full flex flex-col h-full">
         <div className="flex-grow-1">
