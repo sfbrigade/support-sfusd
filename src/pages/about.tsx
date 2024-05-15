@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import ContactUs from "../components/ContactUs";
-import {useState} from "react";
+import { useState } from "react";
 import Navbar from "../components/NavBar";
 
 const About = () => {
-
   const [showContactForm, setShowContactForm] = useState(false);
   const handleOpen = () => setShowContactForm(true);
   const handleClose = () => setShowContactForm(false);
@@ -45,11 +44,7 @@ const About = () => {
           </p>
         </div>
         <button onClick={handleOpen}>Contact Us</button>
-        {showContactForm && (
-          <ContactUs
-          handleClose={handleClose}
-          />
-        )}
+        {showContactForm && <ContactUs handleClose={handleClose} />}
       </main>
     </div>
   );
