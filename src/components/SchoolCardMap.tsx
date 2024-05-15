@@ -57,6 +57,18 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
       </div>
       <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
+          {school.priority && (
+            <span className="inline-flex rounded-md bg-[#FFE7D1] px-3 py-1 text-xs font-semibold text-[#FF7700]">
+              <Image
+                alt="High priority icon"
+                src="/circle_priority.svg"
+                width={16}
+                height={17}
+                className="mr-2"
+              ></Image>
+              <span className="flex-1">High Priority</span>
+            </span>
+          )}
           <h2 className="text-xl font-medium">{school.name}</h2>
           <p className="text-sm">{school.neighborhood}</p>
           <div className="items-left mb-2 hidden flex-col md:block">

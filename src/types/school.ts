@@ -5,6 +5,7 @@ export interface School {
   students?: string;
   frl?: string;
   ell?: string;
+  priority?: boolean;
   img?: string;
   latitude: number;
   longitude: number;
