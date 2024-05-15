@@ -40,10 +40,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({ school, onClose, className }) =
         className={`transition-max-height relative col-span-4 rounded-l-2xl md:rounded-t-2xl md:rounded-b-lg bg-cover bg-center duration-[700ms] md:col-span-3 h-40 w-2/5
         md:w-full`}
       >
-        <Image
+        <img
           src={`/${school.img}`}
           alt={school.name}
-          fill
           className=" h-40 w-full object-cover rounded-l-2xl md:rounded-t-2xl md:rounded-b-lg"
         />
       </div>
