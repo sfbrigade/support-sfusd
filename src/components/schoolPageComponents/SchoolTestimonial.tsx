@@ -33,8 +33,6 @@ const SchoolTestimonial: React.FC<{ school: School }> = ({ school }) => {
     }
   }
 
-  console.log(school);
-
   return (
     <BannerWrapper
       left={getTestimonialGraphic(school)}

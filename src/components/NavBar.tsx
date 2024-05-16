@@ -14,7 +14,6 @@ const Navbar = () => {
     };
 
     const { route } = router;
-    console.log(route);
 
     switch (route) {
       case "/map":
