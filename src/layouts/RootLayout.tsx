@@ -20,7 +20,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       id="root"
       className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") ? "h-screen" : "h-auto"}`}
     >
-      {pathname.includes("/profile") && (
+      {pathname.includes("/school") && (
         <Banner>
           <strong>BETA:</strong> This website is in beta - let us know if you
           have any{" "}
