@@ -95,7 +95,12 @@ const Map: React.FC<Props> = (props) => {
             {isMap ? (
               selectedSchool ? (
                 <div className="w-full md:w-auto">
-                  <Link href="#" className="block md:hidden">
+                  <Link
+                    href={
+                      "/school?name=" + encodeURIComponent(selectedSchool.name)
+                    }
+                    className="block md:hidden"
+                  >
                     <SchoolCard school={selectedSchool} onClose={onClose} />
                   </Link>
                   <SchoolCard
