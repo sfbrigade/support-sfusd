@@ -4,6 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
 
+const SchoolImage = (props: any) => (
+  <Image
+    src={props.src}
+    alt={props.alt}
+    width={1000}
+    height={500}
+    className={`h-40 max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className}`}
+  />
+);
+
 interface SchoolCardProps {
   school: School;
   className?: string;
@@ -63,20 +73,12 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           href={"/school?name=" + encodeURIComponent(school.name)}
           className="hidden md:inline"
         >
-          <Image
-            src={"/school_img/" + school.img}
-            alt={school.name}
-            width={1000}
-            height={500}
-            className="h-40 max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl"
-          />
+          <SchoolImage src={`/school_img/${school.img}`} alt={school.name} />
         </Link>
-        <Image
-          src={"/school_img/" + school.img}
+        <SchoolImage
+          src={`/school_img/${school.img}`}
           alt={school.name}
-          width={1000}
-          height={500}
-          className="inline-block h-40 max-h-[20vh] w-full rounded-l-2xl object-cover md:hidden md:max-h-none md:rounded-b-lg md:rounded-t-2xl"
+          className="inline-block md:hidden"
         />
       </div>
       <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
