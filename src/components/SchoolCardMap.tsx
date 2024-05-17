@@ -4,16 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
 
-const SchoolImage = (props: any) => (
-  <Image
-    src={props.src}
-    alt={props.alt}
-    width={1000}
-    height={500}
-    className={`h-40 max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className}`}
-  />
-);
-
 interface SchoolCardProps {
   school: School;
   className?: string;
@@ -50,6 +40,19 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   const ell = school.metrics.find(
     (metric) => metric.name == "English Language Learners",
   );
+
+  /* TODO: look into whether or not creating a `WithLink` component
+can simplify this somehow */
+  const SchoolImage = (props: any) => (
+    <Image
+      src={props.src}
+      alt={props.alt}
+      width={1000}
+      height={500}
+      className={`h-40 max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className}`}
+    />
+  );
+
   return (
     <div
       className={`flex flex-row items-start justify-center rounded-[16px] bg-white shadow-lg md:max-w-[400px] md:flex-col ${className}`}
