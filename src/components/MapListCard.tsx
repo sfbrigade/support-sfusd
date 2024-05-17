@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { School } from "@/types/school";
 import Link from "next/link";
+import Tag from "./Tag";
 
 type MapListCardProps = {
   school: School;
@@ -48,10 +49,15 @@ const MapListCard: React.FC<MapListCardProps> = ({
   }
   return (
     <div
-      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"} transition-max-height duration-[700ms] `}
+      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"} transition-max-height relative duration-[700ms]`}
       onClick={onClick}
       id={name}
     >
+      {school.priority && (
+        <div className="absolute right-1 top-1 z-10">
+          <Tag />
+        </div>
+      )}
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
         <div className="flex h-[88px] grid-cols-6 flex-col justify-center md:grid md:items-center md:gap-2">
           <div className="col-span-4 font-bold md:text-xl">{name}</div>
