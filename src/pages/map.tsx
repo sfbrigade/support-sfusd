@@ -71,6 +71,16 @@ const Map: React.FC<Props> = (props) => {
     setSelectedSchool(selection.item);
   };
 
+  /* TODO: look into whether or not creating a `WithLink` component
+  can simplify this somehow */
+  const SelectedSchoolCard = (props: any) => (
+    <SchoolCard
+      school={props.school}
+      onClose={onClose}
+      className={`block ${props.className}`}
+    />
+  );
+
   useEffect(() => {
     if (isMap && window.innerWidth <= 768) {
       window.scrollTo({
@@ -101,11 +111,10 @@ const Map: React.FC<Props> = (props) => {
                     }
                     className="block md:hidden"
                   >
-                    <SchoolCard school={selectedSchool} onClose={onClose} />
+                    <SelectedSchoolCard school={selectedSchool} />
                   </Link>
-                  <SchoolCard
+                  <SelectedSchoolCard
                     school={selectedSchool}
-                    onClose={onClose}
                     className="hidden md:block"
                   />
                 </div>
