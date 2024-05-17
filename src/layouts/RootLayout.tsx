@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
@@ -11,6 +11,12 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { pathname } = router;
 
+  const [isBannerShowing, setIsBannerShowing] = useState(true);
+
+  const setToggle = () => {
+    setIsBannerShowing(!isBannerShowing);
+  };
+
   // NOTE: id="root" is currently needed by the JS view logic in `map.tsx`
   // to complement the the Tailwind media-query driven classes in
   // constraining the map height to the viewport for mobile
@@ -20,14 +26,15 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       id="root"
       className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") ? "h-screen" : "h-auto"}`}
     >
-      {pathname.includes("/school") && (
-        <Banner>
+      {pathname.includes("/school") && isBannerShowing && (
+        <Banner onClose={setToggle}>
           <strong>BETA:</strong> This website is in beta - let us know if you
           have any{" "}
           <Link href="/about" className="underline">
             feedback/questions
           </Link>
           <span className="hidden md:inline"> to help us improve it</span>.
+          {/* FIXME: md:inline seems to be not be picked up by Tailwind; could be b/c passing in classes via `props.children` is not supported? */}
         </Banner>
       )}
       <Navbar />
