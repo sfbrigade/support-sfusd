@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Dropdown from "./Dropdown";
+import SearchIcon from "../../public/icons/search-icon.svg";
 
 export interface DropdownItem<ItemType> {
   label: string;
@@ -37,11 +38,14 @@ export default function SearchBar<DropdownItemType = any>({
 
   return (
     <div className="relative flex-grow">
+      <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center">
+        <SearchIcon className="fill-[#949494]" height="24" width="24" />
+      </div>
       <input
         type="text"
-        placeholder="Type your school here..."
+        placeholder="Search your school here..."
         value={searchTerm}
-        className="h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 shadow-lg focus:border-blue-400"
+        className="h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 pl-12 shadow-lg focus:border-blue-400"
         onChange={onInputChange}
         onFocus={() => setSearchTerm("")}
       />
