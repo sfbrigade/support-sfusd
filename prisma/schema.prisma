@@ -60,6 +60,7 @@ model Program {
   name			         String
   details		         String
   url			           String?
+  img                String?
   category		       ProgramCategory
 }
 

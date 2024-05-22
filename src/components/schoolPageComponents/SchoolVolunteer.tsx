@@ -9,6 +9,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
   interface volunteer {
     title: string;
     description: string;
+    img?: string;
   }
 
   const volunteerList: volunteer[] = school.programs.reduce(
@@ -17,6 +18,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
         const volunteer: volunteer = {
           title: program.name,
           description: program.details,
+          img: program.img,
         };
         acc.push(volunteer);
       }

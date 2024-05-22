@@ -86,7 +86,7 @@ const Map: React.FC<Props> = (props) => {
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
       <div
-        className={`relative mx-auto flex h-auto flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-4/5 2xl:w-2/3 ${isMap ? " w-full flex-1" : ""}`}
+        className={`relative mx-auto flex h-auto flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-10/12 2xl:w-2/3 ${isMap ? " w-full flex-1" : ""}`}
       >
         <div className="flex h-full w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 md:grid md:w-auto md:flex-col">
           <div
@@ -101,7 +101,7 @@ const Map: React.FC<Props> = (props) => {
                   <SchoolCard
                     school={selectedSchool}
                     onClose={onClose}
-                    className="hidden md:block"
+                    className="hidden w-10/12 md:block"
                   />
                 </div>
               ) : (

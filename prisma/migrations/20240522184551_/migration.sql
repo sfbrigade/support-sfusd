@@ -59,6 +59,7 @@ CREATE TABLE "Program" (
     "name" TEXT NOT NULL,
     "details" TEXT NOT NULL,
     "url" TEXT,
+    "img" TEXT,
     "category" "ProgramCategory" NOT NULL,
 
     CONSTRAINT "Program_pkey" PRIMARY KEY ("id")
