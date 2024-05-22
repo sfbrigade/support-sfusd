@@ -101,7 +101,7 @@ const Map: React.FC<Props> = (props) => {
                   <SchoolCard
                     school={selectedSchool}
                     onClose={onClose}
-                    className="hidden w-10/12 md:block"
+                    className="hidden md:block"
                   />
                 </div>
               ) : (
