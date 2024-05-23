@@ -39,6 +39,7 @@ export interface Program {
   name: string;
   details: string;
   url?: string;
+  img?: string;
   category: string;
 }
 

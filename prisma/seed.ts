@@ -87,18 +87,21 @@ async function main() {
               name: "Career-based Mentoring",
               details: `All of Bal's Pathway programs need career-based mentoring, such as being a guest speaker`,
               url: "",
+              img: "/volunteer_img/stock3.png",
               category: ProgramCategory.volunteer,
             },
             {
               name: "Tutoring",
               details: `Provide one-on-one academic support to students on a range of topics`,
               url: "",
+              img: "/volunteer_img/stock5.png",
               category: ProgramCategory.volunteer,
             },
             {
               name: "Event Volunteers",
               details: `Provide support for school-sponsored events such as shows and field trips`,
               url: "",
+              img: "/volunteer_img/stock2.png",
               category: ProgramCategory.volunteer,
             },
             {
