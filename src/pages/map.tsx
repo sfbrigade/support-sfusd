@@ -39,10 +39,10 @@ const Map: React.FC<Props> = (props) => {
   const setToggle = () => {
     setIsMap(!isMap);
 
-    const [mapRootClass, listRootClass] = ["h-dvh-w/fallback", "h-auto"];
+    const [mapRootClass, listRootClass] = ["h-dvh-with-fallback", "h-auto"];
 
     // base new layout on isMap BEFORE it changes to the new value
-    // (otherwise the `h-dvh-w/fallback` appears to apply too late)
+    // (otherwise the `h-dvh-with-fallback` appears to apply too late)
     // FIXME: investigate how to do this in a more canonical NextJS/React way
     const root = document.getElementById("root");
     // toggle between map and list layout

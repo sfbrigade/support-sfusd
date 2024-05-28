@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -18,42 +19,32 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      /*
-      fix for browsers like mobile Safari not
-      playing well with `vh`
-      (see: https://stackoverflow.com/questions/75079019/tailwind-css-fallback-for-new-screen-length-types-such-as-lvh-svh, https://dev.to/frehner/css-vh-dvh-lvh-svh-and-vw-units-27k4, https://github.com/tailwindlabs/tailwindcss/discussions/8216, https://github.com/tailwindlabs/tailwindcss/pull/11317)
-      */
-      height: {
-        "dvh-w/fallback": [
-          "100vh /* fallback for Opera, IE and etc. */",
-          "100dvh",
-        ],
-        "svh-w/fallback": [
-          "100vh /* fallback for Opera, IE and etc. */",
-          "100svh",
-        ],
-        "lvh-w/fallback": [
-          "100vh /* fallback for Opera, IE and etc. */",
-          "100lvh",
-        ],
-      },
-      minHeight: {
-        "dvh-w/fallback": [
-          "100vh /* fallback for Opera, IE and etc. */",
-          "100dvh",
-        ],
-        "svh-w/fallback": [
-          "100vh /* fallback for Opera, IE and etc. */",
-          "100svh",
-        ],
-        "lvh-w/fallback": [
-          "100vh /* fallback for Opera, IE and etc. */",
-          "100lvh",
-        ],
-      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, addComponents, addUtilities, theme }) {
+      addUtilities({
+        ".h-dvh-with-fallback": {
+          height: ["100vh /* fallback for Opera, IE and etc. */", "100dvh"],
+        },
+        ".h-svh-with-fallback": {
+          height: ["100vh /* fallback for Opera, IE and etc. */", "100svh"],
+        },
+        ".h-lvh-with-fallback": {
+          height: ["100vh /* fallback for Opera, IE and etc. */", "100lvh"],
+        },
+        ".h-min-dvh-with-fallback": {
+          minHeight: ["100vh /* fallback for Opera, IE and etc. */", "100dvh"],
+        },
+        ".h-min-svh-with-fallback": {
+          minHeight: ["100vh /* fallback for Opera, IE and etc. */", "100svh"],
+        },
+        ".h-min-lvh-with-fallback": {
+          minHeight: ["100vh /* fallback for Opera, IE and etc. */", "100lvh"],
+        },
+      });
+    }),
+  ],
 };
 
 export default config;
