@@ -98,11 +98,17 @@ To run this project locally, please perform the following steps:
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
 
+   - Alternatively, you can open [http://[LAN_IP]:3000](http://[LAN_IP]:3000) on another device, such as a phone on the same network. Replace `LAN_IP` with the IP address of your development server, which can be found inside of the "LAN url" part of the `npm run dev` log.
+
 <br>
 
 # Further Notes to help you out
 
 Visit our [Notion](https://aquatic-magpie-a51.notion.site/Engineering-Guide-5cddd23f2ab0494cba2edcc93764f27f) for Engineers
+
+## Gotchas
+
+For Tailwind CSS, do not use `h-screen` as it is broken on mobile Safari. Instead, use our custom class `h-dvh-with-fallback` until which time the official `h-dvh` alone suffices (fallbacks are not needed).
 
 <!-- References and Icons -->
 
