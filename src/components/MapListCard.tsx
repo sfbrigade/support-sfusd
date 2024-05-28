@@ -57,11 +57,6 @@ const MapListCard: React.FC<MapListCardProps> = ({
       onClick={onClick}
       id={name}
     >
-      {school.priority && (
-        <div className="absolute right-1 top-1 z-10">
-          <Tag />
-        </div>
-      )}
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
         <div className="flex h-[88px] grid-cols-6 flex-col justify-center md:grid md:items-center md:gap-2">
           <div className="col-span-4 font-bold md:text-xl">{name}</div>
@@ -99,6 +94,11 @@ const MapListCard: React.FC<MapListCardProps> = ({
           className={`absolute bottom-1.5 right-1.5 transition duration-[700ms] ${isExpanded ? "rotate-[-180deg]" : "rotate-0"}`}
         />
       </div>
+      {school.priority && (
+        <div className="absolute right-1 top-1">
+          <Tag />
+        </div>
+      )}
     </div>
   );
 };
