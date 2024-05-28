@@ -3,6 +3,9 @@ import plugin from "tailwindcss/plugin";
 
 const vh_fallback = "100vh /* fallback for Opera, IE and etc. */";
 
+/*
+NOTE: if adding a new folder that will contain components, make sure to add it below in `content` so that it gets processed by Tailwind
+*/
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
