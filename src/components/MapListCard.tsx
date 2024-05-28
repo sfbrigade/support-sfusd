@@ -6,7 +6,7 @@ import Tag from "./Tag";
 
 type MapListCardProps = {
   school: School;
-  setSelectedSchool: (school: School) => void;
+  setSelectedSchool: (school: School | null) => void;
   isExpanded: Boolean;
 };
 
@@ -45,7 +45,11 @@ const MapListCard: React.FC<MapListCardProps> = ({
   );
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
-    setSelectedSchool(school);
+    if (isExpanded) {
+      setSelectedSchool(null);
+    } else {
+      setSelectedSchool(school);
+    }
   }
   return (
     <div

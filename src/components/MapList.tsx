@@ -4,7 +4,7 @@ import { School } from "@/types/school";
 
 type MapListProps = {
   schools: School[];
-  setSelectedSchool: (school: School) => void;
+  setSelectedSchool: (school: School | null) => void;
   selectedSchool: School | false | null;
 };
 
