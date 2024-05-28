@@ -14,8 +14,8 @@
     "format": "prettier . --write"
   },
   "dependencies": {
-    "@prisma/client": "^5.13.0",
     "@emailjs/browser": "^4.3.3",
+    "@prisma/client": "^5.13.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/mapbox-gl": "^2.7.14",
     "@vercel/postgres": "^0.7.2",
@@ -34,6 +34,7 @@
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "address": "^2.0.2",
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
