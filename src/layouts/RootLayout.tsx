@@ -26,6 +26,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       id="root"
       className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") ? "h-dvh-w/fallback" : "h-auto"}`}
     >
+      {/* NOTE: `id="root"` is currently required as a hook for code in `map.tsx` */}
       {pathname.includes("/school") && isBannerShowing && (
         <Banner onClose={setToggle}>
           <strong>BETA:</strong> This website is in beta - let us know if you
