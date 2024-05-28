@@ -35,7 +35,6 @@ function RootLayout({ children }: { children: React.ReactNode }) {
             feedback/questions
           </Link>
           <span className="hidden md:inline"> to help us improve it</span>.
-          {/* FIXME: md:inline seems to be not be picked up by Tailwind; could be b/c passing in classes via `props.children` is not supported? */}
         </Banner>
       )}
       <Navbar />
