@@ -24,9 +24,11 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="root"
-      className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
-      {/* NOTE: `id="root"` is currently required as a hook for code in `map.tsx` */}
+      {/* NOTE: `id="root"` is currently required as a hook for code in `map.tsx`*/}
+
+      {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component*/}
       {pathname.includes("/school") && isBannerShowing && (
         <Banner onClose={setToggle}>
           <strong>BETA:</strong> This website is in beta - let us know if you
@@ -38,7 +40,13 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         </Banner>
       )}
       <Navbar />
-      <div className="flex-1">{children}</div>
+      <div
+        className={
+          pathname === "/" ? "absolute bottom-0 left-0 right-0 top-0" : "flex-1"
+        }
+      >
+        {children}
+      </div>
     </div>
   );
 }
