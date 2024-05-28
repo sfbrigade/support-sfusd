@@ -37,6 +37,20 @@ const config: Config = {
           "100lvh",
         ],
       },
+      minHeight: {
+        "dvh-w/fallback": [
+          "100vh /* fallback for Opera, IE and etc. */",
+          "100dvh",
+        ],
+        "svh-w/fallback": [
+          "100vh /* fallback for Opera, IE and etc. */",
+          "100svh",
+        ],
+        "lvh-w/fallback": [
+          "100vh /* fallback for Opera, IE and etc. */",
+          "100lvh",
+        ],
+      },
     },
   },
   plugins: [],
