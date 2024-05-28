@@ -24,15 +24,15 @@ const config: Config = {
       (see: https://stackoverflow.com/questions/75079019/tailwind-css-fallback-for-new-screen-length-types-such-as-lvh-svh, https://dev.to/frehner/css-vh-dvh-lvh-svh-and-vw-units-27k4, https://github.com/tailwindlabs/tailwindcss/discussions/8216, https://github.com/tailwindlabs/tailwindcss/pull/11317)
       */
       height: {
-        "dvh-with-fallback": [
+        "dvh-w/fallback": [
           "100vh /* fallback for Opera, IE and etc. */",
           "100dvh",
         ],
-        "svh-with-fallback": [
+        "svh-w/fallback": [
           "100vh /* fallback for Opera, IE and etc. */",
           "100svh",
         ],
-        "lvh-with-fallback": [
+        "lvh-w/fallback": [
           "100vh /* fallback for Opera, IE and etc. */",
           "100lvh",
         ],

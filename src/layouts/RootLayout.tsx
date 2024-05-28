@@ -24,7 +24,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="root"
-      className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`${inter.className} flex flex-col px-0 md:px-4 ${pathname.includes("/map") ? "h-dvh-w/fallback" : "h-auto"}`}
     >
       {pathname.includes("/school") && isBannerShowing && (
         <Banner onClose={setToggle}>
