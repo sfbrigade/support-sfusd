@@ -39,13 +39,15 @@ const Map: React.FC<Props> = (props) => {
   const setToggle = () => {
     setIsMap(!isMap);
 
+    const [mapRootClass, listRootClass] = ["h-screen", "h-auto"];
+
     // base new layout on isMap BEFORE it changes to the new value
     // (otherwise the h-screen appears to apply too late)
     // FIXME: investigate how to do this in a more canonical NextJS/React way
     const root = document.getElementById("root");
     // toggle between map and list layout
-    root?.classList.remove(isMap ? "h-screen" : "h-auto");
-    root?.classList.add(isMap ? "h-auto" : "h-screen");
+    root?.classList.remove(isMap ? mapRootClass : listRootClass);
+    root?.classList.add(isMap ? listRootClass : mapRootClass);
   };
 
   const onClose = () => {
