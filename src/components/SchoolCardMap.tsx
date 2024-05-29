@@ -7,7 +7,7 @@ import Tag from "./Tag";
 interface SchoolCardProps {
   school: School;
   className?: string;
-  onClose: () => void;
+  onClose: (e: React.MouseEvent<HTMLElement>) => void;
 }
 /**
  * SchoolCard: Renders school image and details depending on school clicked on map
