@@ -25,7 +25,13 @@ interface SchoolCardProps {
  * Map => SchoolCardMap
  *
  */
-
+const LearnMoreButton = () => {
+  return (
+    <button className="w-full rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white md:w-40">
+      Learn more
+    </button>
+  );
+};
 const SchoolCard: React.FC<SchoolCardProps> = ({
   school,
   onClose,
@@ -41,8 +47,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
     (metric) => metric.name == "English Language Learners",
   );
 
-  /* TODO: look into whether or not creating a `WithLink` component
-can simplify this somehow */
+  /* TODO: look into whether or not creating a `WithLink` component can simplify this somehow */
   const SchoolImage = (props: any) => (
     <Image
       src={props.src}
@@ -122,10 +127,11 @@ can simplify this somehow */
             </div>
           </div>
         </div>
-        <Link href={"/school?name=" + encodeURIComponent(school.name)}>
-          <button className="hidden w-full rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white md:block md:w-40">
-            Learn more
-          </button>
+        <Link
+          className="hidden md:block"
+          href={"/school?name=" + encodeURIComponent(school.name)}
+        >
+          <LearnMoreButton />
         </Link>
       </div>
     </div>
