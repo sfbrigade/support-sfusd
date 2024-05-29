@@ -20,6 +20,12 @@ nextConfig.webpack = (config, context) => {
       },
     },
   });
+
   return config;
 };
 module.exports = nextConfig;
+
+/* log local IP address to console to easily visit dev server on LAN */
+if (process.env.NODE_ENV === "development") {
+  console.info(`\t\t\t\tLAN url: http://${require("address").ip()}:3000`);
+}
