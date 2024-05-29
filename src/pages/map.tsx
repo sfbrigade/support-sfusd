@@ -50,11 +50,14 @@ const Map: React.FC<Props> = (props) => {
     root?.classList.add(isMap ? listRootClass : mapRootClass);
   };
 
-  const onClose = () => {
+  const onClose = (e: React.MouseEvent<HTMLElement>) => {
     // setting this to false ensures dismissal of school card
     // (whereas setting it to null, the initial value, will show
     // the empty instruction card)
+    /* TODO: consider using something more descriptive like an enum instead */
     setSelectedSchool(false);
+    e.preventDefault();
+    e.stopPropagation();
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
