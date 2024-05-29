@@ -8,7 +8,7 @@ async function main() {
       address: "1000 Cayuga Ave, San Francisco, CA",
       neighborhood: "Excelsior",
       priority: false,
-      img: "balboa.png",
+      img: "balboa.jpeg",
       latitude: "37.722",
       longitude: "-122.44041",
       profile: {
@@ -127,7 +127,7 @@ async function main() {
       address: "400 Mansell St, San Francisco, CA",
       neighborhood: "Portola",
       priority: true,
-      img: "burton.png",
+      img: "burton.jpeg",
       latitude: "37.72126",
       longitude: "-122.4063",
       profile: {
@@ -248,7 +248,7 @@ async function main() {
       address: "693 Vermont St, San Francisco, CA",
       neighborhood: "Potrero Hill",
       priority: false,
-      img: "downtown.png",
+      img: "downtown.jpeg",
       latitude: "37.761565",
       longitude: "-122.40394",
       profile: {
@@ -354,7 +354,7 @@ async function main() {
       address: "1150 Francisco St, San Francisco, CA",
       neighborhood: "Russian Hill",
       priority: false,
-      img: "galileo.png",
+      img: "galileo.jpeg",
       latitude: "37.80379",
       longitude: "-122.424145",
       profile: {
@@ -469,7 +469,7 @@ async function main() {
       address: "1099 Hayes St, San Francisco, CA",
       neighborhood: "Lower Haight",
       priority: false,
-      img: "idabwells.png",
+      img: "idabwells.jpeg",
       latitude: "37.7751",
       longitude: "-122.433985",
       profile: {
@@ -579,7 +579,7 @@ async function main() {
       address: "1350 7th Ave, San Francisco, CA",
       neighborhood: "Inner Sunset",
       priority: false,
-      img: "independence.png",
+      img: "independence.jpeg",
       latitude: "37.76309",
       longitude: "-122.46388",
       profile: {
@@ -687,7 +687,7 @@ async function main() {
       address: "655 De Haro St, San Francisco, CA",
       neighborhood: "Potrero Hill",
       priority: false,
-      img: "international.png",
+      img: "international.jpeg",
       latitude: "37.76169",
       longitude: "-122.40082",
       profile: {
@@ -794,7 +794,7 @@ async function main() {
       address: "325 La Grande Ave, San Francisco, CA",
       neighborhood: "Excelsior",
       priority: true,
-      img: "junejordan.png",
+      img: "junejordan.jpeg",
       latitude: "37.7195",
       longitude: "-122.42539",
       profile: {
@@ -898,7 +898,7 @@ async function main() {
       address: "2162 24th Ave, San Francisco, CA",
       neighborhood: "Parkside/Sunset",
       priority: false,
-      img: "lincoln.png",
+      img: "lincoln.jpeg",
       latitude: "37.74729",
       longitude: "-122.48109",
       profile: {
@@ -1022,7 +1022,7 @@ async function main() {
       address: "1101 Eucalyptus Dr, San Francisco, CA",
       neighborhood: "Lakeshore",
       priority: false,
-      img: "lowell.png",
+      img: "lowell.jpeg",
       latitude: "37.73068",
       longitude: "-122.48392",
       profile: {
@@ -1135,7 +1135,7 @@ async function main() {
       address: "3750 18th St, San Francisco, CA",
       neighborhood: "Mission",
       priority: true,
-      img: "mission.png",
+      img: "mission.jpeg",
       latitude: "37.7616",
       longitude: "-122.42698",
       profile: {
@@ -1249,7 +1249,7 @@ async function main() {
       address: "2355 Folsom St, San Francisco, CA",
       neighborhood: "Mission",
       priority: true,
-      img: "johnoconnell.png",
+      img: "johnoconnell.jpeg",
       latitude: "37.75956",
       longitude: "-122.41454",
       profile: {
@@ -1361,7 +1361,7 @@ async function main() {
       address: "555 Portola Dr, San Francisco, CA",
       neighborhood: "Diamond Heights",
       priority: false,
-      img: "ruthasawa.png",
+      img: "ruthasawa.jpeg",
       latitude: "37.74538",
       longitude: "-122.44965",
       profile: {
@@ -1476,7 +1476,7 @@ async function main() {
       address: "550 Portola Dr #250, San Francisco, CA",
       neighborhood: "Diamond Heights",
       priority: false,
-      img: "theacademy.png",
+      img: "theacademy.jpeg",
       latitude: "37.745499",
       longitude: "-122.451563",
       profile: {
@@ -1589,7 +1589,7 @@ async function main() {
       address: "45 Conkling St, San Francisco, CA",
       neighborhood: "Bayview",
       priority: true,
-      img: "thurgood.png",
+      img: "thurgood.jpeg",
       latitude: "37.73609",
       longitude: "-122.40211",
       profile: {
@@ -1705,7 +1705,7 @@ async function main() {
       address: "40 Vega St, San Francisco, CA",
       neighborhood: "Western Addition",
       priority: false,
-      img: "wallenberg.png",
+      img: "wallenberg.jpeg",
       latitude: "37.780365",
       longitude: "-122.44621",
       profile: {
@@ -1828,7 +1828,7 @@ async function main() {
       address: "600 32nd Ave, San Francisco, CA",
       neighborhood: "Richmond",
       priority: false,
-      img: "washington.png",
+      img: "washington.jpeg",
       latitude: "37.77784",
       longitude: "-122.49174",
       profile: {
