@@ -25,16 +25,17 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       className={`${inter.className} flex flex-col px-0 ${pathname.includes("/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
       {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component*/}
-      {pathname.includes("/school") && isBannerShowing && (
-        <Banner onClose={setToggle}>
-          <strong>BETA:</strong> This website is in beta - let us know if you
-          have any{" "}
-          <Link href="/about" className="underline">
-            feedback/questions
-          </Link>
-          <span className="hidden md:inline"> to help us improve it</span>.
-        </Banner>
-      )}
+      {(pathname.includes("/school") || pathname === "/") &&
+        isBannerShowing && (
+          <Banner onClose={setToggle}>
+            <strong>BETA:</strong> This website is in beta - let us know if you
+            have any{" "}
+            <Link href="/about" className="underline">
+              feedback/questions
+            </Link>
+            <span className="hidden md:inline"> to help us improve it</span>.
+          </Banner>
+        )}
       <Navbar />
       <div
         className={
