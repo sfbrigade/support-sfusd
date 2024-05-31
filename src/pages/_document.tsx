@@ -13,6 +13,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <link rel="icon" type="image/png" href="/logo_icon.ico" />
           <script
             defer
             data-domain="supportsfschools.org"
