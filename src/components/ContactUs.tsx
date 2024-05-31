@@ -83,8 +83,8 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
 
   return (
     <div
-      className="modal-overlay fixed inset-0 flex items-center
-    justify-center bg-gray-900 bg-opacity-50"
+      className="modal-overlay fixed inset-0 z-50 flex
+    items-center justify-center bg-gray-900 bg-opacity-50"
     >
       <div
         className="modal mt-5 rounded-lg border bg-white p-6 shadow-lg

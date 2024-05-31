@@ -4,6 +4,7 @@ import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import ContactUs from "@/components/ContactUs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,9 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const setToggle = () => {
     setIsBannerShowing(!isBannerShowing);
   };
-
+  const [showContactForm, setShowContactForm] = useState(false);
+  const handleOpen = () => setShowContactForm(true);
+  const handleClose = () => setShowContactForm(false);
   /* NOTE: id="root" is currently required as a hook by the JS view logic in `map.tsx` to help constrain the map height to the mobile viewport */
 
   return (
@@ -29,11 +32,15 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         isBannerShowing && (
           <Banner onClose={setToggle}>
             <strong>BETA:</strong> This website is in beta - let us know if you
-            have any{" "}
-            <Link href="/about" className="underline">
+            have any&nbsp;
+            <button
+              onClick={handleOpen}
+              className="text-blue-500 hover:underline"
+            >
               feedback/questions
-            </Link>
+            </button>
             <span className="hidden md:inline"> to help us improve it</span>.
+            {showContactForm && <ContactUs handleClose={handleClose} />}
           </Banner>
         )}
       <Navbar />
