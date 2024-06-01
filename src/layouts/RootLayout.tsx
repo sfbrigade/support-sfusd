@@ -38,7 +38,6 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       className={`${inter.className} flex flex-col px-0 ${pathname.includes("/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
       {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component */}
-      {/* {false && */}
       {(pathname.includes("/school") || pathname === "/") &&
         isBannerShowing && (
           <>
@@ -46,7 +45,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
               <Banner onClose={setToggle}>{bannerContent}</Banner>
             </div>
             <div className="hidden md:block">
-              <Banner onClose={setToggle}>{bannerContent}</Banner>
+              <Banner>{bannerContent}</Banner>
             </div>
             {showContactForm && <ContactUs handleClose={handleClose} />}
           </>
