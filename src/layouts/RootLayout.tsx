@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import ContactUs from "@/components/ContactUs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +16,19 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const setToggle = () => {
     setIsBannerShowing(!isBannerShowing);
   };
+  const [showContactForm, setShowContactForm] = useState(false);
+  const handleOpen = () => setShowContactForm(true);
+  const handleClose = () => setShowContactForm(false);
+  const bannerContent = (
+    <>
+      <strong>BETA:</strong> This website is in beta - let us know if you have
+      any&nbsp;
+      <button onClick={handleOpen} className="text-blue-500 hover:underline">
+        feedback/questions
+      </button>
+      <span className="hidden md:inline"> to help us improve it</span>.
+    </>
+  );
 
   /* NOTE: id="root" is currently required as a hook by the JS view logic in `map.tsx` to help constrain the map height to the mobile viewport */
 
@@ -24,26 +37,21 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       id="root"
       className={`${inter.className} flex flex-col px-0 ${pathname.includes("/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
-      {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component*/}
+      {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component */}
       {(pathname.includes("/school") || pathname === "/") &&
         isBannerShowing && (
-          <Banner onClose={setToggle}>
-            <strong>BETA:</strong> This website is in beta - let us know if you
-            have any{" "}
-            <Link href="/about" className="underline">
-              feedback/questions
-            </Link>
-            <span className="hidden md:inline"> to help us improve it</span>.
-          </Banner>
+          <>
+            <div className="block md:hidden">
+              <Banner onClose={setToggle}>{bannerContent}</Banner>
+            </div>
+            <div className="hidden md:block">
+              <Banner>{bannerContent}</Banner>
+            </div>
+            {showContactForm && <ContactUs handleClose={handleClose} />}
+          </>
         )}
       <Navbar />
-      <div
-        className={
-          pathname === "/" ? "absolute bottom-0 left-0 right-0 top-0" : "flex-1"
-        }
-      >
-        {children}
-      </div>
+      <div className="flex-1">{children}</div>
     </div>
   );
 }
