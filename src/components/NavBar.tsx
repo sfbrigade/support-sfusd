@@ -20,6 +20,7 @@ const Navbar = () => {
         setBg("bg-[#D7F1FF]");
         break;
       case "/school":
+      case "/about":
         setBg("bg-white drop-shadow");
         break;
       default:
