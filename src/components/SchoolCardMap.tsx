@@ -92,8 +92,8 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
       <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
           {school.priority && <Tag />}
-          <h2 className="text-xl font-medium">{school.name}</h2>
-          <p className="text-sm">{school.neighborhood}</p>
+          <h2 className="font-medium md:text-xl">{school.name}</h2>
+          <p className="text-sm max-md:text-xs">{school.neighborhood}</p>
           <div className="items-left mb-2 hidden flex-col md:block">
             <div className="mb-2 flex flex-row items-center">
               <img
