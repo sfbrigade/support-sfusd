@@ -11,14 +11,6 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
   - type: textarea
     id: what-happened
     attributes:
@@ -28,11 +20,18 @@ body:
       value: "A bug happened!"
     validations:
       required: true
+  - type: textarea
+    id: what-expected
+    attributes:
+      label: What should have happened instead?
+      description: And what behavior did you expect to happen instead?
+      placeholder: Tell us what you expect!
+      value: "This should have happened instead!"
   - type: dropdown
     id: version
     attributes:
       label: Version
-      description: What version of our software are you running?
+      description: Did you see this bug on the production or development version of the website? (If you're not sure, you can leave this as default)
       options:
         - supportsfschools.org (Production)
         - support-sfusd.vercel.app (Development)
@@ -42,7 +41,7 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: What browser(s) are you seeing the problem on?
       multiple: true
       options:
         - Chrome
@@ -52,10 +51,18 @@ body:
   - type: dropdown
     id: platforms
     attributes:
-      label: Which platform are you seeing the problem on?
+      label: Which platform(s) are you seeing the problem on?
       multiple: true
       options:
         - Windows
         - macOS
         - iOS
         - Android
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
