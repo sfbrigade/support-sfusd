@@ -5,7 +5,7 @@ title: "[Bug]: "
 labels: ["bug", "triage"]
 projects: ["sfbrigade/7"],
 assignees:
-  - juliagulia
+  - juliagoolia
 body:
   - type: markdown
     attributes:
