@@ -30,6 +30,10 @@ type Props = {
   schools: School[];
 };
 
+const schoolCardPlaceholderTitle = "Select a School";
+const schoolCardPlaceholderText =
+  "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
+
 const Map: React.FC<Props> = (props) => {
   const [selectedSchool, setSelectedSchool] = useState<School | false | null>(
     null,
@@ -133,12 +137,10 @@ const Map: React.FC<Props> = (props) => {
                     height={200}
                   />
                   <div className="align-center flex flex-col items-center gap-4 text-center">
-                    <h1 className="text-2xl font-medium">Select a School</h1>
-                    <p className="md:text-lg">
-                      San Francisco public schools are closed until mid August.
-                      Click on the school closest to you to learn about
-                      opportunities in the fall.
-                    </p>
+                    <h1 className="text-2xl font-medium">
+                      {schoolCardPlaceholderTitle}
+                    </h1>
+                    <p className="md:text-lg">{schoolCardPlaceholderText}</p>
                   </div>
                 </div>
               )
@@ -152,11 +154,10 @@ const Map: React.FC<Props> = (props) => {
                   height={200}
                 />
                 <div className="align-center flex flex-col items-center gap-4 text-center">
-                  <h1 className="text-2xl font-medium">Select a School</h1>
-                  <p className="md:text-lg">
-                    All schools are currently looking for volunteers, click on
-                    the school closest to you to learn more.
-                  </p>
+                  <h1 className="text-2xl font-medium">
+                    {schoolCardPlaceholderTitle}
+                  </h1>
+                  <p className="md:text-lg">{schoolCardPlaceholderText}</p>
                 </div>
               </div>
             )}
