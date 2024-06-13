@@ -135,8 +135,9 @@ const Map: React.FC<Props> = (props) => {
                   <div className="align-center flex flex-col items-center gap-4 text-center">
                     <h1 className="text-2xl font-medium">Select a School</h1>
                     <p className="md:text-lg">
-                      All schools are currently looking for volunteers, click on
-                      the school closest to you to learn more.
+                      San Francisco public schools are closed until mid August.
+                      Click on the school closest to you to learn about
+                      opportunities in the fall.
                     </p>
                   </div>
                 </div>
