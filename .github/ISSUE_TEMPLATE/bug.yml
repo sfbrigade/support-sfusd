@@ -3,9 +3,9 @@ name: Bug Report
 description: File a bug report.
 title: "[Bug]: "
 labels: ["bug", "triage"]
-projects: ["sfbrigade/support-sfusd"]
+projects: ["sfbrigade/7"],
 assignees:
-  - juliagulia
+  - juliagoolia
 body:
   - type: markdown
     attributes:
