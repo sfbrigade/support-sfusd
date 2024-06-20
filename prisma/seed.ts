@@ -1717,7 +1717,7 @@ async function main() {
             `Wallenberg focuses on close student-staff relations to foster a culture of support and service that encourages ongoing interaction, assessment, and feedback to promote high achievement and the joy of learning. Parents are actively encouraged to engage with the school community.`,
           ],
           volunteer_form_url:
-            "https://jointotem.com/ca/san-francisco/raoul-wallenberg-trad-high-pta",
+            "https://docs.google.com/forms/d/e/1FAIpQLSdlALlSlZCTko4qBryLTunuIVcZGKmVeUl2MA-OPbnoOG15Lg/viewform",
           donation_url:
             "https://www.paypal.com/donate/?hosted_button_id=NX4GK2S6GQAWN",
           donation_text: `Donate to Wallenberg's PTSA. The PTSA aims to fund programs and events that benefit all Wallenberg students and teachers: building community, inclusion, and tolerance, sponsoring the Reflections Arts Program and Wallapalooza Art Festival, supporting technology and athletic programs, and honoring our teachers by providing them with stipends.`,
