@@ -2,7 +2,7 @@
 name: Bug Report
 description: File a bug report.
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 projects: ["sfbrigade/7"]
 assignees:
   - juliagoolia
@@ -37,7 +37,7 @@ body:
         - support-sfusd.vercel.app (Development)
       default: 0
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: browsers
     attributes:
