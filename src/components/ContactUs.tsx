@@ -6,9 +6,9 @@ type ContactUsProps = {
 };
 
 /**
- * ContactUs: A modal form for users to contact the Support SFUSD team.
+ * ContactUs: A modal form for users to contact the Support SF Schools team.
  * - Validates email input before sending the message.
- * - Sends the message to the Support SFUSD team using emailjs.
+ * - Sends the message to the Support SF Schools team using emailjs.
  *
  * State:
  * - formData: an object containing the user's name, email, and message
@@ -53,7 +53,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
   const form = React.useRef<HTMLFormElement | null>(null);
 
   /**
-   * sendEmail: Sends the email to the Support SFUSD team using emailjs.
+   * sendEmail: Sends the email to the Support SF Schools team using emailjs.
    * Validates the email input before sending the message.
    */
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {

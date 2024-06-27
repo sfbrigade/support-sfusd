@@ -5,6 +5,7 @@ class MyDocument extends Document {
     return (
       <Html className="scroll-smooth">
         <Head>
+          <title>Support SF Schools</title>
           <link
             href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
             rel="stylesheet"
