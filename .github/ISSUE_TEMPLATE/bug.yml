@@ -2,7 +2,7 @@
 name: Bug Report
 description: File a bug report.
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 projects: ["sfbrigade/7"]
 assignees:
   - juliagoolia
@@ -15,7 +15,7 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen? (feel free to also attach a screenshot or video)
+      description: Also tell us, what did you expect to happen? (feel free to also add a screenshot or video)
       placeholder: Tell us what you see!
       value: "A bug happened!"
     validations:
@@ -37,7 +37,7 @@ body:
         - support-sfusd.vercel.app (Development)
       default: 0
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: browsers
     attributes:
