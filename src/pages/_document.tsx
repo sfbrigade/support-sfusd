@@ -14,6 +14,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" type="image/png" href="/logo_icon.ico" />
+          <meta property="og:image" content="/SocialPreview.png" />
           <script
             defer
             data-domain="supportsfschools.org"
