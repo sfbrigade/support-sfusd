@@ -24,7 +24,7 @@ const About = () => {
             Hello!
           </h1>
           <p>
-            Support SFUSD is run by an all-volunteer team at{" "}
+            Support SF Schools is run by an all-volunteer team at{" "}
             <a
               href="https://www.sfcivictech.org/about"
               target="_blank"
@@ -53,9 +53,9 @@ const About = () => {
             neighborhood after their kids graduated and have free time to
             volunteer. Alumni who are back in San Francisco and want to
             reconnect with schools. People from all backgrounds who believe in
-            the power of education to change lives. Support SFUSD is designed to
-            bring them closer to the schools in their neighborhood, while
-            helping meet school needs.
+            the power of education to change lives. Support SF Schools is
+            designed to bring them closer to the schools in their neighborhood,
+            while helping meet school needs.
           </p>
           <p>
             This website is in beta and is a work in progress. Our beta focuses

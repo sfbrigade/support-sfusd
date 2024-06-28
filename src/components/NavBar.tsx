@@ -37,7 +37,7 @@ const Navbar = () => {
           {/* Home Icon */}
           <Link href="/map" className="flex items-center gap-2">
             <Image src="/logo.png" alt="Home" width={32} height={32} />
-            <p className="h-fit max-md:hidden">Support SFUSD</p>
+            <p className="h-fit max-md:hidden">Support SF Schools</p>
           </Link>
 
           {/* Links on desktop */}
