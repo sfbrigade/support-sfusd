@@ -16,11 +16,11 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" href="/logo_icon.ico" />
           <meta
             property="og:title"
-            content="Supprt SF Schools: Explore schools to discover volunteer and donating opportunities"
+            content="Supprt SF Schools-Explore local volunteer and donating opportunities"
           />
           <meta
             property="og:image"
-            content="https://photos.app.goo.gl/XSanNRMJA4Ld5kF88"
+            content="https://drive.google.com/file/d/1kmNIIWkxnJ9FnDqZnRClW_8tCPYKvmKQ/view?usp=sharing"
           />
           <meta property="og:type" content="website" />
           <meta
