@@ -138,7 +138,7 @@ async function main() {
             `Has a student body that represents every ethnicity, socio-economic group, and neighborhood of San Francisco`,
             `Has an extensive partnership with the Bayview YMCA, and offers college classes by City College on Saturdays as well as after-school tutoring`,
             `Offers after-school program called P.A.C.E (Pumas’ Academics, College & Career, and Enrichments) offers academic, community service based and skill building activities`,
-            `Burton has the only public high school marching ban in the city!`,
+            `Burton has the only public high school marching band in the city!`,
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/1xqB69hsheJEHtUcfcrAlqRYxCv7EsYpDgdqmktWxAWo/viewform",
