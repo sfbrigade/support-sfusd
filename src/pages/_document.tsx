@@ -14,8 +14,14 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" type="image/png" href="/logo_icon.ico" />
-          <meta property="og:title" content="Supprt SF Schools" />
-          <meta property="og:image" content="/SocialPreview.png" />
+          <meta
+            property="og:title"
+            content="Supprt SF Schools: Explore schools to discover volunteer and donating opportunities"
+          />
+          <meta
+            property="og:image"
+            content="https://photos.app.goo.gl/XSanNRMJA4Ld5kF88"
+          />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
