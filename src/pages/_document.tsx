@@ -15,6 +15,10 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" type="image/png" href="/logo_icon.ico" />
+          <meta
+            property="og:image"
+            content="https://photos.app.goo.gl/W8rSQdoAUVyyEHxo7"
+          />
           <script
             defer
             data-domain="supportsfschools.org"
