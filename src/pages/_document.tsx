@@ -18,7 +18,10 @@ class MyDocument extends Document {
             property="og:title"
             content="Supprt SF Schools-Explore local volunteer and donating opportunities"
           />
-          <meta property="og:image" content="/logo.png" />
+          <meta
+            property="og:image"
+            content="https://supportsfschools.org/logo.png"
+          />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
