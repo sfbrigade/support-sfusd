@@ -138,10 +138,13 @@ async function main() {
             `Has a student body that represents every ethnicity, socio-economic group, and neighborhood of San Francisco`,
             `Has an extensive partnership with the Bayview YMCA, and offers college classes by City College on Saturdays as well as after-school tutoring`,
             `Offers after-school program called P.A.C.E (Pumas’ Academics, College & Career, and Enrichments) offers academic, community service based and skill building activities`,
+            `Burton has the only public high school marching band in the city!`,
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/1xqB69hsheJEHtUcfcrAlqRYxCv7EsYpDgdqmktWxAWo/viewform",
-          donation_text: `TBD-- awaiting school input`,
+          donation_url:
+            "https://www.paypal.com/donate/?hosted_button_id=QPPWNFC966MYQ",
+          donation_text: `Donate to Burton's PTSA. All of your donation goes directly to programs benefitting teachers an students!`,
           testimonial: `"I like my teachers because they really care about me and they’re always willing to go an extra mile for me when I need it."`,
           testimonial_author: "Daniela Simental, student",
           testimonial_video:
@@ -224,6 +227,12 @@ async function main() {
               details: `Provide students with mentoring, career insight and readiness`,
               url: "",
               category: ProgramCategory.volunteer,
+            },
+            {
+              name: "Burton's Marching Band",
+              details: ``,
+              url: "https://www.paypal.com/donate/?hosted_button_id=Q95CE7W539Z2U",
+              category: ProgramCategory.donate,
             },
             {
               name: "Donors Choose",

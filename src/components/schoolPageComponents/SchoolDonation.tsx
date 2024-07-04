@@ -68,7 +68,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
         <BannerWrapper
           left={
             <HeadingContentWrapper
-              heading={"Or donate through any of our partners"}
+              heading={"Or donate through these other options"}
               content={
                 <ul className="flex flex-col">
                   {otherDonations.map((donation, i) => (
