@@ -15,19 +15,51 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" type="image/png" href="https://ibb.co/NpscLSp" />
+          {/*<!-- HTML Meta Tags -->*/}
+          <title>
+            Supprt SF Schools-Explore local volunteer and donating opportunities
+          </title>
+          <meta
+            name="description"
+            content="A website to explore local schools and their available donation and volunteer opportunuities."
+          />
+
+          {/*<!-- Facebook Meta Tags -->*/}
+          <meta property="og:url" content="https://www.supportsfschools.org/" />
+          <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="Working: Supprt SF Schools-Explore local volunteer and donating opportunities"
+            content="Supprt SF Schools-Explore local volunteer and donating opportunities"
           />
-          <meta
-            property="og:image"
-            content="https://supportsfschools.org/logo.png"
-          />
-          <meta property="og:type" content="website" />
           <meta
             property="og:description"
             content="A website to explore local schools and their available donation and volunteer opportunuities."
           />
+          <meta
+            property="og:image"
+            content="https://supportsfschools.org/SocialPreview.png"
+          />
+
+          {/*<!-- Twitter Meta Tags -->*/}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="supportsfschools.org" />
+          <meta
+            property="twitter:url"
+            content="https://www.supportsfschools.org/"
+          />
+          <meta
+            name="twitter:title"
+            content="Supprt SF Schools-Explore local volunteer and donating opportunities"
+          />
+          <meta
+            name="twitter:description"
+            content="A website to explore local schools and their available donation and volunteer opportunuities."
+          />
+          <meta
+            name="twitter:image"
+            content="https://supportsfschools.org/SocialPreview.png"
+          />
+
           <script
             defer
             data-domain="supportsfschools.org"
