@@ -14,7 +14,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <link rel="icon" type="image/png" href="https://ibb.co/NpscLSp" />
+          <link
+            rel="icon"
+            href="https://www.supportsfschools.org/logo_icon.ico"
+          />
           {/*<!-- HTML Meta Tags -->*/}
           <title>
             Supprt SF Schools-Explore local volunteer and donating opportunities
