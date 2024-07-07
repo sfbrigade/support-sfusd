@@ -15,7 +15,6 @@ class MyDocument extends Document {
           />
           <link
             rel="icon"
-            type="image/png"
             href="https://www.supportsfschools.org/logo_icon.ico"
           />
           {/*<!-- HTML Meta Tags -->*/}
