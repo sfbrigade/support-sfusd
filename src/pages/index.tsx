@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <>
       <main className="relative flex h-full flex-row justify-between p-4">
-        {/* md:justify-start md:mt-50 */}
         <section className="md:mt-50 mt-8 flex flex-1 flex-col items-center gap-8 md:justify-start lg:gap-11">
           <header className="text-center">
             <h1 className="text-3xl font-medium tracking-wider xl:text-5xl xl:leading-normal">
