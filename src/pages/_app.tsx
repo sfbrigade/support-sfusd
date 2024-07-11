@@ -18,7 +18,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <Head>
         <title>
-          Support SF Schools-Explore local volunteer and donating opportunities
+          Support SF Schools - Explore local volunteer and donating
+          opportunities
         </title>
       </Head>
       <Layout>
