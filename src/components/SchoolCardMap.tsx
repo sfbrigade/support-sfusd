@@ -54,7 +54,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
       alt={props.alt}
       width={1000}
       height={500}
-      className={`h-40 max-h-[20vh] w-full rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className}`}
+      className={`h-40 max-h-[20vh] rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className ? props.className : ""}`}
     />
   );
 
