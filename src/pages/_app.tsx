@@ -17,7 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Head>
-        <title>Support SF Schools</title>
+        <title>
+          Support SF Schools-Explore local volunteer and donating opportunities
+        </title>
       </Head>
       <Layout>
         <div className={`${fredoka.variable} ${lato.variable} h-full`}>
