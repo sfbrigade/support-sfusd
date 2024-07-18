@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { School } from "@/types/school";
+import { blurDataURL } from "@/lib/imageConfig";
+import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
 
@@ -83,9 +84,17 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
       </div>
       <div
-        className={`transition-max-height relative col-span-4 rounded-r-lg bg-cover bg-center duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"}`}
-        style={{ backgroundImage: `url(school_img/${img})` }}
+        className={`transition-max-height relative col-span-4 rounded-r-lg duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"}`}
       >
+        <Image
+          src={`/school_img/${school.img}`}
+          placeholder="blur"
+          blurDataURL={blurDataURL}
+          alt="School Image"
+          fill
+          className="rounded-r-lg object-cover"
+        />
+
         <Image
           src="/icons/dropdown-icon.svg"
           alt="Arrow Icon"

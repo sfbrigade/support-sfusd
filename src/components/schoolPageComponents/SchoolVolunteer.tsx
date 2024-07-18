@@ -4,6 +4,7 @@ import BannerWrapper from "./BannerWrapper";
 import Link from "next/link";
 import HeadingContentWrapper from "./HeadingContentWrapper";
 import CardList from "./CardList";
+import { blurDataURL } from "@/lib/imageConfig";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
   interface volunteer {
@@ -37,6 +38,8 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
             alt="volunteer graphic"
             width={500}
             height={1000}
+            placeholder="blur"
+            blurDataURL={blurDataURL}
           />
         }
         right={
