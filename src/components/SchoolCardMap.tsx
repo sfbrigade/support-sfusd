@@ -3,6 +3,7 @@ import { Program, School } from "@/types/school";
 import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
+import { blurDataURL } from "@/lib/imageConfig";
 
 interface SchoolCardProps {
   school: School;
@@ -52,6 +53,8 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
     <Image
       src={props.src}
       alt={props.alt}
+      placeholder="blur"
+      blurDataURL={blurDataURL}
       width={1000}
       height={500}
       className={`h-40 max-h-[20vh] rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className ? props.className : ""}`}

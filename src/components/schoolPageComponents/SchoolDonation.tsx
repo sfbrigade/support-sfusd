@@ -1,6 +1,7 @@
 import { School } from "@/types/school";
 import BannerWrapper from "./BannerWrapper";
 import HeadingContentWrapper from "./HeadingContentWrapper";
+import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 
 const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
@@ -57,6 +58,8 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
             alt="donation graphic"
             width={500}
             height={1000}
+            placeholder="blur"
+            blurDataURL={blurDataURL}
           />
         }
         className={
