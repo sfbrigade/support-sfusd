@@ -19,9 +19,7 @@ class MyDocument extends Document {
             href="https://www.supportsfschools.org/logo_icon.ico"
           />
           {/*<!-- HTML Meta Tags -->*/}
-          <title>
-            Supprt SF Schools-Explore local volunteer and donating opportunities
-          </title>
+          <title>Support SF Schools</title>
           <meta
             name="description"
             content="A website to explore local schools and their available donation and volunteer opportunuities."
@@ -30,10 +28,7 @@ class MyDocument extends Document {
           {/*<!-- Facebook Meta Tags -->*/}
           <meta property="og:url" content="https://www.supportsfschools.org/" />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="Supprt SF Schools-Explore local volunteer and donating opportunities"
-          />
+          <meta property="og:title" content="Supprt SF Schools" />
           <meta
             property="og:description"
             content="A website to explore local schools and their available donation and volunteer opportunuities."
@@ -50,10 +45,7 @@ class MyDocument extends Document {
             property="twitter:url"
             content="https://www.supportsfschools.org/"
           />
-          <meta
-            name="twitter:title"
-            content="Supprt SF Schools-Explore local volunteer and donating opportunities"
-          />
+          <meta name="twitter:title" content="Supprt SF Schools" />
           <meta
             name="twitter:description"
             content="A website to explore local schools and their available donation and volunteer opportunuities."
