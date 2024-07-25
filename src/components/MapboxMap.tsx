@@ -42,10 +42,22 @@ const MapboxMap = ({
       setSelectedSchool(false);
     });
     map.on("load", () => {
-      schools.forEach((school) => {
+      schools.sort((a, b) => {
+        const aLat = a.latitude;
+        const aLong = a.longitude;
+        const bLat = b.latitude;
+        const bLong = b.longitude;
+
+        // NOTE: comparison only works for US
+        if (aLat > bLat || (aLat === bLat && aLong < bLong)) return -1;
+        else if (aLat === bLat && aLong === bLong) return 0;
+        else return 1;
+      });
+      schools.forEach((school, index) => {
         // create an HTML element for each school
-        const el = document.createElement("div");
+        const el = document.createElement("button");
         el.className = "marker";
+        el.tabIndex = index;
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
           e.preventDefault();
