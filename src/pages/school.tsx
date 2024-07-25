@@ -7,6 +7,7 @@ import SchoolTestimonial from "@/components/schoolPageComponents/SchoolTestimoni
 import SchoolVolunteer from "@/components/schoolPageComponents/SchoolVolunteer";
 import prisma from "@/lib/prisma";
 import { School } from "@/types/school";
+import { blurDataURL } from "@/lib/imageConfig";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -44,6 +45,8 @@ const Profile: React.FC<Props> = (props) => {
               alt={school.name + " image"}
               width={2000}
               height={2000}
+              placeholder="blur"
+              blurDataURL={blurDataURL}
             />
           </div>
           <div className="relative mx-auto flex flex-col gap-10 p-6 pt-2 md:py-20 lg:w-4/5 2xl:w-2/3">
@@ -53,6 +56,8 @@ const Profile: React.FC<Props> = (props) => {
               alt={school.name + " logo"}
               width={1000}
               height={1000}
+              placeholder="blur"
+              blurDataURL={blurDataURL}
             />
             <SchoolHeader school={school} />
             <SchoolAbout school={school} />

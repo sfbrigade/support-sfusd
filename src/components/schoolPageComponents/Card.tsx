@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { blurDataURL } from "@/lib/imageConfig";
 
 const Card = (props: any) => {
   const { title, description, img, index } = props;
@@ -11,6 +12,8 @@ const Card = (props: any) => {
         className="h-48 rounded-lg object-cover"
         width={1000}
         height={1000}
+        placeholder="blur"
+        blurDataURL={blurDataURL}
       />
       <div className="p-2">
         <h1 className="font-medium">{title}</h1>
