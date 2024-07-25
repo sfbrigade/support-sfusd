@@ -19,7 +19,7 @@ class MyDocument extends Document {
             href="https://www.supportsfschools.org/logo_icon.ico"
           />
           {/*<!-- HTML Meta Tags -->*/}
-          <title>Support SF Schools</title>
+
           <meta
             name="description"
             content="A website to explore local schools and their available donation and volunteer opportunuities."
