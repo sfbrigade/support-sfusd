@@ -85,10 +85,23 @@ const MapboxMap = ({
             // TODO: refactor in case we add more classes
             el.className =
               "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
-            console.log(el.className);
+            el.focus();
           });
-          el.addEventListener("mouseover", () => schoolMarker.togglePopup());
-          el.addEventListener("mouseout", () => schoolMarker.togglePopup());
+          el.addEventListener("mouseover", () => {
+            if (!schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
+          });
+          el.addEventListener("mouseout", () => {
+            if (schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
+          });
+          el.addEventListener("blur", () => {
+            if (schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
+          });
         } else {
           console.error(`Coordinates are missing for ${school.name}`);
         }
