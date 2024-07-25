@@ -53,11 +53,10 @@ const MapboxMap = ({
         else if (aLat === bLat && aLong === bLong) return 0;
         else return 1;
       });
-      schools.forEach((school, index) => {
+      schools.forEach((school) => {
         // create an HTML element for each school
         const el = document.createElement("button");
         el.className = "marker";
-        el.tabIndex = index;
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
           e.preventDefault();
