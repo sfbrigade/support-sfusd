@@ -17,7 +17,6 @@ body:
       label: What is the issue you are reporting?
       description: Also tell us more details about the issue you are experiencing. (feel free to also add screenshots or other media)
       placeholder: There's an issue!
-      value: ""
     validations:
       required: true
   - type: input
