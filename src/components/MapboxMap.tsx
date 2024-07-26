@@ -48,7 +48,7 @@ const MapboxMap = ({
         const bLat = b.latitude;
         const bLong = b.longitude;
 
-        // NOTE: comparison only works for US
+        // NOTE: comparison only works for US and assumes North at top
         if (aLat > bLat || (aLat === bLat && aLong < bLong)) return -1;
         else if (aLat === bLat && aLong === bLong) return 0;
         else return 1;
