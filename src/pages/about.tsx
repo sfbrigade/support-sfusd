@@ -26,7 +26,7 @@ const member_list = [
   {
     name: "Amara Mir",
     role: "UX Researcher",
-    url: "",
+    url: "https://www.linkedin.com/in/amara-mir/",
     img: "/about/amara_mir.png",
   },
   {
