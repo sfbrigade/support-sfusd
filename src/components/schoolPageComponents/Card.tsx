@@ -7,7 +7,7 @@ const Card = (props: any) => {
   return (
     <div className="rounded-lg">
       <Image
-        src={img ? img : `/volunteer_img/stock${index + 1}.png`}
+        src={img ? img : `/volunteer/event/stock${index + 1}.png`}
         alt="volunteer image"
         className="h-48 rounded-lg object-cover"
         width={1000}
