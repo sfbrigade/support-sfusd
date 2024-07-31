@@ -86,7 +86,7 @@ const About = () => {
           height={240}
         />
       </div>
-      <div className="mx-auto flex max-md:px-8 md:w-3/5">
+      <div className="mx-auto flex max-md:px-8 md:w-5/6 lg:w-4/6">
         <div className="flex flex-col items-center gap-4 py-8 md:py-12">
           <div className="flex flex-col gap-4 max-md:text-sm">
             <p>
@@ -133,7 +133,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 xl:grid-cols-5">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-8">
             {member_list.map((member) => (
               <a
                 href={member.url}
@@ -141,11 +141,11 @@ const About = () => {
                 className="group flex justify-center"
                 key={member.name}
               >
-                <div className="text-sm text-[#3A86FF]">
+                <div className="w-36 text-sm text-[#3A86FF]">
                   <Image
                     src={member.img}
                     alt={`${member.name} photo`}
-                    className="mb-2 w-48 rounded-lg rounded-tl-[36px] outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2 group-hover:outline-[#3A86FF]"
+                    className="mb-2 rounded-lg rounded-tl-[36px] outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2 group-hover:outline-[#3A86FF]"
                     width={1000}
                     height={1000}
                     placeholder="blur"
