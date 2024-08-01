@@ -129,7 +129,7 @@ const MapboxMap = ({
       });
 
       // Golden Gate Bridge Marker
-      const goldenGateEl = document.createElement("button");
+      const goldenGateEl = document.createElement("div");
       goldenGateEl.className = "golden-gate-marker";
       new mapboxgl.Marker(goldenGateEl)
         .setLngLat([-122.4783, 37.8199])
