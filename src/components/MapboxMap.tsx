@@ -35,7 +35,12 @@ const MapboxMap = ({
         [-122.6, 37.65], // Southwest coordinates
         [-122.25, 37.85], // Northeast coordinates
       ],
+      dragRotate: false, // turn off rotation on drag
+      touchPitch: false, // turn off pitch change w/touch
+      touchZoomRotate: true, // turn on zoom/rotate w/touch
+      keyboard: true, // turn on keyboard shortcuts
     });
+    map.touchZoomRotate.disableRotation(); // turn off rotate w/touch
 
     mapRef.current = map;
     map.on("click", () => {
@@ -97,7 +102,7 @@ const MapboxMap = ({
               schoolMarker.togglePopup();
             }
           });
-          el.addEventListener("blur", () => {
+          elRef.addEventListener("blur", () => {
             if (schoolMarker.getPopup().isOpen()) {
               schoolMarker.togglePopup();
             }
@@ -114,6 +119,7 @@ const MapboxMap = ({
         showUserLocation: true,
       });
       map.addControl(geolocate);
+      map.addControl(new mapboxgl.NavigationControl({ showCompass: false }));
 
       // disables geolocation icon if user is out of bounds
       navigator.geolocation.getCurrentPosition((position) => {
