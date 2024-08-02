@@ -7,7 +7,7 @@ import { blurDataURL } from "@/lib/imageConfig";
 const member_list = [
   {
     name: "Julia Gitis",
-    role: "Product Manager",
+    role: "Project Lead",
     url: "https://www.linkedin.com/in/juliagoolia/",
     img: "/about/julia_gitis.png",
   },
@@ -48,6 +48,12 @@ const member_list = [
     img: "/about/brandon_cruz_youll.png",
   },
   {
+    name: "Jackson Tran",
+    role: "Software Developer",
+    url: "https://www.linkedin.com/in/jacksontran1/",
+    img: "/about/jackson_tran.png",
+  },
+  {
     name: "Nick Visutsithiwong",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/nickvisut/",
@@ -60,10 +66,16 @@ const member_list = [
     img: "/about/iryna_trush.png",
   },
   {
-    name: "Jackson Tran",
+    name: "Pablo Gomez Echegaray",
     role: "Software Developer",
-    url: "https://www.linkedin.com/in/jacksontran1/",
-    img: "/about/jackson_tran.png",
+    url: "",
+    img: "/about/pablo-gomez-echegaray.jpg",
+  },
+  {
+    name: "Robby Taine",
+    role: "Data Analyst",
+    url: "",
+    img: "",
   },
 ];
 
@@ -138,20 +150,42 @@ const About = () => {
               <a
                 href={member.url}
                 target="_blank"
-                className="group flex justify-center"
+                className={
+                  "group flex justify-center" +
+                  (!member.url ? " cursor-default" : "")
+                }
                 key={member.name}
+                onClick={(e) => {
+                  if (!member.url) {
+                    e.preventDefault();
+                  }
+                }}
               >
-                <div className="w-36 text-sm text-[#3A86FF]">
-                  <Image
-                    src={member.img}
-                    alt={`${member.name} photo`}
-                    className="mb-2 rounded-lg rounded-tl-[36px] outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2 group-hover:outline-[#3A86FF]"
-                    width={1000}
-                    height={1000}
-                    placeholder="blur"
-                    blurDataURL={blurDataURL}
-                  />
-                  <p className="font-bold group-hover:underline">
+                <div className="w-36 text-sm">
+                  {member.img ? (
+                    <Image
+                      src={member.img}
+                      alt={`${member.name} photo`}
+                      className={
+                        "mb-2 rounded-lg rounded-tl-[36px]" +
+                        (member.url
+                          ? " outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2 group-hover:outline-black"
+                          : "")
+                      }
+                      width={1000}
+                      height={1000}
+                      placeholder="blur"
+                      blurDataURL={blurDataURL}
+                    />
+                  ) : (
+                    <div className="mb-2 aspect-square w-full rounded-lg rounded-tl-[36px] bg-black"></div>
+                  )}
+
+                  <p
+                    className={
+                      "font-bold " + (member.url ? "group-hover:underline" : "")
+                    }
+                  >
                     {member.name}
                   </p>
                   <p className="font-medium">{member.role}</p>
