@@ -1,7 +1,7 @@
 # NOTE: This is based off of the example template here: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms
 name: Other Issue
 description: File another type of issue.
-title: ""
+title: "[Other issue]: "
 labels: [""]
 projects: ["sfbrigade/7"]
 assignees:
