@@ -1,14 +1,15 @@
 import React from "react";
 import { Program, School } from "@/types/school";
+import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
-import { blurDataURL } from "@/lib/imageConfig";
 
 interface SchoolCardProps {
   school: School;
   className?: string;
   onClose: (e: React.MouseEvent<HTMLElement>) => void;
+  onModalOpen: () => void;
 }
 /**
  * SchoolCard: Renders school image and details depending on school clicked on map
@@ -37,6 +38,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   school,
   onClose,
   className,
+  onModalOpen,
 }) => {
   const students = school.metrics.find(
     (metric) => metric.name == "Students Enrolled",
@@ -94,7 +96,17 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
       </div>
       <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
-          {school.priority && <Tag />}
+          {school.priority && (
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onModalOpen();
+              }}
+            >
+              <Tag />
+            </button>
+          )}
           <h2 className="font-medium md:text-xl">{school.name}</h2>
           <p className="text-sm max-md:text-xs">{school.neighborhood}</p>
           <div className="items-left mb-2 hidden flex-col md:block">
