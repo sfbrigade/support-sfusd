@@ -112,7 +112,7 @@ const Map: React.FC<Props> = (props) => {
   return (
     <div className="flex h-full flex-col bg-[#D7F1FF]">
       <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
-      <div className="top-16 z-10 flex justify-center gap-2 bg-[#D7F1FF] max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
+      <div className="top-16 z-10 flex justify-center gap-2 border-t-4 border-[#D7F1FF] bg-[#D7F1FF] pt-1 max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
         <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
