@@ -1,7 +1,7 @@
 # NOTE: This is based off of the example template here: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms
 name: Other Issue
 description: File another type of issue.
-title: ""
+title: "[Other issue]: "
 labels: [""]
 projects: ["sfbrigade/7"]
 assignees:
@@ -17,7 +17,6 @@ body:
       label: What is the issue you are reporting?
       description: Also tell us more details about the issue you are experiencing. (feel free to also add screenshots or other media)
       placeholder: There's an issue!
-      value: ""
     validations:
       required: true
   - type: input

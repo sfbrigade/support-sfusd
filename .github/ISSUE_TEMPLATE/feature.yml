@@ -17,7 +17,6 @@ body:
       label: What feature or enhancement are you requesting?
       description: Also tell us more details about the requirements for your feature or enhancement. (feel free to also attach screenshots or other media)
       placeholder: Provide more details!
-      value: ""
     validations:
       required: true
   - type: input
