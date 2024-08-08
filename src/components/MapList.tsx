@@ -6,6 +6,7 @@ type MapListProps = {
   schools: School[];
   setSelectedSchool: (school: School | null) => void;
   selectedSchool: School | false | null;
+  onModalOpen: () => void;
 };
 
 /**
@@ -23,6 +24,7 @@ const MapList = ({
   schools,
   setSelectedSchool,
   selectedSchool,
+  onModalOpen,
 }: MapListProps) => {
   // Create a ref for the container div
   const containerRef = useRef<HTMLDivElement>(null);
@@ -63,6 +65,7 @@ const MapList = ({
             isExpanded={
               selectedSchool ? school.name == selectedSchool.name : false
             }
+            onModalOpen={onModalOpen}
           />
         ))}
       </div>
