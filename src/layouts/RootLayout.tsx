@@ -4,6 +4,7 @@ import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/router";
 import ContactUs from "@/components/ContactUs";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,6 +53,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         )}
       <Navbar />
       <div className="flex-1">{children}</div>
+      <BackToTop />
     </div>
   );
 }
