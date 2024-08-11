@@ -44,7 +44,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                     target="_blank"
                     className={
                       "plausible-event-name=Clicked+" +
-                      school.name +
+                      school.name.replace(/\s/g, "") +
                       "+Main+Donate w-fit rounded bg-blue-500 p-2 px-8 font-medium text-white"
                     }
                   >
@@ -86,9 +86,9 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                           target="_blank"
                           className={
                             "plausible-event-name=Clicked+" +
-                            school.name +
+                            school.name.replace(/\s/g, "") +
                             "+" +
-                            donation.name +
+                            donation.name.replace(/\s/g, "") +
                             " underline underline-offset-4"
                           }
                         >

@@ -59,7 +59,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 target="_blank"
                 className={
                   "plausible-event-name=Clicked+" +
-                  school.name +
+                  school.name.replace(/\s/g, "") +
                   "+VolunteerForm rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8"
                 }
               >
@@ -70,7 +70,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 target="_blank"
                 className={
                   "plausible-event-name=Clicked+" +
-                  school.name +
+                  school.name.replace(/\s/g, "") +
                   "+EdFund rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8"
                 }
               >
