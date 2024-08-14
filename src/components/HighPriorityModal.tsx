@@ -14,7 +14,8 @@ const customStyles = {
 };
 
 const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
-  Modal.setAppElement("body");
+  // TODO: need to get rid of warning for Modal and app reader accesibility issue
+  //Modal.setAppElement("body");
   return (
     <Modal
       isOpen={isOpen}
