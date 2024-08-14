@@ -1185,7 +1185,7 @@ async function main() {
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/1oene039Zn-fBGxjI2iS2B9n0O-U2BhtDZl-td9M0hNs",
-          donation_url: "https://missionhigh.org/ways-to-give/",
+          donation_url: "https://missionhigh.org/make-an-impact/",
           donation_text:
             "Donate to the Mission High Foundation. The foundation supports educator grants, the Annual College Trip, the food and agriculture program, college preparation, and student wellness.",
           testimonial: `"I have never seen in other schools' teachers that worry a lot about the student...That’s the difference about Mission, the teachers genuinely want their students to succeed."`,
