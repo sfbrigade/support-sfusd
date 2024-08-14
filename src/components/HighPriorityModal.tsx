@@ -14,8 +14,7 @@ const customStyles = {
 };
 
 const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
-  // TODO: need to get rid of warning for Modal and app reader accesibility issue
-  //Modal.setAppElement("body");
+  Modal.setAppElement("body");
   return (
     <Modal
       isOpen={isOpen}
@@ -32,7 +31,7 @@ const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
               target="_blank"
               className="text-[#3A86FF] hover:underline max-sm:text-sm"
             >
-              SF Ed Fund's
+              SF Ed Fund&apos;s
             </a>{" "}
             definition of priority schools.
           </p>
