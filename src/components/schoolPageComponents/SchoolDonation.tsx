@@ -43,9 +43,9 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                     href={school.profile?.donation_url}
                     target="_blank"
                     className={
-                      "plausible-event-name=Clicked+" +
-                      school.name.replace(/\s/g, "") +
-                      "+Main+Donate w-fit rounded bg-blue-500 p-2 px-8 font-medium text-white"
+                      "plausible-event-name=Clicked+Main+Donate+" +
+                      school.name.replace(/\s/g, "+") +
+                      " w-fit rounded bg-blue-500 p-2 px-8 font-medium text-white"
                     }
                   >
                     Donate
@@ -86,9 +86,9 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                           target="_blank"
                           className={
                             "plausible-event-name=Clicked+" +
-                            school.name.replace(/\s/g, "") +
+                            donation.name.replace(/\s/g, "+") +
                             "+" +
-                            donation.name.replace(/\s/g, "") +
+                            school.name.replace(/\s/g, "+") +
                             " underline underline-offset-4"
                           }
                         >
