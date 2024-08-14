@@ -101,7 +101,7 @@ async function main() {
               name: "Event Volunteers",
               details: `Provide support for school-sponsored events such as shows and field trips`,
               url: "",
-              img: "/volunteer/stock1.png",
+              img: "/volunteer/event/stock1.png",
               category: ProgramCategory.volunteer,
             },
             {
