@@ -14,6 +14,7 @@ const customStyles = {
 };
 
 const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
+  Modal.setAppElement("body");
   return (
     <Modal
       isOpen={isOpen}
@@ -23,9 +24,17 @@ const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
     >
       <div className="flex flex-col gap-4">
         <div className="flex w-full items-center justify-between">
-          <h1 className="text-xl text-[#989898] sm:text-2xl">
-            High Priority Definition
-          </h1>
+          <p className="max-sm:text-sm">
+            We are following the{" "}
+            <a
+              href="https://sfedfund.org/where-we-work/"
+              target="_blank"
+              className="text-[#3A86FF] hover:underline max-sm:text-sm"
+            >
+              SF Ed Fund's
+            </a>{" "}
+            definition of priority schools.
+          </p>
           <button
             className="close-button ml-auto self-start text-4xl"
             onClick={onClose}
@@ -33,19 +42,6 @@ const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
             ×
           </button>
         </div>
-        <hr className="border-t-2" />
-        <p className="max-sm:text-sm">
-          This is placeholder text on how we are defining High Priority. This is
-          a breaf description of what the definition means and how it applies to
-          schools
-        </p>
-        <a
-          href="https://sfedfund.org/where-we-work/"
-          target="_blank"
-          className="text-[#3A86FF] hover:underline max-sm:text-sm"
-        >
-          This is a link to the EdFund&apos;s definiton.
-        </a>
       </div>
     </Modal>
   );
