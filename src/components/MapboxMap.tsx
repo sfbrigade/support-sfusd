@@ -130,6 +130,18 @@ const MapboxMap = ({
               schoolMarker.togglePopup();
             }
           });
+          elRef.addEventListener("focus", () => {
+            // if we are outside of the bounds, recenter/rezoom (intended for keyboard navigation)
+            const lngLat = schoolMarker.getLngLat();
+            const bounds = map.getBounds();
+
+            if (!bounds.contains(lngLat)) {
+              // pan to marker
+              map.flyTo({
+                center: [lngLat.lng, lngLat.lat],
+              });
+            }
+          });
         } else {
           console.error(`Coordinates are missing for ${school.name}`);
         }
