@@ -1,5 +1,5 @@
 import { School } from "@/types/school";
-import mapboxgl, { LngLatBounds } from "mapbox-gl";
+import mapboxgl, { LngLat } from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
@@ -25,11 +25,16 @@ const MapboxMap = ({
 
     mapboxgl.accessToken = accessToken;
 
+    const mapDefaults = {
+      zoom: 11, // Start with more zoomed-out view but not too far
+      center: new LngLat(-122.437, 37.75),
+    };
+
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
-      center: [-122.437, 37.75],
-      zoom: 11, // Start with more zoomed-out view but not too far
+      center: mapDefaults.center,
+      zoom: mapDefaults.zoom,
       minZoom: 10.5, // Allow users to zoom out more
       maxZoom: 15, // Increase max zoom to allow closer inspection
       maxBounds: [
@@ -136,9 +141,10 @@ const MapboxMap = ({
             const bounds = map.getBounds();
 
             if (!bounds.contains(lngLat)) {
-              // pan to marker
+              // pan/zoom to defaults
               map.flyTo({
-                center: [lngLat.lng, lngLat.lat],
+                center: mapDefaults.center,
+                zoom: mapDefaults.zoom,
               });
             }
           });
