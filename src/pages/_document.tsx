@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html className="scroll-smooth">
         <Head>
-          <title>Support SF Schools</title>
           <link
             href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
             rel="stylesheet"
@@ -19,9 +18,6 @@ class MyDocument extends Document {
             href="https://www.supportsfschools.org/logo_icon.ico"
           />
           {/*<!-- HTML Meta Tags -->*/}
-          <title>
-            Supprt SF Schools-Explore local volunteer and donating opportunities
-          </title>
           <meta
             name="description"
             content="A website to explore local schools and their available donation and volunteer opportunuities."
@@ -66,7 +62,7 @@ class MyDocument extends Document {
           <script
             defer
             data-domain="supportsfschools.org"
-            src="https://plausible.io/js/script.js"
+            src="https://plausible.io/js/script.tagged-events.outbound-links.js"
           ></script>
         </Head>
         <body className="scroll-smooth">

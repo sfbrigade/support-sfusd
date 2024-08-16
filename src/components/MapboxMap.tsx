@@ -1,5 +1,5 @@
 import { School } from "@/types/school";
-import mapboxgl from "mapbox-gl";
+import mapboxgl, { LngLatBounds } from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
@@ -24,6 +24,7 @@ const MapboxMap = ({
     if (mapRef.current) return;
 
     mapboxgl.accessToken = accessToken;
+
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
@@ -35,16 +36,54 @@ const MapboxMap = ({
         [-122.6, 37.65], // Southwest coordinates
         [-122.25, 37.85], // Northeast coordinates
       ],
+      dragRotate: false, // turn off rotation on drag
+      touchPitch: false, // turn off pitch change w/touch
+      touchZoomRotate: true, // turn on zoom/rotate w/touch
+      keyboard: true, // turn on keyboard shortcuts
     });
+    map.touchZoomRotate.disableRotation(); // turn off rotate w/touch
 
     mapRef.current = map;
     map.on("click", () => {
       setSelectedSchool(false);
     });
     map.on("load", () => {
+      const geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true,
+        },
+        showUserLocation: true,
+      });
+      map.addControl(geolocate);
+      map.addControl(new mapboxgl.NavigationControl({ showCompass: false }));
+
+      // disables geolocation icon if user is out of bounds
+      navigator.geolocation.getCurrentPosition((position) => {
+        const bounds = map.getBounds();
+        const { _ne: ne, _sw: sw } = bounds;
+        const lng = position.coords.longitude;
+        const lat = position.coords.latitude;
+        let isInMapBounds =
+          lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat;
+        if (isInMapBounds === false) {
+          map.removeControl(geolocate);
+        }
+      });
+
+      schools.sort((a, b) => {
+        const aLat = a.latitude;
+        const aLong = a.longitude;
+        const bLat = b.latitude;
+        const bLong = b.longitude;
+
+        // NOTE: comparison only works for US and assumes North at top (should be fine so long as reasonable max bounds is specified)
+        if (aLat > bLat || (aLat === bLat && aLong < bLong)) return -1;
+        else if (aLat === bLat && aLong === bLong) return 0;
+        else return 1;
+      });
       schools.forEach((school) => {
         // create an HTML element for each school
-        const el = document.createElement("div");
+        const el = document.createElement("button");
         el.className = "marker";
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
@@ -61,7 +100,8 @@ const MapboxMap = ({
             .setLngLat([Number(school.longitude), Number(school.latitude)])
             .setPopup(popup)
             .addTo(map);
-          schoolMarker.getElement().addEventListener("click", () => {
+          const elRef = schoolMarker.getElement();
+          elRef.addEventListener("click", () => {
             var marker_array =
               document.getElementsByClassName("marker-selected");
             var i;
@@ -71,35 +111,39 @@ const MapboxMap = ({
                 "marker mapboxgl-marker mapboxgl-marker-anchor-center";
             }
             // TODO: refactor in case we add more classes
-            el.className =
+            elRef.className =
               "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
-            console.log(el.className);
+            elRef.focus();
           });
-          el.addEventListener("mouseover", () => schoolMarker.togglePopup());
-          el.addEventListener("mouseout", () => schoolMarker.togglePopup());
+          elRef.addEventListener("mouseover", () => {
+            if (!schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
+          });
+          elRef.addEventListener("mouseout", () => {
+            if (schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
+          });
+          elRef.addEventListener("blur", () => {
+            if (schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
+          });
+          elRef.addEventListener("focus", () => {
+            // if we are outside of the bounds, recenter/rezoom (intended for keyboard navigation)
+            const lngLat = schoolMarker.getLngLat();
+            const bounds = map.getBounds();
+
+            if (!bounds.contains(lngLat)) {
+              // pan to marker
+              map.flyTo({
+                center: [lngLat.lng, lngLat.lat],
+              });
+            }
+          });
         } else {
           console.error(`Coordinates are missing for ${school.name}`);
-        }
-      });
-
-      const geolocate = new mapboxgl.GeolocateControl({
-        positionOptions: {
-          enableHighAccuracy: true,
-        },
-        showUserLocation: true,
-      });
-      map.addControl(geolocate);
-
-      // disables geolocation icon if user is out of bounds
-      navigator.geolocation.getCurrentPosition((position) => {
-        const bounds = map.getBounds();
-        const { _ne: ne, _sw: sw } = bounds;
-        const lng = position.coords.longitude;
-        const lat = position.coords.latitude;
-        let isInMapBounds =
-          lng >= sw.lng && lng <= ne.lng && lat >= sw.lat && lat <= ne.lat;
-        if (isInMapBounds === false) {
-          map.removeControl(geolocate);
         }
       });
 

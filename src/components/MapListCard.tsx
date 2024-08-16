@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { School } from "@/types/school";
+import { blurDataURL } from "@/lib/imageConfig";
+import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
 
@@ -8,6 +9,7 @@ type MapListCardProps = {
   school: School;
   setSelectedSchool: (school: School | null) => void;
   isExpanded: Boolean;
+  onModalOpen: () => void;
 };
 
 /**
@@ -31,6 +33,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
   school,
   setSelectedSchool,
   isExpanded,
+  onModalOpen,
 }) => {
   const { img, name, neighborhood } = school;
 
@@ -53,17 +56,31 @@ const MapListCard: React.FC<MapListCardProps> = ({
   }
   return (
     <div
-      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"} transition-max-height relative duration-[700ms]`}
+      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[104px]"} transition-max-height relative duration-[700ms]`}
       onClick={onClick}
       id={name}
     >
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
-        <div className="flex h-[88px] grid-cols-6 flex-col justify-center md:grid md:items-center md:gap-2">
-          <div className="col-span-4 font-bold md:text-xl">{name}</div>
-          <div className="col-span-2 text-gray-600 max-md:text-sm">
-            {neighborhood}
+        <div className="flex h-[104px] flex-col justify-center">
+          {school.priority && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onModalOpen();
+              }}
+              className="w-fit"
+            >
+              <Tag />
+            </button>
+          )}
+          <div className="flex grid-cols-6 flex-col md:grid md:items-center md:gap-2">
+            <div className="col-span-4 font-bold md:text-xl">{name}</div>
+            <div className="col-span-2 text-gray-600 max-md:text-sm">
+              {neighborhood}
+            </div>
           </div>
         </div>
+
         <div className="flex flex-col gap-2 max-md:text-sm">
           <div>
             <b>{students ? students.value : "N/A"}</b> Students
@@ -83,9 +100,17 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
       </div>
       <div
-        className={`transition-max-height relative col-span-4 rounded-r-lg bg-cover bg-center duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[88px]"}`}
-        style={{ backgroundImage: `url(school_img/${img})` }}
+        className={`transition-max-height relative col-span-4 rounded-r-lg duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[104px]"}`}
       >
+        <Image
+          src={`/school_img/${school.img}`}
+          placeholder="blur"
+          blurDataURL={blurDataURL}
+          alt="School Image"
+          fill
+          className="rounded-r-lg object-cover"
+        />
+
         <Image
           src="/icons/dropdown-icon.svg"
           alt="Arrow Icon"
@@ -94,11 +119,6 @@ const MapListCard: React.FC<MapListCardProps> = ({
           className={`absolute bottom-1.5 right-1.5 transition duration-[700ms] ${isExpanded ? "rotate-[-180deg]" : "rotate-0"}`}
         />
       </div>
-      {school.priority && (
-        <div className="absolute right-1 top-1">
-          <Tag />
-        </div>
-      )}
     </div>
   );
 };

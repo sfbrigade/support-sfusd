@@ -4,6 +4,7 @@ import store from "../store/store";
 import "../styles/globals.css";
 import Layout from "../layouts/RootLayout";
 import { Fredoka, Lato } from "next/font/google";
+import Head from "next/head";
 
 const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka" });
 const lato = Lato({
@@ -15,6 +16,9 @@ const lato = Lato({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
+      <Head>
+        <title>Support SF Schools</title>
+      </Head>
       <Layout>
         <div className={`${fredoka.variable} ${lato.variable} h-full`}>
           <Component {...pageProps} />

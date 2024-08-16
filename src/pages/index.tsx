@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <main className="relative flex h-full flex-row justify-between p-4">
-        <section className="mt-8 flex flex-1 flex-col items-center gap-8 md:mt-0 md:justify-center lg:gap-11">
+        <section className="md:mt-50 mt-8 flex flex-1 flex-col items-center gap-8 md:justify-start lg:gap-11">
           <header className="text-center">
             <h1 className="text-3xl font-medium tracking-wider xl:text-5xl xl:leading-normal">
               Get <span className="text-[#F15437]">Involved</span> with <br />
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
 
           <button
-            className="flex items-center justify-center gap-3 rounded-[10px] bg-amber-400 px-4 py-4 lg:px-8"
+            className="flex items-center justify-center gap-3 rounded-lg bg-amber-400 px-4 py-4 lg:px-8"
             onClick={handleClick}
           >
             <span className="text-sm font-medium leading-7 tracking-wide text-zinc-950 sm:text-base md:text-lg lg:text-xl">
