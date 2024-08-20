@@ -131,6 +131,11 @@ const MapboxMap = ({
             }
           });
           elRef.addEventListener("focus", () => {
+            // show popup on focus
+            if (!schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
+
             // if we are outside of the bounds, recenter/rezoom (intended for keyboard navigation)
             const lngLat = schoolMarker.getLngLat();
             const bounds = map.getBounds();
