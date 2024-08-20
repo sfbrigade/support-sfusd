@@ -43,6 +43,13 @@ h6 * {
   background-image: url("/marker_hover.svg");
 }
 
+.marker:focus-within,
+.marker-selected {
+  outline: 2px solid rgba(127, 127, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
 .marker-selected {
   background-image: url("/marker_select.svg");
   background-size: cover;
@@ -50,6 +57,7 @@ h6 * {
   height: 45px;
   border-radius: 0;
   cursor: pointer;
+  outline: none;
 }
 
 /* .marker:active, .marker:focus {
