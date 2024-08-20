@@ -38,7 +38,8 @@ h6 * {
   cursor: pointer;
 }
 
-.marker:hover {
+.marker:hover,
+.marker:focus-within {
   background-image: url("/marker_hover.svg");
 }
 
