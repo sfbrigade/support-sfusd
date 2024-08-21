@@ -107,6 +107,7 @@ const MapboxMap = ({
             var i;
             for (i = 0; i < marker_array.length; i++) {
               // TODO: refactor in case we add more classes
+              // TODO: refactor to explicitly track what is is isn't
               marker_array[i].className =
                 "marker mapboxgl-marker mapboxgl-marker-anchor-center";
             }
@@ -114,6 +115,10 @@ const MapboxMap = ({
             elRef.className =
               "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
             elRef.focus();
+            // NOTE: workaround for popup disappearing on keyboard selection
+            if (!schoolMarker.getPopup().isOpen()) {
+              schoolMarker.togglePopup();
+            }
           });
           elRef.addEventListener("mouseover", () => {
             if (!schoolMarker.getPopup().isOpen()) {
