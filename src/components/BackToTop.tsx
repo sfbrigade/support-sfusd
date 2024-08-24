@@ -28,7 +28,7 @@ const BackToTop: React.FC<{}> = ({}) => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="border-round fixed bottom-4 right-4 h-10 w-10 rounded-full bg-[#8338EC] pt-1.5 text-4xl font-bold text-white"
+          className="border-round fixed bottom-2 h-8 w-8 self-center rounded-full bg-[#8338EC] text-3xl font-bold text-white opacity-80 hover:opacity-100 md:bottom-4 md:right-4 md:h-10 md:w-10 md:pt-1.5 md:text-4xl pt-1"
         >
           ^
         </button>
