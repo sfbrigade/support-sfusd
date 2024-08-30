@@ -101,13 +101,18 @@ const MapboxMap = ({
             .setPopup(popup)
             .addTo(map);
           const elRef = schoolMarker.getElement();
+          if (selectedSchool && school.name === selectedSchool.name) {
+            elRef.className =
+              "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
+            elRef.focus();
+          }
           elRef.addEventListener("click", () => {
             var marker_array =
               document.getElementsByClassName("marker-selected");
             var i;
             for (i = 0; i < marker_array.length; i++) {
               // TODO: refactor in case we add more classes
-              // TODO: refactor to explicitly track what is is isn't
+              // TODO: refactor to explicitly track what is focused in lieu of searching
               marker_array[i].className =
                 "marker mapboxgl-marker mapboxgl-marker-anchor-center";
             }
@@ -176,10 +181,6 @@ const MapboxMap = ({
     <>
       <div className="flex h-full w-full items-center justify-center">
         <div ref={mapContainer} className="h-full w-full md:rounded-2xl" />
-        {/* <div
-          ref={mapContainer}
-          className="h-full w-full rounded-t-3xl md:rounded-3xl md:border-2 md:border-gray-300"
-        /> */}
       </div>
     </>
   );
