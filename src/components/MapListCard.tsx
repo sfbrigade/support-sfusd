@@ -56,7 +56,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
   }
   return (
     <div
-      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-none" : "max-h-none"} transition-max-height transition-height relative duration-[700ms]`}
+      className={`relative grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden`}
       onClick={onClick}
       id={name}
     >
@@ -81,25 +81,25 @@ const MapListCard: React.FC<MapListCardProps> = ({
           </div>
         </div>
 
-        {isExpanded && (
-          <div className={`mt-4 flex flex-col gap-2 max-md:text-sm`}>
-            <div>
-              <b>{students ? students.value : "N/A"}</b> Students
-            </div>
-            <div>
-              <b>{frl ? frl.value : "N/A"}%</b> Free and Reduced Lunch
-            </div>
-            <div>
-              <b>{ell ? ell.value : "N/A"}%</b> English Language Learners
-            </div>
-            <Link
-              className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
-              href={"/school?name=" + encodeURIComponent(school.name)}
-            >
-              Learn More
-            </Link>
+        <div
+          className={`flex flex-col gap-2 transition-all duration-[700ms] [transition-behavior:allow-discrete] max-md:text-sm ${isExpanded ? "visible mt-4 max-h-48" : "invisible mt-0 max-h-0"}`}
+        >
+          <div>
+            <b>{students ? students.value : "N/A"}</b> Students
           </div>
-        )}
+          <div>
+            <b>{frl ? frl.value : "N/A"}%</b> Free and Reduced Lunch
+          </div>
+          <div>
+            <b>{ell ? ell.value : "N/A"}%</b> English Language Learners
+          </div>
+          <Link
+            className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+            href={"/school?name=" + encodeURIComponent(school.name)}
+          >
+            Learn More
+          </Link>
+        </div>
       </div>
       <div
         className={`transition-max-height relative col-span-4 max-h-none rounded-r-lg duration-[700ms] md:col-span-3`}
