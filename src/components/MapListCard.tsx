@@ -82,7 +82,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
 
         <div
-          className={`flex flex-col gap-2 transition-all duration-[700ms] [transition-behavior:allow-discrete] max-md:text-sm ${isExpanded ? "visible mt-4 max-h-48" : "invisible mt-0 max-h-0"}`}
+          className={`flex flex-col gap-2 transition-all duration-[700ms] [transition-behavior:allow-discrete] max-md:text-sm ${isExpanded ? "visible mt-4 max-h-48 opacity-100" : "invisible mt-0 max-h-0 opacity-0"}`}
         >
           <div>
             <b>{students ? students.value : "N/A"}</b> Students
