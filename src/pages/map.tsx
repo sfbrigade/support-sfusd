@@ -10,6 +10,7 @@ import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 import Image from "next/image";
 import Link from "next/link";
+import HighPriorityModal from "@/components/HighPriorityModal";
 
 interface DropdownItem<ItemType> {
   label: string;
@@ -39,6 +40,15 @@ const Map: React.FC<Props> = (props) => {
     null,
   );
   const [isMap, setIsMap] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   const setToggle = () => {
     setIsMap(!isMap);
@@ -87,6 +97,7 @@ const Map: React.FC<Props> = (props) => {
       school={props.school}
       onClose={onClose}
       className={`block ${props.className}`}
+      onModalOpen={openModal}
     />
   );
 
@@ -100,7 +111,8 @@ const Map: React.FC<Props> = (props) => {
 
   return (
     <div className="flex h-full flex-col bg-[#D7F1FF]">
-      <div className="top-16 z-10 flex justify-center gap-2 bg-[#D7F1FF] max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
+      <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
+      <div className="top-16 z-10 flex justify-center gap-2 border-t-4 border-[#D7F1FF] bg-[#D7F1FF] pt-1 max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
         <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
         <ToggleButton isMapView={isMap} toggleView={setToggle} />
       </div>
@@ -119,6 +131,7 @@ const Map: React.FC<Props> = (props) => {
                       "/school?name=" + encodeURIComponent(selectedSchool.name)
                     }
                     className="block md:hidden"
+                    passHref
                   >
                     <SelectedSchoolCard school={selectedSchool} />
                   </Link>
@@ -182,6 +195,7 @@ const Map: React.FC<Props> = (props) => {
                   setSelectedSchool={setSelectedSchool}
                   selectedSchool={selectedSchool}
                   schools={props.schools}
+                  onModalOpen={openModal}
                 />
               )}
             </div>

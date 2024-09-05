@@ -62,7 +62,7 @@ class MyDocument extends Document {
           <script
             defer
             data-domain="supportsfschools.org"
-            src="https://plausible.io/js/script.js"
+            src="https://plausible.io/js/script.tagged-events.outbound-links.js"
           ></script>
         </Head>
         <body className="scroll-smooth">

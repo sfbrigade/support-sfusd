@@ -57,14 +57,22 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
               <Link
                 href={school.profile ? school.profile.volunteer_form_url : ""}
                 target="_blank"
-                className="rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8"
+                className={
+                  "plausible-event-name=Clicked+VolunteerForm+" +
+                  school.name.replace(/\s/g, "+") +
+                  " rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8"
+                }
               >
                 Fill out form
               </Link>
               <Link
                 href="https://sfedfund.org/become-a-volunteer/"
                 target="_blank"
-                className="rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8"
+                className={
+                  "plausible-event-name=Clicked+EdFund+" +
+                  school.name.replace(/\s/g, "+") +
+                  " rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8"
+                }
               >
                 Contact SF Ed Fund
               </Link>
