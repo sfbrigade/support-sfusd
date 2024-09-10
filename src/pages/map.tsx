@@ -45,22 +45,8 @@ const Map: React.FC<Props> = (props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
-    // Check if the current URL has the #list hash
     const isListView = router.asPath.includes("#list");
     setIsMap(!isListView);
-
-    // Add event listener for popstate (browser back/forward buttons)
-    const handlePopState = () => {
-      const isListViewAfterPop = window.location.hash === "#list";
-      setIsMap(!isListViewAfterPop);
-    };
-
-    window.addEventListener("popstate", handlePopState);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
   }, [router.asPath]);
 
   const openModal = () => {
