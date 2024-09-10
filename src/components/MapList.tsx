@@ -57,17 +57,19 @@ const MapList = ({
         className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4"
         ref={containerRef}
       >
-        {schools.map((school, index) => (
-          <MapListCard
-            key={index}
-            school={school}
-            setSelectedSchool={setSelectedSchool}
-            isExpanded={
-              selectedSchool ? school.name == selectedSchool.name : false
-            }
-            onModalOpen={onModalOpen}
-          />
-        ))}
+        {schools
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((school, index) => (
+            <MapListCard
+              key={school.name} // @todo: add id to School type so we can use that as key
+              school={school}
+              setSelectedSchool={setSelectedSchool}
+              isExpanded={
+                selectedSchool ? school.name === selectedSchool.name : false
+              }
+              onModalOpen={onModalOpen}
+            />
+          ))}
       </div>
     </div>
   );
