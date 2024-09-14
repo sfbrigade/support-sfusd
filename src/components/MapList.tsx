@@ -26,30 +26,9 @@ const MapList = ({
   selectedSchool,
   onModalOpen,
 }: MapListProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [expandedSchool, setExpandedSchool] = useState<string | null>(null);
-
-  const handleExpansionComplete = (schoolId: string) => {
-    if (containerRef.current) {
-      const selectedElement = containerRef.current.querySelector(
-        `[id="${schoolId}"]`,
-      ) as HTMLElement;
-
-      if (selectedElement) {
-        selectedElement.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-        });
-      }
-    }
-  };
-
   return (
     <div className="flex h-full flex-col">
-      <div
-        className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4"
-        ref={containerRef}
-      >
+      <div className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4">
         {schools
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((school) => (
@@ -58,10 +37,9 @@ const MapList = ({
               school={school}
               setSelectedSchool={setSelectedSchool}
               isExpanded={
-                selectedSchool ? school.name === selectedSchool.name : false
+                selectedSchool ? school.id === selectedSchool.id : false
               }
               onModalOpen={onModalOpen}
-              onExpansionComplete={handleExpansionComplete}
             />
           ))}
       </div>

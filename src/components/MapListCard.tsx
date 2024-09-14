@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 import { School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
@@ -10,7 +10,6 @@ type MapListCardProps = {
   setSelectedSchool: (school: School | null) => void;
   isExpanded: boolean;
   onModalOpen: () => void;
-  onExpansionComplete: (schoolName: string) => void;
 };
 
 /**
@@ -30,14 +29,15 @@ type MapListCardProps = {
  * MapList => MapListCard
  *
  */
-const MapListCard: React.FC<MapListCardProps> = ({
+const MapListCard = ({
   school,
   setSelectedSchool,
   isExpanded,
   onModalOpen,
-  onExpansionComplete,
-}) => {
-  const { id, img, name, neighborhood } = school;
+}: MapListCardProps) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const { img, name, neighborhood } = school;
 
   const students = school.metrics.find(
     (metric) => metric.name == "Students Enrolled",
@@ -49,16 +49,11 @@ const MapListCard: React.FC<MapListCardProps> = ({
     (metric) => metric.name == "English Language Learners",
   );
 
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  const handleTransitionEnd = useCallback(
-    (e: React.TransitionEvent<HTMLDivElement>) => {
-      if (e.propertyName === "max-height" && isExpanded) {
-        onExpansionComplete(school.id);
-      }
-    },
-    [school.id, onExpansionComplete, isExpanded],
-  );
+  const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
+    if (e.propertyName === "max-height" && isExpanded) {
+      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  };
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
     if (isExpanded) {
@@ -67,6 +62,12 @@ const MapListCard: React.FC<MapListCardProps> = ({
       setSelectedSchool(school);
     }
   }
+  useEffect(() => {
+    if (isExpanded) {
+      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [isExpanded]);
+
   return (
     <div
       ref={cardRef}
@@ -75,7 +76,6 @@ const MapListCard: React.FC<MapListCardProps> = ({
       } transition-max-height relative duration-[700ms]`}
       onClick={onClick}
       onTransitionEnd={handleTransitionEnd}
-      id={id}
     >
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
         <div className="flex h-[104px] flex-col justify-center">
@@ -122,7 +122,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
         }`}
       >
         <Image
-          src={`/school_img/${school.img}`}
+          src={`/school_img/${img}`}
           placeholder="blur"
           blurDataURL={blurDataURL}
           alt="School Image"
