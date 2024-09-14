@@ -62,11 +62,6 @@ const MapListCard = ({
       setSelectedSchool(school);
     }
   }
-  useEffect(() => {
-    if (isExpanded) {
-      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
-  }, [isExpanded]);
 
   return (
     <div
