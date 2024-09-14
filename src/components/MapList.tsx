@@ -29,14 +29,10 @@ const MapList = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const [expandedSchool, setExpandedSchool] = useState<string | null>(null);
 
-  const handleExpansionComplete = (schoolName: string) => {
-    setExpandedSchool(schoolName);
-  };
-
-  useEffect(() => {
-    if (expandedSchool && containerRef.current) {
+  const handleExpansionComplete = (schoolId: string) => {
+    if (containerRef.current) {
       const selectedElement = containerRef.current.querySelector(
-        `[data-school-name="${expandedSchool}"]`,
+        `[id="${schoolId}"]`,
       ) as HTMLElement;
 
       if (selectedElement) {
@@ -45,11 +41,8 @@ const MapList = ({
           block: "nearest",
         });
       }
-
-      // Reset expanded school after scrolling
-      setExpandedSchool(null);
     }
-  }, [expandedSchool]);
+  };
 
   return (
     <div className="flex h-full flex-col">
@@ -61,7 +54,7 @@ const MapList = ({
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((school) => (
             <MapListCard
-              key={school.name}
+              key={school.id}
               school={school}
               setSelectedSchool={setSelectedSchool}
               isExpanded={

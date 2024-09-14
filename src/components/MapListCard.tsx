@@ -37,7 +37,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
   onModalOpen,
   onExpansionComplete,
 }) => {
-  const { img, name, neighborhood } = school;
+  const { id, img, name, neighborhood } = school;
 
   const students = school.metrics.find(
     (metric) => metric.name == "Students Enrolled",
@@ -54,10 +54,10 @@ const MapListCard: React.FC<MapListCardProps> = ({
   const handleTransitionEnd = useCallback(
     (e: React.TransitionEvent<HTMLDivElement>) => {
       if (e.propertyName === "max-height" && isExpanded) {
-        onExpansionComplete(school.name);
+        onExpansionComplete(school.id);
       }
     },
-    [school.name, onExpansionComplete, isExpanded],
+    [school.id, onExpansionComplete, isExpanded],
   );
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
@@ -75,8 +75,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
       } transition-max-height relative duration-[700ms]`}
       onClick={onClick}
       onTransitionEnd={handleTransitionEnd}
-      id={name}
-      data-school-name={school.name}
+      id={id}
     >
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
         <div className="flex h-[104px] flex-col justify-center">
