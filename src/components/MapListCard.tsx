@@ -56,12 +56,12 @@ const MapListCard: React.FC<MapListCardProps> = ({
   }
   return (
     <div
-      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[104px]"} transition-max-height relative duration-[700ms]`}
+      className={`relative grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden`}
       onClick={onClick}
       id={name}
     >
-      <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
-        <div className="flex h-[104px] flex-col justify-center">
+      <div className="col-span-6 justify-center overflow-hidden px-4 py-4 transition-all ease-in-out md:col-span-7">
+        <div className="flex flex-col">
           {school.priority && (
             <button
               onClick={(e) => {
@@ -81,7 +81,9 @@ const MapListCard: React.FC<MapListCardProps> = ({
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 max-md:text-sm">
+        <div
+          className={`flex flex-col gap-2 transition-all duration-[700ms] [transition-behavior:allow-discrete] max-md:text-sm ${isExpanded ? "visible mt-4 max-h-48 opacity-100" : "invisible mt-0 max-h-0 opacity-0"}`}
+        >
           <div>
             <b>{students ? students.value : "N/A"}</b> Students
           </div>
@@ -100,7 +102,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
       </div>
       <div
-        className={`transition-max-height relative col-span-4 rounded-r-lg duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[104px]"}`}
+        className={`transition-max-height relative col-span-4 max-h-none rounded-r-lg duration-[700ms] md:col-span-3`}
       >
         <Image
           src={`/school_img/${school.img}`}
