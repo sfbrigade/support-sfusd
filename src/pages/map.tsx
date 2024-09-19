@@ -11,6 +11,7 @@ import prisma from "@/lib/prisma";
 import Image from "next/image";
 import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
+import { useRouter } from "next/router";
 
 interface DropdownItem<ItemType> {
   label: string;
@@ -36,11 +37,17 @@ const schoolCardPlaceholderText =
   "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
 
 const Map: React.FC<Props> = (props) => {
+  const router = useRouter();
   const [selectedSchool, setSelectedSchool] = useState<School | false | null>(
     null,
   );
   const [isMap, setIsMap] = useState(true);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  useEffect(() => {
+    const isListView = router.asPath.includes("#list");
+    setIsMap(!isListView);
+  }, [router.asPath]);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -51,17 +58,14 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const setToggle = () => {
-    setIsMap(!isMap);
+    const newIsMap = !isMap;
+    setIsMap(newIsMap);
 
-    const [mapRootClass, listRootClass] = ["h-dvh-with-fallback", "h-auto"];
-
-    // base new layout on isMap BEFORE it changes to the new value
-    // (otherwise the `h-dvh-with-fallback` appears to apply too late)
-    // FIXME: investigate how to do this in a more canonical NextJS/React way
-    const root = document.getElementById("root");
-    // toggle between map and list layout
-    root?.classList.remove(isMap ? mapRootClass : listRootClass);
-    root?.classList.add(isMap ? listRootClass : mapRootClass);
+    if (newIsMap) {
+      router.push("/map", undefined, { shallow: true });
+    } else {
+      router.push("/map#list", undefined, { shallow: true });
+    }
   };
 
   const onClose = (e: React.MouseEvent<HTMLElement>) => {
