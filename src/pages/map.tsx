@@ -75,7 +75,7 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
-    const results = props.schools
+    return props.schools
       .filter(({ name }) =>
         name.toUpperCase().includes(searchTerm.toUpperCase()),
       )
@@ -84,8 +84,6 @@ const Map: React.FC<Props> = (props) => {
         value: school.name,
         item: school,
       }));
-
-    return results;
   };
 
   const itemSelect = (selection: DropdownItem<School>) => {
