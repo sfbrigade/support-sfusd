@@ -6,7 +6,7 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: mhallwfwwas
+      POSTGRES_PASSWORD: supersecret
       POSTGRES_DB: mydb
     volumes:
       - sfusd-data:/var/lib/postgresql/data
