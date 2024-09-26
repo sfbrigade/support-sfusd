@@ -79,15 +79,15 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
-    const response = await fetch(
-      `/api/searchSchools?searchTerm=${searchTerm}`,
-    ).then((res) => res.json() as Promise<{ schools: School[] }>);
-
-    return response.schools.map((school) => ({
-      label: school.name,
-      value: school.name,
-      item: school,
-    }));
+    return props.schools
+      .filter(({ name }) =>
+        name.toUpperCase().includes(searchTerm.toUpperCase()),
+      )
+      .map((school) => ({
+        label: school.name,
+        value: school.name,
+        item: school,
+      }));
   };
 
   const itemSelect = (selection: DropdownItem<School>) => {
