@@ -15,6 +15,17 @@ const MapboxMap = ({
 }: MapboxMapProps) => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
+  const markersRef = useRef<{ [key: string]: mapboxgl.Marker }>({});
+
+  const updateMarkerAppearance = (marker: mapboxgl.Marker, isSelected: boolean) => {
+    const element = marker.getElement();
+    if (isSelected) {
+      element.className = "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
+    } else {
+      element.className = "marker mapboxgl-marker mapboxgl-marker-anchor-center";
+    }
+  };
+
   useEffect(() => {
     const accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
     if (!accessToken || !mapContainer.current) {
@@ -100,27 +111,10 @@ const MapboxMap = ({
             .setLngLat([Number(school.longitude), Number(school.latitude)])
             .setPopup(popup)
             .addTo(map);
+          markersRef.current[school.name] = schoolMarker;
           const elRef = schoolMarker.getElement();
-          if (selectedSchool && school.name === selectedSchool.name) {
-            elRef.className =
-              "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
-            elRef.focus();
-          }
           elRef.addEventListener("click", () => {
-            var marker_array =
-              document.getElementsByClassName("marker-selected");
-            var i;
-            for (i = 0; i < marker_array.length; i++) {
-              // TODO: refactor in case we add more classes
-              // TODO: refactor to explicitly track what is focused in lieu of searching
-              marker_array[i].className =
-                "marker mapboxgl-marker mapboxgl-marker-anchor-center";
-            }
-            // TODO: refactor in case we add more classes
-            elRef.className =
-              "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
             elRef.focus();
-            // NOTE: workaround for popup disappearing on keyboard selection
             if (!schoolMarker.getPopup().isOpen()) {
               schoolMarker.togglePopup();
             }
@@ -176,7 +170,26 @@ const MapboxMap = ({
         .setLngLat([-122.3778, 37.7983])
         .addTo(map);
     });
-  });
+  }, [schools, setSelectedSchool]);
+
+  // Update marker appearance when selectedSchool changes
+  useEffect(() => {
+    if (mapRef.current && selectedSchool && typeof selectedSchool !== 'boolean') {
+      Object.values(markersRef.current).forEach((marker) => {
+        updateMarkerAppearance(marker, false);
+      });
+      const selectedMarker = markersRef.current[selectedSchool.name];
+      if (selectedMarker) {
+        updateMarkerAppearance(selectedMarker, true);
+        const lngLat = selectedMarker.getLngLat();
+        mapRef.current.flyTo({
+          center: [lngLat.lng, lngLat.lat],
+          zoom: 14,
+        });
+      }
+    }
+  }, [selectedSchool]);
+
   return (
     <>
       <div className="flex h-full w-full items-center justify-center">
