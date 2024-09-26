@@ -116,6 +116,12 @@ async function main() {
               url: "https://www.sfusd.edu/school/balboa-high-school/ptsa/cash-appeal",
               category: ProgramCategory.donate,
             },
+            {
+              name: "WALC Pathway",
+              details: ``,
+              url: "https://walcsf.net/donate-new/",
+              category: ProgramCategory.donate,
+            },
           ],
           skipDuplicates: true,
         },
@@ -356,6 +362,12 @@ async function main() {
               name: "Donors Choose",
               details: ``,
               url: "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/downtown-alternative-cont-high-school/4386",
+              category: ProgramCategory.donate,
+            },
+            {
+              name: "WALC Pathway",
+              details: ``,
+              url: "https://walcsf.net/donate-new/",
               category: ProgramCategory.donate,
             },
           ],
@@ -830,7 +842,7 @@ async function main() {
           about_bp: [
             `As a school for Social Justice serving primarily working class communities of color, the mission of JJSE is not just to prepare students for college but to also be positive agents of change in the world.`,
             `The school's three pillars are Community, Social Justice, and Independent Thinking.`,
-            `June Jordan offers a Motorcycle Mechanics class.`,
+            `Motorcycle Mechanics class and is home to a <a href="https://www.urbansprouts.org/jjse" target="_blank" class="hover:underline text-blue-500">community farm</a>.`,
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/1hVYScQ93TU03a5qh3pyoxVYFp2_xmkAj3-xGH20qNrg/viewform?edit_requested=true",
@@ -1181,7 +1193,7 @@ async function main() {
             `Is one of the most diverse schools in the San Francisco public school district, and beginning in the Fall of the 2007/08 school year, the Mission faculty collectively created a working definition of Anti-Racist/Equity education`,
             `Offers six Career and Tech Ed pathways: Environmental Science, Fire Science and EMS Academy, Media Arts, Peer Resources, Public Health, and Urban Agriculture`,
             `Has a majority of its students learning English as a second language (or perhaps as third or fourth language)`,
-            `Has its own museum, founded in 1995 by a former science teacher, for the purpose of preserving and displaying the rich history of Mission High School`,
+            `Is a historical landmark. It even has its own museum, founded in 1995 by a former science teacher, for the purpose of preserving and displaying the rich history of Mission High School`,
           ],
           volunteer_form_url:
             "https://docs.google.com/forms/d/1oene039Zn-fBGxjI2iS2B9n0O-U2BhtDZl-td9M0hNs",
@@ -1891,7 +1903,7 @@ async function main() {
           about_bp: [
             `Students can choose from more than 100 course offerings, with 52 sections of honors and AP classes.`,
             `Students can also choose from over 50 campus clubs and student groups and a full inter-scholastic athletic program, with 22 teams in 15 sports.`,
-            `Washington has an active Richmond Neighborhood program, Wellness Center, Parent Teacher Student Association, and Alumni Association.`,
+            `Washington has an active <a href="https://richmondsf.org/youth/high-school/washington/" target="_blank" class="hover:underline text-blue-500">Richmond Neighborhood program</a>, Wellness Center, <a href="https://www.gwhsptsa.com/" target="_blank" class="hover:underline text-blue-500">Parent Teacher Student Association</a>, and <a href="https://sites.google.com/sfgwhsalumni.org/gwhs-alumni-association/home" target="_blank" class="hover:underline text-blue-500">Alumni Association</a>.`,
             `Washington offers a sweeping view of the Golden Gate Bridge from its athletic fields.`,
           ],
           volunteer_form_url:
@@ -1984,6 +1996,18 @@ async function main() {
               name: "Donors Choose",
               details: ``,
               url: "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/george-washington-high-school/4403#projects",
+              category: ProgramCategory.donate,
+            },
+            {
+              name: "GWHS Alumni Association",
+              details: ``,
+              url: "https://givebutter.com/sfgwhsalumni",
+              category: ProgramCategory.donate,
+            },
+            {
+              name: "Richmond Neighborhood Center",
+              details: ``,
+              url: "https://form-renderer-app.donorperfect.io/give/the-richmond-neighborhood-center/new-online-donation",
               category: ProgramCategory.donate,
             },
           ],

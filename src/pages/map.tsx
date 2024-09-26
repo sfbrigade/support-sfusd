@@ -34,7 +34,7 @@ type Props = {
 
 const schoolCardPlaceholderTitle = "Select a School";
 const schoolCardPlaceholderText =
-  "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
+  "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
 const Map: React.FC<Props> = (props) => {
   const router = useRouter();
