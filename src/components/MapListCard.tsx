@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import Tag from "./Tag";
 type MapListCardProps = {
   school: School;
   setSelectedSchool: (school: School | null) => void;
-  isExpanded: Boolean;
+  isExpanded: boolean;
   onModalOpen: () => void;
 };
 
@@ -29,12 +29,14 @@ type MapListCardProps = {
  * MapList => MapListCard
  *
  */
-const MapListCard: React.FC<MapListCardProps> = ({
+const MapListCard = ({
   school,
   setSelectedSchool,
   isExpanded,
   onModalOpen,
-}) => {
+}: MapListCardProps) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
   const { img, name, neighborhood } = school;
 
   const students = school.metrics.find(
@@ -47,6 +49,12 @@ const MapListCard: React.FC<MapListCardProps> = ({
     (metric) => metric.name == "English Language Learners",
   );
 
+  const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
+    if (e.propertyName === "max-height" && isExpanded) {
+      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  };
+
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
     if (isExpanded) {
       setSelectedSchool(null);
@@ -54,11 +62,15 @@ const MapListCard: React.FC<MapListCardProps> = ({
       setSelectedSchool(school);
     }
   }
+
   return (
     <div
-      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${isExpanded ? "max-h-[300px]" : "max-h-[104px]"} transition-max-height relative duration-[700ms]`}
+      ref={cardRef}
+      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${
+        isExpanded ? "max-h-[300px]" : "max-h-[104px]"
+      } transition-max-height relative duration-[700ms]`}
       onClick={onClick}
-      id={name}
+      onTransitionEnd={handleTransitionEnd}
     >
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
         <div className="flex h-[104px] flex-col justify-center">
@@ -100,10 +112,12 @@ const MapListCard: React.FC<MapListCardProps> = ({
         </div>
       </div>
       <div
-        className={`transition-max-height relative col-span-4 rounded-r-lg duration-[700ms] md:col-span-3 ${isExpanded ? "max-h-[300px]" : "max-h-[104px]"}`}
+        className={`transition-max-height relative col-span-4 rounded-r-lg duration-[700ms] md:col-span-3 ${
+          isExpanded ? "max-h-[300px]" : "max-h-[104px]"
+        }`}
       >
         <Image
-          src={`/school_img/${school.img}`}
+          src={`/school_img/${img}`}
           placeholder="blur"
           blurDataURL={blurDataURL}
           alt="School Image"
@@ -116,7 +130,9 @@ const MapListCard: React.FC<MapListCardProps> = ({
           alt="Arrow Icon"
           width={24}
           height={24}
-          className={`absolute bottom-1.5 right-1.5 transition duration-[700ms] ${isExpanded ? "rotate-[-180deg]" : "rotate-0"}`}
+          className={`absolute bottom-1.5 right-1.5 transition duration-[700ms] ${
+            isExpanded ? "rotate-[-180deg]" : "rotate-0"
+          }`}
         />
       </div>
     </div>

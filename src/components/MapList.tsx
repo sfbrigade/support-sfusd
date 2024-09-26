@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import MapListCard from "./MapListCard";
 import { School } from "@/types/school";
 
 type MapListProps = {
   schools: School[];
-  setSelectedSchool: (school: School | null) => void;
+  setSelectedSchool: (school: School | false | null) => void;
   selectedSchool: School | false | null;
   onModalOpen: () => void;
 };
@@ -26,46 +26,18 @@ const MapList = ({
   selectedSchool,
   onModalOpen,
 }: MapListProps) => {
-  // Create a ref for the container div
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  // Scroll to selected school when it changes
-  useEffect(() => {
-    if (selectedSchool && containerRef.current) {
-      const index = schools.findIndex(
-        (school) => school.name == selectedSchool.name,
-      );
-
-      const scrollPosition = index * 88;
-      if (window.innerWidth > 768) {
-        containerRef.current.scrollTo({
-          top: scrollPosition,
-          behavior: "smooth",
-        });
-      } else {
-        window.scrollTo({
-          top: scrollPosition,
-          behavior: "smooth",
-        });
-      }
-    }
-  }, [selectedSchool, schools]);
-
   return (
     <div className="flex h-full flex-col">
-      <div
-        className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4"
-        ref={containerRef}
-      >
+      <div className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4">
         {schools
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map((school, index) => (
+          .map((school) => (
             <MapListCard
-              key={school.name} // @todo: add id to School type so we can use that as key
+              key={school.id}
               school={school}
               setSelectedSchool={setSelectedSchool}
               isExpanded={
-                selectedSchool ? school.name === selectedSchool.name : false
+                selectedSchool ? school.id === selectedSchool.id : false
               }
               onModalOpen={onModalOpen}
             />
