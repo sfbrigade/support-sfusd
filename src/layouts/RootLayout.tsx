@@ -39,6 +39,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       id="root"
       className={`${inter.className} flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
+      {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component */}
       {(pathname.includes("/school") || pathname === "/") &&
         isBannerShowing && (
           <>
