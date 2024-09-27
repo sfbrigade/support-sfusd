@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
@@ -47,7 +47,13 @@ const MapListCard: React.FC<MapListCardProps> = ({
     (metric) => metric.name == "English Language Learners",
   );
 
+  const learnMoreRef = useRef<HTMLAnchorElement>(null);
+
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
+    if (learnMoreRef.current && learnMoreRef.current.contains(e.target as Node)) {
+      return; // Do nothing if the click was on the "Learn More" link
+    }
+
     if (isExpanded) {
       setSelectedSchool(null);
     } else {
@@ -92,6 +98,7 @@ const MapListCard: React.FC<MapListCardProps> = ({
             <b>{ell ? ell.value : "N/A"}%</b> English Language Learners
           </div>
           <Link
+            ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
             href={"/school?name=" + encodeURIComponent(school.name)}
           >

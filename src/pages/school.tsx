@@ -12,6 +12,7 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import { useMapContext } from '../contexts/MapContext';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const schools = await prisma.school.findMany({
@@ -33,9 +34,17 @@ const Profile: React.FC<Props> = (props) => {
   const { name } = router.query;
   const { schools } = props;
   const school = schools.find((school) => school.name == name);
+  const { isMapView } = useMapContext();
+
+  const handleBack = () => {
+    router.push('/map');
+  };
 
   return (
     <>
+      <button onClick={handleBack} className="m-4 p-2 bg-blue-500 text-white rounded">
+        Back to {isMapView ? 'Map' : 'List'}
+      </button>
       {school && (
         <div>
           <div className="relative w-full">

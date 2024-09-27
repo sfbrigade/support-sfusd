@@ -4,12 +4,14 @@ import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/router";
 import ContactUs from "@/components/ContactUs";
+import { useMapContext } from "@/contexts/MapContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { pathname } = router;
+  const { isMapView } = useMapContext();
 
   const [isBannerShowing, setIsBannerShowing] = useState(true);
 
@@ -30,14 +32,11 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     </>
   );
 
-  /* NOTE: id="root" is currently required as a hook by the JS view logic in `map.tsx` to help constrain the map height to the mobile viewport */
-
   return (
     <div
       id="root"
-      className={`${inter.className} flex flex-col px-0 ${pathname.includes("/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`${inter.className} flex flex-col px-0 ${isMapView ? "h-dvh-with-fallback" : "h-auto"}`}
     >
-      {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component */}
       {(pathname.includes("/school") || pathname === "/") &&
         isBannerShowing && (
           <>

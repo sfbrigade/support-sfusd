@@ -3,7 +3,7 @@ import mapboxgl, { LngLatBounds } from "mapbox-gl";
 import { useEffect, useRef } from "react";
 
 type MapboxMapProps = {
-  setSelectedSchool: (school: School | false | null) => void;
+  setSelectedSchool: (school: School | null) => void;
   selectedSchool: School | false | null;
   schools: School[];
 };
