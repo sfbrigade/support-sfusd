@@ -32,10 +32,12 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     </>
   );
 
+  /* NOTE: id="root" is currently required as a hook by the JS view logic in `map.tsx` to help constrain the map height to the mobile viewport */
+
   return (
     <div
       id="root"
-      className={`${inter.className} flex flex-col px-0 ${isMapView ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`${inter.className} flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
       {(pathname.includes("/school") || pathname === "/") &&
         isBannerShowing && (
