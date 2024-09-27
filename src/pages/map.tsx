@@ -53,10 +53,6 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const onClose = (e: React.MouseEvent<HTMLElement>) => {
-    // setting this to null ensures dismissal of school card
-    // (whereas setting it to null, the initial value, will show
-    // the empty instruction card)
-    /* TODO: consider using something more descriptive like an enum instead */
     setSelectedSchool(null);
     e.preventDefault();
     e.stopPropagation();
