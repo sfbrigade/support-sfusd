@@ -131,9 +131,7 @@ const Map: React.FC<Props> = (props) => {
               selectedSchool ? (
                 <div className="w-full md:w-auto">
                   <Link
-                    href={
-                      "/school?name=" + encodeURIComponent(selectedSchool.name)
-                    }
+                    href={"/schools/" + encodeURIComponent(selectedSchool.name)}
                     className="block md:hidden"
                     passHref
                   >
