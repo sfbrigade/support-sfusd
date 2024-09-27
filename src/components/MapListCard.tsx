@@ -105,7 +105,7 @@ const MapListCard = ({
           </div>
           <Link
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
-            href={"/school?name=" + encodeURIComponent(school.name)}
+            href={"/schools/" + encodeURIComponent(school.name)}
           >
             Learn More
           </Link>

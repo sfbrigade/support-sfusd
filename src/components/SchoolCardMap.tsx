@@ -83,7 +83,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         md:rounded-t-2xl`}
       >
         <Link
-          href={"/school?name=" + encodeURIComponent(school.name)}
+          href={"/schools/" + encodeURIComponent(school.name)}
           className="hidden md:inline"
         >
           <SchoolImage src={`/school_img/${school.img}`} alt={school.name} />
@@ -144,7 +144,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         </div>
         <Link
           className="hidden md:block"
-          href={"/school?name=" + encodeURIComponent(school.name)}
+          href={"/schools/" + encodeURIComponent(school.name)}
         >
           <LearnMoreButton />
         </Link>
