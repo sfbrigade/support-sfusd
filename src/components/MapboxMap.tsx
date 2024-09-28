@@ -1,6 +1,7 @@
 import { School } from "@/types/school";
 import mapboxgl, { LngLatBounds } from "mapbox-gl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
+import { useMapContext } from '@/contexts/MapContext';
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School | null) => void;
@@ -8,15 +9,20 @@ type MapboxMapProps = {
   schools: School[];
 };
 
-const MapboxMap = ({
-  setSelectedSchool,
-  selectedSchool,
-  schools,
-}: MapboxMapProps) => {
+const MapboxMap = ({ schools }: MapboxMapProps) => {
+  const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markersRef = useRef<{ [key: string]: mapboxgl.Marker }>({});
   const [mapLoaded, setMapLoaded] = useState(false);
+  const userHasInteracted = useRef(false);
+
+  const flyToOptions = useMemo(() => ({
+    zoom: 14,
+    speed: 1.2,
+    curve: 1,
+    easing: (t: number) => t,
+  }), []);
 
   const updateMarkerAppearance = (marker: mapboxgl.Marker, isSelected: boolean) => {
     const element = marker.getElement();
@@ -58,6 +64,7 @@ const MapboxMap = ({
     mapRef.current = map;
     map.on("click", () => {
       setSelectedSchool(null);
+      userHasInteracted.current = true;
     });
     map.on("load", () => {
       const geolocate = new mapboxgl.GeolocateControl({
@@ -99,6 +106,7 @@ const MapboxMap = ({
         el.className = "marker";
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
+          userHasInteracted.current = true;
           e.preventDefault();
           e.stopPropagation();
         });
@@ -149,6 +157,7 @@ const MapboxMap = ({
               // pan to marker
               map.flyTo({
                 center: [lngLat.lng, lngLat.lat],
+                ...flyToOptions,
               });
             }
           });
@@ -184,21 +193,33 @@ const MapboxMap = ({
 
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
-    if (mapLoaded && mapRef.current && selectedSchool && typeof selectedSchool !== 'boolean') {
+    if (mapLoaded && mapRef.current && selectedSchool) {
       Object.values(markersRef.current).forEach((marker) => {
         updateMarkerAppearance(marker, false);
       });
       const selectedMarker = markersRef.current[selectedSchool.name];
       if (selectedMarker) {
         updateMarkerAppearance(selectedMarker, true);
-        const lngLat = selectedMarker.getLngLat();
-        mapRef.current.flyTo({
-          center: [lngLat.lng, lngLat.lat],
-          zoom: 14,
-        });
+        const lngLat = selectedMarker.getLngLat();        
+        
+        if (!userHasInteracted.current) {
+          // Use jumpTo when returning from detail page
+          mapRef.current.jumpTo({
+            center: [lngLat.lng, lngLat.lat],
+            zoom: flyToOptions.zoom,
+          });
+          userHasInteracted.current = true;
+        } else {
+          // Use flyTo for all other cases
+          mapRef.current.flyTo({
+            center: [lngLat.lng, lngLat.lat],
+            ...flyToOptions,
+          });
+        }
       }
     }
-  }, [selectedSchool, mapLoaded]);
+    
+  }, [selectedSchool, mapLoaded, flyToOptions, userHasInteracted]);
 
   return (
     <>
