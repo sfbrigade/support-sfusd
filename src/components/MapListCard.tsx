@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
+import { useMapContext } from "@/contexts/MapContext";
 
 type MapListCardProps = {
   school: School;
@@ -35,6 +36,7 @@ const MapListCard = ({
   isExpanded,
   onModalOpen,
 }: MapListCardProps) => {
+  const { selectedSchool } = useMapContext();
   const cardRef = useRef<HTMLDivElement>(null);
 
   const { img, name, neighborhood } = school;
@@ -68,6 +70,12 @@ const MapListCard = ({
       setSelectedSchool(school);
     }
   }
+
+  useEffect(() => {
+    if (selectedSchool && selectedSchool.id === school.id) {
+      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [selectedSchool, school.id]);
 
   return (
     <div
