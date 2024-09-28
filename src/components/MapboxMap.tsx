@@ -18,10 +18,10 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
   const userHasInteracted = useRef(false);
 
   const flyToOptions = useMemo(() => ({
-    zoom: 14,
-    speed: 1.2,
-    curve: 1,
-    easing: (t: number) => t,
+    zoom: 14, // zoom level to fly to
+    speed: 1.2, // speed of animation .. slowing things down a bit.
+    curve: 1, // smoothness of animation
+    easing: (t: number) => t, // linear easing
   }), []);
 
   const updateMarkerAppearance = (marker: mapboxgl.Marker, isSelected: boolean) => {
@@ -193,7 +193,9 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
 
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
+    // check mapLoaded to avoid race condition where markersRef is not yet initialized
     if (mapLoaded && mapRef.current && selectedSchool) {
+      // set all markers to default appearance
       Object.values(markersRef.current).forEach((marker) => {
         updateMarkerAppearance(marker, false);
       });
@@ -203,7 +205,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         const lngLat = selectedMarker.getLngLat();        
         
         if (!userHasInteracted.current) {
-          // Use jumpTo when returning from detail page
+          // Use jumpTo when returning from detail page. it's less dizzying.
           mapRef.current.jumpTo({
             center: [lngLat.lng, lngLat.lat],
             zoom: flyToOptions.zoom,
