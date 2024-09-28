@@ -34,7 +34,7 @@ type Props = {
 
 const schoolCardPlaceholderTitle = "Select a School";
 const schoolCardPlaceholderText =
-  "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
+  "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
 const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } = useMapContext();
@@ -59,15 +59,15 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
-    const response = await fetch(
-      `/api/searchSchools?searchTerm=${searchTerm}`,
-    ).then((res) => res.json() as Promise<{ schools: School[] }>);
-
-    return response.schools.map((school) => ({
-      label: school.name,
-      value: school.name,
-      item: school,
-    }));
+    return props.schools
+      .filter(({ name }) =>
+        name.toUpperCase().includes(searchTerm.toUpperCase()),
+      )
+      .map((school) => ({
+        label: school.name,
+        value: school.name,
+        item: school,
+      }));
   };
 
   const itemSelect = (selection: DropdownItem<School>) => {
