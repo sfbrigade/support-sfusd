@@ -75,9 +75,17 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
+    const strComparePrep = (str: string) =>
+      str
+        .normalize() // normalize unicode characters
+        .replace(/[\u0300-\u036f]/g, "") // remove combining diacritical marks
+        .replace(/\s+/g, "") // remove whitespace
+        .replace(/[^\w\s]/g, "") // remove non-word characters (punctuation)
+        .toUpperCase(); // insensitive case
+
     return props.schools
       .filter(({ name }) =>
-        name.toUpperCase().includes(searchTerm.toUpperCase()),
+        strComparePrep(name).includes(strComparePrep(searchTerm)),
       )
       .map((school) => ({
         label: school.name,
