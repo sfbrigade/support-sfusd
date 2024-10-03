@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
+import { useMapContext } from "@/contexts/MapContext";
 
 type MapListCardProps = {
   school: School;
@@ -35,6 +36,7 @@ const MapListCard = ({
   isExpanded,
   onModalOpen,
 }: MapListCardProps) => {
+  const { selectedSchool } = useMapContext();
   const cardRef = useRef<HTMLDivElement>(null);
 
   const { img, name, neighborhood } = school;
@@ -49,6 +51,8 @@ const MapListCard = ({
     (metric) => metric.name == "English Language Learners",
   );
 
+  const learnMoreRef = useRef<HTMLAnchorElement>(null);
+
   const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
     if (e.propertyName === "max-height" && isExpanded) {
       cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -56,12 +60,22 @@ const MapListCard = ({
   };
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
+    if (learnMoreRef.current && learnMoreRef.current.contains(e.target as Node)) {
+      return; // Do nothing if the click was on the "Learn More" link
+    }
+
     if (isExpanded) {
       setSelectedSchool(null);
     } else {
       setSelectedSchool(school);
     }
   }
+
+  useEffect(() => {
+    if (selectedSchool && selectedSchool.id === school.id) {
+      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [selectedSchool, school.id]);
 
   return (
     <div
@@ -104,6 +118,7 @@ const MapListCard = ({
             <b>{ell ? ell.value : "N/A"}%</b> English Language Learners
           </div>
           <Link
+            ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
             href={"/school?name=" + encodeURIComponent(school.name)}
           >
