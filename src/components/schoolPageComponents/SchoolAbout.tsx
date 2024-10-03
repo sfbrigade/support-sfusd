@@ -13,8 +13,12 @@ const SchoolAbout: React.FC<{ school: School }> = ({ school }) => {
           <div className="md:text-lg">{school.profile.about}</div>
           <ul className="ml-4 mt-6 list-disc md:text-lg">
             {school.profile.about_bp.map((bullet: string, i: number) => (
-              <li key={i} className="ml-2">
-                {bullet}
+              <li
+                key={i}
+                className="ml-2"
+                dangerouslySetInnerHTML={{ __html: bullet }}
+              >
+                {/* {bullet} */}
               </li>
             ))}
           </ul>

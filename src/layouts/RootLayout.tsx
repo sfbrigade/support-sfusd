@@ -4,12 +4,15 @@ import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/router";
 import ContactUs from "@/components/ContactUs";
+import { useMapContext } from "@/contexts/MapContext";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { pathname } = router;
+  const { isMapView } = useMapContext();
 
   const [isBannerShowing, setIsBannerShowing] = useState(true);
 
@@ -35,7 +38,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="root"
-      className={`${inter.className} flex flex-col px-0 ${pathname.includes("/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`${inter.className} flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
       {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component */}
       {(pathname.includes("/school") || pathname === "/") &&
@@ -52,6 +55,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         )}
       <Navbar />
       <div className="flex-1">{children}</div>
+      <BackToTop />
     </div>
   );
 }

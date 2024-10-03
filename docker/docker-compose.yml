@@ -1,0 +1,22 @@
+# Docker Compose file for setting up a PostgreSQL database for the SFUSD project
+
+services:
+  sfusd_db:
+    image: postgres
+    shm_size: 128mb
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: supersecret
+      POSTGRES_DB: mydb
+    volumes:
+      - sfusd-data:/var/lib/postgresql/data
+
+  # adminer:
+  #   image: adminer
+  #   ports:
+  #     - 8080:8080
+
+volumes:
+  sfusd-data:
+    driver: local
