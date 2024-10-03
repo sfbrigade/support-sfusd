@@ -61,11 +61,15 @@ const Map: React.FC<Props> = (props) => {
     const newIsMap = !isMap;
     setIsMap(newIsMap);
 
-    if (newIsMap) {
-      router.push("/map", undefined, { shallow: true });
-    } else {
-      router.push("/map#list", undefined, { shallow: true });
-    }
+    const [mapRootClass, listRootClass] = ["h-dvh-with-fallback", "h-auto"];
+
+    // base new layout on isMap BEFORE it changes to the new value
+    // (otherwise the `h-dvh-with-fallback` appears to apply too late)
+    // FIXME: investigate how to do this in a more canonical NextJS/React way
+    const root = document.getElementById("root");
+    // toggle between map and list layout
+    root?.classList.add(newIsMap ? mapRootClass : listRootClass);
+    root?.classList.remove(newIsMap ? listRootClass : mapRootClass);
   };
 
   const onClose = (e: React.MouseEvent<HTMLElement>) => {
