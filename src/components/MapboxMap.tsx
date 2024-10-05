@@ -1,5 +1,5 @@
 import { School } from "@/types/school";
-import mapboxgl, { LngLatBounds } from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 import { useEffect, useRef, useState, useMemo } from "react";
 import { useMapContext } from "@/contexts/MapContext";
 
@@ -19,7 +19,6 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
 
   const flyToOptions = useMemo(
     () => ({
-      zoom: 14, // zoom level to fly to
       speed: 1.2, // speed of animation .. slowing things down a bit.
       curve: 1, // smoothness of animation
       easing: (t: number) => t, // linear easing
@@ -216,7 +215,6 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
           // Use jumpTo when returning from detail page. it's less dizzying.
           mapRef.current.jumpTo({
             center: [lngLat.lng, lngLat.lat],
-            zoom: flyToOptions.zoom,
           });
           userHasInteracted.current = true;
         } else {
