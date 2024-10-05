@@ -1,7 +1,7 @@
 import { School } from "@/types/school";
 import mapboxgl, { LngLatBounds } from "mapbox-gl";
 import { useEffect, useRef, useState, useMemo } from "react";
-import { useMapContext } from '@/contexts/MapContext';
+import { useMapContext } from "@/contexts/MapContext";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School | null) => void;
@@ -17,19 +17,27 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
   const [mapLoaded, setMapLoaded] = useState(false);
   const userHasInteracted = useRef(false);
 
-  const flyToOptions = useMemo(() => ({
-    zoom: 14, // zoom level to fly to
-    speed: 1.2, // speed of animation .. slowing things down a bit.
-    curve: 1, // smoothness of animation
-    easing: (t: number) => t, // linear easing
-  }), []);
+  const flyToOptions = useMemo(
+    () => ({
+      zoom: 14, // zoom level to fly to
+      speed: 1.2, // speed of animation .. slowing things down a bit.
+      curve: 1, // smoothness of animation
+      easing: (t: number) => t, // linear easing
+    }),
+    [],
+  );
 
-  const updateMarkerAppearance = (marker: mapboxgl.Marker, isSelected: boolean) => {
+  const updateMarkerAppearance = (
+    marker: mapboxgl.Marker,
+    isSelected: boolean,
+  ) => {
     const element = marker.getElement();
     if (isSelected) {
-      element.className = "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
+      element.className =
+        "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
     } else {
-      element.className = "marker mapboxgl-marker mapboxgl-marker-anchor-center";
+      element.className =
+        "marker mapboxgl-marker mapboxgl-marker-anchor-center";
     }
   };
 
@@ -202,13 +210,12 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       const selectedMarker = markersRef.current[selectedSchool.name];
       if (selectedMarker) {
         updateMarkerAppearance(selectedMarker, true);
-        const lngLat = selectedMarker.getLngLat();        
-        
+        const lngLat = selectedMarker.getLngLat();
+
         if (!userHasInteracted.current) {
           // Use jumpTo when returning from detail page. it's less dizzying.
           mapRef.current.jumpTo({
             center: [lngLat.lng, lngLat.lat],
-            zoom: flyToOptions.zoom,
           });
           userHasInteracted.current = true;
         } else {
@@ -220,7 +227,6 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         }
       }
     }
-    
   }, [selectedSchool, mapLoaded, flyToOptions, userHasInteracted]);
 
   return (
