@@ -58,9 +58,13 @@ We're using Prisma as our ORM. If you're unsure of what it is or what it does he
 
 # Environment File
 
-Create an environment file to pass your default public token from Mapbox
+Create an environment file to pass your default public token from Mapbox and connect Prisma to postgres
 
-1. Create a new file, `.env`, in the main directory (with the README.md file)
+1. Create the local server env file in the main directory (with the README.md file):
+
+   ```sh
+   cp .env.example .env
+   ```
 
 2. Add your default public token to your `.env`
 
@@ -68,10 +72,10 @@ Create an environment file to pass your default public token from Mapbox
    NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_default_public_token
    ```
 
-3. For the prisma configuration you're going to need the vercel postgres URL, add both of these to your `.env` file, for security we will be adding these to the notion
+3. For the prisma configuration you're going to need the vercel postgres URLs. For security, please ask an existing developer for this information. Add both of these to your `.env` file. Alternatively, you can [follow these instructions](docker/README.md) to set up a local Postgres instance in a Docker container.
    ```sh
-   POSTGRES_PRISMA_URL=check_notion_page
-   POSTGRES_URL_NON_POOLING=check_notion_page
+   POSTGRES_PRISMA_URL=ask_a_dev
+   POSTGRES_URL_NON_POOLING=ask_a_dev
    ```
 
 <br>
