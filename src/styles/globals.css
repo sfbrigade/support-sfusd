@@ -64,7 +64,7 @@ h6 * {
   border-radius: 0;
   cursor: pointer;
   outline: none;
-  z-index: 10;
+  z-index: 5;
 }
 
 .golden-gate-marker {
