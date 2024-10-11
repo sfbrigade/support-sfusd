@@ -156,12 +156,12 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
               schoolMarker.togglePopup();
             }
 
-            // if we are outside of the bounds, recenter/rezoom (intended for keyboard navigation)
             const lngLat = schoolMarker.getLngLat();
             const bounds = map.getBounds();
 
+            // if we have focused on a school outside of the bounds of the map, recenter (e.g., for keyboard navigation)
             if (!bounds.contains(lngLat)) {
-              // pan to marker
+              // pan to school marker
               map.flyTo({
                 center: [lngLat.lng, lngLat.lat],
                 ...flyToOptions,
@@ -219,10 +219,17 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
           userHasInteracted.current = true;
         } else {
           // Use flyTo for all other cases
-          mapRef.current.flyTo({
-            center: [lngLat.lng, lngLat.lat],
-            ...flyToOptions,
-          });
+
+          // if we are outside of the bounds, recenter (intended for keyboard navigation)
+          const bounds = mapRef.current.getBounds();
+
+          if (!bounds.contains(lngLat)) {
+            // pan to marker
+            mapRef.current.flyTo({
+              center: [lngLat.lng, lngLat.lat],
+              ...flyToOptions,
+            });
+          }
         }
       }
     }
