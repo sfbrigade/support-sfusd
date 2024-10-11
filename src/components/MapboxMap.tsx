@@ -213,16 +213,23 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
 
         if (!userHasInteracted.current) {
           // Use jumpTo when returning from detail page. it's less dizzying.
-          mapRef.current.jumpTo({
-            center: [lngLat.lng, lngLat.lat],
-          });
-          userHasInteracted.current = true;
+
+          const bounds = mapRef.current.getBounds();
+
+          // if we have focused on a school outside of the bounds of the map, recenter
+          if (!bounds.contains(lngLat)) {
+            // jump to marker
+            mapRef.current.jumpTo({
+              center: [lngLat.lng, lngLat.lat],
+            });
+            userHasInteracted.current = true;
+          }
         } else {
           // Use flyTo for all other cases
 
-          // if we are outside of the bounds, recenter (intended for keyboard navigation)
           const bounds = mapRef.current.getBounds();
 
+          // if we have focused on a school outside of the bounds of the map, recenter
           if (!bounds.contains(lngLat)) {
             // pan to marker
             mapRef.current.flyTo({
