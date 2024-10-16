@@ -18,8 +18,13 @@ type ContactUsProps = {
  * Beta banner (or About page ) => ContactUs
  *
  */
+interface FormDataProps {
+  name: string;
+  email: string;
+  message: string;
+}
 const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormDataProps>({
     name: "",
     email: "",
     message: "",
@@ -28,14 +33,12 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
   /**
    * isEmail: Validates the email input using a regular expression.
    */
-  function isEmail(emailInput: string) {
-    let regEmail =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!regEmail.test(emailInput)) {
-      return false;
-    }
-    return true;
+  function isEmailValid(emailInput: string): boolean {
+    const regEmailExpression =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regEmailExpression.test(String(emailInput).toLowerCase());
   }
+
   /**
    * handleChange: Updates the form data when the user types in the input fields.
    */
@@ -58,8 +61,9 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
    */
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!isEmail(formData.email)) {
-      alert("Please enter a valid email address");
+
+    if (!isEmailValid(formData.email)) {
+      alert("Please enter a valid email, e.g., example@example.com.'");
       return;
     }
 
@@ -80,7 +84,6 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
         );
     }
   };
-
   return (
     <div
       className="modal-overlay fixed inset-0 z-50 flex
