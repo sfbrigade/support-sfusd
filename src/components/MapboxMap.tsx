@@ -9,6 +9,15 @@ type MapboxMapProps = {
   schools: School[];
 };
 
+const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
+  // check if marker within bounds of map
+  const lngLat = marker.getLngLat();
+  const bounds = map.getBounds();
+  const isInsideMap = bounds.contains(lngLat);
+
+  return isInsideMap;
+};
+
 const MapboxMap = ({ schools }: MapboxMapProps) => {
   const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
@@ -157,10 +166,9 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
             }
 
             const lngLat = schoolMarker.getLngLat();
-            const bounds = map.getBounds();
 
             // if we have focused on a school outside of the bounds of the map, recenter (e.g., for keyboard navigation)
-            if (!bounds.contains(lngLat)) {
+            if (!isVisible(schoolMarker, map)) {
               // pan to school marker
               map.flyTo({
                 center: [lngLat.lng, lngLat.lat],
@@ -196,7 +204,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, [schools, setSelectedSchool]);
+  }, [schools, setSelectedSchool, flyToOptions]);
 
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
@@ -214,10 +222,8 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         if (!userHasInteracted.current) {
           // Use jumpTo when returning from detail page. it's less dizzying.
 
-          const bounds = mapRef.current.getBounds();
-
           // if we have focused on a school outside of the bounds of the map, recenter
-          if (!bounds.contains(lngLat)) {
+          if (!isVisible(selectedMarker, mapRef.current)) {
             // jump to marker
             mapRef.current.jumpTo({
               center: [lngLat.lng, lngLat.lat],
@@ -227,10 +233,8 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         } else {
           // Use flyTo for all other cases
 
-          const bounds = mapRef.current.getBounds();
-
           // if we have focused on a school outside of the bounds of the map, recenter
-          if (!bounds.contains(lngLat)) {
+          if (!isVisible(selectedMarker, mapRef.current)) {
             // pan to marker
             mapRef.current.flyTo({
               center: [lngLat.lng, lngLat.lat],
