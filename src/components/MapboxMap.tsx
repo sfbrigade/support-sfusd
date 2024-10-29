@@ -17,13 +17,11 @@ const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
 
   // check if marker is obscured by other elements
   const markerEl = marker.getElement();
-  const markerRect = markerEl.getBoundingClientRect();
+  const { top, right, bottom, left } = markerEl.getBoundingClientRect();
   // find center of marker
   // TODO: check entire rectangle instead
-  const markerX =
-    markerRect.left + Math.round(markerRect.right - markerRect.left) / 2;
-  const markerY =
-    markerRect.top + Math.round(markerRect.bottom - markerRect.top) / 2;
+  const markerX = left + Math.round(right - left) / 2;
+  const markerY = top + Math.round(bottom - top) / 2;
 
   const topEl = document.elementFromPoint(markerX, markerY);
 
