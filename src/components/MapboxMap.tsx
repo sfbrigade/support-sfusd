@@ -19,13 +19,23 @@ const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
   const markerEl = marker.getElement();
   const { top, right, bottom, left } = markerEl.getBoundingClientRect();
   // find center of marker
-  // TODO: check entire rectangle instead
-  const markerX = left + Math.round(right - left) / 2;
-  const markerY = top + Math.round(bottom - top) / 2;
+  const [cX, cY] = [
+    left + Math.round(right - left) / 2,
+    top + Math.round(bottom - top) / 2,
+  ];
 
-  const topEl = document.elementFromPoint(markerX, markerY);
+  // assume points on top, bottom, right, left edges are within the bounding rect and test what the topmost element is at each point
+  const topEls = [
+    [cX, top + 1],
+    [right - 1, cY],
+    [cX, bottom - 1],
+    [left + 1, cY],
+  ].map(([x, y]) => document.elementFromPoint(x, y));
 
-  const isOnTop = markerEl.isSameNode(topEl);
+  // determine if all chosen marker points are visible
+  const isOnTop = topEls.reduce((acc, topEl) => {
+    return acc && markerEl.isSameNode(topEl);
+  }, true);
 
   return isInsideMap && isOnTop;
 };
@@ -52,6 +62,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     isSelected: boolean,
   ) => {
     const element = marker.getElement();
+
     if (isSelected) {
       element.className =
         "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
