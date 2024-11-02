@@ -1,11 +1,9 @@
 import { AppProps } from "next/app";
-import { Provider } from "react-redux";
-import store from "../store/store";
 import "../styles/globals.css";
 import Layout from "../layouts/RootLayout";
 import { Fredoka, Lato } from "next/font/google";
 import Head from "next/head";
-import { MapProvider } from '../contexts/MapContext';
+import { MapProvider } from "../contexts/MapContext";
 
 const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka" });
 const lato = Lato({
@@ -16,7 +14,7 @@ const lato = Lato({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
+    <>
       <Head>
         <title>Support SF Schools</title>
       </Head>
@@ -27,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </div>
         </Layout>
       </MapProvider>
-    </Provider>
+    </>
   );
 }
 
