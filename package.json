@@ -41,6 +41,7 @@
     "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "^9.1.0",
     "file-loader": "^6.2.0",
+    "googleapis": "^144.0.0",
     "jsdom": "^25.0.1",
     "openai": "^4.71.1",
     "postcss": "8.4.29",
