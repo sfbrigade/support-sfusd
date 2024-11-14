@@ -1,3 +1,6 @@
+// fetchFullImages.ts
+// Purpose: fetch full-size images for each school in the school list
+
 import {
   readSchoolList,
   schoolListFilePath,
@@ -40,11 +43,12 @@ async function downloadFullImages() {
   writeSchoolList(schoolList);
 }
 
-// run the download
-downloadFullImages()
-  .then(() => {
-    console.log("done.");
-  })
-  .catch((err) => {
-    console.error("shit!", err);
-  });
+function main() {
+  downloadFullImages()
+    .then(() => {
+      console.log("done.");
+    })
+    .catch(console.error);
+}
+
+main();

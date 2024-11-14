@@ -3,14 +3,14 @@ import { assert } from "console";
 import * as fs from "fs";
 import OpenAI from "openai";
 
-const schoolListFileName = "./data/schoolList.json";
+import { schoolListFilePath } from "./shared";
 
 // Initialize OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Function to extract street addresses from text
+// extract street addresses from text using OpenAI GPT-3
 async function extractStreetAddresses(userText: string): Promise<string[]> {
   try {
     const response = await openai.chat.completions.create({
@@ -48,6 +48,8 @@ async function extractStreetAddresses(userText: string): Promise<string[]> {
   }
 }
 
+// create a school stub from a URL stub
+// ex. /schools/abraham-lincoln-high-school => abraham-lincoln-high-school
 function schoolStubFromUrlStub(urlStub: string): string | undefined {
   if (urlStub) {
     const parts = urlStub.split("/");
@@ -55,6 +57,7 @@ function schoolStubFromUrlStub(urlStub: string): string | undefined {
   } else return undefined;
 }
 
+// generate URL to the school directory page from page number
 function UrlFromPageNumber(index: number): string {
   assert(index < 13);
   if (index === 0) return `https://www.sfusd.edu/schools/directory`;
@@ -174,8 +177,8 @@ async function processPages() {
 processPages()
   .then((results) => {
     if (results) {
-      console.log(`writing results to ${schoolListFileName}`);
-      fs.writeFileSync(schoolListFileName, JSON.stringify(results, null, 2), {
+      console.log(`writing results to ${schoolListFilePath}`);
+      fs.writeFileSync(schoolListFilePath, JSON.stringify(results, null, 2), {
         encoding: "utf-8",
       });
       console.log("done.");

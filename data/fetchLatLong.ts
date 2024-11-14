@@ -1,27 +1,8 @@
-import * as fs from "fs";
+// fetchLatLong.ts
+// Description: Fetches the latitude and longitude and updates the school list file with the geolocations.
+// Depends on the AWS_GEO_KEY environment variable being set to the AWS API key enabled with location services access.
 
-const schoolListFileName = "./data/schoolList.json";
-const geoSchoolListFileName = "./data/schoolList.json";
-
-type SchoolRecord = {
-  schoolStub: string;
-  schoolUrl: string;
-  schoolLabel: string;
-  image?: {
-    src: string;
-    width: string;
-    height: string;
-  };
-  gradesLabel: string;
-  gradeCodes: string[];
-  neighborhood: string;
-  principal: string;
-  locations: string[];
-  phone: string;
-  lat?: number;
-  long?: number;
-  geolocations?: any;
-};
+import { readSchoolList, writeSchoolList } from "./shared";
 
 async function awsGeoLocate(address: string, cached: boolean = false) {
   try {
@@ -66,22 +47,17 @@ async function awsGeoLocateArray(addresses: string[], cached: boolean = false) {
   );
 }
 
-function readSchoolList(): SchoolRecord[] {
-  const buffer = fs.readFileSync(schoolListFileName, { encoding: "utf-8" });
-  const schoolList = JSON.parse(buffer);
-  return schoolList;
+function main() {
+  const schoolList = readSchoolList();
+  Promise.all(
+    schoolList.map(async (school) => {
+      const geolocations = await awsGeoLocateArray(school.locations);
+      return { ...school, geolocations };
+    }),
+  ).then((results) => {
+    writeSchoolList(results);
+    console.log(JSON.stringify(results, null, 2));
+  });
 }
 
-const schoolList = readSchoolList();
-
-Promise.all(
-  schoolList.map(async (school) => {
-    const geolocations = await awsGeoLocateArray(school.locations);
-    return { ...school, geolocations };
-  }),
-).then((results) => {
-  fs.writeFileSync(geoSchoolListFileName, JSON.stringify(results, null, 2), {
-    encoding: "utf-8",
-  });
-  console.log(JSON.stringify(results, null, 2));
-});
+main();

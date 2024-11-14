@@ -10,6 +10,23 @@ export async function sleep(sleepDelay = defaultSleepDelay, salty = false) {
 }
 
 export const schoolListFilePath = "./data/schoolList.json";
+
+export type SchoolProfile = {
+  enrollment?: string;
+  schoolCode?: string;
+  ytLinks?: string[];
+  ytCodes?: string[];
+  generatedProfile?: {
+    model: string;
+    overview: string;
+    bullets: string[];
+    programs: {
+      name: string;
+      description: string;
+    };
+  };
+};
+
 export type SchoolRecord = {
   schoolStub: string;
   schoolUrl: string;
@@ -29,7 +46,7 @@ export type SchoolRecord = {
   lat?: number;
   long?: number;
   geolocations?: any;
-};
+} & SchoolProfile;
 
 export function downloadImage(url: string, filePath: string): Promise<void> {
   return new Promise((resolve, reject) => {
