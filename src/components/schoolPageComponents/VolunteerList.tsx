@@ -41,7 +41,7 @@ const VolunteerList: React.FC<{ school: School; fullCard?: boolean }> = ({
           </h1>
           <ul className="mx-5 list-disc">
             {volunteerList.map((opportunity) => (
-              <li>{opportunity.title}</li>
+              <li key={opportunity.title}>{opportunity.title}</li>
             ))}
           </ul>
         </div>

@@ -58,7 +58,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
           </div>
         }
       />
-      <VolunteerList school={school} />
+      <VolunteerList school={school} fullCard={true} />
     </section>
   );
 };
