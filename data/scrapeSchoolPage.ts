@@ -3,7 +3,7 @@ import { assert } from "console";
 import * as fs from "fs";
 import OpenAI from "openai";
 
-import { schoolListFilePath } from "./shared";
+import { schoolListFilePath, schoolStubFromUrlStub } from "./shared";
 
 // Initialize OpenAI client
 const openai = new OpenAI({
@@ -46,15 +46,6 @@ async function extractStreetAddresses(userText: string): Promise<string[]> {
     console.error("Error extracting addresses:", error);
     return [];
   }
-}
-
-// create a school stub from a URL stub
-// ex. /schools/abraham-lincoln-high-school => abraham-lincoln-high-school
-function schoolStubFromUrlStub(urlStub: string): string | undefined {
-  if (urlStub) {
-    const parts = urlStub.split("/");
-    return parts[parts.length - 1].trim();
-  } else return undefined;
 }
 
 // generate URL to the school directory page from page number

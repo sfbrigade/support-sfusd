@@ -26,7 +26,11 @@ export type SchoolProfile = {
     };
   };
 };
-
+export type SchoolLogo = {
+  logoUrl: string;
+  logoAltText: string;
+  filePath: string;
+};
 export type SchoolRecord = {
   schoolStub: string;
   schoolUrl: string;
@@ -37,6 +41,7 @@ export type SchoolRecord = {
     width: string;
     height: string;
   };
+  logo?: SchoolLogo;
   gradesLabel: string;
   gradeCodes: string[];
   neighborhood: string;
@@ -94,4 +99,13 @@ export function writeSchoolList(schoolList: SchoolRecord[]) {
   fs.writeFileSync(schoolListFilePath, JSON.stringify(schoolList, null, 2), {
     encoding: "utf-8",
   });
+}
+
+// create a school stub from a URL stub
+// ex. /schools/abraham-lincoln-high-school => abraham-lincoln-high-school
+export function schoolStubFromUrlStub(urlStub: string): string | undefined {
+  if (urlStub) {
+    const parts = urlStub.split("/");
+    return parts[parts.length - 1].trim();
+  } else return undefined;
 }

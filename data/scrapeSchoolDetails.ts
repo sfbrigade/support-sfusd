@@ -1,13 +1,7 @@
 import { JSDOM } from "jsdom";
 import OpenAI from "openai";
-import * as fs from "fs";
 
-import {
-  readSchoolList,
-  SchoolRecord,
-  SchoolProfile,
-  writeSchoolList,
-} from "./shared";
+import { readSchoolList, SchoolProfile, writeSchoolList } from "./shared";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
