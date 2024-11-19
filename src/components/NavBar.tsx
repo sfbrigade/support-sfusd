@@ -23,6 +23,9 @@ const Navbar = () => {
       case "/about":
         setBg("bg-white drop-shadow");
         break;
+      case "/":
+        setBg("");
+        break;
       default:
         setBg("");
         break;
@@ -35,7 +38,7 @@ const Navbar = () => {
       <div className="container mx-auto max-w-[1280px] font-medium">
         <div className="flex items-center justify-between">
           {/* Home Icon */}
-          <Link href="/map" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image src="/logo.png" alt="Home" width={32} height={32} />
             <p className="h-fit max-md:hidden">Support SF Schools</p>
           </Link>
