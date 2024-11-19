@@ -9,6 +9,37 @@ type MapboxMapProps = {
   schools: School[];
 };
 
+const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
+  // check if marker within bounds of map
+  const lngLat = marker.getLngLat();
+  const bounds = map.getBounds();
+  const isInsideMap = bounds.contains(lngLat);
+
+  // check if marker is obscured by other elements
+  const markerEl = marker.getElement();
+  const { top, right, bottom, left } = markerEl.getBoundingClientRect();
+  // find center of marker
+  const [cX, cY] = [
+    left + Math.round(right - left) / 2,
+    top + Math.round(bottom - top) / 2,
+  ];
+
+  // assume points on top, bottom, right, left edges are within the bounding rect and test what the topmost element is at each point
+  const topEls = [
+    [cX, top + 1],
+    [right - 1, cY],
+    [cX, bottom - 1],
+    [left + 1, cY],
+  ].map(([x, y]) => document.elementFromPoint(x, y));
+
+  // determine if all chosen marker points are visible
+  const isOnTop = topEls.reduce((acc, topEl) => {
+    return acc && markerEl.isSameNode(topEl);
+  }, true);
+
+  return isInsideMap && isOnTop;
+};
+
 const MapboxMap = ({ schools }: MapboxMapProps) => {
   const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
@@ -31,6 +62,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     isSelected: boolean,
   ) => {
     const element = marker.getElement();
+
     if (isSelected) {
       element.className =
         "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
@@ -155,13 +187,11 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
             if (!schoolMarker.getPopup().isOpen()) {
               schoolMarker.togglePopup();
             }
-
-            // if we are outside of the bounds, recenter/rezoom (intended for keyboard navigation)
             const lngLat = schoolMarker.getLngLat();
-            const bounds = map.getBounds();
 
-            if (!bounds.contains(lngLat)) {
-              // pan to marker
+            // if we have focused on a school that's not visible, recenter (e.g., via filter or keyboard navigation)
+            if (!isVisible(schoolMarker, map)) {
+              // pan to school marker
               map.flyTo({
                 center: [lngLat.lng, lngLat.lat],
                 ...flyToOptions,
@@ -196,7 +226,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, [schools, setSelectedSchool]);
+  }, [schools, setSelectedSchool, flyToOptions]);
 
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
@@ -213,16 +243,26 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
 
         if (!userHasInteracted.current) {
           // Use jumpTo when returning from detail page. it's less dizzying.
-          mapRef.current.jumpTo({
-            center: [lngLat.lng, lngLat.lat],
-          });
-          userHasInteracted.current = true;
+
+          // if we have focused on a school that's not visible, recenter (e.g., via filter or keyboard navigation)
+          if (!isVisible(selectedMarker, mapRef.current)) {
+            // jump to marker
+            mapRef.current.jumpTo({
+              center: [lngLat.lng, lngLat.lat],
+            });
+            userHasInteracted.current = true;
+          }
         } else {
           // Use flyTo for all other cases
-          mapRef.current.flyTo({
-            center: [lngLat.lng, lngLat.lat],
-            ...flyToOptions,
-          });
+
+          // if we have focused on a school that's not visible, recenter (e.g., via filter or keyboard navigation)
+          if (!isVisible(selectedMarker, mapRef.current)) {
+            // pan to marker
+            mapRef.current.flyTo({
+              center: [lngLat.lng, lngLat.lat],
+              ...flyToOptions,
+            });
+          }
         }
       }
     }
