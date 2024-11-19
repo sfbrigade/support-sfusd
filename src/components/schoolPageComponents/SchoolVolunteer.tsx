@@ -1,33 +1,11 @@
-import { Program, School } from "@/types/school";
+import { School } from "@/types/school";
 import Image from "next/image";
 import BannerWrapper from "./BannerWrapper";
 import Link from "next/link";
-import HeadingContentWrapper from "./HeadingContentWrapper";
-import CardList from "./CardList";
 import { blurDataURL } from "@/lib/imageConfig";
+import VolunteerList from "./VolunteerList";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
-  interface volunteer {
-    title: string;
-    description: string;
-    img?: string;
-  }
-
-  const volunteerList: volunteer[] = school.programs.reduce(
-    (acc: volunteer[], program: Program) => {
-      if (program.category == "volunteer") {
-        const volunteer: volunteer = {
-          title: program.name,
-          description: program.details,
-          img: program.img,
-        };
-        acc.push(volunteer);
-      }
-      return acc;
-    },
-    [],
-  );
-
   return (
     <section id="volunteer" className="flex flex-col gap-10">
       <BannerWrapper
@@ -80,12 +58,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
           </div>
         }
       />
-      {volunteerList.length > 0 && (
-        <HeadingContentWrapper
-          heading="Opportunities to volunteer, short & long term"
-          content={<CardList cards={volunteerList} />}
-        />
-      )}
+      <VolunteerList school={school} fullCard={true} />
     </section>
   );
 };
