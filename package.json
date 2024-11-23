@@ -9,6 +9,9 @@
     "dev": "npm run migrate-check && next dev",
     "migrate-check": "prisma migrate diff --from-schema-datamodel=prisma/schema.prisma --to-schema-datasource=prisma/schema.prisma",
     "build": "prisma migrate reset --force && next build",
+    "dbpush": "prisma db push",
+    "seed": "prisma db seed",
+    "seedscaled": "prisma db seed -- --scaled",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write"
