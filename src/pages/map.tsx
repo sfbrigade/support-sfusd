@@ -11,7 +11,7 @@ import prisma from "@/lib/prisma";
 import Image from "next/image";
 import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
-import { useMapContext } from '../contexts/MapContext';
+import { useMapContext } from "../contexts/MapContext";
 
 interface DropdownItem<ItemType> {
   label: string;
@@ -23,6 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
     include: {
       metrics: true,
+      programs: true,
     },
   });
   return { props: { schools } };
@@ -37,7 +38,8 @@ const schoolCardPlaceholderText =
   "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
 const Map: React.FC<Props> = (props) => {
-  const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } = useMapContext();
+  const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
+    useMapContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
