@@ -70,7 +70,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
     >
       <button
         onClick={onClose}
-        className="absolute left-2 top-2 z-10 block md:hidden"
+        className="absolute left-2 top-2 z-10 block md:relative md:top-8"
       >
         <Image
           src={`/circle_close.svg`}
