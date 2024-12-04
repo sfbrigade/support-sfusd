@@ -35,7 +35,7 @@ const VolunteerList: React.FC<{ school: School; fullCard?: boolean }> = ({
         />
       )}
       {volunteerList.length > 0 && !fullCard && (
-        <div className="mb-4 mt-3 hidden md:block">
+        <div className="hidden md:block">
           <h1 className="mb-1 text-xl font-medium text-blue-500">
             Volunteer Opportunities
           </h1>
