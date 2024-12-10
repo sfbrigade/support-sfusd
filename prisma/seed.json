@@ -1826,7 +1826,7 @@
           {
             "name": "Zelle to the email wallenbergptsa@gmail.com",
             "details": "",
-            "url": "",
+            "url": "pay://zelle?recipient=wallenbergptsa@gmail.com",
             "category": "donate"
           }
         ],
