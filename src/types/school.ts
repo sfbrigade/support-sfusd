@@ -5,6 +5,7 @@ export interface School {
   neighborhood?: string;
   priority: boolean;
   img?: string;
+  logo?: string;
   latitude: number;
   longitude: number;
   profile?: SchoolProfile;
