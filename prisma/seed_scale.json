@@ -82,21 +82,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -120,7 +120,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "balboa-high-school.png"
     },
     {
         "name": "Burton High School",
@@ -210,21 +211,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock7.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -248,7 +249,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "phillip-and-sala-burton-academic-high-school.jpg"
     },
     {
         "name": "Downtown High School",
@@ -324,21 +326,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
@@ -356,7 +358,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "downtown-high-school.jpg"
     },
     {
         "name": "Galileo Academy of Science & Technology",
@@ -444,14 +447,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock9.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     },
                     {
@@ -470,7 +473,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "galileo-academy-science-technology.jpg"
     },
     {
         "name": "Ida B. Wells High School",
@@ -549,14 +553,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock6.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
@@ -575,7 +579,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "ida-b-wells-high-school.png"
     },
     {
         "name": "Independence High School",
@@ -648,14 +653,14 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock6.png",
+                        "img": "/volunteer/event/stock8.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -667,7 +672,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "independence-high-school.png"
     },
     {
         "name": "SF International High School",
@@ -751,14 +757,14 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     },
                     {
@@ -770,7 +776,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "san-francisco-international-high-school.png"
     },
     {
         "name": "June Jordan School for Equity",
@@ -849,7 +856,7 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
@@ -869,7 +876,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "june-jordan-school-equity.png"
     },
     {
         "name": "Lincoln High School",
@@ -959,21 +967,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock10.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     },
                     {
@@ -991,7 +999,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "abraham-lincoln-high-school.png"
     },
     {
         "name": "Lowell High School",
@@ -1077,21 +1086,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock10.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -1110,7 +1119,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "lowell-high-school.png"
     },
     {
         "name": "Mission High School",
@@ -1198,21 +1208,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -1224,7 +1234,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "mission-high-school.png"
     },
     {
         "name": "John O'Connell Technical High School",
@@ -1310,21 +1321,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -1336,7 +1347,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "john-oconnell-high-school.png"
     },
     {
         "name": "Ruth Asawa School of the Arts (SOTA)",
@@ -1425,21 +1437,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -1451,7 +1463,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "ruth-asawa-san-francisco-school-arts.jpg"
     },
     {
         "name": "The Academy",
@@ -1537,21 +1550,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -1563,7 +1576,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "academy-san-francisco-mcateer.jpg"
     },
     {
         "name": "Thurgood Marshall High School",
@@ -1651,14 +1665,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock7.png",
                         "category": "volunteer"
                     },
                     {
@@ -1677,7 +1691,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "thurgood-marshall-academic-high-school.png"
     },
     {
         "name": "Wallenberg High School",
@@ -1765,21 +1780,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock7.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -1804,7 +1819,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "raoul-wallenberg-high-school.png"
     },
     {
         "name": "George Washington High School",
@@ -1890,21 +1906,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
@@ -1928,7 +1944,8 @@
                 ],
                 "skipDuplicates": true
             }
-        }
+        },
+        "logo": "george-washington-high-school.jpg"
     },
     {
         "casid": "6059828",
@@ -2012,175 +2029,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "ap-giannini-middle-school.jpg"
-    },
-    {
-        "casid": "0132183",
-        "name": "Access SFUSD: Bay Street",
-        "address": "416 Bay St, San Francisco, CA 94133-1862, United States",
-        "neighborhood": "Fisherman's Wharf",
-        "priority": false,
-        "latitude": "37.80568",
-        "longitude": "-122.41393",
-        "profile": {
-            "create": {
-                "about": "Access Bay Street is a vibrant school in the Chinatown-North Beach community focused on enriching the lives of diverse learners through community-based learning, personal connections, and continuous growth.",
-                "about_bp": [
-                    "Located in the heart of the Chinatown-North Beach community, offering a rich, diverse learning experience.",
-                    "Emphasizes community-based learning opportunities tailored to individual student needs.",
-                    "Believes in building personal relationships for enhanced student engagement and achievement.",
-                    "Offers a range of programs focused on student independence, including self-help, leadership, and work training.",
-                    "Provides a supportive environment for transition-aged students with Individualized Education Programs (IEPs)."
-                ],
-                "principal": "Kara Schinella",
-                "website_url": "https://www.sfusd.edu/school/access-sfusd-bay-street",
-                "donation_text": "Mail a check made out to Access SFUSD: Bay Street and mail it to:\nAccess SFUSD: Bay Street\n416 Bay St, San Francisco, CA 94133-1862, United States\n",
-                "volunteer_form_url": ""
-            }
-        },
-        "metrics": {
-            "createMany": {
-                "data": [],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock8.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
-                        "url": "",
-                        "img": "/volunteer/event/stock4.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "casid": "6040752",
-        "name": "AccessSFUSD: The Arc",
-        "address": "1520 Howard St, San Francisco, CA 94103-2525, United States",
-        "neighborhood": "Soma",
-        "priority": false,
-        "latitude": "37.77288",
-        "longitude": "-122.416",
-        "profile": {
-            "create": {
-                "about": "AccessSFUSD: The Arc is a dynamic educational institution in San Francisco's SOMA district, dedicated to delivering engaging and individualized learning experiences for transition-aged students with IEPs.",
-                "about_bp": [
-                    "Focus on functional academics including literacy and math to meet diverse student needs.",
-                    "Hands-on community involvement through volunteer opportunities and paid internships.",
-                    "Robust arts program offering diverse art forms such as digital media, visual arts, and performing arts.",
-                    "Strong emphasis on student independence through travel training and job skills development.",
-                    "Collaboration with community partners like Golden Gate Regional Center and Department of Rehabilitation for comprehensive transition support."
-                ],
-                "principal": "Kara Schinella",
-                "website_url": "https://www.sfusd.edu/school/accesssfusd-arc",
-                "donation_text": "Mail a check made out to AccessSFUSD: The Arc and mail it to:\nAccessSFUSD: The Arc\n1520 Howard St, San Francisco, CA 94103-2525, United States\n",
-                "volunteer_form_url": "",
-                "noteable_video": "https://www.youtube.com/embed/$DvlfxEwEOB0?autoplay=0&start=0&rel=0"
-            }
-        },
-        "metrics": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Students Enrolled",
-                        "value": 365,
-                        "unit": "",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Proficiency",
-                        "value": 14,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Math Proficiency",
-                        "value": 7,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Students with Special Needs",
-                        "value": 21,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Language Learners",
-                        "value": 25,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "Free/Reduced Lunch",
-                        "value": 80,
-                        "unit": "%",
-                        "category": "about"
-                    }
-                ],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock7.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
-                        "url": "",
-                        "img": "/volunteer/event/stock3.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        },
-        "img": "accesssfusd-arc.jpeg"
+        "img": "ap-giannini-middle-school.jpg",
+        "logo": "ap-giannini-middle-school.png"
     },
     {
         "casid": "6040695",
@@ -2257,14 +2120,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
@@ -2277,7 +2140,8 @@
                 ]
             }
         },
-        "img": "alamo-elementary-school.jpg"
+        "img": "alamo-elementary-school.jpg",
+        "logo": "alamo-elementary-school.png"
     },
     {
         "casid": "6113245",
@@ -2354,27 +2218,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "alice-fong-yu-alternative-school-k-8.png"
+        "img": "alice-fong-yu-alternative-school-k-8.png",
+        "logo": "alice-fong-yu-alternative-school-k-8.png"
     },
     {
         "casid": "6040703",
@@ -2451,14 +2316,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -2471,7 +2336,8 @@
                 ]
             }
         },
-        "img": "alvarado-elementary-school.jpg"
+        "img": "alvarado-elementary-school.jpg",
+        "logo": "alvarado-elementary-school.jpg"
     },
     {
         "casid": "6062020",
@@ -2548,14 +2414,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock9.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     },
                     {
@@ -2569,103 +2435,6 @@
             }
         },
         "img": "aptos-middle-school.jpg"
-    },
-    {
-        "casid": "6041644",
-        "name": "Argonne Early Education School",
-        "address": "750 16th Ave, San Francisco, CA 94118-3513, United States",
-        "neighborhood": "Central Richmond",
-        "priority": false,
-        "latitude": "37.77395",
-        "longitude": "-122.47438",
-        "profile": {
-            "create": {
-                "about": "Argonne Early Education School offers a nurturing environment for Prekindergarten and Transitional Kindergarten students, focusing on play-based learning to foster childhood development and joyful learning experiences.",
-                "about_bp": [
-                    "Offers both Prekindergarten (PK) and Transitional Kindergarten (TK) programs.",
-                    "Emphasizes play-based, intentionally designed learning environments.",
-                    "Recognizes and integrates the 'Funds of Knowledge' children bring from their families, cultures, and communities.",
-                    "Provides Out-of-School Time (OST) enrichment programs with subsidized tuition available for eligible families.",
-                    "Conducts annual surveys to assess social-emotional learning and school climate."
-                ],
-                "principal": "Nkechi Nwankwo",
-                "website_url": "https://www.sfusd.edu/school/argonne-early-education-school",
-                "donation_text": "Mail a check made out to Argonne Early Education School and mail it to:\nArgonne Early Education School\n750 16th Ave, San Francisco, CA 94118-3513, United States\n",
-                "volunteer_form_url": "",
-                "noteable_video": "https://www.youtube.com/embed/$sKNqOi2Gb8Q?autoplay=0&start=0&rel=0"
-            }
-        },
-        "metrics": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Students Enrolled",
-                        "value": 122,
-                        "unit": "",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Proficiency",
-                        "value": 74,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Math Proficiency",
-                        "value": 73,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Students with Special Needs",
-                        "value": 10,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Language Learners",
-                        "value": 31,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "Free/Reduced Lunch",
-                        "value": 70,
-                        "unit": "%",
-                        "category": "about"
-                    }
-                ],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock6.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
-                        "url": "",
-                        "img": "/volunteer/event/stock1.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        },
-        "img": "argonne-early-education-school.jpg"
     },
     {
         "casid": "6040737",
@@ -2748,6 +2517,104 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
+                        "img": "/volunteer/event/stock9.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Career Prep and Mentoring",
+                        "details": "Provide students with mentoring, career insight and readiness",
+                        "url": "",
+                        "img": "/volunteer/event/stock5.png",
+                        "category": "volunteer"
+                    }
+                ]
+            }
+        },
+        "img": "argonne-elementary-school-extended-year.jpeg",
+        "logo": "argonne-elementary-school-extended-year.png"
+    },
+    {
+        "casid": "6040752",
+        "name": "Bessie Carmichael School PreK-8 Filipino Education Center",
+        "address": "375 7th St, San Francisco, CA 94103-4029, United States",
+        "neighborhood": "Soma",
+        "priority": false,
+        "latitude": "37.77609",
+        "longitude": "-122.40644",
+        "profile": {
+            "create": {
+                "about": "Bessie PK-8 is a vibrant school committed to antiracist education and equipping each student with a rigorous balance of social-emotional and academic learning, ensuring they are ready for high school, college, and beyond.",
+                "about_bp": [
+                    "Driven by the core values of being \"Linked through Love,\" promoting \"Literacy for Liberation,\" and fostering \"Lifelong Learning.\"",
+                    "Strong community roots in SoMa with a rich history.",
+                    "Offers a diverse range of before and after school programs, including Mission Graduates and United Playaz.",
+                    "Comprehensive language programs, including a focus on Filipino through FLES.",
+                    "Robust support services including college counseling, health and wellness center, and social-emotional learning assessments."
+                ],
+                "principal": "Rasheena Bell",
+                "website_url": "https://www.sfusd.edu/school/bessie-carmichael-school-prek-8-filipino-education-center",
+                "donation_text": "Mail a check made out to Bessie Carmichael School PreK-8 Filipino Education Center and mail it to:\nBessie Carmichael School PreK-8 Filipino Education Center\n375 7th St, San Francisco, CA 94103-4029, United States\n",
+                "volunteer_form_url": "",
+                "noteable_video": "https://www.youtube.com/embed/$eZTMnOeak4o?autoplay=0&start=0&rel=0"
+            }
+        },
+        "metrics": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Students Enrolled",
+                        "value": 365,
+                        "unit": "",
+                        "category": "about"
+                    },
+                    {
+                        "name": "English Proficiency",
+                        "value": 14,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Math Proficiency",
+                        "value": 7,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Students with Special Needs",
+                        "value": 21,
+                        "unit": "%",
+                        "category": "about"
+                    },
+                    {
+                        "name": "English Language Learners",
+                        "value": 25,
+                        "unit": "%",
+                        "category": "about"
+                    },
+                    {
+                        "name": "Free/Reduced Lunch",
+                        "value": 80,
+                        "unit": "%",
+                        "category": "about"
+                    }
+                ],
+                "skipDuplicates": true
+            }
+        },
+        "programs": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Tutoring",
+                        "details": "Provide one-on-one academic support to students on a range of topics",
+                        "url": "",
+                        "img": "/volunteer/tutoring/stock2.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Event Volunteer",
+                        "details": "Provide support for school-sponsored events",
+                        "url": "",
                         "img": "/volunteer/event/stock8.png",
                         "category": "volunteer"
                     },
@@ -2755,13 +2622,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "argonne-elementary-school-extended-year.jpeg"
+        "img": "bessie-carmichael-school-prek-8-filipino-education-center.jpg",
+        "logo": "bessie-carmichael-school-prek-8-filipino-education-center.png"
     },
     {
         "casid": "6040760",
@@ -2838,14 +2706,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
@@ -2858,7 +2726,8 @@
                 ]
             }
         },
-        "img": "bret-harte-elementary-school.jpg"
+        "img": "bret-harte-elementary-school.jpg",
+        "logo": "bret-harte-elementary-school.png"
     },
     {
         "casid": "6040778",
@@ -2934,27 +2803,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock8.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "bryant-elementary-school.jpg"
+        "img": "bryant-elementary-school.jpg",
+        "logo": "bryant-elementary-school.jpg"
     },
     {
         "casid": "6062046",
@@ -3038,103 +2908,7 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock6.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
-                        "url": "",
-                        "img": "/volunteer/event/stock5.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        },
-        "img": "buena-vista-horace-mann-k-8-community-school.jpg"
-    },
-    {
-        "casid": "0101337",
-        "name": "C.A.R.E. Bayview",
-        "address": "1601 Lane St, San Francisco, CA 94124-2732, United States",
-        "neighborhood": "Bayview",
-        "priority": false,
-        "latitude": "37.7318",
-        "longitude": "-122.38958",
-        "profile": {
-            "create": {
-                "about": "C.A.R.E. provides specialized educational support for middle and early high school students in San Francisco, focusing on those with interrupted schooling or special needs, through its comprehensive re-entry and empowerment programs.",
-                "about_bp": [
-                    "Located in various San Francisco neighborhoods providing accessible educational support.",
-                    "Targets students with interrupted schooling, fostering re-engagement and success.",
-                    "Collaborates with local organizations and school district for holistic student support.",
-                    "Offers a unique one-room schoolhouse model with personalized teaching assistance.",
-                    "Provides comprehensive transitional plans tailored to each student's needs."
-                ],
-                "principal": "Sylvia Lepe Reyes",
-                "website_url": "https://www.sfusd.edu/school/care-bayview",
-                "donation_text": "Mail a check made out to C.A.R.E. Bayview and mail it to:\nC.A.R.E. Bayview\n1601 Lane St, San Francisco, CA 94124-2732, United States\n",
-                "volunteer_form_url": ""
-            }
-        },
-        "metrics": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Students Enrolled",
-                        "value": 176,
-                        "unit": "",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Proficiency",
-                        "value": 23,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Math Proficiency",
-                        "value": 12,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Students with Special Needs",
-                        "value": 22,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Language Learners",
-                        "value": 31,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "Free/Reduced Lunch",
-                        "value": 100,
-                        "unit": "%",
-                        "category": "about"
-                    }
-                ],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
@@ -3146,191 +2920,9 @@
                     }
                 ]
             }
-        }
-    },
-    {
-        "casid": "6112601",
-        "name": "C.A.R.E. Buchanan",
-        "address": "1530 Buchanan St, San Francisco, CA 94115-3709, United States",
-        "neighborhood": "Western Addition",
-        "priority": false,
-        "latitude": "37.78418",
-        "longitude": "-122.42915",
-        "profile": {
-            "create": {
-                "about": "The Centers for Academic Re-entry and Empowerment (C.A.R.E.) provide innovative educational programs designed to support middle and high school students in San Francisco who have experienced interrupted schooling.",
-                "about_bp": [
-                    "Partnership between the San Francisco County Office of Education and the Y of San Francisco.",
-                    "Serves students who are in foster care, experiencing homelessness, or are chronically truant.",
-                    "Emphasizes student choice, allowing families to opt into the program voluntarily.",
-                    "Offers a one-room schoolhouse model with flexible credits earning options.",
-                    "Includes comprehensive services like college and career exploration, job training, and entrepreneurship opportunities."
-                ],
-                "principal": "Sylvia Lepe Reyes",
-                "website_url": "https://www.sfusd.edu/school/care-buchanan",
-                "donation_text": "Mail a check made out to C.A.R.E. Buchanan and mail it to:\nC.A.R.E. Buchanan\n1530 Buchanan St, San Francisco, CA 94115-3709, United States\n",
-                "volunteer_form_url": ""
-            }
         },
-        "metrics": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Students Enrolled",
-                        "value": 315,
-                        "unit": "",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Proficiency",
-                        "value": 56,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Math Proficiency",
-                        "value": 45,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Students with Special Needs",
-                        "value": 13,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Language Learners",
-                        "value": 4,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "Free/Reduced Lunch",
-                        "value": 26,
-                        "unit": "%",
-                        "category": "about"
-                    }
-                ],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock11.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
-                        "url": "",
-                        "img": "/volunteer/event/stock3.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        }
-    },
-    {
-        "casid": "6041586",
-        "name": "C.A.R.E. Middle School",
-        "address": "1601 Lane St, San Francisco, CA 94124-2732, United States",
-        "neighborhood": "Bayview",
-        "priority": false,
-        "latitude": "37.7318",
-        "longitude": "-122.38958",
-        "profile": {
-            "create": {
-                "about": "C.A.R.E. is an innovative educational partnership in San Francisco designed to support middle and high school students who have missed significant portions of their education by offering personalized, community-integrated programs.",
-                "about_bp": [
-                    "Centers for Academic Re-entry and Empowerment (CARE) serve students in foster care, experiencing homelessness, or with high truancy rates.",
-                    "Offers a unique one-room schoolhouse model with both General and Special Education Teachers.",
-                    "Partnership with YMCA and community organizations enriches student advisory and support services.",
-                    "Flexible enrollment options with individualized transition plans catering to each student's needs and family circumstances.",
-                    "Emphasizes a personalized intake and safety assessment process to tailor services to student and family needs."
-                ],
-                "principal": "Sylvia Lepe Reyes",
-                "website_url": "https://www.sfusd.edu/school/care-middle-school",
-                "donation_text": "Mail a check made out to C.A.R.E. Middle School and mail it to:\nC.A.R.E. Middle School\n1601 Lane St, San Francisco, CA 94124-2732, United States\n",
-                "volunteer_form_url": ""
-            }
-        },
-        "metrics": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Students Enrolled",
-                        "value": 50,
-                        "unit": "",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Proficiency",
-                        "value": 12,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Math Proficiency",
-                        "value": 8,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Students with Special Needs",
-                        "value": 22,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "Free/Reduced Lunch",
-                        "value": 94,
-                        "unit": "%",
-                        "category": "about"
-                    }
-                ],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock2.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
-                        "url": "",
-                        "img": "/volunteer/event/stock1.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        }
+        "img": "buena-vista-horace-mann-k-8-community-school.jpg",
+        "logo": "buena-vista-horace-mann-k-8-community-school.jpg"
     },
     {
         "casid": "6041149",
@@ -3414,14 +3006,14 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock6.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
@@ -3503,14 +3095,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     },
                     {
@@ -3523,7 +3115,8 @@
                 ]
             }
         },
-        "img": "chinese-immersion-school-de-avila-zhongwenchenjinxuexiao.jpg"
+        "img": "chinese-immersion-school-de-avila-zhongwenchenjinxuexiao.jpg",
+        "logo": "chinese-immersion-school-de-avila-zhongwenchenjinxuexiao.png"
     },
     {
         "casid": "3830445",
@@ -3606,12 +3199,13 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
-        }
+        },
+        "logo": "civic-center-secondary-school.png"
     },
     {
         "casid": "6102479",
@@ -3687,27 +3281,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "claire-lilienthal-alternative-school-k-2-madison-campus.png"
+        "img": "claire-lilienthal-alternative-school-k-2-madison-campus.png",
+        "logo": "claire-lilienthal-alternative-school-k-8.jpg"
     },
     {
         "casid": "6040828",
@@ -3784,21 +3379,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
@@ -3895,13 +3490,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "cleveland-elementary-school.jpg"
+        "img": "cleveland-elementary-school.jpg",
+        "logo": "cleveland-elementary-school.png"
     },
     {
         "casid": "6040851",
@@ -3978,111 +3574,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock6.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
                         "img": "/volunteer/event/stock2.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        },
-        "img": "commodore-sloat-elementary-school.jpg"
-    },
-    {
-        "casid": "6040877",
-        "name": "Commodore Stockton Early Education School",
-        "address": "1 Trenton St, San Francisco, CA 94108-1112, United States",
-        "neighborhood": "Chinatown",
-        "priority": false,
-        "latitude": "37.79508",
-        "longitude": "-122.40908",
-        "profile": {
-            "create": {
-                "about": "Commodore Stockton School, nestled in the vibrant Chinatown neighborhood, is dedicated to fostering a nurturing and inclusive environment where students from preschool to grade five thrive academically and socially.",
-                "about_bp": [
-                    "Located in the heart of Chinatown, offering a rich cultural backdrop for learning.",
-                    "Provides year-round preschool and transitional kindergarten (TK) classrooms.",
-                    "Features an Out-of-School Time (OST) program with after school and full-day services during breaks.",
-                    "Commits to culturally relevant, inclusive education with a multilingual staff.",
-                    "Strong emphasis on parental involvement as crucial to student success."
-                ],
-                "principal": "Jenny Yu",
-                "website_url": "https://www.sfusd.edu/school/commodore-stockton-early-education-school",
-                "donation_text": "Mail a check made out to Commodore Stockton Early Education School and mail it to:\nCommodore Stockton Early Education School\n1 Trenton St, San Francisco, CA 94108-1112, United States\n",
-                "volunteer_form_url": "",
-                "noteable_video": "https://www.youtube.com/embed/$kBZWGxvACW8?autoplay=0&start=0&rel=0"
-            }
-        },
-        "metrics": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Students Enrolled",
-                        "value": 333,
-                        "unit": "",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Proficiency",
-                        "value": 58,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Math Proficiency",
-                        "value": 67,
-                        "unit": "%",
-                        "category": "outcome"
-                    },
-                    {
-                        "name": "Students with Special Needs",
-                        "value": 10,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "English Language Learners",
-                        "value": 35,
-                        "unit": "%",
-                        "category": "about"
-                    },
-                    {
-                        "name": "Free/Reduced Lunch",
-                        "value": 95,
-                        "unit": "%",
-                        "category": "about"
-                    }
-                ],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock11.png",
                         "category": "volunteer"
                     },
                     {
@@ -4095,7 +3594,8 @@
                 ]
             }
         },
-        "img": "commodore-stockton-early-education-school.jpg"
+        "img": "commodore-sloat-elementary-school.jpg",
+        "logo": "commodore-sloat-elementary-school.png"
     },
     {
         "casid": "6040893",
@@ -4179,7 +3679,7 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock10.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
@@ -4192,7 +3692,8 @@
                 ]
             }
         },
-        "img": "daniel-webster-elementary-school.png"
+        "img": "daniel-webster-elementary-school.png",
+        "logo": "daniel-webster-elementary-school.png"
     },
     {
         "casid": "0111427",
@@ -4268,7 +3769,7 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -4288,7 +3789,8 @@
                 ]
             }
         },
-        "img": "dianne-feinstein-elementary-school.jpg"
+        "img": "dianne-feinstein-elementary-school.jpg",
+        "logo": "dianne-feinstein-elementary-school.jpeg"
     },
     {
         "casid": "6040984",
@@ -4365,21 +3867,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
@@ -4462,27 +3964,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "dr-charles-r-drew-college-preparatory-academy.jpg"
+        "img": "dr-charles-r-drew-college-preparatory-academy.jpg",
+        "logo": "dr-charles-r-drew-college-preparatory-academy.png"
     },
     {
         "casid": "6093496",
@@ -4559,27 +4062,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "dr-george-washington-carver-elementary-school.jpg"
+        "img": "dr-george-washington-carver-elementary-school.jpg",
+        "logo": "dr-george-washington-carver-elementary-school.png"
     },
     {
         "casid": "6059885",
@@ -4655,14 +4159,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -4675,7 +4179,8 @@
                 ]
             }
         },
-        "img": "dr-martin-luther-king-jr-academic-middle-school.jpg"
+        "img": "dr-martin-luther-king-jr-academic-middle-school.jpg",
+        "logo": "dr-martin-luther-king-jr-academic-middle-school.jpg"
     },
     {
         "casid": "6040968",
@@ -4752,27 +4257,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "dr-william-l-cobb-elementary-school.jpg"
+        "img": "dr-william-l-cobb-elementary-school.jpg",
+        "logo": "dr-william-l-cobb-elementary-school.png"
     },
     {
         "casid": "6040943",
@@ -4849,27 +4355,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock8.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "er-taylor-elementary-school.jpeg"
+        "img": "er-taylor-elementary-school.jpeg",
+        "logo": "er-taylor-elementary-school.png"
     },
     {
         "casid": "6089569",
@@ -4909,27 +4416,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "edwin-and-anita-lee-newcomer-school-limengxiankanglixinyiminxuexiao.jpg"
+        "img": "edwin-and-anita-lee-newcomer-school-limengxiankanglixinyiminxuexiao.jpg",
+        "logo": "edwin-and-anita-lee-newcomer-school-limengxiankanglixinyiminxuexiao.jpg"
     },
     {
         "casid": "6040950",
@@ -5006,7 +4514,7 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -5020,13 +4528,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "el-dorado-elementary-school.png"
+        "img": "el-dorado-elementary-school.png",
+        "logo": "el-dorado-elementary-school.png"
     },
     {
         "casid": "6062038",
@@ -5103,7 +4612,7 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -5117,13 +4626,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "everett-middle-school.jpg"
+        "img": "everett-middle-school.jpg",
+        "logo": "everett-middle-school.jpg"
     },
     {
         "casid": "6041008",
@@ -5200,14 +4710,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock10.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
@@ -5220,7 +4730,8 @@
                 ]
             }
         },
-        "img": "francis-scott-key-elementary-school.jpg"
+        "img": "francis-scott-key-elementary-school.jpg",
+        "logo": "francis-scott-key-elementary-school.png"
     },
     {
         "casid": "6059844",
@@ -5304,20 +4815,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock9.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "francisco-middle-school.jpg"
+        "img": "francisco-middle-school.jpg",
+        "logo": "francisco-middle-school.jpg"
     },
     {
         "casid": "6041016",
@@ -5394,27 +4906,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock7.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "mccoppin.jpg"
+        "img": "mccoppin.jpg",
+        "logo": "mccoppin.png"
     },
     {
         "casid": "6041040",
@@ -5491,21 +5004,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
@@ -5587,27 +5100,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "george-peabody-elementary-school.jpg"
+        "img": "george-peabody-elementary-school.jpg",
+        "logo": "george-peabody-elementary-school.jpg"
     },
     {
         "casid": "6099154",
@@ -5684,27 +5198,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "george-r-moscone-elementary-school.jpeg"
+        "img": "george-r-moscone-elementary-school.jpeg",
+        "logo": "george-r-moscone-elementary-school.png"
     },
     {
         "casid": "6041073",
@@ -5781,27 +5296,126 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "glen-park-elementary-school.jpg"
+        "img": "glen-park-elementary-school.jpg",
+        "logo": "glen-park-elementary-school.jpg"
+    },
+    {
+        "casid": "6040877",
+        "name": "Gordon J. Lau Elementary School \u5289\u8cb4\u660e\u5c0f\u5b78",
+        "address": "950 Clay St, San Francisco, CA 94108-1521, United States",
+        "neighborhood": "Chinatown",
+        "priority": false,
+        "latitude": "37.79442",
+        "longitude": "-122.40879",
+        "profile": {
+            "create": {
+                "about": "Gordon J. Lau Elementary School excels in providing a comprehensive, culturally inclusive education in the heart of Chinatown, committed to student success and community service.",
+                "about_bp": [
+                    "Located in the vibrant Chinatown community, welcoming newcomers and English Learner families.",
+                    "Offers a standards-aligned curriculum designed to prepare students for middle school and beyond.",
+                    "Staff are multilingual and experienced, ensuring effective communication and low turnover.",
+                    "Extensive support services including a full-time team addressing diverse student needs.",
+                    "Robust before and after school programs, as well as language and arts enrichment programs."
+                ],
+                "principal": "Gloria Choy",
+                "website_url": "https://www.sfusd.edu/school/gordon-j-lau-elementary-school",
+                "donation_text": "Mail a check made out to Gordon J. Lau Elementary School \u5289\u8cb4\u660e\u5c0f\u5b78 and mail it to:\nGordon J. Lau Elementary School \u5289\u8cb4\u660e\u5c0f\u5b78\n950 Clay St, San Francisco, CA 94108-1521, United States\n",
+                "volunteer_form_url": "",
+                "noteable_video": "https://www.youtube.com/embed/$6YjG4gH1xrg?autoplay=0&start=0&rel=0"
+            }
+        },
+        "metrics": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Students Enrolled",
+                        "value": 333,
+                        "unit": "",
+                        "category": "about"
+                    },
+                    {
+                        "name": "English Proficiency",
+                        "value": 58,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Math Proficiency",
+                        "value": 67,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Students with Special Needs",
+                        "value": 10,
+                        "unit": "%",
+                        "category": "about"
+                    },
+                    {
+                        "name": "English Language Learners",
+                        "value": 35,
+                        "unit": "%",
+                        "category": "about"
+                    },
+                    {
+                        "name": "Free/Reduced Lunch",
+                        "value": 95,
+                        "unit": "%",
+                        "category": "about"
+                    }
+                ],
+                "skipDuplicates": true
+            }
+        },
+        "programs": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Tutoring",
+                        "details": "Provide one-on-one academic support to students on a range of topics",
+                        "url": "",
+                        "img": "/volunteer/tutoring/stock4.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Event Volunteer",
+                        "details": "Provide support for school-sponsored events",
+                        "url": "",
+                        "img": "/volunteer/event/stock7.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Career Prep and Mentoring",
+                        "details": "Provide students with mentoring, career insight and readiness",
+                        "url": "",
+                        "img": "/volunteer/event/stock5.png",
+                        "category": "volunteer"
+                    }
+                ]
+            }
+        },
+        "img": "gordon-j-lau-elementary-school.jpeg",
+        "logo": "gordon-j-lau-elementary-school.png"
     },
     {
         "casid": "6041115",
@@ -5872,14 +5486,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock10.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
@@ -5892,7 +5506,8 @@
                 ]
             }
         },
-        "img": "grattan-elementary-school.jpg"
+        "img": "grattan-elementary-school.jpg",
+        "logo": "grattan-elementary-school.jpg"
     },
     {
         "casid": "6041123",
@@ -5969,27 +5584,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock8.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "guadalupe-elementary-school.jpeg"
+        "img": "guadalupe-elementary-school.jpeg",
+        "logo": "guadalupe-elementary-school.png"
     },
     {
         "casid": "6040919",
@@ -6066,7 +5682,7 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock9.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
@@ -6079,7 +5695,8 @@
                 ]
             }
         },
-        "img": "harvey-milk-civil-rights-academy.jpeg"
+        "img": "harvey-milk-civil-rights-academy.jpeg",
+        "logo": "harvey-milk-civil-rights-academy.jpeg"
     },
     {
         "casid": "6059851",
@@ -6156,14 +5773,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -6176,7 +5793,8 @@
                 ]
             }
         },
-        "img": "herbert-hoover-middle-school.jpg"
+        "img": "herbert-hoover-middle-school.jpg",
+        "logo": "herbert-hoover-middle-school.png"
     },
     {
         "casid": "6041156",
@@ -6267,13 +5885,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "hillcrest-elementary-school.jpg"
+        "img": "hillcrest-elementary-school.jpg",
+        "logo": "hillcrest-elementary-school.png"
     },
     {
         "casid": "3830395",
@@ -6337,26 +5956,27 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
-        }
+        },
+        "logo": "hilltop-el-camino-alternativo-schools.jpg"
     },
     {
         "casid": "6059869",
@@ -6433,27 +6053,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "james-denman-middle-school.jpeg"
+        "img": "james-denman-middle-school.jpeg",
+        "logo": "james-denman-middle-school.png"
     },
     {
         "casid": "6062053",
@@ -6529,27 +6150,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "james-lick-middle-school.jpg"
+        "img": "james-lick-middle-school.jpg",
+        "logo": "james-lick-middle-school.png"
     },
     {
         "casid": "6041206",
@@ -6626,14 +6248,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -6646,7 +6268,8 @@
                 ]
             }
         },
-        "img": "jean-parker-elementary-school.jpg"
+        "img": "jean-parker-elementary-school.jpg",
+        "logo": "jean-parker-elementary-school.jpg"
     },
     {
         "casid": "6041230",
@@ -6730,19 +6353,20 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
             }
-        }
+        },
+        "logo": "jefferson-elementary-school.jpg"
     },
     {
         "casid": "6041255",
@@ -6819,27 +6443,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "john-muir-elementary-school.jpg"
+        "img": "john-muir-elementary-school.jpg",
+        "logo": "john-muir-elementary-school.png"
     },
     {
         "casid": "6113252",
@@ -6916,21 +6541,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock9.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
@@ -7013,51 +6638,52 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "jose-ortega-elementary-school.jpg"
+        "img": "jose-ortega-elementary-school.jpg",
+        "logo": "jose-ortega-elementary-school.png"
     },
     {
         "casid": "6041289",
-        "name": "Junipero Serra Annex Early Education School",
-        "address": "155 Appleton Ave, San Francisco, CA 94110-5806, United States",
+        "name": "Junipero Serra Elementary School",
+        "address": "625 Holly Park Cir, San Francisco, CA 94110-5815, United States",
         "neighborhood": "Bernal Heights",
         "priority": false,
-        "latitude": "37.73845",
-        "longitude": "-122.4223",
+        "latitude": "37.73667",
+        "longitude": "-122.42124",
         "profile": {
             "create": {
-                "about": "SFUSD Early Education Department serves as the district's gateway to lifelong learning, offering a joyful and developmentally appropriate environment that prepares children for academic success through a blend of creative curriculum and social-emotional learning.",
+                "about": "Junipero Serra Elementary School is a vibrant community-focused public school in the picturesque Bernal Heights area, dedicated to nurturing a diverse student population with a comprehensive and culturally inclusive education.",
                 "about_bp": [
-                    "Follows the Creative Curriculum for Preschool, promoting joyful and developmentally appropriate learning.",
-                    "Aligns with California Preschool Learning Standards and SFUSD Core Curriculum.",
-                    "Includes a robust preschool program with hours from 7:30 a.m. to 5:30 p.m., focusing on socialization, problem-solving, and confidence building.",
-                    "Offers a Transitional Kindergarten program designed to bridge preschool and traditional kindergarten learning environments.",
-                    "Provides the Out Of School Time (OST) program with enrichment classes and opportunities for subsidized tuition."
+                    "Located adjacent to the scenic Bernal Heights public park and near the local library, offering a picturesque learning environment.",
+                    "Diverse community fostering cultural pride and encouraging lifelong learning among students.",
+                    "Strong emphasis on community through Caring Schools Community meetings and home-side activities connecting parents and students.",
+                    "Wide range of programs including after school and language initiatives, catering to varied student needs and interests.",
+                    "Annual reviews and data-driven strategies to nurture academic and social-emotional success among students."
                 ],
-                "principal": "Danielle Loughridge",
-                "website_url": "https://www.sfusd.edu/school/junipero-serra-annex-early-education-school",
-                "donation_text": "Mail a check made out to Junipero Serra Annex Early Education School and mail it to:\nJunipero Serra Annex Early Education School\n155 Appleton Ave, San Francisco, CA 94110-5806, United States\n",
+                "principal": "Katerina Palomares",
+                "website_url": "https://www.sfusd.edu/school/junipero-serra-elementary-school",
+                "donation_text": "Mail a check made out to Junipero Serra Elementary School and mail it to:\nJunipero Serra Elementary School\n625 Holly Park Cir, San Francisco, CA 94110-5815, United States\n",
                 "volunteer_form_url": "",
-                "noteable_video": "https://www.youtube.com/embed/$08LibDLE75U?autoplay=0&start=0&rel=0"
+                "noteable_video": "https://www.youtube.com/embed/$g9I2qJAx9XY?autoplay=0&start=0&rel=0"
             }
         },
         "metrics": {
@@ -7110,26 +6736,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
-        }
+        },
+        "img": "junipero-serra-elementary-school.jpg",
+        "logo": "junipero-serra-elementary-school.jpg"
     },
     {
         "casid": "6041305",
@@ -7212,20 +6840,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock10.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "lafayette-elementary-school.jpg"
+        "img": "lafayette-elementary-school.jpg",
+        "logo": "lafayette-elementary-school.jpg"
     },
     {
         "casid": "6041321",
@@ -7302,27 +6931,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "lakeshore-alternative-elementary-school.jpg"
+        "img": "lakeshore-alternative-elementary-school.jpg",
+        "logo": "lakeshore-alternative-elementary-school.gif"
     },
     {
         "casid": "6041339",
@@ -7399,26 +7029,27 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
-        }
+        },
+        "logo": "lawton-alternative-school-k-8.png"
     },
     {
         "casid": "6041347",
@@ -7494,7 +7125,7 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
@@ -7508,13 +7139,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "leonard-r-flynn-elementary-school.jpg"
+        "img": "leonard-r-flynn-elementary-school.jpg",
+        "logo": "leonard-r-flynn-elementary-school.jpeg"
     },
     {
         "casid": "6041362",
@@ -7591,27 +7223,120 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "longfellow-elementary-school.png"
+        "img": "longfellow-elementary-school.png",
+        "logo": "longfellow-elementary-school.jpg"
+    },
+    {
+        "casid": "6041586",
+        "name": "Malcolm X Academy Elementary School",
+        "address": "350 Harbor Rd, San Francisco, CA 94124-2474, United States",
+        "neighborhood": "Hunters Point",
+        "priority": false,
+        "latitude": "37.73422",
+        "longitude": "-122.38101",
+        "profile": {
+            "create": {
+                "about": "Malcolm X Academy, situated in the vibrant Bayview community of San Francisco, empowers students through an inclusive, supportive, and culturally rich environment, fostering both academic excellence and personal growth.",
+                "about_bp": [
+                    "Dedicated to developing students' intellectual, social, emotional, and physical capacities.",
+                    "Provides a caring and safe learning environment with small class sizes.",
+                    "Strong emphasis on creativity, self-discipline, and citizenship.",
+                    "Collaborative community school actively involving students and families.",
+                    "Diverse teaching methods and high expectations to inspire lifelong learning."
+                ],
+                "principal": "Matthew Fitzsimmon",
+                "website_url": "https://www.sfusd.edu/school/malcolm-x-academy-elementary-school",
+                "donation_text": "Mail a check made out to Malcolm X Academy Elementary School and mail it to:\nMalcolm X Academy Elementary School\n350 Harbor Rd, San Francisco, CA 94124-2474, United States\n",
+                "volunteer_form_url": "",
+                "noteable_video": "https://www.youtube.com/embed/$VI_FUD_IkPQ?autoplay=0&start=0&rel=0"
+            }
+        },
+        "metrics": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Students Enrolled",
+                        "value": 50,
+                        "unit": "",
+                        "category": "about"
+                    },
+                    {
+                        "name": "English Proficiency",
+                        "value": 12,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Math Proficiency",
+                        "value": 8,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Students with Special Needs",
+                        "value": 22,
+                        "unit": "%",
+                        "category": "about"
+                    },
+                    {
+                        "name": "Free/Reduced Lunch",
+                        "value": 94,
+                        "unit": "%",
+                        "category": "about"
+                    }
+                ],
+                "skipDuplicates": true
+            }
+        },
+        "programs": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Tutoring",
+                        "details": "Provide one-on-one academic support to students on a range of topics",
+                        "url": "",
+                        "img": "/volunteer/tutoring/stock1.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Event Volunteer",
+                        "details": "Provide support for school-sponsored events",
+                        "url": "",
+                        "img": "/volunteer/event/stock8.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Career Prep and Mentoring",
+                        "details": "Provide students with mentoring, career insight and readiness",
+                        "url": "",
+                        "img": "/volunteer/event/stock3.png",
+                        "category": "volunteer"
+                    }
+                ]
+            }
+        },
+        "img": "malcolm-x-academy-elementary-school.jpg",
+        "logo": "malcolm-x-academy-elementary-school.jpg"
     },
     {
         "casid": "6062061",
@@ -7687,27 +7412,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock8.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "marina-middle-school.jpg"
+        "img": "marina-middle-school.jpg",
+        "logo": "marina-middle-school.jpg"
     },
     {
         "casid": "6041412",
@@ -7784,14 +7510,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
@@ -7804,7 +7530,8 @@
                 ]
             }
         },
-        "img": "marshall-elementary-school.jpg"
+        "img": "marshall-elementary-school.jpg",
+        "logo": "marshall-elementary-school.png"
     },
     {
         "casid": "6041420",
@@ -7881,27 +7608,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "mckinley-elementary-school.jpg"
+        "img": "mckinley-elementary-school.jpg",
+        "logo": "mckinley-elementary-school.jpg"
     },
     {
         "casid": "6041438",
@@ -7978,26 +7706,27 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock10.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
-        }
+        },
+        "logo": "miraloma-elementary-school.jpg"
     },
     {
         "casid": "6089585",
@@ -8056,7 +7785,7 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
@@ -8070,13 +7799,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "mission-education-center-elementary-school.jpg"
+        "img": "mission-education-center-elementary-school.jpg",
+        "logo": "mission-education-center-elementary-school.jpg"
     },
     {
         "casid": "6041446",
@@ -8153,27 +7883,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock4.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "monroe-elementary-school.jpg"
+        "img": "monroe-elementary-school.jpg",
+        "logo": "monroe-elementary-school.jpg"
     },
     {
         "casid": "6097919",
@@ -8250,21 +7981,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
@@ -8347,27 +8078,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "paul-revere-prek-8-school.png"
+        "img": "paul-revere-prek-8-school.png",
+        "logo": "paul-revere-prek-8-school.png"
     },
     {
         "casid": "6062079",
@@ -8443,27 +8175,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "presidio-middle-school.jpg"
+        "img": "presidio-middle-school.jpg",
+        "logo": "presidio-middle-school.jpg"
     },
     {
         "casid": "6041511",
@@ -8540,21 +8273,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock3.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
@@ -8637,27 +8370,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock7.png",
+                        "img": "/volunteer/event/stock8.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "robert-louis-stevenson-elementary-school.jpg"
+        "img": "robert-louis-stevenson-elementary-school.jpg",
+        "logo": "robert-louis-stevenson-elementary-school.png"
     },
     {
         "casid": "6089775",
@@ -8734,27 +8468,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "rooftop-school-tk-8.jpg"
+        "img": "rooftop-school-tk-8.jpg",
+        "logo": "rooftop-tk-8-school-mayeda-campus.png"
     },
     {
         "casid": "6059901",
@@ -8831,14 +8566,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     },
                     {
@@ -8851,7 +8586,8 @@
                 ]
             }
         },
-        "img": "roosevelt-middle-school.jpg"
+        "img": "roosevelt-middle-school.jpg",
+        "logo": "roosevelt-middle-school.jpeg"
     },
     {
         "casid": "6041503",
@@ -8928,27 +8664,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "rosa-parks-elementary-school.jpg"
+        "img": "rosa-parks-elementary-school.jpg",
+        "logo": "rosa-parks-elementary-school.png"
     },
     {
         "casid": "6093488",
@@ -9025,21 +8762,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock7.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
@@ -9128,20 +8865,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock6.png",
+                        "img": "/volunteer/event/stock9.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "san-francisco-public-montessori.jpg"
+        "img": "san-francisco-public-montessori.jpg",
+        "logo": "san-francisco-public-montessori.png"
     },
     {
         "casid": "6041545",
@@ -9225,20 +8963,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "sanchez-elementary-school.jpg"
+        "img": "sanchez-elementary-school.jpg",
+        "logo": "sanchez-elementary-school.jpg"
     },
     {
         "casid": "6041560",
@@ -9315,7 +9054,7 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
@@ -9329,13 +9068,14 @@
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "sheridan-elementary-school.jpg"
+        "img": "sheridan-elementary-school.jpg",
+        "logo": "sheridan-elementary-school.jpg"
     },
     {
         "casid": "6041578",
@@ -9412,27 +9152,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock2.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "sherman-elementary-school.jpg"
+        "img": "sherman-elementary-school.jpg",
+        "logo": "sherman-elementary-school.png"
     },
     {
         "casid": "6041594",
@@ -9508,27 +9249,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "spring-valley-science-elementary-school.png"
+        "img": "spring-valley-science-elementary-school.png",
+        "logo": "spring-valley-science-elementary-school.png"
     },
     {
         "casid": "6041602",
@@ -9612,7 +9354,7 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
@@ -9625,7 +9367,8 @@
                 ]
             }
         },
-        "img": "starr-king-elementary-school.jpg"
+        "img": "starr-king-elementary-school.jpg",
+        "logo": "starr-king-elementary-school.jpg"
     },
     {
         "casid": "6041610",
@@ -9702,21 +9445,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
@@ -9799,27 +9542,126 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock5.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock5.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "sunset-elementary-school.jpg"
+        "img": "sunset-elementary-school.jpg",
+        "logo": "sunset-elementary-school.png"
+    },
+    {
+        "casid": "6041644",
+        "name": "Sutro Elementary School",
+        "address": "235 12th Ave, San Francisco, CA 94118-2103, United States",
+        "neighborhood": "Inner Richmond",
+        "priority": false,
+        "latitude": "37.78372",
+        "longitude": "-122.47115",
+        "profile": {
+            "create": {
+                "about": "Sutro Elementary offers a nurturing and inclusive learning environment with a strong academic program and a commitment to equal opportunities for all its diverse student community.",
+                "about_bp": [
+                    "Strong focus on academic excellence with a collaborative and family-oriented approach.",
+                    "Offers a variety of after-school programs including homework support, piano, Mandarin, and coding classes.",
+                    "Emphasizes individual attention and a supportive community culture for each student.",
+                    "Comprehensive arts enrichment including visual arts, dance, and instrumental music.",
+                    "Dedicated to addressing both academic and social-emotional needs through a supportive school community."
+                ],
+                "principal": "Beth Bonfiglio",
+                "website_url": "https://www.sfusd.edu/school/sutro-elementary-school",
+                "donation_text": "Mail a check made out to Sutro Elementary School and mail it to:\nSutro Elementary School\n235 12th Ave, San Francisco, CA 94118-2103, United States\n",
+                "volunteer_form_url": "",
+                "noteable_video": "https://www.youtube.com/embed/$lH7mer9fEWw?autoplay=0&start=0&rel=0"
+            }
+        },
+        "metrics": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Students Enrolled",
+                        "value": 122,
+                        "unit": "",
+                        "category": "about"
+                    },
+                    {
+                        "name": "English Proficiency",
+                        "value": 74,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Math Proficiency",
+                        "value": 73,
+                        "unit": "%",
+                        "category": "outcome"
+                    },
+                    {
+                        "name": "Students with Special Needs",
+                        "value": 10,
+                        "unit": "%",
+                        "category": "about"
+                    },
+                    {
+                        "name": "English Language Learners",
+                        "value": 31,
+                        "unit": "%",
+                        "category": "about"
+                    },
+                    {
+                        "name": "Free/Reduced Lunch",
+                        "value": 70,
+                        "unit": "%",
+                        "category": "about"
+                    }
+                ],
+                "skipDuplicates": true
+            }
+        },
+        "programs": {
+            "createMany": {
+                "data": [
+                    {
+                        "name": "Tutoring",
+                        "details": "Provide one-on-one academic support to students on a range of topics",
+                        "url": "",
+                        "img": "/volunteer/tutoring/stock1.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Event Volunteer",
+                        "details": "Provide support for school-sponsored events",
+                        "url": "",
+                        "img": "/volunteer/event/stock7.png",
+                        "category": "volunteer"
+                    },
+                    {
+                        "name": "Career Prep and Mentoring",
+                        "details": "Provide students with mentoring, career insight and readiness",
+                        "url": "",
+                        "img": "/volunteer/event/stock2.png",
+                        "category": "volunteer"
+                    }
+                ]
+            }
+        },
+        "img": "sutro-elementary-school.png",
+        "logo": "sutro-elementary-school.png"
     },
     {
         "casid": "6115901",
@@ -9896,27 +9738,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock11.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "tenderloin-community-elementary-school.jpg"
+        "img": "tenderloin-community-elementary-school.jpg",
+        "logo": "tenderloin-community-elementary-school.jpg"
     },
     {
         "casid": "6041685",
@@ -10000,20 +9843,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "ulloa-elementary-school.jpg"
+        "img": "ulloa-elementary-school.jpg",
+        "logo": "ulloa-elementary-school.png"
     },
     {
         "casid": "6041701",
@@ -10097,20 +9941,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock2.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock3.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "visitacion-valley-elementary-school.jpg"
+        "img": "visitacion-valley-elementary-school.jpg",
+        "logo": "visitacion-valley-elementary-school.png"
     },
     {
         "casid": "6059919",
@@ -10193,20 +10038,21 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock7.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock2.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "visitacion-valley-middle-school.jpg"
+        "img": "visitacion-valley-middle-school.jpg",
+        "logo": "visitacion-valley-middle-school.png"
     },
     {
         "casid": "6041727",
@@ -10283,14 +10129,14 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock3.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     },
                     {
@@ -10303,7 +10149,8 @@
                 ]
             }
         },
-        "img": "west-portal-elementary-school.jpg"
+        "img": "west-portal-elementary-school.jpg",
+        "logo": "west-portal-elementary-school.jpg"
     },
     {
         "casid": "0132241",
@@ -10380,27 +10227,28 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock4.png",
+                        "img": "/volunteer/tutoring/stock1.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock8.png",
+                        "img": "/volunteer/event/stock7.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock1.png",
+                        "img": "/volunteer/event/stock4.png",
                         "category": "volunteer"
                     }
                 ]
             }
         },
-        "img": "willie-l-brown-jr-middle-school.jpg"
+        "img": "willie-l-brown-jr-middle-school.jpg",
+        "logo": "willie-l-brown-jr-middle-school.png"
     },
     {
         "casid": "3830361",
@@ -10458,21 +10306,21 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
+                        "img": "/volunteer/tutoring/stock5.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock9.png",
+                        "img": "/volunteer/event/stock10.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock3.png",
                         "category": "volunteer"
                     }
                 ]
@@ -10554,65 +10402,6 @@
                         "name": "Tutoring",
                         "details": "Provide one-on-one academic support to students on a range of topics",
                         "url": "",
-                        "img": "/volunteer/tutoring/stock1.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Event Volunteer",
-                        "details": "Provide support for school-sponsored events",
-                        "url": "",
-                        "img": "/volunteer/event/stock8.png",
-                        "category": "volunteer"
-                    },
-                    {
-                        "name": "Career Prep and Mentoring",
-                        "details": "Provide students with mentoring, career insight and readiness",
-                        "url": "",
-                        "img": "/volunteer/event/stock5.png",
-                        "category": "volunteer"
-                    }
-                ]
-            }
-        },
-        "img": "yick-wo-alternative-elementary-school.jpg"
-    },
-    {
-        "casid": "",
-        "name": "Youth Chance High School",
-        "address": "169 Steuart St, San Francisco, CA 94105-1206, United States",
-        "neighborhood": "Embarcadero",
-        "priority": false,
-        "latitude": "37.79269",
-        "longitude": "-122.39198",
-        "profile": {
-            "create": {
-                "about": "Youth Chance High School is a unique San Francisco Public School program that integrates real-world work experience with personalized education for students who are behind in credits and seeking a more engaging learning environment.",
-                "about_bp": [
-                    "Hybrid learning model with in-person classes three days a week and virtual learning two days a week.",
-                    "Personalized learning experience with project-based learning tailored to individual career goals.",
-                    "Close support from two teachers for every 20 students, along with a School Social Worker and a Student Advocate.",
-                    "Focus on real-world career readiness with job shadowing, interest inventories, and job readiness skills training.",
-                    "Opportunities to earn a California ID, work permit, and workforce readiness certificates or industry credentials."
-                ],
-                "principal": "Sylvia Lepe Reyes",
-                "website_url": "https://www.sfusd.edu/school/youth-chance-high-school",
-                "donation_text": "Mail a check made out to Youth Chance High School and mail it to:\nYouth Chance High School\n169 Steuart St, San Francisco, CA 94105-1206, United States\n",
-                "volunteer_form_url": ""
-            }
-        },
-        "metrics": {
-            "createMany": {
-                "data": [],
-                "skipDuplicates": true
-            }
-        },
-        "programs": {
-            "createMany": {
-                "data": [
-                    {
-                        "name": "Tutoring",
-                        "details": "Provide one-on-one academic support to students on a range of topics",
-                        "url": "",
                         "img": "/volunteer/tutoring/stock2.png",
                         "category": "volunteer"
                     },
@@ -10620,18 +10409,20 @@
                         "name": "Event Volunteer",
                         "details": "Provide support for school-sponsored events",
                         "url": "",
-                        "img": "/volunteer/event/stock4.png",
+                        "img": "/volunteer/event/stock6.png",
                         "category": "volunteer"
                     },
                     {
                         "name": "Career Prep and Mentoring",
                         "details": "Provide students with mentoring, career insight and readiness",
                         "url": "",
-                        "img": "/volunteer/event/stock5.png",
+                        "img": "/volunteer/event/stock1.png",
                         "category": "volunteer"
                     }
                 ]
             }
-        }
+        },
+        "img": "yick-wo-alternative-elementary-school.jpg",
+        "logo": "yick-wo-alternative-elementary-school.jpg"
     }
 ]
