@@ -42,15 +42,15 @@ const MapListCard = ({
 
   const { img, name, neighborhood } = school;
 
-  const students = school.metrics.find(
-    (metric) => metric.name == "Students Enrolled",
-  );
-  const frl = school.metrics.find(
-    (metric) => metric.name == "Free/Reduced Lunch",
-  );
-  const ell = school.metrics.find(
-    (metric) => metric.name == "English Language Learners",
-  );
+  // const students = school.metrics.find(
+  //   (metric) => metric.name == "Students Enrolled",
+  // );
+  // const frl = school.metrics.find(
+  //   (metric) => metric.name == "Free/Reduced Lunch",
+  // );
+  // const ell = school.metrics.find(
+  //   (metric) => metric.name == "English Language Learners",
+  // );
 
   const learnMoreRef = useRef<HTMLAnchorElement>(null);
 
@@ -128,7 +128,7 @@ const MapListCard = ({
         }`}
       >
         <Image
-          src={`/school_img/full/${img}`}
+          src={img ? `/school_img/full/${img}` : "/school_img/full/default.png"}
           placeholder="blur"
           blurDataURL={blurDataURL}
           alt="School Image"
