@@ -41,7 +41,7 @@ const Profile: React.FC<Props> = (props) => {
           <div className="relative w-full">
             <Image
               className="relative h-64 w-full object-cover max-md:h-48"
-              src={"/school_img/" + school.img}
+              src={"/school_img/full/" + school.img}
               alt={school.name + " image"}
               width={2000}
               height={2000}

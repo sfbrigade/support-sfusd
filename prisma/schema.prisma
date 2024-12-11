@@ -17,6 +17,7 @@ model School {
   neighborhood String
   priority     Boolean        @default(false)
   img          String?
+  logo         String?
   latitude     String
   longitude    String
   profile      SchoolProfile?

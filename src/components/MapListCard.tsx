@@ -60,7 +60,10 @@ const MapListCard = ({
   };
 
   function onClick(e: React.MouseEvent<HTMLDivElement>) {
-    if (learnMoreRef.current && learnMoreRef.current.contains(e.target as Node)) {
+    if (
+      learnMoreRef.current &&
+      learnMoreRef.current.contains(e.target as Node)
+    ) {
       return; // Do nothing if the click was on the "Learn More" link
     }
 
@@ -132,7 +135,7 @@ const MapListCard = ({
         }`}
       >
         <Image
-          src={`/school_img/${img}`}
+          src={`/school_img/full/${img}`}
           placeholder="blur"
           blurDataURL={blurDataURL}
           alt="School Image"
