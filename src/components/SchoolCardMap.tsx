@@ -70,7 +70,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
     >
       <button
         onClick={onClose}
-        className="absolute left-2 top-2 z-10 block md:hidden"
+        className="absolute left-2 top-2 z-10 block md:relative md:top-8"
       >
         <Image
           src={`/circle_close.svg`}
@@ -114,7 +114,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           <h2 className="font-medium md:text-xl">{school.name}</h2>
           <p className="text-sm max-md:text-xs">{school.neighborhood}</p>
 
-          <VolunteerList school={school} fullCard={false} />
+          <div className="mb-4 mt-3">
+            <VolunteerList school={school} fullCard={false} />
+          </div>
         </div>
         <Link
           className="hidden md:block"

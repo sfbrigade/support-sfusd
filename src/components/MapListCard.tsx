@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
 import { useMapContext } from "@/contexts/MapContext";
+import VolunteerList from "./schoolPageComponents/VolunteerList";
 
 type MapListCardProps = {
   school: School;
@@ -110,16 +111,8 @@ const MapListCard = ({
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 max-md:text-sm">
-          <div>
-            <b>{students ? students.value : "N/A"}</b> Students
-          </div>
-          <div>
-            <b>{frl ? frl.value : "N/A"}%</b> Free and Reduced Lunch
-          </div>
-          <div>
-            <b>{ell ? ell.value : "N/A"}%</b> English Language Learners
-          </div>
+        <div className="flex flex-col gap-5 max-md:text-sm">
+          <VolunteerList school={school} fullCard={false} />
           <Link
             ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"

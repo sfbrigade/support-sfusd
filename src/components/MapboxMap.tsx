@@ -143,6 +143,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         // create an HTML element for each school
         const el = document.createElement("button");
         el.className = "marker";
+        el.ariaLabel = `School marker: ${school.name}`;
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
           userHasInteracted.current = true;
@@ -206,6 +207,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
       goldenGateEl.className = "golden-gate-marker";
+      goldenGateEl.ariaLabel = "Map marker: Golden Gate Bridge";
       new mapboxgl.Marker(goldenGateEl)
         .setLngLat([-122.4783, 37.8199])
         .addTo(map);
@@ -213,6 +215,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       // Bay Bridge Marker
       const bayBridgeEl = document.createElement("div");
       bayBridgeEl.className = "bay-bridge-marker";
+      bayBridgeEl.ariaLabel = "Map marker: Bay Bridge";
       new mapboxgl.Marker(bayBridgeEl)
         .setLngLat([-122.3778, 37.7983])
         .addTo(map);
