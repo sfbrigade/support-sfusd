@@ -24,9 +24,7 @@ async function downloadFullImages() {
     const src = school.image?.src || "";
     const ext = extractExtensionFromUrl(src);
     const filePath =
-      ext && ext.length > 1
-        ? `public/school_img/${school.schoolStub}.${ext}`
-        : "";
+      ext && ext.length > 1 ? `school_img/${school.schoolStub}.${ext}` : "";
 
     // update the schoolList with the new image path
     if (school.image) school.image.filePath = filePath;
@@ -34,7 +32,7 @@ async function downloadFullImages() {
     if (src.length > 1 && filePath.length > 1) {
       await sleep(dosDelay, true);
       console.log(`storing ${src} as ${filePath}`);
-      await downloadImage(src, filePath);
+      await downloadImage(src, `public/${filePath}`);
     }
   }
 

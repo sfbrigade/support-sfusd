@@ -24,7 +24,7 @@ async function extractLogoDetails(url: string): Promise<SchoolLogo> {
   const logoElement = document.querySelector(".site-logo>img");
   const logoUrl: string = logoElement?.getAttribute("src") || "";
   const logoAltText: string = logoElement?.getAttribute("alt") || "";
-  const filePath = `public/school_img/logo/${schoolStubFromUrlStub(url)}.${extractExtensionFromUrl(logoUrl)}`;
+  const filePath = `school_img/logo/${schoolStubFromUrlStub(url)}.${extractExtensionFromUrl(logoUrl)}`;
 
   return { logoUrl, logoAltText, filePath };
 }
@@ -44,7 +44,7 @@ async function main() {
     if (logo.logoUrl !== "") {
       Object.assign(school, { logo });
       await sleep(dosDelay, true);
-      await downloadImage(logo.logoUrl, logo.filePath);
+      await downloadImage(logo.logoUrl, `public/${logo.filePath}`);
     }
   }
   writeSchoolList(schoolList);
