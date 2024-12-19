@@ -1,5 +1,6 @@
 import { MetricCategory, PrismaClient, ProgramCategory } from "@prisma/client";
 const prisma = new PrismaClient();
+
 async function main() {
   const schools = [
     // Balboa
