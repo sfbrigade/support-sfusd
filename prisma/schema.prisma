@@ -21,6 +21,7 @@ model School {
   profile            SchoolProfile?
   metrics            Metric[]
   programs           Program[]
+  zipcode            String?
 }
 
 model SchoolProfile {
