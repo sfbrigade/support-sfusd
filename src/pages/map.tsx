@@ -62,8 +62,10 @@ const Map: React.FC<Props> = (props) => {
 
   const handleSchoolSearch = async (searchTerm: string) => {
     return props.schools
-      .filter(({ name }) =>
-        name.toUpperCase().includes(searchTerm.toUpperCase()),
+      .filter(
+        ({ name, zipcode }) =>
+          name.toUpperCase().includes(searchTerm.toUpperCase()) ||
+          zipcode?.includes(searchTerm),
       )
       .map((school) => ({
         label: school.name,
