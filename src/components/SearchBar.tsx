@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import Dropdown from "./Dropdown";
 import SearchIcon from "../../public/icons/search-icon.svg";
@@ -22,6 +22,7 @@ export default function SearchBar<DropdownItemType = any>({
   const [dropdownItems, setDropdownItems] = useState<
     DropdownItem<DropdownItemType>[]
   >([]);
+  const listRef = useRef<HTMLUListElement>(null);
 
   const onInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const userInput = e.target.value;
@@ -34,6 +35,12 @@ export default function SearchBar<DropdownItemType = any>({
     setSearchTerm(item.label);
     onItemSelect(item);
     setDropdownItems([]);
+  };
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "ArrowDown" && listRef.current) {
+      event.preventDefault();
+      listRef.current.focus();
+    }
   };
 
   return (
@@ -48,9 +55,15 @@ export default function SearchBar<DropdownItemType = any>({
         className="h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 pl-12 shadow-lg focus:border-blue-400"
         onChange={onInputChange}
         onFocus={() => setSearchTerm("")}
+        onKeyDown={handleKeyDown}
       />
       {dropdownItems.length > 0 && searchTerm.length > 0 && (
-        <Dropdown items={dropdownItems} onItemSelect={handleItemSelect} />
+        <Dropdown
+          items={dropdownItems}
+          onItemSelect={handleItemSelect}
+          listRef={listRef}
+          onKeyDown={handleKeyDown}
+        />
       )}
     </div>
   );
