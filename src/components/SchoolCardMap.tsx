@@ -116,7 +116,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           </div>
         </div>
         <Link
-          className="hidden md:block"
+          className="md:block"
           href={"/school?name=" + encodeURIComponent(school.name)}
         >
           <LearnMoreButton />

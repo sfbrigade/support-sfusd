@@ -114,19 +114,8 @@ const Map: React.FC<Props> = (props) => {
             {isMapView ? (
               selectedSchool ? (
                 <div className="w-full md:w-auto">
-                  <Link
-                    href={
-                      "/school?name=" + encodeURIComponent(selectedSchool.name)
-                    }
-                    className="block md:hidden"
-                    passHref
-                  >
-                    <SelectedSchoolCard school={selectedSchool} />
-                  </Link>
-                  <SelectedSchoolCard
-                    school={selectedSchool}
-                    className="hidden md:block"
-                  />
+                  <SelectedSchoolCard school={selectedSchool} />
+                 
                 </div>
               ) : (
                 <div className="gap flex w-3/4 flex-col items-center gap-12">
