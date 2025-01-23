@@ -43,7 +43,7 @@ export default function SearchBar<DropdownItemType = any>({
       </div>
       <input
         type="text"
-        placeholder="Search by Zip Code or School Name..."
+        placeholder="Type school name, zip code, or neighborhood"
         value={searchTerm}
         className="h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 pl-12 shadow-lg focus:border-blue-400"
         onChange={onInputChange}
