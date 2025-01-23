@@ -103,7 +103,6 @@ const Map: React.FC<Props> = (props) => {
         selectedSchool ? (
           <div className="w-full md:w-auto">
             <SelectedSchoolCard school={selectedSchool} />
-           
           </div>
         ) : (
           <div className="gap flex w-3/4 flex-col items-center gap-12">
