@@ -11,7 +11,7 @@ import prisma from "@/lib/prisma";
 import Image from "next/image";
 import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
-import { useMapContext } from '../contexts/MapContext';
+import { useMapContext } from "../contexts/MapContext";
 
 interface DropdownItem<ItemType> {
   label: string;
@@ -37,7 +37,8 @@ const schoolCardPlaceholderText =
   "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
 const Map: React.FC<Props> = (props) => {
-  const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } = useMapContext();
+  const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
+    useMapContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -125,21 +126,31 @@ const Map: React.FC<Props> = (props) => {
                   />
                 </div>
               ) : (
-                <div className="gap flex w-3/4 flex-col items-center gap-12">
-                  <Image
-                    src="/map-school-logo.png"
-                    alt="Homepage Background"
-                    className="hidden w-1/2 md:inline-block"
-                    width={200}
-                    height={200}
-                  />
-                  <div className="align-center flex flex-col items-center gap-4 text-center">
-                    <h1 className="text-2xl font-medium">
-                      {schoolCardPlaceholderTitle}
-                    </h1>
-                    <p className="md:text-lg">{schoolCardPlaceholderText}</p>
+                <>
+                  <div className="gap flex w-3/4 flex-col items-center gap-12">
+                    <Image
+                      src="/map-school-logo.png"
+                      alt="Homepage Background"
+                      className="hidden w-1/2 md:inline-block"
+                      width={200}
+                      height={200}
+                    />
+                    <div className="align-center flex flex-col items-center gap-4 text-center">
+                      <h1 className="text-2xl font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p className="md:text-lg">{schoolCardPlaceholderText}</p>
+                    </div>
                   </div>
-                </div>
+                  <div className="fixed bottom-0 left-0 right-0 z-10 bg-white p-4 shadow-lg md:hidden">
+                    <div className="align-center flex flex-col items-center gap-4 text-center">
+                      <h1 className="text-2xl font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p className="md:text-lg">{schoolCardPlaceholderText}</p>
+                    </div>
+                  </div>
+                </>
               )
             ) : (
               <div className="gap flex w-3/4 flex-col items-center gap-12">
