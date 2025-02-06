@@ -61,10 +61,17 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
+    const searchTermToLowerCase = searchTerm.toLowerCase();
     return props.schools
-      .filter(({ name }) =>
-        name.toUpperCase().includes(searchTerm.toUpperCase()),
-      )
+      .filter(({ name, zipcode, neighborhood }) => {
+        const nameToLowerCase = name.toLowerCase();
+        const neighborhoodToLowerCase = neighborhood?.toLowerCase();
+        return (
+          nameToLowerCase.includes(searchTermToLowerCase) ||
+          zipcode?.includes(searchTermToLowerCase) ||
+          neighborhoodToLowerCase?.includes(searchTermToLowerCase)
+        );
+      })
       .map((school) => ({
         label: school.name,
         value: school.name,
