@@ -64,6 +64,7 @@ h6 * {
   border-radius: 0;
   cursor: pointer;
   outline: none;
+  z-index: 5;
 }
 
 .golden-gate-marker {
@@ -132,4 +133,9 @@ input:checked + .slider {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
+}
+@media (min-width: 300px) and (max-width: 1150px) {
+  .placeholder-small::placeholder {
+    font-size: 0.81rem;
+  }
 }

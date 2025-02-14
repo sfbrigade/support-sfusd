@@ -10,6 +10,7 @@ export interface School {
   profile?: SchoolProfile;
   metrics: Metric[];
   programs: Program[];
+  zipcode?: string;
 }
 
 export interface SchoolProfile {

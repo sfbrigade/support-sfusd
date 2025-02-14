@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  binaryTargets = ["native", "darwin-arm64"]
 }
 
 datasource db {
@@ -17,9 +18,11 @@ model School {
   img                String?
   latitude           String
   longitude          String
+  zipcode            String?
   profile            SchoolProfile?
   metrics            Metric[]
   programs           Program[]
+ 
 }
 
 model SchoolProfile {

@@ -4,6 +4,7 @@ import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
+import VolunteerList from "./schoolPageComponents/VolunteerList";
 
 interface SchoolCardProps {
   school: School;
@@ -69,7 +70,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
     >
       <button
         onClick={onClose}
-        className="absolute left-2 top-2 z-10 block md:hidden"
+        className="absolute left-2 top-2 z-10 block md:relative md:top-8"
       >
         <Image
           src={`/circle_close.svg`}
@@ -109,37 +110,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           )}
           <h2 className="font-medium md:text-xl">{school.name}</h2>
           <p className="text-sm max-md:text-xs">{school.neighborhood}</p>
-          <div className="items-left mb-2 hidden flex-col md:block">
-            <div className="mb-2 flex flex-row items-center">
-              <img
-                src="icons/student-icon.png"
-                alt="student icon"
-                className="mr-2 max-h-[35px] max-w-[35px]"
-              />
-              <h3 className="text-base">
-                {students ? students.value : "N/A"} Students
-              </h3>
-            </div>
-            <div className="mb-2 flex flex-row items-center">
-              <img
-                src="icons/lunch-icon.png"
-                alt="lunch icon"
-                className="mr-2 max-h-[30px] max-w-[30px]"
-              />
-              <h3 className="text-base">
-                {frl ? frl.value : "N/A"}% Free and Reduced Lunch
-              </h3>
-            </div>
-            <div className="mb-2 flex flex-row items-center">
-              <img
-                src="icons/language-icon.png"
-                alt="language icon"
-                className="mr-2 max-h-[30px] max-w-[30px]"
-              />
-              <h3 className="text-base">
-                {ell ? ell.value : "N/A"}% English Language Learners
-              </h3>
-            </div>
+
+          <div className="mb-4 mt-3">
+            <VolunteerList school={school} fullCard={false} />
           </div>
         </div>
         <Link
