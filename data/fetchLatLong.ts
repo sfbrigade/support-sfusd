@@ -49,14 +49,17 @@ async function awsGeoLocateArray(addresses: string[], cached: boolean = false) {
 
 function main() {
   const schoolList = readSchoolList();
+
+  console.log("Geolocating schools...");
   Promise.all(
     schoolList.map(async (school) => {
       const geolocations = await awsGeoLocateArray(school.locations);
+      console.log(`Geolocated ${school.schoolStub}.`);
       return { ...school, geolocations };
     }),
   ).then((results) => {
     writeSchoolList(results);
-    console.log(JSON.stringify(results, null, 2));
+    console.log("Geolocations updated.");
   });
 }
 
