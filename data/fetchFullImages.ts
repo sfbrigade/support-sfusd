@@ -24,7 +24,9 @@ async function downloadFullImages() {
     const src = school.image?.src || "";
     const ext = extractExtensionFromUrl(src);
     const filePath =
-      ext && ext.length > 1 ? `school_img/${school.schoolStub}.${ext}` : "";
+      ext && ext.length > 1
+        ? `school_img/full/${school.schoolStub}.${ext}`
+        : "";
 
     // update the schoolList with the new image path
     if (school.image) school.image.filePath = filePath;
