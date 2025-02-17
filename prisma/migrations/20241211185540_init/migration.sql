@@ -16,6 +16,7 @@ CREATE TABLE "School" (
     "logo" TEXT,
     "latitude" TEXT NOT NULL,
     "longitude" TEXT NOT NULL,
+    "zipcode" TEXT,
 
     CONSTRAINT "School_pkey" PRIMARY KEY ("id")
 );
