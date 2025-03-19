@@ -7,8 +7,8 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: supersecret
-      POSTGRES_DB: mydb
+      POSTGRES_PASSWORD: $DB_PASSWORD
+      POSTGRES_DB: $DB_NAME
     volumes:
       - sfusd-data:/var/lib/postgresql/data
 
