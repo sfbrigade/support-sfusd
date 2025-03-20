@@ -1,5 +1,36 @@
+import fs from "fs";
+import path from "path";
+
 import { MetricCategory, PrismaClient, ProgramCategory } from "@prisma/client";
 const prisma = new PrismaClient();
+
+const getImageFileNamesFromCategory = (category: string) => {
+  const dir = path.join(process.cwd(), `public/stock-images/${category}`);
+  return fs
+    .readdirSync(dir)
+    .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+    .map((file) => `/stock-images/${category}/${file}`);
+};
+
+const hsStockEventImages = getImageFileNamesFromCategory("HS/event");
+const hsStockTutoringImages = getImageFileNamesFromCategory("HS/tutoring");
+
+function addRandomImages(school: any) {
+  school.programs.createMany.data.forEach((program: any) => {
+    if (program.category === ProgramCategory.volunteer) {
+      if (program.img.includes("tutor"))
+      program.img =
+        hsStockTutoringImages[
+          Math.floor(Math.random() * hsStockTutoringImages.length)
+        ];
+    } else {
+      program.img =
+        hsStockEventImages[
+          Math.floor(Math.random() * hsStockEventImages.length)
+        ];
+    }
+  });
+}
 
 async function main() {
   const schools = [
@@ -2036,6 +2067,7 @@ async function main() {
   ];
 
   for (const school of schools) {
+    addRandomImages(school);
     await prisma.school.create({
       data: school,
     });
