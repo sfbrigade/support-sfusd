@@ -14,18 +14,31 @@ const getImageFileNamesFromCategory = (category: string) => {
 
 const hsStockEventImages = getImageFileNamesFromCategory("HS/event");
 const hsStockTutoringImages = getImageFileNamesFromCategory("HS/tutoring");
+const hsStockMentoringImages = getImageFileNamesFromCategory("HS/mentoring");
 
 function addRandomImages(school: any) {
   school.programs.createMany.data.forEach((program: any) => {
     if (program.category === ProgramCategory.volunteer) {
-      if (program.img.includes("tutor"))
+      if (
+        program.img.toLowerCase().includes("tutor") ||
+        program.name.toLowerCase().includes("tutor")
+      )
+        program.img =
+          hsStockTutoringImages[
+            Math.floor(Math.random() * hsStockTutoringImages.length)
+          ];
+    } else if (
+      program.name.toLowerCase().includes("mentor") ||
+      program.name.toLowerCase().includes("career")
+    ) {
       program.img =
-        hsStockTutoringImages[
-          Math.floor(Math.random() * hsStockTutoringImages.length)
+        hsStockMentoringImages[
+          Math.floor(Math.random() * hsStockEventImages.length)
         ];
     } else {
+      // assume an EVENT type if not tutoring or mentoring
       program.img =
-        hsStockEventImages[
+      hsStockEventImages[
           Math.floor(Math.random() * hsStockEventImages.length)
         ];
     }
