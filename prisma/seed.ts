@@ -1,10 +1,16 @@
 import fs from "fs";
 import path from "path";
-
 import { MetricCategory, PrismaClient, ProgramCategory } from "@prisma/client";
+
 const prisma = new PrismaClient();
 
-const getImageFileNamesFromCategory = (category: string) => {
+/**
+ * Get image file names from a subdirectory of /public/stock-images based
+ * on the category name.
+ * @param category subdirectory of /public/stock-images e.g. "HS/event"
+ * @returns array of image file names
+ */
+const getImageFileNamesFromCategory = (category: string): string[] => {
   const dir = path.join(process.cwd(), `public/stock-images/${category}`);
   return fs
     .readdirSync(dir)
@@ -12,38 +18,38 @@ const getImageFileNamesFromCategory = (category: string) => {
     .map((file) => `/stock-images/${category}/${file}`);
 };
 
+// Get stock images for each school category
 const hsStockEventImages = getImageFileNamesFromCategory("HS/event");
 const hsStockTutoringImages = getImageFileNamesFromCategory("HS/tutoring");
 const hsStockMentoringImages = getImageFileNamesFromCategory("HS/mentoring");
 
-function addRandomImages(school: any) {
+// Add random images to each program based on the program name
+const addRandomImages = (school: any) => {
   school.programs.createMany.data.forEach((program: any) => {
     if (program.category === ProgramCategory.volunteer) {
-      if (
-        program.img.toLowerCase().includes("tutor") ||
-        program.name.toLowerCase().includes("tutor")
-      )
+      if (program.name.toLowerCase().includes("tutor")) {
         program.img =
           hsStockTutoringImages[
             Math.floor(Math.random() * hsStockTutoringImages.length)
           ];
-    } else if (
-      program.name.toLowerCase().includes("mentor") ||
-      program.name.toLowerCase().includes("career")
-    ) {
-      program.img =
-        hsStockMentoringImages[
-          Math.floor(Math.random() * hsStockEventImages.length)
-        ];
-    } else {
-      // assume an EVENT type if not tutoring or mentoring
-      program.img =
-      hsStockEventImages[
-          Math.floor(Math.random() * hsStockEventImages.length)
-        ];
+      } else if (
+        program.name.toLowerCase().includes("mentor") ||
+        program.name.toLowerCase().includes("career")
+      ) {
+        program.img =
+          hsStockMentoringImages[
+            Math.floor(Math.random() * hsStockEventImages.length)
+          ];
+      } else {
+        // assume an EVENT type if not tutoring or mentoring
+        program.img =
+          hsStockEventImages[
+            Math.floor(Math.random() * hsStockEventImages.length)
+          ];
+      }
     }
   });
-}
+};
 
 async function main() {
   const schools = [
