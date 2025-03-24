@@ -6,18 +6,20 @@ const Card = (props: any) => {
 
   return (
     <div className="rounded-lg">
-      <Image
-        src={img ? img : `/volunteer/event/stock${index + 1}.png`}
-        alt="volunteer image"
-        className="h-48 rounded-lg object-cover"
-        width={1000}
-        height={1000}
-        placeholder="blur"
-        blurDataURL={blurDataURL}
-      />
+      <div className="relative aspect-[16/9] rounded-lg">
+        <Image
+          src={img ? img : `/volunteer/event/stock${index + 1}.png`}
+          alt="volunteer image"
+          // className="h-48 rounded-lg object-cover"
+          className="rounded-lg object-cover"
+          fill
+          placeholder="blur"
+          blurDataURL={blurDataURL}
+        />
+      </div>
       <div className="p-2">
         <h1 className="font-medium">{title}</h1>
-        <p className="... line-clamp-4 overflow-hidden text-ellipsis">
+        <p className="line-clamp-4 overflow-hidden text-ellipsis">
           {description}
         </p>
       </div>
