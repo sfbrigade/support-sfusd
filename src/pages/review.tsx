@@ -11,7 +11,7 @@ const review = () => {
             <Card
               title="K-5"
               description="Elementary School Images"
-              img="http://localhost:3000/stock-images/K5/event/pexels-artempodrez-8088096.jpg"
+              img="/stock-images/K5/event/pexels-artempodrez-8088096.jpg"
               index={1}
             />
           </Link>
