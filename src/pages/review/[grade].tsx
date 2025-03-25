@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { imageSizeFromFile } from "image-size/fromFile";
 
 import { useState } from "react";
 import Card from "@/components/schoolPageComponents/Card";
@@ -10,16 +11,23 @@ import type {
   GetStaticPaths,
 } from "next";
 
+type ImageInfo = {
+  path: string;
+  width?: number;
+  height?: number;
+  aspectRatio?: string;
+};
+
 type ImageList = {
   category: string;
-  images: string[];
+  images: ImageInfo[];
 };
 
 const ImageListComponent = ({ category, images }: ImageList) => {
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  const [hoveredImage, setHoveredImage] = useState<ImageInfo | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouseEnter = (image: string) => {
+  const handleMouseEnter = (image: ImageInfo) => {
     setHoveredImage(image);
   };
 
@@ -46,25 +54,38 @@ const ImageListComponent = ({ category, images }: ImageList) => {
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}
           >
-            <Card title={image} description={image} img={image} index={index} />
+            <Card
+              title={image.path}
+              description={image.path}
+              img={image.path}
+              index={index}
+            />
           </div>
         ))}
 
         {hoveredImage && (
           <div
-            className="fixed z-50 overflow-hidden rounded-lg shadow-xl"
+            className="fixed z-50 overflow-hidden rounded-lg bg-blue-300 p-3 shadow-xl transition-opacity duration-1000 ease-in-out"
             style={{
               top: tooltipPosition.y + 20,
               left: tooltipPosition.x + 20,
-              maxWidth: "500px",
-              maxHeight: "500px",
               pointerEvents: "none",
+              opacity: hoveredImage ? 1 : 0,
             }}
           >
+            <div className="mb-1">
+              <div className="text-xl text-white">Original Image</div>
+              {hoveredImage.width && hoveredImage.height && (
+                <div className="text-sm">
+                  {hoveredImage.width} × {hoveredImage.height} px
+                  {hoveredImage.aspectRatio && ` (${hoveredImage.aspectRatio})`}
+                </div>
+              )}
+            </div>
             <img
-              src={hoveredImage}
+              src={hoveredImage.path || ""}
               alt="Full preview"
-              className="h-full w-full object-contain"
+              className="h-full max-h-[500px] w-full max-w-[500px] object-contain"
             />
           </div>
         )}
@@ -86,17 +107,54 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps = (async ({ params: grade }) => {
   /**
-   * Get image file names from a subdirectory of /public/stock-images based
+   * Get image file information from a subdirectory of /public/stock-images based
    * on the category name.
    * @param category subdirectory of /public/stock-images e.g. "HS/event"
-   * @returns array of image file names
+   * @returns array of image file information
    */
-  const getImageFileNamesFromCategory = (category: string): string[] => {
+  const getImageInfoFromCategory = async (
+    category: string,
+  ): Promise<ImageInfo[]> => {
     const dir = path.join(process.cwd(), `public/stock-images/${category}`);
-    return fs
+    const files = fs
       .readdirSync(dir)
-      .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-      .map((file) => `/stock-images/${category}/${file}`);
+      .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
+
+    const imagePromises = files.map(async (file) => {
+      const fullPath = path.join(dir, file);
+      const publicPath = `/stock-images/${category}/${file}`;
+
+      // Get image dimensions
+      try {
+        const dimensions = await imageSizeFromFile(fullPath);
+        const width = dimensions.width;
+        const height = dimensions.height;
+
+        // Calculate aspect ratio and simplify if possible
+        let aspectRatio = "";
+        if (width && height) {
+          // Find greatest common divisor for aspect ratio simplification
+          const gcd = (a: number, b: number): number =>
+            b === 0 ? a : gcd(b, a % b);
+          const divisor = gcd(width, height);
+          aspectRatio = `${width / divisor}:${height / divisor}`;
+        }
+
+        return {
+          path: publicPath,
+          width,
+          height,
+          aspectRatio,
+        };
+      } catch (e) {
+        // Return just the path if dimensions can't be determined
+        console.error(`Error getting dimensions for ${fullPath}:`, e);
+        return { path: publicPath };
+      }
+    });
+
+    // Wait for all promises to resolve and return the array of results
+    return Promise.all(imagePromises);
   };
 
   const images: ImageList[] = [];
@@ -106,9 +164,12 @@ export const getStaticProps = (async ({ params: grade }) => {
       : ["event", "mentoring", "tutoring"];
 
   for (const category of categories) {
+    const categoryImages = await getImageInfoFromCategory(
+      `${grade?.grade}/${category}`,
+    );
     images.push({
       category,
-      images: getImageFileNamesFromCategory(`${grade?.grade}/${category}`),
+      images: categoryImages,
     });
   }
   return { props: { images } };
