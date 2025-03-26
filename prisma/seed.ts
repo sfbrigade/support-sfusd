@@ -38,7 +38,7 @@ const addRandomImages = (school: any) => {
       ) {
         program.img =
           hsStockMentoringImages[
-            Math.floor(Math.random() * hsStockEventImages.length)
+            Math.floor(Math.random() * hsStockMentoringImages.length)
           ];
       } else {
         // assume an EVENT type if not tutoring or mentoring
