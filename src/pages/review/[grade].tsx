@@ -27,12 +27,14 @@ const ImageListComponent = ({ category, images }: ImageList) => {
   const [hoveredImage, setHoveredImage] = useState<ImageInfo | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
+  const disableTooltip = true;
+
   const handleMouseEnter = (image: ImageInfo) => {
-    setHoveredImage(image);
+    if (!disableTooltip) setHoveredImage(image);
   };
 
   const handleMouseLeave = () => {
-    setHoveredImage(null);
+    if (!disableTooltip) setHoveredImage(null);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
