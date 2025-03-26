@@ -14,7 +14,7 @@ const getImageFileNamesFromCategory = (category: string): string[] => {
   const dir = path.join(process.cwd(), `public/stock-images/${category}`);
   return fs
     .readdirSync(dir)
-    .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+    .filter((file) => /\.(jpg|jpeg|png|gif|webp|avif)$/i.test(file))
     .map((file) => `/stock-images/${category}/${file}`);
 };
 
