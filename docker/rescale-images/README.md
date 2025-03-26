@@ -2,6 +2,8 @@
 
 This repository contains scripts to automatically resize and standardize stock volunteer images. The original images vary in aspect ratios and are of very high resolution, resulting in large file sizes. These scripts will **automatically crop and scale** all images in a directory to a standardized **800x450 resolution**.
 
+The script creates JPG, WEBP and AVIF versions of these scaled down images.
+
 ## How It Works  
 
 - The **original images** should be placed in the [`stock-images`](stock-images) folder.  

@@ -10,6 +10,7 @@ import type {
   GetStaticProps,
   GetStaticPaths,
 } from "next";
+import Link from "next/link";
 
 type ImageInfo = {
   path: string;
@@ -46,7 +47,10 @@ const ImageListComponent = ({ category, images }: ImageList) => {
 
   return (
     <div className="flex flex-col gap-10">
-      <h2 className="text-3xl font-medium text-blue-500">{category}</h2>
+      <div>
+      <h2 className="text-4xl font-medium text-blue-500">{category} images</h2>
+      <Link className="text-lg underline" href="/review">Click here to return to grade directory</Link>
+      </div>
 
       <div className="relative grid gap-8 sm:grid-cols-3">
         {images.map((image, index) => (
@@ -120,7 +124,7 @@ export const getStaticProps = (async ({ params: grade }) => {
     const dir = path.join(process.cwd(), `public/stock-images/${category}`);
     const files = fs
       .readdirSync(dir)
-      .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
+      .filter((file) => /\.(jpg|jpeg|png|gif|webp|avif)$/i.test(file));
 
     const imagePromises = files.map(async (file) => {
       const fullPath = path.join(dir, file);

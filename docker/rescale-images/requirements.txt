@@ -1,1 +1,2 @@
 pillow
+pillow-avif-plugin
