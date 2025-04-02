@@ -46,6 +46,8 @@ docker run --rm \
 
 ## Notes  
 
-- Ensure your images are placed in the correct input directory ([`stock-images`](stock-images)) before running the script.  
-- The script **automatically clips images to fit 800x450** while maintaining aspect ratio.  
-- If running in Docker, ensure Docker is installed and running.  
+- Ensure the unprocessed images are placed in the correct input directory ([`stock-images`](stock-images)) before running the script.  
+- The script **automatically clips these images to fit a 16:9 aspect ratio** by finding the best central fit in the original image. If the image is taller that 16:9, the image will be clipped equally from the top and bottom to fit. If the image is too wide, it'll be clipped from both right and left sides so that the center of the image is retained after clipping.
+- After clipping, the image is resized (scaled) to a 800x450 resolution.
+
+> The aspect ratio adjusts automatically, but don’t rely on the autocropper if the original image is far from 16:9. It works reasonably well when the subject is centered, but if not, the results are usually poor. In those cases, manual cropping is recommended.

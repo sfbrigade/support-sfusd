@@ -10,7 +10,6 @@ const Card = (props: any) => {
         <Image
           src={img ? img : `/volunteer/event/stock${index + 1}.png`}
           alt="volunteer image"
-          // className="h-48 rounded-lg object-cover"
           className="rounded-lg object-cover"
           fill
           placeholder="blur"
