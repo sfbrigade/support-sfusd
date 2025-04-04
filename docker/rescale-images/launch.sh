@@ -5,4 +5,4 @@ docker run \
 	-v /"$PWD":/usr/src/app \
 	-w //usr/src/app \
 	python \
-	sh -c "pip install -r requirements.txt && python rescale-images.py"
+	sh -c "pip install --root-user-action ignore -r requirements.txt && python rescale-images.py"

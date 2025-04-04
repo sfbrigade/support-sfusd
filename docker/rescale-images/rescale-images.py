@@ -2,7 +2,9 @@
 import logging
 import os
 from PIL import Image
-import pillow_avif  # required for AVIF support
+
+# required for AVIF support (side effect)
+import pillow_avif  # type: ignore
 
 logging.basicConfig(
     level=logging.DEBUG, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
@@ -50,29 +52,20 @@ def process_images(input_folder: str, output_folder: str) -> None:
             ):
                 input_path = os.path.join(root, file)
                 rel_path = os.path.relpath(input_path, input_folder)
-
-                jpg_rel_path = ".".join(rel_path.split(".")[:-1] + ["jpg"])
                 webp_rel_path = ".".join(rel_path.split(".")[:-1] + ["webp"])
-                avif_rel_path = ".".join(rel_path.split(".")[:-1] + ["avif"])
 
                 # Construct output path
-                jpg_output_path = os.path.join(output_folder + "/jpg", jpg_rel_path)
-                webp_output_path = os.path.join(output_folder + "/webp", webp_rel_path)
-                avif_output_path = os.path.join(output_folder + "/avif", avif_rel_path)
+                webp_output_path = os.path.join(output_folder, webp_rel_path)
 
                 # Ensure output directory exists
-                os.makedirs(os.path.dirname(jpg_output_path), exist_ok=True)
                 os.makedirs(os.path.dirname(webp_output_path), exist_ok=True)
-                os.makedirs(os.path.dirname(avif_output_path), exist_ok=True)
 
                 # Open image and process
                 with Image.open(input_path) as img:
                     img_cropped = crop_to_aspect(img, target_aspect_ratio)
                     img_resized = resize_image(img_cropped, target_resolution)
 
-                    img_resized.save(jpg_output_path, quality=95)
                     img_resized.save(webp_output_path, quality=95)
-                    img_resized.save(avif_output_path, quality=95)
 
                 logger.debug(f"Processed: {input_path}")
 
