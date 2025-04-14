@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Support SF Schools - Explore local volunteer and donating opportunities",
+  title = "Support SF Schools - Explore local volunteer and donation opportunities",
   description = "A website to explore local schools and their available donation and volunteer opportunities.",
   imageUrl = "https://supportsfschools.org/SocialPreview.png",
   url, // Optional override
