@@ -106,8 +106,8 @@ const Map: React.FC<Props> = (props) => {
     <div className="flex h-full flex-col bg-[#D7F1FF]">
       <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
       <div className="top-16 z-10 flex justify-center gap-2 border-t-4 border-[#D7F1FF] bg-[#D7F1FF] pt-1 max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
-        <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
         <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+        <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
       </div>
       <div
         className={`relative mx-auto flex h-auto flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-10/12 2xl:w-2/3 ${isMapView ? " w-full flex-1" : ""}`}
@@ -116,6 +116,13 @@ const Map: React.FC<Props> = (props) => {
           <div
             className={`col-span-4 ${isMapView && selectedSchool ? "p-0" : "p-2 md:p-0"}  ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-50 m-4 flex h-fit items-center justify-center rounded-2xl bg-white md:static md:m-0 md:flex md:h-full`}
           >
+            <div className="top-0 z-10 flex justify-center gap-2 border-t-4 border-[#D7F1FF] bg-[#D7F1FF] pt-1 max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
+              <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+              <SearchBar
+                onItemSelect={itemSelect}
+                onSearch={handleSchoolSearch}
+              />
+            </div>
             {isMapView ? (
               selectedSchool ? (
                 <div className="w-full md:w-auto">
@@ -170,11 +177,11 @@ const Map: React.FC<Props> = (props) => {
           </div>
           <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
             <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
+              <ToggleButton isMapView={isMapView} toggleView={setToggle} />
               <SearchBar
                 onItemSelect={itemSelect}
                 onSearch={handleSchoolSearch}
               />
-              <ToggleButton isMapView={isMapView} toggleView={setToggle} />
             </div>
             <div className="h-full w-full overflow-auto ">
               {isMapView ? (
