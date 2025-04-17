@@ -56,27 +56,58 @@ We're using Prisma as our ORM. If you're unsure of what it is or what it does he
 
   <br>
 
-# Environment File
+# Managing Environment Secrets with [SOPS](https://github.com/getsops/sops) + [age](https://github.com/FiloSottile/age)
 
-Create an environment file to pass your default public token from Mapbox and connect Prisma to postgres
+This project uses environment variables to store sensitive information such as:
 
-1. Create the local server env file in the main directory (with the README.md file):
+- Mapbox tokens
+- PostgreSQL connection strings
+- Google service account keys for accessing the Google Sheets & Drive APIs
 
+To keep these secrets safe while still enabling collaboration, we use age and sops to encrypt and share a secure version of our `.env` file ([env.sops](/env.sops)).
+
+## Step 1: Generate Your Keypair
+
+First, make sure you’ve installed [age](https://github.com/FiloSottile/age). Then, generate your personal public/private keypair:
+
+```sh
+age-keygen -o age.key
+```
+
+- Keep your `age.key` file private — do not commit it to the repo.
+- You can name it and store it anywhere on your system, but placing it in a secure, ignored folder is best.
+- Your public key will be shown in the terminal output and is also included as a comment inside the `age.key` file.
+
+## Step 2: Add Your Public Key to .sops.yaml
+
+To give you access, an existing team member must add your public key to the repo’s `.sops.yaml` file:
+
+```yaml
+creation_rules:
+  - path_regex: \.env
+    encrypted_regex: ^[^#]+
+    age: age1m8n8vl0vx5gz8guf8dkv6ckpdfp9snymenf3zmhyz54cswe32a9sc6jwnn,<new_member_public_key_here>
+```
+
+> 💡 Share your public key with another member on the dev team. A developer will then update and re-encrypt the env.sops file so you can decrypt it locally.
+
+## Step 3: Re-Encrypting the [env.sops](/env.sops) File
+
+When a new public key is added:
+
+1. Ensure your local `.env` file has the correct and up-to-date values. If unsure, regenerate it from the current [env.sops](/env.sops):
+   
    ```sh
-   cp .env.example .env
+   ./scripts/decrypt-env.sh <path-to-your-age.key>
    ```
 
-2. Add your default public token to your `.env`
-
+2. Once the `.env` is verified and the `.sops.yaml` file has been updated with the new public key, re-encrypt:
+   
    ```sh
-   NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_default_public_token
+   ./scripts/encrypt-env.sh
    ```
 
-3. For the prisma configuration you're going to need the vercel postgres URLs. For security, please ask an existing developer for this information. Add both of these to your `.env` file. Alternatively, you can [follow these instructions](docker/README.md) to set up a local Postgres instance in a Docker container.
-   ```sh
-   POSTGRES_PRISMA_URL=ask_a_dev
-   POSTGRES_URL_NON_POOLING=ask_a_dev
-   ```
+This regenerates the [env.sops](/env.sops) file using the updated key list, ensuring new developers can decrypt it with their own keys.
 
 <br>
 

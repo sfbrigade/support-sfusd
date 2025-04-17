@@ -5,7 +5,7 @@ set -e
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   echo "Usage: $(basename "$0") [KEY_FILE] [INPUT_FILE] [OUTPUT_FILE]"
   echo "Decrypt environment file using SOPS with Age encryption."
-  echo "Defaults: KEY_FILE=\$SOPS_AGE_KEY_FILE, INPUT_FILE=.env.sops, OUTPUT_FILE=.env"
+  echo "Defaults: KEY_FILE=\$SOPS_AGE_KEY_FILE, INPUT_FILE=env.sops, OUTPUT_FILE=.env"
   exit 0
 fi
 
@@ -13,7 +13,7 @@ fi
 KEY_FILE=${1:-$SOPS_AGE_KEY_FILE}
 
 # override the default if needed
-INPUT_FILE=${2:-.env.sops}
+INPUT_FILE=${2:-env.sops}
 OUTPUT_FILE=${3:-.env}
 
 require_command() {

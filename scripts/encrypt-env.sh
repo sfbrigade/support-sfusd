@@ -5,18 +5,18 @@ set -e
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   echo "Usage: $(basename "$0") [INPUT_FILE] [OUTPUT_FILE]"
   echo "Encrypt environment file using SOPS with Age encryption."
-  echo "Defaults: INPUT_FILE=.env, OUTPUT_FILE=.env.sops"
+  echo "Defaults: INPUT_FILE=.env, OUTPUT_FILE=env.sops"
   exit 0
 fi
 
 # Default input file
 INPUT_FILE=${1:-.env}
-OUTPUT_FILE=${2:-.env.sops}
+OUTPUT_FILE=${2:-env.sops}
 
 # Check if input exists
 if [ ! -f "$INPUT_FILE" ]; then
   echo "❌ Input file not found: $INPUT_FILE"
-  echo "Usage: $0 [input-file] [output-file]  # defaults are .env and .env.sops"
+  echo "Usage: $0 [input-file] [output-file]  # defaults are .env and env.sops"
   exit 1
 fi
 
