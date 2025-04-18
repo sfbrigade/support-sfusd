@@ -8,6 +8,21 @@ This area contains scripts for running the website database locally in a Docker 
 
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop). This **should** provide the `docker` and `docker-compose` commands in your terminal. If `docker-compose` is missing, try `docker compose` instead.
 
+### Environment Variables
+
+Create (or update) a `.env` file in the root of project to instruct `prisma` where to find the database, using the following environment variables:
+
+```bash
+# Database
+COMPOSE_FILE=docker/docker-compose.yml
+DB_PASSWORD=supersecret
+DB_USER=postgres
+DB_NAME=mydb
+
+POSTGRES_PRISMA_URL="postgresql://postgres:supersecret@localhost:5432/mydb"
+POSTGRES_URL_NON_POOLING="postgresql://postgres:supersecret@localhost:5432/mydb"
+```
+
 ### Launch the Database
 
 Once Docker Desktop is installed and available via the command line, you can run the following command to start the database, using the `-f` flag to specify the location of the `docker-compose.yml` file:
@@ -16,17 +31,7 @@ Once Docker Desktop is installed and available via the command line, you can run
 docker-compose -f docker/docker-compose.yml up -d
 ```
 
-This command will start a PostgreSQL database in a Docker container. The database will be available at `localhost:5432` with the username `postgres` and password `supersecret`.
-
-### Environment Variables
-
-Create (or update) a `.env` file in the root of project to instruct `prisma` where to find the database, using the following environment variables:
-
-```bash
-# Database
-POSTGRES_PRISMA_URL="postgresql://postgres:supersecret@localhost:5432/mydb"
-POSTGRES_URL_NON_POOLING="postgresql://postgres:supersecret@localhost:5432/mydb"
-```
+This command will start a PostgreSQL database in a Docker container. The database will be available at `localhost:5432` with the username `postgres`.
 
 ### Create the Database
 

@@ -27,7 +27,7 @@ const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
           <p className="max-sm:text-sm">
             We are following the{" "}
             <a
-              href="https://sfedfund.org/where-we-work/"
+              href="https://sfedfund.org/who-we-serve"
               target="_blank"
               className="text-[#3A86FF] hover:underline max-sm:text-sm"
             >
