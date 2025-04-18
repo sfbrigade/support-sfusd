@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       person_profiles: "identified_only",
       loaded: (posthog) => {
         if (process.env.NODE_ENV === "development") {
-          posthog.debug();
+          //posthog.debug();
         }
       },
     });

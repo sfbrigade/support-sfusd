@@ -53,3 +53,9 @@ export interface SchoolMapList {
   frl?: string;
   ell?: string;
 }
+
+export interface DropdownItem<ItemType> {
+  label: string;
+  value: string;
+  item: ItemType;
+}
