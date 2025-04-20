@@ -1,7 +1,19 @@
-import { MetricCategory, PrismaClient, ProgramCategory } from "@prisma/client";
+import * as fs from "fs";
+import path from "path";
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
+function addPrismaCreateStatements(school: any) {
+  const { metrics, programs, ...rest } = school;
+  return {
+    ...rest,
+    metrics: { createMany: { data: metrics } },
+    programs: { createMany: { data: programs } },
+  };
+}
+
 async function main() {
+  /* original data
   const schools = [
     // Balboa
     {
@@ -2034,10 +2046,15 @@ async function main() {
       },
     },
   ];
-
+  */
+  const schools = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "schools.json"), {
+      encoding: "utf-8",
+    }),
+  );
   for (const school of schools) {
     await prisma.school.create({
-      data: school,
+      data: addPrismaCreateStatements(school),
     });
   }
 }
