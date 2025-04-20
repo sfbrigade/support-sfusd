@@ -1,35 +1,25 @@
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   binaryTargets = ["native", "darwin-arm64"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
 model School {
-  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  stub               String    @id
   name               String
   address            String
   neighborhood       String
-  priority           Boolean  @default(false)
+  priority           Boolean   @default(false)
   img                String?
   latitude           String
   longitude          String
   zipcode            String?
-  profile            SchoolProfile?
-  metrics            Metric[]
-  programs           Program[]
- 
-}
-
-model SchoolProfile {
-  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  schoolId           String   @unique @db.Uuid
-  school		         School   @relation(fields: [schoolId], references: [id])
-  about			         String
+  about              String
   about_bp           String[]
   volunteer_form_url String
   donation_url       String?
@@ -39,32 +29,33 @@ model SchoolProfile {
   testimonial_video  String?
   testimonial_img    String?
   noteable_video     String?
-  principal		       String
-  instagram_url		   String?
-  facebook_url		   String?
-  website_url		     String?
+  principal          String
+  instagram_url      String?
+  facebook_url       String?
+  website_url        String?
+  metrics            Metric[]
+  programs           Program[]
 }
 
 model Metric {
-  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  schoolId           String   @db.Uuid
-  school		         School @relation(fields: [schoolId], references: [id])
-  name			         String
-  value		           Float    @default(0)
-  unit               String
-  category           MetricCategory
+  id       String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  stub     String
+  school   School         @relation(fields: [stub], references: [stub])
+  name     String
+  value    Float          @default(0)
+  unit     String
+  category MetricCategory
 }
 
-
 model Program {
-  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  schoolId           String   @db.Uuid
-  school		         School @relation(fields: [schoolId], references: [id])
-  name			         String
-  details		         String
-  url			           String?
-  img                String?
-  category		       ProgramCategory
+  id       String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  stub     String
+  school   School          @relation(fields: [stub], references: [stub])
+  name     String
+  details  String
+  url      String?
+  img      String?
+  category ProgramCategory
 }
 
 enum MetricCategory {
