@@ -76,10 +76,10 @@ const MapListCard = ({
   }
 
   useEffect(() => {
-    if (selectedSchool && selectedSchool.id === school.id) {
+    if (selectedSchool && selectedSchool.stub === school.stub) {
       cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
-  }, [selectedSchool, school.id]);
+  }, [selectedSchool, school.stub]);
 
   return (
     <div
