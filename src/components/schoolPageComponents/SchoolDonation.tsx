@@ -10,7 +10,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
   );
 
   function formatDonationText() {
-    const donation_text = school.profile ? school.profile.donation_text : "";
+    const donation_text = school.donation_text;
     const donation_txt_split = donation_text.split(":\n");
     if (donation_txt_split.length > 1) {
       const address_split = donation_txt_split[1].split("\n");
@@ -38,9 +38,9 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
             content={
               <div className="flex flex-col gap-4">
                 <p>{formatDonationText()}</p>
-                {school.profile?.donation_url && (
+                {school.donation_url && (
                   <a
-                    href={school.profile?.donation_url}
+                    href={school.donation_url}
                     target="_blank"
                     className={
                       "plausible-event-name=Clicked+Main+Donate+" +
