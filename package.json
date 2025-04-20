@@ -11,7 +11,8 @@
     "build": "prisma migrate reset --force && next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "sheet-sync": "tsx prisma/sync.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -19,6 +20,8 @@
     "@reduxjs/toolkit": "^1.9.5",
     "@types/mapbox-gl": "^2.7.14",
     "@vercel/postgres": "^0.7.2",
+    "dotenv": "^16.5.0",
+    "googleapis": "^148.0.0",
     "mapbox-gl": "^2.15.0",
     "next": "13.4.19",
     "react": "18.2.0",
@@ -45,6 +48,7 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "prisma": "^5.13.0",
     "tailwindcss": "3.3.3",
+    "tsx": "^4.19.3",
     "typescript": "5.2.2"
   },
   "prettier": {
