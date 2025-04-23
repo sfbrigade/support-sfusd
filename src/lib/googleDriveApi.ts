@@ -151,7 +151,7 @@ async function walkFolder(
       spaces: "drive",
       pageToken,
     });
-    delay(200); // delay to avoid hitting the GAPI too hard
+    await delay(200); // delay to avoid hitting the GAPI too hard
 
     for (const file of res.data.files || []) {
       const filePath = `${currentPath}/${file.name}`;
@@ -310,7 +310,7 @@ export async function syncDriveFiles(
       }
 
       // download the image from Google Drive
-      delay(200); // delay to avoid hitting the GAPI too hard
+      await delay(200); // delay to avoid hitting the GAPI too hard
       const imgBuffer = await downloadDriveFile(file.id);
 
       let sharpInstance = sharp(imgBuffer);
