@@ -3,22 +3,46 @@ import * as path from "path";
 import sharp from "sharp";
 import { google } from "googleapis";
 
+/**
+ * Options for converting a file, typically parsed from the filename.
+ */
 export type FileConversionOptions = {
+  /** The target path for the converted file. */
   targetPath: string;
-  w?: number; // target width
-  h?: number; // target height
-  t?: string; // target file type
+  /** Target width for image resizing. */
+  w?: number;
+  /** Target height for image resizing. */
+  h?: number;
+  /** Target file type (extension) for conversion. */
+  t?: string;
 };
 
+/**
+ * Represents a file found in Google Drive, including conversion options.
+ */
 export type DriveFile = {
+  /** Google Drive file ID. */
   id: string;
+  /** Original filename in Google Drive. */
   name: string;
+  /** MIME type of the file in Google Drive. */
   mimeType: string;
+  /** Original path of the file within the scanned Drive folder structure. */
   path: string;
 } & FileConversionOptions;
 
+/**
+ * Creates a promise that resolves after a specified delay.
+ * @param ms The delay time in milliseconds.
+ * @returns A promise that resolves after the delay.
+ */
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+/**
+ * Retrieves Google Authentication credentials from environment variables.
+ * @returns A configured GoogleAuth instance.
+ * @throws Error if credentials are not properly configured.
+ */
 function getGoogleAuthCredentials() {
   const scopes = [
     "https://www.googleapis.com/auth/spreadsheets.readonly",
@@ -39,6 +63,12 @@ function getGoogleAuthCredentials() {
   });
 }
 
+/**
+ * Replaces the extension of a file path with a new one.
+ * @param filePath The original file path.
+ * @param newExt The new extension (e.g., ".jpg", "png").
+ * @returns The file path with the replaced extension.
+ */
 function replaceExtension(filePath: string, newExt: string): string {
   const parsed = path.parse(filePath);
   return path.format({
@@ -48,6 +78,13 @@ function replaceExtension(filePath: string, newExt: string): string {
   });
 }
 
+/**
+ * Parses a filepath string potentially containing conversion options
+ * embedded in directory or file names (e.g., "images/logo--w 100--h 50--t jpg/logo.png").
+ * Options are specified after "--" and separated by spaces (key value).
+ * @param filepath The filepath string to parse.
+ * @returns An object containing the parsed options and the cleaned target path.
+ */
 function parseFilepath(filepath: string): FileConversionOptions {
   const parts = filepath.split("/").filter((part) => part !== "");
   const options: Omit<FileConversionOptions, "targetPath"> & {
@@ -89,7 +126,12 @@ function parseFilepath(filepath: string): FileConversionOptions {
   };
 }
 
-// recursively walk the drive structure
+/**
+ * Recursively walks a Google Drive folder structure starting from a given folder ID.
+ * @param folderId The ID of the Google Drive folder to start walking from.
+ * @param currentPath The current path string being built during recursion.
+ * @returns A promise that resolves with an array of DriveFile objects found.
+ */
 async function walkFolder(
   folderId: string,
   currentPath: string,
@@ -133,7 +175,13 @@ async function walkFolder(
   return results;
 }
 
-// get a folder ID by name (returns the first match)
+/**
+ * Finds the Google Drive folder ID for a given folder name.
+ * Returns the ID of the first matching folder found.
+ * @param folderName The name of the folder to search for.
+ * @returns A promise that resolves with the folder ID.
+ * @throws Error if no folder with the given name is found.
+ */
 async function getFolderIdByName(folderName: string): Promise<string> {
   const drive = google.drive({
     version: "v3",
@@ -196,9 +244,10 @@ export async function downloadDriveFile(
 }
 
 /**
- * Scans a Google Drive folder and returns all files within it
- * @param folderName Name of the root folder to scan
- * @returns Array of files found
+ * Scans a Google Drive folder recursively and returns metadata for all files found within it,
+ * including parsed conversion options from file/folder names.
+ * @param folderName Name of the root folder in Google Drive to scan.
+ * @returns A promise that resolves with an array of DriveFile objects.
  */
 export async function scanDriveFolder(
   folderName: string,
@@ -230,6 +279,13 @@ export async function scanDriveFolder(
   }
 }
 
+/**
+ * Synchronizes files from a specified Google Drive folder to a local target folder.
+ * It scans the Drive folder, downloads each file, applies transformations (resize, type change)
+ * based on parsed options from filenames/paths, and saves them to the target directory.
+ * @param sourceFolder The name of the source folder in Google Drive.
+ * @param targetFolder The local path where files should be saved. Defaults to "./".
+ */
 export async function syncDriveFiles(
   sourceFolder: string,
   targetFolder: string = "./",
