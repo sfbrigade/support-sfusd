@@ -23,6 +23,6 @@ if (require.main === module) {
   (async () => {
     // Call the syncDriveFiles function with the source Google Drive folder name
     // and the target local directory path.
-    await syncDriveFiles("public-sync", "public/sync");
+    await syncDriveFiles("image_sync", "public/sync");
   })();
 }
