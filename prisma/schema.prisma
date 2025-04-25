@@ -11,6 +11,7 @@ datasource db {
 
 model School {
   stub               String    @id
+  casid              String    @unique
   name               String
   address            String
   neighborhood       String

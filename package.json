@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write",
-    "sheet-sync": "tsx prisma/sync.ts"
+    "data-sync": "tsx prisma/data-sync.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",

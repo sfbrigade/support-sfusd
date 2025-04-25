@@ -1,6 +1,7 @@
 [
   {
     "stub": "balboa-high-school",
+    "casid": "3830288",
     "name": "Balboa High School",
     "address": "1000 Cayuga Ave, San Francisco, CA",
     "neighborhood": "Excelsior",
@@ -114,6 +115,7 @@
   },
   {
     "stub": "burton-high-school",
+    "casid": "3830254",
     "name": "Burton High School",
     "address": "400 Mansell St, San Francisco, CA",
     "neighborhood": "Portola",
@@ -231,6 +233,7 @@
   },
   {
     "stub": "downtown-high-school",
+    "casid": "3830064",
     "name": "Downtown High School",
     "address": "693 Vermont St, San Francisco, CA",
     "neighborhood": "Potrero Hill",
@@ -334,6 +337,7 @@
   },
   {
     "stub": "galileo-academy-of-science-technology",
+    "casid": "3831765",
     "name": "Galileo Academy of Science & Technology",
     "address": "1150 Francisco St, San Francisco, CA",
     "neighborhood": "Russian Hill",
@@ -435,6 +439,7 @@
   },
   {
     "stub": "ida-b-wells-high-school",
+    "casid": "3830031",
     "name": "Ida B. Wells High School",
     "address": "1099 Hayes St, San Francisco, CA",
     "neighborhood": "Lower Haight",
@@ -534,6 +539,7 @@
   },
   {
     "stub": "independence-high-school",
+    "casid": "3830197",
     "name": "Independence High School",
     "address": "1350 7th Ave, San Francisco, CA",
     "neighborhood": "Inner Sunset",
@@ -632,6 +638,7 @@
   },
   {
     "stub": "sf-international-high-school",
+    "casid": "0119875",
     "name": "SF International High School",
     "address": "655 De Haro St, San Francisco, CA",
     "neighborhood": "Potrero Hill",
@@ -729,6 +736,7 @@
   },
   {
     "stub": "june-jordan-school-for-equity",
+    "casid": "0102103",
     "name": "June Jordan School for Equity",
     "address": "325 La Grande Ave, San Francisco, CA",
     "neighborhood": "Excelsior",
@@ -820,6 +828,7 @@
   },
   {
     "stub": "lincoln-high-school",
+    "casid": "3833241",
     "name": "Lincoln High School",
     "address": "2162 24th Ave, San Francisco, CA",
     "neighborhood": "Parkside/Sunset",
@@ -930,6 +939,7 @@
   },
   {
     "stub": "lowell-high-school",
+    "casid": "3833407",
     "name": "Lowell High School",
     "address": "1101 Eucalyptus Dr, San Francisco, CA",
     "neighborhood": "Lakeshore",
@@ -1029,6 +1039,7 @@
   },
   {
     "stub": "mission-high-school",
+    "casid": "3834082",
     "name": "Mission High School",
     "address": "3750 18th St, San Francisco, CA",
     "neighborhood": "Mission",
@@ -1130,6 +1141,7 @@
   },
   {
     "stub": "john-oconnell-technical-high-school",
+    "casid": "3834769",
     "name": "John O'Connell Technical High School",
     "address": "2355 Folsom St, San Francisco, CA",
     "neighborhood": "Mission",
@@ -1230,6 +1242,7 @@
   },
   {
     "stub": "ruth-asawa-school-of-the-arts-sota",
+    "casid": "3830387",
     "name": "Ruth Asawa School of the Arts (SOTA)",
     "address": "555 Portola Dr, San Francisco, CA",
     "neighborhood": "Diamond Heights",
@@ -1332,6 +1345,7 @@
   },
   {
     "stub": "the-academy",
+    "casid": "0119958",
     "name": "The Academy",
     "address": "550 Portola Dr #250, San Francisco, CA",
     "neighborhood": "Diamond Heights",
@@ -1431,6 +1445,7 @@
   },
   {
     "stub": "thurgood-marshall-high-school",
+    "casid": "3830403",
     "name": "Thurgood Marshall High School",
     "address": "45 Conkling St, San Francisco, CA",
     "neighborhood": "Bayview",
@@ -1532,6 +1547,7 @@
   },
   {
     "stub": "wallenberg-high-school",
+    "casid": "3830205",
     "name": "Wallenberg High School",
     "address": "40 Vega St, San Francisco, CA",
     "neighborhood": "Western Addition",
@@ -1640,6 +1656,7 @@
   },
   {
     "stub": "george-washington-high-school",
+    "casid": "3839081",
     "name": "George Washington High School",
     "address": "600 32nd Ave, San Francisco, CA",
     "neighborhood": "Richmond",
