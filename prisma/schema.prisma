@@ -10,25 +10,16 @@ datasource db {
 }
 
 model School {
-  id           String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  casid        String         @unique
-  name         String
-  address      String
-  neighborhood String
-  priority     Boolean        @default(false)
-  img          String?
-  logo         String?
-  latitude     String
-  longitude    String
-  profile      SchoolProfile?
-  metrics      Metric[]
-  programs     Program[]
-}
-
-model SchoolProfile {
-  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  schoolId           String   @unique @db.Uuid
-  school             School   @relation(fields: [schoolId], references: [id])
+  stub               String    @id
+  casid              String    @unique
+  name               String
+  address            String
+  neighborhood       String
+  priority           Boolean   @default(false)
+  img                String?
+  latitude           String
+  longitude          String
+  zipcode            String?
   about              String
   about_bp           String[]
   volunteer_form_url String
@@ -43,12 +34,14 @@ model SchoolProfile {
   instagram_url      String?
   facebook_url       String?
   website_url        String?
+  metrics            Metric[]
+  programs           Program[]
 }
 
 model Metric {
   id       String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  schoolId String         @db.Uuid
-  school   School         @relation(fields: [schoolId], references: [id])
+  stub     String
+  school   School         @relation(fields: [stub], references: [stub])
   name     String
   value    Float          @default(0)
   unit     String
@@ -57,8 +50,8 @@ model Metric {
 
 model Program {
   id       String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  schoolId String          @db.Uuid
-  school   School          @relation(fields: [schoolId], references: [id])
+  stub     String
+  school   School          @relation(fields: [stub], references: [stub])
   name     String
   details  String
   url      String?

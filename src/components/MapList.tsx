@@ -33,11 +33,11 @@ const MapList = ({
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((school) => (
             <MapListCard
-              key={school.id}
+              key={school.stub}
               school={school}
               setSelectedSchool={setSelectedSchool}
               isExpanded={
-                selectedSchool ? school.id === selectedSchool.id : false
+                selectedSchool ? school.stub === selectedSchool.stub : false
               }
               onModalOpen={onModalOpen}
             />

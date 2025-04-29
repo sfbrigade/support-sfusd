@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const SchoolTestimonial: React.FC<{ school: School }> = ({ school }) => {
   function getTestimonialGraphic(school: School) {
-    if (school.profile?.testimonial_video) {
+    if (school.testimonial_video) {
       return (
         <iframe
           height="315"
-          src={school.profile?.testimonial_video}
+          src={school.testimonial_video}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -18,10 +18,10 @@ const SchoolTestimonial: React.FC<{ school: School }> = ({ school }) => {
           className="w-full rounded-lg"
         ></iframe>
       );
-    } else if (school.profile?.testimonial_img) {
+    } else if (school.testimonial_img) {
       return (
         <Image
-          src={school.profile.testimonial_img}
+          src={school.testimonial_img}
           alt="testimonial image"
           className="w-full rounded-lg"
           width={500}
@@ -41,10 +41,10 @@ const SchoolTestimonial: React.FC<{ school: School }> = ({ school }) => {
           heading={"Testimonial"}
           content={
             <div>
-              <p>{school.profile?.testimonial}</p>
-              {school.profile?.testimonial_author && (
+              <p>{school.testimonial}</p>
+              {school.testimonial_author && (
                 <h2 className="mt-2 text-xl font-medium text-[#8338EC]">
-                  {school.profile.testimonial_author}
+                  {school.testimonial_author}
                 </h2>
               )}
             </div>

@@ -8,11 +8,11 @@ const SchoolAbout: React.FC<{ school: School }> = ({ school }) => {
 
   const innerContent = (
     <div>
-      {school.profile && (
+      {school && (
         <>
-          <div className="md:text-lg">{school.profile.about}</div>
+          <div className="md:text-lg">{school.about}</div>
           <ul className="ml-4 mt-6 list-disc md:text-lg">
-            {school.profile.about_bp.map((bullet: string, i: number) => (
+            {school.about_bp.map((bullet: string, i: number) => (
               <li
                 key={i}
                 className="ml-2"

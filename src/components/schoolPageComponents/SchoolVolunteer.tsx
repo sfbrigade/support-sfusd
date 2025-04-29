@@ -33,7 +33,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
             </p>
             <div className="flex gap-2">
               <Link
-                href={school.profile ? school.profile.volunteer_form_url : ""}
+                href={school.volunteer_form_url ?? ""}
                 target="_blank"
                 className={
                   "plausible-event-name=Clicked+VolunteerForm+" +

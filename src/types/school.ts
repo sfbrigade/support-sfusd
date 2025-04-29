@@ -1,5 +1,5 @@
 export interface School {
-  id: string;
+  stub: string;
   name: string;
   address?: string;
   neighborhood?: string;
@@ -8,13 +8,6 @@ export interface School {
   logo?: string;
   latitude: number;
   longitude: number;
-  profile?: SchoolProfile;
-  metrics: Metric[];
-  programs: Program[];
-  zipcode?: string;
-}
-
-export interface SchoolProfile {
   about: string;
   about_bp: string[];
   volunteer_form_url: string;
@@ -29,7 +22,27 @@ export interface SchoolProfile {
   instagram_url?: string;
   facebook_url?: string;
   website_url?: string;
+  metrics: Metric[];
+  programs: Program[];
+  zipcode?: string;
 }
+
+// export interface SchoolProfile {
+//   about: string;
+//   about_bp: string[];
+//   volunteer_form_url: string;
+//   donation_url?: string;
+//   donation_text: string;
+//   testimonial?: string;
+//   testimonial_author?: string;
+//   testimonial_video?: string;
+//   testimonial_img?: string;
+//   noteable_video?: string;
+//   principal: string;
+//   instagram_url?: string;
+//   facebook_url?: string;
+//   website_url?: string;
+// }
 
 export interface Metric {
   name: string;

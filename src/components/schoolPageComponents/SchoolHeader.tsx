@@ -21,10 +21,10 @@ export default function SchoolHeader({ school }: Props) {
         </h1>
         {/* hide socials if not exist */}
         <div className="flex justify-end gap-3 fill-blue-500 max-md:w-full">
-          {school.profile && (
+          {school && (
             <>
-              {school.profile.instagram_url && (
-                <a href={school.profile.instagram_url} target="_blank">
+              {school.instagram_url && (
+                <a href={school.instagram_url} target="_blank">
                   <InstagramIcon
                     className="fill-inherit"
                     height="36"
@@ -32,8 +32,8 @@ export default function SchoolHeader({ school }: Props) {
                   />
                 </a>
               )}
-              {school.profile.facebook_url && (
-                <a href={school.profile.facebook_url} target="_blank">
+              {school.facebook_url && (
+                <a href={school.facebook_url} target="_blank">
                   <FacebookIcon
                     className="fill-inherit"
                     height="36"
@@ -41,8 +41,8 @@ export default function SchoolHeader({ school }: Props) {
                   />
                 </a>
               )}
-              {school.profile.website_url && (
-                <a href={school.profile.website_url} target="_blank">
+              {school.website_url && (
+                <a href={school.website_url} target="_blank">
                   <GlobeIcon className="fill-inherit" height="36" width="36" />
                 </a>
               )}

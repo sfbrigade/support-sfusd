@@ -16,7 +16,6 @@ import React from "react";
 export const getStaticProps: GetStaticProps = async (context) => {
   const schools = await prisma.school.findMany({
     include: {
-      profile: true,
       metrics: true,
       programs: true,
     },
@@ -76,13 +75,11 @@ const Profile: React.FC<Props> = (props) => {
             )}
             <SchoolVolunteer school={school} />
             <SchoolDonation school={school} />
-            {school.profile?.testimonial && (
-              <SchoolTestimonial school={school} />
-            )}
-            {school.profile?.noteable_video && (
+            {school.testimonial && <SchoolTestimonial school={school} />}
+            {school.noteable_video && (
               <iframe
                 height="340"
-                src={school.profile?.noteable_video}
+                src={school.noteable_video}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

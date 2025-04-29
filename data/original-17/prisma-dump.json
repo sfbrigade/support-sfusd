@@ -1,0 +1,2276 @@
+[
+  {
+    "id": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+    "name": "Balboa High School",
+    "address": "1000 Cayuga Ave, San Francisco, CA",
+    "neighborhood": "Excelsior",
+    "priority": false,
+    "img": "balboa.jpeg",
+    "latitude": "37.722",
+    "longitude": "-122.44041",
+    "zipcode": "94112",
+    "profile": {
+      "id": "3cc25b19-5e5d-4fc5-bf8d-445f88037d12",
+      "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+      "about": "Balboa (\"Bal\") is a unique high school with a rich history and tradition.",
+      "about_bp": [
+        "Bal was the first high school in SFUSD to organize into small learning communities called Pathways.",
+        "In their Pathways, students build relationships with teachers, while engaging in rigorous academic, athletic, and artistic pursuits.",
+        "The five Pathways at BAL are: CAST (Creative Arts for Social Transformation), GDA (Game Design Academy), Law Academy, PULSE (Peers United for Leadership, Service and Equity) and WALC (Wilderness, Art, and Literacy Collaborative)",
+        "Bal is the only SFUSD high school with an on-campus teen health clinic."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/e/1FAIpQLSd5ZGgHnefy4wTZ4Iasus5MV8H9SM5XxccdBxIgy2R0qVEHFg/viewform",
+      "donation_url": null,
+      "donation_text": "Mail a check made out to Balboa High School and mail it to:\nBalboa High School\n1000 Cayuga Avenue\nSan Francisco, CA 94112",
+      "testimonial": "\"We are the only high school to have an on-campus clinic. I find it really convenient, because my doctor is like across town from where I live, and I have to miss a whole day of school when I'm sick. Our clinic is COMPLETELY free, counselors, medicine, sex ed.\"",
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "Dr. Catherine Arenson",
+      "instagram_url": "http://www.instagram.com/balboahs",
+      "facebook_url": "https://www.facebook.com/pages/Balboa-High-School-California/140869085980447 ",
+      "website_url": "https://www.sfusd.edu/school/balboa-high-school"
+    },
+    "metrics": [
+      {
+        "id": "5bb4c178-ca72-4fe0-b69a-b7e69c9a6ced",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Students Enrolled",
+        "value": 1278,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "349b14f2-89e2-4a42-ab15-7998c26f3b3c",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Free/Reduced Lunch",
+        "value": 59,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "e1834be4-51ad-496c-8728-70d9e6ca44f9",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "English Language Learners",
+        "value": 21,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "e2d9fd16-5e82-458a-b673-1a4ec55640c5",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Students with Special Needs",
+        "value": 15,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "aa197392-7057-4bff-b87d-ec0c2f457a15",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "High School Graduation Rate",
+        "value": 94,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "55a306a5-b0d5-4b02-bf3b-f646f955952d",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "English Proficiency",
+        "value": 43,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "c7778bb0-79eb-47f6-827b-b430281fdc34",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Math Proficiency",
+        "value": 60,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "0911e79e-ca66-438c-b66c-c97c6e73e41f",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Career-based Mentoring",
+        "details": "All of Bal's Pathway programs need career-based mentoring, such as being a guest speaker",
+        "url": "",
+        "img": "/volunteer/event/stock7.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "00e9dd73-9d11-4c8e-b2e8-aa080f02f4ce",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock2.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "c6f6be2f-ad3d-4178-839c-e26d7e52de3d",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Event Volunteers",
+        "details": "Provide support for school-sponsored events such as shows and field trips",
+        "url": "",
+        "img": "/volunteer/event/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "8376e9f9-f70b-4c53-8bfe-1ab7e7a9ec13",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/balboa-high-school/4391",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "40fabbbc-a0ed-48d9-946e-a95e3a594e71",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "PTSA",
+        "details": "",
+        "url": "https://www.sfusd.edu/school/balboa-high-school/ptsa/cash-appeal",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "6cb8ff91-3ed5-4b7b-903c-d708938a99c2",
+        "schoolId": "d010fb7b-63cc-468f-b63d-59e0f8a36a48",
+        "name": "WALC Pathway",
+        "details": "",
+        "url": "https://walcsf.net/donate-new/",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+    "name": "Burton High School",
+    "address": "400 Mansell St, San Francisco, CA",
+    "neighborhood": "Portola",
+    "priority": true,
+    "img": "burton.jpeg",
+    "latitude": "37.72126",
+    "longitude": "-122.4063",
+    "zipcode": "94134",
+    "profile": {
+      "id": "cd51cb5b-6828-4a0d-aab9-e89934125b58",
+      "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+      "about": "Burton High School was established in 1984 as a result of a Consent Decree between the City of San Francisco and the NAACP, and is named after Phillip Burton, a member of the California Assembly who championed the civil rights of others. Burton also:",
+      "about_bp": [
+        "Is a “wall-to-wall” academy school, offering specialized career and technical education in Arts & Media, Engineering, Health Sciences, and Performing Arts to students in the form of project-based learning classes",
+        "Has a student body that represents every ethnicity, socio-economic group, and neighborhood of San Francisco",
+        "Has an extensive partnership with the Bayview YMCA, and offers college classes by City College on Saturdays as well as after-school tutoring",
+        "Offers after-school program called P.A.C.E (Pumas’ Academics, College & Career, and Enrichments) offers academic, community service based and skill building activities",
+        "Burton has the only public high school marching band in the city!"
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1xqB69hsheJEHtUcfcrAlqRYxCv7EsYpDgdqmktWxAWo/viewform",
+      "donation_url": "https://www.paypal.com/donate/?hosted_button_id=QPPWNFC966MYQ",
+      "donation_text": "Donate to Burton's PTSA. All of your donation goes directly to programs benefitting teachers an students!",
+      "testimonial": "\"I like my teachers because they really care about me and they’re always willing to go an extra mile for me when I need it.\"",
+      "testimonial_author": "Daniela Simental, student",
+      "testimonial_video": "https://www.youtube.com/embed/jwMX9zSxaA0?si=ch5T8GWlPJCxJHGz&amp;start=192",
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/jwMX9zSxaA0?si=bL4VMGrxRQ_xipUf",
+      "principal": "Suniqua Thomas",
+      "instagram_url": "https://www.instagram.com/burtonpumas/",
+      "facebook_url": "https://www.facebook.com/burtonpumas/",
+      "website_url": "https://www.sfusd.edu/school/phillip-and-sala-burton-academic-high-school"
+    },
+    "metrics": [
+      {
+        "id": "61e3a443-05ab-4d4e-bdd6-2aaff64c1530",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Students Enrolled",
+        "value": 1060,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "155a1f3a-7b2c-464f-8bd1-b8fc69dc03c5",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Free/Reduced Lunch",
+        "value": 64,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "402a100c-631a-47c2-a05c-14582fd2756a",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "English Language Learners",
+        "value": 23,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "4a21533f-1bb9-450e-b381-b1c2c9e74418",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Students with Special Needs",
+        "value": 18,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "c2bdcc93-91d6-4832-8d00-567d37fca5f4",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "High School Graduation Rate",
+        "value": 95,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "c953e88d-bd09-4752-a40d-a3365eb4fc68",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "English Proficiency",
+        "value": 59,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "5cb3f4a6-90a5-4f15-9101-9adb3b91a458",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Math Proficiency",
+        "value": 18,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "035f37a9-d390-4f80-8162-8278c33f4cc6",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock3.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "376514a5-2583-4e09-b292-9b59a521b1db",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Event Volunteer",
+        "details": "Provide support for school-sponsored events",
+        "url": "",
+        "img": "/volunteer/event/stock4.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "c591dfcb-0a7f-4173-8575-cee45d346759",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/event/stock6.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "545a7c40-4381-4bb5-9d94-ba955b6e102d",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Burton's Marching Band",
+        "details": "",
+        "url": "https://www.paypal.com/donate/?hosted_button_id=Q95CE7W539Z2U",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "6996e845-c174-4b70-bcdb-5a982e3982ee",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/philip-sala-burton-high-school/4390",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "e12eb1ee-9cb8-4ea1-9b63-1213afb02ef3",
+        "schoolId": "37c18539-6f20-42ed-8d95-e6c6178ba278",
+        "name": "Food Pantry",
+        "details": "",
+        "url": "https://www.gofundme.com/f/j7awn-burton-high-school-food-pantry",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+    "name": "Downtown High School",
+    "address": "693 Vermont St, San Francisco, CA",
+    "neighborhood": "Potrero Hill",
+    "priority": false,
+    "img": "downtown.jpeg",
+    "latitude": "37.761565",
+    "longitude": "-122.40394",
+    "zipcode": "94107",
+    "profile": {
+      "id": "7c5738fd-d758-4eae-aaea-5f4992e453d5",
+      "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+      "about": "Downtown High School (DHS) is one of two continuation schools in SFUSD, dedicated to serving students whose success was limited in the district's comprehensive and charter high schools.",
+      "about_bp": [
+        "DHS represents a second chance for students to succeed and a chance to graduate from high school.",
+        "DHS meets the need of these at-risk students by offering an educational experience that enables them to re-engage with school, find meaning in learning, achieve academic success, and graduate.",
+        "DHS offers project-based learning with the following five projects: Acting for Critical Transformations (ACT), Get Out and Learn (GOAL), Making, Advocating and Designing for Empowerment (MADE), Music and Academics Resisting the System (MARS), and Wilderness Arts and Literacy Collaborative (WALC)."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/e/1FAIpQLSecfLxlYgdHcs4vZLtW-V8CKVT38kY4rc7qqb5ocj-X9J3jLQ/viewform",
+      "donation_url": null,
+      "donation_text": "Mail a check made out to Downtown High School and mail it to:\nDowntown High School\n693 Vermont St.\nSan Francisco, CA 94107",
+      "testimonial": null,
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "Todd Williams",
+      "instagram_url": "www.instagram.com/downtown_hs",
+      "facebook_url": null,
+      "website_url": "https://www.sfusd.edu/school/downtown-high-school"
+    },
+    "metrics": [
+      {
+        "id": "e814573b-864e-49a7-af22-d9d4b42377de",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Students Enrolled",
+        "value": 144,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "abddabe3-fe66-4770-824a-58b7516f50c1",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Free/Reduced Lunch",
+        "value": 76,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "d9dd2f00-85af-4da3-95a8-5290bab6c183",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "English Language Learners",
+        "value": 21,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "4f213d12-3c72-4b4e-8dea-e0c10b34b995",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Students with Special Needs",
+        "value": 22,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "56c3b09e-8c90-47c3-89a3-f4c1b9d85127",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "High School Graduation Rate",
+        "value": 45,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "48e74f90-8a03-4937-bae4-ac88b162e74d",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "English Proficiency",
+        "value": 46,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "85c6289e-e8ff-4a2e-bb40-1b2cd1b1a6b4",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Math Proficiency",
+        "value": 34,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "cb23d847-ed20-44fb-9dac-68926600773c",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "03879c4c-3711-4c0b-8aa4-201e7d3c7a3d",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Event Volunteer",
+        "details": "Provide support for school-sponsored events",
+        "url": "",
+        "img": "/volunteer/event/stock3.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "227608a5-9c47-46c3-b7c8-ea11d15ea499",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/event/stock2.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "45186a7f-e01e-4508-8437-8814cd198fec",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/downtown-alternative-cont-high-school/4386",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "82eae455-86a8-4ba2-bb4e-acf989873a90",
+        "schoolId": "35249bf8-524e-4e95-9d84-86029c68f4f2",
+        "name": "WALC Pathway",
+        "details": "",
+        "url": "https://walcsf.net/donate-new/",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+    "name": "Galileo Academy of Science & Technology",
+    "address": "1150 Francisco St, San Francisco, CA",
+    "neighborhood": "Russian Hill",
+    "priority": false,
+    "img": "galileo.jpeg",
+    "latitude": "37.80379",
+    "longitude": "-122.424145",
+    "zipcode": "94109",
+    "profile": {
+      "id": "d8a18b64-1865-4f03-84e1-c1e8414ee926",
+      "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+      "about": "Galileo Academy of Science and Technology (\"Galileo\") is committed to providing equal access to all of their educational programs.",
+      "about_bp": [
+        "Galileo offers three career technical Academic pathways: 1) Biotechnology, Environmental Science, Health Sciences, 2) Information Technology, Media, Arts, and 3) Hospitality, Travel and Tourism.",
+        "Galileo provides servies that meet diverse learning needs, including extensive Honors, Advanced Placement (AP) courses, English Language Development (ELD), and Special Education Services.",
+        "Galileo aims to provide support for their students for life, college, and beyond through programs like AVID with additional academic counseling for college prepation, the Wellness Center, and their Futurama after-school program with sports, arts, enrichment, and tutoring."
+      ],
+      "volunteer_form_url": "https://forms.gle/H89nowxGSMLoBqTaA",
+      "donation_url": "https://www.galileoptsa.org/donation-form",
+      "donation_text": "Donate to Galileo's PTSA. Donations support teacher/classroom stipends, educational enrichment grants, community events, World Party, and student leadership.",
+      "testimonial": "\"I like my teachers because they're very understanding and very supportive. I take some cool classes such as health academy, which is very interesting because we got to learn a lot of things related to medical field ... and we get to visit hospitals.\"",
+      "testimonial_author": "Senior in 2021 - Romaissa Khaldi",
+      "testimonial_video": "https://www.youtube.com/embed/KkDW52FEdsg?si=MCUnI9xwh_PhhchA&amp;start=170",
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/KkDW52FEdsg?si=lsyO4inn548P7bTE",
+      "principal": "Ambar Panjabi",
+      "instagram_url": "https://www.instagram.com/galileoasb/",
+      "facebook_url": "https://www.facebook.com/GalileoAcademy/",
+      "website_url": "https://www.sfusd.edu/school/galileo-academy-science-technology"
+    },
+    "metrics": [
+      {
+        "id": "52639e52-4fef-430e-b531-c71ea32e4068",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Students Enrolled",
+        "value": 1900,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "efad8cc1-b6ba-4c20-af26-563c89d4fe3c",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Free/Reduced Lunch",
+        "value": 57,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "034f7a80-e6e9-4898-86e8-dd337934e293",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "English Language Learners",
+        "value": 23.6,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "026b9841-b8a5-475e-9821-66a4f414002b",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Students with Special Needs",
+        "value": 11.5,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "9d8d1193-7d98-41c5-a97e-5fef062bf54c",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "High School Graduation Rate",
+        "value": 89,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "f4193c52-3702-4161-989c-873bb8ceff42",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "English Proficiency",
+        "value": 71,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "4fedae70-33f8-4783-9aa7-b3198462c2a2",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Math Proficiency",
+        "value": 50,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "6528cadd-bc0a-4d52-94a4-fe0167288f7a",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Academic After-School Tutors (Futurama)",
+        "details": "Help students at Galileo with afterschool Math,\n              Science, English, Social Studies tutoring.",
+        "url": "",
+        "img": "/volunteer/tutoring/stock4.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "4cb107f4-e5fd-4290-8780-910614e64375",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Remote Graphic Design (w/ PTSA)",
+        "details": "Support Galileo's online PTSA presence through remote-friendly design tasks!",
+        "url": "",
+        "img": "/volunteer/tutoring/stock5.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "2df29a61-0d69-4acd-b3ba-105d6c9e314e",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Event Volunteer (with PTSA) ",
+        "details": "Help Galileo's PTSA organize Galileo-unique events like World Party and with projects for school beautification.",
+        "url": "",
+        "img": "/volunteer/event/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "5c43f007-cdaa-41a0-9477-aa5f408c3012",
+        "schoolId": "a81af025-2021-42be-a5aa-e4a7c9ff62d0",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/galileo-academy-science-tech/4398",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+    "name": "Ida B. Wells High School",
+    "address": "1099 Hayes St, San Francisco, CA",
+    "neighborhood": "Lower Haight",
+    "priority": false,
+    "img": "idabwells.jpeg",
+    "latitude": "37.7751",
+    "longitude": "-122.433985",
+    "zipcode": "94117",
+    "profile": {
+      "id": "3fcd7884-26d7-4634-82fd-d9c33ab9121c",
+      "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+      "about": "Ida B. Wells (IBW) is one of two continuation schools in SFUSD, dedicated to serving students whose success was limited in the district's comprehensive and charter high schools.",
+      "about_bp": [
+        "IBW represents a second chance for students who are 16+ to succeed and a chance to graduate from high school.",
+        "IBW meets the need of these at-risk students by offering an educational experience that enables them to re-engage with school, find meaning in learning, achieve academic success, and graduate.",
+        "IBW's special programs include Culinary Arts, Drama, Computer Applications and Robotics, Ceramics, and Surfing."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/e/1FAIpQLSf71Z-9hmWL13xOeIDiVP2atl3Wj4BHMnsOrowM9XAFycvIhg/viewform",
+      "donation_url": null,
+      "donation_text": "Mail a check made out to Ida B. Wells High School and mail it to:\nIda B. Wells\n1099 Hayes St.\nSan Francisco, CA 94117",
+      "testimonial": "\"I love this school the teachers are awesome and the students are great!!! I graduated from here on time!! And I was behind like 150 credits and caught up within a year!! Thank you Ida b wells\"",
+      "testimonial_author": "Reyanna L.",
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "Katie Pringle",
+      "instagram_url": "https://www.instagram.com/sf_idabwellshs",
+      "facebook_url": "https://www.facebook.com/pages/Ida-B-Wells-Continuation-High-School/1920936394824346",
+      "website_url": "https://www.sfusd.edu/school/ida-b-wells-high-school"
+    },
+    "metrics": [
+      {
+        "id": "80dfca0c-41ca-4137-b254-91ff3a639c35",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Students Enrolled",
+        "value": 183,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "b2f36346-f022-459d-98c0-c42ded265c5c",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Free/Reduced Lunch",
+        "value": 67,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "3bff9d72-ee2d-4038-8d44-2266bb981ad4",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "English Language Learners",
+        "value": 23,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "17fc72af-6dbf-4379-8780-666058dc58eb",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Students with Special Needs",
+        "value": 27,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "8243ec77-d616-4c38-a78d-bf27681404ae",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "High School Graduation Rate",
+        "value": 59,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "ff59a85e-aeee-409b-9372-dd3eab20804f",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "English Proficiency",
+        "value": 18,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "2ffd637b-6b71-4512-9a08-a0853eafa1a1",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Math Proficiency",
+        "value": 0,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "037b7598-5f82-45a5-8bae-705cb33d1f1e",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock4.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "570fe2fb-5362-442c-83a8-87adab6236ec",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Event Volunteer",
+        "details": "Provide support for school-sponsored events",
+        "url": "",
+        "img": "/volunteer/event/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "9423206b-d54d-46a8-a3c9-8b3b090ac71b",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/event/stock7.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "0aabb33e-04d7-4db0-a625-a3c6427e58e7",
+        "schoolId": "23307ed8-b6f0-402d-938d-0506f95c4f98",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/ida-b-wells-high-school/4385",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "b9af5ef7-809d-43f8-9856-832be574038c",
+    "name": "Independence High School",
+    "address": "1350 7th Ave, San Francisco, CA",
+    "neighborhood": "Inner Sunset",
+    "priority": false,
+    "img": "independence.jpeg",
+    "latitude": "37.76309",
+    "longitude": "-122.46388",
+    "zipcode": "94122",
+    "profile": {
+      "id": "b2523426-d274-4a9b-a74a-3f2b74a03e71",
+      "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+      "about": "Independence is a small alternative high school in SFUSD.",
+      "about_bp": [
+        "Independence serves students who have significant obligations outside of school, including family and employment.",
+        "Independence creates a custom schedule for each student to meet their needs.",
+        "The school offers a unique hexamester system to maximize opportunities for students."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/e/1FAIpQLScCyflGm6ePuNRFLQ4rCYYgHwzxWzBLkDtJjf1bgziWwwy7bg/viewform",
+      "donation_url": null,
+      "donation_text": "Mail a check made out to Independence High School and mail it to:\nIndependence High School\n1350 7th Ave\nSan Francisco, CA 94122\n",
+      "testimonial": "\"I've met some of the most amazing, resilient people, grown, and had an amazing time all in all----this school is truly a hidden gem in the school system.\"",
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "Anastasia (Anna) Klafter",
+      "instagram_url": "https://www.instagram.com/sfindependence/",
+      "facebook_url": "https://www.facebook.com/sfindependence/",
+      "website_url": "https://www.sfusd.edu/school/independence-high-school"
+    },
+    "metrics": [
+      {
+        "id": "5ff6192b-eceb-47cc-9ef6-a9775d227b4a",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Students Enrolled",
+        "value": 162,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "30db11d0-1f33-472c-bfc0-23e2e8e928bb",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Free/Reduced Lunch",
+        "value": 48,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "e2c911f1-8474-4581-b9d2-08501fdb54fd",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "English Language Learners",
+        "value": 3,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "47a5e323-b8df-4ebc-8fa0-9b50288a3fbf",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Students with Special Needs",
+        "value": 22,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "903b4dcd-9004-49f9-976f-8327f9160578",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "High School Graduation Rate",
+        "value": 85,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "b9b8aa05-3417-45c9-8f7b-2248d9d0910d",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "English Proficiency",
+        "value": 46,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "f5291f52-769b-4a4e-a7f0-3a6ed1d134b3",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Math Proficiency",
+        "value": 34,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "825d5378-869d-4152-b519-3dbcba10afeb",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "c3a17a66-0738-43b1-84a3-405731c22f41",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Event Volunteer",
+        "details": "Provide support for school-sponsored events",
+        "url": "",
+        "img": "/volunteer/event/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "9feb67c2-f3b3-4df2-95d3-b709216db783",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/event/stock6.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "e5446e7e-714e-4577-bee2-253963c694b8",
+        "schoolId": "b9af5ef7-809d-43f8-9856-832be574038c",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/independence-high-school/4388",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+    "name": "SF International High School",
+    "address": "655 De Haro St, San Francisco, CA",
+    "neighborhood": "Potrero Hill",
+    "priority": false,
+    "img": "international.jpeg",
+    "latitude": "37.76169",
+    "longitude": "-122.40082",
+    "zipcode": "94107",
+    "profile": {
+      "id": "c1d10dd6-b18d-4494-a4a9-96e08e378290",
+      "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+      "about": "SF International is a small public high school that offers a unique program designed for recent immigrant students.",
+      "about_bp": [
+        "All subjects teach English development through meaningful projects that keep students motivated and connected to their learning.",
+        "SF International offers programs every day until 6:00 PM for all students.",
+        "Community volunteers interested in supporting SF International should go through nonprofit RIT (Refugee & Immigrant Transitions)."
+      ],
+      "volunteer_form_url": "https://www.tfaforms.com/5026463",
+      "donation_url": null,
+      "donation_text": "Mail a check made out to SF Interntional High School and mail it to:\nSF International High School\n655 De Haro St.\nSan Francisco, CA 94107\n",
+      "testimonial": "\"I like everything about my school, we all have the same experience that makes us be a good community, we are all English learners with big goals. Our school is small and we receive a lot of attention from the teachers that every day pushes us to be a great student.\"",
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "Nick Chan",
+      "instagram_url": "http://www.instagram.com/sfihuskies",
+      "facebook_url": null,
+      "website_url": "https://www.sfusd.edu/school/san-francisco-international-high-school"
+    },
+    "metrics": [
+      {
+        "id": "3b8d81c4-6f3b-4d86-a980-c9f989065f11",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Students Enrolled",
+        "value": 275,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "a2a62483-1804-41d7-9410-d331adeea279",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Free/Reduced Lunch",
+        "value": 76,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "f705a4fe-36d3-4afc-84ab-b784c016b0d6",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "English Language Learners",
+        "value": 88,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "6b05ae0a-1844-4ecb-b69f-80e9b5a2d292",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Students with Special Needs",
+        "value": 3,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "d95f420c-e5b0-4ba5-8e56-7ab7b902552d",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "High School Graduation Rate",
+        "value": 48,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "611edf1d-2f7e-4efb-9812-f5d705038374",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "English Proficiency",
+        "value": 12,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "628c9046-a697-4be0-a53e-f2cb1a4dfd0f",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Math Proficiency",
+        "value": 13,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "f52d9002-7675-4a6a-8f15-aecf1adb0109",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Daytime classroom support",
+        "details": "Academic support for students during class",
+        "url": "",
+        "img": "/volunteer/event/stock6.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "5ec1bc4a-eec8-46ac-a513-0f108544b583",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "2cb20fe0-ff1f-4ace-9849-cfb9422a32c7",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/event/stock7.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "5153443f-df10-4c23-929c-5364901f26ae",
+        "schoolId": "4ab2aa8c-fa72-4c27-8dee-e2b9d96eb2a1",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/san-francisco-int-l-high-school/98266",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+    "name": "June Jordan School for Equity",
+    "address": "325 La Grande Ave, San Francisco, CA",
+    "neighborhood": "Excelsior",
+    "priority": true,
+    "img": "junejordan.jpeg",
+    "latitude": "37.7195",
+    "longitude": "-122.42539",
+    "zipcode": "94112",
+    "profile": {
+      "id": "303a1d25-cd26-49dd-872e-a9d8f5d310a1",
+      "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+      "about": "June Jordan is a small alternative high school named after activist June Jordan. The school was founded through community organizing by a group of teachers, parents, and youth.",
+      "about_bp": [
+        "As a school for Social Justice serving primarily working class communities of color, the mission of JJSE is not just to prepare students for college but to also be positive agents of change in the world.",
+        "The school's three pillars are Community, Social Justice, and Independent Thinking.",
+        "Motorcycle Mechanics class and is home to a <a href=\"https://www.urbansprouts.org/jjse\" target=\"_blank\" class=\"hover:underline text-blue-500\">community farm</a>."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1hVYScQ93TU03a5qh3pyoxVYFp2_xmkAj3-xGH20qNrg/viewform?edit_requested=true",
+      "donation_url": "https://smallschoolsforequity.org/donate/",
+      "donation_text": "Donate to June Jordan on the Small Schools for Equity website. All of your donation goes directly to programs benefitting teachers and youth!",
+      "testimonial": "\"June Jordan is a breath of fresh air myself and many others. There is a strong and immediate sense of community and family. The school is aimed towards helping students, specifically of Latinx or African American descent, thrive in all aspects of a academic scholar. Most schools are tied strictly towards academics but June Jordan has a different approach. They acknowledge the fact that a single being and their destiny should not be overlooked by a grade book. We build leaders at this school, we build demonstrators, organizers, and creators.\"",
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "Amanda Chui",
+      "instagram_url": "https://www.instagram.com/officialjjse",
+      "facebook_url": "https://www.facebook.com/JuneJordanSchoolforEquity",
+      "website_url": "https://www.sfusd.edu/school/june-jordan-school-equity"
+    },
+    "metrics": [
+      {
+        "id": "87dd05b6-4fcf-49c6-8d4a-8e885e2e5df3",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "Students Enrolled",
+        "value": 215,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "ae575bcb-b4ca-415c-a2f5-f96f22eaab0b",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "Free/Reduced Lunch",
+        "value": 64,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "1d9ecdab-5ac0-47ce-a123-c3acb32b78b9",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "English Language Learners",
+        "value": 48,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "33e1459b-18cd-46f5-9c70-6bab705efdcf",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "Students with Special Needs",
+        "value": 28,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "a59d8179-06ac-4643-814a-e5739b50cd01",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "High School Graduation Rate",
+        "value": 85,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "99cbed50-e17e-40be-95c2-4bbeaeabe1d6",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "English proficiency",
+        "value": 19,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "5ada8595-fbcd-4346-bb3c-d7b398f9bccb",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "Math proficiency",
+        "value": 8,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "d68092b6-fc64-4fe6-a2b5-e9894ce52f2e",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "062e0b73-f0bc-4121-b2f7-539e26c34284",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "Event Volunteer",
+        "details": "Provide support for school-sponsored events",
+        "url": "",
+        "img": "/volunteer/event/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "2f5571a2-5d17-4c21-93a0-02d206dceb45",
+        "schoolId": "5a2e0a85-1712-45a9-86d8-db9deea137c9",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/event/stock6.png",
+        "category": "volunteer"
+      }
+    ]
+  },
+  {
+    "id": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+    "name": "Lincoln High School",
+    "address": "2162 24th Ave, San Francisco, CA",
+    "neighborhood": "Parkside/Sunset",
+    "priority": false,
+    "img": "lincoln.jpeg",
+    "latitude": "37.74729",
+    "longitude": "-122.48109",
+    "zipcode": "94116",
+    "profile": {
+      "id": "04abeb82-0162-4d8b-993c-1615f5ab315d",
+      "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+      "about": "Lincoln is one of the three largest high schools in SFUSD. The school features:",
+      "about_bp": [
+        "Partnerships with 14 different community agencies",
+        "Four CTE (Career Technical Education) funded multi-year Academy Programs: CTE Business Academy, CTE Digital Media Design Academy, CTE Green Academy, and CTE Teacher Academy",
+        "Two pathways: Art & Architecture Pathway (Formerly ACE Architecture, Construction, Engineering) and the Biotechnology Pathway",
+        "Services for special education (severely and non-severely impaired) students",
+        "A student newspaper called the \"Lincoln Log\""
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1iO_ex9OJK81xD9EQ8D4SZHjhJDhgyLcdb2IQq5u4rDg/edit",
+      "donation_url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=RHY6FMNAJX8EE&source=url&ssrt=1713743821077",
+      "donation_text": "Donate to Lincoln's PTSA.",
+      "testimonial": "\"Here at Lincoln you've got tons of supportive staff and also you'll be open to major student leadership opportunities.\"",
+      "testimonial_author": "Kelly Wong, student",
+      "testimonial_video": "https://www.youtube.com/embed/PfHdxukonSg?si=RvM3VjT_SAPSI0Sb&amp;start=225",
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/PfHdxukonSg?si=Q3d3ieVn2fdtD_Ka",
+      "principal": "Sharimar Manalang",
+      "instagram_url": "https://www.instagram.com/alhsgreenacademy/",
+      "facebook_url": "https://www.facebook.com/groups/191813114254895/",
+      "website_url": "https://www.sfusd.edu/school/abraham-lincoln-high-school"
+    },
+    "metrics": [
+      {
+        "id": "25e313d2-8a4e-4e96-b882-a8eed541b943",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Students Enrolled",
+        "value": 1997,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "bed4b956-1634-408c-95f6-171cc3b603b5",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Free/Reduced Lunch",
+        "value": 48,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "8e5e76e7-8b73-4f79-914f-4ea0cbc23e8f",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "English Language Learners",
+        "value": 16,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "0990cf78-611a-4bbf-ba5c-f5cf694dd937",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Students with Special Needs",
+        "value": 14,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "0329cca9-1b89-46de-8e21-e772cd786b36",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "High School Graduation Rate",
+        "value": 94,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "a89d906e-fc23-449d-9762-42bcbeb3817b",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "English proficiency",
+        "value": 55,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "9b127777-dcab-476c-9cd8-8e89ec1cc140",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Math proficiency",
+        "value": 34,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "e157834b-3b11-4697-911d-49679c82ae86",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "608eae2c-2dbf-436b-ac73-e36b27ba0c3d",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Alumni Association",
+        "details": "Support the association in their efforts to raise funds for a variety of school and student needs",
+        "url": "",
+        "img": "/volunteer/event/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "294bc199-573c-48aa-a0da-746e78068e99",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/event/stock7.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "c7c6b6f6-5317-4150-9ab5-4e2c35e4a043",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/abraham-lincoln-high-school/4399",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "7711d860-16a6-4aa4-b6be-5928822d55f3",
+        "schoolId": "da009493-4ad4-48a9-85a4-f94bc0682be6",
+        "name": "Lincoln High School Alumni Association",
+        "details": "",
+        "url": "https://lincolnalumni.com/donations/",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+    "name": "Lowell High School",
+    "address": "1101 Eucalyptus Dr, San Francisco, CA",
+    "neighborhood": "Lakeshore",
+    "priority": false,
+    "img": "lowell.jpeg",
+    "latitude": "37.73068",
+    "longitude": "-122.48392",
+    "zipcode": "94132",
+    "profile": {
+      "id": "484ac02c-dffc-4c4b-a372-0eb3adb09db3",
+      "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+      "about": "Established in 1856, Lowell High School is the oldest public high school west of Mississippi, recognized as one of California's highest-performing public high scools.",
+      "about_bp": [
+        "They have been honored as a National Blue Ribbon school 4 times, and a California Distinguished School 8 times and ranked #1 in the Western region for the number of Advanced Placement (AP) exams offered (31).",
+        "With a wide range of academic opportunities, Lowell has the largest Visual and Performing Arts Department in the city and a World Language Department with instruction in eight languages.",
+        "Lowell aims to connect PTSA and Alumni meaningfully within its community.",
+        "One of the only SFUSD schools with an established journalism program and student-run publication, The Lowell."
+      ],
+      "volunteer_form_url": "https://forms.gle/PWzEnLfgVWxcMDRz5",
+      "donation_url": "https://secure.givelively.org/donate/pta-california-congress-of-parents-teachers-students-inc-san-francisco-ca-8431854/lowell-ptsa-2023-2024-fundraising",
+      "donation_text": "Donate to Lowell's PTSA. Your donation will fund grants for student organizations, clubs, and teachers. It will also fund college readiness, diversity and inclusion, wellness, and hospitality programs. Any remainder at the end of the school year will go into our rainy day fund for next year.",
+      "testimonial": null,
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/c4BiiF55SvU?si=9XB3PhXZAP3ooIZn",
+      "principal": "Michael Jones",
+      "instagram_url": "https://www.instagram.com/lowellhs/?hl=en",
+      "facebook_url": "https://www.facebook.com/pages/Lowell-High-School-San-Francisco/109617595723992",
+      "website_url": "https://www.sfusd.edu/school/lowell-high-school"
+    },
+    "metrics": [
+      {
+        "id": "0f5d130a-520f-4266-9a9a-f16f4638f341",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "Students Enrolled",
+        "value": 2632,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "b11ed312-d395-4b51-9b99-f27451c37c51",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "Free/Reduced Lunch",
+        "value": 29,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "add3bb21-1677-45fb-9b93-4c56b36d5a0f",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "English Language Learners",
+        "value": 4.6,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "19fa8263-29fd-44b2-8153-412316956703",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "Students with Special Needs",
+        "value": 6.9,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "0f96644f-a746-4643-b419-1224246bf745",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "High School Graduation Rate",
+        "value": 99,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "d9fc4e2a-5e9c-470b-a0ae-4030acf88de3",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "English proficiency",
+        "value": 93,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "339e3fbc-cecb-4a71-a844-38f8f06464ef",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "Math proficiency",
+        "value": 83,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "4681d493-ac42-4700-9cdb-30441fe55be1",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "College Readiness Workshops",
+        "details": "Help support the PTSA's college readiness workshops for Lowell, providing essay writing advice, college-picking advice, and workshops.",
+        "url": "",
+        "img": "/volunteer/tutoring/stock4.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "c44c03d8-8bff-43ab-9957-fd0bde3519f1",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "Event Volunteer",
+        "details": "Join a Lowell PTSA committee event as a community volunteer to help with occasional events (Beautification Day, Graduation, Dances) or even sign up to routinely help with Lowell's on campus bookstore!",
+        "url": "",
+        "img": "/volunteer/event/stock5.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "b9daac4f-4431-4286-a334-bfdab2352d6d",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "Remote (Website, Social Media, Newsletter)",
+        "details": "Help the PTSA maintain their online presence through remote social media, website, and newsletter maintenace!",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSd_ZykYI3GM9GZOVtnq2x4cnN6GmEwo0rBKhI3nfWwBexl65A/viewform",
+        "img": "/volunteer/tutoring/stock5.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "afc7ad11-14ea-4f71-ad99-361e08a9c6fc",
+        "schoolId": "cf275b7f-5aed-4fa3-9904-3b210f15efbc",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/lowell-high-school/4400",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+    "name": "Mission High School",
+    "address": "3750 18th St, San Francisco, CA",
+    "neighborhood": "Mission",
+    "priority": true,
+    "img": "mission.jpeg",
+    "latitude": "37.7616",
+    "longitude": "-122.42698",
+    "zipcode": "94114",
+    "profile": {
+      "id": "a0cddef0-3201-493e-a470-aafe3f1eb6a0",
+      "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+      "about": "Mission High is the oldest comprehensive public school in San Francisco founded in 1890. The school:",
+      "about_bp": [
+        "Is one of the most diverse schools in the San Francisco public school district, and beginning in the Fall of the 2007/08 school year, the Mission faculty collectively created a working definition of Anti-Racist/Equity education",
+        "Offers six Career and Tech Ed pathways: Environmental Science, Fire Science and EMS Academy, Media Arts, Peer Resources, Public Health, and Urban Agriculture",
+        "Has a majority of its students learning English as a second language (or perhaps as third or fourth language)",
+        "Is a historical landmark. It even has its own museum, founded in 1995 by a former science teacher, for the purpose of preserving and displaying the rich history of Mission High School"
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1oene039Zn-fBGxjI2iS2B9n0O-U2BhtDZl-td9M0hNs",
+      "donation_url": "https://missionhigh.org/make-an-impact/",
+      "donation_text": "Donate to the Mission High Foundation. The foundation supports educator grants, the Annual College Trip, the food and agriculture program, college preparation, and student wellness.",
+      "testimonial": "\"I have never seen in other schools' teachers that worry a lot about the student...That’s the difference about Mission, the teachers genuinely want their students to succeed.\"",
+      "testimonial_author": "Nathaly Perez",
+      "testimonial_video": "https://www.youtube.com/embed/cmNvxruXUG8?si=dpNJPOM768R3skBM",
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "Valerie Forero",
+      "instagram_url": "https://www.instagram.com/missionhighfoundation/",
+      "facebook_url": "https://www.facebook.com/sfmissionhs/",
+      "website_url": "https://www.sfusd.edu/school/mission-high-school"
+    },
+    "metrics": [
+      {
+        "id": "04bfa701-7693-4217-9378-83bc76de0d76",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Students Enrolled",
+        "value": 1041,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "11df873b-3dd1-4359-91c0-6f26678d3ad0",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Free/Reduced Lunch",
+        "value": 56,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "49f8fb9b-1fe0-4c26-9bff-57cba93771a6",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "English Language Learners",
+        "value": 38,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "aa643140-a65b-4578-a177-084ddf97c5b3",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Students with Special Needs",
+        "value": 20,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "79fd3e4f-8fa9-4e54-b182-2dc5e91e18ea",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "High School Graduation Rate",
+        "value": 80,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "d9701a51-d991-413e-a02e-46b393f4c45b",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "English proficiency",
+        "value": 26,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "7a4142a3-c8a9-49fe-8d03-d1a128ab9a1a",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Math proficiency",
+        "value": 11,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "4ab2e3cf-0ebc-4db2-960c-c58150c2ad0d",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "0db53abf-09b5-4037-9a7a-7990988e7486",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Event Volunteer",
+        "details": "Provide support for school-sponsored events",
+        "url": "",
+        "img": "/volunteer/event/stock2.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "36e2b35f-56f4-430e-9ad9-0c46e15e8bb0",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/tutoring/stock4.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "d863d795-97cd-4e1d-9ec6-6afbae6c0e0d",
+        "schoolId": "c928e234-86b2-46ab-9402-1c4446d2d59e",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/mission-high-school/4401",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+    "name": "John O'Connell Technical High School",
+    "address": "2355 Folsom St, San Francisco, CA",
+    "neighborhood": "Mission",
+    "priority": true,
+    "img": "johnoconnell.jpeg",
+    "latitude": "37.75956",
+    "longitude": "-122.41454",
+    "zipcode": "94110",
+    "profile": {
+      "id": "3981f121-8c56-41f8-8125-db173f861d71",
+      "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+      "about": "JOCHS is a small, academic-focused high school with several career pathways. The school provides:",
+      "about_bp": [
+        "Four integrated Pathways for grades 11-12: Building and Construction Trades, Entrepreneurship and Culinary Arts, Health and Behavioral Sciences, and Public Service. During this time students are assigned professional internships to give them real world experience",
+        "For grades 9-10, “house” classes that lead into Pathways when upperclassmen: Humanities and Social Justice, Science, Communication and Sustainability, and Liberation and Resistance Studies"
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1SEjtZpA_mx6p-7PnUujdyL-skjRQtn07KBgXV0tPo-w",
+      "donation_url": null,
+      "donation_text": "Mail a check made out to John O'Connell High School to:\nJohn O'Connell High School\n2355 Folsom St.\nSan Francisco, CA, 94110",
+      "testimonial": "“A few of the clubs that I participate in are: Black Student Union, Student Body, Yearbook, and a couple more. I really love my school. I really love how they support us unconditionally…”",
+      "testimonial_author": "Lonnie, student",
+      "testimonial_video": "https://www.youtube.com/embed/dHSG-DS_Vko?si=xSmHawJ6IbiQX-rr&amp;start=231",
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/dHSG-DS_Vko?si=xlpYHFmZIBAkh4yd",
+      "principal": "Amy Abero & Susan Ryan (Co-Principals)",
+      "instagram_url": "https://www.instagram.com/oc_youknow/?hl=en",
+      "facebook_url": "https://www.facebook.com/OChighschoolSFUSD/",
+      "website_url": "https://www.sfusd.edu/school/john-oconnell-high-school"
+    },
+    "metrics": [
+      {
+        "id": "bcaebdb3-fd4d-4461-a240-08e260b97566",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Students Enrolled",
+        "value": 506,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "af92956c-2f09-451a-9739-a92033dfa65a",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Free/Reduced Lunch",
+        "value": 65,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "615856b0-070b-4170-8a45-512d2f7b4ff1",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "English Language Learners",
+        "value": 29,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "29271941-3b0c-4a35-920a-f738c6ac873c",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Students with Special Needs",
+        "value": 24,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "3545f36d-5f4a-4523-8891-34e0e0964f0b",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "High School Graduation Rate",
+        "value": 90,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "117f6759-eb85-4ab7-9a58-5d2000bcbd44",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "English proficiency",
+        "value": 37,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "422c4214-807d-407d-bda8-fce380bc8d86",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Math proficiency",
+        "value": 6,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "854c2160-c75a-43de-8908-cda97ca74187",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "9a966f0c-f573-439f-a372-eec0a94ceac1",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Healthy Eating Physical Activity (HEPA)",
+        "details": "Support workshops and activities that promote health",
+        "url": "",
+        "img": "/volunteer/event/stock5.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "ce948c5e-d844-4277-94d3-fdc32c835977",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/tutoring/stock5.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "9da96622-5407-47c0-b594-cfcc5ae486f0",
+        "schoolId": "77b116c8-91f0-44a6-80e9-864e57fbfb5b",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/john-o-connell-high-school/4402",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+    "name": "Ruth Asawa School of the Arts (SOTA)",
+    "address": "555 Portola Dr, San Francisco, CA",
+    "neighborhood": "Diamond Heights",
+    "priority": false,
+    "img": "ruthasawa.jpeg",
+    "latitude": "37.74538",
+    "longitude": "-122.44965",
+    "zipcode": "94131",
+    "profile": {
+      "id": "6b3991b3-0069-4d10-a35d-3cf890e0200a",
+      "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+      "about": "Ruth Asawa School of the Arts (SOTA) is named after renowned sculptor Ruth Asawa who was a passionate advocate for arts in education.",
+      "about_bp": [
+        "SOTA is an audition-based, alternative high school committed to fostering equity and excelling in both arts and academics.",
+        "Rooted in its vision of artistic excellence, SOTA offers a unique educational experience emphasizing arts, with 6 specialized programs to reflect San Francisco's cultural diversity: DANCE: Conservatory Dance, World Dance, MUSIC: Band, Orchestra, Guitar, Piano, Vocal, and World Music, MEDIA & FILM, THEATRE: Acting, Musical Theatre, THEATER TECHNOLOGY: Costumes, Stagecraft, VISUAL: Drawing & Painting, Architecture & Design.",
+        "To integrate arts and academics, all SOTA students have art blocks every afternoon, and uniquely, they have an Artists-In-Residence Program partly funded through donations.",
+        "Co-located with The Academy"
+      ],
+      "volunteer_form_url": "https://forms.gle/bRnDEhzXYDD8mhcB6",
+      "donation_url": "https://app.arts-people.com/index.php?donation=rasa",
+      "donation_text": "Donate to SOTA's PTSA, which funds artists in residence on campus.",
+      "testimonial": "\"We have specialized departments ... So it's the perfect school for any aspiring artist.\"",
+      "testimonial_author": "Ava, Student",
+      "testimonial_video": "https://www.youtube.com/embed/gouN1t1GxE0?si=ovResdGqAYsklGlF",
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/zXcnXNEvjoo?si=7-tJ7DywSRThJMw8",
+      "principal": "Stella Kim",
+      "instagram_url": "https://www.instagram.com/ruthasawasota/",
+      "facebook_url": "https://www.facebook.com/AsawaSOTA/",
+      "website_url": "https://www.sfusd.edu/school/ruth-asawa-san-francisco-school-arts"
+    },
+    "metrics": [
+      {
+        "id": "1bd9791a-f247-427a-886d-70d3ac15c7c9",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Students Enrolled",
+        "value": 700,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "3997c1dd-d151-41fe-a8c4-ec99bc725286",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Free/Reduced Lunch",
+        "value": 17,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "54e97ecb-94f8-42c4-a6a9-53b606b678ea",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "English Language Learners",
+        "value": 1.8,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "a46369b8-a940-4a09-86a6-956e1d5aaae5",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Students with Special Needs",
+        "value": 11.1,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "4f172cba-7fbf-49d4-a27d-762cc12f328e",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "High School Graduation Rate",
+        "value": 97,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "d0ae3705-f99b-4662-b4fe-f886dfdbc5b4",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "English proficiency",
+        "value": 84,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "9d4b177b-6ece-437b-af20-62fa804b40aa",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Math proficiency",
+        "value": 53,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "7890875d-0475-4965-a90b-b7e1992972f6",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Tutoring",
+        "details": "Help tutor SOTA students in STEM subjects.",
+        "url": "",
+        "img": "/volunteer/tutoring/stock2.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "c43c98d0-2268-4385-8615-ed28e78a55fd",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Staff Appreciation Event Volunteer",
+        "details": "Support the PTSA show appreciation for staff and Artists-In-Residents both with in person distribution or remote video editing support!",
+        "url": "",
+        "img": "/volunteer/event/stock8.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "62736e4d-a8ad-4ab0-a1cf-c4d6f5259438",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Audition Day Volunteer",
+        "details": "Support budding students, faculty, and parents during the SOTA audition process through physical audition day volunteering.",
+        "url": "",
+        "img": "/volunteer/event/stock2.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "ad2a3991-b9cd-4cad-b83f-9613092ec131",
+        "schoolId": "17503e4e-33a4-4a5b-90dc-9fd5044a9466",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/academy-of-arts-sciences/4393",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+    "name": "The Academy",
+    "address": "550 Portola Dr #250, San Francisco, CA",
+    "neighborhood": "Diamond Heights",
+    "priority": false,
+    "img": "theacademy.jpeg",
+    "latitude": "37.745499",
+    "longitude": "-122.451563",
+    "zipcode": "94131",
+    "profile": {
+      "id": "6f4294e6-b51e-4755-a2c2-de3932b91643",
+      "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+      "about": "The Academy fosters one of the smallest school learning environments, where teachers can closely engage with students, hands-on administrators, and families for a stronger, supportive community.",
+      "about_bp": [
+        "With a focus on individualized support, every Academy student receives college counseling through their four years with 2 full-time academic and dedicated college counselors.",
+        "They offer a range of extracurricular activities including academic tutoring, enrichment activities, and arts instruction in unique disciplines such as visual arts, modern rock band, photography, and theatre.",
+        "The Academy aims for a holistic educational experience with comprehensive athletics program and various student support services, including counseling and health and wellness resources.",
+        "Co-located with Ruth Asawa School of the Arts, on the first floor of the former McAteer Main Building."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1px5HE5JPNp5b5emzPVhadVDh6lRy2r_DWLbXxNvzNrA/edit",
+      "donation_url": "https://www.paypal.com/paypalme/AcademySFatMcateer?country_x=US&locale_x=en_US",
+      "donation_text": "Donate to the Academy's PTSA. Your donation is used to support teacher classroom needs, and student events like prom and field trips.",
+      "testimonial": null,
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": "https://drive.google.com/file/d/1GdVL6l4z1dCBDBfnwaRlIVvr9o_KxTLe/preview",
+      "principal": "Hollie Mack",
+      "instagram_url": "http://www.instagram.com/academywolvessf",
+      "facebook_url": "https://www.facebook.com/AcademyWolvesSF",
+      "website_url": "https://www.sfusd.edu/school/academy-san-francisco-mcateer"
+    },
+    "metrics": [
+      {
+        "id": "0047ba28-535d-4ce8-9e99-1317428a7f0f",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Students Enrolled",
+        "value": 360,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "6d4e9973-b093-4f85-bca3-ce77a324b489",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Free/Reduced Lunch",
+        "value": 53,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "7066a8ed-87e3-4f3b-9d05-6cdb3c1343a7",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "English Language Learners",
+        "value": 14.4,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "ca08b981-d89b-4583-baba-f46651673677",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Students with Special Needs",
+        "value": 24.9,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "dc9a1bd9-9cb5-4ef0-acac-a91494966d47",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "High School Graduation Rate",
+        "value": 92,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "7b1c9347-afe8-4156-a7ec-eea15c0ba059",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "English proficiency",
+        "value": 42,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "a66fed9e-dc21-4637-82bb-58fde280c695",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Math proficiency",
+        "value": 13,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "87b0d90f-0aef-41e1-bb70-1aa445604746",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Tutoring",
+        "details": "Support Academy students with STEM subjects with their afterschool program on a regular or ad-hoc basis.",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "e0e05d5d-e70f-4739-8ff0-5b058002c61d",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Culinary & Arts Mentor Volunteer",
+        "details": "Help provide real life skills to Academy students with culinary mentorship and creative expression within their afterschool program.",
+        "url": "",
+        "img": "/volunteer/event/stock2.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "105dfed4-adad-4b3a-bfcc-45cb81d960a5",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Remote Coding Teacher",
+        "details": "Help host afterschool, remote coding classes for The Academy students.",
+        "url": "",
+        "img": "/volunteer/tutoring/stock5.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "49b86987-852b-42bb-ba69-ff6d5f42a9c9",
+        "schoolId": "e11635ad-33e4-46cf-ab94-d8f9a85ba502",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/school-of-the-arts-high-school/99136",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+    "name": "Thurgood Marshall High School",
+    "address": "45 Conkling St, San Francisco, CA",
+    "neighborhood": "Bayview",
+    "priority": true,
+    "img": "thurgood.jpeg",
+    "latitude": "37.73609",
+    "longitude": "-122.40211",
+    "zipcode": "94124",
+    "profile": {
+      "id": "275bb62d-3a70-4f1d-996d-4211ff7ec748",
+      "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+      "about": "Thurgood Marshall High School was founded in 1994, and is located in the southeastern part of San Francisco. The school offers:",
+      "about_bp": [
+        "A refurbished and expanded College & Career Center, a fully staffed Wellness Center, a Peer Resources Program, and a daily after-school tutoring program",
+        "A special program for recent immigrants and newcomers.",
+        "Health, housing, immigration, financial support resources for families"
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1TlrrJZZWcKXeZdAKuF2CQkAmTtRXTmGEe3NkRTFYBNE",
+      "donation_url": "https://thurgood-marshall-academic-high-school-pto.square.site/",
+      "donation_text": "Donate to Thurgood Marshall's PTSA",
+      "testimonial": "“I liked this project because we got to practice English and the other person I was working with got to practice her Spanish.” - Darlin on the “Empathy Project” where native English speakers and English learners practice languages and learn from each other",
+      "testimonial_author": "Darlin",
+      "testimonial_video": "https://www.youtube.com/embed/nUIBNpi3VTA?si=2mdebQexdqQuB-Ke",
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/NclnGjU3zJM?si=g9bnDzFsl3mvGRgM",
+      "principal": "Sarah Ballard-Hanson",
+      "instagram_url": "https://www.instagram.com/marshallphoenix/?hl=en",
+      "facebook_url": "https://www.facebook.com/groups/20606012934/",
+      "website_url": "https://www.sfusd.edu/school/thurgood-marshall-academic-high-school"
+    },
+    "metrics": [
+      {
+        "id": "723c52ae-7342-4e7c-9427-20f2411d38ae",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Students Enrolled",
+        "value": 457,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "65fd7118-0b96-4760-b69a-551eba1b3f56",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Free/Reduced Lunch",
+        "value": 66,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "a99dacdd-bd22-4e3a-9fff-e77dd86774ff",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "English Language Learners",
+        "value": 62,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "db42bb3a-4e97-4ac7-820a-ced6372a7ee4",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Students with Special Needs",
+        "value": 11,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "2aba4891-bc57-40cb-a887-e46dd97694b1",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "High School Graduation Rate",
+        "value": 72,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "63a9abd3-ee95-4c46-b222-3545c2535a49",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "English proficiency",
+        "value": 12,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "aad56039-2b79-4d14-8f56-5c7db2112d40",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Math proficiency",
+        "value": 5,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "6f5037d1-6dfb-460f-8066-e8e714521bb1",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/tutoring/stock4.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "5a0016f1-f9e1-4bce-847a-25163c6a8c1d",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "166e6739-06a3-43c9-8562-6c9ff3b6da10",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Family Services",
+        "details": "Help ensure student families have access to basic services",
+        "url": "",
+        "img": "/volunteer/event/stock3.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "ec3a60c1-11fb-46a1-82f3-e7c6dfbcc337",
+        "schoolId": "046b206a-3352-4c8d-aa91-b15fe91a34aa",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/thurgood-marshall-academic-high-school/4394",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "ef63b551-f644-419d-9044-1b143b84bff3",
+    "name": "Wallenberg High School",
+    "address": "40 Vega St, San Francisco, CA",
+    "neighborhood": "Western Addition",
+    "priority": false,
+    "img": "wallenberg.jpeg",
+    "latitude": "37.780365",
+    "longitude": "-122.44621",
+    "zipcode": "94115",
+    "profile": {
+      "id": "3e61c916-ed65-46b3-bdad-fca12eb87635",
+      "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+      "about": "Founded in 1981, the Raoul Wallenberg Traditional High School (or \"Wallenberg\") honors the renowned Swedist diplomat, guided by personal responsibility, compassion, honesty, and integrity for equitable educational outcomes that enhance creativity, self-discipline, and citizenship.",
+      "about_bp": [
+        "Wallenberg provides a rigorous educational program designed to prepare its diverse student body for success in college, careers, and life, including through diagnostic counseling, and college prep (including the AVID program).",
+        "Wallenberg has three future-focused pathways: Biotechnology, Computer Science (SIM - Socially Inclusive Media), and Environmental Science, Engineering, and Policy (ESEP)",
+        "Wallenberg focuses on close student-staff relations to foster a culture of support and service that encourages ongoing interaction, assessment, and feedback to promote high achievement and the joy of learning. Parents are actively encouraged to engage with the school community."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/e/1FAIpQLSdlALlSlZCTko4qBryLTunuIVcZGKmVeUl2MA-OPbnoOG15Lg/viewform",
+      "donation_url": "https://www.paypal.com/donate/?hosted_button_id=NX4GK2S6GQAWN",
+      "donation_text": "Donate to Wallenberg's PTSA. The PTSA aims to fund programs and events that benefit all Wallenberg students and teachers: building community, inclusion, and tolerance, sponsoring the Reflections Arts Program and Wallapalooza Art Festival, supporting technology and athletic programs, and honoring our teachers by providing them with stipends.",
+      "testimonial": "\"I really like my teachers because they always want you to perform at your best ... I feel like Wallenberg is a great school for students who want to be in a small community where everyone knows each other and where students and teachers have greater relationships\"",
+      "testimonial_author": "Ryan",
+      "testimonial_video": "https://www.youtube.com/embed/rtSYrHOxN28?si=rEoQTInfas1UBk44",
+      "testimonial_img": null,
+      "noteable_video": "https://www.youtube.com/embed/rtSYrHOxN28?si=binBgRGAemfDKbzb",
+      "principal": "Tanya Harris",
+      "instagram_url": "https://www.instagram.com/wallenberghs/",
+      "facebook_url": "https://www.facebook.com/pages/Raoul-Wallenberg-Traditional-High-School/113129858701251",
+      "website_url": "https://www.sfusd.edu/school/raoul-wallenberg-high-school"
+    },
+    "metrics": [
+      {
+        "id": "14c35616-ad2a-4f01-9888-727612ba1a5c",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Students Enrolled",
+        "value": 549,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "9b0094ae-3c07-45df-b0cd-b7929d6dd009",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Free/Reduced Lunch",
+        "value": 43,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "682797d6-4706-4be9-91d2-ecb423324dfa",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "English Language Learners",
+        "value": 10.9,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "e68b4088-5b14-4cb3-af84-ed5c7f799dad",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Students with Special Needs",
+        "value": 21.3,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "0e40a983-f385-4861-81f1-4812dd462b62",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "High School Graduation Rate",
+        "value": 94,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "092f2669-9fba-4a20-a36a-2693943219e3",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "English proficiency",
+        "value": 73,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "b35ef390-01de-4c59-81ad-49c130274805",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Math proficiency",
+        "value": 37,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "564cf7f0-bb27-45d7-8879-4c866e63c6d3",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Campus Cleanup",
+        "details": "Help create a better environment for incoming and current Wallenberg students through cleaning up the gardens and picking up trash.",
+        "url": "https://www.wallenbergpta.org/blog/categories/volunteers-needed",
+        "img": "/volunteer/event/stock9.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "48b73486-df84-4930-a9aa-173c6833a84c",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Orientation and Community Day Volunteers",
+        "details": "Support incoming Wallenberg students by volunteering your time to the Wallenberg PTA.",
+        "url": "",
+        "img": "/volunteer/event/stock8.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "71049975-aece-430f-a2ec-ff6f2dfe6189",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "STEM tutor",
+        "details": "Support Wallenberg students through afterschool tutoring.",
+        "url": "",
+        "img": "/volunteer/tutoring/stock2.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "b01be6e1-9d90-4f0a-8ed9-f3b84f03a5cf",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/raoul-wallenberg-trad-high-school/4389",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "33403405-c04b-4197-b112-aab9aa7fede2",
+        "schoolId": "ef63b551-f644-419d-9044-1b143b84bff3",
+        "name": "Zelle to the email wallenbergptsa@gmail.com",
+        "details": "",
+        "url": "",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  },
+  {
+    "id": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+    "name": "George Washington High School",
+    "address": "600 32nd Ave, San Francisco, CA",
+    "neighborhood": "Richmond",
+    "priority": false,
+    "img": "washington.jpeg",
+    "latitude": "37.77784",
+    "longitude": "-122.49174",
+    "zipcode": "94121",
+    "profile": {
+      "id": "fa104994-221f-4f50-8de6-02d0bcb6ce9a",
+      "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+      "about": "Washington is one of the largest high schools in SFUSD, opened in 1936.",
+      "about_bp": [
+        "Students can choose from more than 100 course offerings, with 52 sections of honors and AP classes.",
+        "Students can also choose from over 50 campus clubs and student groups and a full inter-scholastic athletic program, with 22 teams in 15 sports.",
+        "Washington has an active <a href=\"https://richmondsf.org/youth/high-school/washington/\" target=\"_blank\" class=\"hover:underline text-blue-500\">Richmond Neighborhood program</a>, Wellness Center, <a href=\"https://www.gwhsptsa.com/\" target=\"_blank\" class=\"hover:underline text-blue-500\">Parent Teacher Student Association</a>, and <a href=\"https://sites.google.com/sfgwhsalumni.org/gwhs-alumni-association/home\" target=\"_blank\" class=\"hover:underline text-blue-500\">Alumni Association</a>.",
+        "Washington offers a sweeping view of the Golden Gate Bridge from its athletic fields."
+      ],
+      "volunteer_form_url": "https://docs.google.com/forms/d/1nEVr6vgTdrHEWnmQvoMXWS6eDxRx20imWMNh7pBUT1Y/edit",
+      "donation_url": "https://www.gwhsptsa.com/donate",
+      "donation_text": "Donate to the the school's PTSA",
+      "testimonial": "\"I went from a 2.8 student to a 3.7 student because teachers believed in me and I in them. Washington was one of the best schools for academics, sports, and overall community.\"",
+      "testimonial_author": null,
+      "testimonial_video": null,
+      "testimonial_img": null,
+      "noteable_video": null,
+      "principal": "John Schlauraff",
+      "instagram_url": "http://www.instagram.com/gwhsofficial",
+      "facebook_url": "https://www.facebook.com/profile.php?id=100067738675467",
+      "website_url": "https://www.sfusd.edu/school/george-washington-high-school"
+    },
+    "metrics": [
+      {
+        "id": "b4073381-36ab-403d-aed9-00e14671d283",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Students Enrolled",
+        "value": 2070,
+        "unit": "",
+        "category": "about"
+      },
+      {
+        "id": "ec150422-1dde-40e7-9d42-767bcbb9ad5b",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Free/Reduced Lunch",
+        "value": 46,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "59b41464-f4dd-4684-b57e-5853b24f1dc5",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "English Language Learners",
+        "value": 12,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "0473e4b0-472a-42bc-8c12-99ae8e02803a",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Students with Special Needs",
+        "value": 11,
+        "unit": "%",
+        "category": "about"
+      },
+      {
+        "id": "eb42d777-a56c-4265-9136-5a92ce24e261",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "High School Graduation Rate",
+        "value": 93,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "b9924792-18a1-49a0-a7bc-93b78a89e04e",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "English proficiency",
+        "value": 74,
+        "unit": "%",
+        "category": "outcome"
+      },
+      {
+        "id": "a222c9bd-654e-474a-92ea-4bf8a6cf30a2",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Math proficiency",
+        "value": 57,
+        "unit": "%",
+        "category": "outcome"
+      }
+    ],
+    "programs": [
+      {
+        "id": "0e975a3a-0f1c-4cfa-b712-d37a1e81edc0",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Tutoring",
+        "details": "Provide one-on-one academic support to students on a range of topics",
+        "url": "",
+        "img": "/volunteer/tutoring/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "2da934d2-fc49-4f2b-9180-88680000c7c3",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Event Volunteer",
+        "details": "Provide support for school-sponsored events",
+        "url": "",
+        "img": "/volunteer/event/stock1.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "93e47ae3-7951-4dd7-849a-ecf8181199a1",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/volunteer/tutoring/stock4.png",
+        "category": "volunteer"
+      },
+      {
+        "id": "a81cc795-30f2-411d-af53-ebd2d5f9a642",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Donors Choose",
+        "details": "",
+        "url": "https://www.donorschoose.org/schools/california/san-francisco-unified-school-district/george-washington-high-school/4403#projects",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "1725e216-00f6-46f3-80dc-93300661e76d",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "GWHS Alumni Association",
+        "details": "",
+        "url": "https://givebutter.com/sfgwhsalumni",
+        "img": null,
+        "category": "donate"
+      },
+      {
+        "id": "b94a9b12-b15a-4262-9a47-cb8bc4fbafb0",
+        "schoolId": "21b3992f-5dff-4b46-bb60-cb95d48bf2d2",
+        "name": "Richmond Neighborhood Center",
+        "details": "",
+        "url": "https://form-renderer-app.donorperfect.io/give/the-richmond-neighborhood-center/new-online-donation",
+        "img": null,
+        "category": "donate"
+      }
+    ]
+  }
+]
