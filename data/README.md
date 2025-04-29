@@ -2,9 +2,15 @@
 
 # Extraction for Scaling SupportSF  
 
-This folder contains various scripts designed to extract data from [SFUSD](https://www.sfusd.edu/). This collection was assembled for the one-time purpose of scaling from the original list of 13 SF high schools to the full list of 100+ SFUSD public schools.  
+This folder contains various scripts designed to extract data from [SFUSD](https://www.sfusd.edu/). This collection was assembled for the one-time purpose of scaling from the original list of 17 SF high schools to the full list of 100+ SFUSD public schools.  
 
-Additional steps are required to transform and load this data into the SupportSF structure, but the primary focus of this folder is extraction. Think of this part as the **E** in the ETL (Extract, Transform, Load) process.  
+Additional steps are required to transform and load this data into the SupportSF structure, but the primary focus of this folder is extraction. Think of this part as the **E** in the ETL (Extract, Transform, Load) process.
+
+## Backup
+
+The subfolder called `original-17` contains the original list of 17 SF high schools in a couple of different data formats. The `postgres` database tables were exported as CSV files. The queries used for this extraction were saved as well as SQL.
+
+The entire dataset was also exported using Prisma's API as a JSON file (`prisma-dump.json`). The script used for this extraction is called `prisma-dump.ts`.
 
 ## Overview of Extraction  
 
