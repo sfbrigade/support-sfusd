@@ -7,11 +7,13 @@ CREATE TYPE "ProgramCategory" AS ENUM ('volunteer', 'donate', 'enrichment');
 -- CreateTable
 CREATE TABLE "School" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
+    "casid" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "address" TEXT NOT NULL,
     "neighborhood" TEXT NOT NULL,
     "priority" BOOLEAN NOT NULL DEFAULT false,
     "img" TEXT,
+    "logo" TEXT,
     "latitude" TEXT NOT NULL,
     "longitude" TEXT NOT NULL,
     "zipcode" TEXT,
@@ -65,6 +67,9 @@ CREATE TABLE "Program" (
 
     CONSTRAINT "Program_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateIndex
+CREATE UNIQUE INDEX "School_casid_key" ON "School"("casid");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "SchoolProfile_schoolId_key" ON "SchoolProfile"("schoolId");
