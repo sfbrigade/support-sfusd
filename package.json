@@ -11,10 +11,10 @@
     "build": "prisma migrate reset --force && next build",
     "dbpush": "prisma db push",
     "seed": "prisma db seed",
-    "seedscaled": "prisma db seed -- --scaled",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write",
+    "image-sync": "tsx prisma/image-sync.ts",
     "data-sync": "tsx prisma/data-sync.ts"
   },
   "dependencies": {
@@ -32,6 +32,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "react-modal": "^3.16.1",
+    "sharp": "^0.34.1",
+    "tsx": "^4.19.3",
     "ts-node": "^10.9.2",
     "vercel": "^33.5.3"
   },
