@@ -88,12 +88,12 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           className="hidden md:inline"
         >
           <SchoolImage
-            src={`/school_img/full/${school.img || "default.png"}`}
+            src={`/school-images/full/${school.stub}.webp`}
             alt={school.name}
           />
         </Link>
         <SchoolImage
-          src={`/school_img/full/${school.img} || "default.png`}
+          src={`/school-images/full/${school.stub}.webp`}
           alt={school.name}
           className="inline-block md:hidden"
         />

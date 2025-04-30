@@ -40,7 +40,7 @@ const MapListCard = ({
   const { selectedSchool } = useMapContext();
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const { img, name, neighborhood } = school;
+  const { stub, name, neighborhood } = school;
 
   // const students = school.metrics.find(
   //   (metric) => metric.name == "Students Enrolled",
@@ -128,7 +128,7 @@ const MapListCard = ({
         }`}
       >
         <Image
-          src={img ? `/school_img/full/${img}` : "/school_img/full/default.png"}
+          src={`/school-images/full/${stub}.webp`}
           placeholder="blur"
           blurDataURL={blurDataURL}
           alt="School Image"
