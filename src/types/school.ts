@@ -4,8 +4,6 @@ export interface School {
   address?: string;
   neighborhood?: string;
   priority: boolean;
-  img?: string;
-  logo?: string;
   latitude: number;
   longitude: number;
   about: string;
