@@ -3,21 +3,6 @@ import * as path from "path";
 import dotenv from "dotenv";
 import { getSheetValues } from "@/lib/sheetsApi";
 
-// createStubFromName is here mostly for reference
-// it contains the logic for creating a url-friendly stub from a name
-// an identical function was used to create the stub column
-// in the Google Sheet using a Google App Script
-export function createStubFromName(name: string): string {
-  return name
-    .replace(/\./g, "") // Remove periods
-    .replace(/ & /g, "-") // Replace ampersand with hyphen
-    .replace(/[^a-zA-Z0-9\s-]/g, "") // Remove non-alphanumeric
-    .toLowerCase()
-    .replace(/\s+/g, "-") // Replace spaces with hyphen
-    .replace(/-+/g, "-") // Replace multiple hyphens
-    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
-}
-
 function arrayToObjects(data: string[][]): Record<string, string>[] {
   if (!data.length || !data[0].length) return [];
   const [headers, ...rows] = data;
@@ -90,9 +75,9 @@ async function syncPrismaWithGoogleSheets() {
 
   try {
     // load Google Sheets data
-    const profile_rows = await getSheetValues("sfschools", "profiles");
-    const metric_rows = await getSheetValues("sfschools", "metrics");
-    const program_rows = await getSheetValues("sfschools", "programs");
+    const profile_rows = await getSheetValues("sfschools-scaled", "profiles");
+    const metric_rows = await getSheetValues("sfschools-scaled", "metrics");
+    const program_rows = await getSheetValues("sfschools-scaled", "programs");
 
     // Convert rows to objects
     const profiles = arrayToObjects(profile_rows);
