@@ -91,6 +91,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         "--marker-size",
         `${markerSize}px`,
       );
+      console.log("marker size", markerSize);
       mapContainer.current.style.setProperty(
         "--marker-selected-size",
         `${selectedMarkerSize}px`,
@@ -248,15 +249,19 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
 
       setMapLoaded(true);
     });
-    map.on("zoom", () => {
+
+    const handleZoom = () => {
       if (mapRef.current) {
         const zoom = mapRef.current.getZoom();
         updateMarkerSizes(zoom);
       }
-    });
+    };
+
+    map.on("zoom", handleZoom);
 
     return () => {
       if (mapRef.current) {
+        mapRef.current.off("zoom", handleZoom);
         mapRef.current.remove();
         mapRef.current = null;
       }
