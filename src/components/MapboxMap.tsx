@@ -72,6 +72,32 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     }
   };
 
+  // Function to update marker sizes based on zoom level
+  // (keeps them from getting too small)
+  const updateMarkerSizes = (zoom: number) => {
+    const referenceZoom = 11; // Base zoom level where sizes are 20px and 30px
+    const growthFactor = 1.2; // How much to grow the markers per zoom level (1 is no growth)
+    const scaleFactor = Math.pow(growthFactor, zoom - referenceZoom); // Inverse scale
+
+    const baseMarkerSize = 20; // Base size for .marker at referenceZoom (in pixels)
+    const baseSelectedMarkerSize = 30; // Base size for .marker-selected at referenceZoom (in pixels)
+
+    const markerSize = baseMarkerSize * scaleFactor;
+    const selectedMarkerSize = baseSelectedMarkerSize * scaleFactor;
+
+    // Update CSS custom properties
+    if (mapContainer.current) {
+      mapContainer.current.style.setProperty(
+        "--marker-size",
+        `${markerSize}px`,
+      );
+      mapContainer.current.style.setProperty(
+        "--marker-selected-size",
+        `${selectedMarkerSize}px`,
+      );
+    }
+  };
+
   useEffect(() => {
     const accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
     if (!accessToken || !mapContainer.current) {
@@ -221,6 +247,12 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         .addTo(map);
 
       setMapLoaded(true);
+    });
+    map.on("zoom", () => {
+      if (mapRef.current) {
+        const zoom = mapRef.current.getZoom();
+        updateMarkerSizes(zoom);
+      }
     });
 
     return () => {
