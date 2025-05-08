@@ -13,6 +13,7 @@ async function main() {
       latitude: "37.722",
       longitude: "-122.44041",
       zipcode: "94112",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Balboa ("Bal") is a unique high school with a rich history and tradition.`,
@@ -139,6 +140,7 @@ async function main() {
       latitude: "37.72126",
       longitude: "-122.4063",
       zipcode: "94134",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Burton High School was established in 1984 as a result of a Consent Decree between the City of San Francisco and the NAACP, and is named after Phillip Burton, a member of the California Assembly who championed the civil rights of others. Burton also:`,
@@ -273,6 +275,7 @@ async function main() {
       latitude: "37.761565",
       longitude: "-122.40394",
       zipcode: "94107",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Downtown High School (DHS) is one of two continuation schools in SFUSD, dedicated to serving students whose success was limited in the district's comprehensive and charter high schools.`,
@@ -389,6 +392,7 @@ async function main() {
       latitude: "37.80379",
       longitude: "-122.424145",
       zipcode: "94109",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Galileo Academy of Science and Technology ("Galileo") is committed to providing equal access to all of their educational programs.`,
@@ -508,6 +512,7 @@ async function main() {
       latitude: "37.7751",
       longitude: "-122.433985",
       zipcode: "94117",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Ida B. Wells (IBW) is one of two continuation schools in SFUSD, dedicated to serving students whose success was limited in the district's comprehensive and charter high schools.`,
@@ -622,6 +627,7 @@ async function main() {
       latitude: "37.76309",
       longitude: "-122.46388",
       zipcode: "94122",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Independence is a small alternative high school in SFUSD.`,
@@ -734,6 +740,7 @@ async function main() {
       latitude: "37.76169",
       longitude: "-122.40082",
       zipcode: "94107",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `SF International is a small public high school that offers a unique program designed for recent immigrant students.`,
@@ -845,6 +852,7 @@ async function main() {
       latitude: "37.7195",
       longitude: "-122.42539",
       zipcode: "94112",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `June Jordan is a small alternative high school named after activist June Jordan. The school was founded through community organizing by a group of teachers, parents, and youth.`,
@@ -953,6 +961,7 @@ async function main() {
       latitude: "37.74729",
       longitude: "-122.48109",
       zipcode: "94116",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Lincoln is one of the three largest high schools in SFUSD. The school features:`,
@@ -1081,6 +1090,7 @@ async function main() {
       latitude: "37.73068",
       longitude: "-122.48392",
       zipcode: "94132",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Established in 1856, Lowell High School is the oldest public high school west of Mississippi, recognized as one of California's highest-performing public high scools.`,
@@ -1198,6 +1208,7 @@ async function main() {
       latitude: "37.7616",
       longitude: "-122.42698",
       zipcode: "94114",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Mission High is the oldest comprehensive public school in San Francisco founded in 1890. The school:`,
@@ -1316,6 +1327,7 @@ async function main() {
       latitude: "37.75956",
       longitude: "-122.41454",
       zipcode: "94110",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `JOCHS is a small, academic-focused high school with several career pathways. The school provides:`,
@@ -1432,6 +1444,7 @@ async function main() {
       latitude: "37.74538",
       longitude: "-122.44965",
       zipcode: "94131",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Ruth Asawa School of the Arts (SOTA) is named after renowned sculptor Ruth Asawa who was a passionate advocate for arts in education.`,
@@ -1551,6 +1564,7 @@ async function main() {
       latitude: "37.745499",
       longitude: "-122.451563",
       zipcode: "94131",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `The Academy fosters one of the smallest school learning environments, where teachers can closely engage with students, hands-on administrators, and families for a stronger, supportive community.`,
@@ -1668,6 +1682,7 @@ async function main() {
       latitude: "37.73609",
       longitude: "-122.40211",
       zipcode: "94124",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Thurgood Marshall High School was founded in 1994, and is located in the southeastern part of San Francisco. The school offers:`,
@@ -1788,6 +1803,7 @@ async function main() {
       latitude: "37.780365",
       longitude: "-122.44621",
       zipcode: "94115",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Founded in 1981, the Raoul Wallenberg Traditional High School (or "Wallenberg") honors the renowned Swedist diplomat, guided by personal responsibility, compassion, honesty, and integrity for equitable educational outcomes that enhance creativity, self-discipline, and citizenship.`,
@@ -1915,6 +1931,7 @@ async function main() {
       latitude: "37.77784",
       longitude: "-122.49174",
       zipcode: "94121",
+      schoolType: ["high"],
       profile: {
         create: {
           about: `Washington is one of the largest high schools in SFUSD, opened in 1936.`,
