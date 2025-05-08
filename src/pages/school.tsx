@@ -40,7 +40,7 @@ const Profile: React.FC<Props> = (props) => {
         <>
           <SEO
             title={`Support SF Schools - ${school.name} Profile`}
-            description={`Support SF Schools encourages the community to support ${school.name}. ${school.profile?.about} Learn more about ${school.name} and their available donation and volunteer opportunities.`}
+            description={`Support SF Schools encourages the community to support ${school.name}. ${school.about} Learn more about ${school.name} and their available donation and volunteer opportunities.`}
           />
           <div>
             <div className="relative w-full">
