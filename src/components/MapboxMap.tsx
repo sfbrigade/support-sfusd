@@ -234,37 +234,39 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
     // check mapLoaded to avoid race condition where markersRef is not yet initialized
-    if (mapLoaded && mapRef.current && selectedSchool) {
+    if (mapLoaded && mapRef.current) {
       // set all markers to default appearance
       Object.values(markersRef.current).forEach((marker) => {
         updateMarkerAppearance(marker, false);
       });
-      const selectedMarker = markersRef.current[selectedSchool.name];
-      if (selectedMarker) {
-        updateMarkerAppearance(selectedMarker, true);
-        const lngLat = selectedMarker.getLngLat();
+      if (selectedSchool) {
+        const selectedMarker = markersRef.current[selectedSchool.name];
+        if (selectedMarker) {
+          updateMarkerAppearance(selectedMarker, true);
+          const lngLat = selectedMarker.getLngLat();
 
-        if (!userHasInteracted.current) {
-          // Use jumpTo when returning from detail page. it's less dizzying.
+          if (!userHasInteracted.current) {
+            // Use jumpTo when returning from detail page. it's less dizzying.
 
-          // if we have focused on a school that's not visible, recenter (e.g., via filter or keyboard navigation)
-          if (!isVisible(selectedMarker, mapRef.current)) {
-            // jump to marker
-            mapRef.current.jumpTo({
-              center: [lngLat.lng, lngLat.lat],
-            });
-            userHasInteracted.current = true;
-          }
-        } else {
-          // Use flyTo for all other cases
+            // if we have focused on a school that's not visible, recenter (e.g., via filter or keyboard navigation)
+            if (!isVisible(selectedMarker, mapRef.current)) {
+              // jump to marker
+              mapRef.current.jumpTo({
+                center: [lngLat.lng, lngLat.lat],
+              });
+              userHasInteracted.current = true;
+            }
+          } else {
+            // Use flyTo for all other cases
 
-          // if we have focused on a school that's not visible, recenter (e.g., via filter or keyboard navigation)
-          if (!isVisible(selectedMarker, mapRef.current)) {
-            // pan to marker
-            mapRef.current.flyTo({
-              center: [lngLat.lng, lngLat.lat],
-              ...flyToOptions,
-            });
+            // if we have focused on a school that's not visible, recenter (e.g., via filter or keyboard navigation)
+            if (!isVisible(selectedMarker, mapRef.current)) {
+              // pan to marker
+              mapRef.current.flyTo({
+                center: [lngLat.lng, lngLat.lat],
+                ...flyToOptions,
+              });
+            }
           }
         }
       }
