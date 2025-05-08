@@ -19,7 +19,7 @@ model School {
   latitude           String
   longitude          String
   zipcode            String?
-  schoolType         SchoolType[]
+  school_type        SchoolType[]
   profile            SchoolProfile?
   metrics            Metric[]
   programs           Program[]
