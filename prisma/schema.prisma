@@ -19,10 +19,10 @@ model School {
   latitude           String
   longitude          String
   zipcode            String?
+  schoolType         SchoolType[]
   profile            SchoolProfile?
   metrics            Metric[]
   programs           Program[]
- 
 }
 
 model SchoolProfile {
@@ -76,4 +76,10 @@ enum ProgramCategory {
   volunteer
   donate
   enrichment
+}
+
+enum SchoolType {
+  elementary
+  middle
+  high
 }
