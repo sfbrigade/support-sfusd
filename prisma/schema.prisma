@@ -19,6 +19,7 @@ model School {
   latitude           String
   longitude          String
   zipcode            String?
+  school_type        SchoolType[]
   about              String
   about_bp           String[]
   volunteer_form_url String
@@ -67,4 +68,10 @@ enum ProgramCategory {
   volunteer
   donate
   enrichment
+}
+
+enum SchoolType {
+  elementary
+  middle
+  high
 }
