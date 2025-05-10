@@ -1,4 +1,5 @@
-import { GetServerSideProps } from "next";
+import { writeFileSync } from "fs";
+import { join } from "path";
 import prisma from "@/lib/prisma";
 
 const SITE_URL = "https://www.supportsfschools.org";
@@ -13,9 +14,6 @@ const SITE_URL = "https://www.supportsfschools.org";
  *
  * @param pages - An array of page paths relative to the site root (e.g., ["/", "/about", "/contact"])
  * @returns A string containing the complete XML sitemap
- * @example
- * // Returns a complete XML sitemap for the specified pages
- * const sitemap = generateSiteMap(["/", "/about", "/contact"]);
  */
 function generateSiteMap(pages: string[]) {
   const generateUrl = (page: string) => `
@@ -32,40 +30,45 @@ function generateSiteMap(pages: string[]) {
     </urlset>`;
 }
 
-// This component is a placeholder and will not render anything.
-// The sitemap is generated server-side.
-function SiteMap() {
-  return null;
-}
-
 /**
- * Server-side props function for generating a dynamic sitemap.xml
+ * Generates a static sitemap.xml file at build time.
  *
  * This function:
  * 1. Fetches all school names from the database
  * 2. Creates URLs for each school page
  * 3. Generates an XML sitemap containing home, map, about, and all school pages
- * 4. Returns the sitemap as XML content
- *
- * @param context - GetServerSideProps context containing the response object
- * @returns Empty props object as the response is handled directly
+ * 4. Writes the sitemap to public/sitemap.xml
  */
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const schools = await prisma.school.findMany({
-    select: { name: true },
-  });
+async function generateStaticSitemap() {
+  try {
+    // Fetch school names from the database
+    const schools = await prisma.school.findMany({
+      select: { name: true },
+    });
 
-  const schoolPages = schools.map((school) => {
-    return "/school?name=" + encodeURIComponent(school.name);
-  });
+    // Generate school page URLs
+    const schoolPages = schools.map((school) => {
+      return "/school?name=" + encodeURIComponent(school.name);
+    });
 
-  const sitemap = generateSiteMap(["/", "/map", "/about", ...schoolPages]);
+    // Combine static and dynamic pages
+    const pages = ["/", "/map", "/about", ...schoolPages];
 
-  res.setHeader("Content-Type", "text/xml");
-  res.write(sitemap);
-  res.end();
+    // Generate the sitemap XML
+    const sitemap = generateSiteMap(pages);
 
-  return { props: {} };
-};
+    // Write the sitemap to public/sitemap.xml
+    const sitemapPath = join(process.cwd(), "public", "sitemap.xml");
+    writeFileSync(sitemapPath, sitemap, "utf8");
 
-export default SiteMap;
+    console.log("Sitemap generated successfully at public/sitemap.xml");
+  } catch (error) {
+    console.error("Error generating sitemap:", error);
+    process.exit(1);
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+// Run the sitemap generation
+generateStaticSitemap();
