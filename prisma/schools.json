@@ -9,6 +9,9 @@
     "latitude": "37.722",
     "longitude": "-122.44041",
     "zipcode": "94112",
+    "school_type": [
+      "high"
+    ],
     "about": "Balboa (\"Bal\") is a unique high school with a rich history and tradition.",
     "about_bp": [
       "Bal was the first high school in SFUSD to organize into small learning communities called Pathways.",
@@ -123,6 +126,9 @@
     "latitude": "37.72126",
     "longitude": "-122.40630",
     "zipcode": "94134",
+    "school_type": [
+      "high"
+    ],
     "about": "Burton High School was established in 1984 as a result of a Consent Decree between the City of San Francisco and the NAACP, and is named after Phillip Burton, a member of the California Assembly who championed the civil rights of others. Burton also:",
     "about_bp": [
       "Is a “wall-to-wall” academy school, offering specialized career and technical education in Arts & Media, Engineering, Health Sciences, and Performing Arts to students in the form of project-based learning classes",
@@ -241,6 +247,9 @@
     "latitude": "37.761565",
     "longitude": "-122.40394",
     "zipcode": "94107",
+    "school_type": [
+      "high"
+    ],
     "about": "Downtown High School (DHS) is one of two continuation schools in SFUSD, dedicated to serving students whose success was limited in the district's comprehensive and charter high schools.",
     "about_bp": [
       "DHS represents a second chance for students to succeed and a chance to graduate from high school.",
@@ -345,6 +354,9 @@
     "latitude": "37.80379",
     "longitude": "-122.42415",
     "zipcode": "94109",
+    "school_type": [
+      "high"
+    ],
     "about": "Galileo Academy of Science and Technology (\"Galileo\") is committed to providing equal access to all of their educational programs.",
     "about_bp": [
       "Galileo offers three career technical Academic pathways: 1) Biotechnology, Environmental Science, Health Sciences, 2) Information Technology, Media, Arts, and 3) Hospitality, Travel and Tourism.",
@@ -447,6 +459,9 @@
     "latitude": "37.7751",
     "longitude": "-122.43399",
     "zipcode": "94117",
+    "school_type": [
+      "high"
+    ],
     "about": "Ida B. Wells (IBW) is one of two continuation schools in SFUSD, dedicated to serving students whose success was limited in the district's comprehensive and charter high schools.",
     "about_bp": [
       "IBW represents a second chance for students who are 16+ to succeed and a chance to graduate from high school.",
@@ -547,6 +562,9 @@
     "latitude": "37.76309",
     "longitude": "-122.46388",
     "zipcode": "94122",
+    "school_type": [
+      "high"
+    ],
     "about": "Independence is a small alternative high school in SFUSD.",
     "about_bp": [
       "Independence serves students who have significant obligations outside of school, including family and employment.",
@@ -646,6 +664,9 @@
     "latitude": "37.76169",
     "longitude": "-122.40082",
     "zipcode": "94107",
+    "school_type": [
+      "high"
+    ],
     "about": "SF International is a small public high school that offers a unique program designed for recent immigrant students.",
     "about_bp": [
       "All subjects teach English development through meaningful projects that keep students motivated and connected to their learning.",
@@ -744,6 +765,9 @@
     "latitude": "37.7195",
     "longitude": "-122.42539",
     "zipcode": "94112",
+    "school_type": [
+      "high"
+    ],
     "about": "June Jordan is a small alternative high school named after activist June Jordan. The school was founded through community organizing by a group of teachers, parents, and youth.",
     "about_bp": [
       "As a school for Social Justice serving primarily working class communities of color, the mission of JJSE is not just to prepare students for college but to also be positive agents of change in the world.",
@@ -836,6 +860,9 @@
     "latitude": "37.74729",
     "longitude": "-122.48109",
     "zipcode": "94116",
+    "school_type": [
+      "high"
+    ],
     "about": "Lincoln is one of the three largest high schools in SFUSD. The school features:",
     "about_bp": [
       "Partnerships with 14 different community agencies",
@@ -947,6 +974,9 @@
     "latitude": "37.73068",
     "longitude": "-122.48392",
     "zipcode": "94132",
+    "school_type": [
+      "high"
+    ],
     "about": "Established in 1856, Lowell High School is the oldest public high school west of Mississippi, recognized as one of California's highest-performing public high scools.",
     "about_bp": [
       "They have been honored as a National Blue Ribbon school 4 times, and a California Distinguished School 8 times and ranked #1 in the Western region for the number of Advanced Placement (AP) exams offered (31).",
@@ -1047,6 +1077,9 @@
     "latitude": "37.7616",
     "longitude": "-122.42698",
     "zipcode": "94114",
+    "school_type": [
+      "high"
+    ],
     "about": "Mission High is the oldest comprehensive public school in San Francisco founded in 1890. The school:",
     "about_bp": [
       "Is one of the most diverse schools in the San Francisco public school district, and beginning in the Fall of the 2007/08 school year, the Mission faculty collectively created a working definition of Anti-Racist/Equity education",
@@ -1149,6 +1182,9 @@
     "latitude": "37.75956",
     "longitude": "-122.41454",
     "zipcode": "94110",
+    "school_type": [
+      "high"
+    ],
     "about": "JOCHS is a small, academic-focused high school with several career pathways. The school provides:",
     "about_bp": [
       "Four integrated Pathways for grades 11-12: Building and Construction Trades, Entrepreneurship and Culinary Arts, Health and Behavioral Sciences, and Public Service. During this time students are assigned professional internships to give them real world experience",
@@ -1250,6 +1286,9 @@
     "latitude": "37.74538",
     "longitude": "-122.44965",
     "zipcode": "94131",
+    "school_type": [
+      "high"
+    ],
     "about": "Ruth Asawa School of the Arts (SOTA) is named after renowned sculptor Ruth Asawa who was a passionate advocate for arts in education.",
     "about_bp": [
       "SOTA is an audition-based, alternative high school committed to fostering equity and excelling in both arts and academics.",
@@ -1353,6 +1392,9 @@
     "latitude": "37.745499",
     "longitude": "-122.45156",
     "zipcode": "94131",
+    "school_type": [
+      "high"
+    ],
     "about": "The Academy fosters one of the smallest school learning environments, where teachers can closely engage with students, hands-on administrators, and families for a stronger, supportive community.",
     "about_bp": [
       "With a focus on individualized support, every Academy student receives college counseling through their four years with 2 full-time academic and dedicated college counselors.",
@@ -1453,6 +1495,9 @@
     "latitude": "37.73609",
     "longitude": "-122.40211",
     "zipcode": "94124",
+    "school_type": [
+      "high"
+    ],
     "about": "Thurgood Marshall High School was founded in 1994, and is located in the southeastern part of San Francisco. The school offers:",
     "about_bp": [
       "A refurbished and expanded College & Career Center, a fully staffed Wellness Center, a Peer Resources Program, and a daily after-school tutoring program",
@@ -1555,6 +1600,9 @@
     "latitude": "37.780365",
     "longitude": "-122.44621",
     "zipcode": "94115",
+    "school_type": [
+      "high"
+    ],
     "about": "Founded in 1981, the Raoul Wallenberg Traditional High School (or \"Wallenberg\") honors the renowned Swedist diplomat, guided by personal responsibility, compassion, honesty, and integrity for equitable educational outcomes that enhance creativity, self-discipline, and citizenship.",
     "about_bp": [
       "Wallenberg provides a rigorous educational program designed to prepare its diverse student body for success in college, careers, and life, including through diagnostic counseling, and college prep (including the AVID program).",
@@ -1664,6 +1712,9 @@
     "latitude": "37.77784",
     "longitude": "-122.49174",
     "zipcode": "94121",
+    "school_type": [
+      "high"
+    ],
     "about": "Washington is one of the largest high schools in SFUSD, opened in 1936.",
     "about_bp": [
       "Students can choose from more than 100 course offerings, with 52 sections of honors and AP classes.",
@@ -1778,6 +1829,9 @@
     "latitude": "37.75113",
     "longitude": "-122.49633",
     "zipcode": "94122",
+    "school_type": [
+      "middle"
+    ],
     "about": "A.P. Giannini Middle School is a diverse and inclusive institution located in the SF Sunset district that emphasizes critical thinking, global consciousness, and social justice to prepare students to be impactful community members and successful professionals.",
     "about_bp": [
       "Located in the culturally diverse SF Sunset district with over 50 years of educational excellence.",
@@ -1870,6 +1924,9 @@
     "latitude": "37.78308",
     "longitude": "-122.48258",
     "zipcode": "94121",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Alamo Elementary School is a vibrant learning community dedicated to fostering academic excellence and personal growth through a rich blend of traditional and innovative educational programs.",
     "about_bp": [
       "Strong tradition of high achievement and academic excellence.",
@@ -1962,6 +2019,10 @@
     "latitude": "37.75896",
     "longitude": "-122.46968",
     "zipcode": "94122",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "Alice Fong Yu Alternative School, the nation's first Chinese immersion public school, offers a unique K-8 Chinese language immersion program fostering bilingual skills and global perspectives.",
     "about_bp": [
       "Nation's first Chinese immersion public school offering both Cantonese and Mandarin language programs.",
@@ -2054,6 +2115,9 @@
     "latitude": "37.75375",
     "longitude": "-122.43859",
     "zipcode": "94114",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Alvarado School is a vibrant community-focused educational institution that fosters academic excellence and artistic expression while celebrating diversity and promoting social justice in a safe and engaging environment.",
     "about_bp": [
       "Offers a unique Spanish-English Dual Immersion Program, supporting bilingual education.",
@@ -2146,6 +2210,9 @@
     "latitude": "37.72977",
     "longitude": "-122.46626",
     "zipcode": "94127",
+    "school_type": [
+      "middle"
+    ],
     "about": "Aptos Middle School is dedicated to providing an empowering educational experience focused on mastering Common Core standards, fostering 21st-century skills, and promoting social justice through its T.I.G.E.R. values.",
     "about_bp": [
       "Committed to developing students' critical thinking skills and academic competency with a strong emphasis on 21st-century skills.",
@@ -2238,6 +2305,9 @@
     "latitude": "37.77539",
     "longitude": "-122.47662",
     "zipcode": "94121",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Argonne Elementary School fosters a dynamic learning environment, emphasizing critical and creative thinking with a strong focus on interdisciplinary teaching and project-based learning to prepare students for the 21st century.",
     "about_bp": [
       "Emphasizes experiential, project-based learning to ignite passion in students and teachers.",
@@ -2330,6 +2400,10 @@
     "latitude": "37.77609",
     "longitude": "-122.40644",
     "zipcode": "94103",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "Bessie PK-8 is a vibrant school committed to antiracist education and equipping each student with a rigorous balance of social-emotional and academic learning, ensuring they are ready for high school, college, and beyond.",
     "about_bp": [
       "Driven by the core values of being \"Linked through Love,\" promoting \"Literacy for Liberation,\" and fostering \"Lifelong Learning.\"",
@@ -2422,6 +2496,9 @@
     "latitude": "37.71796",
     "longitude": "-122.38895",
     "zipcode": "94124",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Bret Harte School is dedicated to delivering high-quality instructional programs that foster individual talents in a diverse and supportive environment, ensuring students are equipped to become productive citizens.",
     "about_bp": [
       "Offers a dynamic arts and enrichment curriculum that includes music, dance, visual and performing arts, as well as sports programs.",
@@ -2514,6 +2591,9 @@
     "latitude": "37.75170",
     "longitude": "-122.40495",
     "zipcode": "94110",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Bryant Elementary School is a nurturing community school in San Francisco's Mission District, dedicated to fostering life-long learners and creative, socially responsible critical thinkers through high expectations and community engagement.",
     "about_bp": [
       "Foster life-long learning with a focus on core values like curiosity, empathy, and self-confidence.",
@@ -2606,6 +2686,10 @@
     "latitude": "37.75357",
     "longitude": "-122.42028",
     "zipcode": "94110",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "BVHM is a vibrant K-8 dual-language Spanish Immersion Community School located in the Mission District, dedicated to nurturing bilingual and multicultural students who excel academically, socially, and artistically.",
     "about_bp": [
       "Offers a strong Spanish Dual Language Immersion program fostering bilingualism and cultural understanding.",
@@ -2698,6 +2782,9 @@
     "latitude": "37.75516",
     "longitude": "-122.41531",
     "zipcode": "94110",
+    "school_type": [
+      "elementary"
+    ],
     "about": "César Chávez Elementary School in the heart of the Mission District is devoted to empowering students through biliteracy, academic excellence, and a nurturing community atmosphere, all driven by a ¡sí se puede! philosophy.",
     "about_bp": [
       "Focus on biliteracy with a comprehensive Spanish program from Kindergarten through 5th grade.",
@@ -2790,6 +2877,10 @@
     "latitude": "37.76958",
     "longitude": "-122.44428",
     "zipcode": "94117",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "The Chinese Immersion School at De Avila offers a dual language immersion program in Cantonese and English for grades K-5, fostering a nurturing environment that emphasizes the holistic development of students into globally responsible citizens.",
     "about_bp": [
       "Dual language immersion in Cantonese and English for comprehensive language development.",
@@ -2882,6 +2973,9 @@
     "latitude": "37.78030",
     "longitude": "-122.42294",
     "zipcode": "94102",
+    "school_type": [
+      "middle"
+    ],
     "about": "Civic Center Secondary School is a supportive community aimed at providing educational services for at-risk students in grades 7-12, fostering an inclusive, safe, and caring learning environment.",
     "about_bp": [
       "Serves students assigned due to expulsion, juvenile probation, foster care, or behavioral interventions, breaking the pipeline to prison.",
@@ -2961,6 +3055,10 @@
     "latitude": "37.80332",
     "longitude": "-122.44290",
     "zipcode": "94123",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "Claire Lilienthal School is a vibrant community-focused institution dedicated to high academic standards and inclusive education for all students.",
     "about_bp": [
       "Strong emphasis on community collaboration with active involvement from students, families, and staff.",
@@ -3023,6 +3121,9 @@
     "latitude": "37.75354",
     "longitude": "-122.45611",
     "zipcode": "94131",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Clarendon is dedicated to fostering high-achieving and joyful learners through its diverse educational programs and strong community involvement.",
     "about_bp": [
       "High level of parent participation enhancing the school community.",
@@ -3115,6 +3216,9 @@
     "latitude": "37.72062",
     "longitude": "-122.42896",
     "zipcode": "94112",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Located in the vibrant Excelsior District of San Francisco, Cleveland School is dedicated to fostering an inclusive and collaborative learning environment that empowers students to become active, respectful, and responsible citizens.",
     "about_bp": [
       "Rich language programs including a Spanish Bilingual Program enhancing biliteracy.",
@@ -3207,6 +3311,9 @@
     "latitude": "37.73173",
     "longitude": "-122.47093",
     "zipcode": "94127",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Commodore Sloat School is a high-performing institution committed to developing creative and critical thinkers who excel academically and thrive in a rapidly-changing world.",
     "about_bp": [
       "Experienced staff dedicated to fostering higher levels of academic performance and critical thinking.",
@@ -3299,6 +3406,9 @@
     "latitude": "37.76052",
     "longitude": "-122.39584",
     "zipcode": "94107",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Daniel Webster Elementary School is a vibrant and diverse community dedicated to fostering a multicultural environment and equitable education through both General Education and Spanish Dual-Immersion programs, aiming to involve families and the community in holistic student development.",
     "about_bp": [
       "Small, intimate school with a focus on multicultural inclusivity and equity.",
@@ -3391,6 +3501,9 @@
     "latitude": "37.73962",
     "longitude": "-122.48176",
     "zipcode": "94116",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Dianne Feinstein School is dedicated to fostering a dynamic learning environment, empowering students through a well-rounded education that encourages independence and community interaction, grounded in integrity and respect.",
     "about_bp": [
       "Dynamic, well-rounded education for all students.",
@@ -3483,6 +3596,9 @@
     "latitude": "37.74045",
     "longitude": "-122.42501",
     "zipcode": "94131",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Dolores Huerta Elementary is dedicated to fostering high academic standards within a culturally rich environment that celebrates bilingualism and multiculturalism, preparing students to thrive in a global society.",
     "about_bp": [
       "Collaborative educators delivering a rigorous, standards-based curriculum.",
@@ -3575,6 +3691,9 @@
     "latitude": "37.73175",
     "longitude": "-122.39367",
     "zipcode": "94124",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Dr. Charles R. Drew College Preparatory Academy nurtures student potential through a dedicated staff and a focus on creativity, social, and emotional development, ensuring a vibrant learning environment.",
     "about_bp": [
       "Committed to academic and personal development of every student.",
@@ -3667,6 +3786,9 @@
     "latitude": "37.73190",
     "longitude": "-122.38563",
     "zipcode": "94124",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Carver Elementary School is a dedicated learning institution in the Bayview-Hunter's Point community, committed to providing personalized and rigorous education centered on literacy to develop future readers, leaders, and scholars.",
     "about_bp": [
       "Compassionate and dedicated staff committed to each student's academic and personal success.",
@@ -3759,6 +3881,9 @@
     "latitude": "37.72777",
     "longitude": "-122.40549",
     "zipcode": "94134",
+    "school_type": [
+      "middle"
+    ],
     "about": "Dr. Martin Luther King, Jr. Academic Middle School fosters a diverse and inclusive learning environment, emphasizing scholarship, leadership, and entrepreneurship to cultivate lifelong learners.",
     "about_bp": [
       "Diverse and multicultural school environment attracting students from across San Francisco.",
@@ -3851,6 +3976,9 @@
     "latitude": "37.78803",
     "longitude": "-122.43952",
     "zipcode": "94115",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Dr. William L. Cobb Elementary School is a historic institution in San Francisco's Lower Pacific Heights, celebrated for its commitment to fostering each child's potential within a nurturing, inclusive, and creative community.",
     "about_bp": [
       "Small class sizes ensure personalized attention for every student.",
@@ -3943,6 +4071,9 @@
     "latitude": "37.72783",
     "longitude": "-122.40733",
     "zipcode": "94134",
+    "school_type": [
+      "elementary"
+    ],
     "about": "E.R. Taylor Elementary is a nurturing PK-5th grade school in San Francisco's Garden District, committed to fostering academic excellence and personal growth with a strong emphasis on preparing students to be college-ready.",
     "about_bp": [
       "Located in San Francisco's vibrant Garden District, offering a supportive and community-focused learning environment.",
@@ -4035,6 +4166,9 @@
     "latitude": "37.79442",
     "longitude": "-122.40879",
     "zipcode": "94108",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Edwin and Anita Lee Newcomer School offers a unique one-year transitional program for newly-arrived, Chinese-speaking immigrant students, focusing on foundational English skills and social-emotional learning to bridge cultural and educational gaps.",
     "about_bp": [
       "Specialized in helping Chinese-speaking immigrant students transition into the American educational system.",
@@ -4097,6 +4231,9 @@
     "latitude": "37.71862",
     "longitude": "-122.40715",
     "zipcode": "94134",
+    "school_type": [
+      "elementary"
+    ],
     "about": "El Dorado is a vibrant school committed to fostering a diverse educational environment where teachers, staff, and parents collaborate to nurture the academic and social growth of every student.",
     "about_bp": [
       "Focus on teaching the whole child through a balanced approach to literacy and innovative instructional practices.",
@@ -4189,6 +4326,9 @@
     "latitude": "37.76369",
     "longitude": "-122.42886",
     "zipcode": "94114",
+    "school_type": [
+      "middle"
+    ],
     "about": "Everett Middle School, located at the intersection of the Castro and Mission districts, is a diverse and inclusive school dedicated to empowering students to become world-changers through a supportive environment and comprehensive educational programs.",
     "about_bp": [
       "Diverse and inclusive environment catering to a wide range of student needs, including special education and English learners.",
@@ -4281,6 +4421,9 @@
     "latitude": "37.75810",
     "longitude": "-122.50200",
     "zipcode": "94122",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Francis Scott Key Elementary School offers a supportive and challenging learning environment in an art deco style building, promoting respect, diversity, and holistic education with a focus on 21st-century skills through STEAM education.",
     "about_bp": [
       "Founded in 1903 and housed in a historic art deco building renovated in 2012, ensuring full ADA compliance.",
@@ -4373,6 +4516,9 @@
     "latitude": "37.80470",
     "longitude": "-122.41159",
     "zipcode": "94133",
+    "school_type": [
+      "middle"
+    ],
     "about": "Francisco Middle School, nestled within the culturally rich Chinatown-North Beach area, excels in providing a purposeful educational experience tailored to meet the needs of a diverse community of learners.",
     "about_bp": [
       "Located in the vibrant Chinatown-North Beach community, fostering a rich cultural experience.",
@@ -4465,6 +4611,9 @@
     "latitude": "37.77629",
     "longitude": "-122.46421",
     "zipcode": "94118",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Nestled near the iconic Golden Gate Park, McCoppin Elementary School is a distinguished institution committed to nurturing academic excellence and fostering an inclusive and equitable learning environment for all its students.",
     "about_bp": [
       "Renowned for its individualized teaching approach, supported by a diverse team of specialists including a speech clinician and school psychologist.",
@@ -4557,6 +4706,9 @@
     "latitude": "37.80189",
     "longitude": "-122.40663",
     "zipcode": "94133",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Garfield School is dedicated to fostering positive self-esteem and lifelong learning, ensuring students achieve personal and academic success while nurturing a sense of personal and civic responsibility.",
     "about_bp": [
       "Equity-focused education that meets each student's needs and supports success at all levels.",
@@ -4649,6 +4801,9 @@
     "latitude": "37.78393",
     "longitude": "-122.46479",
     "zipcode": "94118",
+    "school_type": [
+      "elementary"
+    ],
     "about": "George Peabody is a nurturing and academically rigorous elementary school in San Francisco, designed to provide students with foundational skills and lifelong learning enthusiasm in a supportive and community-oriented environment.",
     "about_bp": [
       "Located in the heart of San Francisco's Inner Richmond, George Peabody offers a safe, family-feel environment for all students.",
@@ -4741,6 +4896,9 @@
     "latitude": "37.75639",
     "longitude": "-122.41246",
     "zipcode": "94110",
+    "school_type": [
+      "elementary"
+    ],
     "about": "George R. Moscone Elementary School, situated in the vibrant Mission District, fosters a multicultural environment where a committed faculty and diverse student body collaborate to achieve excellence in academic, social, and emotional development.",
     "about_bp": [
       "Multicultural environment with a focus on cultural and linguistic diversity.",
@@ -4833,6 +4991,9 @@
     "latitude": "37.73311",
     "longitude": "-122.43563",
     "zipcode": "94131",
+    "school_type": [
+      "elementary"
+    ],
     "about": "The Glen Park School is a vibrant and inclusive community focused on fostering social justice, high achievement, and emotional growth for all its students.",
     "about_bp": [
       "Committed to providing equitable access to learning opportunities and valuing all voices within the community.",
@@ -4925,6 +5086,9 @@
     "latitude": "37.79442",
     "longitude": "-122.40879",
     "zipcode": "94108",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Gordon J. Lau Elementary School excels in providing a comprehensive, culturally inclusive education in the heart of Chinatown, committed to student success and community service.",
     "about_bp": [
       "Located in the vibrant Chinatown community, welcoming newcomers and English Learner families.",
@@ -5017,6 +5181,9 @@
     "latitude": "37.76377",
     "longitude": "-122.45047",
     "zipcode": "94117",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Grattan School is a nurturing and dynamic educational community dedicated to fostering curiosity, diversity, and individual growth through a balanced and affective academic program.",
     "about_bp": [
       "Emphasizes small class sizes to ensure personalized attention and a safe learning environment.",
@@ -5103,6 +5270,9 @@
     "latitude": "37.71021",
     "longitude": "-122.43470",
     "zipcode": "94112",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Guadalupe Elementary School is a vibrant and inclusive learning community dedicated to embracing diversity and providing a well-rounded education that nurtures both academic excellence and personal growth.",
     "about_bp": [
       "Celebrates a diverse and inclusive school community.",
@@ -5195,6 +5365,9 @@
     "latitude": "37.75892",
     "longitude": "-122.43647",
     "zipcode": "94114",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Harvey Milk Civil Rights Academy (HMCRA) is a vibrant public school in Castro, dedicated to developing well-rounded individuals through a student-centered curriculum that emphasizes literacy, science, arts, and social activism.",
     "about_bp": [
       "Emphasizes literacy and STEM through hands-on, inquiry-based learning.",
@@ -5281,6 +5454,9 @@
     "latitude": "37.74540",
     "longitude": "-122.46988",
     "zipcode": "94116",
+    "school_type": [
+      "middle"
+    ],
     "about": "Hoover Middle School is a beacon of academic and arts excellence, committed to nurturing technological skills and multicultural appreciation through diverse programs and community engagement.",
     "about_bp": [
       "Over 50 years of tradition in academic and visual & performing arts excellence.",
@@ -5373,6 +5549,9 @@
     "latitude": "37.72881",
     "longitude": "-122.41913",
     "zipcode": "94134",
+    "school_type": [
+      "elementary"
+    ],
     "about": "At Hillcrest Elementary, we offer a nurturing and diverse educational environment where students can thrive through rigorous, relevant, and relational learning experiences.",
     "about_bp": [
       "Offers four standards-based instructional programs catering to diverse linguistic and cultural needs.",
@@ -5465,6 +5644,10 @@
     "latitude": "37.75070",
     "longitude": "-122.40910",
     "zipcode": "94110",
+    "school_type": [
+      "middle",
+      "high"
+    ],
     "about": "Hilltop Special Service Center offers a unique educational environment dedicated to equipping students with the academic skills and support they need to graduate high school and excel as parents and future community leaders.",
     "about_bp": [
       "Provides a safe and supportive academic environment with access to prenatal, parenting, health, and emotional support services.",
@@ -5533,6 +5716,9 @@
     "latitude": "37.72170",
     "longitude": "-122.44295",
     "zipcode": "94112",
+    "school_type": [
+      "middle"
+    ],
     "about": "James Denman Middle School fosters a literate and independent learning community, committed to creating a non-competitive and supportive environment where each student can thrive academically and personally with a focus on character development and community involvement.",
     "about_bp": [
       "Safe, non-competitive environment tailored to individual student needs.",
@@ -5625,6 +5811,9 @@
     "latitude": "37.74945",
     "longitude": "-122.43194",
     "zipcode": "94114",
+    "school_type": [
+      "middle"
+    ],
     "about": "James Lick Middle School, located in Noe Valley, is a vibrant and diverse community that fosters student growth through comprehensive academic and enrichment programs, emphasizing Spanish immersion and the arts.",
     "about_bp": [
       "Located in the heart of Noe Valley, providing a culturally rich educational environment.",
@@ -5717,6 +5906,9 @@
     "latitude": "37.79762",
     "longitude": "-122.41103",
     "zipcode": "94133",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Jean Parker Community School is a vibrant and diverse educational institution located conveniently in San Francisco, offering a nurturing environment focused on academic excellence and social-emotional growth through a variety of enriching programs.",
     "about_bp": [
       "Located at the east end of the Broadway Tunnel, offering easy accessibility for families in San Francisco.",
@@ -5800,22 +5992,25 @@
     ]
   },
   {
-    "stub": "jefferson-early-education-school",
+    "stub": "jefferson-elementary-school",
     "casid": "6041230",
-    "name": "Jefferson Early Education School",
-    "address": "1350 25th Avenue, San Francisco, California 94122",
+    "name": "Jefferson Elementary School",
+    "address": "1725 Irving Street\nSan Francisco, California 94122",
     "neighborhood": "Inner Sunset",
     "priority": false,
-    "latitude": "37.76234",
-    "longitude": "-122.48329",
+    "latitude": "37.76314",
+    "longitude": "-122.47654",
     "zipcode": "94122",
-    "about": "Jefferson Early Education School, nestled in San Francisco's Sunset area, offers a nurturing and enriching preschool environment for children aged 3 to 5, combining multicultural sensitivity and a 'creative curriculum' approach to prepare students for Kindergarten.",
+    "school_type": [
+      "elementary"
+    ],
+    "about": "Jefferson Elementary offers a unique blend of large school resources with a small school feel, focusing on dynamic community partnerships and personalized education that nurtures the diverse talents of its students.",
     "about_bp": [
-      "Located in the vibrant Sunset area of San Francisco, fostering a community of learners.",
-      "Offers a 'creative curriculum' environmental approach aligned with California Preschool Learning Foundations.",
-      "Rich variety of classroom activities including cooking, gardening, and music.",
-      "Family engagement through various activities like open house pizza nights and cultural celebrations.",
-      "Dedicated programs for special education within integrated General Education classrooms."
+      "Dynamic community partnerships enhance educational opportunities.",
+      "Curious and passionate teachers foster authentic learning experiences.",
+      "Arts and Sciences programs contribute significantly to student success.",
+      "Holistic and differentiated instruction meets individual student needs.",
+      "Students graduate as well-rounded citizens prepared for future success."
     ],
     "volunteer_form_url": "",
     "donation_url": "",
@@ -5824,12 +6019,18 @@
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
-    "noteable_video": "https://www.youtube.com/embed/3wgMz6xsQxs",
-    "principal": "Penelope Ho",
+    "noteable_video": "https://www.youtube.com/embed/nLT9MAPCgSM",
+    "principal": "Craig Berger",
     "instagram_url": "",
     "facebook_url": "",
-    "website_url": "https://www.sfusd.edu/school/jefferson-early-education-school",
+    "website_url": "https://www.sfusd.edu/school/jefferson-elementary-school",
     "metrics": [
+      {
+        "name": "Students Enrolled",
+        "value": 515,
+        "unit": "",
+        "category": "about"
+      },
       {
         "name": "Disadvantaged",
         "value": 36,
@@ -5895,6 +6096,9 @@
     "latitude": "37.77376",
     "longitude": "-122.42868",
     "zipcode": "94117",
+    "school_type": [
+      "elementary"
+    ],
     "about": "John Muir School is an inclusive learning community dedicated to nurturing confident, independent learners prepared to excel academically and socially, with a strong emphasis on cultural diversity and interdisciplinary education.",
     "about_bp": [
       "Culturally diverse and relevant learning experiences.",
@@ -5987,6 +6191,9 @@
     "latitude": "37.79845",
     "longitude": "-122.40308",
     "zipcode": "94133",
+    "school_type": [
+      "elementary"
+    ],
     "about": "John Yehall Chin is a small, welcoming school that prides itself on providing a well-rounded education, fostering a learning environment filled with care and innovation for students eager to transform the world.",
     "about_bp": [
       "Emphasizes efficiency and productivity alongside compassionate education.",
@@ -6079,6 +6286,9 @@
     "latitude": "37.71636",
     "longitude": "-122.46652",
     "zipcode": "94132",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Jose Ortega Elementary School is a vibrant and culturally diverse educational institution that fosters a stimulating and inclusive environment, encouraging students to achieve their fullest potential through a variety of educational programs and family-engagement activities.",
     "about_bp": [
       "Offers Mandarin Immersion and Special Education programs to accommodate diverse learning needs.",
@@ -6171,6 +6381,9 @@
     "latitude": "37.73667",
     "longitude": "-122.42124",
     "zipcode": "94110",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Junipero Serra Elementary School is a vibrant community-focused public school in the picturesque Bernal Heights area, dedicated to nurturing a diverse student population with a comprehensive and culturally inclusive education.",
     "about_bp": [
       "Located adjacent to the scenic Bernal Heights public park and near the local library, offering a picturesque learning environment.",
@@ -6263,6 +6476,9 @@
     "latitude": "37.77747",
     "longitude": "-122.49719",
     "zipcode": "94121",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Lafayette School is a vibrant educational community in the Outer Richmond area, offering a multicultural curriculum and specialized programs for a diverse student body, including those with special needs and hearing impairments.",
     "about_bp": [
       "Celebrates the rich cultural heritage of its diverse student population with events like Multicultural Night and Black History Month.",
@@ -6355,6 +6571,9 @@
     "latitude": "37.73057",
     "longitude": "-122.48581",
     "zipcode": "94132",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Lakeshore Elementary is a vibrant and diverse school located in the picturesque area of Lake Merced, San Francisco, dedicated to preparing students academically, socially, and emotionally for middle school and beyond.",
     "about_bp": [
       "Strong partnerships with Lowell High School and San Francisco State University provide students with expanded learning opportunities.",
@@ -6447,6 +6666,10 @@
     "latitude": "37.75805",
     "longitude": "-122.48909",
     "zipcode": "94122",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "Lawton Alternative School fosters a nurturing and engaging environment that promotes academic excellence, personal growth, and a strong sense of community, encouraging students to thrive through creativity and service.",
     "about_bp": [
       "Dedicated to the holistic development of students through respect, responsibility, and compassion.",
@@ -6539,6 +6762,9 @@
     "latitude": "37.74812",
     "longitude": "-122.41203",
     "zipcode": "94110",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Flynn Elementary is a community-focused TK-5 school in San Francisco's Mission district, committed to providing a culturally responsive, high-quality education for all students in a supportive and inclusive environment.",
     "about_bp": [
       "Located in the vibrant Mission district, fostering a diverse and inclusive school community.",
@@ -6631,6 +6857,9 @@
     "latitude": "37.71028",
     "longitude": "-122.44755",
     "zipcode": "94112",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Longfellow Elementary School, with a rich history of 140 years in the outer Mission district, is committed to nurturing globally aware, life-long learners equipped with academic, social, and artistic skills.",
     "about_bp": [
       "Focus on educating the whole child and empowering families with a comprehensive approach.",
@@ -6723,6 +6952,9 @@
     "latitude": "37.73422",
     "longitude": "-122.38101",
     "zipcode": "94124",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Malcolm X Academy, situated in the vibrant Bayview community of San Francisco, empowers students through an inclusive, supportive, and culturally rich environment, fostering both academic excellence and personal growth.",
     "about_bp": [
       "Dedicated to developing students' intellectual, social, emotional, and physical capacities.",
@@ -6809,6 +7041,9 @@
     "latitude": "37.80182",
     "longitude": "-122.43547",
     "zipcode": "94123",
+    "school_type": [
+      "middle"
+    ],
     "about": "Marina Middle School is a thriving educational community committed to fostering integrity, creativity, and respect, while providing rigorous academic programs and a wealth of extracurricular activities.",
     "about_bp": [
       "Established in 1936, the school has a rich history of academic and community growth.",
@@ -6901,6 +7136,9 @@
     "latitude": "37.76627",
     "longitude": "-122.41900",
     "zipcode": "94103",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Marshall Elementary School is a thriving community institution committed to fostering bilingual and biliterate students through a rigorous curriculum in a warm and supportive environment.",
     "about_bp": [
       "Full K-5 Spanish Two-Way Immersion program aimed at bilingual and biliterate proficiency by 5th grade.",
@@ -6993,6 +7231,9 @@
     "latitude": "37.76711",
     "longitude": "-122.43644",
     "zipcode": "94114",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Nestled in vibrant San Francisco, McKinley provides a nurturing environment where a diverse student body is empowered to excel academically and personally.",
     "about_bp": [
       "Commitment to student safety and self-expression within a supportive school climate.",
@@ -7085,6 +7326,9 @@
     "latitude": "37.73913",
     "longitude": "-122.45010",
     "zipcode": "94127",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Miraloma Elementary School is a vibrant, inclusive community dedicated to fostering the personal and academic growth of students through dynamic learning experiences and a supportive environment.",
     "about_bp": [
       "Emphasizes diversity and inclusivity, celebrating each student's unique strengths and backgrounds.",
@@ -7177,6 +7421,9 @@
     "latitude": "37.74221",
     "longitude": "-122.43134",
     "zipcode": "94131",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Mission Education Center is a unique PreK-5 school dedicated to helping newly arrived Spanish-speaking immigrant students acquire the skills needed to succeed in traditional schools, with a focus on bilingual education and community integration.",
     "about_bp": [
       "Transitional program to support Spanish-speaking immigrant students in achieving success in regular schools within a year.",
@@ -7263,6 +7510,9 @@
     "latitude": "37.72560",
     "longitude": "-122.43026",
     "zipcode": "94112",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Monroe Elementary is a vibrant and inclusive school in the Excelsior district, dedicated to fostering academic excellence and social justice through diverse language programs and community engagement.",
     "about_bp": [
       "Hosts three language programs: English Language Development, Chinese Bilingual, and Spanish Immersion.",
@@ -7355,6 +7605,9 @@
     "latitude": "37.77388",
     "longitude": "-122.45026",
     "zipcode": "94117",
+    "school_type": [
+      "elementary"
+    ],
     "about": "At New Traditions, we foster a supportive and respectful environment dedicated to creative, meaningful, and rigorous education with a strong emphasis on the Arts and community involvement.",
     "about_bp": [
       "Student-centered and solution-based approach to education.",
@@ -7438,68 +7691,6 @@
     ]
   },
   {
-    "stub": "noriega-early-education-school",
-    "casid": "",
-    "name": "Noriega Early Education School",
-    "address": "1775 44th Avenue, San Francisco, California 94122",
-    "neighborhood": "Outer Sunset",
-    "priority": false,
-    "latitude": "37.75356",
-    "longitude": "-122.50360",
-    "zipcode": "94122",
-    "about": "Noriega Early Education School offers comprehensive early childhood education with a focus on 21st-century learning, providing equity and quality education to children from pre-kindergarten to 4th grade.",
-    "about_bp": [
-      "Offers a unique Project Approach curriculum fostering in-depth investigations and critical thinking skills.",
-      "Highly committed to promoting 21st-century skills including creativity, communication, and collaboration.",
-      "Provides transitional kindergarten to bridge early childhood and traditional kindergarten education.",
-      "Offers extensive before and after school programs with enrichment classes and meals included.",
-      "Features language support with Cantonese Dual Language Learner and Special Education Programs."
-    ],
-    "volunteer_form_url": "",
-    "donation_url": "",
-    "donation_text": "",
-    "testimonial": "",
-    "testimonial_author": "",
-    "testimonial_video": "",
-    "testimonial_img": "",
-    "noteable_video": "https://www.youtube.com/embed/-3Z1xM598Cs",
-    "principal": "Ivy Ng",
-    "instagram_url": "",
-    "facebook_url": "",
-    "website_url": "https://www.sfusd.edu/school/noriega-early-education-school",
-    "metrics": [
-      {
-        "name": "Students Enrolled",
-        "value": 248,
-        "unit": "",
-        "category": "about"
-      }
-    ],
-    "programs": [
-      {
-        "name": "Tutoring",
-        "details": "Provide one-on-one academic support to students on a range of topics",
-        "url": "",
-        "img": "/stock-images/K5/tutoring/pexels-august-de-richelieu-4260314.webp",
-        "category": "volunteer"
-      },
-      {
-        "name": "Event Volunteer",
-        "details": "Provide support for school-sponsored events",
-        "url": "",
-        "img": "/stock-images/K5/event/pexels-artempodrez-8088096.webp",
-        "category": "volunteer"
-      },
-      {
-        "name": "Classroom Support",
-        "details": "Provide students support with in-classroom projects",
-        "url": "",
-        "img": "/stock-images/K5/classroom/pexels-yankrukov-8612992.webp",
-        "category": "volunteer"
-      }
-    ]
-  },
-  {
     "stub": "paul-revere-prek-8-school",
     "casid": "6041487",
     "name": "Paul Revere (PreK-8) School",
@@ -7509,6 +7700,10 @@
     "latitude": "37.73721",
     "longitude": "-122.41300",
     "zipcode": "94110",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "Paul Revere School is an inclusive institution committed to closing the achievement gap by providing a supportive environment with high expectations and access to qualified staff for all students.",
     "about_bp": [
       "Provides data-informed professional development and collaborative planning time for faculty.",
@@ -7601,6 +7796,9 @@
     "latitude": "37.78086",
     "longitude": "-122.48962",
     "zipcode": "94121",
+    "school_type": [
+      "middle"
+    ],
     "about": "This school offers a diverse array of academic and enrichment programs designed to support and enhance student learning in a vibrant, supportive community.",
     "about_bp": [
       "Comprehensive after-school programs available district-wide.",
@@ -7693,6 +7891,9 @@
     "latitude": "37.78964",
     "longitude": "-122.41949",
     "zipcode": "94109",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Redding Elementary School in San Francisco offers a nurturing and safe environment for a diverse community of students, emphasizing social justice, equity, and a joyful learning experience.",
     "about_bp": [
       "Culturally and ethnically diverse student body from all over San Francisco.",
@@ -7785,6 +7986,9 @@
     "latitude": "37.74875",
     "longitude": "-122.49254",
     "zipcode": "94116",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Robert Louis Stevenson Elementary School offers an inclusive, enriching environment that nurtures the whole student, fostering community engagement and 21st-century learning skills.",
     "about_bp": [
       "Commitment to peace, tolerance, equality, and friendship among all students.",
@@ -7877,6 +8081,10 @@
     "latitude": "37.75489",
     "longitude": "-122.44360",
     "zipcode": "94131",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "Rooftop School is a vibrant TK through 8th grade institution split across two close-knit campuses in San Francisco, dedicated to empowering students through a unique blend of arts-integrated academics, community respect, and individualized learning.",
     "about_bp": [
       "Two distinct campuses for different grade levels promoting focused learning environments.",
@@ -7969,6 +8177,9 @@
     "latitude": "37.78199",
     "longitude": "-122.45866",
     "zipcode": "94118",
+    "school_type": [
+      "middle"
+    ],
     "about": "Nestled in the historic Richmond neighborhood, Roosevelt Middle School is dedicated to nurturing students' academic, social, and emotional growth in a safe and supportive environment.",
     "about_bp": [
       "High expectations and standards for all learners across academic and extracurricular activities.",
@@ -8061,6 +8272,9 @@
     "latitude": "37.78353",
     "longitude": "-122.43005",
     "zipcode": "94115",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Rosa Parks Elementary is a dynamic academic environment integrating STEAM, Special Education, and a unique Japanese Bilingual Bicultural Program, fostering an inclusive community where every student thrives through culturally relevant, project-based learning.",
     "about_bp": [
       "Home to Northern California's only Japanese Bilingual Bicultural Program offering daily Japanese language and cultural education.",
@@ -8153,6 +8367,10 @@
     "latitude": "37.72586",
     "longitude": "-122.43215",
     "zipcode": "94112",
+    "school_type": [
+      "elementary",
+      "middle"
+    ],
     "about": "San Francisco Community School is a nurturing, diverse K-8 educational institution dedicated to fostering academic excellence and positive school experiences for all students.",
     "about_bp": [
       "Small class sizes to ensure personalized attention and relationship-building.",
@@ -8245,6 +8463,9 @@
     "latitude": "37.79287",
     "longitude": "-122.43360",
     "zipcode": "94115",
+    "school_type": [
+      "elementary"
+    ],
     "about": "San Francisco Public Montessori is dedicated to fostering each child's potential by integrating the Montessori method with California standards to enhance intellectual, physical, emotional, and social growth.",
     "about_bp": [
       "Combines California Common Core Standards with Montessori Curriculum to deliver a holistic educational experience.",
@@ -8337,6 +8558,9 @@
     "latitude": "37.76383",
     "longitude": "-122.43058",
     "zipcode": "94114",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Sanchez Elementary School is a vibrant community prioritizing high-quality instruction and a student-centered approach to ensure academic success and social justice for all students.",
     "about_bp": [
       "Commitment to social justice with culturally-relevant instruction and high standards.",
@@ -8429,6 +8653,9 @@
     "latitude": "37.71431",
     "longitude": "-122.45937",
     "zipcode": "94112",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Sheridan Elementary School is a nurturing and inclusive educational community in the Oceanview Merced Ingleside District, providing high-quality learning experiences from preschool through 5th grade with a focus on joyful and challenging educational opportunities for all students.",
     "about_bp": [
       "Inclusive environment accommodating diverse race and economic backgrounds.",
@@ -8521,6 +8748,9 @@
     "latitude": "37.79780",
     "longitude": "-122.42611",
     "zipcode": "94123",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Sherman Elementary School, a prestigious K-5 CDE Distinguished Elementary School in San Francisco, is celebrated for its holistic approach to education focusing on academic excellence, social-emotional growth, and equity among its diverse student body.",
     "about_bp": [
       "Established in 1892, located in the vibrant Cow Hollow - Marina area.",
@@ -8613,6 +8843,9 @@
     "latitude": "37.79402",
     "longitude": "-122.41880",
     "zipcode": "94109",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Spring Valley Science is committed to providing a forward-thinking education that emphasizes science, literacy, and the development of critical thinking and problem-solving skills, fostering a growth mindset among all students.",
     "about_bp": [
       "Comprehensive approach to literacy that develops avid readers and writers.",
@@ -8705,6 +8938,9 @@
     "latitude": "37.75269",
     "longitude": "-122.39871",
     "zipcode": "94107",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Starr King Elementary School, nestled atop Potrero Hill, is a dynamic and ethnically diverse community dedicated to fostering a supportive and equitable learning environment through its variety of specialized programs and engaging educational experiences.",
     "about_bp": [
       "Diverse programs including Mandarin Immersion, General Education, and specialized support for students with autism.",
@@ -8797,6 +9033,9 @@
     "latitude": "37.73044",
     "longitude": "-122.44873",
     "zipcode": "94112",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Sunnyside Elementary School offers a diverse and nurturing environment focused on developing well-rounded, capable students prepared for the complexities of modern society.",
     "about_bp": [
       "Diverse student body with personalized educational experiences.",
@@ -8889,6 +9128,9 @@
     "latitude": "37.75085",
     "longitude": "-122.49974",
     "zipcode": "94116",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Sunset School is a vibrant and inclusive educational community that prioritizes academic excellence and social justice, offering students a variety of programs to support holistic development in a safe and nurturing environment.",
     "about_bp": [
       "Diverse and inclusive community committed to equity and academic growth.",
@@ -8981,6 +9223,9 @@
     "latitude": "37.78372",
     "longitude": "-122.47115",
     "zipcode": "94118",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Sutro Elementary offers a nurturing and inclusive learning environment with a strong academic program and a commitment to equal opportunities for all its diverse student community.",
     "about_bp": [
       "Strong focus on academic excellence with a collaborative and family-oriented approach.",
@@ -9073,6 +9318,9 @@
     "latitude": "37.78181",
     "longitude": "-122.41974",
     "zipcode": "94102",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Tenderloin Community School (TCS) is a vibrant PreK-5th Grade public elementary institution that champions a collaborative learning environment with integrated community resources to enhance joyful and comprehensive education.",
     "about_bp": [
       "Hosts a range of community resources on-campus, including a dental clinic, fostering a well-rounded support system for students.",
@@ -9165,6 +9413,9 @@
     "latitude": "37.73738",
     "longitude": "-122.49969",
     "zipcode": "94116",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Ulloa Elementary School, home of the Sharks, fosters a vibrant community where students are not only academically enriched but also nurtured in their cognitive, physical, social, and emotional development to become successful global citizens.",
     "about_bp": [
       "Safe and supportive community focused on individual growth and global citizenship.",
@@ -9257,6 +9508,9 @@
     "latitude": "37.71268",
     "longitude": "-122.41028",
     "zipcode": "94134",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Visitacion Valley Elementary School fosters a culturally diverse community dedicated to service and partnership with families, providing an optimal and inclusive education to ensure students' lifelong success.",
     "about_bp": [
       "Title I School with a commitment to serving a diverse student body.",
@@ -9349,6 +9603,9 @@
     "latitude": "37.71590",
     "longitude": "-122.41305",
     "zipcode": "94134",
+    "school_type": [
+      "middle"
+    ],
     "about": "Visitacion Valley Middle School, nestled in the heart of a culturally rich and diverse San Francisco neighborhood, is dedicated to fostering a thriving community focused on love, literacy, and liberation for all students.",
     "about_bp": [
       "Home to the innovative Quiet Time program involving Transcendental Meditation, enhancing mental wellness and focus.",
@@ -9441,6 +9698,9 @@
     "latitude": "37.74338",
     "longitude": "-122.46464",
     "zipcode": "94127",
+    "school_type": [
+      "elementary"
+    ],
     "about": "West Portal School is a thriving TK through 5th grade educational institution in San Francisco, fostering student achievement and success through inclusive, equity-focused practices and a joyful, student-centered approach.",
     "about_bp": [
       "Small class sizes through third grade ensure personalized attention and support.",
@@ -9533,6 +9793,9 @@
     "latitude": "37.73643",
     "longitude": "-122.39892",
     "zipcode": "94124",
+    "school_type": [
+      "middle"
+    ],
     "about": "Willie L. Brown Jr. Middle School offers a cutting-edge STEM curriculum, fostering students' STEM skills and social justice advocacy, within a state-of-the-art campus featuring advanced resources and unique learning environments.",
     "about_bp": [
       "Project-based STEM education to prepare students for STEM degrees and careers.",
@@ -9625,6 +9888,9 @@
     "latitude": "37.80190",
     "longitude": "-122.41636",
     "zipcode": "94133",
+    "school_type": [
+      "elementary"
+    ],
     "about": "Yick Wo Elementary School is dedicated to fostering lifelong learning through enriching academic, social, emotional, artistic, and physical development experiences for its 240 students.",
     "about_bp": [
       "High expectations and tailored teaching methods to address diverse learning styles.",

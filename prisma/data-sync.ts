@@ -93,6 +93,7 @@ async function syncPrismaWithGoogleSheets() {
     const schools = rawSchools.map((school: any) => {
       return {
         ...school,
+        school_type: school.school_type.split("\n"),
         about_bp: school.about_bp.split("\n"),
         priority: school.priority === "TRUE",
         metrics: school.metrics.map((metric: any) => ({
