@@ -13,6 +13,7 @@ import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
 import { useMapContext } from "../contexts/MapContext";
 import SEO from "@/components/SEO";
+import { SchoolType } from "@prisma/client";
 
 export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
@@ -36,6 +37,12 @@ const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
     useMapContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [schoolType, setSchoolType] = useState<SchoolType[]>([]);
+  const [filteredSchools, setFilteredSchools] = useState(props.schools);
+
+  useEffect(() => {
+    setFilteredSchools(getSchoolsByType(schoolType, props.schools));
+  }, [schoolType, props.schools]);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -55,9 +62,33 @@ const Map: React.FC<Props> = (props) => {
     e.stopPropagation();
   };
 
+  const handleSchoolTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedElement = e.target;
+    const value = e.target.value as SchoolType;
+    if (!schoolType.includes(value)) {
+      const selectedTypes = [...schoolType, value];
+
+      setSchoolType(selectedTypes);
+    } else {
+      const selectedType = schoolType.filter((element) => element !== value);
+      setSchoolType(selectedType);
+    }
+  };
+
+  const getSchoolsByType = (schoolTypes: SchoolType[], schools: School[]) => {
+    if (schoolTypes.length === 0) {
+      return schools;
+    }
+
+    return schools.filter((school) => {
+      const schoolTypeSet = new Set(school.school_type);
+      return schoolTypes.some((schoolType) => schoolTypeSet.has(schoolType));
+    });
+  };
+
   const handleSchoolSearch = async (searchTerm: string) => {
     const searchTermToLowerCase = searchTerm.toLowerCase();
-    return props.schools
+    return filteredSchools
       .filter(({ name, zipcode, neighborhood }) => {
         const nameToLowerCase = name.toLowerCase();
         const neighborhoodToLowerCase = neighborhood?.toLowerCase();
@@ -186,13 +217,51 @@ const Map: React.FC<Props> = (props) => {
                 />
                 <ToggleButton isMapView={isMapView} toggleView={setToggle} />
               </div>
+              <div>
+                <label>Show all</label>
+                <input
+                  type="checkbox"
+                  id="all"
+                  name="all"
+                  value="all"
+                  onChange={() => setSchoolType([])}
+                  checked={schoolType.length === 0}
+                />
+                <label>Elementary</label>
+                <input
+                  type="checkbox"
+                  id="elementary"
+                  name="elementary"
+                  value={SchoolType.elementary}
+                  onChange={handleSchoolTypeChange}
+                  checked={schoolType.includes(SchoolType.elementary)}
+                />
+                <label>Middle</label>
+                <input
+                  type="checkbox"
+                  id="middle"
+                  name="middle"
+                  value={SchoolType.middle}
+                  onChange={handleSchoolTypeChange}
+                  checked={schoolType.includes(SchoolType.middle)}
+                />
+                <label>High</label>
+                <input
+                  type="checkbox"
+                  id="high"
+                  name="high"
+                  value={SchoolType.high}
+                  onChange={handleSchoolTypeChange}
+                  checked={schoolType.includes(SchoolType.high)}
+                />
+              </div>
               <div className="h-full w-full overflow-auto ">
                 {isMapView ? (
                   <>
                     <MapboxMap
                       setSelectedSchool={setSelectedSchool}
                       selectedSchool={selectedSchool}
-                      schools={props.schools}
+                      schools={filteredSchools}
                     />
                     <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
                       <div className="align-center flex flex-col items-center gap-0 text-center">
@@ -207,7 +276,7 @@ const Map: React.FC<Props> = (props) => {
                   <MapList
                     setSelectedSchool={setSelectedSchool}
                     selectedSchool={selectedSchool}
-                    schools={props.schools}
+                    schools={filteredSchools}
                     onModalOpen={openModal}
                   />
                 )}
