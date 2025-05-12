@@ -14,6 +14,7 @@ import HighPriorityModal from "@/components/HighPriorityModal";
 import { useMapContext } from "../contexts/MapContext";
 import SEO from "@/components/SEO";
 import { SchoolType } from "@prisma/client";
+import FilterBySchoolType from "../components/FilterBySchoolType";
 
 export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
@@ -37,12 +38,14 @@ const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
     useMapContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [schoolType, setSchoolType] = useState<SchoolType[]>([]);
+  const [selectedSchoolTypes, setSelectedSchoolTypes] = useState<SchoolType[]>(
+    [],
+  );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
 
   useEffect(() => {
-    setFilteredSchools(getSchoolsByType(schoolType, props.schools));
-  }, [schoolType, props.schools]);
+    setFilteredSchools(getSchoolsByType(selectedSchoolTypes, props.schools));
+  }, [selectedSchoolTypes, props.schools]);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -62,16 +65,19 @@ const Map: React.FC<Props> = (props) => {
     e.stopPropagation();
   };
 
-  const handleSchoolTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedElement = e.target;
+  const handleSchoolTypeSelection = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const value = e.target.value as SchoolType;
-    if (!schoolType.includes(value)) {
-      const selectedTypes = [...schoolType, value];
+    if (!selectedSchoolTypes.includes(value)) {
+      const selectedTypes = [...selectedSchoolTypes, value];
 
-      setSchoolType(selectedTypes);
+      setSelectedSchoolTypes(selectedTypes);
     } else {
-      const selectedType = schoolType.filter((element) => element !== value);
-      setSchoolType(selectedType);
+      const selectedType = selectedSchoolTypes.filter(
+        (element) => element !== value,
+      );
+      setSelectedSchoolTypes(selectedType);
     }
   };
 
@@ -217,44 +223,11 @@ const Map: React.FC<Props> = (props) => {
                 />
                 <ToggleButton isMapView={isMapView} toggleView={setToggle} />
               </div>
-              <div>
-                <label>Show all</label>
-                <input
-                  type="checkbox"
-                  id="all"
-                  name="all"
-                  value="all"
-                  onChange={() => setSchoolType([])}
-                  checked={schoolType.length === 0}
-                />
-                <label>Elementary</label>
-                <input
-                  type="checkbox"
-                  id="elementary"
-                  name="elementary"
-                  value={SchoolType.elementary}
-                  onChange={handleSchoolTypeChange}
-                  checked={schoolType.includes(SchoolType.elementary)}
-                />
-                <label>Middle</label>
-                <input
-                  type="checkbox"
-                  id="middle"
-                  name="middle"
-                  value={SchoolType.middle}
-                  onChange={handleSchoolTypeChange}
-                  checked={schoolType.includes(SchoolType.middle)}
-                />
-                <label>High</label>
-                <input
-                  type="checkbox"
-                  id="high"
-                  name="high"
-                  value={SchoolType.high}
-                  onChange={handleSchoolTypeChange}
-                  checked={schoolType.includes(SchoolType.high)}
-                />
-              </div>
+              <FilterBySchoolType
+                selectedSchoolTypes={selectedSchoolTypes}
+                setSelectedSchoolTypes={setSelectedSchoolTypes}
+                handleSchoolTypeSelection={handleSchoolTypeSelection}
+              />
               <div className="h-full w-full overflow-auto ">
                 {isMapView ? (
                   <>
