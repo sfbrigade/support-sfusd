@@ -12,9 +12,11 @@ export default function FilterBySchoolType({
   handleSchoolTypeSelection,
 }: FilterBySchoolTypeProps) {
   return (
-    <div>
-      <div>
-        <label>Show all</label>
+    <div className="flex justify-center gap-4">
+      <div
+        className={`flex justify-center gap-1 rounded-md p-1  ${selectedSchoolTypes.length === 0 ? "bg-[#D7F1FF]" : ""}`}
+      >
+        <label>Show All</label>
         <input
           type="checkbox"
           id="all"
@@ -22,7 +24,12 @@ export default function FilterBySchoolType({
           value="all"
           onChange={() => setSelectedSchoolTypes([])}
           checked={selectedSchoolTypes.length === 0}
+          className="border-black bg-transparent "
         />
+      </div>
+      <div
+        className={`flex justify-center gap-1 rounded-md p-1 ${selectedSchoolTypes.includes(SchoolType.elementary) ? "bg-[#D7F1FF]" : ""}`}
+      >
         <label>Elementary</label>
         <input
           type="checkbox"
@@ -31,7 +38,12 @@ export default function FilterBySchoolType({
           value={SchoolType.elementary}
           onChange={handleSchoolTypeSelection}
           checked={selectedSchoolTypes.includes(SchoolType.elementary)}
+          className="border-black bg-transparent "
         />
+      </div>
+      <div
+        className={`flex justify-center gap-1 rounded-md p-1 ${selectedSchoolTypes.includes(SchoolType.middle) ? "bg-[#D7F1FF]" : ""}`}
+      >
         <label>Middle</label>
         <input
           type="checkbox"
@@ -40,7 +52,12 @@ export default function FilterBySchoolType({
           value={SchoolType.middle}
           onChange={handleSchoolTypeSelection}
           checked={selectedSchoolTypes.includes(SchoolType.middle)}
+          className="border-black bg-transparent "
         />
+      </div>
+      <div
+        className={`flex justify-center gap-1 rounded-md p-1 ${selectedSchoolTypes.includes(SchoolType.high) ? "bg-[#D7F1FF]" : ""}`}
+      >
         <label>High</label>
         <input
           type="checkbox"
@@ -49,6 +66,7 @@ export default function FilterBySchoolType({
           value={SchoolType.high}
           onChange={handleSchoolTypeSelection}
           checked={selectedSchoolTypes.includes(SchoolType.high)}
+          className="border-black bg-transparent"
         />
       </div>
     </div>

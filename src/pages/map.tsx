@@ -176,39 +176,83 @@ const Map: React.FC<Props> = (props) => {
                   </div>
                 ) : (
                   <>
-                    <div className="gap flex w-3/4 flex-col items-center gap-12">
-                      <Image
-                        src="/map-school-logo.png"
-                        alt="Homepage Background"
-                        className="hidden w-1/2 md:inline-block"
-                        width={200}
-                        height={200}
-                      />
-                      <div className="align-center flex flex-col items-center gap-4 text-center">
-                        <h1 className="text-2xl font-medium">
-                          {schoolCardPlaceholderTitle}
-                        </h1>
-                        <p className="md:text-lg">
-                          {schoolCardPlaceholderText}
-                        </p>
+                    <div className="flex flex-col gap-20 px-5">
+                      <div className="flex w-full flex-col gap-4">
+                        <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
+                          <ToggleButton
+                            isMapView={isMapView}
+                            toggleView={setToggle}
+                          />
+                        </div>
+                        <SearchBar
+                          onItemSelect={itemSelect}
+                          onSearch={handleSchoolSearch}
+                        />
+                        <div className=" flex w-full flex-1 items-center">
+                          <FilterBySchoolType
+                            selectedSchoolTypes={selectedSchoolTypes}
+                            setSelectedSchoolTypes={setSelectedSchoolTypes}
+                            handleSchoolTypeSelection={
+                              handleSchoolTypeSelection
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div className="flex w-full flex-col items-center gap-12">
+                        <Image
+                          src="/map-school-logo.png"
+                          alt="Homepage Background"
+                          className="hidden w-1/2 md:inline-block"
+                          width={200}
+                          height={200}
+                        />
+                        <div className="align-center flex flex-col items-center gap-4 text-center">
+                          <h1 className="text-2xl font-medium">
+                            {schoolCardPlaceholderTitle}
+                          </h1>
+                          <p className="md:text-lg">
+                            {schoolCardPlaceholderText}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </>
                 )
               ) : (
-                <div className="gap flex w-3/4 flex-col items-center gap-12">
-                  <Image
-                    src="/map-school-logo.png"
-                    alt="Homepage Background"
-                    className="w-1/2"
-                    width={200}
-                    height={200}
-                  />
-                  <div className="align-center flex flex-col items-center gap-4 text-center">
-                    <h1 className="text-2xl font-medium">
-                      {schoolCardPlaceholderTitle}
-                    </h1>
-                    <p className="md:text-lg">{schoolCardPlaceholderText}</p>
+                <div className="flex flex-col gap-20 px-5">
+                  <div className="flex w-full flex-col gap-4">
+                    <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
+                      <ToggleButton
+                        isMapView={isMapView}
+                        toggleView={setToggle}
+                      />
+                    </div>
+                    <SearchBar
+                      onItemSelect={itemSelect}
+                      onSearch={handleSchoolSearch}
+                    />
+                    <div className=" flex w-full flex-1 items-center">
+                      <FilterBySchoolType
+                        selectedSchoolTypes={selectedSchoolTypes}
+                        setSelectedSchoolTypes={setSelectedSchoolTypes}
+                        handleSchoolTypeSelection={handleSchoolTypeSelection}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex w-full flex-col items-center gap-12">
+                    <Image
+                      src="/map-school-logo.png"
+                      alt="Homepage Background"
+                      className="w-1/2"
+                      width={200}
+                      height={200}
+                    />
+                    <div className="align-center flex flex-col items-center gap-4 text-center">
+                      <h1 className="text-2xl font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p className="md:text-lg">{schoolCardPlaceholderText}</p>
+                    </div>
                   </div>
                 </div>
               )}
@@ -216,18 +260,22 @@ const Map: React.FC<Props> = (props) => {
 
             {/* Map or List View */}
             <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
-              <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
+              <div className="gap 1 flex flex-col gap-4">
+                <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
+                  <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+                </div>
                 <SearchBar
                   onItemSelect={itemSelect}
                   onSearch={handleSchoolSearch}
                 />
-                <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+                <div className=" flex w-full ">
+                  <FilterBySchoolType
+                    selectedSchoolTypes={selectedSchoolTypes}
+                    setSelectedSchoolTypes={setSelectedSchoolTypes}
+                    handleSchoolTypeSelection={handleSchoolTypeSelection}
+                  />
+                </div>
               </div>
-              <FilterBySchoolType
-                selectedSchoolTypes={selectedSchoolTypes}
-                setSelectedSchoolTypes={setSelectedSchoolTypes}
-                handleSchoolTypeSelection={handleSchoolTypeSelection}
-              />
               <div className="h-full w-full overflow-auto ">
                 {isMapView ? (
                   <>
