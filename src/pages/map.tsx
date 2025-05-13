@@ -260,48 +260,30 @@ const Map: React.FC<Props> = (props) => {
 
             {/* Map or List View */}
             <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
-              <div className="gap 1 flex flex-col gap-4">
-                <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
-                  <ToggleButton isMapView={isMapView} toggleView={setToggle} />
-                </div>
-                <SearchBar
-                  onItemSelect={itemSelect}
-                  onSearch={handleSchoolSearch}
-                />
-                <div className=" flex w-full ">
-                  <FilterBySchoolType
-                    selectedSchoolTypes={selectedSchoolTypes}
-                    setSelectedSchoolTypes={setSelectedSchoolTypes}
-                    handleSchoolTypeSelection={handleSchoolTypeSelection}
-                  />
-                </div>
-              </div>
-              <div className="h-full w-full overflow-auto ">
-                {isMapView ? (
-                  <>
-                    <MapboxMap
-                      setSelectedSchool={setSelectedSchool}
-                      selectedSchool={selectedSchool}
-                      schools={filteredSchools}
-                    />
-                    <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
-                      <div className="align-center flex flex-col items-center gap-0 text-center">
-                        <h1 className="text-lg font-medium">
-                          {schoolCardPlaceholderTitle}
-                        </h1>
-                        <p className="text-md">{schoolCardPlaceholderText}</p>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <MapList
+              {isMapView ? (
+                <>
+                  <MapboxMap
                     setSelectedSchool={setSelectedSchool}
                     selectedSchool={selectedSchool}
                     schools={filteredSchools}
-                    onModalOpen={openModal}
                   />
-                )}
-              </div>
+                  <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
+                    <div className="align-center flex flex-col items-center gap-0 text-center">
+                      <h1 className="text-lg font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p className="text-md">{schoolCardPlaceholderText}</p>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <MapList
+                  setSelectedSchool={setSelectedSchool}
+                  selectedSchool={selectedSchool}
+                  schools={filteredSchools}
+                  onModalOpen={openModal}
+                />
+              )}
             </div>
           </div>
         </div>
