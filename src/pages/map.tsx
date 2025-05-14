@@ -13,6 +13,8 @@ import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
 import { useMapContext } from "../contexts/MapContext";
 import SEO from "@/components/SEO";
+import { SchoolType } from "@prisma/client";
+import FilterBySchoolType from "../components/FilterBySchoolType";
 
 export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
@@ -36,6 +38,14 @@ const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
     useMapContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedSchoolTypes, setSelectedSchoolTypes] = useState<SchoolType[]>(
+    [],
+  );
+  const [filteredSchools, setFilteredSchools] = useState(props.schools);
+
+  useEffect(() => {
+    setFilteredSchools(getSchoolsByType(selectedSchoolTypes, props.schools));
+  }, [selectedSchoolTypes, props.schools]);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -55,9 +65,36 @@ const Map: React.FC<Props> = (props) => {
     e.stopPropagation();
   };
 
+  const handleSchoolTypeSelection = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const value = e.target.value as SchoolType;
+    if (!selectedSchoolTypes.includes(value)) {
+      const selectedTypes = [...selectedSchoolTypes, value];
+
+      setSelectedSchoolTypes(selectedTypes);
+    } else {
+      const selectedType = selectedSchoolTypes.filter(
+        (element) => element !== value,
+      );
+      setSelectedSchoolTypes(selectedType);
+    }
+  };
+
+  const getSchoolsByType = (schoolTypes: SchoolType[], schools: School[]) => {
+    if (schoolTypes.length === 0) {
+      return schools;
+    }
+
+    return schools.filter((school) => {
+      const schoolTypeSet = new Set(school.school_type);
+      return schoolTypes.some((schoolType) => schoolTypeSet.has(schoolType));
+    });
+  };
+
   const handleSchoolSearch = async (searchTerm: string) => {
     const searchTermToLowerCase = searchTerm.toLowerCase();
-    return props.schools
+    return filteredSchools
       .filter(({ name, zipcode, neighborhood }) => {
         const nameToLowerCase = name.toLowerCase();
         const neighborhoodToLowerCase = neighborhood?.toLowerCase();
@@ -139,39 +176,43 @@ const Map: React.FC<Props> = (props) => {
                   </div>
                 ) : (
                   <>
-                    <div className="gap flex w-3/4 flex-col items-center gap-12">
-                      <Image
-                        src="/map-school-logo.png"
-                        alt="Homepage Background"
-                        className="hidden w-1/2 md:inline-block"
-                        width={200}
-                        height={200}
-                      />
-                      <div className="align-center flex flex-col items-center gap-4 text-center">
-                        <h1 className="text-2xl font-medium">
-                          {schoolCardPlaceholderTitle}
-                        </h1>
-                        <p className="md:text-lg">
-                          {schoolCardPlaceholderText}
-                        </p>
+                    <div className="flex flex-col gap-20 px-5">
+                      <div className="flex w-full flex-col items-center gap-12">
+                        <Image
+                          src="/map-school-logo.png"
+                          alt="Homepage Background"
+                          className="hidden w-1/2 md:inline-block"
+                          width={200}
+                          height={200}
+                        />
+                        <div className="align-center flex flex-col items-center gap-4 text-center">
+                          <h1 className="text-2xl font-medium">
+                            {schoolCardPlaceholderTitle}
+                          </h1>
+                          <p className="md:text-lg">
+                            {schoolCardPlaceholderText}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </>
                 )
               ) : (
-                <div className="gap flex w-3/4 flex-col items-center gap-12">
-                  <Image
-                    src="/map-school-logo.png"
-                    alt="Homepage Background"
-                    className="w-1/2"
-                    width={200}
-                    height={200}
-                  />
-                  <div className="align-center flex flex-col items-center gap-4 text-center">
-                    <h1 className="text-2xl font-medium">
-                      {schoolCardPlaceholderTitle}
-                    </h1>
-                    <p className="md:text-lg">{schoolCardPlaceholderText}</p>
+                <div className="flex flex-col gap-20 px-5">
+                  <div className="flex w-full flex-col items-center gap-12">
+                    <Image
+                      src="/map-school-logo.png"
+                      alt="Homepage Background"
+                      className="w-1/2"
+                      width={200}
+                      height={200}
+                    />
+                    <div className="align-center flex flex-col items-center gap-4 text-center">
+                      <h1 className="text-2xl font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p className="md:text-lg">{schoolCardPlaceholderText}</p>
+                    </div>
                   </div>
                 </div>
               )}
@@ -180,38 +221,47 @@ const Map: React.FC<Props> = (props) => {
             {/* Map or List View */}
             <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
               <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
+                <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+              </div>
+              <div className="max-md:hidden">
                 <SearchBar
                   onItemSelect={itemSelect}
                   onSearch={handleSchoolSearch}
                 />
-                <ToggleButton isMapView={isMapView} toggleView={setToggle} />
               </div>
-              <div className="h-full w-full overflow-auto ">
-                {isMapView ? (
-                  <>
-                    <MapboxMap
-                      setSelectedSchool={setSelectedSchool}
-                      selectedSchool={selectedSchool}
-                      schools={props.schools}
-                    />
-                    <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
-                      <div className="align-center flex flex-col items-center gap-0 text-center">
-                        <h1 className="text-lg font-medium">
-                          {schoolCardPlaceholderTitle}
-                        </h1>
-                        <p className="text-md">{schoolCardPlaceholderText}</p>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <MapList
+
+              <div>
+                <FilterBySchoolType
+                  selectedSchoolTypes={selectedSchoolTypes}
+                  setSelectedSchoolTypes={setSelectedSchoolTypes}
+                  handleSchoolTypeSelection={handleSchoolTypeSelection}
+                />
+              </div>
+
+              {isMapView ? (
+                <>
+                  <MapboxMap
                     setSelectedSchool={setSelectedSchool}
                     selectedSchool={selectedSchool}
-                    schools={props.schools}
-                    onModalOpen={openModal}
+                    schools={filteredSchools}
                   />
-                )}
-              </div>
+                  <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
+                    <div className="align-center flex flex-col items-center gap-0 text-center">
+                      <h1 className="text-lg font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p className="text-md">{schoolCardPlaceholderText}</p>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <MapList
+                  setSelectedSchool={setSelectedSchool}
+                  selectedSchool={selectedSchool}
+                  schools={filteredSchools}
+                  onModalOpen={openModal}
+                />
+              )}
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { SchoolType } from "@prisma/client";
+
 export interface School {
   stub: string;
   name: string;
@@ -23,6 +25,7 @@ export interface School {
   metrics: Metric[];
   programs: Program[];
   zipcode?: string;
+  school_type: SchoolType[];
 }
 
 export interface Metric {
