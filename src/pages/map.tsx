@@ -43,7 +43,7 @@ const Map: React.FC<Props> = (props) => {
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   useEffect(() => {
-    const storedTypes = localStorage.getItem("selectedSchoolTypes");
+    const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
     if (storedTypes) {
       setSelectedSchoolTypes(JSON.parse(storedTypes) as SchoolType[]);
     }
@@ -80,7 +80,7 @@ const Map: React.FC<Props> = (props) => {
 
     setSelectedSchoolTypes(updatedTypes);
 
-    localStorage.setItem("selectedSchoolTypes", JSON.stringify(updatedTypes));
+    sessionStorage.setItem("selectedSchoolTypes", JSON.stringify(updatedTypes));
   };
 
   const getSchoolsByType = (schoolTypes: SchoolType[], schools: School[]) => {
