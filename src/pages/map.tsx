@@ -42,7 +42,12 @@ const Map: React.FC<Props> = (props) => {
     [],
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
-
+  useEffect(() => {
+    const storedTypes = localStorage.getItem("selectedSchoolTypes");
+    if (storedTypes) {
+      setSelectedSchoolTypes(JSON.parse(storedTypes) as SchoolType[]);
+    }
+  }, []);
   useEffect(() => {
     setFilteredSchools(getSchoolsByType(selectedSchoolTypes, props.schools));
   }, [selectedSchoolTypes, props.schools]);
