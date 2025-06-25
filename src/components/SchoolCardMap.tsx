@@ -87,10 +87,13 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           href={"/school?name=" + encodeURIComponent(school.name)}
           className="hidden md:inline"
         >
-          <SchoolImage src={`/school_img/${school.img}`} alt={school.name} />
+          <SchoolImage
+            src={`/school-images/full/${school.stub}.webp`}
+            alt={school.name}
+          />
         </Link>
         <SchoolImage
-          src={`/school_img/${school.img}`}
+          src={`/school-images/full/${school.stub}.webp`}
           alt={school.name}
           className="inline-block md:hidden"
         />

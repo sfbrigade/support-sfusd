@@ -12,11 +12,11 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import SEO from "@/components/SEO";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const schools = await prisma.school.findMany({
     include: {
-      profile: true,
       metrics: true,
       programs: true,
     },
@@ -37,54 +37,58 @@ const Profile: React.FC<Props> = (props) => {
   return (
     <>
       {school && (
-        <div>
-          <div className="relative w-full">
-            <Image
-              className="relative h-64 w-full object-cover max-md:h-48"
-              src={"/school_img/" + school.img}
-              alt={school.name + " image"}
-              width={2000}
-              height={2000}
-              placeholder="blur"
-              blurDataURL={blurDataURL}
-            />
+        <>
+          <SEO
+            title={`Support SF Schools - ${school.name} Profile`}
+            description={`Support SF Schools encourages the community to support ${school.name}. ${school.about} Learn more about ${school.name} and their available donation and volunteer opportunities.`}
+          />
+          <div>
+            <div className="relative w-full">
+              <Image
+                className="relative h-64 w-full object-cover max-md:h-48"
+                src={`/school-images/full/${school.stub}.webp`}
+                alt={school.name + " image"}
+                width={800}
+                height={400}
+                placeholder="blur"
+                blurDataURL={blurDataURL}
+              />
+            </div>
+            <div className="relative mx-auto flex flex-col gap-10 p-6 pt-2 md:py-20 lg:w-4/5 2xl:w-2/3">
+              <Image
+                className="z-1 absolute -top-20 h-32 w-32 rounded bg-white drop-shadow-lg md:-top-32 md:h-44 md:w-44"
+                src={`/school-images/logo/${school.stub}.webp`}
+                alt={school.name + " logo"}
+                width={400}
+                height={400}
+                placeholder="blur"
+                blurDataURL={blurDataURL}
+              />
+              <SchoolHeader school={school} />
+              <SchoolAbout school={school} />
+              {school.metrics.length ? (
+                <SchoolStudentOutcomes school={school} />
+              ) : (
+                ""
+              )}
+              <SchoolVolunteer school={school} />
+              <SchoolDonation school={school} />
+              {school.testimonial && <SchoolTestimonial school={school} />}
+              {school.noteable_video && (
+                <iframe
+                  height="340"
+                  src={school.noteable_video}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full rounded-lg"
+                ></iframe>
+              )}
+            </div>
           </div>
-          <div className="relative mx-auto flex flex-col gap-10 p-6 pt-2 md:py-20 lg:w-4/5 2xl:w-2/3">
-            <Image
-              className="z-1 absolute -top-20 h-32 w-32 rounded bg-white drop-shadow-lg md:-top-32 md:h-44 md:w-44"
-              src={"/school_img/logo/" + school.img}
-              alt={school.name + " logo"}
-              width={1000}
-              height={1000}
-              placeholder="blur"
-              blurDataURL={blurDataURL}
-            />
-            <SchoolHeader school={school} />
-            <SchoolAbout school={school} />
-            {school.metrics.length ? (
-              <SchoolStudentOutcomes school={school} />
-            ) : (
-              ""
-            )}
-            <SchoolVolunteer school={school} />
-            <SchoolDonation school={school} />
-            {school.profile?.testimonial && (
-              <SchoolTestimonial school={school} />
-            )}
-            {school.profile?.noteable_video && (
-              <iframe
-                height="340"
-                src={school.profile?.noteable_video}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full rounded-lg"
-              ></iframe>
-            )}
-          </div>
-        </div>
+        </>
       )}
     </>
   );

@@ -40,17 +40,17 @@ const MapListCard = ({
   const { selectedSchool } = useMapContext();
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const { img, name, neighborhood } = school;
+  const { stub, name, neighborhood } = school;
 
-  const students = school.metrics.find(
-    (metric) => metric.name == "Students Enrolled",
-  );
-  const frl = school.metrics.find(
-    (metric) => metric.name == "Free/Reduced Lunch",
-  );
-  const ell = school.metrics.find(
-    (metric) => metric.name == "English Language Learners",
-  );
+  // const students = school.metrics.find(
+  //   (metric) => metric.name == "Students Enrolled",
+  // );
+  // const frl = school.metrics.find(
+  //   (metric) => metric.name == "Free/Reduced Lunch",
+  // );
+  // const ell = school.metrics.find(
+  //   (metric) => metric.name == "English Language Learners",
+  // );
 
   const learnMoreRef = useRef<HTMLAnchorElement>(null);
 
@@ -76,10 +76,10 @@ const MapListCard = ({
   }
 
   useEffect(() => {
-    if (selectedSchool && selectedSchool.id === school.id) {
+    if (selectedSchool && selectedSchool.stub === school.stub) {
       cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
-  }, [selectedSchool, school.id]);
+  }, [selectedSchool, school.stub]);
 
   return (
     <div
@@ -128,7 +128,7 @@ const MapListCard = ({
         }`}
       >
         <Image
-          src={`/school_img/${img}`}
+          src={`/school-images/full/${stub}.webp`}
           placeholder="blur"
           blurDataURL={blurDataURL}
           alt="School Image"

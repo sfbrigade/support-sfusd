@@ -7,8 +7,9 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: supersecret
-      POSTGRES_DB: mydb
+      # defaults should be overridden in .env file
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-supersecret}
+      POSTGRES_DB: ${DB_NAME:-mydb}
     volumes:
       - sfusd-data:/var/lib/postgresql/data
 

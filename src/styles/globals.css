@@ -7,9 +7,6 @@ body * {
   font-family: var(--font-lato), sans-serif;
 }
 
-body {
-}
-
 h1,
 h2,
 h3,
@@ -32,8 +29,8 @@ h6 * {
 .marker {
   background-image: url("/marker.svg");
   background-size: cover;
-  width: 45px;
-  height: 45px;
+  width: var(--marker-size, 20px); /* Default size at reference zoom */
+  height: var(--marker-size, 20px);
   border-radius: 0;
   cursor: pointer;
 }
@@ -59,8 +56,8 @@ h6 * {
 .marker-selected {
   background-image: url("/marker_selected.svg");
   background-size: cover;
-  width: 45px;
-  height: 45px;
+  width: var(--marker-selected-size, 30px); /* Default size at reference zoom */
+  height: var(--marker-selected-size, 30px);
   border-radius: 0;
   cursor: pointer;
   outline: none;
@@ -133,4 +130,9 @@ input:checked + .slider {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
+}
+@media (min-width: 300px) and (max-width: 1150px) {
+  .placeholder-small::placeholder {
+    font-size: 0.81rem;
+  }
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import ContactUs from "../components/ContactUs";
 import { useState } from "react";
 import { blurDataURL } from "@/lib/imageConfig";
+import SEO from "@/components/SEO";
 
 const member_list = [
   {
@@ -85,133 +86,144 @@ const About = () => {
   const handleClose = () => setShowContactForm(false);
 
   return (
-    <main>
-      <div className="flex flex-col items-center gap-8 bg-[#88B6FF] py-8 md:px-36">
-        <h1 className="text-center text-4xl font-medium max-lg:text-3xl max-md:text-2xl">
-          Hello! We&apos;re Support SF Schools
-        </h1>
-        <Image
-          src="/about-graphic.png"
-          alt="Arrow Icon"
-          className="w-10/12 lg:w-6/12"
-          width={240}
-          height={240}
-        />
-      </div>
-      <div className="mx-auto flex max-md:px-8 md:w-5/6 lg:w-4/6">
-        <div className="flex flex-col items-center gap-4 py-8 md:py-12">
-          <div className="flex flex-col gap-4 max-md:text-sm">
-            <p>
-              Support SF Schools is run by an all-volunteer team at{" "}
-              <a
-                href="https://www.sfcivictech.org/about"
-                target="_blank"
-                className="text-blue-500 hover:underline"
-              >
-                SF Civic Tech
-              </a>{" "}
-              (formerly known as Code for San Francisco). Our diverse group of
-              teachers, designers, engineers, researchers, and curious community
-              members is building this website to make it easier for people who
-              live, work, and hang out in San Francisco to support our public
-              schools.
-            </p>
-            <p>
-              We are focused on building strong communities and neighborhoods,
-              where people who live nearby a school can support and be part of
-              the school community, even if they aren’t parents of current
-              students. We have talked to hundreds of people who live in San
-              Francisco, who are willing to volunteer and support local schools,
-              and who wish they were more connected to the schools in their
-              neighborhoods.
-            </p>
-            <p>
-              People who work in tech and want to volunteer in STEM education.
-              Former teachers who are trying out new careers but still looking
-              to feel a connection to local schools. Parents who still live in
-              the neighborhood after their kids graduated and have free time to
-              volunteer. Alumni who are back in San Francisco and want to
-              reconnect with schools. People from all backgrounds who believe in
-              the power of education to change lives. Support SFUSD is designed
-              to bring them closer to the schools in their neighborhood, while
-              helping meet school needs.
-            </p>
-            <p>
-              This website is in beta and is a work in progress. Our beta
-              focuses on connecting folks to the seventeen public high schools
-              in the school district. We are open to feedback and always looking
-              for volunteers to join our effort. We meet Wednesday evenings on
-              Zoom.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-8">
-            {member_list.map((member) => (
-              <a
-                href={member.url}
-                target="_blank"
-                className={
-                  "group flex justify-center" +
-                  (!member.url ? " cursor-default" : "")
-                }
-                key={member.name}
-                onClick={(e) => {
-                  if (!member.url) {
-                    e.preventDefault();
-                  }
-                }}
-              >
-                <div className="w-36 text-sm">
-                  {member.img ? (
-                    <Image
-                      src={member.img}
-                      alt={`${member.name} photo`}
-                      className={
-                        "mb-2 rounded-lg rounded-tl-[36px]" +
-                        (member.url
-                          ? " outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2 group-hover:outline-black"
-                          : "")
-                      }
-                      width={1000}
-                      height={1000}
-                      placeholder="blur"
-                      blurDataURL={blurDataURL}
-                    />
-                  ) : (
-                    <div className="mb-2 aspect-square w-full rounded-lg rounded-tl-[36px] bg-black"></div>
-                  )}
-
-                  <p
-                    className={
-                      "font-bold " + (member.url ? "group-hover:underline" : "")
-                    }
-                  >
-                    {member.name}
-                  </p>
-                  <p className="font-medium">{member.role}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-          <div>
-            <h2 className="text-center text-lg font-medium text-[#8338EC] md:text-xl">
-              With thanks to the following folks for their past contribution
-            </h2>
-            <p className="text-center font-bold text-[#3A86FF] max-md:text-sm">
-              Hamilton Truong, Megan Vyenielo, Louis Kim, Joshua Lee, Bruna Lee,
-              PJ Ekhator, Bai Pai, Liv Cornfield, Kimberly Kono
-            </p>
-          </div>
-          <button
-            onClick={handleOpen}
-            className="text-blue-500 hover:underline"
-          >
-            Contact Us
-          </button>
-          {showContactForm && <ContactUs handleClose={handleClose} />}
+    <>
+      <SEO
+        title="Support SF Schools - About"
+        description="Support SF Schools is a diverse group of
+                teachers, designers, engineers, researchers, and curious
+                community members dedicated to making it easier for
+                people who live, work, and hang out in San Francisco to support
+                our public schools."
+      />
+      <main>
+        <div className="flex flex-col items-center gap-8 bg-[#88B6FF] py-8 md:px-36">
+          <h1 className="text-center text-4xl font-medium max-lg:text-3xl max-md:text-2xl">
+            Hello! We&apos;re Support SF Schools
+          </h1>
+          <Image
+            src="/about-graphic.png"
+            alt="Arrow Icon"
+            className="w-10/12 lg:w-6/12"
+            width={240}
+            height={240}
+          />
         </div>
-      </div>
-    </main>
+        <div className="mx-auto flex max-md:px-8 md:w-5/6 lg:w-4/6">
+          <div className="flex flex-col items-center gap-4 py-8 md:py-12">
+            <div className="flex flex-col gap-4 max-md:text-sm">
+              <p>
+                Support SF Schools is run by an all-volunteer team at{" "}
+                <a
+                  href="https://www.sfcivictech.org/about"
+                  target="_blank"
+                  className="text-blue-500 hover:underline"
+                >
+                  SF Civic Tech
+                </a>{" "}
+                (formerly known as Code for San Francisco). Our diverse group of
+                teachers, designers, engineers, researchers, and curious
+                community members is building this website to make it easier for
+                people who live, work, and hang out in San Francisco to support
+                our public schools.
+              </p>
+              <p>
+                We are focused on building strong communities and neighborhoods,
+                where people who live nearby a school can support and be part of
+                the school community, even if they aren’t parents of current
+                students. We have talked to hundreds of people who live in San
+                Francisco, who are willing to volunteer and support local
+                schools, and who wish they were more connected to the schools in
+                their neighborhoods.
+              </p>
+              <p>
+                People who work in tech and want to volunteer in STEM education.
+                Former teachers who are trying out new careers but still looking
+                to feel a connection to local schools. Parents who still live in
+                the neighborhood after their kids graduated and have free time
+                to volunteer. Alumni who are back in San Francisco and want to
+                reconnect with schools. People from all backgrounds who believe
+                in the power of education to change lives. Support SFUSD is
+                designed to bring them closer to the schools in their
+                neighborhood, while helping meet school needs.
+              </p>
+              <p>
+                This website is in beta and is a work in progress. Our beta
+                focuses on connecting folks to the seventeen public high schools
+                in the school district. We are open to feedback and always
+                looking for volunteers to join our effort. We meet Wednesday
+                evenings on Zoom.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-8">
+              {member_list.map((member) => (
+                <a
+                  href={member.url}
+                  target="_blank"
+                  className={
+                    "group flex justify-center" +
+                    (!member.url ? " cursor-default" : "")
+                  }
+                  key={member.name}
+                  onClick={(e) => {
+                    if (!member.url) {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  <div className="w-36 text-sm">
+                    {member.img ? (
+                      <Image
+                        src={member.img}
+                        alt={`${member.name} photo`}
+                        className={
+                          "mb-2 rounded-lg rounded-tl-[36px]" +
+                          (member.url
+                            ? " outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2 group-hover:outline-black"
+                            : "")
+                        }
+                        width={1000}
+                        height={1000}
+                        placeholder="blur"
+                        blurDataURL={blurDataURL}
+                      />
+                    ) : (
+                      <div className="mb-2 aspect-square w-full rounded-lg rounded-tl-[36px] bg-black"></div>
+                    )}
+
+                    <p
+                      className={
+                        "font-bold " +
+                        (member.url ? "group-hover:underline" : "")
+                      }
+                    >
+                      {member.name}
+                    </p>
+                    <p className="font-medium">{member.role}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div>
+              <h2 className="text-center text-lg font-medium text-[#8338EC] md:text-xl">
+                With thanks to the following folks for their past contribution
+              </h2>
+              <p className="text-center font-bold text-[#3A86FF] max-md:text-sm">
+                Hamilton Truong, Megan Vyenielo, Louis Kim, Joshua Lee, Bruna
+                Lee, PJ Ekhator, Bai Pai, Liv Cornfield, Kimberly Kono
+              </p>
+            </div>
+            <button
+              onClick={handleOpen}
+              className="text-blue-500 hover:underline"
+            >
+              Contact Us
+            </button>
+            {showContactForm && <ContactUs handleClose={handleClose} />}
+          </div>
+        </div>
+      </main>
+    </>
   );
 };
 
