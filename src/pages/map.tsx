@@ -46,15 +46,27 @@ const Map: React.FC<Props> = (props) => {
 
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
+    const storedPriority = sessionStorage.getItem("priorityFilter");
     if (storedTypes) {
       setSelectedSchoolTypes(JSON.parse(storedTypes) as SchoolType[]);
     }
+    if (storedPriority) {
+      setPriorityFilter(JSON.parse(storedPriority));
+    }
   }, []);
+
   useEffect(() => {
     setFilteredSchools(
       getSchoolsByType(selectedSchoolTypes, props.schools, priorityFilter),
     );
   }, [selectedSchoolTypes, props.schools, priorityFilter]);
+
+  useEffect(() => {
+    const storedPriority = sessionStorage.getItem("priorityFilter");
+    if (storedPriority) {
+      setPriorityFilter(JSON.parse(storedPriority));
+    }
+  }, []);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -100,6 +112,12 @@ const Map: React.FC<Props> = (props) => {
 
       return matchesSchoolType && matchesPriority;
     });
+  };
+
+  const handlePriorityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const isChecked = e.target.checked;
+    setPriorityFilter(isChecked);
+    sessionStorage.setItem("priorityFilter", JSON.stringify(isChecked));
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
@@ -251,7 +269,7 @@ const Map: React.FC<Props> = (props) => {
                   type="checkbox"
                   id="priority"
                   name="priority"
-                  onChange={(e) => setPriorityFilter(e.target.checked)}
+                  onChange={handlePriorityChange}
                   checked={priorityFilter}
                   className="border-black bg-transparent"
                 />
