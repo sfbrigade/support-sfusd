@@ -92,9 +92,6 @@ const Map: React.FC<Props> = (props) => {
     schools: School[],
     priorityFilter: boolean,
   ) => {
-    if (schoolTypes.length === 0) {
-      return schools;
-    }
     return schools.filter((school) => {
       const matchesSchoolType =
         schoolTypes.length === 0 ||
