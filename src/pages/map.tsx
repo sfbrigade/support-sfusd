@@ -258,21 +258,29 @@ const Map: React.FC<Props> = (props) => {
                 />
               </div>
 
-              <div>
+              <div className="flex items-center justify-between gap-4">
                 <FilterBySchoolType
                   selectedSchoolTypes={selectedSchoolTypes}
                   setSelectedSchoolTypes={setSelectedSchoolTypes}
                   handleSchoolTypeSelection={handleSchoolTypeSelection}
                 />
-                <label>Priority</label>
-                <input
-                  type="checkbox"
-                  id="priority"
-                  name="priority"
-                  onChange={handlePriorityChange}
-                  checked={priorityFilter}
-                  className="border-black bg-transparent"
-                />
+                <div className="flex items-center justify-between gap-2">
+                  <Image
+                    alt="High priority icon"
+                    src="/circle_priority.svg"
+                    width={19}
+                    height={20}
+                  ></Image>
+                  <label>Priority</label>
+                  <input
+                    type="checkbox"
+                    id="priority"
+                    name="priority"
+                    onChange={handlePriorityChange}
+                    checked={priorityFilter}
+                    className="border-black bg-transparent accent-orange-500"
+                  />
+                </div>
               </div>
 
               {isMapView ? (
