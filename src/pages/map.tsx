@@ -270,6 +270,11 @@ const Map: React.FC<Props> = (props) => {
                     src="/circle_priority.svg"
                     width={19}
                     height={20}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setModalIsOpen(true);
+                    }}
+                    className="w-fit"
                   ></Image>
                   <label>Priority</label>
                   <input
