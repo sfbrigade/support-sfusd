@@ -42,6 +42,8 @@ const Map: React.FC<Props> = (props) => {
     [],
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
+  const [priorityFilter, setPriorityFilter] = useState(false);
+
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
     if (storedTypes) {
@@ -49,8 +51,10 @@ const Map: React.FC<Props> = (props) => {
     }
   }, []);
   useEffect(() => {
-    setFilteredSchools(getSchoolsByType(selectedSchoolTypes, props.schools));
-  }, [selectedSchoolTypes, props.schools]);
+    setFilteredSchools(
+      getSchoolsByType(selectedSchoolTypes, props.schools, priorityFilter),
+    );
+  }, [selectedSchoolTypes, props.schools, priorityFilter]);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -83,14 +87,21 @@ const Map: React.FC<Props> = (props) => {
     sessionStorage.setItem("selectedSchoolTypes", JSON.stringify(updatedTypes));
   };
 
-  const getSchoolsByType = (schoolTypes: SchoolType[], schools: School[]) => {
+  const getSchoolsByType = (
+    schoolTypes: SchoolType[],
+    schools: School[],
+    priorityFilter: boolean,
+  ) => {
     if (schoolTypes.length === 0) {
       return schools;
     }
-
     return schools.filter((school) => {
-      const schoolTypeSet = new Set(school.school_type);
-      return schoolTypes.some((schoolType) => schoolTypeSet.has(schoolType));
+      const matchesSchoolType =
+        schoolTypes.length === 0 ||
+        schoolTypes.some((type) => school.school_type.includes(type));
+      const matchesPriority = !priorityFilter || school.priority === true;
+
+      return matchesSchoolType && matchesPriority;
     });
   };
 
@@ -237,6 +248,15 @@ const Map: React.FC<Props> = (props) => {
                   selectedSchoolTypes={selectedSchoolTypes}
                   setSelectedSchoolTypes={setSelectedSchoolTypes}
                   handleSchoolTypeSelection={handleSchoolTypeSelection}
+                />
+                <label>Priority</label>
+                <input
+                  type="checkbox"
+                  id="priority"
+                  name="priority"
+                  onChange={(e) => setPriorityFilter(e.target.checked)}
+                  checked={priorityFilter}
+                  className="border-black bg-transparent"
                 />
               </div>
 
