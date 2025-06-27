@@ -248,8 +248,8 @@ const Map: React.FC<Props> = (props) => {
 
             {/* Map or List View */}
             <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
-              <div className="items-center justify-between rounded-md bg-white p-5">
-                <div className="flex  ">
+              <div className="items-center justify-between rounded-xl bg-white p-4">
+                <div className="mb-4 flex">
                   <SearchBar
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
