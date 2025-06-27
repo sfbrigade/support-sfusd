@@ -13,7 +13,7 @@ export default function FilterBySchoolType({
 }: FilterBySchoolTypeProps) {
   return (
     <div className="flex justify-center gap-4">
-      <div className={`flex justify-center gap-1 rounded-md p-1`}>
+      <div className={`flex justify-center gap-2 rounded-md p-1`}>
         <label>Show All</label>
         <input
           type="checkbox"
@@ -25,7 +25,7 @@ export default function FilterBySchoolType({
           className="border-black bg-transparent "
         />
       </div>
-      <div className={`flex justify-center gap-1 rounded-md p-1 `}>
+      <div className={`flex justify-center gap-2 rounded-md p-1 `}>
         <label>Elementary</label>
         <input
           type="checkbox"
@@ -37,7 +37,7 @@ export default function FilterBySchoolType({
           className="border-black bg-transparent "
         />
       </div>
-      <div className={`flex justify-center gap-1 rounded-md p-1 `}>
+      <div className={`flex justify-center gap-2 rounded-md p-1 `}>
         <label>Middle</label>
         <input
           type="checkbox"
@@ -49,7 +49,7 @@ export default function FilterBySchoolType({
           className="border-black bg-transparent "
         />
       </div>
-      <div className={`flex justify-center gap-1 rounded-md p-1 `}>
+      <div className={`flex justify-center gap-2 rounded-md p-1 `}>
         <label>High</label>
         <input
           type="checkbox"
