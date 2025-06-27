@@ -247,44 +247,43 @@ const Map: React.FC<Props> = (props) => {
             </div>
 
             {/* Map or List View */}
-            <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
-              <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
-                <ToggleButton isMapView={isMapView} toggleView={setToggle} />
-              </div>
-              <div className="max-md:hidden">
-                <SearchBar
-                  onItemSelect={itemSelect}
-                  onSearch={handleSchoolSearch}
-                />
-              </div>
-
-              <div className="flex items-center justify-between gap-4">
-                <FilterBySchoolType
-                  selectedSchoolTypes={selectedSchoolTypes}
-                  setSelectedSchoolTypes={setSelectedSchoolTypes}
-                  handleSchoolTypeSelection={handleSchoolTypeSelection}
-                />
-                <div className="flex items-center justify-between gap-2">
-                  <Image
-                    alt="High priority icon"
-                    src="/circle_priority.svg"
-                    width={19}
-                    height={20}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setModalIsOpen(true);
-                    }}
-                    className="w-fit"
-                  ></Image>
-                  <label>Priority</label>
-                  <input
-                    type="checkbox"
-                    id="priority"
-                    name="priority"
-                    onChange={handlePriorityChange}
-                    checked={priorityFilter}
-                    className="border-black bg-transparent accent-orange-500"
+            <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
+              <div className="items-center justify-between rounded-md bg-white p-5">
+                <div className="flex  ">
+                  <SearchBar
+                    onItemSelect={itemSelect}
+                    onSearch={handleSchoolSearch}
                   />
+                  <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+                </div>
+                <div className="flex items-center justify-between gap-4">
+                  <FilterBySchoolType
+                    selectedSchoolTypes={selectedSchoolTypes}
+                    setSelectedSchoolTypes={setSelectedSchoolTypes}
+                    handleSchoolTypeSelection={handleSchoolTypeSelection}
+                  />
+                  <div className="flex items-center justify-between gap-2">
+                    <Image
+                      alt="High priority icon"
+                      src="/circle_priority.svg"
+                      width={19}
+                      height={20}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setModalIsOpen(true);
+                      }}
+                      className="w-fit"
+                    ></Image>
+                    <label>Priority</label>
+                    <input
+                      type="checkbox"
+                      id="priority"
+                      name="priority"
+                      onChange={handlePriorityChange}
+                      checked={priorityFilter}
+                      className="border-black bg-transparent accent-orange-500"
+                    />
+                  </div>
                 </div>
               </div>
 

@@ -45,7 +45,7 @@ export default function SearchBar<DropdownItemType = any>({
         type="text"
         placeholder="Type school name, zip code, or neighborhood"
         value={searchTerm}
-        className="placeholder-small h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 pl-12 shadow-lg focus:border-blue-400"
+        className="placeholder-small focus:border-blue-400border-gray-400 h-[38px] w-full rounded-lg border border-gray-400 p-1 px-4 py-2 pl-12 shadow-lg"
         onChange={onInputChange}
         onFocus={() => setSearchTerm("")}
       />
