@@ -248,7 +248,7 @@ const Map: React.FC<Props> = (props) => {
 
             {/* Map or List View */}
             <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
-              <div className="items-center justify-between rounded-xl bg-white p-4">
+              <div className="items-center justify-between rounded-2xl bg-white p-4">
                 <div className="mb-4 flex">
                   <SearchBar
                     onItemSelect={itemSelect}
@@ -272,7 +272,6 @@ const Map: React.FC<Props> = (props) => {
                         e.stopPropagation();
                         setModalIsOpen(true);
                       }}
-                      className="w-fit"
                     ></Image>
                     <label>Priority</label>
                     <input
