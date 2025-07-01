@@ -30,8 +30,8 @@ interface SchoolCardProps {
  */
 const LearnMoreButton = () => {
   return (
-    <button className="w-full rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white md:w-40">
-      Learn more
+    <button className="w-24 md:w-40 rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white">
+      Learn more  
     </button>
   );
 };
@@ -108,7 +108,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
                 onModalOpen();
               }}
             >
-              <Tag />
+              <Tag /> 
             </button>
           )}
           <h2 className="font-medium md:text-xl">{school.name}</h2>
