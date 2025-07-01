@@ -30,8 +30,8 @@ interface SchoolCardProps {
  */
 const LearnMoreButton = () => {
   return (
-    <button className="w-full rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white md:w-40">
-      Learn more
+    <button className="w-24 md:w-40 rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white">
+      Learn more  
     </button>
   );
 };
@@ -60,7 +60,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
       blurDataURL={blurDataURL}
       width={1000}
       height={500}
-      className={`h-40 max-h-[20vh] rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className ? props.className : ""}`}
+      className={`h-40 rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className ? props.className : ""}`}
     />
   );
 
@@ -80,8 +80,8 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         />
       </button>
       <div
-        className={`transition-max-height relative col-span-4 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
-        md:rounded-t-2xl`}
+        className={`h-40 transition-max-height relative col-span-4 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
+        md:rounded-t-2xl `}
       >
         <Link
           href={"/school?name=" + encodeURIComponent(school.name)}
@@ -98,7 +98,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           className="inline-block md:hidden"
         />
       </div>
-      <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
+      <div className="flex flex-col h-full w-3/5 p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
           {school.priority && (
             <button
@@ -108,7 +108,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
                 onModalOpen();
               }}
             >
-              <Tag />
+              <Tag /> 
             </button>
           )}
           <h2 className="font-medium md:text-xl">{school.name}</h2>
@@ -119,7 +119,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           </div>
         </div>
         <Link
-          className="hidden md:block"
+          className=" md:block"
           href={"/school?name=" + encodeURIComponent(school.name)}
         >
           <LearnMoreButton />
