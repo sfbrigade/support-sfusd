@@ -73,13 +73,6 @@
     ],
     "programs": [
       {
-        "name": "Career-based Mentoring",
-        "details": "All of Bal's Pathway programs need career-based mentoring, such as being a guest speaker",
-        "url": "",
-        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
-        "category": "volunteer"
-      },
-      {
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
@@ -89,6 +82,13 @@
       {
         "name": "Event Volunteers",
         "details": "Provide support for school-sponsored events such as shows and field trips",
+        "url": "",
+        "img": "/stock-images/HS/event/pexels-jmark-301987.webp",
+        "category": "volunteer"
+      },
+      {
+        "name": "Career-based Mentoring",
+        "details": "All of Bal's Pathway programs need career-based mentoring, such as being a guest speaker",
         "url": "",
         "img": "/stock-images/HS/mentoring/pexels-vanessa-loring-7868884.webp",
         "category": "volunteer"
@@ -197,19 +197,19 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
+        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
-        "details": "Provide students with mentoring, career insight and readiness",
+        "details": "Provide students with mentoring, career insight, and readiness",
         "url": "",
         "img": "/stock-images/HS/mentoring/pexels-thisisengineering-3861964.webp",
         "category": "volunteer"
@@ -311,21 +311,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ludawigakwana-2378209.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
+        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-zen-chung-5529955.webp",
+        "img": "/stock-images/HS/mentoring/pexels-bertellifotografia-15380335.webp",
         "category": "volunteer"
       },
       {
@@ -421,23 +421,23 @@
     "programs": [
       {
         "name": "Academic After-School Tutors (Futurama)",
-        "details": "Help students at Galileo with afterschool Math, Science, English, Social Studies tutoring.",
+        "details": "Help students at Galileo with afterschool Math, Science, English, and Social Studies tutoring.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ekrulila-2292837.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Remote Graphic Design (w/ PTSA)",
         "details": "Support Galileo's online PTSA presence through remote-friendly design tasks!",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
+        "img": "/stock-images/HS/tutoring/pexels-liza-summer-6347902.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer (with PTSA) ",
         "details": "Help Galileo's PTSA organize Galileo-unique events like World Party and with projects for school beautification.",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-vanessa-garcia-6325984.webp",
+        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
         "category": "volunteer"
       },
       {
@@ -526,14 +526,14 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472796.webp",
+        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
         "category": "volunteer"
       },
       {
@@ -628,14 +628,14 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-filirovska-8250359.webp",
+        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
+        "img": "/stock-images/HS/event/pexels-filirovska-8250359.webp",
         "category": "volunteer"
       },
       {
@@ -729,21 +729,21 @@
         "name": "Daytime classroom support",
         "details": "Academic support for students during class",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-becerragoveaphoto-5934962.webp",
+        "img": "/stock-images/HS/mentoring/pexels-mikhail-nilov-9159042.webp",
         "category": "volunteer"
       },
       {
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8199666.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-mikhail-nilov-9159042.webp",
+        "img": "/stock-images/HS/mentoring/pexels-vanessa-loring-7868884.webp",
         "category": "volunteer"
       },
       {
@@ -831,21 +831,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-jmark-301987.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8199666.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
+        "img": "/stock-images/HS/event/pexels-jmark-301987.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-mikhail-nilov-9159042.webp",
+        "img": "/stock-images/HS/mentoring/pexels-boris-pavlikovsky-7715536.webp",
         "category": "volunteer"
       }
     ]
@@ -931,21 +931,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ekrulila-2292837.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
         "category": "volunteer"
       },
       {
         "name": "Alumni Association",
         "details": "Support the association in their efforts to raise funds for a variety of school and student needs",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472796.webp",
+        "img": "/stock-images/HS/event/pexels-rdne-7414284.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-cottonbro-6694319.webp",
+        "img": "/stock-images/HS/mentoring/pexels-zen-chung-5529955.webp",
         "category": "volunteer"
       },
       {
@@ -1039,23 +1039,23 @@
     "programs": [
       {
         "name": "College Readiness Workshops",
-        "details": "Help support the PTSA's college readiness workshops for Lowell, providing essay writing advice, college-picking advice, and workshops.",
+        "details": "Help support the PTSA's college readiness workshops for Lowell, providing essay writing advice, college selection guidance, and workshops.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jep-gambardella-7689760.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
-        "details": "Join a Lowell PTSA committee event as a community volunteer to help with occasional events (Beautification Day, Graduation, Dances) or even sign up to routinely help with Lowell's on campus bookstore!",
+        "details": "Join a Lowell PTSA committee event as a community volunteer to help with occasional events (Beautification Day, Graduation, Dances) or even sign up to help with Lowell's on-campus bookstore!",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
+        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
         "category": "volunteer"
       },
       {
         "name": "Remote (Website, Social Media, Newsletter)",
-        "details": "Help the PTSA maintain their online presence through remote social media, website, and newsletter maintenace!",
+        "details": "Help the PTSA maintain their online presence through remote social media, website, and newsletter  maintenance!",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLSd_ZykYI3GM9GZOVtnq2x4cnN6GmEwo0rBKhI3nfWwBexl65A/viewform",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
+        "img": "/stock-images/HS/tutoring/pexels-liza-summer-6347902.webp",
         "category": "volunteer"
       },
       {
@@ -1146,21 +1146,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-vanessa-garcia-6325984.webp",
+        "img": "/stock-images/HS/mentoring/pexels-bertellifotografia-15380335.webp",
         "category": "volunteer"
       },
       {
@@ -1250,14 +1250,14 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
         "category": "volunteer"
       },
       {
         "name": "Healthy Eating Physical Activity (HEPA)",
         "details": "Support workshops and activities that promote health",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ludawigakwana-2378209.webp",
+        "img": "/stock-images/HS/event/pexels-mastercowley-1153370.webp",
         "category": "volunteer"
       },
       {
@@ -1356,21 +1356,21 @@
         "name": "Tutoring",
         "details": "Help tutor SOTA students in STEM subjects.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
         "category": "volunteer"
       },
       {
         "name": "Staff Appreciation Event Volunteer",
-        "details": "Support the PTSA show appreciation for staff and Artists-In-Residents both with in person distribution or remote video editing support!",
+        "details": "Support the PTSA in showing appreciation for staff and Artists-In-Residence with in-person distribution or remote video editing support!\n",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-tomfisk-17570645.webp",
+        "img": "/stock-images/HS/tutoring/pexels-liza-summer-6347902.webp",
         "category": "volunteer"
       },
       {
         "name": "Audition Day Volunteer",
         "details": "Support budding students, faculty, and parents during the SOTA audition process through physical audition day volunteering.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-lebele-18852481.webp",
+        "img": "/stock-images/HS/event/pexels-shvets-production-8929515.webp",
         "category": "volunteer"
       },
       {
@@ -1459,21 +1459,21 @@
         "name": "Tutoring",
         "details": "Support Academy students with STEM subjects with their afterschool program on a regular or ad-hoc basis.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-diva-plavalaguna-6937836.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Culinary & Arts Mentor Volunteer",
-        "details": "Help provide real life skills to Academy students with culinary mentorship and creative expression within their afterschool program.",
+        "details": "Help provide real-life skills to Academy students with culinary mentorship and creative expression within their after-school program.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
+        "img": "/stock-images/HS/mentoring/pexels-katerina-holmes-5907837.webp",
         "category": "volunteer"
       },
       {
         "name": "Remote Coding Teacher",
-        "details": "Help host afterschool, remote coding classes for The Academy students.",
+        "details": "Help host after-school, remote coding classes for The Academy students.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jessicairoh-17527758.webp",
+        "img": "/stock-images/HS/mentoring/pexels-thisisengineering-3861964.webp",
         "category": "volunteer"
       },
       {
@@ -1561,22 +1561,22 @@
     ],
     "programs": [
       {
-        "name": "Career Prep and Mentoring",
-        "details": "Provide students with mentoring, career insight and readiness",
-        "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jessicairoh-17527758.webp",
-        "category": "volunteer"
-      },
-      {
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jep-gambardella-7689760.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Family Services",
         "details": "Help ensure student families have access to basic services",
+        "url": "",
+        "img": "/stock-images/HS/event/pexels-cottonbro-6590920.webp",
+        "category": "volunteer"
+      },
+      {
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
         "img": "/stock-images/HS/event/pexels-filirovska-8250359.webp",
         "category": "volunteer"
@@ -1669,18 +1669,18 @@
         "name": "Campus Cleanup",
         "details": "Help create a better environment for incoming and current Wallenberg students through cleaning up the gardens and picking up trash.",
         "url": "https://www.wallenbergpta.org/blog/categories/volunteers-needed",
-        "img": "/stock-images/HS/event/pexels-ludawigakwana-2378209.webp",
+        "img": "/stock-images/HS/event/pexels-hansmiddendorp-26827231.webp",
         "category": "volunteer"
       },
       {
         "name": "Orientation and Community Day Volunteers",
         "details": "Support incoming Wallenberg students by volunteering your time to the Wallenberg PTA.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
+        "img": "/stock-images/HS/event/pexels-karolina-grabowska-8147480.webp",
         "category": "volunteer"
       },
       {
-        "name": "STEM tutor",
+        "name": "STEM Tutor",
         "details": "Support Wallenberg students through afterschool tutoring.",
         "url": "",
         "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
