@@ -1039,14 +1039,14 @@
     "programs": [
       {
         "name": "College Readiness Workshops",
-        "details": "Help support the PTSA's college readiness workshops for Lowell, providing essay writing advice, college selection guidance, and workshops.",
+        "details": "Help support the PTSA's college readiness workshops for Lowell, providing essay writing advice and college selection guidance.",
         "url": "",
         "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
-        "details": "Join a Lowell PTSA committee event as a community volunteer to help with occasional events (Beautification Day, Graduation, Dances) or even sign up to help with Lowell's on-campus bookstore!",
+        "details": "Join a Lowell PTSA committee as a community volunteer to help with occasional events (Beautification Day, Graduation, Dances) or help with the on-campus bookstore!",
         "url": "",
         "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
         "category": "volunteer"
@@ -1264,7 +1264,7 @@
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/mentoring/pexels-vanessa-loring-7868884.webp",
         "category": "volunteer"
       },
       {
@@ -1457,7 +1457,7 @@
     "programs": [
       {
         "name": "Tutoring",
-        "details": "Support Academy students with STEM subjects with their afterschool program on a regular or ad-hoc basis.",
+        "details": "Support Academy students with STEM subjects during their afterschool program, on a regular or ad-hoc basis.",
         "url": "",
         "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
@@ -1578,7 +1578,7 @@
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-filirovska-8250359.webp",
+        "img": "/stock-images/HS/tutoring/pexels-jessicairoh-17527758.webp",
         "category": "volunteer"
       },
       {
