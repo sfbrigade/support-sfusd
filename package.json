@@ -33,9 +33,9 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "react-modal": "^3.16.1",
-    "sharp": "^0.34.1",
-    "tsx": "^4.19.3",
+    "sharp": "^0.34.2",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "vercel": "^33.5.3"
   },
   "devDependencies": {
