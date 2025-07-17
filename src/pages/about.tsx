@@ -131,9 +131,9 @@ const About = () => {
                 <h2 className="text-xl font-bold">Our Mission</h2>
                 <p>
                   We aim to build stronger communities by connecting people with their 
-                  local schools. Even if you don't have children attending, you can 
-                  still be a part of the school community if you live near one. We've 
-                  heard from many San Francisco residents who want to help but don't 
+                  local schools. Even if you don&#39;t have children attending, you can 
+                  still be a part of the school community if you live near one. We&#39;ve 
+                  heard from many San Francisco residents who want to help but don&#39;t 
                   always feel connected to their neighborhood schools.
                 </p>
               </section>
@@ -165,7 +165,7 @@ const About = () => {
               <section>
                 <h2 className="text-xl font-bold">Get Involved</h2>
                 <p>
-                  Our website is still in beta, and we're always open to feedback. If you're 
+                  Our website is still in beta, and we&#39;re always open to feedback. If you&#39;re 
                   interested in joining us, we meet on Zoom every Wednesday evening and are always 
                   looking for more volunteers.
                 </p>
