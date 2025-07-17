@@ -169,12 +169,6 @@ const Map: React.FC<Props> = (props) => {
         {/* High Priority Modal */}
         <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
 
-        {/* Top Bar with Search and Toggle Button */}
-        <div className="top-16 z-10 flex justify-center gap-2 border-t-4 border-[#D7F1FF] bg-[#D7F1FF] pt-1 max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
-          <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
-          <ToggleButton isMapView={isMapView} toggleView={setToggle} />
-        </div>
-
         {/* Main Content Area */}
         <div
           className={`relative mx-auto flex h-auto flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-10/12 2xl:w-2/3 ${isMapView ? " w-full flex-1" : ""}`}
@@ -280,7 +274,7 @@ const Map: React.FC<Props> = (props) => {
                       name="priority"
                       onChange={handlePriorityChange}
                       checked={priorityFilter}
-                      className="border-black bg-transparent accent-orange-500"
+                      className="mr-4 border-black bg-transparent accent-orange-500"
                     />
                   </div>
                 </div>
