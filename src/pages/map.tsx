@@ -28,6 +28,11 @@ type Props = {
 };
 
 const schoolCardPlaceholderTitle = "Select a School";
+// school in session 
+/*const schoolCardPlaceholderText =
+  "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";*/
+
+// school out of session
 const schoolCardPlaceholderText =
   "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
 
