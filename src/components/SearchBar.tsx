@@ -19,9 +19,8 @@ export default function SearchBar<DropdownItemType = any>({
   onSearch,
 }: SearchBarProps<DropdownItemType>): JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
-  const [dropdownItems, setDropdownItems] = useState<
-    DropdownItem<DropdownItemType>[]
-  >([]);
+  const [dropdownItems, setDropdownItems] = useState<DropdownItem<DropdownItemType>[]>([]);
+  const [cursor, setCursor] = useState(-1);
 
   const onInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const userInput = e.target.value;
@@ -36,6 +35,30 @@ export default function SearchBar<DropdownItemType = any>({
     setDropdownItems([]);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Does not handle keys if dropdown is empty
+    if (dropdownItems.length === 0) {
+      return
+    }
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setCursor(prev => 
+        prev < dropdownItems.length - 1 ? prev + 1 : prev
+      )
+    }
+    else if (e.key === "ArrowUp"){
+      e.preventDefault();
+      setCursor(prev => 
+        prev > 0 ? prev - 1 : prev
+      )
+    }
+    else if (e.key === "Enter" && cursor >= 0) {
+      e.preventDefault();
+      handleItemSelect(dropdownItems[cursor]);
+    }
+  };
+
   return (
     <div className="relative flex-grow">
       <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center">
@@ -48,9 +71,13 @@ export default function SearchBar<DropdownItemType = any>({
         className="placeholder-small h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 pl-12 shadow-lg focus:border-blue-400"
         onChange={onInputChange}
         onFocus={() => setSearchTerm("")}
+        onKeyDown={handleKeyDown}
       />
       {dropdownItems.length > 0 && searchTerm.length > 0 && (
-        <Dropdown items={dropdownItems} onItemSelect={handleItemSelect} />
+        <Dropdown
+          items={dropdownItems}
+          onItemSelect={handleItemSelect}
+        />
       )}
     </div>
   );
