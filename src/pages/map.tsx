@@ -30,9 +30,11 @@ type Props = {
   schools: School[];
 };
 
-const schoolCardPlaceholderTitle = "Select a School";
-const schoolCardPlaceholderText =
-  "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
+// School Year Version. Uncomment below when school starts in the Fall
+// const schoolCardPlaceholderText = "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
+
+// Summer Version. Comment-out below when school starts in the Fall
+const schoolCardPlaceholderText = "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
 
 const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
