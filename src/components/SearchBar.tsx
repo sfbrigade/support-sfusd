@@ -27,6 +27,7 @@ export default function SearchBar<DropdownItemType = any>({
     setSearchTerm(userInput);
     const searchResults = await onSearch(userInput);
     setDropdownItems(searchResults);
+    setCursor(-1);
   };
 
   const handleItemSelect = (item: DropdownItem<DropdownItemType>) => {
@@ -70,13 +71,28 @@ export default function SearchBar<DropdownItemType = any>({
         value={searchTerm}
         className="placeholder-small h-[38px] w-full rounded-lg border border-black p-1 px-4 py-2 pl-12 shadow-lg focus:border-blue-400"
         onChange={onInputChange}
-        onFocus={() => setSearchTerm("")}
+        onFocus={() => 
+          {
+            if (searchTerm.length > 0) {
+              // Re-trigger search to show dropdown
+              onSearch(searchTerm).then(setDropdownItems);
+            }
+          }
+        }
+        onBlur={() => 
+          {
+            // Hide dropdown when input loses focus
+            setDropdownItems([]);
+            setCursor(-1);
+          }
+        }
         onKeyDown={handleKeyDown}
       />
-      {dropdownItems.length > 0 && searchTerm.length > 0 && (
+      {dropdownItems.length > 0 && (
         <Dropdown
           items={dropdownItems}
           onItemSelect={handleItemSelect}
+          cursor={cursor}
         />
       )}
     </div>
