@@ -30,6 +30,8 @@ type Props = {
   schools: School[];
 };
 
+const schoolCardPlaceholderTitle = "Select a School";
+
 // School Year Version. Uncomment below when school starts in the Fall
 // const schoolCardPlaceholderText = "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
