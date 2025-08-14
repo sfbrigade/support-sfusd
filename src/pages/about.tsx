@@ -111,50 +111,70 @@ const About = () => {
         <div className="mx-auto flex max-md:px-8 md:w-5/6 lg:w-4/6">
           <div className="flex flex-col items-center gap-4 py-8 md:py-12">
             <div className="flex flex-col gap-4 max-md:text-sm">
-              <p>
-                Support SF Schools is run by an all-volunteer team at{" "}
-                <a
-                  href="https://www.sfcivictech.org/about"
-                  target="_blank"
-                  className="text-blue-500 hover:underline"
-                >
+              <section>
+                <h2 className="text-xl font-bold">About Support SF Schools</h2>
+                <p>
+                  Support SF Schools is a volunteer-run project by{" "}
+                  <a
+                    href="https://www.sfcivictech.org/about"
+                    target="_blank"
+                    className="text-blue-500 hover:underline"
+                  >
                   SF Civic Tech
-                </a>{" "}
-                (formerly known as Code for San Francisco). Our diverse group of
-                teachers, designers, engineers, researchers, and curious
-                community members is building this website to make it easier for
-                people who live, work, and hang out in San Francisco to support
-                our public schools.
-              </p>
-              <p>
-                We are focused on building strong communities and neighborhoods,
-                where people who live nearby a school can support and be part of
-                the school community, even if they aren’t parents of current
-                students. We have talked to hundreds of people who live in San
-                Francisco, who are willing to volunteer and support local
-                schools, and who wish they were more connected to the schools in
-                their neighborhoods.
-              </p>
-              <p>
-                People who work in tech and want to volunteer in STEM education.
-                Former teachers who are trying out new careers but still looking
-                to feel a connection to local schools. Parents who still live in
-                the neighborhood after their kids graduated and have free time
-                to volunteer. Alumni who are back in San Francisco and want to
-                reconnect with schools. People from all backgrounds who believe
-                in the power of education to change lives. Support SFUSD is
-                designed to bring them closer to the schools in their
-                neighborhood, while helping meet school needs.
-              </p>
-              <p>
-                This website is in beta and is a work in progress. Our beta
-                focuses on connecting folks to the seventeen public high schools
-                in the school district. We are open to feedback and always
-                looking for volunteers to join our effort. We meet Wednesday
-                evenings on Zoom.
-              </p>
+                  </a>{" "}(formerly Code for San Francisco). Our team includes 
+                  teachers, designers, engineers, researchers, and community members, 
+                  all working together to make it easier for San Francisco residents 
+                  to support public schools.
+                </p>
+              </section>
+              <section>
+                <h2 className="text-xl font-bold">Our Mission</h2>
+                <p>
+                  We aim to build stronger communities by connecting people with their 
+                  local schools. Even if you don&#39;t have children attending, you can 
+                  still be a part of the school community if you live near one. We&#39;ve 
+                  heard from many San Francisco residents who want to help but don&#39;t 
+                  always feel connected to their neighborhood schools.
+                </p>
+              </section>
+              <section>
+                <h2 className="text-xl font-bold">Who Can Get Involved?</h2>
+                <p className="pb-4">
+                  We welcome volunteers from all backgrounds, including:
+                </p>
+                <ul className="list-disc flex flex-col pl-6 gap-4 max-md:text-sm">
+                  <li><strong>Tech professionals</strong> who want to support STEM education.</li>                  
+                  <li><strong>Former teachers</strong> who are transitioning to new careers 
+                    but still want to stay connected.</li>    
+                  <li><strong>Parents</strong> whose children have graduated but want to give 
+                    back to local schools.</li>    
+                  <li><strong>Alumni</strong> who have returned to San Francisco and want to 
+                    reconnect with schools.</li>    
+                  <li>Anyone who believes in the power of education to change lives.</li>                    
+                </ul>
+              </section>
+              <section>
+                <h2 className="text-xl font-bold">How We Help</h2>
+                <p>
+                  Support SF Schools is designed to bring you closer to your 
+                  neighborhood schools while helping meet their needs. Our beta version 
+                  currently focuses on connecting volunteers with 105 public elementary, middle, 
+                  and high schools in San Francisco.
+                </p>
+              </section>
+              <section>
+                <h2 className="text-xl font-bold">Get Involved</h2>
+                <p>
+                  Our website is still in beta, and we&#39;re always open to feedback. If you&#39;re 
+                  interested in joining us, we meet on Zoom every Wednesday evening and are always 
+                  looking for more volunteers.
+                </p>
+              </section>
             </div>
 
+            <section>
+                <h2 className="text-xl font-bold">Meet our team:</h2>
+            </section>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-8">
               {member_list.map((member) => (
                 <a
@@ -213,13 +233,15 @@ const About = () => {
                 Lee, PJ Ekhator, Bai Pai, Liv Cornfield, Kimberly Kono
               </p>
             </div>
-            <button
-              onClick={handleOpen}
-              className="text-blue-500 hover:underline"
-            >
-              Contact Us
-            </button>
-            {showContactForm && <ContactUs handleClose={handleClose} />}
+              <footer>
+                <button
+                  onClick={handleOpen}
+                  className="text-blue-500 hover:underline"
+                >
+                  Contact Us
+                </button>
+                {showContactForm && <ContactUs handleClose={handleClose} />}
+              </footer>
           </div>
         </div>
       </main>

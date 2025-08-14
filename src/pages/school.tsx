@@ -11,28 +11,87 @@ import { blurDataURL } from "@/lib/imageConfig";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SEO from "@/components/SEO";
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const schools = await prisma.school.findMany({
-    include: {
-      metrics: true,
-      programs: true,
-    },
-  });
-  return { props: { schools } };
-};
-
-type Props = {
-  schools: School[];
-};
-
-const Profile: React.FC<Props> = (props) => {
+const Profile: React.FC = () => {
   const router = useRouter();
-  const { name } = router.query;
-  const { schools } = props;
-  const school = schools.find((school) => school.name == name);
+  const { stub } = router.query;
+
+  const [school, setSchool] = useState<School | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (stub && typeof stub === 'string') {
+      setLoading(true);
+      setError(null);
+
+      fetch(`/api/school/${stub}`)
+      .then(res => {
+        if(!res.ok) {
+          throw new Error(res.status === 404 ? 'School not found' : 'Failed to load school');
+        }
+        return res.json();
+      })
+      .then(data => {
+        setSchool(data.school);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      })
+    } else {
+        setError('School stub is required');
+        setLoading(false);
+    }
+  }, [stub]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading school information...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-red-600 mb-2">Error</h1>
+          <p className="text-gray-600">{error}</p>
+          <button 
+            onClick={() => router.back()}
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          >
+            Go Back
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!school) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-600 mb-2">School Not Found</h1>
+          <p className="text-gray-500">The requested school could not be found.</p>
+          <button 
+            onClick={() => router.back()}
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          >
+            Go Back
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

@@ -81,6 +81,10 @@ const MapListCard = ({
     }
   }, [selectedSchool, school.stub]);
 
+  const schoolUrl = "/school?name=" + encodeURIComponent(school.name) + "&stub=" + school.stub;
+  // console.log('Generated URL:', schoolUrl);
+  // console.log('School data:', { name: school.name, stub: school.stub });
+
   return (
     <div
       ref={cardRef}
@@ -116,7 +120,8 @@ const MapListCard = ({
           <Link
             ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
-            href={"/school?name=" + encodeURIComponent(school.name)}
+            //href={"/school?name=" + encodeURIComponent(school.name)}
+            href={schoolUrl}
           >
             Learn More
           </Link>

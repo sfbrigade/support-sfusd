@@ -34,7 +34,7 @@ const Navbar = () => {
     router.events.on("routeChangeComplete", handleRouteChange);
   }, [router]);
   return (
-    <nav className={"sticky top-0 z-50 w-full p-2 p-4 px-4 text-black " + bg}>
+    <nav className={"sticky top-0 z-40 w-full p-2 p-4 px-4 text-black " + bg}>
       <div className="container mx-auto max-w-[1280px] font-medium">
         <div className="flex items-center justify-between">
           {/* Home Icon */}
