@@ -66,7 +66,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
 
   return (
     <div
-      className={`flex flex-row items-start justify-center rounded-2xl bg-white shadow-lg md:max-w-[400px] md:flex-col ${className}`}
+      className={`flex flex-row items-start justify-center rounded-2xl bg-white md:shadow-lg md:max-w-[400px] md:flex-col ${className}`}
     >
       <button
         onClick={onClose}
@@ -75,8 +75,8 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         <Image
           src={`/circle_close.svg`}
           alt="Close Icon"
-          width={24}
-          height={24}
+          width={0}
+          height={0}
         />
       </button>
       <div
