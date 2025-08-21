@@ -352,7 +352,7 @@ const Map: React.FC<Props> = (props) => {
             {/* Map or List View */}
             <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
               {/* DESKTOP ONLY: Top Bar with Search, Toggle, Map/List */}
-              <div className="hidden md:block px-4 pt-4 bg-white rounded-2xl">
+              <div className="hidden md:block px-6 py-6 bg-white rounded-2xl">
                 <div className="flex items-center gap-2">
                   <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
                   <ToggleButton isMapView={isMapView} toggleView={setToggle} />
@@ -365,7 +365,7 @@ const Map: React.FC<Props> = (props) => {
                     setSelectedSchoolTypes={setSelectedSchoolTypes}
                     handleSchoolTypeSelection={handleSchoolTypeSelection}
                   />
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 md:ml-auto">
                     <Image
                       alt="High priority icon"
                       src="/circle_priority.svg"
