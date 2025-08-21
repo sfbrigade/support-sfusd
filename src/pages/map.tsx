@@ -297,11 +297,11 @@ const Map: React.FC<Props> = (props) => {
             >
               {isMapView ? (
                 selectedSchool ? (
-                  <div className="w-full md:w-auto p-4">
+                  <div className="w-full md:w-auto md:p-4">
                     <Link
                       href={
                         "/school?name=" +
-                        encodeURIComponent(selectedSchool.name)
+                        encodeURIComponent(selectedSchool.name) + "&stub=" + selectedSchool.stub
                       }
                       className="block md:hidden"
                       passHref
