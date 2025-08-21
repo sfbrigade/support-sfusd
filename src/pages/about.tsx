@@ -273,7 +273,18 @@ const About = () => {
                 </a>
               ))}
             </div>
-            <div>Partner</div>
+            <div className="my-4 text-center">
+              <h2 className="text-lg font-bold">Our Partner:</h2>
+              <div className="mt-2">
+                <Image
+                  src="/about/ed_fund_logo.png"
+                  alt="Ed Fund Logo"
+                  className="mx-auto h-auto max-w-full"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            </div>
             <div>
               <h2 className="text-center text-lg font-medium text-[#8338EC] md:text-xl">
                 With thanks to the following folks for their past contributions:
@@ -299,7 +310,7 @@ const About = () => {
             <footer>
               <button
                 onClick={handleOpen}
-                className="text-blue-500 hover:underline"
+                className="text-black-500 hover:underline"
               >
                 Contact Us
               </button>
