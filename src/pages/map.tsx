@@ -256,7 +256,7 @@ const Map: React.FC<Props> = (props) => {
               </div>
             </div>
             {/* Reset and Apply Buttons - stacked at bottom */}
-            <div className="flex justify-between mt-8">
+            <div className="flex justify-between gap-4 mt-8">
               <button
                 className="flex-1 rounded-full px-6 py-2 font-semibold"
                 style={{ backgroundColor: '#E7E7E7' }}
@@ -269,7 +269,7 @@ const Map: React.FC<Props> = (props) => {
                 Reset
               </button>
               <button
-                className="flex-1 rounded-full bgpx-6 py-2 text-white font-semibold"
+                className="flex-1 rounded-full px-6 py-2 text-white font-semibold"
                 style={{ backgroundColor: '#3A86FF' }}
                 onClick={() => setMobileFiltersOpen(false)}
               >
