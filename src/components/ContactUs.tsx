@@ -101,13 +101,13 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
             </button>
           </div>
           <h6 className="text-gray-400">Questions or comments? Let us know!</h6>
-          <div>
+          <div className="mt-4">
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="mx-auto mb-3 max-w-md p-6"
+              className="mx-auto max-w-md flex flex-col gap-4"
             >
-              <div className="mb-4">
+              <div>
                 <label className="mb-2 block text-gray-500" htmlFor="name">
                   Name:
                 </label>
@@ -124,7 +124,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
                   required
                 />
               </div>
-              <div className="mb-4">
+              <div>
                 <label className="mb-2 block text-gray-500" htmlFor="email">
                   Email:
                 </label>
@@ -141,7 +141,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
                   required
                 />
               </div>
-              <div className="mb-4">
+              <div>
                 <label className="mb-2 block text-gray-500" htmlFor="message">
                   Message:
                 </label>
@@ -158,22 +158,25 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
                   required
                 ></textarea>
               </div>
-              <button
-                className="focus:shadow-outline w-24 rounded bg-blue-500
-                              px-4 py-2 text-white hover:bg-blue-700 focus:outline-none"
-                type="submit"
-              >
-                Send
-              </button>
-              <button
-                className="bg-white-500 focus:shadow-outline border-gray ml-4
-                              w-24 rounded border px-4 py-2
-                              text-gray-400 hover:bg-gray-300 focus:outline-none"
-                onClick={handleClose}
-                type="button"
-              >
-                Cancel
-              </button>
+              <div>
+                <button
+                  className="focus:shadow-outline w-24 rounded bg-blue-500
+                                px-4 py-2 text-white hover:bg-blue-700 focus:outline-none"
+                  type="submit"
+                >
+                  Send
+                </button>
+                <button
+                  className="bg-white-500 focus:shadow-outline border-gray ml-4
+                                w-24 rounded border px-4 py-2
+                                text-gray-400 hover:bg-gray-300 focus:outline-none"
+                  onClick={handleClose}
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              
             </form>
           </div>
         </div>

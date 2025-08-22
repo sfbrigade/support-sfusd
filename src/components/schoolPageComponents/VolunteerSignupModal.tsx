@@ -75,6 +75,15 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
 
     const handleCancel = () => {
         onClose();
+        setCurrentPage(1);
+        setFormData({
+            schoolId: school.stub || '',
+            schoolName: school.name,
+            whyInterested: '' as keyof typeof WHY_INTERESTED_OPTIONS,
+            opportunities: '' as keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS,
+            name: '',
+            email: '',
+        })
     };
 
     const handleSubmit = () => {
@@ -90,12 +99,12 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
     // Why Interested?
     const renderPage1 = () => (
         <div className="flex flex-col gap-6">
-            <h1 className="text-2xl font-medium text-blue-900">
+            <h1 className="text-2xl">
                 Thank you for signing up to volunteer with {school.name}!
             </h1>
 
-            <div className="flex flex-col gap-4">
-                <h2 className="text-lg text-blue-900">
+            <div className="flex flex-col gap-4 text-gray-600">
+                <h2 className="text-lg ">
                     Why are you interested in volunteering at {school.name}?
                 </h2>
 
@@ -103,14 +112,14 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
                     {Object.entries(WHY_INTERESTED_OPTIONS).map(([key, text]) => (
                         <label key={key} className="flex items-center gap-3 cursor-pointer">
                             <input 
-                                type="radio"
+                                type="checkbox"
                                 name="whyInterested"
                                 value={key}
                                 checked={formData.whyInterested === key}
                                 onChange={(e) => updateFormData('whyInterested', e.target.value)}
                                 className="text-blue-500"
                             />
-                            <span className="text-blue-900">
+                            <span>
                                 {getDisplayText(key as keyof typeof WHY_INTERESTED_OPTIONS, school.name)}
                             </span>
                         </label>
@@ -123,12 +132,8 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
     // Volunteer Opportunities
     const renderPage2 = () => (
         <div className="flex flex-col gap-6">
-          <h1 className="text-2xl font-medium text-blue-900">
-            Thank you for signing up to volunteer with {school.name}!
-          </h1>
-          
-          <div className="flex flex-col gap-4">
-            <h2 className="text-lg text-blue-900">
+          <div className="flex flex-col gap-4 text-gray-600">
+            <h2 className="text-lg font-medium">
               What kinds of volunteer opportunities are you interested in?
             </h2>
             
@@ -136,14 +141,14 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
               {Object.entries(VOLUNTEER_OPPORTUNITY_OPTIONS).map(([key, text]) => (
                 <label key={key} className="flex items-center gap-3 cursor-pointer">
                   <input
-                    type="radio"
+                    type="checkbox"
                     name="opportunities"
                     value={key}
                     checked={formData.opportunities === key}
                     onChange={(e) => updateFormData('opportunities', e.target.value)}
                     className="text-blue-500"
                   />
-                  <span className="text-blue-900">{text}</span>
+                  <span>{text}</span>
                 </label>
               ))}
             </div>
@@ -154,30 +159,30 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
     // Contact information
     const renderPage3 = () => (
         <div className="flex flex-col gap-6">
-          <h1 className="text-2xl font-medium text-blue-900">
-            Thank you for signing up to volunteer with {school.name}!
-          </h1>
-          
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 font-medium text-gray-600">
             <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-blue-900">Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
                 value={formData.name || ''}
                 onChange={(e) => updateFormData('name', e.target.value)}
-                className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
+                className="focus:shadow-outline w-full appearance-none rounded
+                                border px-3 py-2 leading-tight text-gray-700
+                                shadow focus:outline-none"
               />
             </div>
             
             <div className="flex flex-col gap-2">
-              <label htmlFor="email" className="text-blue-900">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
                 value={formData.email || ''}
                 onChange={(e) => updateFormData('email', e.target.value)}
-                className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
+                className="focus:shadow-outline w-full appearance-none rounded
+                                border px-3 py-2 leading-tight text-gray-700
+                                shadow focus:outline-none"
               />
             </div>
           </div>
@@ -202,16 +207,16 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
             isOpen={isOpen}
             onRequestClose={onClose}
             style={customStyles}
-            className="absolute left-1/2 top-1/2 w-4/6 -translate-x-1/2 -translate-y-1/2 transform rounder-md bg-white p-5 shadow-lg sm:w-2/5"
+            className="absolute left-1/2 top-1/2 w-4/6 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 shadow-lg xl:w-2/5 lg:w-1/2 md:w-2/3 w-5/6"
         >
             <div className="flex flex-col gap-4">
                 {/* Close Button */}
                 <div className="flex w-full items-center justify-end">
                     <button
-                        className="close-button text-4xl"
-                        onClick={onClose}
+                        className="close-button text-2xl"
+                        onClick={handleCancel}
                     >
-                        x
+                        &times;
                     </button>
                 </div>
 
@@ -223,6 +228,24 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
                 {/* Navigation Footer */}
                 <div className="flex items-center justify-between pt-4">
                     <div className="flex gap-3">
+                        {currentPage > 1 ? 
+                            <button
+                            onClick={() => setCurrentPage(currentPage - 1)}
+                            className="bg-white-500 focus:shadow-outline border-gray
+                                w-24 rounded border px-4 py-2
+                                text-gray-400 hover:bg-gray-300 focus:outline-none"
+                        >
+                            Back
+                            </button>
+                        :   <button
+                                onClick={handleCancel}
+                                className="bg-white-500 focus:shadow-outline border-gray 
+                                w-24 rounded border px-4 py-2
+                                text-gray-400 hover:bg-gray-300 focus:outline-none"
+                            >
+                                Cancel
+                            </button>
+                        }
                         {currentPage < 3 ? (
                             <button
                                 onClick={handleNext}
@@ -230,7 +253,8 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
                                     (currentPage === 1 && !formData.whyInterested) || 
                                     (currentPage === 2 && !formData.opportunities)
                                 }
-                                className="bg-blue-500 text-white px-6 py-2 rounded font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="focus:shadow-outline w-24 rounded bg-blue-500
+                                px-4 py-2 text-white hover:bg-blue-700 focus:outline-none disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed"
                             >
                                 Next
                             </button>
@@ -238,22 +262,11 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
                             <button
                                 onClick={handleSubmit}
                                 disabled={!formData.name || !formData.email}
-                                className="bg-blue-500 text-white px-6 py-2 rounded font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="bg-blue-500 text-white px-6 py-2 rounded font-semibold disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none"
                             >
                                 Submit
                             </button>
                         )}
-
-                        <button
-                            onClick={handleCancel}
-                            className="bg-white text-blue-500 border border-blue-500 px-6 py-2 rounded font-semibold"
-                        >
-                            Cancel
-                        </button>
-                    </div>
-
-                    <div className="text-blue-500 font-semibold">
-                        {currentPage}/3
                     </div>
                 </div>
             </div>
