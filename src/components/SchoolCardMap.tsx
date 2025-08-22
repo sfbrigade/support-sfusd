@@ -121,7 +121,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         <Link
           className="hidden md:block"
           href={"/school?name=" + encodeURIComponent(school.name)}
-          onClick={() => posthog?.capture?.('school_learn_more_clicked', { school: school.name })}
+          onClick={() => posthog?.capture?.('school_learn_more_clicked_map', { school: school.name })}
         >
           <LearnMoreButton />
         </Link>
