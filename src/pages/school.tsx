@@ -34,7 +34,7 @@ const Profile: React.FC<Props> = (props) => {
   const { name } = router.query;
   const { schools } = props;
   const school = schools.find((school) => school.name == name);
-  const posthog = usePostHog();
+  //const posthog = usePostHog();
 
   return (
     <>

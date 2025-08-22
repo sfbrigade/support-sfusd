@@ -3,11 +3,13 @@ import BannerWrapper from "./BannerWrapper";
 import HeadingContentWrapper from "./HeadingContentWrapper";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
+import { usePostHog } from "posthog-js/react";
 
 const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
   const otherDonations = school.programs.filter(
     (program) => program.category == "donate",
   );
+  const posthog = usePostHog();
 
   function formatDonationText() {
     const donation_text = school.profile ? school.profile.donation_text : "";
@@ -47,6 +49,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                       school.name.replace(/\s/g, "+") +
                       " w-fit rounded bg-blue-500 p-2 px-8 font-medium text-white"
                     }
+                    onClick={() => posthog?.capture('main_donate_clicked', { school: school.name })}
                   >
                     Donate
                   </a>
@@ -91,6 +94,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                             school.name.replace(/\s/g, "+") +
                             " underline underline-offset-4"
                           }
+                          onClick={() => posthog?.capture('other_donation_clicked', { school: school.name, donation: donation.name })}
                         >
                           {donation.name}
                         </a>
