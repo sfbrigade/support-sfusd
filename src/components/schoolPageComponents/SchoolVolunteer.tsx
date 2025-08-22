@@ -4,8 +4,11 @@ import BannerWrapper from "./BannerWrapper";
 import Link from "next/link";
 import { blurDataURL } from "@/lib/imageConfig";
 import VolunteerList from "./VolunteerList";
+import { usePostHog } from "posthog-js/react";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
+  const posthog = usePostHog();
+
   return (
     <section id="volunteer" className="flex flex-col gap-10">
       <BannerWrapper
@@ -40,6 +43,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                   school.name.replace(/\s/g, "+") +
                   " rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8"
                 }
+                onClick={() => posthog?.capture?.('volunteer_form_clicked', { school: school.name })}
               >
                 Fill out form
               </Link>
@@ -51,6 +55,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                   school.name.replace(/\s/g, "+") +
                   " rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8"
                 }
+                onClick={() => posthog?.capture?.('edfund_contact_clicked', { school: school.name })}
               >
                 Contact SF Ed Fund
               </Link>
