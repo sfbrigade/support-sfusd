@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useToast } from "./Toast/ToastContext";
 
 type ContactUsProps = {
   handleClose: () => void;
@@ -24,6 +25,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
     email: "",
     message: "",
   });
+  const { showToast } = useToast();
 
   /**
    * isEmail: Validates the email input using a regular expression.
@@ -70,8 +72,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
         })
         .then(
           () => {
-            console.log("SUCCESS!");
-            alert("Your message has been sent!");
+            showToast("Your message has been sent!");
             handleClose();
           },
           (error) => {

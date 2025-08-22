@@ -6,16 +6,18 @@ import { blurDataURL } from "@/lib/imageConfig";
 import VolunteerList from "./VolunteerList";
 import VolunteerSignupModal from "./VolunteerSignupModal";
 import React, { useState } from "react";
+import { useToast } from "../Toast/ToastContext";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
-
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { showToast } = useToast();
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
   const handleFormSubmit = (data: any) => {
     console.log("Form submitted:", data);
+    showToast("Volunteer form submitted successfully! Thank you!");
     closeModal();
     // TODO: Add success Toast
   }

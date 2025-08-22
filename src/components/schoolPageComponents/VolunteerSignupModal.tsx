@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from 'react-modal'
 import { School } from "@/types/school"
 
@@ -24,7 +24,7 @@ interface VolunteerFormData {
     schoolName: string;
     currentPage: 1 | 2 | 3;
     whyInterested: keyof typeof WHY_INTERESTED_OPTIONS;
-    opportunities: keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS;
+    opportunities: (keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS)[];
     name: string;
     email: string;
 }
@@ -56,10 +56,24 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
         schoolId: school.stub || '',
         schoolName: school.name,
         whyInterested: '' as keyof typeof WHY_INTERESTED_OPTIONS,
-        opportunities: '' as keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS,
+        opportunities: [],
         name: '',
         email: '',
     });
+
+    useEffect(() => {
+        if (isOpen) {
+            setFormData({
+                schoolId: school.stub || '',
+                schoolName: school.name,
+                whyInterested: '' as keyof typeof WHY_INTERESTED_OPTIONS,
+                opportunities: [],
+                name: '',
+                email: '',
+            });
+            setCurrentPage(1);
+        }
+    }, [isOpen, school]);
 
     const getDisplayText = (option: keyof typeof WHY_INTERESTED_OPTIONS, schoolName: string) => {
         if (option === 'SPECIFIC_INTEREST') {
@@ -76,21 +90,31 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
 
     const handleCancel = () => {
         onClose();
-        setCurrentPage(1);
-        setFormData({
-            schoolId: school.stub || '',
-            schoolName: school.name,
-            whyInterested: '' as keyof typeof WHY_INTERESTED_OPTIONS,
-            opportunities: '' as keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS,
-            name: '',
-            email: '',
-        })
     };
 
     const handleSubmit = () => {
-        if (formData.whyInterested && formData.opportunities && formData.name && formData.email) {
+        if (formData.whyInterested && formData.opportunities.length > 0 && formData.name && formData.email) {
             onSubmit(formData as VolunteerFormData);
         }
+    };
+
+    const handleOpportunityChange = (value: keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS) => {
+        setFormData(prev => {
+            const newOpportunities = prev.opportunities || [];
+            if (newOpportunities.includes(value)) {
+                // If the value is already in the array, remove it
+                return {
+                    ...prev,
+                    opportunities: newOpportunities.filter(opp => opp !== value),
+                };
+            } else {
+                // If the value is not in the array, add it
+                return {
+                    ...prev,
+                    opportunities: [...newOpportunities, value],
+                };
+            }
+        });
     };
 
     const updateFormData = (field: keyof VolunteerFormData, value: string) => {
@@ -137,16 +161,15 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
             <h2 className="text-lg font-medium">
               What kinds of volunteer opportunities are you interested in?
             </h2>
-            
             <div className="flex flex-col gap-3">
               {Object.entries(VOLUNTEER_OPPORTUNITY_OPTIONS).map(([key, text]) => (
                 <label key={key} className="flex items-center gap-3 cursor-pointer">
                   <input
-                    type="radio"
+                    type="checkbox"
                     name="opportunities"
                     value={key}
-                    checked={formData.opportunities === key}
-                    onChange={(e) => updateFormData('opportunities', e.target.value)}
+                    checked={(formData.opportunities || []).includes(key as keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS)}
+                    onChange={() => handleOpportunityChange(key as keyof typeof VOLUNTEER_OPPORTUNITY_OPTIONS)}
                     className="text-blue-500"
                   />
                   <span>{text}</span>
@@ -156,7 +179,6 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
           </div>
         </div>
     );
-
     // Contact information
     const renderPage3 = () => (
         <div className="flex flex-col gap-6">
@@ -252,7 +274,7 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
                                 onClick={handleNext}
                                 disabled={
                                     (currentPage === 1 && !formData.whyInterested) || 
-                                    (currentPage === 2 && !formData.opportunities)
+                                    (currentPage === 2 && formData.opportunities.length == 0)
                                 }
                                 className="focus:shadow-outline w-24 rounded bg-blue-500
                                 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed"
