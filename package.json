@@ -6,7 +6,7 @@
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "scripts": {
-    "dev": "npm run migrate-check && npm run generate-sitemap && next dev",
+    "dev": "npm run migrate-check && npm run generate-sitemap && next dev --turbopack",
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "migrate-check": "prisma migrate diff --from-schema-datamodel=prisma/schema.prisma --to-schema-datasource=prisma/schema.prisma",
     "build": "prisma migrate reset --force && npm run generate-sitemap && next build",
@@ -21,17 +21,16 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@prisma/client": "^5.13.0",
-    "@reduxjs/toolkit": "^1.9.5",
     "@types/mapbox-gl": "^2.7.14",
     "@vercel/postgres": "^0.7.2",
     "dotenv": "^16.5.0",
     "googleapis": "^148.0.0",
     "image-size": "^2.0.1",
     "mapbox-gl": "^2.15.0",
-    "next": "13.4.19",
+    "next": "15.5.0",
     "posthog-js": "^1.257.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "react-icons": "^4.11.0",
     "react-modal": "^3.16.1",
     "sharp": "^0.34.1",
@@ -46,13 +45,13 @@
     "@types/jsdom": "^21.1.7",
     "@types/next": "^9.0.0",
     "@types/node": "^20.5.9",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
     "@types/react-modal": "^3.16.3",
     "address": "^2.0.2",
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
+    "eslint-config-next": "15.5.0",
     "eslint-config-prettier": "^9.1.0",
     "file-loader": "^6.2.0",
     "googleapis": "^144.0.0",
@@ -67,11 +66,16 @@
     "tailwindcss": "3.3.3",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.4",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "url-loader": "^4.1.1"
   },
   "prettier": {
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "overrides": {
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7"
   }
 }
