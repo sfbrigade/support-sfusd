@@ -12,6 +12,7 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import { usePostHog } from "posthog-js/react";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const schools = await prisma.school.findMany({
@@ -33,6 +34,7 @@ const Profile: React.FC<Props> = (props) => {
   const { name } = router.query;
   const { schools } = props;
   const school = schools.find((school) => school.name == name);
+  const posthog = usePostHog();
 
   return (
     <>

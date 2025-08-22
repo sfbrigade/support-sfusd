@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { School, DropdownItem } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
 import { useMapContext } from "../contexts/MapContext";
+import { usePostHog } from "posthog-js/react";
 
 export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
@@ -29,19 +30,23 @@ type Props = {
 
 const schoolCardPlaceholderTitle = "Select a School";
 // school in session 
-/*const schoolCardPlaceholderText =
-  "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";*/
+const schoolCardPlaceholderText =
+  "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
 // school out of session
-const schoolCardPlaceholderText =
-  "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
+/* const schoolCardPlaceholderText =
+  "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";*/
+
+
 
 const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
     useMapContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-
+  const posthog = usePostHog();
+  
   const openModal = () => {
+    posthog?.capture('high_priority_modal_opened', { school: selectedSchool?.name });
     setModalIsOpen(true);
   };
 
@@ -50,6 +55,7 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const setToggle = () => {
+    posthog?.capture('map_view_toggled', { isMapView: !isMapView });
     setIsMapView(!isMapView);
   };
 
@@ -60,6 +66,7 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
+    posthog?.capture('searched_for_school', { searchTerm });
     const searchTermToLowerCase = searchTerm.toLowerCase();
     return props.schools
       .filter(({ name, zipcode, neighborhood }) => {
@@ -79,6 +86,7 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const itemSelect = (selection: DropdownItem<School>) => {
+    posthog?.capture('selected_school_from_search', { school: selection.item.name });
     setSelectedSchool(selection.item);
   };
 
