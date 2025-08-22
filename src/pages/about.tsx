@@ -13,16 +13,16 @@ const member_list = [
     img: "/about/julia_gitis.png",
   },
   {
+    name: "Brandon Cruz-Youll",
+    role: "Tech Project Manager, Software Developer",
+    url: "https://www.linkedin.com/in/brandon-cruzyoull/",
+    img: "/about/brandon_cruz_youll.png",
+  },
+  {
     name: "Emi Fogg",
     role: "UX Researcher",
     url: "https://www.linkedin.com/in/emi-fogg/",
     img: "/about/emi_fogg.png",
-  },
-  {
-    name: "Melinda Kreuser",
-    role: "Content Strategist",
-    url: "https://www.linkedin.com/in/melindakreuser/",
-    img: "/about/melinda_kreuser.png",
   },
   {
     name: "Amara Mir",
@@ -31,10 +31,10 @@ const member_list = [
     img: "/about/amara_mir.png",
   },
   {
-    name: "Jesse Wang",
-    role: "Product Designer",
-    url: "https://www.linkedin.com/in/jesse-wang-/",
-    img: "/about/jesse_wang.png",
+    name: "Kira Bronston",
+    role: "UX Researcher",
+    url: "https://www.linkedin.com/in/kirabronston/",
+    img: "/about/kira_bronston.png",
   },
   {
     name: "James Davis",
@@ -43,22 +43,17 @@ const member_list = [
     img: "/about/james_davis.png",
   },
   {
-    name: "Brandon Cruz-Youll",
-    role: "Tech Project Manager, Software Developer",
-    url: "https://www.linkedin.com/in/brandon-cruzyoull/",
-    img: "/about/brandon_cruz_youll.png",
+    name: "Jesse Wang",
+    role: "Product Designer",
+    url: "https://www.linkedin.com/in/jesse-wang-/",
+    img: "/about/jesse_wang.png",
   },
+
   {
-    name: "Jackson Tran",
+    name: "Matt Gianni",
     role: "Software Developer",
-    url: "https://www.linkedin.com/in/jacksontran1/",
-    img: "/about/jackson_tran.png",
-  },
-  {
-    name: "Nick Visutsithiwong",
-    role: "Software Developer",
-    url: "https://www.linkedin.com/in/nickvisut/",
-    img: "/about/nick_visutsithiwong.png",
+    url: "https://www.linkedin.com/in/mattgianni/",
+    img: "/about/mat_gianni.png",
   },
   {
     name: "Iryna Trush",
@@ -67,16 +62,55 @@ const member_list = [
     img: "/about/iryna_trush.png",
   },
   {
-    name: "Pablo Gomez Echegaray",
+    name: "Giovanni Rojas",
     role: "Software Developer",
-    url: "",
-    img: "/about/pablo-gomez-echegaray.jpg",
+    url: "https://www.linkedin.com/in/giorojas/",
+    img: "/about/giovanni_rojas.png",
   },
   {
-    name: "Robby Taine",
-    role: "Data Analyst",
-    url: "",
-    img: "",
+    name: "Jackson Tran",
+    role: "Software Developer",
+    url: "https://www.linkedin.com/in/jacksontran1/",
+    img: "/about/jackson_tran.png",
+  },
+];
+const pastContributors = [
+  {
+    name: "Hamilton Truong",
+    link: "https://www.linkedin.com/in/hamiltontruong/",
+  },
+  {
+    name: "Megan Vyenielo",
+    link: "https://www.linkedin.com/in/megan-vyenielo-swe/",
+  },
+  { name: "Louis Kim", link: "https://www.linkedin.com/in/louiskim010/" },
+  { name: "Joshua Lee", link: "https://www.linkedin.com/in/joshua-lee-sf/" },
+  { name: "Bruna Lee", link: "https://www.linkedin.com/in/brunalee/" },
+  {
+    name: "PJ Ekhator",
+    link: "https://www.linkedin.com/in/oghogho-ekhator-osagiede-ma/",
+  },
+  { name: "Bai Pai", link: "https://www.linkedin.com/in/baipai/" },
+  {
+    name: "Liv Cornfield",
+    link: "https://www.linkedin.com/in/olivia-cornfield-959455a1/",
+  },
+  {
+    name: "Kimberly Kono",
+    link: "https://www.linkedin.com/in/kimberlykonophd/",
+  },
+  {
+    name: "Pablo Gomez Echegaray",
+    link: "https://www.linkedin.com/in/pablogomezechegaray/",
+  },
+  { name: "Robby Taine", link: "https://www.linkedin.com/in/rtaine/" },
+  {
+    name: "Nick Visutsithiwong",
+    link: "https://www.linkedin.com/in/nickvisut/",
+  },
+  {
+    name: "Melinda Kreuser",
+    link: "https://www.linkedin.com/in/melindakreuser/",
   },
 ];
 
@@ -120,21 +154,23 @@ const About = () => {
                     target="_blank"
                     className="text-blue-500 hover:underline"
                   >
-                  SF Civic Tech
-                  </a>{" "}(formerly Code for San Francisco). Our team includes 
-                  teachers, designers, engineers, researchers, and community members, 
-                  all working together to make it easier for San Francisco residents 
+                    SF Civic Tech
+                  </a>{" "}
+                  (formerly Code for San Francisco). Our team includes teachers,
+                  designers, engineers, researchers, and community members, all
+                  working together to make it easier for San Francisco residents
                   to support public schools.
                 </p>
               </section>
               <section>
                 <h2 className="text-xl font-bold">Our Mission</h2>
                 <p>
-                  We aim to build stronger communities by connecting people with their 
-                  local schools. Even if you don&#39;t have children attending, you can 
-                  still be a part of the school community if you live near one. We&#39;ve 
-                  heard from many San Francisco residents who want to help but don&#39;t 
-                  always feel connected to their neighborhood schools.
+                  We aim to build stronger communities by connecting people with
+                  their local schools. Even if you don&#39;t have children
+                  attending, you can still be a part of the school community if
+                  you live near one. We&#39;ve heard from many San Francisco
+                  residents who want to help but don&#39;t always feel connected
+                  to their neighborhood schools.
                 </p>
               </section>
               <section>
@@ -142,38 +178,51 @@ const About = () => {
                 <p className="pb-4">
                   We welcome volunteers from all backgrounds, including:
                 </p>
-                <ul className="list-disc flex flex-col pl-6 gap-4 max-md:text-sm">
-                  <li><strong>Tech professionals</strong> who want to support STEM education.</li>                  
-                  <li><strong>Former teachers</strong> who are transitioning to new careers 
-                    but still want to stay connected.</li>    
-                  <li><strong>Parents</strong> whose children have graduated but want to give 
-                    back to local schools.</li>    
-                  <li><strong>Alumni</strong> who have returned to San Francisco and want to 
-                    reconnect with schools.</li>    
-                  <li>Anyone who believes in the power of education to change lives.</li>                    
+                <ul className="flex list-disc flex-col gap-4 pl-6 max-md:text-sm">
+                  <li>
+                    <strong>Tech professionals</strong> who want to support STEM
+                    education.
+                  </li>
+                  <li>
+                    <strong>Former teachers</strong> who are transitioning to
+                    new careers but still want to stay connected.
+                  </li>
+                  <li>
+                    <strong>Parents</strong> whose children have graduated but
+                    want to give back to local schools.
+                  </li>
+                  <li>
+                    <strong>Alumni</strong> who have returned to San Francisco
+                    and want to reconnect with schools.
+                  </li>
+                  <li>
+                    Anyone who believes in the power of education to change
+                    lives.
+                  </li>
                 </ul>
               </section>
               <section>
                 <h2 className="text-xl font-bold">How We Help</h2>
                 <p>
-                  Support SF Schools is designed to bring you closer to your 
-                  neighborhood schools while helping meet their needs. Our beta version 
-                  currently focuses on connecting volunteers with 105 public elementary, middle, 
-                  and high schools in San Francisco.
+                  Support SF Schools is designed to bring you closer to your
+                  neighborhood schools while helping meet their needs. Our beta
+                  version currently focuses on connecting volunteers with 105
+                  public elementary, middle, and high schools in San Francisco.
                 </p>
               </section>
               <section>
                 <h2 className="text-xl font-bold">Get Involved</h2>
                 <p>
-                  Our website is still in beta, and we&#39;re always open to feedback. If you&#39;re 
-                  interested in joining us, we meet on Zoom every Wednesday evening and are always 
-                  looking for more volunteers.
+                  Our website is still in beta, and we&#39;re always open to
+                  feedback. If you&#39;re interested in joining us, we meet on
+                  Zoom every Wednesday evening and are always looking for more
+                  volunteers.
                 </p>
               </section>
             </div>
 
             <section>
-                <h2 className="text-xl font-bold">Meet our team:</h2>
+              <h2 className="text-xl font-bold">Meet our team:</h2>
             </section>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-8">
               {member_list.map((member) => (
@@ -224,24 +273,49 @@ const About = () => {
                 </a>
               ))}
             </div>
+            <div className="my-4 text-center">
+              <h2 className="text-lg font-bold">Our Partner:</h2>
+              <div className="mt-2">
+                <Image
+                  src="/about/ed_fund_logo.png"
+                  alt="Ed Fund Logo"
+                  className="mx-auto h-auto max-w-full"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            </div>
             <div>
               <h2 className="text-center text-lg font-medium text-[#8338EC] md:text-xl">
-                With thanks to the following folks for their past contribution
+                With thanks to the following folks for their past contributions:
               </h2>
-              <p className="text-center font-bold text-[#3A86FF] max-md:text-sm">
-                Hamilton Truong, Megan Vyenielo, Louis Kim, Joshua Lee, Bruna
-                Lee, PJ Ekhator, Bai Pai, Liv Cornfield, Kimberly Kono
-              </p>
+              <div className="mt-8">
+                <div className="text-center">
+                  {pastContributors.map((contributor, index) => (
+                    <span key={index}>
+                      <a
+                        href={contributor.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#3A86FF] hover:underline"
+                      >
+                        {contributor.name}
+                      </a>
+                      {index < pastContributors.length - 1 && ", "}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-              <footer>
-                <button
-                  onClick={handleOpen}
-                  className="text-blue-500 hover:underline"
-                >
-                  Contact Us
-                </button>
-                {showContactForm && <ContactUs handleClose={handleClose} />}
-              </footer>
+            <footer>
+              <button
+                onClick={handleOpen}
+                className="text-black-500 hover:underline"
+              >
+                Contact Us
+              </button>
+              {showContactForm && <ContactUs handleClose={handleClose} />}
+            </footer>
           </div>
         </div>
       </main>

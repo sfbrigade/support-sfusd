@@ -16,6 +16,7 @@ import SEO from "@/components/SEO";
 import { SchoolType } from "@prisma/client";
 import FilterBySchoolType from "../components/FilterBySchoolType";
 
+
 export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
     include: {
@@ -31,8 +32,12 @@ type Props = {
 };
 
 const schoolCardPlaceholderTitle = "Select a School";
-const schoolCardPlaceholderText =
-  "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
+
+// School Year Version. Uncomment below when school starts in the Fall
+const schoolCardPlaceholderText = "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
+
+// Summer Version. Comment-out below when school starts in the Fall
+//const schoolCardPlaceholderText = "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
 
 const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
@@ -43,6 +48,9 @@ const Map: React.FC<Props> = (props) => {
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
+
+  // Mobile drawer state  
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
@@ -118,6 +126,10 @@ const Map: React.FC<Props> = (props) => {
     const isChecked = e.target.checked;
     setPriorityFilter(isChecked);
     sessionStorage.setItem("priorityFilter", JSON.stringify(isChecked));
+    if (isChecked) {
+      setSelectedSchoolTypes([]); // Unselect "Show All"
+      sessionStorage.setItem("selectedSchoolTypes", JSON.stringify([]));
+    }
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
@@ -168,13 +180,104 @@ const Map: React.FC<Props> = (props) => {
       <div className="flex h-full flex-col bg-[#D7F1FF]">
         {/* High Priority Modal */}
         <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
+        
+        {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
+        <div className="flex flex-col gap-2 px-4 pt-4 md:hidden">
+          <div className="flex items-center gap-2">
+            <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+            <button
+              className="ml-2 flex items-center justify-center bg-[#D7F1FF] text-[#000] p-2"
+              aria-label="Open filters"
+              onClick={() => setMobileFiltersOpen(true)}
+            >
+              {/* Replace with your filter icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path d="M18.75 12.75h1.5a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM12 6a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 6ZM12 18a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 18ZM3.75 6.75h1.5a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM5.25 18.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 0 1.5ZM3 12a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 3 12ZM9 3.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM12.75 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM9 15.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
+              </svg>
 
-        {/* Top Bar with Search and Toggle Button */}
-        <div className="top-16 z-10 flex justify-center gap-2 border-t-4 border-[#D7F1FF] bg-[#D7F1FF] pt-1 max-md:sticky max-md:w-full max-md:flex-col max-md:px-4 max-md:pb-4 md:hidden md:justify-end">
-          <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+
+            </button>
+          </div>
           <ToggleButton isMapView={isMapView} toggleView={setToggle} />
         </div>
 
+        {/* MOBILE ONLY: Filters Drawer */}
+        <div
+          className={`fixed left-0 right-0 bottom-0 z-40 bg-white rounded-t-2xl shadow-lg transition-transform duration-300 md:hidden ${
+            mobileFiltersOpen ? "translate-y-0" : "translate-y-full"
+          }`}
+          style={{ minHeight: "50vh" }}
+        >
+          <div className="flex flex-col gap-4 p-4">
+            <div className="flex justify-between items-center mb-2">
+              <h2 className="text-lg font-semibold">Filter Schools</h2>
+              <button
+                className="text-gray-500 text-xl"
+                onClick={() => setMobileFiltersOpen(false)}
+                aria-label="Close filters"
+              >
+                &times;
+              </button>
+            </div>
+            {/* School Type Filter - stacked */}
+            <div className="flex flex-col gap-4">
+              <FilterBySchoolType
+                selectedSchoolTypes={selectedSchoolTypes}
+                setSelectedSchoolTypes={setSelectedSchoolTypes}
+                handleSchoolTypeSelection={handleSchoolTypeSelection}
+              />
+            </div>
+             {/* Priority Filter - stacked below */}
+            <div className="flex-col flex mt-4">
+              <div className="flex justify-between items-center gap-2">
+                <div className="flex items-center">
+                <Image
+                  alt="High priority icon"
+                  src="/circle_priority.svg"
+                  width={19}
+                  height={20}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setModalIsOpen(true);
+                  }}
+                />
+                <label htmlFor="priority" className="text-base font-normal">Priority</label>
+                </div>
+                <div>
+                <input
+                  type="checkbox"
+                  id="priority"
+                  name="priority"
+                  onChange={handlePriorityChange}
+                  checked={priorityFilter}
+                  className="accent-orange-500"
+                />
+                </div>
+              </div>
+            </div>
+            {/* Reset and Apply Buttons - stacked at bottom */}
+            <div className="flex justify-between gap-4 mt-8">
+              <button
+                className="flex-1 rounded-full px-6 py-2 font-semibold"
+                style={{ backgroundColor: '#E7E7E7' }}
+                onClick={() => {
+                  setSelectedSchoolTypes([]);
+                  setPriorityFilter(false);
+                  setMobileFiltersOpen(false);
+                }}
+              >
+                Reset
+              </button>
+              <button
+                className="flex-1 rounded-full px-6 py-2 text-white font-semibold"
+                style={{ backgroundColor: '#3A86FF' }}
+                onClick={() => setMobileFiltersOpen(false)}
+              >
+                Apply Filters
+              </button>
+            </div>
+          </div>
+        </div>
         {/* Main Content Area */}
         <div
           className={`relative mx-auto flex h-auto flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-8 lg:w-10/12 2xl:w-2/3 ${isMapView ? " w-full flex-1" : ""}`}
@@ -182,7 +285,7 @@ const Map: React.FC<Props> = (props) => {
           <div className="flex h-full w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 md:grid md:w-auto md:flex-col">
             {/* School Card or Placeholder */}
             <div
-              className={`col-span-4 ${isMapView && selectedSchool ? "p-0" : "p-2 md:p-0"}  ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-50 m-4 flex h-fit items-center justify-center rounded-2xl bg-white md:static md:m-0 md:flex md:h-full`}
+              className={`col-span-4 ${isMapView && selectedSchool ? "p-0" : "p-2 md:p-0"}  ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-40 m-4 flex h-fit items-center justify-center rounded-2xl bg-white md:static md:m-0 md:flex md:h-full`}
             >
               {isMapView ? (
                 selectedSchool ? (
@@ -247,44 +350,42 @@ const Map: React.FC<Props> = (props) => {
             </div>
 
             {/* Map or List View */}
-            <div className="relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4">
-              <div className="flex justify-center gap-2 bg-[#D7F1FF] max-md:hidden md:justify-end">
-                <ToggleButton isMapView={isMapView} toggleView={setToggle} />
-              </div>
-              <div className="max-md:hidden">
-                <SearchBar
-                  onItemSelect={itemSelect}
-                  onSearch={handleSchoolSearch}
-                />
-              </div>
-
-              <div className="flex items-center justify-between gap-4">
-                <FilterBySchoolType
-                  selectedSchoolTypes={selectedSchoolTypes}
-                  setSelectedSchoolTypes={setSelectedSchoolTypes}
-                  handleSchoolTypeSelection={handleSchoolTypeSelection}
-                />
-                <div className="flex items-center justify-between gap-2">
-                  <Image
-                    alt="High priority icon"
-                    src="/circle_priority.svg"
-                    width={19}
-                    height={20}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setModalIsOpen(true);
-                    }}
-                    className="w-fit"
-                  ></Image>
-                  <label>Priority</label>
-                  <input
-                    type="checkbox"
-                    id="priority"
-                    name="priority"
-                    onChange={handlePriorityChange}
-                    checked={priorityFilter}
-                    className="border-black bg-transparent accent-orange-500"
+            <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
+              {/* DESKTOP ONLY: Top Bar with Search, Toggle, Map/List */}
+              <div className="hidden md:block px-6 py-6 bg-white rounded-2xl">
+                <div className="flex items-center gap-2">
+                  <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+                  <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+                  {/* Add your Map/List toggle here if needed */}
+                </div>
+                {/* DESKTOP ONLY: Filters Row */}
+                <div className="flex flex-row items-center gap-x-6 mt-4">
+                  <FilterBySchoolType
+                    selectedSchoolTypes={selectedSchoolTypes}
+                    setSelectedSchoolTypes={setSelectedSchoolTypes}
+                    handleSchoolTypeSelection={handleSchoolTypeSelection}
                   />
+                  <div className="flex items-center gap-2 md:ml-auto">
+                    <Image
+                      alt="High priority icon"
+                      src="/circle_priority.svg"
+                      width={19}
+                      height={20}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setModalIsOpen(true);
+                      }}
+                    />
+                    <label htmlFor="priority" className="text-sm">Priority</label>
+                    <input
+                      type="checkbox"
+                      id="priority"
+                      name="priority"
+                      onChange={handlePriorityChange}
+                      checked={priorityFilter}
+                      className="mr-4 border-black bg-transparent accent-orange-500"
+                    />
+                  </div>
                 </div>
               </div>
 

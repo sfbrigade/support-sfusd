@@ -6,17 +6,16 @@ interface FilterBySchoolTypeProps {
   setSelectedSchoolTypes: React.Dispatch<React.SetStateAction<SchoolType[]>>;
   handleSchoolTypeSelection: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
 export default function FilterBySchoolType({
   selectedSchoolTypes,
   setSelectedSchoolTypes,
   handleSchoolTypeSelection,
 }: FilterBySchoolTypeProps) {
   return (
-    <div className="flex justify-center gap-4">
-      <div
-        className={`flex justify-center gap-1 rounded-md p-1  ${selectedSchoolTypes.length === 0 ? "bg-[#D7F1FF]" : ""}`}
-      >
-        <label>Show All</label>
+    <div className="flex flex-col gap-4 md:flex-row md:gap-6">
+      <div className="flex justify-between items-center">
+        <label htmlFor="all">Show All</label>
         <input
           type="checkbox"
           id="all"
@@ -24,13 +23,11 @@ export default function FilterBySchoolType({
           value="all"
           onChange={() => setSelectedSchoolTypes([])}
           checked={selectedSchoolTypes.length === 0}
-          className="border-black bg-transparent "
+          className="accent-[#3A86FF]"
         />
       </div>
-      <div
-        className={`flex justify-center gap-1 rounded-md p-1 ${selectedSchoolTypes.includes(SchoolType.elementary) ? "bg-[#D7F1FF]" : ""}`}
-      >
-        <label>Elementary</label>
+      <div className="flex justify-between items-center">
+        <label htmlFor="elementary">Elementary</label>
         <input
           type="checkbox"
           id="elementary"
@@ -38,13 +35,11 @@ export default function FilterBySchoolType({
           value={SchoolType.elementary}
           onChange={handleSchoolTypeSelection}
           checked={selectedSchoolTypes.includes(SchoolType.elementary)}
-          className="border-black bg-transparent "
+          className="accent-[#3A86FF]"
         />
       </div>
-      <div
-        className={`flex justify-center gap-1 rounded-md p-1 ${selectedSchoolTypes.includes(SchoolType.middle) ? "bg-[#D7F1FF]" : ""}`}
-      >
-        <label>Middle</label>
+      <div className="flex justify-between items-center">
+        <label htmlFor="middle">Middle</label>
         <input
           type="checkbox"
           id="middle"
@@ -52,13 +47,11 @@ export default function FilterBySchoolType({
           value={SchoolType.middle}
           onChange={handleSchoolTypeSelection}
           checked={selectedSchoolTypes.includes(SchoolType.middle)}
-          className="border-black bg-transparent "
+          className="accent-[#3A86FF]"
         />
       </div>
-      <div
-        className={`flex justify-center gap-1 rounded-md p-1 ${selectedSchoolTypes.includes(SchoolType.high) ? "bg-[#D7F1FF]" : ""}`}
-      >
-        <label>High</label>
+      <div className="flex justify-between items-center">
+        <label htmlFor="high">High</label>
         <input
           type="checkbox"
           id="high"
@@ -66,7 +59,7 @@ export default function FilterBySchoolType({
           value={SchoolType.high}
           onChange={handleSchoolTypeSelection}
           checked={selectedSchoolTypes.includes(SchoolType.high)}
-          className="border-black bg-transparent"
+          className="accent-[#3A86FF]"
         />
       </div>
     </div>
