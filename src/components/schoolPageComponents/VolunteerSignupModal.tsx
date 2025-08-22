@@ -93,7 +93,7 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
     };
 
     const handleSubmit = () => {
-        if (formData.whyInterested && formData.opportunities.length > 0 && formData.name && formData.email) {
+        if (formData.whyInterested && formData.opportunities && formData.opportunities.length > 0 && formData.name && formData.email) {
             onSubmit(formData as VolunteerFormData);
         }
     };
@@ -274,7 +274,7 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
                                 onClick={handleNext}
                                 disabled={
                                     (currentPage === 1 && !formData.whyInterested) || 
-                                    (currentPage === 2 && formData.opportunities.length == 0)
+                                    (currentPage === 2 && (formData.opportunities ?? []).length === 0)
                                 }
                                 className="focus:shadow-outline w-24 rounded bg-blue-500
                                 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed"
