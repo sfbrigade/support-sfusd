@@ -6,7 +6,8 @@ const WHY_INTERESTED_OPTIONS = {
     LIVE_NEARBY: "I live nearby, and would like to help if I can be helpful",
     ALUMNI: "I am an alumni of the school",
     PARENT_GUARDIAN: "I am the parent/ guardian of a current student",
-    SPECIFIC_INTEREST: "There is something specific about {schoolName} that I'm interested in"
+    SPECIFIC_INTEREST: "There is something specific about {schoolName} that I'm interested in",
+    OTHER: "Other"
 } as const;
 
 const VOLUNTEER_OPPORTUNITY_OPTIONS = {
@@ -112,7 +113,7 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
                     {Object.entries(WHY_INTERESTED_OPTIONS).map(([key, text]) => (
                         <label key={key} className="flex items-center gap-3 cursor-pointer">
                             <input 
-                                type="checkbox"
+                                type="radio"
                                 name="whyInterested"
                                 value={key}
                                 checked={formData.whyInterested === key}
@@ -141,7 +142,7 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
               {Object.entries(VOLUNTEER_OPPORTUNITY_OPTIONS).map(([key, text]) => (
                 <label key={key} className="flex items-center gap-3 cursor-pointer">
                   <input
-                    type="checkbox"
+                    type="radio"
                     name="opportunities"
                     value={key}
                     checked={formData.opportunities === key}
