@@ -61,7 +61,7 @@ export default function SearchBar<DropdownItemType = any>({
   };
 
   return (
-    <div className="relative mr-4 w-96">
+    <div className="relative">
       <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center">
         <SearchIcon className="fill-[#949494]" height="24" width="24" />
       </div>

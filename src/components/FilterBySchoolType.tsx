@@ -7,14 +7,20 @@ interface FilterBySchoolTypeProps {
   handleSchoolTypeSelection: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
+const schoolTypes = [
+  { label: "Elementary", value: SchoolType.elementary},
+  { label: "Middle", value: SchoolType.middle},
+  { label: "High", value: SchoolType.high}
+]
+
 export default function FilterBySchoolType({
   selectedSchoolTypes,
   setSelectedSchoolTypes,
   handleSchoolTypeSelection,
 }: FilterBySchoolTypeProps) {
   return (
-    <div className="flex flex-col gap-4 md:flex-row md:gap-6">
-      <div className="flex justify-between items-center">
+    <div className="flex flex-col gap-4 md:flex-row">
+      <div className="flex justify-between items-center gap-2">
         <label htmlFor="all">Show All</label>
         <input
           type="checkbox"
@@ -26,42 +32,21 @@ export default function FilterBySchoolType({
           className="accent-[#3A86FF]"
         />
       </div>
-      <div className="flex justify-between items-center">
-        <label htmlFor="elementary">Elementary</label>
-        <input
-          type="checkbox"
-          id="elementary"
-          name="elementary"
-          value={SchoolType.elementary}
-          onChange={handleSchoolTypeSelection}
-          checked={selectedSchoolTypes.includes(SchoolType.elementary)}
-          className="accent-[#3A86FF]"
-        />
-      </div>
-      <div className="flex justify-between items-center">
-        <label htmlFor="middle">Middle</label>
-        <input
-          type="checkbox"
-          id="middle"
-          name="middle"
-          value={SchoolType.middle}
-          onChange={handleSchoolTypeSelection}
-          checked={selectedSchoolTypes.includes(SchoolType.middle)}
-          className="accent-[#3A86FF]"
-        />
-      </div>
-      <div className="flex justify-between items-center">
-        <label htmlFor="high">High</label>
-        <input
-          type="checkbox"
-          id="high"
-          name="high"
-          value={SchoolType.high}
-          onChange={handleSchoolTypeSelection}
-          checked={selectedSchoolTypes.includes(SchoolType.high)}
-          className="accent-[#3A86FF]"
-        />
-      </div>
+
+      {schoolTypes.map(({ label, value }) => (
+        <div key={value} className="flex justify-between items-center gap-2">
+          <label htmlFor={value}>{label}</label>
+          <input
+            type="checkbox"
+            id={value}
+            name={value}
+            value={value}
+            onChange={handleSchoolTypeSelection}
+            checked={selectedSchoolTypes.includes(value)}
+            className="accent-[#3A86FF]"
+          />
+        </div>
+      ))}
     </div>
   );
 }

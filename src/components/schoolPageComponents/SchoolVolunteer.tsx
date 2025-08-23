@@ -39,32 +39,33 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
         right={
           <div className="flex flex-col gap-4">
             <h1 className="text-2xl font-medium text-blue-500 md:text-5xl">
-              Volunteer today!
+              Ways to Volunteer
             </h1>
             <p>
-              {school.name} values community volunteers and has volunteer needs
-              and opportunities throughout the school year. You can sign up to
-              volunteer through the San Francisco Ed Fund or fill out this form
-              to connect directly with the school.
+              Help where and when it works best for you. {school.name} values
+              all community volunteers and we’ve got volunteer roles that match
+              your skills and your schedule. You can sign up as a short-term/ after hours 
+              volunteer and we will help connect you with the school community, or
+              sign up as a recurring school day volunteer through the San Francisco Ed
+              Fund.
             </p>
             <div className="flex gap-2">
               <button
                 onClick={openModal}
-                className="rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8"
+                className="rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8 text-center"
               >
-                Fill out form
+                Short term/ After hours volunteer
               </button>
-
               <Link
                 href="https://sfedfund.org/become-a-volunteer/"
                 target="_blank"
                 className={
                   "plausible-event-name=Clicked+EdFund+" +
                   school.name.replace(/\s/g, "+") +
-                  " rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8"
+                  " rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8 text-center"
                 }
               >
-                Contact SF Ed Fund
+                Recurring school day volunteer
               </Link>
             </div>
           </div>

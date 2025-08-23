@@ -24,7 +24,7 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
   toggleView,
 }) => {
   return (
-    <label className="w-inherit relative inline-block h-[38px] flex-grow rounded-md bg-[#CCD8DE]">
+    <label className="w-full relative inline-block h-[38px] rounded-md bg-[#CCD8DE]">
       <div className="absolute left-0 top-0 flex h-full w-full items-center justify-around">
         <p className="flex items-center justify-center gap-1">
           <Image
