@@ -20,7 +20,7 @@ const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       style={customStyles}
-      className="absolute left-1/2 top-1/2 w-4/6 -translate-x-1/2 -translate-y-1/2 transform rounded-md bg-white p-5 shadow-lg sm:w-2/5"
+      className="absolute left-1/2 top-1/2 w-4/6 -translate-x-1/2 -translate-y-1/2 transform rounded-md bg-white p-5 shadow-lg sm:w-3/5"
     >
       <div className="flex flex-col gap-4">
         <div className="flex w-full items-center justify-between">
