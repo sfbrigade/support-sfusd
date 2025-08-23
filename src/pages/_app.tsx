@@ -7,6 +7,7 @@ import { MapProvider } from "../contexts/MapContext";
 import posthog from 'posthog-js';
 import { useEffect } from "react";
 import { PostHogProvider } from 'posthog-js/react'
+import { ToastProvider } from "@/components/Toast/ToastContext";
 
 const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka" });
 const lato = Lato({
@@ -35,17 +36,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Support SF Schools</title>
       </Head>
       <MapProvider>
-        
-        <Layout>
-          <div className={`${fredoka.variable} ${lato.variable} h-full`}>
-            <PostHogProvider client={ posthog}> 
-            <Component {...pageProps} />
-            </PostHogProvider>
-          </div>
-        </Layout>        
-      
-    </MapProvider>
-  </>
+        <ToastProvider>
+          <Layout>
+            <div className={`${fredoka.variable} ${lato.variable} h-full`}>
+                <Component {...pageProps} />
+            </div>
+          </Layout>
+        </ToastProvider>
+       
+      </MapProvider>
+    </>
   );
 }
 

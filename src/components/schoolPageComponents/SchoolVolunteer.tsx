@@ -4,8 +4,24 @@ import BannerWrapper from "./BannerWrapper";
 import Link from "next/link";
 import { blurDataURL } from "@/lib/imageConfig";
 import VolunteerList from "./VolunteerList";
+import VolunteerSignupModal from "./VolunteerSignupModal";
+import React, { useState } from "react";
+import { useToast } from "../Toast/ToastContext";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { showToast } = useToast();
+
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
+
+  const handleFormSubmit = (data: any) => {
+    console.log("Form submitted:", data);
+    showToast("Volunteer form submitted successfully! Thank you!");
+    closeModal();
+    // TODO: Add success Toast
+  }
+
   return (
     <section id="volunteer" className="flex flex-col gap-10">
       <BannerWrapper
@@ -34,17 +50,12 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
               Fund.
             </p>
             <div className="flex gap-2">
-              <Link
-                href={school.volunteer_form_url ?? ""}
-                target="_blank"
-                className={
-                  "plausible-event-name=Clicked+VolunteerForm+" +
-                  school.name.replace(/\s/g, "+") +
-                  " rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8 text-center"
-                }
+              <button
+                onClick={openModal}
+                className="rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8 text-center"
               >
                 Short term/ After hours volunteer
-              </Link>
+              </button>
               <Link
                 href="https://sfedfund.org/become-a-volunteer/"
                 target="_blank"
@@ -61,6 +72,12 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
         }
       />
       <VolunteerList school={school} fullCard={true} />
+      <VolunteerSignupModal
+        isOpen={modalIsOpen}
+        onClose={closeModal}
+        school={school}
+        onSubmit={handleFormSubmit}
+      />
     </section>
   );
 };
