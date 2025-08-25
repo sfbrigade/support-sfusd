@@ -6,6 +6,7 @@ import { blurDataURL } from "@/lib/imageConfig";
 import VolunteerList from "./VolunteerList";
 import VolunteerSignupModal from "./VolunteerSignupModal";
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { useToast } from "../Toast/ToastContext";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
@@ -16,10 +17,32 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
   const closeModal = () => setModalIsOpen(false);
 
   const handleFormSubmit = (data: any) => {
-    console.log("Form submitted:", data);
-    showToast("Volunteer form submitted successfully! Thank you!");
-    closeModal();
-    // TODO: Add success Toast
+    if (!isEmail(data.email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+    emailjs
+      .send("service_itlkzak", "template_ee6s74u", data, {
+        publicKey: "10-NnnxJFw9zLmYPf",
+      })
+      .then(
+        () => {
+          showToast("Volunteer form submitted successfully! Thank you!");
+          closeModal();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
+  }
+
+  function isEmail(emailInput: string) {
+    let regEmail =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!regEmail.test(emailInput)) {
+      return false;
+    }
+    return true;
   }
 
   return (
