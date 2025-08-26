@@ -23,6 +23,7 @@
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Mail a check made out to Balboa High School and mail it to:\nBalboa High School\n1000 Cayuga Avenue\nSan Francisco, CA 94112",
     "testimonial": "\"We are the only high school to have an on-campus clinic. I find it really convenient, because my doctor is like across town from where I live, and I have to miss a whole day of school when I'm sick. Our clinic is COMPLETELY free, counselors, medicine, sex ed.\"",
+    "testimonial_author": "",
     "principal": "Dr. Catherine Arenson",
     "instagram_url": "http://www.instagram.com/balboahs",
     "facebook_url": "https://www.facebook.com/pages/Balboa-High-School-California/140869085980447 ",
@@ -73,13 +74,6 @@
     ],
     "programs": [
       {
-        "name": "Career-based Mentoring",
-        "details": "All of Bal's Pathway programs need career-based mentoring, such as being a guest speaker",
-        "url": "",
-        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
-        "category": "volunteer"
-      },
-      {
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
@@ -89,6 +83,13 @@
       {
         "name": "Event Volunteers",
         "details": "Provide support for school-sponsored events such as shows and field trips",
+        "url": "",
+        "img": "/stock-images/HS/event/pexels-jmark-301987.webp",
+        "category": "volunteer"
+      },
+      {
+        "name": "Career-based Mentoring",
+        "details": "All of Bal's Pathway programs need career-based mentoring, such as being a guest speaker",
         "url": "",
         "img": "/stock-images/HS/mentoring/pexels-vanessa-loring-7868884.webp",
         "category": "volunteer"
@@ -141,7 +142,7 @@
     "donation_url": "https://www.paypal.com/donate/?hosted_button_id=QPPWNFC966MYQ",
     "donation_text": "Donate to Burton's PTSA. All of your donation goes directly to programs benefitting teachers an students!",
     "testimonial": "\"I like my teachers because they really care about me and they’re always willing to go an extra mile for me when I need it.\"",
-    "testimonial_author": "Daniela Simental, student",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/jwMX9zSxaA0?si=ch5T8GWlPJCxJHGz&amp;start=192",
     "noteable_video": "https://www.youtube.com/embed/jwMX9zSxaA0?si=bL4VMGrxRQ_xipUf",
     "principal": "Suniqua Thomas",
@@ -197,19 +198,19 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
+        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
-        "details": "Provide students with mentoring, career insight and readiness",
+        "details": "Provide students with mentoring, career insight, and readiness",
         "url": "",
         "img": "/stock-images/HS/mentoring/pexels-thisisengineering-3861964.webp",
         "category": "volunteer"
@@ -259,6 +260,7 @@
     "volunteer_form_url": "https://docs.google.com/forms/d/e/1FAIpQLSecfLxlYgdHcs4vZLtW-V8CKVT38kY4rc7qqb5ocj-X9J3jLQ/viewform",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Mail a check made out to Downtown High School and mail it to:\nDowntown High School\n693 Vermont St.\nSan Francisco, CA 94107",
+    "testimonial_author": "",
     "principal": "Todd Williams",
     "instagram_url": "www.instagram.com/downtown_hs",
     "website_url": "https://www.sfusd.edu/school/downtown-high-school",
@@ -311,21 +313,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ludawigakwana-2378209.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
+        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-zen-chung-5529955.webp",
+        "img": "/stock-images/HS/mentoring/pexels-bertellifotografia-15380335.webp",
         "category": "volunteer"
       },
       {
@@ -367,7 +369,7 @@
     "donation_url": "https://www.galileoptsa.org/donation-form",
     "donation_text": "Donate to Galileo's PTSA. Donations support teacher/classroom stipends, educational enrichment grants, community events, World Party, and student leadership.",
     "testimonial": "\"I like my teachers because they're very understanding and very supportive. I take some cool classes such as health academy, which is very interesting because we got to learn a lot of things related to medical field ... and we get to visit hospitals.\"",
-    "testimonial_author": "Senior in 2021 - Romaissa Khaldi",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/KkDW52FEdsg?si=MCUnI9xwh_PhhchA&amp;start=170",
     "noteable_video": "https://www.youtube.com/embed/KkDW52FEdsg?si=lsyO4inn548P7bTE",
     "principal": "Ambar Panjabi",
@@ -421,23 +423,23 @@
     "programs": [
       {
         "name": "Academic After-School Tutors (Futurama)",
-        "details": "Help students at Galileo with afterschool Math, Science, English, Social Studies tutoring.",
+        "details": "Help students at Galileo with afterschool Math, Science, English, and Social Studies tutoring.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ekrulila-2292837.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Remote Graphic Design (w/ PTSA)",
         "details": "Support Galileo's online PTSA presence through remote-friendly design tasks!",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
+        "img": "/stock-images/HS/tutoring/pexels-liza-summer-6347902.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer (with PTSA) ",
         "details": "Help Galileo's PTSA organize Galileo-unique events like World Party and with projects for school beautification.",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-vanessa-garcia-6325984.webp",
+        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
         "category": "volunteer"
       },
       {
@@ -472,7 +474,7 @@
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Mail a check made out to Ida B. Wells High School and mail it to:\nIda B. Wells\n1099 Hayes St.\nSan Francisco, CA 94117",
     "testimonial": "\"I love this school the teachers are awesome and the students are great!!! I graduated from here on time!! And I was behind like 150 credits and caught up within a year!! Thank you Ida b wells\"",
-    "testimonial_author": "Reyanna L.",
+    "testimonial_author": "",
     "principal": "Katie Pringle",
     "instagram_url": "https://www.instagram.com/sf_idabwellshs",
     "facebook_url": "https://www.facebook.com/pages/Ida-B-Wells-Continuation-High-School/1920936394824346",
@@ -526,14 +528,14 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472796.webp",
+        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
         "category": "volunteer"
       },
       {
@@ -575,6 +577,7 @@
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Mail a check made out to Independence High School and mail it to:\nIndependence High School\n1350 7th Ave\nSan Francisco, CA 94122\n",
     "testimonial": "\"I've met some of the most amazing, resilient people, grown, and had an amazing time all in all----this school is truly a hidden gem in the school system.\"",
+    "testimonial_author": "",
     "principal": "Anastasia (Anna) Klafter",
     "instagram_url": "https://www.instagram.com/sfindependence/",
     "facebook_url": "https://www.facebook.com/sfindependence/",
@@ -628,14 +631,14 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-filirovska-8250359.webp",
+        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
+        "img": "/stock-images/HS/event/pexels-filirovska-8250359.webp",
         "category": "volunteer"
       },
       {
@@ -677,6 +680,7 @@
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Mail a check made out to SF Interntional High School and mail it to:\nSF International High School\n655 De Haro St.\nSan Francisco, CA 94107\n",
     "testimonial": "\"I like everything about my school, we all have the same experience that makes us be a good community, we are all English learners with big goals. Our school is small and we receive a lot of attention from the teachers that every day pushes us to be a great student.\"",
+    "testimonial_author": "",
     "principal": "Nick Chan",
     "instagram_url": "http://www.instagram.com/sfihuskies",
     "website_url": "https://www.sfusd.edu/school/san-francisco-international-high-school",
@@ -729,21 +733,21 @@
         "name": "Daytime classroom support",
         "details": "Academic support for students during class",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-becerragoveaphoto-5934962.webp",
+        "img": "/stock-images/HS/mentoring/pexels-mikhail-nilov-9159042.webp",
         "category": "volunteer"
       },
       {
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8199666.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-mikhail-nilov-9159042.webp",
+        "img": "/stock-images/HS/mentoring/pexels-vanessa-loring-7868884.webp",
         "category": "volunteer"
       },
       {
@@ -778,6 +782,7 @@
     "donation_url": "https://smallschoolsforequity.org/donate/",
     "donation_text": "Donate to June Jordan on the Small Schools for Equity website. All of your donation goes directly to programs benefitting teachers and youth!",
     "testimonial": "\"June Jordan is a breath of fresh air myself and many others. There is a strong and immediate sense of community and family. The school is aimed towards helping students, specifically of Latinx or African American descent, thrive in all aspects of a academic scholar. Most schools are tied strictly towards academics but June Jordan has a different approach. They acknowledge the fact that a single being and their destiny should not be overlooked by a grade book. We build leaders at this school, we build demonstrators, organizers, and creators.\"",
+    "testimonial_author": "",
     "principal": "Amanda Chui",
     "instagram_url": "https://www.instagram.com/officialjjse",
     "facebook_url": "https://www.facebook.com/JuneJordanSchoolforEquity",
@@ -831,21 +836,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-jmark-301987.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8199666.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
+        "img": "/stock-images/HS/event/pexels-jmark-301987.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-mikhail-nilov-9159042.webp",
+        "img": "/stock-images/HS/mentoring/pexels-boris-pavlikovsky-7715536.webp",
         "category": "volunteer"
       }
     ]
@@ -875,7 +880,7 @@
     "donation_url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=RHY6FMNAJX8EE&source=url&ssrt=1713743821077",
     "donation_text": "Donate to Lincoln's PTSA.",
     "testimonial": "\"Here at Lincoln you've got tons of supportive staff and also you'll be open to major student leadership opportunities.\"",
-    "testimonial_author": "Kelly Wong, student",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/PfHdxukonSg?si=RvM3VjT_SAPSI0Sb&amp;start=225",
     "noteable_video": "https://www.youtube.com/embed/PfHdxukonSg?si=Q3d3ieVn2fdtD_Ka",
     "principal": "Sharimar Manalang",
@@ -931,21 +936,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ekrulila-2292837.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
         "category": "volunteer"
       },
       {
         "name": "Alumni Association",
         "details": "Support the association in their efforts to raise funds for a variety of school and student needs",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472796.webp",
+        "img": "/stock-images/HS/event/pexels-rdne-7414284.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-cottonbro-6694319.webp",
+        "img": "/stock-images/HS/mentoring/pexels-zen-chung-5529955.webp",
         "category": "volunteer"
       },
       {
@@ -987,6 +992,7 @@
     "volunteer_form_url": "https://forms.gle/PWzEnLfgVWxcMDRz5",
     "donation_url": "https://secure.givelively.org/donate/pta-california-congress-of-parents-teachers-students-inc-san-francisco-ca-8431854/lowell-ptsa-2023-2024-fundraising",
     "donation_text": "Donate to Lowell's PTSA. Your donation will fund grants for student organizations, clubs, and teachers. It will also fund college readiness, diversity and inclusion, wellness, and hospitality programs. Any remainder at the end of the school year will go into our rainy day fund for next year.",
+    "testimonial_author": "",
     "noteable_video": "https://www.youtube.com/embed/c4BiiF55SvU?si=9XB3PhXZAP3ooIZn",
     "principal": "Michael Jones",
     "instagram_url": "https://www.instagram.com/lowellhs/?hl=en",
@@ -1039,23 +1045,23 @@
     "programs": [
       {
         "name": "College Readiness Workshops",
-        "details": "Help support the PTSA's college readiness workshops for Lowell, providing essay writing advice, college-picking advice, and workshops.",
+        "details": "Help support the PTSA's college readiness workshops for Lowell, providing essay writing advice and college selection guidance.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jep-gambardella-7689760.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
-        "details": "Join a Lowell PTSA committee event as a community volunteer to help with occasional events (Beautification Day, Graduation, Dances) or even sign up to routinely help with Lowell's on campus bookstore!",
+        "details": "Join a Lowell PTSA committee as a community volunteer to help with occasional events (Beautification Day, Graduation, Dances) or help with the on-campus bookstore!",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
+        "img": "/stock-images/HS/event/pexels-alejandro-peralta-33843739-19595298.webp",
         "category": "volunteer"
       },
       {
         "name": "Remote (Website, Social Media, Newsletter)",
-        "details": "Help the PTSA maintain their online presence through remote social media, website, and newsletter maintenace!",
+        "details": "Help the PTSA maintain their online presence through remote social media, website, and newsletter  maintenance!",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLSd_ZykYI3GM9GZOVtnq2x4cnN6GmEwo0rBKhI3nfWwBexl65A/viewform",
-        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
+        "img": "/stock-images/HS/tutoring/pexels-liza-summer-6347902.webp",
         "category": "volunteer"
       },
       {
@@ -1091,7 +1097,7 @@
     "donation_url": "https://missionhigh.org/make-an-impact/",
     "donation_text": "Donate to the Mission High Foundation. The foundation supports educator grants, the Annual College Trip, the food and agriculture program, college preparation, and student wellness.",
     "testimonial": "\"I have never seen in other schools' teachers that worry a lot about the student...That’s the difference about Mission, the teachers genuinely want their students to succeed.\"",
-    "testimonial_author": "Nathaly Perez",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/cmNvxruXUG8?si=dpNJPOM768R3skBM",
     "principal": "Valerie Forero",
     "instagram_url": "https://www.instagram.com/missionhighfoundation/",
@@ -1146,21 +1152,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Event Volunteer",
         "details": "Provide support for school-sponsored events",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/mentoring/pexels-vanessa-garcia-6325984.webp",
+        "img": "/stock-images/HS/mentoring/pexels-bertellifotografia-15380335.webp",
         "category": "volunteer"
       },
       {
@@ -1194,7 +1200,7 @@
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Mail a check made out to John O'Connell High School to:\nJohn O'Connell High School\n2355 Folsom St.\nSan Francisco, CA, 94110",
     "testimonial": "“A few of the clubs that I participate in are: Black Student Union, Student Body, Yearbook, and a couple more. I really love my school. I really love how they support us unconditionally…”",
-    "testimonial_author": "Lonnie, student",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/dHSG-DS_Vko?si=xSmHawJ6IbiQX-rr&amp;start=231",
     "noteable_video": "https://www.youtube.com/embed/dHSG-DS_Vko?si=xlpYHFmZIBAkh4yd",
     "principal": "Amy Abero & Susan Ryan (Co-Principals)",
@@ -1250,21 +1256,21 @@
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/tutoring/pexels-mart-production-8472987.webp",
         "category": "volunteer"
       },
       {
         "name": "Healthy Eating Physical Activity (HEPA)",
         "details": "Support workshops and activities that promote health",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-ludawigakwana-2378209.webp",
+        "img": "/stock-images/HS/event/pexels-mastercowley-1153370.webp",
         "category": "volunteer"
       },
       {
         "name": "Career Prep and Mentoring",
         "details": "Provide students with mentoring, career insight and readiness",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/mentoring/pexels-vanessa-loring-7868884.webp",
         "category": "volunteer"
       },
       {
@@ -1300,7 +1306,7 @@
     "donation_url": "https://app.arts-people.com/index.php?donation=rasa",
     "donation_text": "Donate to SOTA's PTSA, which funds artists in residence on campus.",
     "testimonial": "\"We have specialized departments ... So it's the perfect school for any aspiring artist.\"",
-    "testimonial_author": "Ava, Student",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/gouN1t1GxE0?si=ovResdGqAYsklGlF",
     "noteable_video": "https://www.youtube.com/embed/zXcnXNEvjoo?si=7-tJ7DywSRThJMw8",
     "principal": "Stella Kim",
@@ -1356,21 +1362,21 @@
         "name": "Tutoring",
         "details": "Help tutor SOTA students in STEM subjects.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-mikhail-nilov-7731363.webp",
+        "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
         "category": "volunteer"
       },
       {
         "name": "Staff Appreciation Event Volunteer",
-        "details": "Support the PTSA show appreciation for staff and Artists-In-Residents both with in person distribution or remote video editing support!",
+        "details": "Support the PTSA in showing appreciation for staff and Artists-In-Residence with in-person distribution or remote video editing support!\n",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-tomfisk-17570645.webp",
+        "img": "/stock-images/HS/tutoring/pexels-liza-summer-6347902.webp",
         "category": "volunteer"
       },
       {
         "name": "Audition Day Volunteer",
         "details": "Support budding students, faculty, and parents during the SOTA audition process through physical audition day volunteering.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-lebele-18852481.webp",
+        "img": "/stock-images/HS/event/pexels-shvets-production-8929515.webp",
         "category": "volunteer"
       },
       {
@@ -1405,6 +1411,7 @@
     "volunteer_form_url": "https://docs.google.com/forms/d/1px5HE5JPNp5b5emzPVhadVDh6lRy2r_DWLbXxNvzNrA/edit",
     "donation_url": "https://www.paypal.com/paypalme/AcademySFatMcateer?country_x=US&locale_x=en_US",
     "donation_text": "Donate to the Academy's PTSA. Your donation is used to support teacher classroom needs, and student events like prom and field trips.",
+    "testimonial_author": "",
     "noteable_video": "https://drive.google.com/file/d/1GdVL6l4z1dCBDBfnwaRlIVvr9o_KxTLe/preview",
     "principal": "Hollie Mack",
     "instagram_url": "http://www.instagram.com/academywolvessf",
@@ -1457,23 +1464,23 @@
     "programs": [
       {
         "name": "Tutoring",
-        "details": "Support Academy students with STEM subjects with their afterschool program on a regular or ad-hoc basis.",
+        "details": "Support Academy students with STEM subjects during their afterschool program, on a regular or ad-hoc basis.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-diva-plavalaguna-6937836.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Culinary & Arts Mentor Volunteer",
-        "details": "Help provide real life skills to Academy students with culinary mentorship and creative expression within their afterschool program.",
+        "details": "Help provide real-life skills to Academy students with culinary mentorship and creative expression within their after-school program.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-emily-ranquist-493228-1205651.webp",
+        "img": "/stock-images/HS/mentoring/pexels-katerina-holmes-5907837.webp",
         "category": "volunteer"
       },
       {
         "name": "Remote Coding Teacher",
-        "details": "Help host afterschool, remote coding classes for The Academy students.",
+        "details": "Help host after-school, remote coding classes for The Academy students.",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jessicairoh-17527758.webp",
+        "img": "/stock-images/HS/mentoring/pexels-thisisengineering-3861964.webp",
         "category": "volunteer"
       },
       {
@@ -1508,7 +1515,7 @@
     "donation_url": "https://thurgood-marshall-academic-high-school-pto.square.site/",
     "donation_text": "Donate to Thurgood Marshall's PTSA",
     "testimonial": "“I liked this project because we got to practice English and the other person I was working with got to practice her Spanish.” - Darlin on the “Empathy Project” where native English speakers and English learners practice languages and learn from each other",
-    "testimonial_author": "Darlin",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/nUIBNpi3VTA?si=2mdebQexdqQuB-Ke",
     "noteable_video": "https://www.youtube.com/embed/NclnGjU3zJM?si=g9bnDzFsl3mvGRgM",
     "principal": "Sarah Ballard-Hanson",
@@ -1561,24 +1568,24 @@
     ],
     "programs": [
       {
-        "name": "Career Prep and Mentoring",
-        "details": "Provide students with mentoring, career insight and readiness",
-        "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jessicairoh-17527758.webp",
-        "category": "volunteer"
-      },
-      {
         "name": "Tutoring",
         "details": "Provide one-on-one academic support to students on a range of topics",
         "url": "",
-        "img": "/stock-images/HS/tutoring/pexels-jep-gambardella-7689760.webp",
+        "img": "/stock-images/HS/tutoring/pexels-karolina-grabowska-7692521.webp",
         "category": "volunteer"
       },
       {
         "name": "Family Services",
         "details": "Help ensure student families have access to basic services",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-filirovska-8250359.webp",
+        "img": "/stock-images/HS/event/pexels-cottonbro-6590920.webp",
+        "category": "volunteer"
+      },
+      {
+        "name": "Career Prep and Mentoring",
+        "details": "Provide students with mentoring, career insight and readiness",
+        "url": "",
+        "img": "/stock-images/HS/tutoring/pexels-jessicairoh-17527758.webp",
         "category": "volunteer"
       },
       {
@@ -1613,7 +1620,7 @@
     "donation_url": "https://www.paypal.com/donate/?hosted_button_id=NX4GK2S6GQAWN",
     "donation_text": "Donate to Wallenberg's PTSA. The PTSA aims to fund programs and events that benefit all Wallenberg students and teachers: building community, inclusion, and tolerance, sponsoring the Reflections Arts Program and Wallapalooza Art Festival, supporting technology and athletic programs, and honoring our teachers by providing them with stipends.",
     "testimonial": "\"I really like my teachers because they always want you to perform at your best ... I feel like Wallenberg is a great school for students who want to be in a small community where everyone knows each other and where students and teachers have greater relationships\"",
-    "testimonial_author": "Ryan",
+    "testimonial_author": "",
     "testimonial_video": "https://www.youtube.com/embed/rtSYrHOxN28?si=rEoQTInfas1UBk44",
     "noteable_video": "https://www.youtube.com/embed/rtSYrHOxN28?si=binBgRGAemfDKbzb",
     "principal": "Tanya Harris",
@@ -1669,18 +1676,18 @@
         "name": "Campus Cleanup",
         "details": "Help create a better environment for incoming and current Wallenberg students through cleaning up the gardens and picking up trash.",
         "url": "https://www.wallenbergpta.org/blog/categories/volunteers-needed",
-        "img": "/stock-images/HS/event/pexels-ludawigakwana-2378209.webp",
+        "img": "/stock-images/HS/event/pexels-hansmiddendorp-26827231.webp",
         "category": "volunteer"
       },
       {
         "name": "Orientation and Community Day Volunteers",
         "details": "Support incoming Wallenberg students by volunteering your time to the Wallenberg PTA.",
         "url": "",
-        "img": "/stock-images/HS/event/pexels-monica-713149.webp",
+        "img": "/stock-images/HS/event/pexels-karolina-grabowska-8147480.webp",
         "category": "volunteer"
       },
       {
-        "name": "STEM tutor",
+        "name": "STEM Tutor",
         "details": "Support Wallenberg students through afterschool tutoring.",
         "url": "",
         "img": "/stock-images/HS/tutoring/pexels-yankrukov-8617744.webp",
@@ -1726,6 +1733,7 @@
     "donation_url": "https://www.gwhsptsa.com/donate",
     "donation_text": "Donate to the the school's PTSA",
     "testimonial": "\"I went from a 2.8 student to a 3.7 student because teachers believed in me and I in them. Washington was one of the best schools for academics, sports, and overall community.\"",
+    "testimonial_author": "",
     "principal": "John Schlauraff",
     "instagram_url": "http://www.instagram.com/gwhsofficial",
     "facebook_url": "https://www.facebook.com/profile.php?id=100067738675467",
@@ -1841,16 +1849,16 @@
       "Provides extensive professional development for educators in pedagogy and curriculum planning."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=LU5L7ANSD8MZ2&ssrt=1750983050234",
+    "donation_text": "Donate to the school's PTSA. As the largest middle school in SFUSD with the hugest variety of enrichment programs, we want APG to remain the BEST middle school in the city and keep our students engaged with access to all opportunities possible.",
+    "testimonial": "\"Overall, it's 5 stars. It's a nice school and I've made a few good memories (some bad ones) but mostly good. The variety of clubs, sports and electives are good and the staff are good.\"",
+    "testimonial_author": "A former student.",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/JSRYAhGFt2o",
     "principal": "Tai-Sun Schoeman",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/apg_middle_school_ptsa/",
+    "facebook_url": "https://www.facebook.com/APGSF",
     "website_url": "https://www.sfusd.edu/school/ap-giannini-middle-school",
     "metrics": [
       {
@@ -1936,16 +1944,16 @@
       "Comprehensive English literacy and STEAM program initiatives for enhanced learning."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/alamo-elementary-school/support-alamo/invest-alamo",
+    "donation_text": "Invest in Alamo",
+    "testimonial": "\"Alamo's motto is \"be a friend\". They empower each student to be kind to others and to find joy in learning. The dedication of the teachers is absolutely amazing. This urban school has a great and involved community as well. My son asks me most days if we can get to school early!\"",
+    "testimonial_author": "-Alamo parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/Pgfa1PxBhTE",
     "principal": "Rosa A. Fong",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/pta.alamo.sf/",
+    "facebook_url": "https://www.facebook.com/friendsofalamo",
     "website_url": "https://www.sfusd.edu/school/alamo-elementary-school",
     "metrics": [
       {
@@ -2032,16 +2040,15 @@
       "Weekly bilingual parent communication ensuring strong parent-school engagement."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.afypa.org/donPP.html",
+    "donation_text": "You can donate to our school in many ways",
+    "testimonial": "\"A remarkable school! A gem in the SFUSD system. Extremely low teacher turnover in the 12 years our family has attended. Extremely low student turnover as well. The school has very high standards for its students, most of whom say high school and college were easy by comparison. The school has a warm, community feeling. After 12 years and 2 kids attending, we will certainly miss AFY! Grateful to have had the opportunity to attend and the opportunity for our kids to learn 2 languages, Cantonese and Mandarin.\"",
+    "testimonial_author": "-Parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/waVxMsxcPL4",
     "principal": "Liana Szeto",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/afypa#",
     "website_url": "https://www.sfusd.edu/school/alice-fong-yu-alternative-school-k-8",
     "metrics": [
       {
@@ -2127,16 +2134,16 @@
       "Utilizes diverse teaching strategies to cater to various learning styles, ensuring engaging and accessible education for all students."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/alvarado-elementary-school/families/giving",
+    "donation_text": "You can donate to our school in a variety of ways",
+    "testimonial": "\"A wonderful, united, and involved parent community is an integral part of a great school, and Alvarado has this. Friendly, open-minded, and diverse, I am happy to be part of this group of kind people who are strong advocates for their children's education. Our new principal is communicative and a strong, quiet leader. Great experience overall, but more so in the past year since this new leadership has taken hold.\"",
+    "testimonial_author": "-Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/s93JyJQ4V0Y",
     "principal": "Michelle Sundby",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/alvaradoschool/",
+    "facebook_url": "https://www.facebook.com/alvaradoschool",
     "website_url": "https://www.sfusd.edu/school/alvarado-elementary-school",
     "metrics": [
       {
@@ -2213,7 +2220,7 @@
     "school_type": [
       "middle"
     ],
-    "about": "Aptos Middle School is dedicated to providing an empowering educational experience focused on mastering Common Core standards, fostering 21st-century skills, and promoting social justice through its T.I.G.E.R. values.",
+    "about": "Aptos Middle School is dedicated to providing an empowering educational experience focused on mastering Common Core standards, fostering 21st-century skills, and promoting social justice through its T.I.G.E.R. values--Teamwork, Integrity, Grit, Empathy and Responsibility. ",
     "about_bp": [
       "Committed to developing students' critical thinking skills and academic competency with a strong emphasis on 21st-century skills.",
       "Promotes a culture of teamwork, integrity, grit, empathy, and responsibility known as T.I.G.E.R. values.",
@@ -2222,16 +2229,14 @@
       "Emphasizes college and career readiness with programs like AVID and STEAM."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.paypal.com/donate?campaign_id=PLA43FGBNWLWW",
+    "donation_text": "Donate today to fund and support student activities, community events and teacher needs. The PTSA also provides a critical platform, ParentSquare, for communication and partnership between Aptos families. ",
+    "testimonial": "It's a highly diverse population of students and kids will have to learn to get along with one another. The school emphasizes specific values and attitudes that are a positive way to address this. ",
+    "testimonial_author": "An Aptos Middle School Parent ",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/MyLpnXyKkGs",
     "principal": "Dimitric Roseboro",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/aptos-middle-school",
     "metrics": [
       {
@@ -2317,16 +2322,14 @@
       "Provides comprehensive student support programs including social worker and speech pathologist services."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/argonne-elementary-school-extended-year/support-argonne-es",
+    "donation_text": "The Argonne for All Giving Campaign is our biggest fundraiser of the year, raising over 90% of the PTO's annual budget. These critical funds directly support every student at Argonne and pays for additional supplies, staff, and programs. All these enrichment opportunities would be lost without the money we raise during the Annual Giving Campaign.\n\nThank you for your support and generosity!",
+    "testimonial": "\"I currently have 2 kids at Argonne with an incoming Kindergartener in a few years. We couldn't be happier to be at Argonne. The kids are thriving and love going to school. The community is warm and inviting with really strong parent/caregiver involvement. Also, having the kids start the school year in July with summer session is great - we don't have to worry about summer camps AND they get to do so many more field trips and fun activities throughout the year.\"",
+    "testimonial_author": "-Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Rebecca Levison",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/argonne-elementary-school-extended-year",
     "metrics": [
       {
@@ -2415,7 +2418,6 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
@@ -2510,14 +2512,14 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "Afterschool programs here keep the students occupied and stimulated. Wish I had more time to be involved. They need more volunteers!!\n",
+    "testimonial_author": "visitor ",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/86GiEHW5tJY",
     "principal": "Jeremy Hilinski",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/bhesbears/",
+    "facebook_url": "https://www.facebook.com/BretHarteES/",
     "website_url": "https://www.sfusd.edu/school/bret-harte-elementary-school",
     "metrics": [
       {
@@ -2605,14 +2607,13 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "I am a former students of Bryant. I think my review counts because I've been to twelve schools in the Indland Empire. Bryant did an exceptional job when I attended for three years seven years ago. Now that I have graduated and started college I already plan on having my future children attend Bryant. No bullying issues, one on one attention between teacher's, creative and understanding staff, and a brilliant program called \"H.E.A.R..T.S.\" that helped me get ahead",
+    "testimonial_author": "alum ",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Gilberto Parada",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/people/Bryant-Elementary-School/100058610631980/?fref=ts",
     "website_url": "https://www.sfusd.edu/school/bryant-elementary-school",
     "metrics": [
       {
@@ -2690,7 +2691,7 @@
       "elementary",
       "middle"
     ],
-    "about": "BVHM is a vibrant K-8 dual-language Spanish Immersion Community School located in the Mission District, dedicated to nurturing bilingual and multicultural students who excel academically, socially, and artistically.",
+    "about": "BVHM is a vibrant K-8 dual-language Spanish Immersion Community School located in the Mission District - temporarily located in the Excelisior, dedicated to nurturing bilingual and multicultural students who excel academically, socially, and artistically.",
     "about_bp": [
       "Offers a strong Spanish Dual Language Immersion program fostering bilingualism and cultural understanding.",
       "Incorporates a visionary social justice perspective empowering students to become community change agents.",
@@ -2699,16 +2700,16 @@
       "Focuses on social-emotional learning to create a culturally responsive and supportive school climate."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=HHHRJZ9BC7LAS#",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "Buena Vista Horace Mann is a K-8 dual-language Spanish immersion school in the Mission neighborhood of San Francisco. This is an amazing community of caring, creative and dedicated educators and parents. Our son, currently in 2nd grade, is thriving socially and academically in both Spanish and English. He comes home happy everyday, and he looks forward to going to school and the after school program. ",
+    "testimonial_author": "A parent of Buena Vista Horace Mann K-8 Community School",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/qE6EHDVV1yc",
     "principal": "Claudia Delarios-Moran",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/bvhmk_8/",
+    "facebook_url": "https://www.facebook.com/bvhmschool/",
     "website_url": "https://www.sfusd.edu/school/buena-vista-horace-mann-k-8-community-school",
     "metrics": [
       {
@@ -2802,7 +2803,7 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/nZXIwsOfQm4",
     "principal": "Lindsay Dowdle",
-    "instagram_url": "",
+    "instagram_url": "https://www.instagram.com/cesar_chavezelementary/",
     "facebook_url": "https://www.facebook.com/cesarchavezsfusd",
     "website_url": "https://www.sfusd.edu/school/cesar-chavez-elementary-school",
     "metrics": [
@@ -2890,16 +2891,15 @@
       "Extensive before and after school care offered through partnership with Buchanan YMCA."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164670",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
+    "donation_url": "https://www.sfusd.edu/school/chinese-immersion-school-de-avila-zhongwenchenjinxuexiao/support-cis/fundraising",
+    "donation_text": "Your donations help improve the quality of CIS and make a significant difference in your child’s experience at the school.",
     "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/DizmdHZUfrk",
     "principal": "Mia Yee",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/p/Chinese-Immersion-School-at-De-Avila-100078793269083/?_rdr",
     "website_url": "https://www.sfusd.edu/school/chinese-immersion-school-de-avila-zhongwenchenjinxuexiao",
     "metrics": [
       {
@@ -2986,14 +2986,11 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164671",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Angelina Gonzalez",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/civic-center-secondary-school",
     "metrics": [
       {
@@ -3068,16 +3065,15 @@
       "Robust student support services ensuring a nurturing and inclusive environment for all learners."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164672",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.clairelilienthal.com/giving",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/OXsA--l37H8",
     "principal": "Molly Pope",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/clairelilienthalschool/",
+    "facebook_url": "https://www.facebook.com/clairelilienthal/",
     "website_url": "https://www.sfusd.edu/school/claire-lilienthal-alternative-school-k-8",
     "metrics": [
       {
@@ -3141,8 +3137,7 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/m_91VeRgsQM",
     "principal": "Carrie Maloney",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/pages/Clarendon%20Alternative%20Elementary/396325827189888/",
     "website_url": "https://www.sfusd.edu/school/clarendon-alternative-elementary-school",
     "metrics": [
       {
@@ -3236,8 +3231,7 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/E4ZkMxI6Xb0",
     "principal": "Marlon Escobar",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/profile.php?id=130601416985361&_rdr",
     "website_url": "https://www.sfusd.edu/school/cleveland-elementary-school",
     "metrics": [
       {
@@ -3323,16 +3317,15 @@
       "Commitment to nurturing 21st-century critical thinkers with a focus on social-emotional learning and school community involvement."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164675",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://secure.givelively.org/donate/commodore-sloat-school-fund/the-resources-for-education-enrichment-fun-reef-campaign",
+    "donation_text": "Welcome to Commodore Sloat's R.E.E.F. Campaign!\n\nThe Resources for Education, Enrichment and Fun (R.E.E.F.) Campaign (formerly known as the Cash Appeal) is Sloat’s largest annual fundraiser.",
+    "testimonial": "\"As a former teacher here, I know Commodore Sloat is a great school. The staff is dedicated and hardworking. They were so welcoming and helpful during my first few years here. The PCO (parent club) is very active and helps out with whatever expenses that can't be covered by budget cuts. It was an honor to have taught here and I miss them all.\"",
+    "testimonial_author": "A former teacher of Commodore Sloat Elementary School",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/_OF_YsVLn0g",
     "principal": "Fowzigiah Abdolcader",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/commodoresloat",
     "website_url": "https://www.sfusd.edu/school/commodore-sloat-elementary-school",
     "metrics": [
       {
@@ -3420,14 +3413,13 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164676",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"We truly feel like we live in a suburb within the city, with this school at the epicenter of the Potrero community. DW is not only a place to drop off your kid for a quality education. Rather, there's an opportunity to be a part of an entity that continues to evolve- and our involvement has a direct effect on our children and the future classes.\"",
+    "testimonial_author": "A parent of Daniel Webster Elementary School",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/hUrEWxGxJdw",
     "principal": "Anita Parameswaran",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/DanielWebsterElementarySanFrancisco",
     "website_url": "https://www.sfusd.edu/school/daniel-webster-elementary-school",
     "metrics": [
       {
@@ -3513,16 +3505,16 @@
       "Comprehensive support services including health and wellness center and on-site social worker."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164677",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ALCWBG26TESTQ&source=url",
+    "donation_text": "A donation to the DFES PTA positively impacts our students’  education.\n\nYou can make a one-time donation, or set up smaller, automatic monthly donations.",
+    "testimonial": "\"This school has many fabulous teachers - intelligent, creative, warm, and dedicated. There is a growing core of dedicated parents who make up for a lot of what the district cannot provide. The new building itself is a major plus - \"green\" and full of light. No portable classrooms to muck up the playground. The PTA president is a national treasure.\"\n",
+    "testimonial_author": "A parent of Dianne Feinstein Elementary",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Christina Jung",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/dfes_pta/",
+    "facebook_url": "https://www.facebook.com/DFESSF",
     "website_url": "https://www.sfusd.edu/school/dianne-feinstein-elementary-school",
     "metrics": [
       {
@@ -3610,14 +3602,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164678",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/Uvxq4VpbGeE",
     "principal": "Edward Garnica",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/doloreshuertasf/",
     "website_url": "https://www.sfusd.edu/school/dolores-huerta-elementary-school",
     "metrics": [
       {
@@ -3705,14 +3695,13 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164679",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"As a parent of a current fifth-grader at Drew Elementary School, I couldn’t be more thrilled with the growth and transformation this school has experienced under the current principal and staff. The positive changes are remarkable, and it truly feels like a new and improved school environment.\"",
+    "testimonial_author": "A parent of Dr Charles R Drew College Preparatory Academy",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/uJoPgrg2fqI",
     "principal": "Vidrale Franklin",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/DrewElementary/",
     "website_url": "https://www.sfusd.edu/school/dr-charles-r-drew-college-preparatory-academy",
     "metrics": [
       {
@@ -3800,14 +3789,11 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164680",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/jMgVeF3qckc",
     "principal": "Makaela Manning",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/dr-george-washington-carver-elementary-school",
     "metrics": [
       {
@@ -3895,14 +3881,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164681",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"Best middle school 100% no fights whatsoever, will NOT get bullied! Only well raised and confident students ready to learn!\"",
+    "testimonial_author": "A former student",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Tyson Fechter",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/dr-martin-luther-king-jr-academic-middle-school",
     "metrics": [
       {
@@ -3990,14 +3974,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164682",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"Great school!!! I wish I would have had my son in this school from kindergarten all the way through. I really like the smallness of the school the small classes. The whole thing is great like there's only one grade of each class which is awesome so you're with that same group from kindergarten to the fifth grade I really really wish that more schools were like this, but this is definitely a gem in the city,\"",
+    "testimonial_author": "A parent of Cobb Elementary",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/P6PeigH6-60",
     "principal": "Jeri Dean",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/dr-william-l-cobb-elementary-school",
     "metrics": [
       {
@@ -4085,14 +4067,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164683",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"My son loves ER Taylor. He is now in 5th grade and has been attending since Kindergarten. He loved all his teachers and spoke highly of them. We are especially impressed with his State test results. They helped him prepare throughout the years and his score exceeded standard for language/arts/literacy and mathematics.\"",
+    "testimonial_author": "A parent of ER Taylor Elementary",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/Ue7KfQRu6AA",
     "principal": "David Norris",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/er-taylor-elementary-school",
     "metrics": [
       {
@@ -4180,14 +4160,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164684",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"My first school in th US. All the teachers are nice and prepared us well for middle school.\"",
+    "testimonial_author": "A former student",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/ABLV35fxMIw",
     "principal": "Lisa Kwong",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/edwin-and-anita-lee-newcomer-school-limengxiankanglixinyiminxuexiao",
     "metrics": [
       {
@@ -4245,14 +4223,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164685",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"This is a great up and coming school with tons of resources. While test scores are low, they are trending in the right direction and additional resources focusing on literacy, wellness and enrichment have been very helpful. Plus, they have a great partner in award-winning nonprofit Real Options for City Kids (R.O.C.K.) that provides daytime support, free after school program and plenty of other resources to support students and their families.\"",
+    "testimonial_author": "A parent of El Dorado Elementary",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/nWDBQZktp08",
     "principal": "Danielle Cordova-Camou",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/el-dorado-elementary-school",
     "metrics": [
       {
@@ -4340,14 +4316,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164686",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"Everett Middle School, in the heart of the Mission District, where an energetic and caring faculty provides quality instruction to all students. Our teachers work in teams to develop a motivating, activity-based instructional program. We offer honors classes that serve the needs of gifted and other high ability students.\"",
+    "testimonial_author": "A teacher at Everett Middle School'",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/0ibm_950jXQ",
     "principal": "Heidi Avelina Smith",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/everett-middle-school",
     "metrics": [
       {
@@ -4433,16 +4407,15 @@
       "Engages with the community through the Shared School Yard program, allowing public use of facilities on weekends."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164687",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.paypal.com/donate?token=gK1aHJmMcBy6gyCElTvGbfeFerL2nkFbOR4CWTlpdEKpPcqS6EOs87tsQmaPE_Y3WDMgs-2XxaZm8iDy",
+    "donation_text": "Donate any amount, anytime, and make a lasting, positive impact on our students’ education.",
+    "testimonial": "\"FSK has a long history of incusivity. I believe it was one of the first schools to really start seriously including kids from the special day classes in the general education classes.\"",
+    "testimonial_author": "A parent of Francis Schott Key Elementary",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/GI2PfJ2PQAs",
     "principal": "Cynthia Lam",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/FSKschool/",
     "website_url": "https://www.sfusd.edu/school/francis-scott-key-elementary-school",
     "metrics": [
       {
@@ -4530,14 +4503,13 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164688",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"My son is a current 6th grader at Francisco and is thriving - he can’t wait to get to school each day. His teachers are amazing; they’re so supportive, engaging, dedicated, and energetic. The wide variety of clubs offered to students is exciting - there is something (lot of somethings, really) for everyone.\"",
+    "testimonial_author": "A parent of Francisco Middle School",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/rd_iXhZV68k",
     "principal": "Sang-Yeon Lee",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/FranciscoMiddleSchool/",
     "website_url": "https://www.sfusd.edu/school/francisco-middle-school",
     "metrics": [
       {
@@ -4623,16 +4595,14 @@
       "Promotes a rich array of enrichment programs during school hours, from arts and music to outdoor education and performing arts."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164689",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=97LUU85P6K7A8",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"I have a child that has completed her studies at Frank McCoppin and has moved on to a local feeder middle school at Roosevelt Middle School nearby. Her success and ability to navigate this part of her education I feel, is largely attributed to her foundation at Frank McCoppin. From the educators and administrators that give all their best...the thoughtful programming that our before/after-school care programs provide...to the employees that proudly keep our school running safely - all these experiences matter to our student experiences, and their learning outcomes.\"",
+    "testimonial_author": "A former parent ",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/1I5dpskYhK8",
     "principal": "Bennett Lee",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/mccoppin",
     "metrics": [
       {
@@ -4718,16 +4688,16 @@
       "Effective communication with families through newsletters and weekly meetings."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164690",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://givebutter.com/givetogarfield",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"Great school! My kids enjoy coming to school everyday and that says a lot. They have a great Chinese Immersion Program. Teachers here do an excellent job teaching the kids. The class sizes are not too big so all the kids know each other. Parents and teachers work closely together.\"",
+    "testimonial_author": "A parent of Garfield Elementary",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/JNqzP6YEZVM",
     "principal": "Karen Maruoka",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/garfieldmightydragons/?hl=en",
+    "facebook_url": "https://www.facebook.com/garfield.elementaryk5/",
     "website_url": "https://www.sfusd.edu/school/garfield-elementary-school",
     "metrics": [
       {
@@ -4813,16 +4783,15 @@
       "Strong community connections are fostered through regular events and collaborations with the PTA and Student Council."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164691",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.paypal.com/donate?token=5ndK8FiTt3vQ75QxnIGzGwLoqtu8o-ZbiTiXmxkCTYqCtsH0xxH908aoGxyTKN6fWGFwnu0yGGpFtjs7&locale.x=US",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"The students are curious, engaged and enthusiastic, which isn’t surprising when you notice the quality of teaching and specialist staff as well as the level of family support/participation. There’s a strong emphasis from the top down on social-emotional learning, inclusivity and kindness in general. The class sizes are small so it seems students are able to get the individual attention and support they need to succeed.\"",
+    "testimonial_author": "A parent of George Peabody Elementary",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/rD7AP_Uklk8",
     "principal": "Willem Vroegh",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/p/George-Peabody-Elementary-100064154014969/",
     "website_url": "https://www.sfusd.edu/school/george-peabody-elementary-school",
     "metrics": [
       {
@@ -4910,14 +4879,13 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164692",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"A hidden gem in the neighborhood. Great, very caring teachers. Good After-school and extra support programs. Lots of extras for all students , Garden, PE and Dance, Computer, Science, Art and Music.\"",
+    "testimonial_author": "A parent of George R Moscone Elementary School",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/9ojTQ422jRY",
     "principal": "Sarah Twiest",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/pages/Moscone%20(George%20R.)%20Elementary/329755153898493/",
     "website_url": "https://www.sfusd.edu/school/george-r-moscone-elementary-school",
     "metrics": [
       {
@@ -5003,16 +4971,16 @@
       "Employs thematic teaching methods by integrating the Teachers College Reading and Writing Workshop model across grade levels."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164693",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.glenparkschool.org/donate?lng=en#donate-cta",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "The teachers and staff are amazing - many have extensive experience at Glen Park, and together they foster a very warm and inclusive learning environment. There are a lot of opportunities for parent involvement in the school, from daily clap ins, to special events like field trips, the Fall Fair, and the Fun Run, and the PTO. The afterschool program is awesome, located on campus, and keeps the kids very active and entertained.",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/Gn04EKca7-U",
     "principal": "Liz Zarr",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/glenparkschool/?hl=en",
+    "facebook_url": "https://www.facebook.com/GlenParkSchool/",
     "website_url": "https://www.sfusd.edu/school/glen-park-elementary-school",
     "metrics": [
       {
@@ -5100,7 +5068,7 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164694",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "I like Lau Elementary because of their free lunch and super convenient after school programs ... This is a school with staff that had many years running the school. The assemblies and meetings they conduct shows they are well experienced and well organized.",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
@@ -5193,16 +5161,16 @@
       "Commits to inclusivity and diversity, celebrating each student's unique talents and differences."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164695",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=L5PZVWKS7B3EC&source=url&ssrt=1751408352146",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "We have a 1st and 3rd grader and both students have wonderful teachers and are making great academic progress. Icing on the cake is the GASP after school program. It is great, our kids love it, and they have homework time as part of the day.",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/WEWTHNVmRgY",
     "principal": "Catherine Walter",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/grattanelementarysf/reels/",
+    "facebook_url": "https://www.facebook.com/GrattanSF/",
     "website_url": "https://www.sfusd.edu/school/grattan-elementary-school",
     "metrics": [
       {
@@ -5284,14 +5252,14 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164696",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "As a parent, my experience at Guadalupe Elementary has been deeply enriching and inspiring. The school’s exceptional teachers and staff create a nurturing environment where students thrive both academically and emotionally. Programs like the Mindful Life Project have had a profound impact, fostering emotional well-being and a positive school culture. The curriculum is enhanced by specialized instruction in computers and P.E., equipping students with essential skills for the future.",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/8fMQeQJ_IGE",
     "principal": "Dr. Raj Sharma",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/ges_sf_rocks/",
+    "facebook_url": "https://www.facebook.com/p/Guadalupe-Elementary-San-Francisco-CA-100077552174600/",
     "website_url": "https://www.sfusd.edu/school/guadalupe-elementary-school",
     "metrics": [
       {
@@ -5374,19 +5342,19 @@
       "Promotes global awareness and student activism through a robust social studies curriculum.",
       "Offers a diverse range of arts programs including visual, performing, and instrumental music.",
       "Provides comprehensive before and after school programs to support all students.",
-      "Advocates a strong parent and staff involvement in decision-making processes."
+      "Advocates for a strong parent and staff involvement in decision-making processes."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164697",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.harveymilkpfc.org/fundraising/agc/",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "My child is thriving academically, socially and emotionally in their third year at Harvey Milk. The school has top-notch educators ... My child learns so much more than \"general\" education — they learn about civil rights leaders, how to advance social justice, and to be in community with students of all backgrounds, identities and family structures. The campus is recently renovated with the second-highest facilities ranking in SFUSD. ",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Charles Glover",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/harveymilksf/?hl=en",
+    "facebook_url": "https://www.facebook.com/HMCRA/",
     "website_url": "https://www.sfusd.edu/school/harvey-milk-civil-rights-academy",
     "metrics": [
       {
@@ -5466,16 +5434,15 @@
       "Robust after-school programs and student support services including AVID, counseling, and athletics."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164698",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=P2U22UUR9ZWDL&source=url&ssrt=1751408976226",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "Outstanding band, jazz band, and other music programs. Good athletics. Tons of student clubs. Counselors & social worker really care, although they are stretched thin. My kid made lots of friends. PTO is working hard to re-establish itself after COVID and is supporting teachers, as well as introducing fun things like a school dance. ",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/SNlISQKTr5s",
     "principal": "Adrienne Sullivan Smith",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/hooversf/",
     "website_url": "https://www.sfusd.edu/school/herbert-hoover-middle-school",
     "metrics": [
       {
@@ -5569,7 +5536,7 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/6_IlP_b_yi4",
     "principal": "Patricia Theel",
-    "instagram_url": "",
+    "instagram_url": "https://www.instagram.com/hillcrestsfusd",
     "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/hillcrest-elementary-school",
     "metrics": [
@@ -5736,7 +5703,7 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/8Aa_f1cnDrQ",
     "principal": "Jenny Ujiie",
-    "instagram_url": "",
+    "instagram_url": "https://www.instagram.com/jamesdenmanms",
     "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/james-denman-middle-school",
     "metrics": [
@@ -5831,8 +5798,8 @@
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Marisol Arkin",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/jlmsbulldog",
+    "facebook_url": "https://www.facebook.com/JamesLickMiddleSchool",
     "website_url": "https://www.sfusd.edu/school/james-lick-middle-school",
     "metrics": [
       {
@@ -5926,8 +5893,8 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/jQOeI2VG_iU",
     "principal": "Sara Saldaña",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/sfusdjeanparker/",
+    "facebook_url": "https://www.facebook.com/p/SFUSD-Jean-Parker-100025530532260/",
     "website_url": "https://www.sfusd.edu/school/jean-parker-elementary-school",
     "metrics": [
       {
@@ -6013,16 +5980,14 @@
       "Students graduate as well-rounded citizens prepared for future success."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164704",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/jefferson-elementary-school/jefferson-es-fundraising/jefferson-es-make-donation",
+    "donation_text": "Donating is easy & we need your support!\n",
+    "testimonial": "\"We have had an amazing experience so far, and our expectations have been exceeded. In particular, I want to call out the high-quality of the classroom and enrichment teachers. They are experienced, well-trained, loving, and devoted to their students. I've been impressed with the academic and socio-emotional progress my daughter has made, as well as the strength of the community that exists at the school...\"",
+    "testimonial_author": "Jefferson Elementary Parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/nLT9MAPCgSM",
     "principal": "Craig Berger",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/jefferson-elementary-school",
     "metrics": [
       {
@@ -6110,14 +6075,13 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164705",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"I know my children are safe and surrounded by people that want them to succeed as much as I do.\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/rnaAqxsk8UM",
     "principal": "Donald Frazier",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/MuirBobcats",
     "website_url": "https://www.sfusd.edu/school/john-muir-elementary-school",
     "metrics": [
       {
@@ -6298,16 +6262,16 @@
       "Hosts various enriching after-school programs through the on-site Stonestown YMCA."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164669",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.joseortegaschool.org/giving",
+    "donation_text": "We are truly grateful for your support. Your generosity allows our school to continue offering enriching programs that enhance our students’ education and experience!",
+    "testimonial": "\"Great school, I have two kids here and we love it. Kids are happy, learning, great teachers and attentive principal. The Principal knows every kid by name. Cannot ask for a better school for my kids!\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/IMcN0yN8r5E",
     "principal": "Paula Antram",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/joseortegaschool/",
+    "facebook_url": "https://www.facebook.com/joseortegaschool",
     "website_url": "https://www.sfusd.edu/school/jose-ortega-elementary-school",
     "metrics": [
       {
@@ -6395,14 +6359,12 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164670",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"A small, close-knit school with a talented, dedicated teaching staff and an active PTA. A great place to learn for my daughter in a caring environment that reflects the diversity of the surrounding neighborhood.\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/g9I2qJAx9XY",
     "principal": "Katerina Palomares",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/junipero-serra-elementary-school",
     "metrics": [
       {
@@ -6490,14 +6452,13 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164671",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"We’ve been super happy and impressed with Lafayette Elementary School in San Francisco (SFUSD). Really caring, committed, smart teachers, a tight knit community, tons of active events, field trips, and things like student council, the musical, arts, and more — delighting our two kids attending. Very grateful.\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Krishna Kassebaum",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/lafayettesfusd/",
     "website_url": "https://www.sfusd.edu/school/lafayette-elementary-school",
     "metrics": [
       {
@@ -6583,16 +6544,16 @@
       "A commitment to inclusive education through specialized programs for students with autism and other needs."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164672",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.lakeshoreelementary.org/donate-to-lakeshore#",
+    "donation_text": "Thank you for considering a donation to Lakeshore. You can choose to donate by Paypal, Credit Card, check, or cash. Donations are used to support PTA-funded programs and are fully tax-deductible (Federal Tax ID# 94-3042896).",
+    "testimonial": "\"My family has been very happy at Lakeshore over the many years with three kids. We have had very caring and enthusiastic teachers, made lifelong friends and been well supported by staff and the community. We have loved all the hands on activities with gardening, studio art and motor perception that are funded by the PTA. Highly recommend families check out Lakeshore!\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/lAQBfbrPCmk",
     "principal": "Matthew Hartford",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/lakeshorepta",
+    "facebook_url": "https://www.facebook.com/LakeshoreElementary",
     "website_url": "https://www.sfusd.edu/school/lakeshore-alternative-elementary-school",
     "metrics": [
       {
@@ -6679,16 +6640,14 @@
       "Annual assessments and climate surveys to ensure positive academic achievement and a supportive school culture."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164673",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.lawtonpta.com/give-to-lawton",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"I have two daughters currently going to Lawton. They both love it. They feel safe and have been progressing so much. I found that the teachers are [easy] to approach. The principle is very supportive. We were lucky to get into the school since it was a lottery system. Very happy with the school.\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/qtpkmG7p11k",
     "principal": "Armen Sedrakian",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/lawton-alternative-school-k-8",
     "metrics": [
       {
@@ -6774,16 +6733,16 @@
       "Dedicated to nurturing compassionate, innovative learners prepared for future leadership roles."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164674",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/leonard-r-flynn-elementary-school/parents/flynn-support-flynn/flynn-donate",
+    "donation_text": "Students and teachers at Flynn need your support. This neighborhood public school relies on donations to support the enriched education of its children, despite the gaps left by budget cuts. Help us to continue the important work of developing an incredible educational program for our youth.",
+    "testimonial": "\"We have two kids at Flynn and our experience has been overwhelmingly positive. What makes Flynn stand out isn’t just the Spanish immersion program, which has been incredible, but the strong, supportive community and the many ways the school goes above and beyond for its students...\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Tyler Woods",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/flynnelementary/",
+    "facebook_url": "https://www.facebook.com/flynnelementary",
     "website_url": "https://www.sfusd.edu/school/leonard-r-flynn-elementary-school",
     "metrics": [
       {
@@ -6869,16 +6828,16 @@
       "Diverse language programs catering to a multicultural student body."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164675",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://secure.givelively.org/donate/america-scores-bay-area/longfellow-elementary-school-field-of-dreams",
+    "donation_text": "Build the Field of Dreams for Longfellow Elementary School",
+    "testimonial": "\"I love the community at Longfellow and the PTA is very active. The teachers have been amazing. My son is in first grade and he loves his school!\"",
+    "testimonial_author": "Parent/Guardian",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/OKlUlyYE5WI",
     "principal": "Kath Cuellar Burns",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.facebook.com/SFLongfellowPTA/",
+    "facebook_url": "https://www.facebook.com/SFLongfellowPTA/",
     "website_url": "https://www.sfusd.edu/school/longfellow-elementary-school",
     "metrics": [
       {
@@ -6966,14 +6925,14 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164676",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "What I love about this school is the close community between the students, family and staff.",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/VI_FUD_IkPQ",
     "principal": "Matthew Fitzsimmon",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/p/CE0OmjdB-zR/",
+    "facebook_url": "https://www.facebook.com/MXACheetahs",
     "website_url": "https://www.sfusd.edu/school/malcolm-x-academy-elementary-school",
     "metrics": [
       {
@@ -7053,16 +7012,16 @@
       "Hosts a variety of athletic, artistic, and technical programs to cater to diverse student interests."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164677",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.zeffy.com/en-US/fundraising/40b28548-f69f-4d56-9e7f-e2277889fcf5",
+    "donation_text": "Donate to the Marina Middle School PTSA. Your donation is tax deductible and supports community-building activities and positive learning experiences through the many programs they provide.",
+    "testimonial": "\"Well organized, strong teachers, technology used in the classrooms, lots of lunch-time clubs, student council, sports teams and afterschool program run by the YMCA. The school counselors are nice and there are lots of adults walking around the school. My son is in 6th Grade and I feel he is going to be well prepared for high school.\"",
+    "testimonial_author": "Marina Middle School parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Michael Harris",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/marinamiddleptsa/?hl=en",
+    "facebook_url": "https://www.facebook.com/pages/Marina%20Middle/1028795973813152/#",
     "website_url": "https://www.sfusd.edu/school/marina-middle-school",
     "metrics": [
       {
@@ -7141,7 +7100,7 @@
     ],
     "about": "Marshall Elementary School is a thriving community institution committed to fostering bilingual and biliterate students through a rigorous curriculum in a warm and supportive environment.",
     "about_bp": [
-      "Full K-5 Spanish Two-Way Immersion program aimed at bilingual and biliterate proficiency by 5th grade.",
+      "Full K-5 Spanish Two-Way Immersion program aimed at bilingual proficiency by 5th grade.",
       "High expectations for students supported by personalized resources and community involvement.",
       "Active Parent Teacher Association that funds diverse academic and arts programs.",
       "Robust before and after school programs designed to enrich student learning and support working families.",
@@ -7245,8 +7204,8 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164679",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "\"I feel blessed to have teachers, afterschool staff and other parents offer to help out - it's a great community. I feel that healthy living, acceptance, community, academics and independent thinking are nurtured in this school.\"",
+    "testimonial_author": "McKinley parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/kGLi4cLBSJ8",
@@ -7430,7 +7389,7 @@
       "Teachers are bilingual and specialized in working with newcomer populations, focusing on both English proficiency and academic success in Spanish.",
       "Comprehensive arts program including visual arts, performing arts, music, and dance, alongside robust physical education.",
       "Parental engagement through bi-weekly education workshops and support resources to help families integrate into the community.",
-      "Collaborative partnerships with local community agencies to enhance student learning and cultural experience."
+      "Collaborative partnerships with local community agencies."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164668",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
@@ -7441,8 +7400,6 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/CH_LYvCre5o",
     "principal": "Albert Maldonado",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/mission-education-center-elementary-school",
     "metrics": [
       {
@@ -7519,19 +7476,18 @@
       "Focuses on high-quality teaching and learning for historically underserved populations, ensuring academic equity.",
       "Facilitates open, honest discussions among students, parents, and teachers to support students' academic progress and emotional well-being.",
       "Encourages collective responsibility for educational success among students, teachers, staff, and families.",
-      "Offers a variety of before and after school programs, as well as arts and student support services."
+      "Offers a variety of before and after-school programs, as well as arts and student support services."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164669",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://monroeelementaryschool.org/donate-shop-earn/",
+    "donation_text": "Every dollar you donate to the Monroe Elementary School PTA goes directly to supporting the students and the school. All donations are fully tax-deductible",
+    "testimonial": "Our son went from regularly thinking of himself as a troublemaker and describing himself as stupid at his old school to performing well above grade level academically (in reading and math) and socially integrating within one semester to his new environment. He's even started to take on a mentorship role with some of his classmates with their schoolwork.",
+    "testimonial_author": "Monroe parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/bFoC4ZiNBaY",
     "principal": "Telmo Vasquez",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/MonroeElementarySchoolSF/",
     "website_url": "https://www.sfusd.edu/school/monroe-elementary-school",
     "metrics": [
       {
@@ -7617,16 +7573,14 @@
       "Daily morning circle to reinforce community values of safety, responsibility, and respect."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164670",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.newtraditionssf.com/support-us/donate",
+    "donation_text": "Every dollar helps New Traditions deliver on their mission to create an environment that fosters creative, independent students",
+    "testimonial": "My kid is in 5th grade now and has attended New Traditions since kindergarten. The parent community is well-organized, supportive, and inclusive. The arts program is great, especially for a public school. SFUSD as a whole does have its challenges, but the New Traditions PTA works with the school staff to fill in the gaps as needed (funding a reading specialist, an extra teacher, etc).",
+    "testimonial_author": "New Traditions parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/BMTmX2eUI5k",
     "principal": "Myra Quadros",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/new-traditions-creative-arts-elementary-school",
     "metrics": [
       {
@@ -7708,7 +7662,7 @@
     "about_bp": [
       "Provides data-informed professional development and collaborative planning time for faculty.",
       "Offers targeted literacy and math instruction with emphasis on small groups and data-driven teaching.",
-      "Prioritizes equity in education by providing a differentiated curriculum tailored to individual student needs.",
+      "Prioritizes equity by providing a differentiated curriculum tailored to individual student needs.",
       "Recognizes and rewards students for both academic accomplishments and outstanding character.",
       "Engages with the larger community to cultivate a positive school culture that values diversity in backgrounds, languages, and experiences."
     ],
@@ -7721,8 +7675,8 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/01ypxv5IEy4",
     "principal": "William Eaton",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/paulreverepta/",
+    "facebook_url": "https://www.facebook.com/PaulReverePTA/",
     "website_url": "https://www.sfusd.edu/school/paul-revere-prek-8-school",
     "metrics": [
       {
@@ -7808,16 +7762,16 @@
       "Strong student support system including health and wellness resources."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164672",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/presidio-middle-school/families/panther-pride-fund",
+    "donation_text": "Donate to the Presidio Middle School PTSA Panther Pride Fund",
+    "testimonial": "It is a wonderful school with great teachers. I made many friends there, and there are a great variety of clubs and electives. The campus is really nice, and they offer many different sports. Overall, I think it is a fantastic school.",
+    "testimonial_author": "Presidio student",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Kevin Chui",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/presidioptsa/?hl=en",
+    "facebook_url": "https://www.facebook.com/presidiomiddleschool/",
     "website_url": "https://www.sfusd.edu/school/presidio-middle-school",
     "metrics": [
       {
@@ -7905,8 +7859,8 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164673",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "Redding has heart. I walked away knowing that it was the right school for my children and for my family. The experienced teachers are amazing, caring and most importantly, all work together. The families are diverse, kind, and respectful, much like my own family.",
+    "testimonial_author": "Redding parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/YdNqhm9_z9M",
@@ -7998,16 +7952,16 @@
       "Strong community support with active PTA funding various educational and enrichment initiatives."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164674",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.rlspta.org/fundraising#iQRSVX",
+    "donation_text": "Your donation funds programs that are not supported via district funding",
+    "testimonial": "Incredibly warm community. Teachers are well trained and friendly. Nice facilities and a huge variety of resources that are accessed.",
+    "testimonial_author": "RLS alum",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/esj4HAzhiYA",
     "principal": "Diane Lau-Yee",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/rlspta/",
+    "facebook_url": "https://www.facebook.com/rlspta.org/",
     "website_url": "https://www.sfusd.edu/school/robert-louis-stevenson-elementary-school",
     "metrics": [
       {
@@ -8094,15 +8048,15 @@
       "Comprehensive special education services and academic support for diverse learning needs."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164675",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.paypal.com/us/fundraiser/charity/1631185",
+    "donation_text": "The Rooftop Elementary PTA plays a key role in fostering a supportive, engaging and well-rounded educational experience at Rooftop Alternative School TK-8",
+    "testimonial": "Rooftop is a diverse and inclusive community and I love all the opportunities the students get to explore their creativity through art and movement, and the garden is amazing. We appreciate that our child can stay for middle school and have more continuity. ",
+    "testimonial_author": "Rooftop school parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/L1CclRNGMbI",
     "principal": "Darren Kawaii",
-    "instagram_url": "",
+    "instagram_url": "https://www.instagram.com/rooftopschoolsf/?hl=en",
     "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/rooftop-school-tk-8",
     "metrics": [
@@ -8189,15 +8143,15 @@
       "Commitment to closing the achievement gap, especially for African American students."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164676",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.rmssf.org/fundraising.html",
+    "donation_text": "Roosevelt's PTSA raises money to bridge the gap between federal and state funds provided to the school and to fund resources and programs benefitting the community.",
+    "testimonial": "I go to this school and the teachers are so nice and welcoming. At 6 grade I made lot of new friends already. And everyone there was so nice to others.",
+    "testimonial_author": "Roosevelt student",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/CX-NBQ_wEfc",
     "principal": "Emily Leicham",
-    "instagram_url": "",
+    "instagram_url": "https://www.instagram.com/rooseveltsfusd/",
     "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/roosevelt-middle-school",
     "metrics": [
@@ -8284,10 +8238,10 @@
       "Dedicated Special Education resources providing individualized support for students with diverse needs and learning styles."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164677",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.paypal.com/fundraiser/charity/1610348",
+    "donation_text": "Donate to the Rosa Parks Elementary PTA. The PTA provides classroom supplies, field trips, and organizes community events for our approx. 500 students in PreK-5.",
+    "testimonial": "My son went TK in Rosa Parks. I love how he was so excited to go to school everyday. The teachers, the principal, para, and other staffs are so nice, caring. They do great job to make kids feel being part of the school, the teachers motivate the kids to learn, make learning is interesting. Also they really support for kids on special education, my son had IEP and he did big progress here.",
+    "testimonial_author": "Rosa Parks parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/uhUmVgoOFU0",
@@ -8380,16 +8334,16 @@
       "Comprehensive arts and athletics programs to enrich student development."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164678",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://my-sfcs.org/support",
+    "donation_text": "Because of the relatively small number of students and curricular focus on project-based learning, the sfcs school community must raise funds each year to cover many of their programs and project supplies.",
+    "testimonial": "Our son attended kindergarten last year and we are really happy with our choice. It's nice to be in a smaller school where everyone knows your child and we are excited about the level of parent engagement and how easy it was to feel part of the school community at large",
+    "testimonial_author": "San Francisco Community School parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/iRcTQQx4tA4",
     "principal": "Laurie Murdock",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/sanfranciscocommunity/",
+    "facebook_url": "https://www.facebook.com/sfcelementary/",
     "website_url": "https://www.sfusd.edu/school/san-francisco-community-school",
     "metrics": [
       {
@@ -8475,16 +8429,16 @@
       "Fosters collaborative relationships with students, families, and communities to guide decision-making."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164679",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfpublicmontessori.org/donate",
+    "donation_text": "Donate to enable a wealth of programs, events, and support that would otherwise be unattainable.",
+    "testimonial": "This is a fabulous school and a beloved community. My kids have gone through the program starting at Pre-K, and we couldn't be happier!",
+    "testimonial_author": "SF Public Montessori parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Monette Benitez",
     "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/SanFranciscoPublicMontessori/",
     "website_url": "https://www.sfusd.edu/school/san-francisco-public-montessori",
     "metrics": [
       {
@@ -8561,25 +8515,25 @@
     "school_type": [
       "elementary"
     ],
-    "about": "Sanchez Elementary School is a vibrant community prioritizing high-quality instruction and a student-centered approach to ensure academic success and social justice for all students.",
+    "about": "Sanchez Elementary School prioritizes high-quality instruction and a student-centered approach to ensure academic success and social justice for all students.",
     "about_bp": [
       "Commitment to social justice with culturally-relevant instruction and high standards.",
       "Strong partnerships fostering engagement through peer, parental, and staff collaboration.",
       "Innovative Spanish Biliteracy Program promoting proficiency in both Spanish and English.",
       "Leadership development initiatives for students, parents, and teachers to build a collaborative community.",
-      "Comprehensive arts and academic enrichment programs including STEAM and multicultural arts initiatives."
+      "Comprehensive enrichment programs including STEAM and multicultural arts initiatives."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164680",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
+    "donation_url": "https://donate.stripe.com/14k5lC3bUgTU6Fq7ss?locale=en&__embed_source=buy_btn_1PiM33DFRQeCwFjbfBDTSqwR",
+    "donation_text": "Donations go to support teachers, provide student enrichment activities, and help families.",
     "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/ntWZmOuYfOI",
     "principal": "Ann Marin",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/escuelasanchez/reels/",
+    "facebook_url": "https://www.facebook.com/escuelasanchez/",
     "website_url": "https://www.sfusd.edu/school/sanchez-elementary-school",
     "metrics": [
       {
@@ -8760,15 +8714,15 @@
       "Dedicated support for literacy and math development through on-site coaching and professional development."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164682",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/sherman-elementary-school/supporting-sherman-sherman-es/gifts-and-donations",
+    "donation_text": "Sherman PTA's Annual Fund positively impacts hundreds of students, families, and our staff.",
+    "testimonial": "I love the teachers and principal here. I made so many happy memories here. The best moments of my life happened here. To the teachers, thanks for being the best people on earth and helping me when I needed it. I now go to a prestigious school in Sunset, and I thank the teachers who helped me.",
+    "testimonial_author": "Sherman alum",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/ZHYgbeMuiSI",
     "principal": "Helen Parker",
-    "instagram_url": "",
+    "instagram_url": "https://www.instagram.com/shermanelementarysf/",
     "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/sherman-elementary-school",
     "metrics": [
@@ -8857,14 +8811,14 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164683",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "Some of my favorite core memories where at this school , I am 31 years old now and still cherish those memories.",
+    "testimonial_author": "Spring Valley Science alum",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Jessica Arnott",
     "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/groups/840192264974204/",
     "website_url": "https://www.sfusd.edu/school/spring-valley-science-elementary-school",
     "metrics": [
       {
@@ -8950,16 +8904,15 @@
       "Strong parent volunteer involvement enhances classroom support and enrichment opportunities."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164684",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
+    "donation_url": "https://www.starrkingschool.org/donating",
+    "donation_text": "Your donation provides funding for enrichment programs, resources, teachers, and so much more. Thank you for your support in making Starr King an amazing place for students, staff, and faculty! ",
     "testimonial": "",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/aHFSggQYXXY",
     "principal": "Darlene Martin",
-    "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/StarrKingSF/",
     "website_url": "https://www.sfusd.edu/school/starr-king-elementary-school",
     "metrics": [
       {
@@ -9045,16 +8998,16 @@
       "Supportive environment with specialized programs for holistic student development."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164685",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
+    "donation_url": "https://www.sunnysidesf.org/fundraising.html",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "We love Sunnyside. We transferred in last year. The teachers are high quality and the activities for the kids are superb. I haven't witnessed any bullying as the previous reviews mentioned but I have heard that there was something going on when the kids first came back from the pandemic. As far as I can tell, the school is very safe and the kids are very nice (and parents). There are lots of performances that are open to the parents and the PTA is active in creating events for all families. This is the kind of school where things feel organized and professional. It's a good learning environment for kids. There is a large friendly group of parents who live near the school but lots of us live in the Excelsior or Bayview, too. We're really happy to be here.",
+    "testimonial_author": "Parent",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/ad8LtISR4VU",
     "principal": "Dr. Sauntheri Spoering",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/sunnysidek5/",
+    "facebook_url": "https://www.facebook.com/sunnysidepta/",
     "website_url": "https://www.sfusd.edu/school/sunnyside-elementary-school",
     "metrics": [
       {
@@ -9140,16 +9093,15 @@
       "Provides targeted programs for before and after school enrichment and special education."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164686",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "donation_url": "https://www.sfusd.edu/school/sunset-elementary-school/support-sunset",
+    "donation_text": "Your donation helps to bridge the funding gap on a wide array of programs, resources and additional school staff our children need to thrive.",
+    "testimonial": "My son went to school here. It's an amazing school. The Principal, teachers and PTA are all outstanding. When my son was there, Principal Rosina Tong was very caring and knew all of the students in the specials needs classrooms.",
+    "testimonial_author": "Christine P.",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/9F_IYWIIhxQ",
     "principal": "Rosina Tong",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/sunsetsfusd/?hl=en",
     "website_url": "https://www.sfusd.edu/school/sunset-elementary-school",
     "metrics": [
       {
@@ -9237,14 +9189,14 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164687",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "Sutro ES is the Richmond's hidden gem. A small school with caring staff and fun enrichment programs, both my children love and have loved their Sutro experience.\n\nMy son developed his love of the arts here. He frequently asks me to take him to the SF ballet, museums and is constantly practicing his lessons from his school piano classes. He loves the organized yard sports and he is supported academically in both the classroom and after school programs.\n\nYes, the facilities are due for an upgrade. But I don't judge a book by its cover. The teachers, staff, students and community are what makes this school special.",
+    "testimonial_author": "Jennie S.",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/lH7mer9fEWw",
     "principal": "Beth Bonfiglio",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/sutro_elementary_school/?hl=en",
+    "facebook_url": "https://www.facebook.com/p/Sutro-Elementary-School-100057324826071/",
     "website_url": "https://www.sfusd.edu/school/sutro-elementary-school",
     "metrics": [
       {
@@ -9338,8 +9290,6 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/CO-dRq2ZEm8",
     "principal": "Paul\tLister",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/tenderloin-community-elementary-school",
     "metrics": [
       {
@@ -9433,8 +9383,6 @@
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/uK3JmvGBBmI",
     "principal": "Mellisa Jew",
-    "instagram_url": "",
-    "facebook_url": "",
     "website_url": "https://www.sfusd.edu/school/ulloa-elementary-school",
     "metrics": [
       {
@@ -9522,14 +9470,14 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164690",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
-    "testimonial_author": "",
+    "testimonial": "The reason I'm giving the school 5 stars.\n1. One of only a handful of SF schools that is 95% staffed.\n2. Not just any kind of staff, but teachers that have 5-22 years of experience. They are the kind of teachers that willing give all that they have to help our children. My son is in 1st grade and from kindergarten 1st day (a little shy and scared), when we picked him up after school he already asked if he could stay or come back the next day. This put our minds and heart a ease. \n3. The dedication from everyone else; principal, staff to PTA, is admirable.\n4. Helping not just students but the community.\n\nDon't expect perfection, nothing is perfect. Kids fall down, they lose their jackets, and have difficulties adjusting.\n\nTrust the school to do everything they can to keep our kids safe and to teach them to be the best they can be.\n\nPlease remember the school still needs your help and participation. There are many community events that welcome parents and family. ",
+    "testimonial_author": "David T.",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/rLZfjWVpv1U",
     "principal": "Cephus Johnson",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/visvalleyes/?hl=en",
+    "facebook_url": "https://www.facebook.com/VisValleyES/",
     "website_url": "https://www.sfusd.edu/school/visitacion-valley-elementary-school",
     "metrics": [
       {
@@ -9623,8 +9571,8 @@
     "testimonial_img": "",
     "noteable_video": "",
     "principal": "Maya Baker",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/visvalleyms/?hl=en",
+    "facebook_url": "https://www.facebook.com/VVMSFalcons/",
     "website_url": "https://www.sfusd.edu/school/visitacion-valley-middle-school",
     "metrics": [
       {
@@ -9719,7 +9667,7 @@
     "noteable_video": "https://www.youtube.com/embed/Y-1eY2_gDPw",
     "principal": "Henry Wong",
     "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/WestPortalSchool/",
     "website_url": "https://www.sfusd.edu/school/west-portal-elementary-school",
     "metrics": [
       {
@@ -9807,14 +9755,14 @@
     "volunteer_form_url": "https://www.tfaforms.com/5164693",
     "donation_url": "https://www.sparksfpublicschools.org/donation",
     "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "testimonial": "The first thing you see about the school is the building: it’s a beautiful, modern space. I wish I had gone to school in a building that nice. it’s bright, spacious, with top notch athletic facilities, there are also tons of creative and tech spaces. This is the type of environment that makes you want to learn. That being said, a building giving a startup vibe counts for nothing, if the rest wasn’t following. I had read the past reviews and was worried about academics and the atmosphere in the school, especially during the hard years of middle school. My worries vanished one by one talking to parents, students and staff. But what convinced me immediately was the open house event, where anyone could visit the school and see the space and students projects. I saw a bunch of diverse 8th grader giving presentations about their work (robotics for instance), and most importantly answering questions. These students were eloquent, passionate, at ease both with the subject and addressing grown ups. I decided to enroll my kids. During the pandemic students received a top-notch tablet and data plan from Verizon, they have been well taken care of during those tough social distancing times.",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/g-WwaDQ3iss",
     "principal": "Malea Mouton-Fuentes",
     "instagram_url": "",
-    "facebook_url": "",
+    "facebook_url": "https://www.facebook.com/WillieBrownMS/",
     "website_url": "https://www.sfusd.edu/school/willie-l-brown-jr-middle-school",
     "metrics": [
       {
@@ -9891,7 +9839,7 @@
     "school_type": [
       "elementary"
     ],
-    "about": "Yick Wo Elementary School is dedicated to fostering lifelong learning through enriching academic, social, emotional, artistic, and physical development experiences for its 240 students.",
+    "about": "Yick Wo Elementary is dedicated to fostering a love for learning by supporting each child’s social, emotional, intellectual, artistic, and physical growth. Our mission is to nurture good citizenship and empathy while encouraging students to embody the values of safety, kindness, and responsibility.",
     "about_bp": [
       "High expectations and tailored teaching methods to address diverse learning styles.",
       "An intimate campus setting fostering trust and supportive relationships.",
@@ -9900,16 +9848,16 @@
       "Integrated field trips and real-world learning experiences."
     ],
     "volunteer_form_url": "https://www.tfaforms.com/5164694",
-    "donation_url": "https://www.sparksfpublicschools.org/donation",
-    "donation_text": "Your donation supports underserved students across San Francisco.",
-    "testimonial": "",
+    "donation_url": "https://donate.stripe.com/6oE17kd5Fcsr6sM8wx",
+    "donation_text": "Help us avoid additional fees by writing a check.\nPayable to: Yick Wo PTO.\nMail/Drop Off to: 2245 Jones Street, \nSan Francisco 94133\n",
+    "testimonial": "My two kids attend Yick Wo, and we love it. My son is in 1st grade and my daughter is in 4th grade. We love our Yick Wo community and how great the teachers and staff are. Principal Sanchez is amazing and so devoted to our school community. We walk to school almost every day and couldn't imagine going to another school. The PTO is fabulous and organizes many fun social events and fundraisers throughout the year. \n\nhttps://www.greatschools.org/california/san-francisco/6454-Yick-Wo-Elementary-School/",
     "testimonial_author": "",
     "testimonial_video": "",
     "testimonial_img": "",
     "noteable_video": "https://www.youtube.com/embed/wGT75i8JJcg",
     "principal": "Alfred Sanchez",
-    "instagram_url": "",
-    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/yickwo.elementary/",
+    "facebook_url": "https://www.facebook.com/yickwoschool",
     "website_url": "https://www.sfusd.edu/school/yick-wo-alternative-elementary-school",
     "metrics": [
       {
