@@ -41,15 +41,15 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   className,
   onModalOpen,
 }) => {
-  const students = school.metrics.find(
-    (metric) => metric.name == "Students Enrolled",
-  );
-  const frl = school.metrics.find(
-    (metric) => metric.name == "Free/Reduced Lunch",
-  );
-  const ell = school.metrics.find(
-    (metric) => metric.name == "English Language Learners",
-  );
+  // const students = school.metrics.find(
+  //   (metric) => metric.name == "Students Enrolled",
+  // );
+  // const frl = school.metrics.find(
+  //   (metric) => metric.name == "Free/Reduced Lunch",
+  // );
+  // const ell = school.metrics.find(
+  //   (metric) => metric.name == "English Language Learners",
+  // );
 
   /* TODO: look into whether or not creating a `WithLink` component can simplify this somehow */
   const SchoolImage = (props: any) => (
