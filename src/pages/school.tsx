@@ -1,3 +1,5 @@
+"use client"
+
 import BannerWrapper from "@/components/schoolPageComponents/BannerWrapper";
 import SchoolAbout from "@/components/schoolPageComponents/SchoolAbout";
 import SchoolDonation from "@/components/schoolPageComponents/SchoolDonation";
