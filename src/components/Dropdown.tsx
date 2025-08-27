@@ -36,7 +36,9 @@ export default function Dropdown<ItemType = any>({
           {items.map((item, index) => (
             <li
               key={item.value}
+              tabIndex={0}
               className={`px-4 py-2 hover:bg-zinc-300 ${cursor === index ? 'bg-zinc-300' : ''}`}
+              onMouseDown={e => e.preventDefault()}
               onClick={() => onItemSelect(item)}
             >
               {item.label}
