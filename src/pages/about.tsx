@@ -164,14 +164,16 @@ const About = () => {
                 Our goal is to strengthen communities and neighborhoods by
                 connecting people with their local schools. Following a
                 community schools model, people who live near a school can
-                {`support and be part of the school community, even if they aren’t`}
-                parents of current students. We have talked to hundreds of
-                people who live in San Francisco, who are willing to volunteer
-                and support local schools, and who wish they were more connected
-                to the schools in their neighborhoods. These include tech
-                workers, former classroom teachers, SFUSD alumni, parents of
-                alumni, retirees, and people from all backgrounds who believe in
-                the power of education to change lives.
+                {
+                  "support and be part of the school community, even if they aren't parents of current students. "
+                }
+                We have talked to hundreds of people who live in San Francisco,
+                who are willing to volunteer and support local schools, and who
+                wish they were more connected to the schools in their
+                neighborhoods. These include tech workers, former classroom
+                teachers, SFUSD alumni, parents of alumni, retirees, and people
+                from all backgrounds who believe in the power of education to
+                change lives.
               </p>
               <p>
                 This website is in beta and is a work in progress. We are open
