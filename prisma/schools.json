@@ -36,7 +36,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 59,
         "unit": "%",
         "category": "about"
@@ -157,7 +157,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 64,
         "unit": "%",
         "category": "about"
@@ -272,7 +272,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 76,
         "unit": "%",
         "category": "about"
@@ -384,7 +384,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 57,
         "unit": "%",
         "category": "about"
@@ -487,7 +487,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 67,
         "unit": "%",
         "category": "about"
@@ -590,7 +590,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 48,
         "unit": "%",
         "category": "about"
@@ -692,7 +692,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 76,
         "unit": "%",
         "category": "about"
@@ -795,7 +795,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 64,
         "unit": "%",
         "category": "about"
@@ -895,7 +895,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 48,
         "unit": "%",
         "category": "about"
@@ -1006,7 +1006,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 29,
         "unit": "%",
         "category": "about"
@@ -1111,7 +1111,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 56,
         "unit": "%",
         "category": "about"
@@ -1215,7 +1215,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 65,
         "unit": "%",
         "category": "about"
@@ -1321,7 +1321,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 17,
         "unit": "%",
         "category": "about"
@@ -1425,7 +1425,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 53,
         "unit": "%",
         "category": "about"
@@ -1530,7 +1530,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 66,
         "unit": "%",
         "category": "about"
@@ -1635,7 +1635,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 43,
         "unit": "%",
         "category": "about"
@@ -1746,7 +1746,7 @@
         "category": "about"
       },
       {
-        "name": "Free/Reduced Lunch",
+        "name": "Socio-economically Disadvantaged",
         "value": 46,
         "unit": "%",
         "category": "about"
@@ -1868,7 +1868,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 38,
         "unit": "%",
         "category": "about"
@@ -1963,7 +1963,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 43,
         "unit": "%",
         "category": "about"
@@ -2058,7 +2058,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 41,
         "unit": "%",
         "category": "about"
@@ -2153,7 +2153,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 40,
         "unit": "%",
         "category": "about"
@@ -2246,7 +2246,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 61,
         "unit": "%",
         "category": "about"
@@ -2339,7 +2339,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 33,
         "unit": "%",
         "category": "about"
@@ -2434,7 +2434,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 73,
         "unit": "%",
         "category": "about"
@@ -2529,7 +2529,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 88,
         "unit": "%",
         "category": "about"
@@ -2623,7 +2623,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 88,
         "unit": "%",
         "category": "about"
@@ -2719,7 +2719,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 65,
         "unit": "%",
         "category": "about"
@@ -2814,7 +2814,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 70,
         "unit": "%",
         "category": "about"
@@ -2909,7 +2909,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 40,
         "unit": "%",
         "category": "about"
@@ -3000,7 +3000,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 74,
         "unit": "%",
         "category": "about"
@@ -3147,7 +3147,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 36,
         "unit": "%",
         "category": "about"
@@ -3241,7 +3241,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 70,
         "unit": "%",
         "category": "about"
@@ -3335,7 +3335,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 46,
         "unit": "%",
         "category": "about"
@@ -3429,7 +3429,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 39,
         "unit": "%",
         "category": "about"
@@ -3524,7 +3524,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 42,
         "unit": "%",
         "category": "about"
@@ -3617,7 +3617,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 61,
         "unit": "%",
         "category": "about"
@@ -3711,7 +3711,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 71,
         "unit": "%",
         "category": "about"
@@ -3803,7 +3803,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 83,
         "unit": "%",
         "category": "about"
@@ -3896,7 +3896,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 74,
         "unit": "%",
         "category": "about"
@@ -3989,7 +3989,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 76,
         "unit": "%",
         "category": "about"
@@ -4082,7 +4082,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 80,
         "unit": "%",
         "category": "about"
@@ -4238,7 +4238,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 75,
         "unit": "%",
         "category": "about"
@@ -4331,7 +4331,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 64,
         "unit": "%",
         "category": "about"
@@ -4425,7 +4425,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 30,
         "unit": "%",
         "category": "about"
@@ -4519,7 +4519,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 73,
         "unit": "%",
         "category": "about"
@@ -4612,7 +4612,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 38,
         "unit": "%",
         "category": "about"
@@ -4707,7 +4707,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 51,
         "unit": "%",
         "category": "about"
@@ -4801,7 +4801,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 19,
         "unit": "%",
         "category": "about"
@@ -4895,7 +4895,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 77,
         "unit": "%",
         "category": "about"
@@ -4990,7 +4990,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 61,
         "unit": "%",
         "category": "about"
@@ -5085,7 +5085,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 87,
         "unit": "%",
         "category": "about"
@@ -5180,7 +5180,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 16,
         "unit": "%",
         "category": "about"
@@ -5269,7 +5269,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 81,
         "unit": "%",
         "category": "about"
@@ -5364,7 +5364,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 38,
         "unit": "%",
         "category": "about"
@@ -5452,7 +5452,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 63,
         "unit": "%",
         "category": "about"
@@ -5547,7 +5547,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 85,
         "unit": "%",
         "category": "about"
@@ -5637,7 +5637,7 @@
     "website_url": "https://www.sfusd.edu/school/hilltop-el-camino-alternativo-schools",
     "metrics": [
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 86,
         "unit": "%",
         "category": "about"
@@ -5714,7 +5714,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 65,
         "unit": "%",
         "category": "about"
@@ -5809,7 +5809,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 63,
         "unit": "%",
         "category": "about"
@@ -5904,7 +5904,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 79,
         "unit": "%",
         "category": "about"
@@ -5997,7 +5997,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 36,
         "unit": "%",
         "category": "about"
@@ -6091,7 +6091,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 83,
         "unit": "%",
         "category": "about"
@@ -6186,7 +6186,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 72,
         "unit": "%",
         "category": "about"
@@ -6281,7 +6281,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 66,
         "unit": "%",
         "category": "about"
@@ -6374,7 +6374,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 68,
         "unit": "%",
         "category": "about"
@@ -6468,7 +6468,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 27,
         "unit": "%",
         "category": "about"
@@ -6563,7 +6563,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 68,
         "unit": "%",
         "category": "about"
@@ -6657,7 +6657,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 63,
         "unit": "%",
         "category": "about"
@@ -6752,7 +6752,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 71,
         "unit": "%",
         "category": "about"
@@ -6847,7 +6847,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 56,
         "unit": "%",
         "category": "about"
@@ -6942,7 +6942,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 86,
         "unit": "%",
         "category": "about"
@@ -7031,7 +7031,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 78,
         "unit": "%",
         "category": "about"
@@ -7126,7 +7126,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 86,
         "unit": "%",
         "category": "about"
@@ -7221,7 +7221,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 48,
         "unit": "%",
         "category": "about"
@@ -7316,7 +7316,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 42,
         "unit": "%",
         "category": "about"
@@ -7409,7 +7409,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 73,
         "unit": "%",
         "category": "about"
@@ -7497,7 +7497,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 80,
         "unit": "%",
         "category": "about"
@@ -7590,7 +7590,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 29,
         "unit": "%",
         "category": "about"
@@ -7686,7 +7686,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 68,
         "unit": "%",
         "category": "about"
@@ -7781,7 +7781,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 37,
         "unit": "%",
         "category": "about"
@@ -7876,7 +7876,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 71,
         "unit": "%",
         "category": "about"
@@ -7971,7 +7971,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 47,
         "unit": "%",
         "category": "about"
@@ -8067,7 +8067,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 36,
         "unit": "%",
         "category": "about"
@@ -8162,7 +8162,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 45,
         "unit": "%",
         "category": "about"
@@ -8257,7 +8257,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 70,
         "unit": "%",
         "category": "about"
@@ -8353,7 +8353,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 47,
         "unit": "%",
         "category": "about"
@@ -8448,7 +8448,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 47,
         "unit": "%",
         "category": "about"
@@ -8543,7 +8543,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 88,
         "unit": "%",
         "category": "about"
@@ -8638,7 +8638,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 83,
         "unit": "%",
         "category": "about"
@@ -8733,7 +8733,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 43,
         "unit": "%",
         "category": "about"
@@ -8828,7 +8828,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 66,
         "unit": "%",
         "category": "about"
@@ -8922,7 +8922,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 47,
         "unit": "%",
         "category": "about"
@@ -9017,7 +9017,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 35,
         "unit": "%",
         "category": "about"
@@ -9111,7 +9111,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 32,
         "unit": "%",
         "category": "about"
@@ -9206,7 +9206,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 64,
         "unit": "%",
         "category": "about"
@@ -9299,7 +9299,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 81,
         "unit": "%",
         "category": "about"
@@ -9392,7 +9392,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 62,
         "unit": "%",
         "category": "about"
@@ -9487,7 +9487,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 81,
         "unit": "%",
         "category": "about"
@@ -9582,7 +9582,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 84,
         "unit": "%",
         "category": "about"
@@ -9677,7 +9677,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 41,
         "unit": "%",
         "category": "about"
@@ -9772,7 +9772,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 57,
         "unit": "%",
         "category": "about"
@@ -9867,7 +9867,7 @@
         "category": "about"
       },
       {
-        "name": "Disadvantaged",
+        "name": "Socio-economically Disadvantaged",
         "value": 48,
         "unit": "%",
         "category": "about"
