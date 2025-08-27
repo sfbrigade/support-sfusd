@@ -70,13 +70,13 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
     >
       <button
         onClick={onClose}
-        className="absolute left-2 top-2 z-10 block md:relative md:top-8"
+        className="absolute left-2 top-2 z-10 block md:relative md:top-8 hover:brightness-75 transition-all duration-200"
       >
         <Image
-          src={`/circle_close.svg`}
+          src={`icons/x-circle-icon.svg`}
           alt="Close Icon"
-          width={0}
-          height={0}
+          width={26}
+          height={26}
         />
       </button>
       <div
