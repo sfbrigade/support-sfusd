@@ -145,85 +145,44 @@ const About = () => {
         <div className="mx-auto flex max-md:px-8 md:w-5/6 lg:w-4/6">
           <div className="flex flex-col items-center gap-4 py-8 md:py-12">
             <div className="flex flex-col gap-4 max-md:text-sm">
-              <section>
-                <h2 className="text-xl font-bold">About Support SF Schools</h2>
-                <p>
-                  Support SF Schools is a volunteer-run project by{" "}
-                  <a
-                    href="https://www.sfcivictech.org/about"
-                    target="_blank"
-                    className="text-blue-500 hover:underline"
-                  >
-                    SF Civic Tech
-                  </a>{" "}
-                  (formerly Code for San Francisco). Our team includes teachers,
-                  designers, engineers, researchers, and community members, all
-                  working together to make it easier for San Francisco residents
-                  to support public schools.
-                </p>
-              </section>
-              <section>
-                <h2 className="text-xl font-bold">Our Mission</h2>
-                <p>
-                  We aim to build stronger communities by connecting people with
-                  their local schools. Even if you don&#39;t have children
-                  attending, you can still be a part of the school community if
-                  you live near one. We&#39;ve heard from many San Francisco
-                  residents who want to help but don&#39;t always feel connected
-                  to their neighborhood schools.
-                </p>
-              </section>
-              <section>
-                <h2 className="text-xl font-bold">Who Can Get Involved?</h2>
-                <p className="pb-4">
-                  We welcome volunteers from all backgrounds, including:
-                </p>
-                <ul className="flex list-disc flex-col gap-4 pl-6 max-md:text-sm">
-                  <li>
-                    <strong>Tech professionals</strong> who want to support STEM
-                    education.
-                  </li>
-                  <li>
-                    <strong>Former teachers</strong> who are transitioning to
-                    new careers but still want to stay connected.
-                  </li>
-                  <li>
-                    <strong>Parents</strong> whose children have graduated but
-                    want to give back to local schools.
-                  </li>
-                  <li>
-                    <strong>Alumni</strong> who have returned to San Francisco
-                    and want to reconnect with schools.
-                  </li>
-                  <li>
-                    Anyone who believes in the power of education to change
-                    lives.
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h2 className="text-xl font-bold">How We Help</h2>
-                <p>
-                  Support SF Schools is designed to bring you closer to your
-                  neighborhood schools while helping meet their needs. Our beta
-                  version currently focuses on connecting volunteers with 105
-                  public elementary, middle, and high schools in San Francisco.
-                </p>
-              </section>
-              <section>
-                <h2 className="text-xl font-bold">Get Involved</h2>
-                <p>
-                  Our website is still in beta, and we&#39;re always open to
-                  feedback. If you&#39;re interested in joining us, we meet on
-                  Zoom every Wednesday evening and are always looking for more
-                  volunteers.
-                </p>
-              </section>
+              <p>
+                Support SF Schools is a project run by{" "}
+                <a
+                  href="https://www.sfcivictech.org/about"
+                  target="_blank"
+                  className="text-blue-500 hover:underline"
+                >
+                  SF Civic Tech
+                </a>{" "}
+                (formerly Code for San Francisco). Our all-volunteer team
+                includes teachers, designers, engineers, researchers, and
+                community members. We started working together in 2022 to make
+                it easier for San Francisco residents to support their local
+                public schools.
+              </p>
+              <p>
+                Our goal is to strengthen communities and neighborhoods by
+                connecting people with their local schools. Following a
+                community schools model, people who live near a school can
+                support and be part of the school community, even if they aren’t
+                parents of current students. We have talked to hundreds of
+                people who live in San Francisco, who are willing to volunteer
+                and support local schools, and who wish they were more connected
+                to the schools in their neighborhoods. These include tech
+                workers, former classroom teachers, SFUSD alumni, parents of
+                alumni, retirees, and people from all backgrounds who believe in
+                the power of education to change lives.
+              </p>
+              <p>
+                This website is in beta and is a work in progress. We are open
+                to feedback and always looking for volunteers to join our
+                effort.
+              </p>
+              <p>We meet Wednesday evenings on Zoom.</p>
             </div>
 
-            <section>
-              <h2 className="text-xl font-bold">Meet our team:</h2>
-            </section>
+            <h2 className="text-xl font-semibold text-[#272728]">Team:</h2>
+
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-8">
               {member_list.map((member) => (
                 <a
@@ -248,7 +207,7 @@ const About = () => {
                         className={
                           "mb-2 rounded-lg rounded-tl-[36px]" +
                           (member.url
-                            ? " outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2 group-hover:outline-black"
+                            ? " group-hover:outline-#272728 outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2"
                             : "")
                         }
                         width={1000}
@@ -257,12 +216,12 @@ const About = () => {
                         blurDataURL={blurDataURL}
                       />
                     ) : (
-                      <div className="mb-2 aspect-square w-full rounded-lg rounded-tl-[36px] bg-black"></div>
+                      <div className="bg-#272728 mb-2 aspect-square w-full rounded-lg rounded-tl-[36px]"></div>
                     )}
 
                     <p
                       className={
-                        "font-bold " +
+                        "font-semibold " +
                         (member.url ? "group-hover:underline" : "")
                       }
                     >
@@ -274,43 +233,44 @@ const About = () => {
               ))}
             </div>
             <div className="my-4 text-center">
-              <h2 className="text-lg font-bold">Our Partner:</h2>
+              <h2 className="text-lg font-semibold text-[#272728]">
+                Our Partner:
+              </h2>
               <div className="mt-2">
                 <Image
                   src="/about/ed_fund_logo.png"
                   alt="Ed Fund Logo"
                   className="mx-auto h-auto max-w-full"
-                  width={400}
-                  height={300}
+                  width={300}
+                  height={200}
                 />
               </div>
             </div>
             <div>
-              <h2 className="text-center text-lg font-medium text-[#8338EC] md:text-xl">
+              <h2 className="text-center text-lg font-medium text-[#272728] md:text-xl">
+                {" "}
                 With thanks to the following folks for their past contributions:
               </h2>
-              <div className="mt-8">
-                <div className="text-center">
-                  {pastContributors.map((contributor, index) => (
-                    <span key={index}>
-                      <a
-                        href={contributor.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#3A86FF] hover:underline"
-                      >
-                        {contributor.name}
-                      </a>
-                      {index < pastContributors.length - 1 && ", "}
-                    </span>
-                  ))}
-                </div>
+              <div className="p-2 text-center">
+                {pastContributors.map((contributor, index) => (
+                  <span key={index}>
+                    <a
+                      href={contributor.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#3A86FF] hover:underline"
+                    >
+                      {contributor.name}
+                    </a>
+                    {index < pastContributors.length - 1 && ", "}
+                  </span>
+                ))}
               </div>
             </div>
-            <footer>
+            <footer className="flex items-center justify-center">
               <button
                 onClick={handleOpen}
-                className="text-black-500 hover:underline"
+                className="font-semibold text-[#272728] hover:underline"
               >
                 Contact Us
               </button>
