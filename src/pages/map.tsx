@@ -5,7 +5,7 @@ import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
-import SearchBar from "@/components/SearchBar";
+// import SearchBar from "@/components/SearchBar";
 import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 import Image from "next/image";
@@ -184,7 +184,7 @@ const Map: React.FC<Props> = (props) => {
         {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
         <div className="flex flex-col gap-2 px-4 pt-4 md:hidden">
           <div className="flex items-center gap-2">
-            <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+            {/* <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} /> */}
             <button
               className="ml-2 flex items-center justify-center bg-[#D7F1FF] text-[#000] p-2"
               aria-label="Open filters"
@@ -354,7 +354,7 @@ const Map: React.FC<Props> = (props) => {
               {/* DESKTOP ONLY: Top Bar with Search, Toggle, Map/List */}
               <div className="hidden md:block px-6 py-6 bg-white rounded-2xl">
                 <div className="flex items-center gap-2">
-                  <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+                  {/* <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} /> */}
                   <ToggleButton isMapView={isMapView} toggleView={setToggle} />
                   {/* Add your Map/List toggle here if needed */}
                 </div>

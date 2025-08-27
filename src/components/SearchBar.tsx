@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 
 import Dropdown from "./Dropdown";
@@ -17,7 +19,7 @@ interface SearchBarProps<DropdownItemType> {
 export default function SearchBar<DropdownItemType = any>({
   onItemSelect,
   onSearch,
-}: SearchBarProps<DropdownItemType>): JSX.Element {
+}: SearchBarProps<DropdownItemType>): React.ReactElement {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownItems, setDropdownItems] = useState<DropdownItem<DropdownItemType>[]>([]);
   const [cursor, setCursor] = useState(-1);

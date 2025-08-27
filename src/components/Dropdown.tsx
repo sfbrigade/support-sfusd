@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useRef } from "react";
 import { DropdownItem } from "./SearchBar";
 
@@ -11,7 +13,7 @@ export default function Dropdown<ItemType = any>({
   items,
   onItemSelect,
   cursor
-}: DropdownProps<ItemType>): JSX.Element {
+}: DropdownProps<ItemType>): React.ReactElement {
 
   const listRef = useRef<HTMLUListElement>(null);
 
