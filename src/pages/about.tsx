@@ -165,7 +165,7 @@ const About = () => {
                 connecting people with their local schools. Following a
                 community schools model, people who live near a school can
                 {
-                  "support and be part of the school community, even if they aren't parents of current students. "
+                  " support and be part of the school community, even if they aren't parents of current students. "
                 }
                 We have talked to hundreds of people who live in San Francisco,
                 who are willing to volunteer and support local schools, and who
@@ -178,9 +178,8 @@ const About = () => {
               <p>
                 This website is in beta and is a work in progress. We are open
                 to feedback and always looking for volunteers to join our
-                effort.
+                effort. We meet Wednesday evenings on Zoom.
               </p>
-              <p>We meet Wednesday evenings on Zoom.</p>
             </div>
 
             <h2 className="text-xl font-semibold text-[#272728]">Team:</h2>
