@@ -36,14 +36,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Support SF Schools</title>
       </Head>
       <MapProvider>
-        <ToastProvider>
+        
           <Layout>
             <div className={`${fredoka.variable} ${lato.variable} h-full`}>
+              <ToastProvider>
                 <Component {...pageProps} />
+              </ToastProvider>
             </div>
           </Layout>
-        </ToastProvider>
-       
       </MapProvider>
     </>
   );

@@ -46,54 +46,64 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
   }
 
   return (
+    <>
     <section id="volunteer" className="flex flex-col gap-10">
-      <BannerWrapper
-        className=" gap-4 rounded-lg md:gap-8 md:bg-[#FFF5DA] md:p-8 md:px-12 "
-        left={
-          <Image
-            src="/volunteer-graphic.png"
-            alt="volunteer graphic"
-            width={500}
-            height={1000}
-            placeholder="blur"
-            blurDataURL={blurDataURL}
-          />
-        }
-        right={
-          <div className="flex flex-col gap-4">
-            <h1 className="text-2xl font-medium text-blue-500 md:text-5xl">
-              Ways to Volunteer
-            </h1>
-            <p>
-              Help where and when it works best for you. {school.name} values
-              all community volunteers and we’ve got volunteer roles that match
-              your skills and your schedule. You can sign up as a short-term/ after hours 
-              volunteer and we will help connect you with the school community, or
-              sign up as a recurring school day volunteer through the San Francisco Ed
-              Fund.
+      {/* Main yellow box */}
+      <div className="bg-[#FFF5DA] rounded-xl p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        {/* Left panel */}
+        <div className="flex flex-col gap-6 justify-start">
+          <h1 className="text-5xl text-[#3A86FF] mb-2">Ways to Volunteer!</h1>
+          <p className="text-md mb-2">
+            <b>Help when it works best for you.</b> {school.name} values all community volunteers and we’ve got volunteer roles that match your skills and your schedule.
+          </p>
+          <p className="text-base mb-4">
+            You can sign up as a short-term/after hours volunteer and we will help connect you with the school community, or sign up as a weekly school day volunteer through our partner the San Francisco Ed Fund.
+          </p>
+          <div className="relative w-full h-56 mt-2">
+            <Image
+              src="/volunteer-graphic.png"
+              alt="volunteer graphic"
+              fill
+              className="object-contain"
+              placeholder="blur"
+              blurDataURL={blurDataURL}
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </div>
+        {/* Right panel: stacked cards */}
+        <div className="flex flex-col gap-6 w-full md:items-end">
+          {/* During The School Day */}
+          <div className="bg-white rounded-xl p-6 shadow flex flex-col gap-4 md:w-[70%]">
+            <div className="font-fredoka text-2xl mb-1">During The School Day</div>
+            <p className="text-base">
+              A once-a-week volunteer commitment through the SF Education Fund to support classrooms, teachers, and students during the school day. You choose from their list of options.
             </p>
-            <div className="flex gap-2">
+            <a
+              href="https://sfedfund.org/become-a-volunteer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 rounded-lg bg-[#3A86FF] px-4 py-3 text-white font-semibold text-center w-full"
+            >
+              Join the School Day Team
+            </a>
+          </div>
+          {/* Beyond the Bell */}
+          <div className="bg-white rounded-xl p-6 shadow flex flex-col gap-4 md:w-[70%]">
+            <div className="font-fredoka text-2xl mb-1">Beyond the Bell</div>
+              <p className="text-base">
+                Flexible opportunities outside school hours, from after-school programs to PTA events, community projects, and more.
+              </p>
               <button
+                className="mt-2 rounded-lg bg-[#3A86FF] px-4 py-3 text-white font-semibold text-center w-full"
                 onClick={openModal}
-                className="rounded bg-blue-500 p-2 px-4 font-medium text-white md:px-8 text-center"
               >
-                Short term/ After hours volunteer
+                Join the After Hours Team
               </button>
-              <Link
-                href="https://sfedfund.org/become-a-volunteer/"
-                target="_blank"
-                className={
-                  "plausible-event-name=Clicked+EdFund+" +
-                  school.name.replace(/\s/g, "+") +
-                  " rounded border-2 border-blue-500 bg-white p-2 px-4 font-medium text-blue-500 md:px-8 text-center"
-                }
-              >
-                Recurring school day volunteer
-              </Link>
             </div>
           </div>
-        }
-      />
+        </div>
       <VolunteerList school={school} fullCard={true} />
       <VolunteerSignupModal
         isOpen={modalIsOpen}
@@ -102,6 +112,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
         onSubmit={handleFormSubmit}
       />
     </section>
+    </>
   );
 };
 
