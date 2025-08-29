@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { School, DropdownItem } from "@/types/school";
-import SchoolCard from "../components/SchoolCardMap";
+import SchoolCardMap from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
 import MapboxMap from "@/components/MapboxMap";
 import ToggleButton from "@/components/ToggleButton";
@@ -158,7 +158,7 @@ const Map: React.FC<Props> = (props) => {
   /* TODO: look into whether or not creating a `WithLink` component
   can simplify this somehow */
   const SelectedSchoolCard = (props: any) => (
-    <SchoolCard
+    <SchoolCardMap
       school={props.school}
       onClose={onClose}
       className={`block ${props.className}`}
@@ -298,16 +298,6 @@ const Map: React.FC<Props> = (props) => {
               {isMapView ? (
                 selectedSchool ? (
                   <div className="w-full md:w-auto md:p-4">
-                    <Link
-                      href={
-                        "/school?name=" +
-                        encodeURIComponent(selectedSchool.name) + "&stub=" + selectedSchool.stub
-                      }
-                      className="block md:hidden"
-                      passHref
-                    >
-                      <SelectedSchoolCard school={selectedSchool} />
-                    </Link>
                     <SelectedSchoolCard
                       school={selectedSchool}
                       className="hidden md:block"

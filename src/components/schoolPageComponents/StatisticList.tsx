@@ -6,7 +6,7 @@ const StatisticList = (props: any) => {
     <div className=" flex flex-wrap gap-6 max-md:justify-center md:gap-12 ">
       {statistics.map((stat: any) => (
         <Statistic
-          key={stat.text}
+          key={stat.name}
           name={stat.name}
           value={stat.value}
           unit={stat.unit}

@@ -18,9 +18,11 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
         <>
           {donation_txt_split[0]}:<br />
           <b>
+            <ul>
             {address_split.map((a, i) => (
-              <div key={i}>{a}</div>
+              <li key={i}>{a}</li>
             ))}
+            </ul>
           </b>
         </>
       );
@@ -37,7 +39,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
             heading={"Donate"}
             content={
               <div className="flex flex-col gap-4">
-                <p>{formatDonationText()}</p>
+                <div>{formatDonationText()}</div>
                 {school.donation_url && (
                   <a
                     href={school.donation_url}

@@ -35,7 +35,7 @@ const LearnMoreButton = () => {
     </button>
   );
 };
-const SchoolCard: React.FC<SchoolCardProps> = ({
+const SchoolCardMap: React.FC<SchoolCardProps> = ({
   school,
   onClose,
   className,
@@ -129,4 +129,4 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   );
 };
 
-export default SchoolCard;
+export default SchoolCardMap;
