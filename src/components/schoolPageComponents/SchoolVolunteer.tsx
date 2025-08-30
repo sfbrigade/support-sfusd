@@ -48,7 +48,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
   return (
     <section id="volunteer" className="flex flex-col gap-10">
       <BannerWrapper
-        className=" gap-4 rounded-lg md:gap-8 bg-[#FFF5DA] p-4 px-6md:p-8 md:px-12"
+        className="gap-4 rounded-lg md:gap-8 bg-[#FFF5DA] p-4 px-6 md:p-12 md:px-12"
         left={
           <>
             <h1 className="text-2xl font-medium text-blue-500 md:text-5xl mb-4">
@@ -72,7 +72,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
         }
         right={
           <div className="flex flex-col gap-6 w-full md:items-end">
-            <div className="bg-white rounded-xl p-6 shadow flex flex-col gap-4 md:w-[85%]">
+            <div className="bg-white rounded-xl p-5 shadow flex flex-col gap-4 md:w-[85%]">
               <h1 className="font-fredoka font-medium text-l md:text-2xl mb-1">During The School Day</h1>
                <p className="text-base font-lato">
                   A once-a-week volunteer commitment through the SF Education Fund to support classrooms, teachers, and students during the school day. You choose from their list of options.
@@ -86,7 +86,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 Join the School Day Team
               </a>
             </div>
-              <div className="bg-white rounded-xl p-6 shadow flex flex-col gap-4 md:w-[85%]">
+              <div className="bg-white rounded-xl p-5 shadow flex flex-col gap-4 md:w-[85%]">
                 <h1 className="font-fredoka font-medium text-l md:text-2xl mb-1">Beyond the Bell</h1>
                 <p className="text-base">
                   Flexible opportunities outside school hours, from after-school programs to PTA events, community projects, and more.
