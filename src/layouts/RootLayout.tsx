@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import ContactUs from "@/components/ContactUs";
 import { useMapContext } from "@/contexts/MapContext";
 import BackToTop from "@/components/BackToTop";
+import { usePostHog } from "posthog-js/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { pathname } = router;
   const { isMapView } = useMapContext();
+  const posthog = usePostHog();
 
   const [isBannerShowing, setIsBannerShowing] = useState(true);
 
@@ -20,7 +22,10 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     setIsBannerShowing(!isBannerShowing);
   };
   const [showContactForm, setShowContactForm] = useState(false);
-  const handleOpen = () => setShowContactForm(true);
+  const handleOpen = () => {
+    posthog?.capture?.('contact_us_form_opened');
+    setShowContactForm(true);
+  };
   const handleClose = () => setShowContactForm(false);
   const bannerContent = (
     <>

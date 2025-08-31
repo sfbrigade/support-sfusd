@@ -1,12 +1,19 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import SEO from "@/components/SEO";
+import { usePostHog } from "posthog-js/react";
 
 export default function Home() {
   const router = useRouter();
+  const posthog = usePostHog();
 
   const handleClick = () => {
+    posthog?.capture('explore_schools_clicked');
     router.push("/map");
+  };
+
+  if (posthog) {
+    posthog.capture('pageview', { page: 'home' });
   };
 
   return (

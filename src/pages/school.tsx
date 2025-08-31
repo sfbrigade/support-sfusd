@@ -8,7 +8,6 @@ import SchoolVolunteer from "@/components/schoolPageComponents/SchoolVolunteer";
 import prisma from "@/lib/prisma";
 import { School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
-import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";

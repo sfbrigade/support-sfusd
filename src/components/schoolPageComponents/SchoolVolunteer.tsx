@@ -8,8 +8,11 @@ import VolunteerSignupModal from "./VolunteerSignupModal";
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useToast } from "../Toast/ToastContext";
+import { usePostHog } from "posthog-js/react";
 
 const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
+  const posthog = usePostHog();
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const { showToast } = useToast();
 
@@ -93,7 +96,10 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 </p>
                 <button
                   className="mt-2 rounded-lg bg-[#3A86FF] px-4 py-3 text-white font-semibold text-center w-full"
-                  onClick={openModal}
+                  onClick={() => {
+                    posthog?.capture?.('volunteer_form_clicked', { school: school.name })
+                    openModal()
+                  }}
                 >
                   Join the After Hours Team
                 </button>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Tag from "./Tag";
 import VolunteerList from "./schoolPageComponents/VolunteerList";
+import { usePostHog } from "posthog-js/react";
 
 interface SchoolCardProps {
   school: School;
@@ -35,6 +36,7 @@ const LearnMoreButton = () => {
     </button>
   );
 };
+
 const SchoolCard: React.FC<SchoolCardProps> = ({
   school,
   onClose,
@@ -51,6 +53,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   //   (metric) => metric.name == "English Language Learners",
   // );
 
+  const posthog = usePostHog();
   /* TODO: look into whether or not creating a `WithLink` component can simplify this somehow */
   const SchoolImage = (props: any) => (
     <Image
@@ -121,6 +124,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         <Link
           className=" md:block"
           href={"/school?name=" + encodeURIComponent(school.name) +"&stub=" + school.stub}
+          onClick={() => posthog?.capture?.('school_learn_more_clicked_map', { school: school.name })}
         >
           <LearnMoreButton />
         </Link>

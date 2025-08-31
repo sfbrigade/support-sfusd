@@ -6,6 +6,7 @@ import Link from "next/link";
 import Tag from "./Tag";
 import { useMapContext } from "@/contexts/MapContext";
 import VolunteerList from "./schoolPageComponents/VolunteerList";
+import { usePostHog } from "posthog-js/react";
 
 type MapListCardProps = {
   school: School;
@@ -41,16 +42,8 @@ const MapListCard = ({
   const cardRef = useRef<HTMLDivElement>(null);
 
   const { stub, name, neighborhood } = school;
-
-  // const students = school.metrics.find(
-  //   (metric) => metric.name == "Students Enrolled",
-  // );
-  // const frl = school.metrics.find(
-  //   (metric) => metric.name == "Free/Reduced Lunch",
-  // );
-  // const ell = school.metrics.find(
-  //   (metric) => metric.name == "English Language Learners",
-  // );
+  const posthog = usePostHog();
+  
 
   const learnMoreRef = useRef<HTMLAnchorElement>(null);
 
@@ -120,8 +113,8 @@ const MapListCard = ({
           <Link
             ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
-            //href={"/school?name=" + encodeURIComponent(school.name)}
             href={schoolUrl}
+            onClick={() => posthog?.capture?.('school_learn_more_clicked_list', { school: school.name })}
           >
             Learn More
           </Link>

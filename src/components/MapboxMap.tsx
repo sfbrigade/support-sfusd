@@ -2,6 +2,7 @@ import { School } from "@/types/school";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef, useState, useMemo } from "react";
 import { useMapContext } from "@/contexts/MapContext";
+import { usePostHog } from "posthog-js/react";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: School | null) => void;
@@ -47,7 +48,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
   const markersRef = useRef<{ [key: string]: mapboxgl.Marker }>({});
   const [mapLoaded, setMapLoaded] = useState(false);
   const userHasInteracted = useRef(false);
-
+  const posthog = usePostHog();
   const flyToOptions = useMemo(
     () => ({
       speed: 1.2, // speed of animation .. slowing things down a bit.
@@ -172,6 +173,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         el.ariaLabel = `School marker: ${school.name}`;
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
+          posthog?.capture?.('map_marker_clicked', { school: school.name });
           userHasInteracted.current = true;
           e.preventDefault();
           e.stopPropagation();
@@ -265,7 +267,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, [schools, setSelectedSchool, flyToOptions]);
+  }, [schools, setSelectedSchool, flyToOptions, posthog]);
 
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
