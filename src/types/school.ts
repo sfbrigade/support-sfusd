@@ -1,19 +1,13 @@
+import { SchoolType } from "@prisma/client";
+
 export interface School {
-  id: string;
+  stub: string;
   name: string;
   address?: string;
   neighborhood?: string;
   priority: boolean;
-  img?: string;
   latitude: number;
   longitude: number;
-  profile?: SchoolProfile;
-  metrics: Metric[];
-  programs: Program[];
-  zipcode?: string;
-}
-
-export interface SchoolProfile {
   about: string;
   about_bp: string[];
   volunteer_form_url: string;
@@ -28,6 +22,10 @@ export interface SchoolProfile {
   instagram_url?: string;
   facebook_url?: string;
   website_url?: string;
+  metrics: Metric[];
+  programs: Program[];
+  zipcode?: string;
+  school_type: SchoolType[];
 }
 
 export interface Metric {

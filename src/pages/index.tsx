@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import SEO from "@/components/SEO";
 import { usePostHog } from "posthog-js/react";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
 
   return (
     <>
+      <SEO title="Support SF Schools - Home" />
       <main className="relative flex h-full flex-row justify-between p-4">
         <section className="md:mt-50 mt-8 flex flex-1 flex-col items-center gap-8 md:justify-start lg:gap-11">
           <header className="text-center">

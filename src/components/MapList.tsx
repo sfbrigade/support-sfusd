@@ -27,17 +27,17 @@ const MapList = ({
   onModalOpen,
 }: MapListProps) => {
   return (
-    <div className="flex h-full flex-col">
-      <div className="flex h-full flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4">
+    <div className="flex flex-col overflow-auto">
+      <div className="flex flex-col overflow-auto gap-2 max-md:mb-4 md:gap-4">
         {schools
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((school) => (
             <MapListCard
-              key={school.id}
+              key={school.stub}
               school={school}
               setSelectedSchool={setSelectedSchool}
               isExpanded={
-                selectedSchool ? school.id === selectedSchool.id : false
+                selectedSchool ? school.stub === selectedSchool.stub : false
               }
               onModalOpen={onModalOpen}
             />

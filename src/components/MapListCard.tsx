@@ -40,19 +40,10 @@ const MapListCard = ({
 }: MapListCardProps) => {
   const { selectedSchool } = useMapContext();
   const cardRef = useRef<HTMLDivElement>(null);
+
+  const { stub, name, neighborhood } = school;
   const posthog = usePostHog();
   
-  const { img, name, neighborhood } = school;
-
-  const students = school.metrics.find(
-    (metric) => metric.name == "Students Enrolled",
-  );
-  const frl = school.metrics.find(
-    (metric) => metric.name == "Free/Reduced Lunch",
-  );
-  const ell = school.metrics.find(
-    (metric) => metric.name == "English Language Learners",
-  );
 
   const learnMoreRef = useRef<HTMLAnchorElement>(null);
 
@@ -78,10 +69,14 @@ const MapListCard = ({
   }
 
   useEffect(() => {
-    if (selectedSchool && selectedSchool.id === school.id) {
+    if (selectedSchool && selectedSchool.stub === school.stub) {
       cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
-  }, [selectedSchool, school.id]);
+  }, [selectedSchool, school.stub]);
+
+  const schoolUrl = "/school?name=" + encodeURIComponent(school.name) + "&stub=" + school.stub;
+  // console.log('Generated URL:', schoolUrl);
+  // console.log('School data:', { name: school.name, stub: school.stub });
 
   return (
     <div
@@ -118,7 +113,7 @@ const MapListCard = ({
           <Link
             ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
-            href={"/school?name=" + encodeURIComponent(school.name)}
+            href={schoolUrl}
             onClick={() => posthog?.capture?.('school_learn_more_clicked_list', { school: school.name })}
           >
             Learn More
@@ -131,7 +126,7 @@ const MapListCard = ({
         }`}
       >
         <Image
-          src={`/school_img/${img}`}
+          src={`/school-images/full/${stub}.webp`}
           placeholder="blur"
           blurDataURL={blurDataURL}
           alt="School Image"
