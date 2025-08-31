@@ -91,7 +91,6 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         "--marker-size",
         `${markerSize}px`,
       );
-      console.log("marker size", markerSize);
       mapContainer.current.style.setProperty(
         "--marker-selected-size",
         `${selectedMarkerSize}px`,
