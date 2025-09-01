@@ -28,10 +28,10 @@
     "googleapis": "^148.0.0",
     "image-size": "^2.0.1",
     "mapbox-gl": "^2.15.0",
-    "next": "13.4.19",
+    "next": "^14.2.32",
     "posthog-js": "^1.261.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-icons": "^4.11.0",
     "react-modal": "^3.16.1",
     "sharp": "^0.34.3",
@@ -52,7 +52,7 @@
     "address": "^2.0.2",
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
+    "eslint-config-next": "^14.2.32",
     "eslint-config-prettier": "^9.1.0",
     "file-loader": "^6.2.0",
     "googleapis": "^144.0.0",
@@ -73,5 +73,8 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
