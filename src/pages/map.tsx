@@ -20,8 +20,22 @@ import { usePostHog } from "posthog-js/react";
 
 export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
-    include: {
-      metrics: true,
+    select: {
+      // Needed for map markers
+      stub: true,
+      name: true,
+      latitude: true,
+      longitude: true,
+
+      // Needed for filters
+      school_type: true,
+      priority: true,
+
+      // Needed for search and display
+      zipcode: true,
+      neighborhood: true,
+
+      // Only volunteer programs
       programs: true,
     },
   });
