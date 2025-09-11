@@ -21,12 +21,12 @@ const nextConfig = {
 
 nextConfig.webpack = (config, context) => {
   config.module.rules.push({
-    test: \/\.svg$/, 
+    test: /\.svg$/, 
     use: '@svgr/webpack',
   });
 
   config.module.rules.push({
-    test: \/\.pdf$/, 
+    test: /\.pdf$/, 
     use: {
       loader: 'file-loader',
       options: {
