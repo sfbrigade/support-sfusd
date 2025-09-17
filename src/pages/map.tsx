@@ -9,7 +9,6 @@ import SearchBar from "@/components/SearchBar";
 import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 import Image from "next/image";
-import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
 import { useMapContext } from "../contexts/MapContext";
 import SEO from "@/components/SEO";

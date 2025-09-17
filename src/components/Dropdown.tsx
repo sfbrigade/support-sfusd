@@ -11,7 +11,7 @@ export default function Dropdown<ItemType = any>({
   items,
   onItemSelect,
   cursor
-}: DropdownProps<ItemType>): JSX.Element {
+}: DropdownProps<ItemType>): React.JSX.Element {
 
   const listRef = useRef<HTMLUListElement>(null);
 
