@@ -17,7 +17,7 @@ interface SearchBarProps<DropdownItemType> {
 export default function SearchBar<DropdownItemType = any>({
   onItemSelect,
   onSearch,
-}: SearchBarProps<DropdownItemType>): JSX.Element {
+}: SearchBarProps<DropdownItemType>): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownItems, setDropdownItems] = useState<
     DropdownItem<DropdownItemType>[]
