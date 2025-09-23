@@ -9,7 +9,7 @@
     "dev": "npm run migrate-check && npm run generate-sitemap && next dev --turbopack",
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "migrate-check": "prisma migrate diff --from-schema-datamodel=prisma/schema.prisma --to-schema-datasource=prisma/schema.prisma",
-    "build": "prisma migrate reset --force && npm run generate-sitemap && next build",
+    "build": "prisma migrate reset --force && npm run generate-sitemap && next build --turbopack",
     "dbpush": "prisma db push",
     "seed": "prisma db seed",
     "start": "next start",
