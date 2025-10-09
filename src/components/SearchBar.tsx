@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 
 import Dropdown from "./Dropdown";
+import type { DropdownItem } from "@/types/school";
 import SearchIcon from "../../public/icons/search-icon.svg";
-
-export interface DropdownItem<ItemType> {
-  label: string;
-  value: string;
-  item: ItemType;
-}
 
 interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
