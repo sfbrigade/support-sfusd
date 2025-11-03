@@ -24,7 +24,7 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
   toggleView,
 }) => {
   return (
-    <label className="w-full relative inline-block h-[38px] rounded-md bg-[#CCD8DE]">
+    <label className="relative inline-block h-[38px] w-full rounded-md bg-[#CCD8DE] focus-within:ring-2 focus-within:ring-[#005fcc]">
       <div className="absolute left-0 top-0 flex h-full w-full items-center justify-around">
         <p className="flex items-center justify-center gap-1">
           <Image
