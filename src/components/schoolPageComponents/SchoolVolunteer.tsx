@@ -49,7 +49,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
   }
 
   return (
-    <section id="volunteer" className="flex flex-col gap-10">
+    <section id="volunteer" className="flex scroll-mt-20 flex-col gap-10">
       <BannerWrapper
         className="gap-4 rounded-lg md:gap-8 bg-[#FFF5DA] p-4 px-6 md:p-12 md:px-12"
         left={
@@ -79,7 +79,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
               <h1 className="font-fredoka font-medium text-l md:text-2xl mb-1">During The School Day</h1>
                <p className="text-base font-lato">
                   A once-a-week volunteer commitment through the SF Education Fund to support classrooms, teachers, and students during the school day. You choose from their list of options.
-               </p>
+              </p>
               <a
                 href="https://sfedfund.org/become-a-volunteer/"
                 target="_blank"
@@ -91,20 +91,20 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
             </div>
               <div className="bg-white rounded-xl p-5 shadow flex flex-col gap-4 md:w-[85%]">
                 <h1 className="font-fredoka font-medium text-l md:text-2xl mb-1">Beyond the Bell</h1>
-                <p className="text-base">
+              <p className="text-base">
                   Flexible opportunities outside school hours, from after-school programs to PTA events, community projects, and more.
-                </p>
-                <button
+              </p>
+              <button
                   className="mt-2 rounded-lg bg-[#3A86FF] px-4 py-3 text-white font-semibold text-center w-full"
-                  onClick={() => {
+                onClick={() => {
                     posthog?.capture?.('volunteer_form_clicked', { school: school.name })
                     openModal()
-                  }}
-                >
-                  Join the After Hours Team
-                </button>
-              </div>
+                }}
+              >
+                Join the After Hours Team
+              </button>
             </div>
+          </div>
         }
       />
       <VolunteerList school={school} fullCard={true} />
