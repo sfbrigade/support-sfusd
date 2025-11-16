@@ -9,6 +9,7 @@ interface FilterBySchoolTypeProps {
   setModalIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   handlePriorityChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   priorityFilter: boolean;
+  setPriorityFilter: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const schoolTypes = [
@@ -24,6 +25,7 @@ export default function FilterBySchoolType({
   setModalIsOpen,
   handlePriorityChange,
   priorityFilter,
+  setPriorityFilter,
 }: FilterBySchoolTypeProps) {
   return (
     <div className="flex flex-col flex-wrap justify-between gap-4 md:mt-4 md:flex-row">
@@ -35,8 +37,8 @@ export default function FilterBySchoolType({
             id="all"
             name="all"
             value="all"
-            onChange={() => setSelectedSchoolTypes([])}
-            checked={selectedSchoolTypes.length === 0}
+            onChange={() => { setSelectedSchoolTypes([]); setPriorityFilter(false); }}
+            checked={selectedSchoolTypes.length === 0 && !priorityFilter}
             className="accent-[#3A86FF]"
           />
         </div>
@@ -91,7 +93,7 @@ export default function FilterBySchoolType({
         </div>
       </div>
 
-      <div className="hidden md:flex items-center gap-2">
+      <div className="hidden items-center gap-2 md:flex">
         <Image
           alt="High priority icon"
           src="/circle_priority.svg"

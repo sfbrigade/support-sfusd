@@ -138,10 +138,7 @@ const Map: React.FC<Props> = (props) => {
     const isChecked = e.target.checked;
     setPriorityFilter(isChecked);
     sessionStorage.setItem("priorityFilter", JSON.stringify(isChecked));
-    if (isChecked) {
-      setSelectedSchoolTypes([]); // Unselect "Show All"
-      sessionStorage.setItem("selectedSchoolTypes", JSON.stringify([]));
-    }
+    
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
@@ -261,6 +258,7 @@ const Map: React.FC<Props> = (props) => {
                   setModalIsOpen={setModalIsOpen}
                   handlePriorityChange={handlePriorityChange}
                   priorityFilter={priorityFilter}
+                  setPriorityFilter={setPriorityFilter}
                 />
               </div>
             </div>
@@ -387,6 +385,7 @@ const Map: React.FC<Props> = (props) => {
                   setModalIsOpen={setModalIsOpen}
                   handlePriorityChange={handlePriorityChange}
                   priorityFilter={priorityFilter}
+                  setPriorityFilter={setPriorityFilter}
                 />
                 {/* <div className="flex items-center gap-2">
                     <Image
