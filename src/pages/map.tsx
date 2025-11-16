@@ -33,10 +33,11 @@ type Props = {
 };
 
 const schoolCardPlaceholderTitle = "Select a School";
-// school in session 
+// school in session
 
 // School Year Version. Uncomment below when school starts in the Fall
-const schoolCardPlaceholderText = "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
+const schoolCardPlaceholderText =
+  "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
 // Summer Version. Comment-out below when school starts in the Fall
 //const schoolCardPlaceholderText = "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";
@@ -44,8 +45,6 @@ const schoolCardPlaceholderText = "All schools are looking for volunteers and do
 // school out of session
 /* const schoolCardPlaceholderText =
   "San Francisco public schools are closed until mid August. Click on the school closest to you to learn about opportunities in the fall.";*/
-
-
 
 const Map: React.FC<Props> = (props) => {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
@@ -57,7 +56,7 @@ const Map: React.FC<Props> = (props) => {
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
 
-  // Mobile drawer state  
+  // Mobile drawer state
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
@@ -84,9 +83,11 @@ const Map: React.FC<Props> = (props) => {
     }
   }, []);
   const posthog = usePostHog();
-  
+
   const openModal = () => {
-    posthog?.capture('high_priority_modal_opened', { school: selectedSchool?.name });
+    posthog?.capture("high_priority_modal_opened", {
+      school: selectedSchool?.name,
+    });
     setModalIsOpen(true);
   };
 
@@ -95,7 +96,7 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const setToggle = () => {
-    posthog?.capture('map_view_toggled', { isMapView: !isMapView });
+    posthog?.capture("map_view_toggled", { isMapView: !isMapView });
     setIsMapView(!isMapView);
   };
 
@@ -144,7 +145,7 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
-    posthog?.capture('searched_for_school', { searchTerm });
+    posthog?.capture("searched_for_school", { searchTerm });
     const searchTermToLowerCase = searchTerm.toLowerCase();
     return filteredSchools
       .filter(({ name, zipcode, neighborhood }) => {
@@ -164,7 +165,9 @@ const Map: React.FC<Props> = (props) => {
   };
 
   const itemSelect = (selection: DropdownItem<School>) => {
-    posthog?.capture('selected_school_from_search', { school: selection.item.name });
+    posthog?.capture("selected_school_from_search", {
+      school: selection.item.name,
+    });
     setSelectedSchool(selection.item);
   };
 
@@ -193,45 +196,56 @@ const Map: React.FC<Props> = (props) => {
       <div className="flex h-full flex-col bg-[#D7F1FF]">
         {/* High Priority Modal */}
         <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
-        
+
         {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
         <div className="flex flex-col gap-2 p-2 md:hidden">
           <div className="flex items-center gap-2">
             <div className="flex-grow">
-              <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+              <SearchBar
+                onItemSelect={itemSelect}
+                onSearch={handleSchoolSearch}
+              />
             </div>
-            
+
             <button
-              className="ml-2 flex items-center justify-center bg-[#D7F1FF] text-[#000] p-2"
+              className="ml-2 flex items-center justify-center bg-[#D7F1FF] p-2 text-[#000]"
               aria-label="Open filters"
               onClick={() => setMobileFiltersOpen(true)}
             >
               {/* Replace with your filter icon */}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-6 w-6"
+              >
                 <path d="M18.75 12.75h1.5a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM12 6a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 6ZM12 18a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 18ZM3.75 6.75h1.5a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM5.25 18.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 0 1.5ZM3 12a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 3 12ZM9 3.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM12.75 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM9 15.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
               </svg>
-
-
             </button>
           </div>
           <ToggleButton isMapView={isMapView} toggleView={setToggle} />
         </div>
 
         {/* MOBILE ONLY: Filters Drawer */}
-        {mobileFiltersOpen && <div className="fixed left-0 bottom-0 z-40 bg-black w-full h-full opacity-50" onClick={() => setMobileFiltersOpen(false)}/>}
-        
+        {mobileFiltersOpen && (
+          <div
+            className="fixed bottom-0 left-0 z-40 h-full w-full bg-black opacity-50"
+            onClick={() => setMobileFiltersOpen(false)}
+          />
+        )}
+
         <div
-          className={`fixed left-0 right-0 bottom-0 z-40 bg-white rounded-t-2xl shadow-lg transition-transform duration-300 md:hidden flex flex-col ${
+          className={`fixed bottom-0 left-0 right-0 z-40 flex flex-col rounded-t-2xl bg-white shadow-lg transition-transform duration-300 md:hidden ${
             mobileFiltersOpen ? "translate-y-0" : "translate-y-full"
           }`}
           style={{ minHeight: "50vh" }}
         >
-          <div className="flex-grow flex flex-col gap-4 justify-between">
+          <div className="flex flex-grow flex-col justify-between gap-4">
             <div>
-              <div className="flex justify-between items-center mb-2 p-4 border-b-2">
+              <div className="mb-2 flex items-center justify-between border-b-2 p-4">
                 <h2 className="text-lg font-semibold">Filter Schools</h2>
                 <button
-                  className="text-gray-500 text-xl"
+                  className="text-xl text-gray-500"
                   onClick={() => setMobileFiltersOpen(false)}
                   aria-label="Close filters"
                 >
@@ -244,43 +258,18 @@ const Map: React.FC<Props> = (props) => {
                   selectedSchoolTypes={selectedSchoolTypes}
                   setSelectedSchoolTypes={setSelectedSchoolTypes}
                   handleSchoolTypeSelection={handleSchoolTypeSelection}
+                  setModalIsOpen={setModalIsOpen}
+                  handlePriorityChange={handlePriorityChange}
+                  priorityFilter={priorityFilter}
                 />
               </div>
-              {/* Priority Filter - stacked below */}
-              <div className="flex-col flex mt-4 p-4">
-                <div className="flex justify-between items-center gap-2">
-                  <div className="flex items-center">
-                  <Image
-                    alt="High priority icon"
-                    src="/circle_priority.svg"
-                    width={19}
-                    height={20}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setModalIsOpen(true);
-                    }}
-                  />
-                  <label htmlFor="priority" className="text-base font-normal">Priority</label>
-                  </div>
-                  <div>
-                  <input
-                    type="checkbox"
-                    id="priority"
-                    name="priority"
-                    onChange={handlePriorityChange}
-                    checked={priorityFilter}
-                    className="accent-orange-500"
-                  />
-                  </div>
-                </div>
-              </div>
             </div>
-            
+
             {/* Reset and Apply Buttons - stacked at bottom */}
-            <div className="flex justify-between gap-4 p-4 border-t-2">
+            <div className="flex justify-between gap-4 border-t-2 p-4">
               <button
                 className="flex-1 rounded-full px-6 py-2 font-semibold"
-                style={{ backgroundColor: '#E7E7E7' }}
+                style={{ backgroundColor: "#E7E7E7" }}
                 onClick={() => {
                   setSelectedSchoolTypes([]);
                   setPriorityFilter(false);
@@ -290,8 +279,8 @@ const Map: React.FC<Props> = (props) => {
                 Reset
               </button>
               <button
-                className="flex-1 rounded-full px-6 py-2 text-white font-semibold"
-                style={{ backgroundColor: '#3A86FF' }}
+                className="flex-1 rounded-full px-6 py-2 font-semibold text-white"
+                style={{ backgroundColor: "#3A86FF" }}
                 onClick={() => setMobileFiltersOpen(false)}
               >
                 Apply Filters
@@ -314,7 +303,9 @@ const Map: React.FC<Props> = (props) => {
                     <Link
                       href={
                         "/school?name=" +
-                        encodeURIComponent(selectedSchool.name) + "&stub=" + selectedSchool.stub
+                        encodeURIComponent(selectedSchool.name) +
+                        "&stub=" +
+                        selectedSchool.stub
                       }
                       className="block md:hidden"
                       passHref
@@ -373,23 +364,31 @@ const Map: React.FC<Props> = (props) => {
             {/* Map or List View */}
             <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
               {/* DESKTOP ONLY: Top Bar with Search, Toggle, Map/List */}
-              <div className="hidden md:block p-4 bg-white rounded-2xl">
+              <div className="hidden rounded-2xl bg-white p-4 md:block">
                 <div className="flex w-full items-center gap-2">
                   <div className="w-2/3">
-                    <SearchBar onItemSelect={itemSelect} onSearch={handleSchoolSearch} />
+                    <SearchBar
+                      onItemSelect={itemSelect}
+                      onSearch={handleSchoolSearch}
+                    />
                   </div>
                   <div className="w-1/3">
-                    <ToggleButton isMapView={isMapView} toggleView={setToggle} />
+                    <ToggleButton
+                      isMapView={isMapView}
+                      toggleView={setToggle}
+                    />
                   </div>
                 </div>
                 {/* DESKTOP ONLY: Filters Row */}
-                <div className="flex flex-row mt-4 justify-between gap-4 flex-wrap">
-                  <FilterBySchoolType
-                    selectedSchoolTypes={selectedSchoolTypes}
-                    setSelectedSchoolTypes={setSelectedSchoolTypes}
-                    handleSchoolTypeSelection={handleSchoolTypeSelection}
-                  />
-                  <div className="flex items-center gap-2">
+                <FilterBySchoolType
+                  selectedSchoolTypes={selectedSchoolTypes}
+                  setSelectedSchoolTypes={setSelectedSchoolTypes}
+                  handleSchoolTypeSelection={handleSchoolTypeSelection}
+                  setModalIsOpen={setModalIsOpen}
+                  handlePriorityChange={handlePriorityChange}
+                  priorityFilter={priorityFilter}
+                />
+                {/* <div className="flex items-center gap-2">
                     <Image
                       alt="High priority icon"
                       src="/circle_priority.svg"
@@ -409,8 +408,7 @@ const Map: React.FC<Props> = (props) => {
                       checked={priorityFilter}
                       className="mr-4 border-black bg-transparent accent-orange-500"
                     />
-                  </div>
-                </div>
+                  </div> */}
               </div>
 
               {isMapView ? (
