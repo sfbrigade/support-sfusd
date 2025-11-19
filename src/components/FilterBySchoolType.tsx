@@ -6,7 +6,6 @@ interface FilterBySchoolTypeProps {
   selectedSchoolTypes: SchoolType[];
   setSelectedSchoolTypes: React.Dispatch<React.SetStateAction<SchoolType[]>>;
   handleSchoolTypeSelection: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  setModalIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   handlePriorityChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   priorityFilter: boolean;
   setPriorityFilter: React.Dispatch<React.SetStateAction<boolean>>;
@@ -22,11 +21,14 @@ export default function FilterBySchoolType({
   selectedSchoolTypes,
   setSelectedSchoolTypes,
   handleSchoolTypeSelection,
-  setModalIsOpen,
   handlePriorityChange,
   priorityFilter,
   setPriorityFilter,
 }: FilterBySchoolTypeProps) {
+
+  const [showDesktopTooltip, setShowDesktopTooltip] = React.useState(false);
+  const desktopCheckboxRef = React.useRef<HTMLInputElement>(null);
+
   return (
     <div className="flex flex-col flex-wrap justify-between gap-4 md:mt-4 md:flex-row">
       <div className="flex flex-col gap-4 md:flex-row">
@@ -70,7 +72,6 @@ export default function FilterBySchoolType({
               height={20}
               onClick={(e) => {
                 e.stopPropagation();
-                setModalIsOpen(true);
               }}
             />
             <label
@@ -93,28 +94,53 @@ export default function FilterBySchoolType({
         </div>
       </div>
 
-      <div className="hidden items-center gap-2 md:flex">
-        <Image
-          alt="High priority icon"
-          src="/circle_priority.svg"
-          width={19}
-          height={20}
-          onClick={(e) => {
-            e.stopPropagation();
-            setModalIsOpen(true);
-          }}
-        />
-        <label htmlFor="priority" className="text-sm">
-          Priority
-        </label>
-        <input
-          type="checkbox"
-          id="priority"
-          name="priority"
-          onChange={handlePriorityChange}
-          checked={priorityFilter}
-          className="mr-4 border-black bg-transparent accent-orange-500"
-        />
+      <div 
+        className="relative hidden items-center gap-2 md:flex"
+        onMouseEnter={() => setShowDesktopTooltip(true)}
+        onMouseLeave={() => setShowDesktopTooltip(false)}
+      >
+        <div
+          className="flex cursor-pointer items-center gap-2"
+          onClick={() => desktopCheckboxRef.current?.click()}
+        >
+          <Image
+            alt="High priority icon"
+            src="/circle_priority.svg"
+            width={19}
+            height={20}
+          />
+          <label className="cursor-pointer text-sm">
+            Priority
+          </label>
+          <input
+            ref={desktopCheckboxRef}
+            type="checkbox"
+            id="priority"
+            name="priority"
+            onChange={handlePriorityChange}
+            checked={priorityFilter}
+            className="pointer-events-none mr-4 border-black bg-transparent accent-orange-500"
+          />
+        </div>
+
+        {/* Tooltip */}
+        {showDesktopTooltip && (
+          <div className="absolute left-0 top-full z-50 bg-white p-2 text-sm shadow-lg">
+            <p>
+              We are following the {" "}
+              <a 
+                href="https://sfedfund.org/who-we-serve"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#3A86FF] hover:underline"
+                onClick={(e) => e.stopPropagation()}
+              >
+                SF Ed Fund&apos;s
+              </a>{" "}
+              definition of priority schools.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

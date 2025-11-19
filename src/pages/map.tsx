@@ -255,7 +255,6 @@ const Map: React.FC<Props> = (props) => {
                   selectedSchoolTypes={selectedSchoolTypes}
                   setSelectedSchoolTypes={setSelectedSchoolTypes}
                   handleSchoolTypeSelection={handleSchoolTypeSelection}
-                  setModalIsOpen={setModalIsOpen}
                   handlePriorityChange={handlePriorityChange}
                   priorityFilter={priorityFilter}
                   setPriorityFilter={setPriorityFilter}
@@ -382,7 +381,6 @@ const Map: React.FC<Props> = (props) => {
                   selectedSchoolTypes={selectedSchoolTypes}
                   setSelectedSchoolTypes={setSelectedSchoolTypes}
                   handleSchoolTypeSelection={handleSchoolTypeSelection}
-                  setModalIsOpen={setModalIsOpen}
                   handlePriorityChange={handlePriorityChange}
                   priorityFilter={priorityFilter}
                   setPriorityFilter={setPriorityFilter}
