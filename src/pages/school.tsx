@@ -1,12 +1,10 @@
-import BannerWrapper from "@/components/schoolPageComponents/BannerWrapper";
 import SchoolAbout from "@/components/schoolPageComponents/SchoolAbout";
 import SchoolDonation from "@/components/schoolPageComponents/SchoolDonation";
 import SchoolHeader from "@/components/schoolPageComponents/SchoolHeader";
 import SchoolStudentOutcomes from "@/components/schoolPageComponents/SchoolStudentOutcomes";
 import SchoolTestimonial from "@/components/schoolPageComponents/SchoolTestimonial";
 import SchoolVolunteer from "@/components/schoolPageComponents/SchoolVolunteer";
-import prisma from "@/lib/prisma";
-import { School } from "@/types/school";
+import { Metric, School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -20,38 +18,50 @@ const Profile: React.FC = () => {
   const [school, setSchool] = useState<School | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [studentOutcomes, setStudentOutcomes] = useState<Metric[]>([]);
 
   useEffect(() => {
-    if (stub && typeof stub === 'string') {
+    if (stub && typeof stub === "string") {
       setLoading(true);
       setError(null);
 
       fetch(`/api/school/${stub}`)
-      .then(res => {
-        if(!res.ok) {
-          throw new Error(res.status === 404 ? 'School not found' : 'Failed to load school');
-        }
-        return res.json();
-      })
-      .then(data => {
-        setSchool(data.school);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      })
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error(
+              res.status === 404 ? "School not found" : "Failed to load school",
+            );
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setSchool(data.school);
+          setLoading(false);
+        })
+        .catch((err) => {
+          setError(err.message);
+          setLoading(false);
+        });
     } else {
-        setError('School stub is required');
-        setLoading(false);
+      setError("School stub is required");
+      setLoading(false);
     }
   }, [stub]);
 
+  useEffect(() => {
+    if (school) {
+      const studentSelectedStats = school.metrics?.filter(
+        ({ category }) => category === "outcome",
+      );
+      setStudentOutcomes(studentSelectedStats);
+    }
+  }, [school]);
+
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-blue-600"></div>
           <p className="text-gray-600">Loading school information...</p>
         </div>
       </div>
@@ -60,13 +70,13 @@ const Profile: React.FC = () => {
 
   if (error) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-red-600 mb-2">Error</h1>
+          <h1 className="mb-2 text-2xl font-bold text-red-600">Error</h1>
           <p className="text-gray-600">{error}</p>
-          <button 
+          <button
             onClick={() => router.back()}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            className="mt-4 rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
           >
             Go Back
           </button>
@@ -77,13 +87,17 @@ const Profile: React.FC = () => {
 
   if (!school) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-600 mb-2">School Not Found</h1>
-          <p className="text-gray-500">The requested school could not be found.</p>
-          <button 
+          <h1 className="mb-2 text-2xl font-bold text-gray-600">
+            School Not Found
+          </h1>
+          <p className="text-gray-500">
+            The requested school could not be found.
+          </p>
+          <button
             onClick={() => router.back()}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            className="mt-4 rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
           >
             Go Back
           </button>
@@ -124,10 +138,8 @@ const Profile: React.FC = () => {
               />
               <SchoolHeader school={school} />
               <SchoolAbout school={school} />
-              {school.metrics.length ? (
-                <SchoolStudentOutcomes school={school} />
-              ) : (
-                ""
+              {studentOutcomes.length > 0 && (
+                <SchoolStudentOutcomes stats={studentOutcomes} />
               )}
               <SchoolVolunteer school={school} />
               <SchoolDonation school={school} />
