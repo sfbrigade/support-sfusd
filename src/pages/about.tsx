@@ -235,16 +235,23 @@ const About = () => {
             </div>
             <div className="my-4 text-center">
               <h2 className="text-lg font-semibold text-[#272728]">
-                Our Partner:
+                Our Partners:
               </h2>
               <div className="mt-2">
-                <Image
-                  src="/about/ed_fund_logo.png"
-                  alt="Ed Fund Logo"
-                  className="mx-auto h-auto max-w-full"
-                  width={300}
-                  height={200}
-                />
+                <div className="flex flex-wrap justify-center gap-8">
+                  <Image
+                    src="/about/ed_fund_logo.png"
+                    alt="Ed Fund Logo"
+                    width={300}
+                    height={200}
+                  />
+                  <Image
+                    src="/about/good_neighbor_lab_logo.png"
+                    alt="Good Neighbor Lab Logo"
+                    width={473}
+                    height={200}
+                  />
+                </div>
               </div>
             </div>
             <div>
