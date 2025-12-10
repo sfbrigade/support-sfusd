@@ -251,27 +251,33 @@ const About = () => {
               </h2>
               <div className="mt-2">
                 <div className="flex flex-wrap justify-center gap-x-8">
-                  {partnerList.map((partner) => (
-                    <a
-                      href={partner.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={!partner.link ? " cursor-default" : ""}
-                      key={partner.name}
-                      onClick={(e) => {
-                        if (!partner.link) {
-                          e.preventDefault();
-                        }
-                      }}
-                    >
-                      <Image
-                        src={partner.img}
-                        alt={partner.name + " Logo"}
-                        width={300}
-                        height={200}
-                      />
-                    </a>
-                  ))}
+                  {partnerList.map((partner) =>
+                    partner.link ? (
+                      <a
+                        href={partner.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=""
+                        key={partner.name}
+                      >
+                        <Image
+                          src={partner.img}
+                          width={300}
+                          height={200}
+                          alt={`${partner.name} Logo`}
+                        />
+                      </a>
+                    ) : (
+                      <div className="cursor-default" key={partner.name}>
+                        <Image
+                          src={partner.img}
+                          alt={partner.name + " Logo"}
+                          width={300}
+                          height={200}
+                        />
+                      </div>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
