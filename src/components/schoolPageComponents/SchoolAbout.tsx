@@ -1,6 +1,5 @@
 import { School } from "@/types/school";
 import HeadingContentWrapper from "./HeadingContentWrapper";
-import Statistic from "./Statistic";
 import StatisticList from "./StatisticList";
 
 const SchoolAbout: React.FC<{ school: School }> = ({ school }) => {

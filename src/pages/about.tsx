@@ -48,12 +48,17 @@ const member_list = [
     url: "https://www.linkedin.com/in/jesse-wang-/",
     img: "/about/jesse_wang.png",
   },
-
+  {
+    name: "Vince Shuali",
+    role: "Software Developer",
+    url: "https://www.linkedin.com/in/vincentshuali/",
+    img: "/about/vince_shuali.jpeg",
+  },
   {
     name: "Matt Gianni",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/mattgianni/",
-    img: "/about/mat_gianni.png",
+    img: "/about/matt_gianni.png",
   },
   {
     name: "Iryna Trush",
@@ -111,6 +116,18 @@ const pastContributors = [
   {
     name: "Melinda Kreuser",
     link: "https://www.linkedin.com/in/melindakreuser/",
+  },
+];
+const partnerList = [
+  {
+    name: "San Francisco Education Fund",
+    img: "/about/ed_fund_logo.png",
+    link: "https://sfedfund.org/",
+  },
+  {
+    name: "Good Neighbor Lab",
+    img: "/about/good_neighbor_lab_logo.png",
+    link: "https://www.goodneighborlab.org/",
   },
 ];
 
@@ -235,16 +252,38 @@ const About = () => {
             </div>
             <div className="my-4 text-center">
               <h2 className="text-lg font-semibold text-[#272728]">
-                Our Partner:
+                Our Partners:
               </h2>
               <div className="mt-2">
-                <Image
-                  src="/about/ed_fund_logo.png"
-                  alt="Ed Fund Logo"
-                  className="mx-auto h-auto max-w-full"
-                  width={300}
-                  height={200}
-                />
+                <div className="flex flex-wrap justify-center gap-x-8">
+                  {partnerList.map((partner) =>
+                    partner.link ? (
+                      <a
+                        href={partner.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=""
+                        key={partner.name}
+                      >
+                        <Image
+                          src={partner.img}
+                          width={300}
+                          height={200}
+                          alt={`${partner.name} Logo`}
+                        />
+                      </a>
+                    ) : (
+                      <div className="cursor-default" key={partner.name}>
+                        <Image
+                          src={partner.img}
+                          alt={partner.name + " Logo"}
+                          width={300}
+                          height={200}
+                        />
+                      </div>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
             <div>

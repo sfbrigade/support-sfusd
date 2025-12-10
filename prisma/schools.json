@@ -30,7 +30,7 @@
     "website_url": "https://www.sfusd.edu/school/balboa-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 1278,
         "unit": "",
         "category": "about"
@@ -66,7 +66,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 60,
         "unit": "%",
         "category": "outcome"
@@ -151,7 +151,7 @@
     "website_url": "https://www.sfusd.edu/school/phillip-and-sala-burton-academic-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 1060,
         "unit": "",
         "category": "about"
@@ -187,7 +187,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 18,
         "unit": "%",
         "category": "outcome"
@@ -266,7 +266,7 @@
     "website_url": "https://www.sfusd.edu/school/downtown-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 144,
         "unit": "",
         "category": "about"
@@ -302,7 +302,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 34,
         "unit": "%",
         "category": "outcome"
@@ -378,7 +378,7 @@
     "website_url": "https://www.sfusd.edu/school/galileo-academy-science-technology",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 1900,
         "unit": "",
         "category": "about"
@@ -414,7 +414,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 50,
         "unit": "%",
         "category": "outcome"
@@ -481,7 +481,7 @@
     "website_url": "https://www.sfusd.edu/school/ida-b-wells-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 183,
         "unit": "",
         "category": "about"
@@ -517,7 +517,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 0,
         "unit": "%",
         "category": "outcome"
@@ -584,7 +584,7 @@
     "website_url": "https://www.sfusd.edu/school/independence-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 162,
         "unit": "",
         "category": "about"
@@ -620,7 +620,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 34,
         "unit": "%",
         "category": "outcome"
@@ -686,7 +686,7 @@
     "website_url": "https://www.sfusd.edu/school/san-francisco-international-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 275,
         "unit": "",
         "category": "about"
@@ -722,7 +722,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 13,
         "unit": "%",
         "category": "outcome"
@@ -789,7 +789,7 @@
     "website_url": "https://www.sfusd.edu/school/june-jordan-school-equity",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 215,
         "unit": "",
         "category": "about"
@@ -825,7 +825,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 8,
         "unit": "%",
         "category": "outcome"
@@ -896,7 +896,7 @@
     "website_url": "https://www.sfusd.edu/school/abraham-lincoln-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 1997,
         "unit": "",
         "category": "about"
@@ -932,7 +932,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 34,
         "unit": "%",
         "category": "outcome"
@@ -1007,7 +1007,7 @@
     "website_url": "https://www.sfusd.edu/school/lowell-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 2632,
         "unit": "",
         "category": "about"
@@ -1043,7 +1043,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 83,
         "unit": "%",
         "category": "outcome"
@@ -1112,7 +1112,7 @@
     "website_url": "https://www.sfusd.edu/school/mission-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 1041,
         "unit": "",
         "category": "about"
@@ -1148,7 +1148,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 11,
         "unit": "%",
         "category": "outcome"
@@ -1216,7 +1216,7 @@
     "website_url": "https://www.sfusd.edu/school/john-oconnell-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 506,
         "unit": "",
         "category": "about"
@@ -1252,7 +1252,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 6,
         "unit": "%",
         "category": "outcome"
@@ -1322,7 +1322,7 @@
     "website_url": "https://www.sfusd.edu/school/ruth-asawa-san-francisco-school-arts",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 700,
         "unit": "",
         "category": "about"
@@ -1358,7 +1358,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 53,
         "unit": "%",
         "category": "outcome"
@@ -1426,7 +1426,7 @@
     "website_url": "https://www.sfusd.edu/school/academy-san-francisco-mcateer",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 360,
         "unit": "",
         "category": "about"
@@ -1462,7 +1462,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 13,
         "unit": "%",
         "category": "outcome"
@@ -1531,7 +1531,7 @@
     "website_url": "https://www.sfusd.edu/school/thurgood-marshall-academic-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 457,
         "unit": "",
         "category": "about"
@@ -1567,7 +1567,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 5,
         "unit": "%",
         "category": "outcome"
@@ -1636,7 +1636,7 @@
     "website_url": "https://www.sfusd.edu/school/raoul-wallenberg-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 549,
         "unit": "",
         "category": "about"
@@ -1672,7 +1672,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 37,
         "unit": "%",
         "category": "outcome"
@@ -1747,7 +1747,7 @@
     "website_url": "https://www.sfusd.edu/school/george-washington-high-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 2070,
         "unit": "",
         "category": "about"
@@ -1783,7 +1783,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math proficiency",
+        "name": "Math|Proficiency",
         "value": 57,
         "unit": "%",
         "category": "outcome"
@@ -1869,7 +1869,7 @@
     "website_url": "https://www.sfusd.edu/school/ap-giannini-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 1195,
         "unit": "",
         "category": "about"
@@ -1899,7 +1899,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 65,
         "unit": "%",
         "category": "outcome"
@@ -1971,7 +1971,7 @@
     "website_url": "https://www.sfusd.edu/school/alamo-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 435,
         "unit": "",
         "category": "about"
@@ -2001,7 +2001,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 70,
         "unit": "%",
         "category": "outcome"
@@ -2073,7 +2073,7 @@
     "website_url": "https://www.sfusd.edu/school/alice-fong-yu-alternative-school-k-8",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 600,
         "unit": "",
         "category": "about"
@@ -2103,7 +2103,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 77,
         "unit": "%",
         "category": "outcome"
@@ -2175,7 +2175,7 @@
     "website_url": "https://www.sfusd.edu/school/alvarado-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 535,
         "unit": "",
         "category": "about"
@@ -2205,7 +2205,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 56,
         "unit": "%",
         "category": "outcome"
@@ -2275,7 +2275,7 @@
     "website_url": "https://www.sfusd.edu/school/aptos-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 975,
         "unit": "",
         "category": "about"
@@ -2305,7 +2305,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 51,
         "unit": "%",
         "category": "outcome"
@@ -2375,7 +2375,7 @@
     "website_url": "https://www.sfusd.edu/school/argonne-elementary-school-extended-year",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 395,
         "unit": "",
         "category": "about"
@@ -2405,7 +2405,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 63,
         "unit": "%",
         "category": "outcome"
@@ -2477,7 +2477,7 @@
     "website_url": "https://www.sfusd.edu/school/bessie-carmichael-school-prek-8-filipino-education-center",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 650,
         "unit": "",
         "category": "about"
@@ -2507,7 +2507,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 7,
         "unit": "%",
         "category": "outcome"
@@ -2579,7 +2579,7 @@
     "website_url": "https://www.sfusd.edu/school/bret-harte-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 350,
         "unit": "",
         "category": "about"
@@ -2609,7 +2609,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 15,
         "unit": "%",
         "category": "outcome"
@@ -2680,7 +2680,7 @@
     "website_url": "https://www.sfusd.edu/school/bryant-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 210,
         "unit": "",
         "category": "about"
@@ -2710,7 +2710,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 6,
         "unit": "%",
         "category": "outcome"
@@ -2783,7 +2783,7 @@
     "website_url": "https://www.sfusd.edu/school/buena-vista-horace-mann-k-8-community-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 620,
         "unit": "",
         "category": "about"
@@ -2813,7 +2813,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 18,
         "unit": "%",
         "category": "outcome"
@@ -2885,7 +2885,7 @@
     "website_url": "https://www.sfusd.edu/school/cesar-chavez-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 440,
         "unit": "",
         "category": "about"
@@ -2915,7 +2915,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 17,
         "unit": "%",
         "category": "outcome"
@@ -2987,7 +2987,7 @@
     "website_url": "https://www.sfusd.edu/school/chinese-immersion-school-de-avila-zhongwenchenjinxuexiao",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 407,
         "unit": "",
         "category": "about"
@@ -3017,7 +3017,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 90,
         "unit": "%",
         "category": "outcome"
@@ -3085,7 +3085,7 @@
     "website_url": "https://www.sfusd.edu/school/civic-center-secondary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 60,
         "unit": "",
         "category": "about"
@@ -3175,7 +3175,7 @@
     "website_url": "https://www.sfusd.edu/school/claire-lilienthal-alternative-school-k-8",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 637,
         "unit": "",
         "category": "about"
@@ -3253,7 +3253,7 @@
     "website_url": "https://www.sfusd.edu/school/clarendon-alternative-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 535,
         "unit": "",
         "category": "about"
@@ -3283,7 +3283,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 72,
         "unit": "%",
         "category": "outcome"
@@ -3354,7 +3354,7 @@
     "website_url": "https://www.sfusd.edu/school/cleveland-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 390,
         "unit": "",
         "category": "about"
@@ -3384,7 +3384,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 11,
         "unit": "%",
         "category": "outcome"
@@ -3455,7 +3455,7 @@
     "website_url": "https://www.sfusd.edu/school/commodore-sloat-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 400,
         "unit": "",
         "category": "about"
@@ -3485,7 +3485,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 69,
         "unit": "%",
         "category": "outcome"
@@ -3556,7 +3556,7 @@
     "website_url": "https://www.sfusd.edu/school/daniel-webster-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 370,
         "unit": "",
         "category": "about"
@@ -3586,7 +3586,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 54,
         "unit": "%",
         "category": "outcome"
@@ -3658,7 +3658,7 @@
     "website_url": "https://www.sfusd.edu/school/dianne-feinstein-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 407,
         "unit": "",
         "category": "about"
@@ -3688,7 +3688,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 59,
         "unit": "%",
         "category": "outcome"
@@ -3758,7 +3758,7 @@
     "website_url": "https://www.sfusd.edu/school/dolores-huerta-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 395,
         "unit": "",
         "category": "about"
@@ -3788,7 +3788,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 34,
         "unit": "%",
         "category": "outcome"
@@ -3859,7 +3859,7 @@
     "website_url": "https://www.sfusd.edu/school/dr-charles-r-drew-college-preparatory-academy",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 160,
         "unit": "",
         "category": "about"
@@ -3889,7 +3889,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 3,
         "unit": "%",
         "category": "outcome"
@@ -3958,7 +3958,7 @@
     "website_url": "https://www.sfusd.edu/school/dr-george-washington-carver-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 170,
         "unit": "",
         "category": "about"
@@ -3988,7 +3988,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 6,
         "unit": "%",
         "category": "outcome"
@@ -4058,7 +4058,7 @@
     "website_url": "https://www.sfusd.edu/school/dr-martin-luther-king-jr-academic-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 400,
         "unit": "",
         "category": "about"
@@ -4088,7 +4088,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 21,
         "unit": "%",
         "category": "outcome"
@@ -4158,7 +4158,7 @@
     "website_url": "https://www.sfusd.edu/school/dr-william-l-cobb-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 180,
         "unit": "",
         "category": "about"
@@ -4188,7 +4188,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 40,
         "unit": "%",
         "category": "outcome"
@@ -4258,7 +4258,7 @@
     "website_url": "https://www.sfusd.edu/school/er-taylor-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 660,
         "unit": "",
         "category": "about"
@@ -4288,7 +4288,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 42,
         "unit": "%",
         "category": "outcome"
@@ -4358,7 +4358,7 @@
     "website_url": "https://www.sfusd.edu/school/edwin-and-anita-lee-newcomer-school-limengxiankanglixinyiminxuexiao",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 30,
         "unit": "",
         "category": "about"
@@ -4428,7 +4428,7 @@
     "website_url": "https://www.sfusd.edu/school/el-dorado-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 180,
         "unit": "",
         "category": "about"
@@ -4458,7 +4458,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 4,
         "unit": "%",
         "category": "outcome"
@@ -4528,7 +4528,7 @@
     "website_url": "https://www.sfusd.edu/school/everett-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 745,
         "unit": "",
         "category": "about"
@@ -4558,7 +4558,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 9,
         "unit": "%",
         "category": "outcome"
@@ -4629,7 +4629,7 @@
     "website_url": "https://www.sfusd.edu/school/francis-scott-key-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 570,
         "unit": "",
         "category": "about"
@@ -4659,7 +4659,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 71,
         "unit": "%",
         "category": "outcome"
@@ -4730,7 +4730,7 @@
     "website_url": "https://www.sfusd.edu/school/francisco-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 600,
         "unit": "",
         "category": "about"
@@ -4760,7 +4760,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 30,
         "unit": "%",
         "category": "outcome"
@@ -4830,7 +4830,7 @@
     "website_url": "https://www.sfusd.edu/mccoppin",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 250,
         "unit": "",
         "category": "about"
@@ -4860,7 +4860,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 58,
         "unit": "%",
         "category": "outcome"
@@ -4932,7 +4932,7 @@
     "website_url": "https://www.sfusd.edu/school/garfield-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 225,
         "unit": "",
         "category": "about"
@@ -4962,7 +4962,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 56,
         "unit": "%",
         "category": "outcome"
@@ -5033,7 +5033,7 @@
     "website_url": "https://www.sfusd.edu/school/george-peabody-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 275,
         "unit": "",
         "category": "about"
@@ -5063,7 +5063,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 78,
         "unit": "%",
         "category": "outcome"
@@ -5134,7 +5134,7 @@
     "website_url": "https://www.sfusd.edu/school/george-r-moscone-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 370,
         "unit": "",
         "category": "about"
@@ -5164,7 +5164,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 34,
         "unit": "%",
         "category": "outcome"
@@ -5236,7 +5236,7 @@
     "website_url": "https://www.sfusd.edu/school/glen-park-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 315,
         "unit": "",
         "category": "about"
@@ -5266,7 +5266,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 42,
         "unit": "%",
         "category": "outcome"
@@ -5338,7 +5338,7 @@
     "website_url": "https://www.sfusd.edu/school/gordon-j-lau-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 680,
         "unit": "",
         "category": "about"
@@ -5368,7 +5368,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 67,
         "unit": "%",
         "category": "outcome"
@@ -5440,7 +5440,7 @@
     "website_url": "https://www.sfusd.edu/school/grattan-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 410,
         "unit": "",
         "category": "about"
@@ -5464,7 +5464,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 70,
         "unit": "%",
         "category": "outcome"
@@ -5536,7 +5536,7 @@
     "website_url": "https://www.sfusd.edu/school/guadalupe-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 285,
         "unit": "",
         "category": "about"
@@ -5566,7 +5566,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 23,
         "unit": "%",
         "category": "outcome"
@@ -5638,7 +5638,7 @@
     "website_url": "https://www.sfusd.edu/school/harvey-milk-civil-rights-academy",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 170,
         "unit": "",
         "category": "about"
@@ -5662,7 +5662,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 48,
         "unit": "%",
         "category": "outcome"
@@ -5733,7 +5733,7 @@
     "website_url": "https://www.sfusd.edu/school/herbert-hoover-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 990,
         "unit": "",
         "category": "about"
@@ -5763,7 +5763,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 48,
         "unit": "%",
         "category": "outcome"
@@ -5835,7 +5835,7 @@
     "website_url": "https://www.sfusd.edu/school/hillcrest-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 450,
         "unit": "",
         "category": "about"
@@ -5865,7 +5865,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 9,
         "unit": "%",
         "category": "outcome"
@@ -6016,7 +6016,7 @@
     "website_url": "https://www.sfusd.edu/school/james-denman-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 870,
         "unit": "",
         "category": "about"
@@ -6046,7 +6046,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 22,
         "unit": "%",
         "category": "outcome"
@@ -6118,7 +6118,7 @@
     "website_url": "https://www.sfusd.edu/school/james-lick-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 450,
         "unit": "",
         "category": "about"
@@ -6148,7 +6148,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 11,
         "unit": "%",
         "category": "outcome"
@@ -6220,7 +6220,7 @@
     "website_url": "https://www.sfusd.edu/school/jean-parker-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 125,
         "unit": "",
         "category": "about"
@@ -6250,7 +6250,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 57,
         "unit": "%",
         "category": "outcome"
@@ -6320,7 +6320,7 @@
     "website_url": "https://www.sfusd.edu/school/jefferson-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 515,
         "unit": "",
         "category": "about"
@@ -6350,7 +6350,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 59,
         "unit": "%",
         "category": "outcome"
@@ -6421,7 +6421,7 @@
     "website_url": "https://www.sfusd.edu/school/john-muir-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 255,
         "unit": "",
         "category": "about"
@@ -6451,7 +6451,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 69,
         "unit": "%",
         "category": "outcome"
@@ -6523,7 +6523,7 @@
     "website_url": "https://www.sfusd.edu/school/john-yehall-chin-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 275,
         "unit": "",
         "category": "about"
@@ -6553,7 +6553,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 87,
         "unit": "%",
         "category": "outcome"
@@ -6625,7 +6625,7 @@
     "website_url": "https://www.sfusd.edu/school/jose-ortega-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 415,
         "unit": "",
         "category": "about"
@@ -6655,7 +6655,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 70,
         "unit": "%",
         "category": "outcome"
@@ -6725,7 +6725,7 @@
     "website_url": "https://www.sfusd.edu/school/junipero-serra-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 320,
         "unit": "",
         "category": "about"
@@ -6755,7 +6755,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 33,
         "unit": "%",
         "category": "outcome"
@@ -6826,7 +6826,7 @@
     "website_url": "https://www.sfusd.edu/school/lafayette-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 565,
         "unit": "",
         "category": "about"
@@ -6856,7 +6856,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 81,
         "unit": "%",
         "category": "outcome"
@@ -6928,7 +6928,7 @@
     "website_url": "https://www.sfusd.edu/school/lakeshore-alternative-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 530,
         "unit": "",
         "category": "about"
@@ -6958,7 +6958,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 39,
         "unit": "%",
         "category": "outcome"
@@ -7029,7 +7029,7 @@
     "website_url": "https://www.sfusd.edu/school/lawton-alternative-school-k-8",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 615,
         "unit": "",
         "category": "about"
@@ -7059,7 +7059,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 76,
         "unit": "%",
         "category": "outcome"
@@ -7131,7 +7131,7 @@
     "website_url": "https://www.sfusd.edu/school/leonard-r-flynn-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 400,
         "unit": "",
         "category": "about"
@@ -7161,7 +7161,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 30,
         "unit": "%",
         "category": "outcome"
@@ -7233,7 +7233,7 @@
     "website_url": "https://www.sfusd.edu/school/longfellow-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 480,
         "unit": "",
         "category": "about"
@@ -7263,7 +7263,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 27,
         "unit": "%",
         "category": "outcome"
@@ -7335,7 +7335,7 @@
     "website_url": "https://www.sfusd.edu/school/malcolm-x-academy-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 115,
         "unit": "",
         "category": "about"
@@ -7359,7 +7359,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 8,
         "unit": "%",
         "category": "outcome"
@@ -7431,7 +7431,7 @@
     "website_url": "https://www.sfusd.edu/school/marina-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 808,
         "unit": "",
         "category": "about"
@@ -7461,7 +7461,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 41,
         "unit": "%",
         "category": "outcome"
@@ -7533,7 +7533,7 @@
     "website_url": "https://www.sfusd.edu/school/marshall-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 265,
         "unit": "",
         "category": "about"
@@ -7563,7 +7563,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 15,
         "unit": "%",
         "category": "outcome"
@@ -7635,7 +7635,7 @@
     "website_url": "https://www.sfusd.edu/school/mckinley-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 250,
         "unit": "",
         "category": "about"
@@ -7665,7 +7665,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 61,
         "unit": "%",
         "category": "outcome"
@@ -7737,7 +7737,7 @@
     "website_url": "https://www.sfusd.edu/school/miraloma-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 375,
         "unit": "",
         "category": "about"
@@ -7767,7 +7767,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 68,
         "unit": "%",
         "category": "outcome"
@@ -7837,7 +7837,7 @@
     "website_url": "https://www.sfusd.edu/school/mission-education-center-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 82,
         "unit": "",
         "category": "about"
@@ -7861,7 +7861,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 0,
         "unit": "%",
         "category": "outcome"
@@ -7932,7 +7932,7 @@
     "website_url": "https://www.sfusd.edu/school/monroe-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 546,
         "unit": "",
         "category": "about"
@@ -7962,7 +7962,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 48,
         "unit": "%",
         "category": "outcome"
@@ -8032,7 +8032,7 @@
     "website_url": "https://www.sfusd.edu/school/new-traditions-creative-arts-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 265,
         "unit": "",
         "category": "about"
@@ -8062,7 +8062,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 72,
         "unit": "%",
         "category": "outcome"
@@ -8135,7 +8135,7 @@
     "website_url": "https://www.sfusd.edu/school/paul-revere-prek-8-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 499,
         "unit": "",
         "category": "about"
@@ -8165,7 +8165,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 3,
         "unit": "%",
         "category": "outcome"
@@ -8237,7 +8237,7 @@
     "website_url": "https://www.sfusd.edu/school/presidio-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 1020,
         "unit": "",
         "category": "about"
@@ -8267,7 +8267,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 51,
         "unit": "%",
         "category": "outcome"
@@ -8339,7 +8339,7 @@
     "website_url": "https://www.sfusd.edu/school/redding-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 255,
         "unit": "",
         "category": "about"
@@ -8369,7 +8369,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 24,
         "unit": "%",
         "category": "outcome"
@@ -8441,7 +8441,7 @@
     "website_url": "https://www.sfusd.edu/school/robert-louis-stevenson-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 475,
         "unit": "",
         "category": "about"
@@ -8471,7 +8471,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 71,
         "unit": "%",
         "category": "outcome"
@@ -8544,7 +8544,7 @@
     "website_url": "https://www.sfusd.edu/school/rooftop-school-tk-8",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 600,
         "unit": "",
         "category": "about"
@@ -8574,7 +8574,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 54,
         "unit": "%",
         "category": "outcome"
@@ -8653,7 +8653,7 @@
     "website_url": "https://www.sfusd.edu/school/roosevelt-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 720,
         "unit": "",
         "category": "about"
@@ -8683,7 +8683,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 62,
         "unit": "%",
         "category": "outcome"
@@ -8755,7 +8755,7 @@
     "website_url": "https://www.sfusd.edu/school/rosa-parks-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 350,
         "unit": "",
         "category": "about"
@@ -8785,7 +8785,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 26,
         "unit": "%",
         "category": "outcome"
@@ -8858,7 +8858,7 @@
     "website_url": "https://www.sfusd.edu/school/san-francisco-community-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 290,
         "unit": "",
         "category": "about"
@@ -8888,7 +8888,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 35,
         "unit": "%",
         "category": "outcome"
@@ -8960,7 +8960,7 @@
     "website_url": "https://www.sfusd.edu/school/san-francisco-public-montessori",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 225,
         "unit": "",
         "category": "about"
@@ -8990,7 +8990,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 45,
         "unit": "%",
         "category": "outcome"
@@ -9062,7 +9062,7 @@
     "website_url": "https://www.sfusd.edu/school/sanchez-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 285,
         "unit": "",
         "category": "about"
@@ -9092,7 +9092,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 16,
         "unit": "%",
         "category": "outcome"
@@ -9164,7 +9164,7 @@
     "website_url": "https://www.sfusd.edu/school/sheridan-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 250,
         "unit": "",
         "category": "about"
@@ -9194,7 +9194,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 23,
         "unit": "%",
         "category": "outcome"
@@ -9266,7 +9266,7 @@
     "website_url": "https://www.sfusd.edu/school/sherman-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 375,
         "unit": "",
         "category": "about"
@@ -9296,7 +9296,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 47,
         "unit": "%",
         "category": "outcome"
@@ -9368,7 +9368,7 @@
     "website_url": "https://www.sfusd.edu/school/spring-valley-science-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 270,
         "unit": "",
         "category": "about"
@@ -9398,7 +9398,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 31,
         "unit": "%",
         "category": "outcome"
@@ -9469,7 +9469,7 @@
     "website_url": "https://www.sfusd.edu/school/starr-king-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 360,
         "unit": "",
         "category": "about"
@@ -9499,7 +9499,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 61,
         "unit": "%",
         "category": "outcome"
@@ -9571,7 +9571,7 @@
     "website_url": "https://www.sfusd.edu/school/sunnyside-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 370,
         "unit": "",
         "category": "about"
@@ -9601,7 +9601,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 53,
         "unit": "%",
         "category": "outcome"
@@ -9672,7 +9672,7 @@
     "website_url": "https://www.sfusd.edu/school/sunset-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 420,
         "unit": "",
         "category": "about"
@@ -9702,7 +9702,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 90,
         "unit": "%",
         "category": "outcome"
@@ -9774,7 +9774,7 @@
     "website_url": "https://www.sfusd.edu/school/sutro-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 275,
         "unit": "",
         "category": "about"
@@ -9804,7 +9804,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 74,
         "unit": "%",
         "category": "outcome"
@@ -9874,7 +9874,7 @@
     "website_url": "https://www.sfusd.edu/school/tenderloin-community-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 330,
         "unit": "",
         "category": "about"
@@ -9904,7 +9904,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 18,
         "unit": "%",
         "category": "outcome"
@@ -9974,7 +9974,7 @@
     "website_url": "https://www.sfusd.edu/school/ulloa-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 537,
         "unit": "",
         "category": "about"
@@ -10004,7 +10004,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 75,
         "unit": "%",
         "category": "outcome"
@@ -10076,7 +10076,7 @@
     "website_url": "https://www.sfusd.edu/school/visitacion-valley-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 250,
         "unit": "",
         "category": "about"
@@ -10106,7 +10106,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 30,
         "unit": "%",
         "category": "outcome"
@@ -10178,7 +10178,7 @@
     "website_url": "https://www.sfusd.edu/school/visitacion-valley-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 450,
         "unit": "",
         "category": "about"
@@ -10208,7 +10208,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 8,
         "unit": "%",
         "category": "outcome"
@@ -10280,7 +10280,7 @@
     "website_url": "https://www.sfusd.edu/school/west-portal-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 600,
         "unit": "",
         "category": "about"
@@ -10310,7 +10310,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 66,
         "unit": "%",
         "category": "outcome"
@@ -10382,7 +10382,7 @@
     "website_url": "https://www.sfusd.edu/school/willie-l-brown-jr-middle-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 285,
         "unit": "",
         "category": "about"
@@ -10412,7 +10412,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 23,
         "unit": "%",
         "category": "outcome"
@@ -10484,7 +10484,7 @@
     "website_url": "https://www.sfusd.edu/school/yick-wo-alternative-elementary-school",
     "metrics": [
       {
-        "name": "Students Enrolled",
+        "name": "Students|Enrolled",
         "value": 240,
         "unit": "",
         "category": "about"
@@ -10514,7 +10514,7 @@
         "category": "outcome"
       },
       {
-        "name": "Math Proficiency",
+        "name": "Math|Proficiency",
         "value": 70,
         "unit": "%",
         "category": "outcome"
