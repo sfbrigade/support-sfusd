@@ -36,28 +36,30 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
       .send("service_itlkzak", "template_ee6s74u", sanitized, {
         publicKey: "10-NnnxJFw9zLmYPf",
       })
-      .then(
-        () => {
-          emailjs
-            .send("service_xkteori", "template_ldjot9t", sanitized, {
-              publicKey: "D8WCCvG0aRMjhfkml",
-            })
-            .catch((err: any) => {
-              console.error(
-                "FAILED: error sending 'volunteer-confirmation-auto-reply' through EmailJS.",
-                err,
-              );
-            });
-          showToast("Volunteer form submitted successfully! Thank you!");
-          closeModal();
-        },
-        (err) => {
-          console.error(
-            "FAILED: error sending volunteer email to Support SF",
-            err,
-          );
-        },
-      );
+      .then(() => {
+        // only send the confirmation e-mail if the volunteer e-mail makes it
+        emailjs
+          .send("service_xkteori", "template_ldjot9t", sanitized, {
+            publicKey: "D8WCCvG0aRMjhfkml",
+          })
+          .catch((reason: any) => {
+            console.error(
+              "FAILED: error sending 'volunteer-confirmation-auto-reply' through EmailJS.",
+              reason,
+            );
+          });
+        showToast("Volunteer form submitted successfully! Thank you!");
+      })
+      .catch((reason) => {
+        // TODO: get copy/strat for failure case and perhaps
+        // enhance Toast styling to support both success and failure cases
+        showToast("Volunteer form submission failed.");
+        console.error(
+          "FAILED: error sending volunteer email to Support SF",
+          reason,
+        );
+      })
+      .finally(closeModal);
   };
 
   /**
