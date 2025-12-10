@@ -113,6 +113,18 @@ const pastContributors = [
     link: "https://www.linkedin.com/in/melindakreuser/",
   },
 ];
+const partnerList = [
+  {
+    name: "San Francisco Education Fund",
+    img: "/about/ed_fund_logo.png",
+    link: "https://sfedfund.org/",
+  },
+  {
+    name: "Good Neighbor Lab",
+    img: "/about/good_neighbor_lab_logo.png",
+    link: "https://www.goodneighborlab.org/",
+  },
+];
 
 const About = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -238,19 +250,28 @@ const About = () => {
                 Our Partners:
               </h2>
               <div className="mt-2">
-                <div className="flex flex-wrap justify-center gap-8">
-                  <Image
-                    src="/about/ed_fund_logo.png"
-                    alt="Ed Fund Logo"
-                    width={300}
-                    height={200}
-                  />
-                  <Image
-                    src="/about/good_neighbor_lab_logo.png"
-                    alt="Good Neighbor Lab Logo"
-                    width={473}
-                    height={200}
-                  />
+                <div className="flex flex-wrap justify-center gap-x-8">
+                  {partnerList.map((partner) => (
+                    <a
+                      href={partner.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={!partner.link ? " cursor-default" : ""}
+                      key={partner.name}
+                      onClick={(e) => {
+                        if (!partner.link) {
+                          e.preventDefault();
+                        }
+                      }}
+                    >
+                      <Image
+                        src={partner.img}
+                        alt={partner.name + " Logo"}
+                        width={300}
+                        height={200}
+                      />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
