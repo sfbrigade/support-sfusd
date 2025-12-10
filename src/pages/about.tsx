@@ -48,12 +48,17 @@ const member_list = [
     url: "https://www.linkedin.com/in/jesse-wang-/",
     img: "/about/jesse_wang.png",
   },
-
+  {
+    name: "Vince Shuali",
+    role: "Software Developer",
+    url: "https://www.linkedin.com/in/vincentshuali/",
+    img: "/about/vince_shuali.jpeg",
+  },
   {
     name: "Matt Gianni",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/mattgianni/",
-    img: "/about/mat_gianni.png",
+    img: "/about/matt_gianni.png",
   },
   {
     name: "Iryna Trush",
