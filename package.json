@@ -6,10 +6,10 @@
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "scripts": {
-    "dev": "npm run migrate-check && npm run generate-sitemap && next dev --turbopack",
+    "dev": "npm run migrate-check && npm run generate-sitemap && next dev",
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "migrate-check": "prisma migrate diff --from-schema-datamodel=prisma/schema.prisma --to-schema-datasource=prisma/schema.prisma",
-    "build": "prisma migrate reset --force && npm run generate-sitemap && next build --turbopack",
+    "build": "prisma migrate reset --force && npm run generate-sitemap && next build",
     "dbpush": "prisma db push",
     "seed": "prisma db seed",
     "start": "next start",

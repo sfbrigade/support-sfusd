@@ -1,8 +1,4 @@
 import Image from "next/image";
-import InstagramIcon from "../../../public/icons/instagram-icon.svg";
-import TwitterIcon from "../../../public/icons/twitter-icon.svg";
-import FacebookIcon from "../../../public/icons/facebook-icon.svg";
-import GlobeIcon from "../../../public/icons/globe-icon.svg";
 import { School } from "@/types/school";
 
 type Props = {
@@ -25,25 +21,33 @@ export default function SchoolHeader({ school }: Props) {
             <>
               {school.instagram_url && (
                 <a href={school.instagram_url} target="_blank">
-                  <InstagramIcon
-                    className="fill-inherit"
-                    height="36"
-                    width="36"
+                  <Image
+                    src="/icons/instagram-icon.svg"
+                    alt="Instagram Icon"
+                    width={36}
+                    height={36}
+                    style={{ fill: "blue" }}
                   />
                 </a>
               )}
               {school.facebook_url && (
                 <a href={school.facebook_url} target="_blank">
-                  <FacebookIcon
-                    className="fill-inherit"
-                    height="36"
-                    width="36"
+                  <Image
+                    src="/icons/facebook-icon.svg"
+                    alt="Facebook Icon"
+                    width={36}
+                    height={36}
                   />
                 </a>
               )}
               {school.website_url && (
                 <a href={school.website_url} target="_blank">
-                  <GlobeIcon className="fill-inherit" height="36" width="36" />
+                  <Image
+                    src="/icons/globe-icon.svg"
+                    alt="Globe Icon"
+                    width={36}
+                    height={36}
+                  />
                 </a>
               )}
             </>

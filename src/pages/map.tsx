@@ -1,4 +1,5 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { School, DropdownItem } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
@@ -295,6 +296,17 @@ const Map: React.FC<Props> = (props) => {
               {isMapView ? (
                 selectedSchool ? (
                   <div className="w-full md:w-auto md:p-4">
+                    <Link
+                      href={
+                        "/school?name=" +
+                        encodeURIComponent(selectedSchool.name) +
+                        "&stub=" +
+                        selectedSchool.stub
+                      }
+                      className="block md:hidden"
+                    >
+                      <SelectedSchoolCard school={selectedSchool} />
+                    </Link>
                     <SelectedSchoolCard
                       school={selectedSchool}
                       className="hidden md:block"

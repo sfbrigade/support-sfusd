@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 import Dropdown from "./Dropdown";
 import type { DropdownItem } from "@/types/school";
-import SearchIcon from "../../public/icons/search-icon.svg";
 
 interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
@@ -56,7 +56,13 @@ export default function SearchBar<DropdownItemType = any>({
   return (
     <div className="relative">
       <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center">
-        <SearchIcon className="fill-[#949494]" height="24" width="24" />
+        <Image
+          src="/icons/search-icon.svg"
+          alt="Search Icon"
+          width={24}
+          height={24}
+          className="opacity-60"
+        />
       </div>
       <input
         ref={inputRef}
