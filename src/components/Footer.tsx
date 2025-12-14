@@ -17,7 +17,7 @@ const Footer = () => {
           <a href="">Sitemap</a>
         </li>
       </ul>
-      <div className="mt-2 flex gap-2 fill-gray-800">
+      <div className="mt-2 flex gap-2">
         <a>
           <Image
             src="/icons/instagram-icon.svg"

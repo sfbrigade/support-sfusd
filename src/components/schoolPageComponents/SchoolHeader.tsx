@@ -16,7 +16,7 @@ export default function SchoolHeader({ school }: Props) {
           {school.name}
         </h1>
         {/* hide socials if not exist */}
-        <div className="flex justify-end gap-3 fill-blue-500 max-md:w-full">
+        <div className="flex justify-end gap-3 max-md:w-full">
           {school && (
             <>
               {school.instagram_url && (
@@ -26,7 +26,6 @@ export default function SchoolHeader({ school }: Props) {
                     alt="Instagram Icon"
                     width={36}
                     height={36}
-                    style={{ fill: "blue" }}
                   />
                 </a>
               )}
