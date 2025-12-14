@@ -137,7 +137,6 @@ const Map: React.FC<Props> = (props) => {
     const isChecked = e.target.checked;
     setPriorityFilter(isChecked);
     sessionStorage.setItem("priorityFilter", JSON.stringify(isChecked));
-    
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
@@ -296,18 +295,6 @@ const Map: React.FC<Props> = (props) => {
               {isMapView ? (
                 selectedSchool ? (
                   <div className="w-full md:w-auto md:p-4">
-                    <Link
-                      href={
-                        "/school?name=" +
-                        encodeURIComponent(selectedSchool.name) +
-                        "&stub=" +
-                        selectedSchool.stub
-                      }
-                      className="block md:hidden"
-                      passHref
-                    >
-                      <SelectedSchoolCard school={selectedSchool} />
-                    </Link>
                     <SelectedSchoolCard
                       school={selectedSchool}
                       className="hidden md:block"
