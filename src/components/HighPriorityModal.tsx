@@ -14,7 +14,7 @@ const customStyles = {
 };
 
 const HighPriorityModal: React.FC<ModalProps> = ({ onClose, isOpen }) => {
-  Modal.setAppElement("body");
+  Modal.setAppElement("#root");
   return (
     <Modal
       isOpen={isOpen}
