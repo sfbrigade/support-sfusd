@@ -173,7 +173,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
         el.ariaLabel = `School marker: ${school.name}`;
         el.addEventListener("click", (e) => {
           setSelectedSchool(school);
-          posthog?.capture?.('map_marker_clicked', { school: school.name });
+          posthog?.capture?.(`map_marker_clicked ${school.name}`, { school: school.name });
           userHasInteracted.current = true;
           e.preventDefault();
           e.stopPropagation();
