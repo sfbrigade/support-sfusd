@@ -85,6 +85,9 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 rounded-lg bg-[#3A86FF] px-4 py-3 text-white font-semibold text-center w-full"
+                onClick={() => {
+                  posthog?.capture?.(`sfedfund_link_clicked ${school.name}`, { school: school.name })
+                }}
               >
                 Join the School Day Team
               </a>
@@ -97,7 +100,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 <button
                   className="mt-2 rounded-lg bg-[#3A86FF] px-4 py-3 text-white font-semibold text-center w-full"
                   onClick={() => {
-                    posthog?.capture?.('volunteer_form_clicked', { school: school.name })
+                    posthog?.capture?.(`volunteer_form_clicked ${school.name}`, { school: school.name })
                     openModal()
                   }}
                 >

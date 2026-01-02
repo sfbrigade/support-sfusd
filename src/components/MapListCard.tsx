@@ -114,7 +114,7 @@ const MapListCard = ({
             ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
             href={schoolUrl}
-            onClick={() => posthog?.capture?.('school_learn_more_clicked_list', { school: school.name })}
+            onClick={() => posthog?.capture?.(`school_learn_more_clicked_list ${school.name}`, { school: school.name })}
           >
             Learn More
           </Link>
