@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { DropdownItem } from "./SearchBar";
+import type { DropdownItem } from "@/types/school";
 
 interface DropdownProps<ItemType> {
   items: DropdownItem<ItemType>[];
@@ -10,9 +10,8 @@ interface DropdownProps<ItemType> {
 export default function Dropdown<ItemType = any>({
   items,
   onItemSelect,
-  cursor
-}: DropdownProps<ItemType>): JSX.Element {
-
+  cursor,
+}: DropdownProps<ItemType>): React.JSX.Element {
   const listRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -20,12 +19,12 @@ export default function Dropdown<ItemType = any>({
       const selectedElement = listRef.current.children[cursor] as HTMLElement;
       if (selectedElement) {
         selectedElement.scrollIntoView({
-          block: 'nearest',
-          behavior: 'smooth'
+          block: "nearest",
+          behavior: "smooth",
         });
       }
     }
-  }, [cursor])
+  }, [cursor]);
 
   return (
     <>

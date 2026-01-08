@@ -3,13 +3,21 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js'
+      },
+    }
+  },
 };
 
 nextConfig.webpack = (config, context) => {
-  config.module.rules.push({
-    test: /\.svg$/,
-    use: "@svgr/webpack",
-  });
+  // config.module.rules.push({
+  //   test: /\.svg$/,
+  //   use: "@svgr/webpack",
+  // });
 
   config.module.rules.push({
     test: /\.pdf$/,

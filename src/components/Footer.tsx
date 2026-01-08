@@ -1,7 +1,4 @@
 import Image from "next/image";
-import InstagramIcon from "../../public/icons/instagram-icon.svg";
-import FacebookIcon from "../../public/icons/facebook-icon.svg";
-import GlobeIcon from "../../public/icons/globe-icon.svg";
 
 const Footer = () => {
   return (
@@ -20,16 +17,31 @@ const Footer = () => {
           <a href="">Sitemap</a>
         </li>
       </ul>
-      <div className="mt-2 flex gap-2 fill-gray-800">
+      <div className="mt-2 flex gap-2">
         <a>
-          <InstagramIcon className="fill-inherit" height="32" width="32" />
+          <Image
+            src="/icons/instagram-icon.svg"
+            alt="Instagram Icon"
+            width={32}
+            height={32}
+          />
         </a>
         <a>
-          <FacebookIcon className="fill-inherit" height="32" width="32" />
+          <Image
+            src="/icons/facebook-icon.svg"
+            alt="Facebook Icon"
+            width={32}
+            height={32}
+          />
         </a>
 
         <a>
-          <GlobeIcon className="fill-inherit" height="32" width="32" />
+          <Image
+            src="/icons/globe-icon.svg"
+            alt="Globe Icon"
+            width={32}
+            height={32}
+          />
         </a>
       </div>
     </footer>
