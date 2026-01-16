@@ -194,7 +194,7 @@ const Map: React.FC<Props> = (props) => {
         <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
 
         {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
-        <div className="flex flex-col gap-2 p-2 md:hidden">
+        <div className="sticky top-[3.75rem] z-30 flex flex-col gap-2 bg-[#D7F1FF] p-2 md:hidden">
           <div className="flex items-center gap-2">
             <div className="flex-grow">
               <SearchBar
