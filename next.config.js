@@ -27,12 +27,7 @@ const nextConfig = {
   },
 };
 
-nextConfig.webpack = (config, context) => {
-  // config.module.rules.push({
-  //   test: /\.svg$/,
-  //   use: "@svgr/webpack",
-  // });
-
+nextConfig.webpack = (config, _context) => {
   config.module.rules.push({
     test: /\.pdf$/,
     use: {
