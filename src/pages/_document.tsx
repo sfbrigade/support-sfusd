@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="scroll-smooth">
+      <Html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"

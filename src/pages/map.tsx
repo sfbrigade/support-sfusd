@@ -1,4 +1,5 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { School, DropdownItem } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
@@ -9,7 +10,6 @@ import SearchBar from "@/components/SearchBar";
 import { GetStaticProps } from "next";
 import prisma from "@/lib/prisma";
 import Image from "next/image";
-import Link from "next/link";
 import HighPriorityModal from "@/components/HighPriorityModal";
 import { useMapContext } from "../contexts/MapContext";
 import SEO from "@/components/SEO";
@@ -138,7 +138,6 @@ const Map: React.FC<Props> = (props) => {
     const isChecked = e.target.checked;
     setPriorityFilter(isChecked);
     sessionStorage.setItem("priorityFilter", JSON.stringify(isChecked));
-    
   };
 
   const handleSchoolSearch = async (searchTerm: string) => {
@@ -195,7 +194,7 @@ const Map: React.FC<Props> = (props) => {
         <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
 
         {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
-        <div className="flex flex-col gap-2 p-2 md:hidden">
+        <div className="sticky top-[3.75rem] z-30 flex flex-col gap-2 bg-[#D7F1FF] p-2 md:hidden">
           <div className="flex items-center gap-2">
             <div className="flex-grow">
               <SearchBar
@@ -305,7 +304,6 @@ const Map: React.FC<Props> = (props) => {
                         selectedSchool.stub
                       }
                       className="block md:hidden"
-                      passHref
                     >
                       <SelectedSchoolCard school={selectedSchool} />
                     </Link>

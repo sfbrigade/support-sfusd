@@ -31,8 +31,8 @@ interface SchoolCardProps {
  */
 const LearnMoreButton = () => {
   return (
-    <button className="w-24 md:w-40 rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white">
-      Learn more  
+    <button className="w-24 rounded-lg bg-blue-500 py-2 text-sm tracking-wide text-white md:w-40">
+      Learn more
     </button>
   );
 };
@@ -69,11 +69,11 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
 
   return (
     <div
-      className={`flex flex-row items-start justify-center rounded-2xl bg-white md:shadow-lg md:max-w-[400px] md:flex-col ${className}`}
+      className={`flex flex-row items-start justify-center rounded-2xl bg-white md:max-w-[400px] md:flex-col md:shadow-lg ${className}`}
     >
       <button
         onClick={onClose}
-        className="absolute left-2 top-2 z-10 block md:relative md:top-8 hover:brightness-75 transition-all duration-200"
+        className="absolute left-2 top-2 z-10 block transition-all duration-200 hover:brightness-75 md:relative md:top-8"
       >
         <Image
           src={`icons/x-circle-icon.svg`}
@@ -83,11 +83,16 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         />
       </button>
       <div
-        className={`h-40 transition-max-height relative col-span-4 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
+        className={`transition-max-height relative col-span-4 h-40 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
         md:rounded-t-2xl `}
       >
         <Link
-          href={"/school?name=" + encodeURIComponent(school.name) + "&stub=" + school.stub}
+          href={
+            "/school?name=" +
+            encodeURIComponent(school.name) +
+            "&stub=" +
+            school.stub
+          }
           className="hidden md:inline"
         >
           <SchoolImage
@@ -101,7 +106,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           className="inline-block md:hidden"
         />
       </div>
-      <div className="flex flex-col h-full w-3/5 p-2 md:w-full md:p-4">
+      <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
           {school.priority && (
             <button
@@ -111,7 +116,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
                 onModalOpen();
               }}
             >
-              <Tag /> 
+              <Tag />
             </button>
           )}
           <h2 className="font-medium md:text-xl">{school.name}</h2>
@@ -123,8 +128,17 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         </div>
         <Link
           className=" md:block"
-          href={"/school?name=" + encodeURIComponent(school.name) +"&stub=" + school.stub}
-          onClick={() => posthog?.capture?.('school_learn_more_clicked_map', { school: school.name })}
+          href={
+            "/school?name=" +
+            encodeURIComponent(school.name) +
+            "&stub=" +
+            school.stub
+          }
+          onClick={() =>
+            posthog?.capture?.("school_learn_more_clicked_map", {
+              school: school.name,
+            })
+          }
         >
           <LearnMoreButton />
         </Link>

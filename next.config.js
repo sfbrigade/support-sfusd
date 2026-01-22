@@ -6,31 +6,34 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/ingest/static/:path*',
-        destination: 'https://us-assets.i.posthog.com/static/:path*',
+        source: "/ingest/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
       },
       {
-        source: '/ingest/:path*',
-        destination: 'https://us.i.posthog.com/:path*',
+        source: "/ingest/:path*",
+        destination: "https://us.i.posthog.com/:path*",
       },
     ];
   },
   // This is required to support PostHog trailing slash API requests
   skipTrailingSlashRedirect: true,
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
+      },
+    },
+  },
 };
 
-nextConfig.webpack = (config, context) => {
+nextConfig.webpack = (config, _context) => {
   config.module.rules.push({
-    test: /\.svg$/, 
-    use: '@svgr/webpack',
-  });
-
-  config.module.rules.push({
-    test: /\.pdf$/, 
+    test: /\.pdf$/,
     use: {
-      loader: 'file-loader',
+      loader: "file-loader",
       options: {
-        name: '[path][name].[ext]',
+        name: "[path][name].[ext]",
       },
     },
   });
@@ -41,6 +44,6 @@ nextConfig.webpack = (config, context) => {
 module.exports = nextConfig;
 
 /* log local IP address to console to easily visit dev server on LAN */
-if (process.env.NODE_ENV === 'development') {
-  console.info(`				LAN url: http://${require('address').ip()}:3000`);
+if (process.env.NODE_ENV === "development") {
+  console.info(`				LAN url: http://${require("address").ip()}:3000`);
 }

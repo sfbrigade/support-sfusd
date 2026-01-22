@@ -8,13 +8,13 @@ export default function Home() {
   const posthog = usePostHog();
 
   const handleClick = () => {
-    posthog?.capture('explore_schools_clicked');
+    posthog?.capture("explore_schools_clicked");
     router.push("/map");
   };
 
   if (posthog) {
-    posthog.capture('pageview', { page: 'home' });
-  };
+    posthog.capture("pageview", { page: "home" });
+  }
 
   return (
     <>
@@ -55,13 +55,14 @@ export default function Home() {
       </main>
       {/* Image Container */}
       <div className="fixed inset-x-0 bottom-0 z-[-1] h-full bg-gradient-to-b from-[#7CE0ED] to-[#E3FCFF]">
-        {/* Homepage Background */}
+        {/* Homepage Background. Next.js 15: use priority=true. Next.js 16: use preload=true */}
         <Image
           src="/homepage-background.png"
           alt="Homepage Background"
           className="fixed bottom-0 w-full"
           width={2000}
           height={2000}
+          priority={true}
         />
       </div>
     </>
