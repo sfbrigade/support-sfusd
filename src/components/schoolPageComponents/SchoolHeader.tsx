@@ -6,6 +6,7 @@ type Props = {
 };
 
 export default function SchoolHeader({ school }: Props) {
+  const ICON_SIZE = 36;
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-4 max-md:flex-col-reverse">
@@ -24,8 +25,9 @@ export default function SchoolHeader({ school }: Props) {
                   <Image
                     src="/icons/instagram-icon.svg"
                     alt="Instagram Icon"
-                    width={36}
-                    height={36}
+                    width={ICON_SIZE}
+                    height={ICON_SIZE}
+                    style={{ width: ICON_SIZE, height: ICON_SIZE }}
                   />
                 </a>
               )}
@@ -34,8 +36,9 @@ export default function SchoolHeader({ school }: Props) {
                   <Image
                     src="/icons/facebook-icon.svg"
                     alt="Facebook Icon"
-                    width={36}
-                    height={36}
+                    width={ICON_SIZE}
+                    height={ICON_SIZE}
+                    style={{ width: ICON_SIZE, height: ICON_SIZE }}
                   />
                 </a>
               )}
@@ -44,8 +47,9 @@ export default function SchoolHeader({ school }: Props) {
                   <Image
                     src="/icons/globe-icon.svg"
                     alt="Globe Icon"
-                    width={36}
-                    height={36}
+                    width={ICON_SIZE}
+                    height={ICON_SIZE}
+                    style={{ width: ICON_SIZE, height: ICON_SIZE }}
                   />
                 </a>
               )}
