@@ -3,13 +3,27 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/ingest/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://us.i.posthog.com/:path*",
+      },
+    ];
+  },
+  // This is required to support PostHog trailing slash API requests
+  skipTrailingSlashRedirect: true,
   turbopack: {
     rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js'
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
-    }
+    },
   },
 };
 
@@ -31,9 +45,10 @@ nextConfig.webpack = (config, context) => {
 
   return config;
 };
+
 module.exports = nextConfig;
 
 /* log local IP address to console to easily visit dev server on LAN */
 if (process.env.NODE_ENV === "development") {
-  console.info(`\t\t\t\tLAN url: http://${require("address").ip()}:3000`);
+  console.info(`				LAN url: http://${require("address").ip()}:3000`);
 }
