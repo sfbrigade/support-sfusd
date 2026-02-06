@@ -80,6 +80,34 @@ h6 * {
   cursor: pointer;
 }
 
+.cluster-marker {
+  background: #002054;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  width: var(--cluster-size, 36px);
+  height: var(--cluster-size, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.cluster-marker:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.cluster-marker:focus {
+  outline: 2px solid rgba(127, 127, 255, 0.8);
+  outline-offset: 2px;
+  z-index: 10;
+}
+
 .delay-100 {
   transition-delay: 100ms;
 }
