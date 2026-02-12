@@ -17,7 +17,7 @@ export type ClusterPoint = GeoJSON.Feature<GeoJSON.Point, ClusterProperties>;
 export type MapPoint = SchoolPoint | ClusterPoint;
 
 export function schoolsToGeoJSON(
-  schools: School[]
+  schools: School[],
 ): GeoJSON.FeatureCollection<GeoJSON.Point, SchoolProperties> {
   return {
     type: "FeatureCollection",
@@ -34,21 +34,6 @@ export function schoolsToGeoJSON(
   };
 }
 
-export function isCluster(
-  point: MapPoint
-): point is ClusterPoint {
+export function isCluster(point: MapPoint): point is ClusterPoint {
   return (point.properties as ClusterProperties).cluster === true;
-}
-
-export function createClusterIndex(schools: School[]): Supercluster<SchoolProperties, ClusterProperties> {
-  const index = new Supercluster<SchoolProperties, ClusterProperties>({
-    radius: 50,     // Cluster radius in pixels
-    maxZoom: 14,    // Stop clustering at this zoom level
-    minPoints: 2,   // Minimum points to form a cluster
-  });
-
-  const geoJson = schoolsToGeoJSON(schools);
-  index.load(geoJson.features);
-
-  return index;
 }
