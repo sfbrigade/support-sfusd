@@ -241,7 +241,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     const geoJson = schoolsToGeoJSON(schools);
     const clusterIndex = new Supercluster<SchoolProperties, ClusterProperties>({
       radius: 50,
-      maxZoom: 13,
+      maxZoom: 14,
       minPoints: 2,
     });
     clusterIndex.load(geoJson.features);
@@ -307,7 +307,11 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
             className: "map-popup",
           }).setHTML(`<h3>${school.name}</h3>`);
           const schoolMarker = new mapboxgl.Marker(el)
-            .setLngLat([Number(school.longitude), Number(school.latitude)])
+            // .setLngLat([Number(school.longitude), Number(school.latitude)])
+            .setLngLat([
+              Number(school.longitude) + Math.random() * 0.00025, //offset in case two or more schools have the same coordinates
+              Number(school.latitude) + Math.random() * 0.00025, //offset in case two or more schools have the same coordinates
+            ])
             .setPopup(popup);
           // Don't add to map yet - updateClusters will handle visibility
           markersRef.current[school.name] = schoolMarker;
