@@ -109,7 +109,7 @@ export default function FilterBySchoolType({
             width={19}
             height={20}
           />
-          <label className="cursor-pointer text-sm">
+          <label htmlFor="priority" className="cursor-pointer text-sm">
             Priority
           </label>
           <input
