@@ -262,6 +262,17 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       map.addControl(geolocate);
       map.addControl(new mapboxgl.NavigationControl({ showCompass: false }));
 
+      // Fix Mapbox attribution ARIA role
+      const attribInner = mapContainer.current?.querySelector(
+        ".mapboxgl-ctrl-attrib-inner",
+      );
+      if (attribInner) {
+        attribInner.setAttribute("role", "list");
+        attribInner.querySelectorAll("a").forEach((a) => {
+          a.setAttribute("role", "listitem");
+        });
+      }
+
       // disables geolocation icon if user is out of bounds
       navigator.geolocation.getCurrentPosition((position) => {
         const bounds = map.getBounds();
@@ -361,6 +372,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       // Golden Gate Bridge Marker
       const goldenGateEl = document.createElement("div");
       goldenGateEl.className = "golden-gate-marker";
+      goldenGateEl.setAttribute("role", "img");
       goldenGateEl.ariaLabel = "Map marker: Golden Gate Bridge";
       new mapboxgl.Marker(goldenGateEl)
         .setLngLat([-122.4783, 37.8199])
@@ -369,6 +381,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       // Bay Bridge Marker
       const bayBridgeEl = document.createElement("div");
       bayBridgeEl.className = "bay-bridge-marker";
+      bayBridgeEl.setAttribute("role", "img");
       bayBridgeEl.ariaLabel = "Map marker: Bay Bridge";
       new mapboxgl.Marker(bayBridgeEl)
         .setLngLat([-122.3778, 37.7983])
