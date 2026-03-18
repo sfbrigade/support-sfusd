@@ -31,7 +31,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     <>
       <strong>BETA:</strong> This website is in beta - let us know if you have
       any&nbsp;
-      <button onClick={handleOpen} className="text-blue-500 hover:underline">
+      <button onClick={handleOpen} className="text-blue-800 hover:underline">
         feedback/questions
       </button>
       <span className="hidden md:inline"> to help us improve it</span>.

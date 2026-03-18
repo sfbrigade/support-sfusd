@@ -67,6 +67,7 @@ export default function SearchBar<DropdownItemType = any>({
       <input
         ref={inputRef}
         type="text"
+        data-search-input
         placeholder="Search Zip Code or School"
         value={searchTerm}
         className="placeholder-small p-1.4 h-[38px] w-full rounded-lg border-[1.4px] border-gray-400 px-4 py-2 pl-12 focus:border-blue-400"
