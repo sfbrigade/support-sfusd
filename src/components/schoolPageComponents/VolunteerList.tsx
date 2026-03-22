@@ -1,8 +1,8 @@
-import { Program, School } from "@/types/school";
+import { SchoolMapPin, Program } from "@/types/school";
 import HeadingContentWrapper from "./HeadingContentWrapper";
 import CardList from "./CardList";
 
-const VolunteerList: React.FC<{ school: School; fullCard?: boolean }> = ({
+const VolunteerList: React.FC<{ school: SchoolMapPin; fullCard?: boolean }> = ({
   school,
   fullCard = true,
 }) => {

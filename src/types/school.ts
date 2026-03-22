@@ -57,3 +57,25 @@ export interface DropdownItem<ItemType> {
   value: string;
   item: ItemType;
 }
+
+export interface SchoolMapPinProgram {
+  name: string;
+  details: string;
+  img?: string;
+  category: string;
+}
+
+export interface SchoolMapPin {
+  stub: string;
+  name: string;
+  address?: string;
+  neighborhood?: string;
+  priority: boolean;
+  latitude: number;
+  longitude: number;
+  zipcode?: string;
+  school_type: SchoolType[];
+  volunteer_form_url: string;
+  donation_url?: string;
+  programs: SchoolMapPinProgram[];
+}
