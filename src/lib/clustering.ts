@@ -1,8 +1,8 @@
-import { School } from "@/types/school";
+import { SchoolMapPin, School } from "@/types/school";
 import Supercluster from "supercluster";
 
 export interface SchoolProperties {
-  school: School;
+  school: SchoolMapPin;
 }
 
 export interface ClusterProperties {
@@ -17,7 +17,7 @@ export type ClusterPoint = GeoJSON.Feature<GeoJSON.Point, ClusterProperties>;
 export type MapPoint = SchoolPoint | ClusterPoint;
 
 export function schoolsToGeoJSON(
-  schools: School[],
+  schools: SchoolMapPin[],
 ): GeoJSON.FeatureCollection<GeoJSON.Point, SchoolProperties> {
   return {
     type: "FeatureCollection",

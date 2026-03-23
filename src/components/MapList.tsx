@@ -1,11 +1,11 @@
 import React from "react";
 import MapListCard from "./MapListCard";
-import { School } from "@/types/school";
+import { SchoolMapPin } from "@/types/school";
 
 type MapListProps = {
-  schools: School[];
-  setSelectedSchool: (school: School | null) => void;
-  selectedSchool: School | false | null;
+  schools: SchoolMapPin[];
+  setSelectedSchool: (school: SchoolMapPin | null) => void;
+  selectedSchool: SchoolMapPin | null;
   onModalOpen: () => void;
 };
 
