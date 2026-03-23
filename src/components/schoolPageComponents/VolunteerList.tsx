@@ -1,4 +1,4 @@
-import { SchoolMapPin, Program } from "@/types/school";
+import type { SchoolMapPin, Program } from "@/types/school";
 import HeadingContentWrapper from "./HeadingContentWrapper";
 import CardList from "./CardList";
 

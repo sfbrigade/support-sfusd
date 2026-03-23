@@ -65,17 +65,22 @@ export interface SchoolMapPinProgram {
   category: string;
 }
 
-export interface SchoolMapPin {
-  stub: string;
-  name: string;
-  address?: string;
-  neighborhood?: string;
-  priority: boolean;
-  latitude: number;
-  longitude: number;
-  zipcode?: string;
-  school_type: SchoolType[];
-  volunteer_form_url: string;
-  donation_url?: string;
+export type SchoolMapPin = Omit<
+  School,
+  | "about"
+  | "about_bp"
+  | "donation_text"
+  | "testimonial"
+  | "testimonial_author"
+  | "testimonial_video"
+  | "testimonial_img"
+  | "noteable_video"
+  | "principal"
+  | "instagram_url"
+  | "facebook_url"
+  | "website_url"
+  | "metrics"
+  | "programs"
+> & {
   programs: SchoolMapPinProgram[];
-}
+};
