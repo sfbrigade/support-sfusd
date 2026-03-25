@@ -1,20 +1,13 @@
 import { AppProps } from "next/app";
 import "../styles/globals.css";
 import Layout from "../layouts/RootLayout";
-import { Fredoka, Lato } from "next/font/google";
+import { fredoka, lato } from "@/lib/fonts";
 import Head from "next/head";
 import { MapProvider } from "../contexts/MapContext";
 import posthog from "posthog-js";
 import { useEffect } from "react";
 import { PostHogProvider } from "posthog-js/react";
 import { ToastProvider } from "@/components/Toast/ToastContext";
-
-const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka" });
-const lato = Lato({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-lato",
-});
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
