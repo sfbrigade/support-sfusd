@@ -10,73 +10,100 @@ const member_list = [
     name: "Julia Gitis",
     role: "Project Lead",
     url: "https://www.linkedin.com/in/juliagoolia/",
-    img: "/about/julia_gitis.png",
+    img: "/about/members/julia_gitis.png",
+    pet: "/about/pets/julia_gitis_pet.png",
+    pet_info: "Julia's pets",
+    pet_name: "Astra and Mia Jelly Belly Catsy",
   },
   {
     name: "Brandon Cruz-Youll",
     role: "Tech Project Manager, Software Developer",
     url: "https://www.linkedin.com/in/brandon-cruzyoull/",
-    img: "/about/brandon_cruz_youll.png",
+    img: "/about/members/brandon_cruz_youll.png",
+    pet: "/about/pets/brandon_cruz_youll_pet.png",
+    pet_info: "Brandon's pets",
+    pet_name: " ",
   },
   {
     name: "Emi Fogg",
     role: "UX Researcher",
     url: "https://www.linkedin.com/in/emi-fogg/",
-    img: "/about/emi_fogg.png",
+    img: "/about/members/emi_fogg.png",
   },
   {
     name: "Amara Mir",
     role: "UX Researcher",
     url: "https://www.linkedin.com/in/amara-mir/",
-    img: "/about/amara_mir.png",
+    img: "/about/members/amara_mir.png",
   },
   {
     name: "Kira Bronston",
     role: "UX Researcher",
     url: "https://www.linkedin.com/in/kirabronston/",
-    img: "/about/kira_bronston.png",
+    img: "/about/members/kira_bronston.png",
+    pet: "/about/pets/kira_bronston_pet.jpg",
+    pet_info: "Kira's pets",
+    pet_name: "Coco and Molly",
   },
   {
     name: "James Davis",
     role: "Product Designer",
     url: "https://www.linkedin.com/in/james-davis-design/",
-    img: "/about/james_davis.png",
+    img: "/about/members/james_davis.png",
   },
   {
     name: "Jesse Wang",
     role: "Product Designer",
     url: "https://www.linkedin.com/in/jesse-wang-/",
-    img: "/about/jesse_wang.png",
+    img: "/about/members/jesse_wang.png",
+    pet: "/about/pets/jesse_wang_pet.jpg",
+    pet_info: "Jesse's pets",
+    pet_name: " ",
   },
   {
     name: "Vince Shuali",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/vincentshuali/",
-    img: "/about/vince_shuali.jpeg",
+    img: "/about/members/vince_shuali.jpeg",
+    pet: "/about/pets/vince_shuali_pet.png",
+    pet_info: "Vince's pets",
+    pet_name: "Loki and Thor",
   },
   {
     name: "Matt Gianni",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/mattgianni/",
-    img: "/about/matt_gianni.png",
+    img: "/about/members/matt_gianni.png",
+    pet: "/about/pets/matt_gianni_pet.png",
+    pet_info: "Matt's pet",
+    pet_name: " ",
   },
   {
     name: "Iryna Trush",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/trushmi/",
-    img: "/about/iryna_trush.png",
+    img: "/about/members/iryna_trush.png",
   },
   {
     name: "Giovanni Rojas",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/giorojas/",
-    img: "/about/giovanni_rojas.png",
+    img: "/about/members/giovanni_rojas.png",
   },
   {
     name: "Jackson Tran",
     role: "Software Developer",
     url: "https://www.linkedin.com/in/jacksontran1/",
-    img: "/about/jackson_tran.png",
+    img: "/about/members/jackson_tran.png",
+  },
+  {
+    name: "Alena Vinogradova",
+    role: "Software Developer",
+    url: "https://www.linkedin.com/in/alena-vinogradova-frntend/",
+    img: "/about/members/alena_vinogradova.jpeg",
+    pet: "/about/pets/alena_vinogradova_pet.png",
+    pet_info: "Alena's pet",
+    pet_name: "Kalych",
   },
 ];
 const pastContributors = [
@@ -162,16 +189,15 @@ export default function AboutClient() {
               >
                 SF Civic Tech
               </a>{" "}
-              (formerly Code for San Francisco). Our all-volunteer team
-              includes teachers, designers, engineers, researchers, and
-              community members. We started working together in 2022 to make
-              it easier for San Francisco residents to support their local
-              public schools.
+              (formerly Code for San Francisco). Our all-volunteer team includes
+              teachers, designers, engineers, researchers, and community
+              members. We started working together in 2022 to make it easier for
+              San Francisco residents to support their local public schools.
             </p>
             <p>
               Our goal is to strengthen communities and neighborhoods by
-              connecting people with their local schools. Following a
-              community schools model, people who live near a school can
+              connecting people with their local schools. Following a community
+              schools model, people who live near a school can
               {
                 " support and be part of the school community, even if they aren't parents of current students. "
               }
@@ -184,9 +210,9 @@ export default function AboutClient() {
               change lives.
             </p>
             <p>
-              This website is in beta and is a work in progress. We are open
-              to feedback and always looking for volunteers to join our
-              effort. We meet Wednesday evenings on Zoom.
+              This website is in beta and is a work in progress. We are open to
+              feedback and always looking for volunteers to join our effort. We
+              meet Wednesday evenings on Zoom.
             </p>
           </div>
 
@@ -210,33 +236,92 @@ export default function AboutClient() {
               >
                 <div className="w-36 text-sm">
                   {member.img ? (
-                    <Image
-                      src={member.img}
-                      alt={`${member.name} photo`}
-                      className={
-                        "mb-2 rounded-lg rounded-tl-[36px]" +
-                        (member.url
-                          ? " group-hover:outline-#272728 outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2"
-                          : "")
-                      }
-                      width={1000}
-                      height={1000}
-                      placeholder="blur"
-                      blurDataURL={blurDataURL}
-                    />
+                    member.pet ? (
+                      <div
+                        className="mb-2 aspect-square w-full"
+                        style={{ perspective: "1000px" }}
+                      >
+                        <div className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          <div className="absolute inset-0 [backface-visibility:hidden]">
+                            <Image
+                              src={member.img}
+                              alt={`${member.name} photo`}
+                              className="h-full w-full rounded-lg rounded-tl-[36px] object-cover"
+                              width={1000}
+                              height={1000}
+                              placeholder="blur"
+                              blurDataURL={blurDataURL}
+                            />
+                          </div>
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                            <Image
+                              src={member.pet}
+                              alt={`${member.name}'s pet`}
+                              className="h-full w-full rounded-lg rounded-tl-[36px] object-cover"
+                              width={1000}
+                              height={1000}
+                              placeholder="blur"
+                              blurDataURL={blurDataURL}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <Image
+                        src={member.img}
+                        alt={`${member.name} photo`}
+                        className={
+                          "mb-2 rounded-lg rounded-tl-[36px]" +
+                          (member.url
+                            ? " group-hover:outline-#272728 outline-none outline-offset-[-4px] transition-all group-hover:outline-2 group-hover:outline-offset-2"
+                            : "")
+                        }
+                        width={1000}
+                        height={1000}
+                        placeholder="blur"
+                        blurDataURL={blurDataURL}
+                      />
+                    )
                   ) : (
                     <div className="bg-#272728 mb-2 aspect-square w-full rounded-lg rounded-tl-[36px]"></div>
                   )}
 
-                  <p
-                    className={
-                      "font-semibold " +
-                      (member.url ? "group-hover:underline" : "")
-                    }
-                  >
-                    {member.name}
-                  </p>
-                  <p className="font-medium">{member.role}</p>
+                  {member.pet && member.pet_info ? (
+                    <>
+                      <p
+                        className={
+                          "font-semibold group-hover:hidden " +
+                          (member.url ? "group-hover:underline" : "")
+                        }
+                      >
+                        {member.name}
+                      </p>
+                      <p className="hidden font-semibold group-hover:block">
+                        {member.pet_info}
+                      </p>
+                    </>
+                  ) : (
+                    <p
+                      className={
+                        "font-semibold " +
+                        (member.url ? "group-hover:underline" : "")
+                      }
+                    >
+                      {member.name}
+                    </p>
+                  )}
+                  {member.pet && member.pet_name ? (
+                    <>
+                      <p className="font-medium group-hover:hidden">
+                        {member.role}
+                      </p>
+                      <p className="hidden font-medium group-hover:block">
+                        {member.pet_name}
+                      </p>
+                    </>
+                  ) : (
+                    <p className="font-medium">{member.role}</p>
+                  )}
                 </div>
               </a>
             ))}
