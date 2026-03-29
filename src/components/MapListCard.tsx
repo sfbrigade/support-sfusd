@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { School } from "@/types/school";
+import { SchoolMapPin, School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,8 +9,8 @@ import VolunteerList from "./schoolPageComponents/VolunteerList";
 import { usePostHog } from "posthog-js/react";
 
 type MapListCardProps = {
-  school: School;
-  setSelectedSchool: (school: School | null) => void;
+  school: SchoolMapPin;
+  setSelectedSchool: (school: SchoolMapPin | null) => void;
   isExpanded: boolean;
   onModalOpen: () => void;
 };

@@ -1,4 +1,4 @@
-import { School } from "@/types/school";
+import { SchoolMapPin, School } from "@/types/school";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { useMapContext } from "@/contexts/MapContext";
@@ -13,9 +13,9 @@ import {
 } from "@/lib/clustering";
 
 type MapboxMapProps = {
-  setSelectedSchool: (school: School | null) => void;
-  selectedSchool: School | false | null;
-  schools: School[];
+  setSelectedSchool: (school: SchoolMapPin | null) => void;
+  selectedSchool: SchoolMapPin | null;
+  schools: SchoolMapPin[];
 };
 
 const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {

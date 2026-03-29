@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { School, DropdownItem } from "@/types/school";
+import { DropdownItem, SchoolMapPin } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
 import MapList from "@/components/MapList";
 import MapboxMap from "@/components/MapboxMap";
@@ -15,21 +15,20 @@ import { useMapContext } from "../contexts/MapContext";
 import SEO from "@/components/SEO";
 import { SchoolType } from "@prisma/client";
 import FilterBySchoolType from "../components/FilterBySchoolType";
+import { schoolMapPinSelect } from "@/lib/schoolMapPinSelect";
 
 import { usePostHog } from "posthog-js/react";
 
 export const getStaticProps: GetStaticProps = async () => {
   const schools = await prisma.school.findMany({
-    include: {
-      metrics: true,
-      programs: true,
-    },
+    select:
+      schoolMapPinSelect,
   });
   return { props: { schools } };
 };
 
 type Props = {
-  schools: School[];
+  schools: SchoolMapPin[];
 };
 
 const schoolCardPlaceholderTitle = "Select a School";
@@ -121,7 +120,7 @@ const Map: React.FC<Props> = (props) => {
 
   const getSchoolsByType = (
     schoolTypes: SchoolType[],
-    schools: School[],
+    schools: SchoolMapPin[],
     priorityFilter: boolean,
   ) => {
     return schools.filter((school) => {
@@ -160,7 +159,7 @@ const Map: React.FC<Props> = (props) => {
       }));
   };
 
-  const itemSelect = (selection: DropdownItem<School>) => {
+  const itemSelect = (selection: DropdownItem<SchoolMapPin>) => {
     posthog?.capture("selected_school_from_search", {
       school: selection.item.name,
     });
