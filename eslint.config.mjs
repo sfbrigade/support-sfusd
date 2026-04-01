@@ -27,6 +27,8 @@ export default [
   eslintPluginPrettierRecommended,
   {
     languageOptions: {
+      sourceType: "module",
+      ecmaVersion: "latest",
       globals: {
         ...globals.browser,
         ...globals.node,
