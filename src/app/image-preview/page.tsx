@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 
-export default function Home() {
+export default function ImagePreviewPage() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [showImage, setShowImage] = useState(false);
 

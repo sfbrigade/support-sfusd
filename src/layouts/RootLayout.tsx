@@ -1,18 +1,16 @@
+"use client";
+
 import React, { useState } from "react";
-import { Inter } from "next/font/google";
 import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import ContactUs from "@/components/ContactUs";
 import { useMapContext } from "@/contexts/MapContext";
 import BackToTop from "@/components/BackToTop";
 import { usePostHog } from "posthog-js/react";
 
-const inter = Inter({ subsets: ["latin"] });
-
 function RootLayout({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-  const { pathname } = router;
+  const pathname = usePathname();
   const { isMapView } = useMapContext();
   const posthog = usePostHog();
 
@@ -31,7 +29,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     <>
       <strong>BETA:</strong> This website is in beta - let us know if you have
       any&nbsp;
-      <button onClick={handleOpen} className="text-blue-500 hover:underline">
+      <button onClick={handleOpen} className="text-blue-800 hover:underline">
         feedback/questions
       </button>
       <span className="hidden md:inline"> to help us improve it</span>.
@@ -43,10 +41,10 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="root"
-      className={`${inter.className} flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
-      {/* TODO: consider refactoring the pathname-dependent logic to simplify; e.g., use layout components and app routing instead of having to bake pathname logic into this high-level component */}
-      {(pathname.includes("/school") || pathname === "/") &&
+      {/* Phase 2: replace with route group layouts to remove pathname logic */}
+      {(pathname?.startsWith("/school") || pathname === "/") &&
         isBannerShowing && (
           <>
             <div className="block md:hidden">

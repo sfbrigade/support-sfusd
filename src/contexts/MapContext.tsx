@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import { School } from '@/types/school';
+import { SchoolMapPin } from '@/types/school';
 
 /**
  * MapContext: Manages state for the map view and school card so that if the user
@@ -17,16 +17,16 @@ import { School } from '@/types/school';
 
 interface MapContextType {
   isMapView: boolean;
-  selectedSchool: School | null;
+  selectedSchool: SchoolMapPin | null;
   setIsMapView: (isMap: boolean) => void;
-  setSelectedSchool: (school: School | null) => void;
+  setSelectedSchool: (school: SchoolMapPin | null) => void;
 }
 
 const MapContext = createContext<MapContextType | undefined>(undefined);
 
 export const MapProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMapView, setIsMapView] = useState(true);
-  const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
+  const [selectedSchool, setSelectedSchool] = useState<SchoolMapPin | null>(null);
 
   return (
     <MapContext.Provider value={{ isMapView, selectedSchool, setIsMapView, setSelectedSchool }}>

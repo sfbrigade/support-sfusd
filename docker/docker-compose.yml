@@ -11,7 +11,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD:-supersecret}
       POSTGRES_DB: ${DB_NAME:-mydb}
     volumes:
-      - sfusd-data:/var/lib/postgresql/data
+      - sfusd-data:/var/lib/postgresql/
 
   # adminer:
   #   image: adminer

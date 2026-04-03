@@ -1,4 +1,4 @@
-import { School } from "@/types/school";
+import { SchoolMapPin, School } from "@/types/school";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { useMapContext } from "@/contexts/MapContext";
@@ -13,9 +13,9 @@ import {
 } from "@/lib/clustering";
 
 type MapboxMapProps = {
-  setSelectedSchool: (school: School | null) => void;
-  selectedSchool: School | false | null;
-  schools: School[];
+  setSelectedSchool: (school: SchoolMapPin | null) => void;
+  selectedSchool: SchoolMapPin | null;
+  schools: SchoolMapPin[];
 };
 
 const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
@@ -468,10 +468,30 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     }
   }, [selectedSchool, mapLoaded, flyToOptions, userHasInteracted]);
 
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "Escape") {
+      const searchInputs = document.querySelectorAll<HTMLInputElement>(
+        "[data-search-input]",
+      );
+      const visibleInput = Array.from(searchInputs).find(
+        (input) => input.offsetParent !== null,
+      );
+      visibleInput?.focus();
+    }
+  }, []);
+
   return (
     <>
-      <div className="flex h-full w-full items-center justify-center">
-        <div ref={mapContainer} className="h-full w-full md:rounded-2xl" />
+      <div
+        className="flex h-full w-full items-center justify-center"
+        onKeyDown={handleKeyDown}
+      >
+        <div
+          ref={mapContainer}
+          className="h-full w-full md:rounded-2xl"
+          aria-label="School map. Press Escape to return to search."
+          role="application"
+        />
       </div>
     </>
   );
