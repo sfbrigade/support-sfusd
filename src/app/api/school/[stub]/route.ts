@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import type { School } from "@prisma/client";
 import prisma from "@/lib/prisma";
+
+type ResponseData = { school: School } | { error: string };
 
 export async function GET(
   _request: NextRequest,
@@ -17,13 +20,13 @@ export async function GET(
     });
 
     if (!school) {
-      return NextResponse.json({ error: "School not found" }, { status: 404 });
+      return NextResponse.json<ResponseData>({ error: "School not found" }, { status: 404 });
     }
 
-    return NextResponse.json({ school });
+    return NextResponse.json<ResponseData>({ school });
   } catch (error) {
     console.error("API Error:", error);
-    return NextResponse.json(
+    return NextResponse.json<ResponseData>(
       { error: "Internal server error" },
       { status: 500 },
     );

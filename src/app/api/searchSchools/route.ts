@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import type { School } from "@prisma/client";
 import prisma from "@/lib/prisma";
+
+type ResponseData = { schools: School[] };
 
 export async function GET(request: NextRequest) {
   const searchTerm = request.nextUrl.searchParams.get("searchTerm") ?? "";
@@ -16,5 +19,5 @@ export async function GET(request: NextRequest) {
     },
   });
 
-  return NextResponse.json({ schools });
+  return NextResponse.json<ResponseData>({ schools });
 }
