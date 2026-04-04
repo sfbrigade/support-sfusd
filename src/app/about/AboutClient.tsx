@@ -22,7 +22,7 @@ const member_list = [
     img: "/about/members/brandon_cruz_youll.png",
     pet: "/about/pets/brandon_cruz_youll_pet.png",
     pet_info: "Brandon's pets",
-    pet_name: " ",
+    pet_name: "Booker and Skyler",
   },
   {
     name: "Emi Fogg",
@@ -58,7 +58,7 @@ const member_list = [
     img: "/about/members/jesse_wang.png",
     pet: "/about/pets/jesse_wang_pet.jpg",
     pet_info: "Jesse's pets",
-    pet_name: " ",
+    pet_name: "Nala and Luna",
   },
   {
     name: "Vince Shuali",
@@ -76,7 +76,7 @@ const member_list = [
     img: "/about/members/matt_gianni.png",
     pet: "/about/pets/matt_gianni_pet.png",
     pet_info: "Matt's pet",
-    pet_name: " ",
+    pet_name: 'Archie (nickname "Barch")',
   },
   {
     name: "Iryna Trush",
