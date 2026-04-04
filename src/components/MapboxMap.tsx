@@ -1,3 +1,5 @@
+"use client";
+
 import { SchoolMapPin, School } from "@/types/school";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef, useState, useMemo, useCallback } from "react";

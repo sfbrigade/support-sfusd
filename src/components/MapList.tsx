@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import MapListCard from "./MapListCard";
 import { SchoolMapPin } from "@/types/school";
