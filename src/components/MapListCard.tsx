@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
 import { SchoolMapPin, School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
