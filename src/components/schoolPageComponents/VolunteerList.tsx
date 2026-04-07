@@ -1,4 +1,4 @@
-import type { SchoolMapPin, Program } from "@/types/school";
+import type { SchoolMapPin, SchoolMapPinProgram } from "@/types/school";
 import HeadingContentWrapper from "./HeadingContentWrapper";
 import CardList from "./CardList";
 
@@ -13,12 +13,12 @@ const VolunteerList: React.FC<{ school: SchoolMapPin; fullCard?: boolean }> = ({
   };
 
   const volunteerList: volunteer[] = school.programs.reduce(
-    (acc: volunteer[], program: Program) => {
+    (acc: volunteer[], program: SchoolMapPinProgram) => {
       if (program.category == "volunteer") {
         const volunteer: volunteer = {
           title: program.name,
           description: program.details,
-          img: program.img,
+          img: program.img ?? undefined,
         };
         acc.push(volunteer);
       }
