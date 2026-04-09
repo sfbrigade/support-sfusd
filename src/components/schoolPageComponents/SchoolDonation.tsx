@@ -45,9 +45,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                     href={school.donation_url}
                     target="_blank"
                     className={
-                      "plausible-event-name=Clicked+Main+Donate+" +
-                      school.name.replace(/\s/g, "+") +
-                      " w-fit rounded bg-blue-500 p-2 px-8 font-medium text-white"
+                      "w-fit rounded bg-blue-500 p-2 px-8 font-medium text-white"
                     }
                     onClick={() => posthog?.capture('main_donate_clicked', { school: school.name })}
                   >
@@ -83,17 +81,11 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                 <ul className="flex flex-col">
                   {otherDonations.map((donation, i) => (
                     <li key={i}>
-                      {donation.url ? (
+                          {donation.url ? (
                         <a
                           href={donation.url}
                           target="_blank"
-                          className={
-                            "plausible-event-name=Clicked+" +
-                            donation.name.replace(/\s/g, "+") +
-                            "+" +
-                            school.name.replace(/\s/g, "+") +
-                            " underline underline-offset-4"
-                          }
+                          className={"underline underline-offset-4"}
                           onClick={() => posthog?.capture('other_donation_clicked', { school: school.name, donation: donation.name })}
                         >
                           {donation.name}
