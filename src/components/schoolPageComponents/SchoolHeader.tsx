@@ -21,7 +21,11 @@ export default function SchoolHeader({ school }: Props) {
           {school && (
             <>
               {school.instagram_url && (
-                <a href={school.instagram_url} target="_blank" aria-label={`${school.name} on Instagram`}>
+                <a
+                  href={school.instagram_url}
+                  target="_blank"
+                  aria-label={`${school.name} on Instagram`}
+                >
                   <Image
                     src="/icons/instagram-icon.svg"
                     alt="Instagram Icon"
@@ -32,7 +36,11 @@ export default function SchoolHeader({ school }: Props) {
                 </a>
               )}
               {school.facebook_url && (
-                <a href={school.facebook_url} target="_blank" aria-label={`${school.name} on Facebook`}>
+                <a
+                  href={school.facebook_url}
+                  target="_blank"
+                  aria-label={`${school.name} on Facebook`}
+                >
                   <Image
                     src="/icons/facebook-icon.svg"
                     alt="Facebook Icon"
@@ -43,7 +51,11 @@ export default function SchoolHeader({ school }: Props) {
                 </a>
               )}
               {school.website_url && (
-                <a href={school.website_url} target="_blank" aria-label={`${school.name} website`}>
+                <a
+                  href={school.website_url}
+                  target="_blank"
+                  aria-label={`${school.name} website`}
+                >
                   <Image
                     src="/icons/globe-icon.svg"
                     alt="Globe Icon"
@@ -82,6 +94,7 @@ export default function SchoolHeader({ school }: Props) {
         >
           Donate
         </a>
+        {/* add a commet here */}
       </div>
     </div>
   );
