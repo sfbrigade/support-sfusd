@@ -18,7 +18,7 @@ const VolunteerList: React.FC<{ school: SchoolMapPin; fullCard?: boolean }> = ({
         const volunteer: volunteer = {
           title: program.name,
           description: program.details,
-          img: program.img,
+          img: program.img ?? undefined,
         };
         acc.push(volunteer);
       }

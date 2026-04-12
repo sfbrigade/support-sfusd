@@ -3,28 +3,28 @@ import { SchoolType } from "@prisma/client";
 export interface School {
   stub: string;
   name: string;
-  address?: string;
-  neighborhood?: string;
+  address?: string | null;
+  neighborhood?: string | null;
   priority: boolean;
   latitude: string;
   longitude: string;
   about: string;
   about_bp: string[];
   volunteer_form_url: string;
-  donation_url?: string;
+  donation_url?: string | null;
   donation_text: string;
-  testimonial?: string;
-  testimonial_author?: string;
-  testimonial_video?: string;
-  testimonial_img?: string;
-  noteable_video?: string;
+  testimonial?: string | null;
+  testimonial_author?: string | null;
+  testimonial_video?: string | null;
+  testimonial_img?: string | null;
+  noteable_video?: string | null;
   principal: string;
-  instagram_url?: string;
-  facebook_url?: string;
-  website_url?: string;
+  instagram_url?: string | null;
+  facebook_url?: string | null;
+  website_url?: string | null;
   metrics: Metric[];
   programs: Program[];
-  zipcode?: string;
+  zipcode?: string | null;
   school_type: SchoolType[];
 }
 
@@ -38,8 +38,8 @@ export interface Metric {
 export interface Program {
   name: string;
   details: string;
-  url?: string;
-  img?: string;
+  url?: string | null;
+  img?: string | null;
   category: string;
 }
 
@@ -61,7 +61,7 @@ export interface DropdownItem<ItemType> {
 export interface SchoolMapPinProgram {
   name: string;
   details: string;
-  img?: string;
+  img?: string | null;
   category: string;
 }
 

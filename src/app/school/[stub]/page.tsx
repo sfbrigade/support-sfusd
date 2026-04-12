@@ -1,15 +1,14 @@
 import { cache } from "react";
 import type { Metadata } from "next";
+import type { School } from "@/types/school";
 import { notFound } from "next/navigation";
 import prisma from "@/lib/prisma";
 import SchoolPageClient from "@/components/SchoolPageClient";
 
-const getSchoolByStub = cache(async (stub: string) => {
+const getSchoolByStub = cache(async (stub: string): Promise<School | null> => {
   return prisma.school.findUnique({
     where: { stub },
-    select: {
-      name: true,
-      about: true,
+    include: {
       metrics: true,
       programs: true,
     },
