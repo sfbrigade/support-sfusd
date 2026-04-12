@@ -56,11 +56,10 @@ export default function SchoolPageClient({ school }: Props) {
             height="340"
             src={school.noteable_video}
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            className="w-full rounded-lg"
+            className="w-full rounded-lg border-0"
           ></iframe>
         )}
       </div>
