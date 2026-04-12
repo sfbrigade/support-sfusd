@@ -56,7 +56,6 @@ export default function SchoolPageClient({ school }: Props) {
             height="340"
             src={school.noteable_video}
             title="YouTube video player"
-            // Okay to remove? What is frameBorder called now? (CSS) Ask Claude in Plan Mode.
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"

@@ -1,7 +1,20 @@
+import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import prisma from "@/lib/prisma";
 import SchoolPageClient from "@/components/SchoolPageClient";
+
+const getSchoolByStub = cache(async (stub: string) => {
+  return prisma.school.findUnique({
+    where: { stub },
+    select: {
+      name: true,
+      about: true,
+      metrics: true,
+      programs: true,
+    },
+  });
+});
 
 export async function generateStaticParams() {
   const schools = await prisma.school.findMany({
@@ -16,10 +29,7 @@ export async function generateMetadata({
   params: Promise<{ stub: string }>;
 }): Promise<Metadata> {
   const { stub } = await params;
-  const school = await prisma.school.findUnique({
-    where: { stub },
-    select: { name: true, about: true },
-  });
+  const school = await getSchoolByStub(stub);
 
   if (!school) return { title: "School Not Found" };
 
@@ -35,18 +45,9 @@ export default async function SchoolPage({
   params: Promise<{ stub: string }>;
 }) {
   const { stub } = await params;
-
-  const school = await prisma.school.findUnique({
-    where: { stub },
-    // Potentially use one query here instead of twice? Ask Claude? Maybe calls are conflicting
-    include: {
-      metrics: true,
-      programs: true,
-    },
-  });
+  const school = await getSchoolByStub(stub);
 
   if (!school) notFound();
 
-  // Conflict between donation_url data types, will be handled in other PR
   return <SchoolPageClient school={school} />;
 }

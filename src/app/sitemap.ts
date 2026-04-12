@@ -9,7 +9,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const schoolEntries: MetadataRoute.Sitemap = schools.map((school) => ({
     url: `https://supportsfschools.org/school/${school.stub}`,
     changeFrequency: "monthly",
-    // Potentially scrapped feature? This adds extra sorting time, which could be bad?
     priority: 0.8,
   }));
 
