@@ -74,9 +74,7 @@ const MapListCard = ({
     }
   }, [selectedSchool, school.stub]);
 
-  const schoolUrl = "/school?name=" + encodeURIComponent(school.name) + "&stub=" + school.stub;
-  // console.log('Generated URL:', schoolUrl);
-  // console.log('School data:', { name: school.name, stub: school.stub });
+  const schoolUrl = `/school/${school.stub}`;
 
   return (
     <div

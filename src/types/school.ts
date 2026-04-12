@@ -6,8 +6,8 @@ export interface School {
   address?: string;
   neighborhood?: string;
   priority: boolean;
-  latitude: number;
-  longitude: number;
+  latitude: string;
+  longitude: string;
   about: string;
   about_bp: string[];
   volunteer_form_url: string;
