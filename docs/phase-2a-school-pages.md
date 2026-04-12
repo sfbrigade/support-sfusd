@@ -382,4 +382,4 @@ One occurrence (line 299–305). This change lands in 2a so that Phase 2b can co
 
 ### Legacy route removed
 - [ ] `/school?stub=...` no longer works (returns 404 — old query-param URL is gone)
-- [ ] `npm run build` completes without errors
+- [ ] `npm run build` completes without errors 
