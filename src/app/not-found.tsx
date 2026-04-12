@@ -10,7 +10,6 @@ export default function NotFound() {
         <p className="text-gray-500">
           The requested school could not be found.
         </p>
-        { /* useRouter().back() relies on browser history, which is not available in server-site rendering. Better to redirect to /map. */ }
         <Link
           href="/map"
           className="mt-4 inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
