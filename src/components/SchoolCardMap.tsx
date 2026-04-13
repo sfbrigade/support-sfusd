@@ -2,7 +2,7 @@ import React from "react";
 import { Program, School } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
-import Link from "next/link";
+import WithLink from "./WithLink";
 import Tag from "./Tag";
 import VolunteerList from "./schoolPageComponents/VolunteerList";
 import { usePostHog } from "posthog-js/react";
@@ -54,17 +54,19 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   // );
 
   const posthog = usePostHog();
-  /* TODO: look into whether or not creating a `WithLink` component can simplify this somehow */
+  
   const SchoolImage = (props: any) => (
-    <Image
-      src={props.src}
-      alt={props.alt}
-      placeholder="blur"
-      blurDataURL={blurDataURL}
-      width={1000}
-      height={500}
-      className={`h-40 rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className ? props.className : ""}`}
-    />
+    <WithLink href={props.href} className={`h-40 rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className ? props.className : ""}`}>
+      <Image
+        src={props.src}
+        alt={props.alt}
+        placeholder="blur"
+        blurDataURL={blurDataURL}
+        width={1000}
+        height={500}
+        className={`h-40 rounded-l-2xl object-cover md:max-h-none md:rounded-b-lg md:rounded-t-2xl ${props.className ? props.className : ""}`}
+      />
+    </WithLink>
   );
 
   return (
@@ -86,7 +88,9 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         className={`transition-max-height relative col-span-4 h-40 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
         md:rounded-t-2xl `}
       >
-        <Link
+        <SchoolImage
+          src={`/school-images/full/${school.stub}.webp`}
+          alt={school.name}
           href={
             "/school?name=" +
             encodeURIComponent(school.name) +
@@ -94,12 +98,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
             school.stub
           }
           className="hidden md:inline"
-        >
-          <SchoolImage
-            src={`/school-images/full/${school.stub}.webp`}
-            alt={school.name}
-          />
-        </Link>
+        />
         <SchoolImage
           src={`/school-images/full/${school.stub}.webp`}
           alt={school.name}
@@ -126,14 +125,14 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
             <VolunteerList school={school} fullCard={false} />
           </div>
         </div>
-        <Link
-          className=" md:block"
+        <WithLink
           href={
             "/school?name=" +
             encodeURIComponent(school.name) +
             "&stub=" +
             school.stub
           }
+          className=" md:block"
           onClick={() =>
             posthog?.capture?.("school_learn_more_clicked_map", {
               school: school.name,
@@ -141,7 +140,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
           }
         >
           <LearnMoreButton />
-        </Link>
+        </WithLink>
       </div>
     </div>
   );

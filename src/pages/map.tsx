@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import WithLink from "../components/WithLink";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { DropdownItem, SchoolMapPin } from "@/types/school";
 import SchoolCard from "../components/SchoolCardMap";
@@ -166,15 +166,14 @@ const Map: React.FC<Props> = (props) => {
     setSelectedSchool(selection.item);
   };
 
-  /* TODO: look into whether or not creating a `WithLink` component
-  can simplify this somehow */
   const SelectedSchoolCard = (props: any) => (
-    <SchoolCard
-      school={props.school}
-      onClose={onClose}
-      className={`block ${props.className}`}
-      onModalOpen={openModal}
-    />
+    <WithLink href={props.href} className={`block ${props.className}`}>
+      <SchoolCard
+        school={props.school}
+        onClose={onClose}
+        onModalOpen={openModal}
+      />
+    </WithLink>
   );
 
   useEffect(() => {
@@ -295,7 +294,8 @@ const Map: React.FC<Props> = (props) => {
               {isMapView ? (
                 selectedSchool ? (
                   <div className="w-full md:w-auto md:p-4">
-                    <Link
+                    <SelectedSchoolCard
+                      school={selectedSchool}
                       href={
                         "/school?name=" +
                         encodeURIComponent(selectedSchool.name) +
@@ -303,9 +303,7 @@ const Map: React.FC<Props> = (props) => {
                         selectedSchool.stub
                       }
                       className="block md:hidden"
-                    >
-                      <SelectedSchoolCard school={selectedSchool} />
-                    </Link>
+                    />
                     <SelectedSchoolCard
                       school={selectedSchool}
                       className="hidden md:block"

@@ -157,8 +157,6 @@ const MapPageClient: React.FC<Props> = (props) => {
     setSelectedSchool(selection.item);
   };
 
-  /* TODO: look into whether or not creating a `WithLink` component
-  can simplify this somehow */
   const SelectedSchoolCard = (props: any) => (
     <WithLink href={props.href} className={`block ${props.className}`}>
       <SchoolCard
