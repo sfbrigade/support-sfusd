@@ -1,17 +1,34 @@
 import Link from "next/link";
 import React from "react";
 
-interface WithLinkProps {
-    href?: string;
-    children: React.ReactNode;
-    [key: string]: any;
-}
+type WithLinkAnchorProps = {
+  href: string;
+  children: React.ReactNode;
+} & Omit<React.ComponentPropsWithoutRef<typeof Link>, "href">;
 
-const WithLink: React.FC<WithLinkProps> = ({ href, children, ...props }) => {
-    if (href) {
-        return <Link href={href} {...props}>{children}</Link>;
-    }
-    return <div {...props}>{children}</div>
+type WithLinkDivProps = {
+  href?: undefined;
+  children: React.ReactNode;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+type WithLinkProps = WithLinkAnchorProps | WithLinkDivProps;
+
+const isLinkProps = (
+  props: WithLinkProps,
+): props is WithLinkAnchorProps => typeof props.href === "string";
+
+const WithLink = (props: WithLinkProps) => {
+  if (isLinkProps(props)) {
+    const { href, children, ...linkProps } = props;
+    return (
+      <Link href={href} {...linkProps}>
+        {children}
+      </Link>
+    );
+  }
+
+  const { children, ...divProps } = props;
+  return <div {...divProps}>{children}</div>;
 }
 
 export default WithLink;

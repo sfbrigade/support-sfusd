@@ -14,6 +14,7 @@ import HighPriorityModal from "@/components/HighPriorityModal";
 import { useMapContext } from "../contexts/MapContext";
 import { SchoolType } from "@prisma/client";
 import FilterBySchoolType from "../components/FilterBySchoolType";
+import WithLink from "./WithLink";
 
 import { usePostHog } from "posthog-js/react";
 
@@ -159,12 +160,13 @@ const MapPageClient: React.FC<Props> = (props) => {
   /* TODO: look into whether or not creating a `WithLink` component
   can simplify this somehow */
   const SelectedSchoolCard = (props: any) => (
-    <SchoolCard
-      school={props.school}
-      onClose={onClose}
-      className={`block ${props.className}`}
-      onModalOpen={openModal}
-    />
+    <WithLink href={props.href} className={`block ${props.className}`}>
+      <SchoolCard
+        school={props.school}
+        onClose={onClose}
+        onModalOpen={openModal}
+      />
+    </WithLink>
   );
 
   useEffect(() => {
@@ -284,12 +286,11 @@ const MapPageClient: React.FC<Props> = (props) => {
               {isMapView ? (
                 selectedSchool ? (
                   <div className="w-full md:w-auto md:p-4">
-                    <Link
+                    <SelectedSchoolCard
+                      school={selectedSchool}
                       href={`/school/${selectedSchool.stub}`}
                       className="block md:hidden"
-                    >
-                      <SelectedSchoolCard school={selectedSchool} />
-                    </Link>
+                    />
                     <SelectedSchoolCard
                       school={selectedSchool}
                       className="hidden md:block"
