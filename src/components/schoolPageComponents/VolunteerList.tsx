@@ -12,20 +12,13 @@ const VolunteerList: React.FC<{ school: SchoolMapPin; fullCard?: boolean }> = ({
     img?: string;
   };
 
-  const volunteerList: volunteer[] = school.programs.reduce(
-    (acc: volunteer[], program: SchoolMapPinProgram) => {
-      if (program.category == "volunteer") {
-        const volunteer: volunteer = {
-          title: program.name,
-          description: program.details,
-          img: program.img ?? undefined,
-        };
-        acc.push(volunteer);
-      }
-      return acc;
-    },
-    [],
-  );
+  const volunteerList: volunteer[] = school.programs
+    .filter((program: SchoolMapPinProgram) => program.category === "volunteer")
+    .map((program: SchoolMapPinProgram) => ({
+      title: program.name,
+      description: program.details,
+      img: program.img ?? undefined,
+    }));
   return (
     <>
       {volunteerList.length > 0 && fullCard && (
