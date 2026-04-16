@@ -17,13 +17,6 @@ class MyDocument extends Document {
             rel="icon"
             href="https://www.supportsfschools.org/logo_icon.ico"
           />
-
-          {/* Plausible Analytics */}
-          <script
-            defer
-            data-domain="supportsfschools.org"
-            src="https://plausible.io/js/script.pageview-props.tagged-events.outbound-links.js"
-          ></script>
         </Head>
         <body className="scroll-smooth">
           <Main />

@@ -116,7 +116,6 @@ Run these checks with `curl http://localhost:3000/[route]` and inspect the raw H
   - `map_marker_clicked` fires when clicking a map marker
   - `high_priority_modal_opened` fires when opening the priority info modal
   - `contact_us_form_opened` fires when clicking the banner feedback link
-- [ ] Plausible: Network tab shows a request to `plausible.io/js/script...` loading without error (script is in `<head>` via `app/layout.tsx`)
 - [ ] PostHog rewrites in `next.config.js` proxy `/ingest/*` correctly (requests should show `localhost` as host, not `us.posthog.com` — they go through Next.js rewrites)
 
 ### Build and static generation

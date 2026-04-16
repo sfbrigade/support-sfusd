@@ -20,12 +20,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       className={`scroll-smooth ${fredoka.variable} ${lato.variable} ${inter.variable}`}
     >
       <head>
-        {/* Plausible Analytics – moved from _document.tsx */}
-        <script
-          defer
-          data-domain="supportsfschools.org"
-          src="https://plausible.io/js/script.pageview-props.tagged-events.outbound-links.js"
-        />
       </head>
       <body className={`scroll-smooth ${inter.className}`}>
         <Providers>
