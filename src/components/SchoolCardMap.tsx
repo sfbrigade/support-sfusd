@@ -1,5 +1,5 @@
 import React from "react";
-import { Program, School } from "@/types/school";
+import { Program, School, SchoolMapPin } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import VolunteerList from "./schoolPageComponents/VolunteerList";
 import { usePostHog } from "posthog-js/react";
 
 interface SchoolCardProps {
-  school: School;
+  school: SchoolMapPin;
   className?: string;
   onClose: (e: React.MouseEvent<HTMLElement>) => void;
   onModalOpen: () => void;

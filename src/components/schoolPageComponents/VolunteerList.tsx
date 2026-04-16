@@ -1,4 +1,4 @@
-import type { SchoolMapPin, Program } from "@/types/school";
+import type { SchoolMapPin, SchoolMapPinProgram } from "@/types/school";
 import HeadingContentWrapper from "./HeadingContentWrapper";
 import CardList from "./CardList";
 
@@ -12,20 +12,13 @@ const VolunteerList: React.FC<{ school: SchoolMapPin; fullCard?: boolean }> = ({
     img?: string;
   };
 
-  const volunteerList: volunteer[] = school.programs.reduce(
-    (acc: volunteer[], program: Program) => {
-      if (program.category == "volunteer") {
-        const volunteer: volunteer = {
-          title: program.name,
-          description: program.details,
-          img: program.img,
-        };
-        acc.push(volunteer);
-      }
-      return acc;
-    },
-    [],
-  );
+  const volunteerList: volunteer[] = school.programs
+    .filter((program: SchoolMapPinProgram) => program.category === "volunteer")
+    .map((program: SchoolMapPinProgram) => ({
+      title: program.name,
+      description: program.details,
+      img: program.img ?? undefined,
+    }));
   return (
     <>
       {volunteerList.length > 0 && fullCard && (
