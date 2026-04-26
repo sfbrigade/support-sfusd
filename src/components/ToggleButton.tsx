@@ -45,10 +45,9 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
         onClick={toggleView}
         readOnly
         className="h-0 w-0 opacity-0"
-        aria-checked={isMapView}
         checked={!isMapView}
       />
-      <span className="slider absolute left-[3px] top-[2px] flex h-[calc(90%-1px)] w-[calc(50%-3px)] cursor-pointer items-center justify-center gap-1 rounded-md bg-[#3A86FF] text-white transition duration-300">
+      <span className="slider absolute left-[3px] top-[2px] flex h-[calc(90%-1px)] w-[calc(50%-3px)] cursor-pointer items-center justify-center gap-1 rounded-md bg-[#2563EB] text-white transition duration-300">
         <Image
           src={isMapView ? "/icons/location-icon.png" : "/icons/list-icon.png"}
           alt=""
