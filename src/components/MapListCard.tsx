@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
-import { SchoolMapPin, School } from "@/types/school";
+import { SchoolMapPin } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,7 +45,6 @@ const MapListCard = ({
 
   const { stub, name, neighborhood } = school;
   const posthog = usePostHog();
-  
 
   const learnMoreRef = useRef<HTMLAnchorElement>(null);
 
@@ -74,7 +75,8 @@ const MapListCard = ({
     }
   }, [selectedSchool, school.stub]);
 
-  const schoolUrl = "/school?name=" + encodeURIComponent(school.name) + "&stub=" + school.stub;
+  const schoolUrl =
+    "/school?name=" + encodeURIComponent(school.name) + "&stub=" + school.stub;
   // console.log('Generated URL:', schoolUrl);
   // console.log('School data:', { name: school.name, stub: school.stub });
 
@@ -114,7 +116,11 @@ const MapListCard = ({
             ref={learnMoreRef}
             className="w-fit rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
             href={schoolUrl}
-            onClick={() => posthog?.capture?.('school_learn_more_clicked_list', { school: school.name })}
+            onClick={() =>
+              posthog?.capture?.("school_learn_more_clicked_list", {
+                school: school.name,
+              })
+            }
           >
             Learn More
           </Link>
