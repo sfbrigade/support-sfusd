@@ -87,12 +87,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         md:rounded-t-2xl `}
       >
         <Link
-          href={
-            "/school?name=" +
-            encodeURIComponent(school.name) +
-            "&stub=" +
-            school.stub
-          }
+          href={`/school/${school.stub}`}
           className="hidden md:inline"
         >
           <SchoolImage
@@ -128,12 +123,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         </div>
         <Link
           className=" md:block"
-          href={
-            "/school?name=" +
-            encodeURIComponent(school.name) +
-            "&stub=" +
-            school.stub
-          }
+          href={`/school/${school.stub}`}
           onClick={() =>
             posthog?.capture?.("school_learn_more_clicked_map", {
               school: school.name,
