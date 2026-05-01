@@ -12,9 +12,9 @@ import { ToastProvider } from "@/components/Toast/ToastContext";
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
-      api_host: 'https://us.posthog.com',
-      ui_host: "https://us.posthog.com",
-      defaults: "2025-05-24",
+      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST as string,
+      ui_host: process.env.NEXT_PUBLIC_POSTHOG_HOST as string,
+      defaults: "2026-01-30",
       capture_exceptions: true,
       debug: process.env.NODE_ENV === "development",
     });
