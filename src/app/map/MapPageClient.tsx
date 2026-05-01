@@ -272,12 +272,7 @@ export default function MapPageClient(props: Props) {
               selectedSchool ? (
                 <div className="w-full md:w-auto md:p-4">
                   <Link
-                    href={
-                      "/school?name=" +
-                      encodeURIComponent(selectedSchool.name) +
-                      "&stub=" +
-                      selectedSchool.stub
-                    }
+                    href={`/school/${selectedSchool.stub}`}
                     className="block md:hidden"
                   >
                     <SelectedSchoolCard school={selectedSchool} />
