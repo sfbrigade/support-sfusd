@@ -15,6 +15,63 @@ Hello! Thanks for checking out Support SF Schools. We started this project in su
 
 <br>
 
+# Get Started
+
+To run this project locally, please perform the following steps:
+
+1. Clone the repository
+   ```sh
+   git clone https://github.com/sfbrigade/support-sfusd.git
+   ```
+2. Install dependencies at the root directory
+
+   ```sh
+   npm install
+   ```
+
+3. Create your environment file
+
+   Create a local `.env` file from the example env file:
+    ```
+    cp .env.example .env
+   ```
+   Then add your [Mapbox public token](#mapbox):
+    ```
+   NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=your_public_token
+   ```
+4. Set up the database
+
+   This project uses [Prisma](#prisma) with Postgres. To set up for local development, you can run a local Postgres database using Docker.
+   Follow the Docker setup instructions here:
+   ```
+   docker/README.md
+   ```
+   After Docker is installed and the local database container is running, make sure your .env file points Prisma to the local database.
+    ```
+    POSTGRES_PRISMA_URL=postgresql://postgres:supersecret@localhost:5432/postgres
+    POSTGRES_URL_NON_POOLING=postgresql://postgres:supersecret@localhost:5432/postgres
+    ```
+   Then push the Prisma schema to your local database:
+    ```
+   npx prisma db push
+   ```
+   Seed the database:
+    ```
+    npx prisma db seed
+   ```
+
+5. Run the development server
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
+
+    - Alternatively, you can open [http://[LAN_IP]:3000](http://[LAN_IP]:3000) on another device, such as a phone on the same network. Replace `LAN_IP` with the IP address of your development server, which can be found inside of the "LAN url" part of the `npm run dev` log.
+
+<br>
+
 # Mapbox
 
 You need to sign up for Mapbox to run the project locally.
@@ -77,32 +134,6 @@ Create an environment file to pass your default public token from Mapbox and con
    POSTGRES_PRISMA_URL=ask_a_dev
    POSTGRES_URL_NON_POOLING=ask_a_dev
    ```
-
-<br>
-
-# Get Started
-
-To run this project locally, please perform the following steps:
-
-1. Clone the repository
-   ```sh
-   git clone https://github.com/sfbrigade/support-sfusd.git
-   ```
-2. Install dependencies at the root directory
-
-   ```sh
-   npm install
-   ```
-
-3. Run the development server
-
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
-
-   - Alternatively, you can open [http://[LAN_IP]:3000](http://[LAN_IP]:3000) on another device, such as a phone on the same network. Replace `LAN_IP` with the IP address of your development server, which can be found inside of the "LAN url" part of the `npm run dev` log.
 
 <br>
 
