@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { fredoka, inter, lato } from "@/lib/fonts";
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import Providers from "./providers";
 import RootLayout from "@/layouts/RootLayout";
 

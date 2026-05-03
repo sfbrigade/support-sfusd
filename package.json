@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@neondatabase/serverless": "^1.1.0",
     "@prisma/client": "^5.13.0",
     "@reduxjs/toolkit": "^2.9.0",
-    "@vercel/postgres": "^0.7.2",
     "dotenv": "^17.3.1",
     "image-size": "^2.0.1",
     "mapbox-gl": "^2.15.0",
@@ -81,6 +81,7 @@
     ]
   },
   "engines": {
-    "node": "22.x"
+    "node": "24.x",
+    "npm": ">=11"
   }
 }
