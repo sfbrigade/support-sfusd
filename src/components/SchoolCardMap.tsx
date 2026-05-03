@@ -1,5 +1,5 @@
 import React from "react";
-import { Program, School } from "@/types/school";
+import { Program, School, SchoolMapPin } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import VolunteerList from "./schoolPageComponents/VolunteerList";
 import { usePostHog } from "posthog-js/react";
 
 interface SchoolCardProps {
-  school: School;
+  school: SchoolMapPin;
   className?: string;
   onClose: (e: React.MouseEvent<HTMLElement>) => void;
   onModalOpen: () => void;
@@ -87,12 +87,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         md:rounded-t-2xl `}
       >
         <Link
-          href={
-            "/school?name=" +
-            encodeURIComponent(school.name) +
-            "&stub=" +
-            school.stub
-          }
+          href={`/school/${school.stub}`}
           className="hidden md:inline"
         >
           <SchoolImage
@@ -128,12 +123,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         </div>
         <Link
           className=" md:block"
-          href={
-            "/school?name=" +
-            encodeURIComponent(school.name) +
-            "&stub=" +
-            school.stub
-          }
+          href={`/school/${school.stub}`}
           onClick={() =>
             posthog?.capture?.("school_learn_more_clicked_map", {
               school: school.name,

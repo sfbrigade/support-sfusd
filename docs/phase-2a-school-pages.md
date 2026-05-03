@@ -358,7 +358,7 @@ One occurrence (line 299–305). This change lands in 2a so that Phase 2b can co
 ## Verification checklist
 
 ### School page (`/school/[stub]`)
-- [ ] `http://localhost:3000/school/glen-park-elementary` (or any valid stub) loads without error
+- [ ] `http://localhost:3000/school/willie-l-brown-jr-middle-school` (or any valid stub) loads without error
 - [ ] School banner image, logo, header, about, volunteer, donation sections all render
 - [ ] Student outcomes section shows only when metrics with category `outcome` exist
 - [ ] Testimonial section shows only when `school.testimonial` is set
@@ -382,4 +382,4 @@ One occurrence (line 299–305). This change lands in 2a so that Phase 2b can co
 
 ### Legacy route removed
 - [ ] `/school?stub=...` no longer works (returns 404 — old query-param URL is gone)
-- [ ] `npm run build` completes without errors
+- [ ] `npm run build` completes without errors 

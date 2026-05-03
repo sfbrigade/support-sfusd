@@ -9,9 +9,9 @@ import { ToastProvider } from "@/components/Toast/ToastContext";
 export default function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
-      api_host: "https://us.posthog.com",
-      ui_host: "https://us.posthog.com",
-      defaults: "2025-05-24",
+      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+      ui_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+      defaults: "2026-01-30",
       capture_exceptions: true,
       debug: process.env.NODE_ENV === "development",
     });
