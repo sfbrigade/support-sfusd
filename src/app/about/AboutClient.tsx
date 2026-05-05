@@ -185,7 +185,7 @@ export default function AboutClient() {
               <a
                 href="https://www.sfcivictech.org/about"
                 target="_blank"
-                className="text-blue-500 hover:underline"
+                className="text-blue-600 hover:underline"
               >
                 SF Civic Tech
               </a>{" "}
@@ -374,7 +374,7 @@ export default function AboutClient() {
                     href={contributor.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#3A86FF] hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     {contributor.name}
                   </a>
