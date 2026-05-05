@@ -135,7 +135,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 href="https://sfedfund.org/become-a-volunteer/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 w-full rounded-lg bg-[#3A86FF] px-4 py-3 text-center font-semibold text-white"
+                className="mt-2 w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white"
               >
                 Join the School Day Team
               </a>
@@ -149,7 +149,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 programs to PTA events, community projects, and more.
               </p>
               <button
-                className="mt-2 w-full rounded-lg bg-[#3A86FF] px-4 py-3 text-center font-semibold text-white"
+                className="mt-2 w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white"
                 onClick={() => {
                   posthog?.capture?.("volunteer_form_clicked", {
                     school: school.name,

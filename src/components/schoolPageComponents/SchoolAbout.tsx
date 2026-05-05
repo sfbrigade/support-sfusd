@@ -14,7 +14,7 @@ const SchoolAbout: React.FC<{ school: School }> = ({ school }) => {
             {school.about_bp.map((bullet: string, i: number) => (
               <li
                 key={i}
-                className="ml-2"
+                className="ml-2 [&_a]:text-blue-600"
                 dangerouslySetInnerHTML={{ __html: bullet }}
               >
                 {/* {bullet} */}
