@@ -105,6 +105,15 @@ const member_list = [
     pet_info: "Alena's pet",
     pet_name: "Kalych",
   },
+  {
+    name: "Katherine Chai",
+    role: "Software Developer",
+    url: "https://www.linkedin.com/in/katherine-chai-569a7932b/",
+    img: "/about/members/katherine_chai.jpg",
+    pet: "/about/pets/katherine_chai_pet.png",
+    pet_info: "Katherine's pet",
+    pet_name: "Coffee",
+  },
 ];
 const pastContributors = [
   {
