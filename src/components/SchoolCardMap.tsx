@@ -3,6 +3,7 @@ import { Program, School, SchoolMapPin } from "@/types/school";
 import { blurDataURL } from "@/lib/imageConfig";
 import Image from "next/image";
 import Link from "next/link";
+import WithLink from "./WithLink";
 import Tag from "./Tag";
 import VolunteerList from "./schoolPageComponents/VolunteerList";
 import { usePostHog } from "posthog-js/react";
@@ -54,7 +55,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   // );
 
   const posthog = usePostHog();
-  /* TODO: look into whether or not creating a `WithLink` component can simplify this somehow */
+
   const SchoolImage = (props: any) => (
     <Image
       src={props.src}
@@ -86,7 +87,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
         className={`transition-max-height relative col-span-4 h-40 h-auto w-2/5 rounded-l-2xl bg-cover bg-center duration-[700ms] md:col-span-3 md:h-40 md:w-full md:rounded-b-lg
         md:rounded-t-2xl `}
       >
-        <Link
+        <WithLink
           href={`/school/${school.stub}`}
           className="hidden md:inline"
         >
@@ -94,12 +95,7 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
             src={`/school-images/full/${school.stub}.webp`}
             alt={school.name}
           />
-        </Link>
-        <SchoolImage
-          src={`/school-images/full/${school.stub}.webp`}
-          alt={school.name}
-          className="inline-block md:hidden"
-        />
+        </WithLink>
       </div>
       <div className="flex h-full w-3/5 flex-col p-2 md:w-full md:p-4">
         <div className="flex-grow-1">
