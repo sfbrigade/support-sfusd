@@ -51,10 +51,10 @@ export default function SchoolPageClient({ school }: Props) {
         <SchoolDonation school={school} />
         {school.testimonial && <SchoolTestimonial school={school} />}
         // If there's no issue with PostHog/Vercel/Prisma could we structure replace the typos? Reach out to Brandon
-        {school.noteable_video && (
+        {school.notable_video && (
           <iframe
             height="340"
-            src={school.noteable_video}
+            src={school.notable_video}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
