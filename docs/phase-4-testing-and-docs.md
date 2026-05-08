@@ -70,7 +70,7 @@
 - [ ] Volunteer section renders; volunteer form link opens externally
 - [ ] Donation section renders; donation link opens externally
 - [ ] Testimonial section shows only when `school.testimonial` is set
-- [ ] Embedded YouTube player shows only when `school.noteable_video` is set
+- [ ] Embedded YouTube player shows only when `school.notable_video` is set
 - [ ] Visiting a school page with no matching stub shows `not-found.tsx` (custom 404)
 - [ ] "Browse Schools" link in 404 navigates to `/map`
 - [ ] Page loads with correct `<title>` tag (check DevTools)

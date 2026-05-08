@@ -17,7 +17,7 @@ export interface School {
   testimonial_author: string | null;
   testimonial_video: string | null;
   testimonial_img: string | null;
-  noteable_video: string | null;
+  notable_video: string | null;
   principal: string;
   instagram_url: string | null;
   facebook_url: string | null;
@@ -74,7 +74,7 @@ export type SchoolMapPin = Omit<
   | "testimonial_author"
   | "testimonial_video"
   | "testimonial_img"
-  | "noteable_video"
+  | "notable_video"
   | "principal"
   | "instagram_url"
   | "facebook_url"
