@@ -324,10 +324,10 @@ export default function SchoolPageClient({ school }: Props) {
         <SchoolVolunteer school={school} />
         <SchoolDonation school={school} />
         {school.testimonial && <SchoolTestimonial school={school} />}
-        {school.noteable_video && (
+        {school.notable_video && (
           <iframe
             height="340"
-            src={school.noteable_video}
+            src={school.notable_video}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -467,7 +467,7 @@ ls src/pages/
 - [ ] School banner image, logo, header, about, volunteer, donation sections all render
 - [ ] Student outcomes section shows only when metrics with category `outcome` exist
 - [ ] Testimonial section shows only when `school.testimonial` is set
-- [ ] Embedded YouTube video shows only when `school.noteable_video` is set
+- [ ] Embedded YouTube video shows only when `school.notable_video` is set
 - [ ] `http://localhost:3000/school/does-not-exist` serves the custom 404 page
 - [ ] Page `<title>` matches `"Support SF Schools - [School Name] Profile"`
 - [ ] OG description populates from school data
