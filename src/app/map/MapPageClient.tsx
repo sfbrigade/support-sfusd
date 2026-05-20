@@ -20,10 +20,22 @@ type Props = {
   schools: SchoolMapPin[];
 };
 
-const schoolCardPlaceholderTitle = "Select a School";
+function isSummerBreak(): boolean {
+  const now = new Date();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  return month === 6 || month === 7 || (month === 8 && day < 10);
+}
 
-const schoolCardPlaceholderText =
-  "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
+const summer = isSummerBreak();
+
+const schoolCardPlaceholderTitle = summer
+  ? "Schools are currently \n on summer break"
+  : "Select a School";
+
+const schoolCardPlaceholderText = summer
+  ? "New volunteers will be needed when the new school year begins."
+  : "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
 export default function MapPageClient(props: Props) {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
@@ -293,7 +305,7 @@ export default function MapPageClient(props: Props) {
                       height={200}
                     />
                     <div className="align-center flex flex-col items-center gap-4 text-center">
-                      <h1 className="text-2xl font-medium">
+                      <h1 className="whitespace-pre-line text-2xl font-medium">
                         {schoolCardPlaceholderTitle}
                       </h1>
                       <p className="md:text-lg">{schoolCardPlaceholderText}</p>
@@ -312,7 +324,7 @@ export default function MapPageClient(props: Props) {
                     height={200}
                   />
                   <div className="align-center flex flex-col items-center gap-4 text-center">
-                    <h1 className="text-2xl font-medium">
+                    <h1 className="whitespace-pre-line text-2xl font-medium">
                       {schoolCardPlaceholderTitle}
                     </h1>
                     <p className="md:text-lg">{schoolCardPlaceholderText}</p>
@@ -356,7 +368,7 @@ export default function MapPageClient(props: Props) {
                 />
                 <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
                   <div className="align-center flex flex-col items-center gap-0 text-center">
-                    <h1 className="text-lg font-medium">
+                    <h1 className="whitespace-pre-line text-lg font-medium">
                       {schoolCardPlaceholderTitle}
                     </h1>
                     <p className="text-md">{schoolCardPlaceholderText}</p>
