@@ -29,7 +29,7 @@ model School {
   testimonial_author String?
   testimonial_video  String?
   testimonial_img    String?
-  noteable_video     String?
+  notable_video     String?   @map("noteable_video")
   principal          String
   instagram_url      String?
   facebook_url       String?
