@@ -13,10 +13,13 @@ import {
   schoolsToGeoJSON,
   isCluster,
 } from "@/lib/clustering";
+import { zip } from "fflate";
+import { mapTag } from "yaml/util";
 
 type MapboxMapProps = {
   setSelectedSchool: (school: SchoolMapPin | null) => void;
   selectedSchool: SchoolMapPin | null;
+  searchZipcode: string | null;
   schools: SchoolMapPin[];
 };
 
@@ -51,7 +54,7 @@ const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
   return isInsideMap && isOnTop;
 };
 
-const MapboxMap = ({ schools }: MapboxMapProps) => {
+const MapboxMap = ({ schools, searchZipcode }: MapboxMapProps) => {
   const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
@@ -75,17 +78,28 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
 
   const updateMarkerAppearance = (
     marker: mapboxgl.Marker,
-    isSelected: boolean,
+    options:{
+      isSelected: boolean,
+      isZipHighlighted?: boolean,
+    }
   ) => {
     const element = marker.getElement();
 
-    if (isSelected) {
+    if (options.isSelected) {
       element.className =
         "marker-selected mapboxgl-marker mapboxgl-marker-anchor-center";
-    } else {
-      element.className =
-        "marker mapboxgl-marker mapboxgl-marker-anchor-center";
+      return;
     }
+
+    if(options.isZipHighlighted){
+      element.className =
+        "marker marker-zipcode-highlight mapboxgl-marker mapboxgl-marker-anchor-center";
+      return;
+    }
+
+    element.className =
+      "marker mapboxgl-marker mapboxgl-marker-anchor-center";
+
   };
 
   // Function to update marker sizes based on zoom level
@@ -432,14 +446,14 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     if (mapLoaded && mapRef.current) {
       // set all markers to default appearance
       Object.values(markersRef.current).forEach((marker) => {
-        updateMarkerAppearance(marker, false);
+        updateMarkerAppearance(marker, { isSelected: false });
       });
       if (selectedSchool) {
         const selectedMarker = markersRef.current[selectedSchool.name];
         if (selectedMarker) {
           // Ensure selected school marker is visible (not hidden by clustering)
           selectedMarker.addTo(mapRef.current);
-          updateMarkerAppearance(selectedMarker, true);
+          updateMarkerAppearance(selectedMarker, { isSelected: true });
           const lngLat = selectedMarker.getLngLat();
 
           if (!userHasInteracted.current) {
@@ -469,6 +483,59 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       }
     }
   }, [selectedSchool, mapLoaded, flyToOptions, userHasInteracted]);
+
+  //update marker appearance when user searches a zipcode
+  useEffect(() => {
+    if (!mapLoaded || !mapRef.current) return;
+    const zipcodeSchoolNames = new Set(
+      searchZipcode
+        ? schools
+            .filter((school) => school.zipcode === searchZipcode)
+            .map((school) => school.name)
+        : [],
+    );
+    Object.entries(markersRef.current).forEach(([schoolName, marker]) => {
+      updateMarkerAppearance(marker, {
+        isSelected: selectedSchool?.name === schoolName,
+        isZipHighlighted: zipcodeSchoolNames.has(schoolName),
+      })
+    })
+  }, [searchZipcode, selectedSchool, schools, mapLoaded]);
+
+  //add zip camera movement effect
+  useEffect(() => {
+    if(!mapLoaded || !mapRef.current || !searchZipcode) return;
+
+    const matchingSchools = schools.filter((school) => school.zipcode === searchZipcode);
+    if(matchingSchools.length === 0) return;
+
+    if(matchingSchools.length === 1){
+      const school = matchingSchools[0];
+
+      if(!school.longitude || !school.latitude)return;
+      mapRef.current.flyTo({
+        center: [Number(school.longitude), Number(school.latitude)],
+        zoom: 13,
+        ...flyToOptions
+      });
+
+      return;
+    }
+    const bounds = new mapboxgl.LngLatBounds();
+    matchingSchools.forEach((school) => {
+      if(school.longitude && school.latitude){
+        bounds.extend([
+          Number(school.longitude),
+          Number(school.latitude)
+        ]);
+      }
+    });
+
+    mapRef.current.fitBounds(bounds, {
+      padding: 80,
+      maxZoom: 14,
+    });
+  }, [searchZipcode, schools, mapLoaded, flyToOptions]);
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (e.key === "Escape") {
