@@ -64,6 +64,16 @@ h6 * {
   z-index: 5;
 }
 
+.marker-zipcode-highlight {
+  background-image: url("/marker_zip_search.svg");
+  background-size: cover;
+  width: var(--marker-size, 20px); /* Default size at reference zoom */
+  height: var(--marker-size, 20px);
+  border-radius: 0;
+  cursor: pointer;
+  outline: none;
+}
+
 .golden-gate-marker {
   background-image: url("/GoldenGate.png");
   background-size: cover;
