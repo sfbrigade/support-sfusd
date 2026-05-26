@@ -498,7 +498,10 @@ const MapboxMap = ({ schools, searchZipcode }: MapboxMapProps) => {
         isZipHighlighted: zipcodeSchoolNames.has(schoolName),
       });
     });
-  }, [searchZipcode, selectedSchool, schools, mapLoaded]);
+
+    // Important: after changing marker classes, let clustering re-apply visibility.
+    updateClusters();
+  }, [searchZipcode, selectedSchool, schools, mapLoaded, updateClusters]);
 
   //add zip camera movement effect
   useEffect(() => {
