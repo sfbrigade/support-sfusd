@@ -78,10 +78,10 @@ const MapboxMap = ({ schools, searchZipcode }: MapboxMapProps) => {
 
   const updateMarkerAppearance = (
     marker: mapboxgl.Marker,
-    options:{
-      isSelected: boolean,
-      isZipHighlighted?: boolean,
-    }
+    options: {
+      isSelected: boolean;
+      isZipHighlighted?: boolean;
+    },
   ) => {
     const element = marker.getElement();
 
@@ -91,15 +91,13 @@ const MapboxMap = ({ schools, searchZipcode }: MapboxMapProps) => {
       return;
     }
 
-    if(options.isZipHighlighted){
+    if (options.isZipHighlighted) {
       element.className =
         "marker marker-zipcode-highlight mapboxgl-marker mapboxgl-marker-anchor-center";
       return;
     }
 
-    element.className =
-      "marker mapboxgl-marker mapboxgl-marker-anchor-center";
-
+    element.className = "marker mapboxgl-marker mapboxgl-marker-anchor-center";
   };
 
   // Function to update marker sizes based on zoom level
@@ -498,36 +496,35 @@ const MapboxMap = ({ schools, searchZipcode }: MapboxMapProps) => {
       updateMarkerAppearance(marker, {
         isSelected: selectedSchool?.name === schoolName,
         isZipHighlighted: zipcodeSchoolNames.has(schoolName),
-      })
-    })
+      });
+    });
   }, [searchZipcode, selectedSchool, schools, mapLoaded]);
 
   //add zip camera movement effect
   useEffect(() => {
-    if(!mapLoaded || !mapRef.current || !searchZipcode) return;
+    if (!mapLoaded || !mapRef.current || !searchZipcode) return;
 
-    const matchingSchools = schools.filter((school) => school.zipcode === searchZipcode);
-    if(matchingSchools.length === 0) return;
+    const matchingSchools = schools.filter(
+      (school) => school.zipcode === searchZipcode,
+    );
+    if (matchingSchools.length === 0) return;
 
-    if(matchingSchools.length === 1){
+    if (matchingSchools.length === 1) {
       const school = matchingSchools[0];
 
-      if(!school.longitude || !school.latitude)return;
+      if (!school.longitude || !school.latitude) return;
       mapRef.current.flyTo({
         center: [Number(school.longitude), Number(school.latitude)],
         zoom: 13,
-        ...flyToOptions
+        ...flyToOptions,
       });
 
       return;
     }
     const bounds = new mapboxgl.LngLatBounds();
     matchingSchools.forEach((school) => {
-      if(school.longitude && school.latitude){
-        bounds.extend([
-          Number(school.longitude),
-          Number(school.latitude)
-        ]);
+      if (school.longitude && school.latitude) {
+        bounds.extend([Number(school.longitude), Number(school.latitude)]);
       }
     });
 
