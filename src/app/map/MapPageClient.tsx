@@ -32,11 +32,22 @@ export default function MapPageClient(props: Props) {
   const [selectedSchoolTypes, setSelectedSchoolTypes] = useState<SchoolType[]>(
     [],
   );
+  const [searchZipcode, setSearchZipcode] = useState<string | null>(null);
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
+  const ZIP_REGEX = /^\d{5}$/;
+
+  function updateSearchZipcode(searchZipcode: string) {
+    const trimmedZipcode = searchZipcode.trim();
+    if (ZIP_REGEX.test(trimmedZipcode)) {
+      setSearchZipcode(trimmedZipcode);
+    } else {
+      setSearchZipcode(null);
+    }
+  }
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
     const storedPriority = sessionStorage.getItem("priorityFilter");
@@ -121,6 +132,8 @@ export default function MapPageClient(props: Props) {
   const handleSchoolSearch = async (searchTerm: string) => {
     posthog?.capture("searched_for_school", { searchTerm });
     const searchTermToLowerCase = searchTerm.toLowerCase();
+    updateSearchZipcode(searchTerm);
+
     return filteredSchools
       .filter(({ name, zipcode, neighborhood }) => {
         const nameToLowerCase = name.toLowerCase();
@@ -352,6 +365,7 @@ export default function MapPageClient(props: Props) {
                 <MapboxMap
                   setSelectedSchool={setSelectedSchool}
                   selectedSchool={selectedSchool}
+                  searchZipcode={searchZipcode}
                   schools={filteredSchools}
                 />
                 <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
