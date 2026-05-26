@@ -15,6 +15,7 @@ import { useMapContext } from "@/contexts/MapContext";
 import { SchoolType } from "@prisma/client";
 import FilterBySchoolType from "@/components/FilterBySchoolType";
 import { usePostHog } from "posthog-js/react";
+import { getValidSearchZipcode } from "@/utils/zipcode";
 
 type Props = {
   schools: SchoolMapPin[];
@@ -38,16 +39,6 @@ export default function MapPageClient(props: Props) {
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const ZIP_REGEX = /^\d{5}$/;
-
-  function updateSearchZipcode(searchZipcode: string) {
-    const trimmedZipcode = searchZipcode.trim();
-    if (ZIP_REGEX.test(trimmedZipcode)) {
-      setSearchZipcode(trimmedZipcode);
-    } else {
-      setSearchZipcode(null);
-    }
-  }
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
     const storedPriority = sessionStorage.getItem("priorityFilter");
@@ -132,7 +123,7 @@ export default function MapPageClient(props: Props) {
   const handleSchoolSearch = async (searchTerm: string) => {
     posthog?.capture("searched_for_school", { searchTerm });
     const searchTermToLowerCase = searchTerm.toLowerCase();
-    updateSearchZipcode(searchTerm);
+    setSearchZipcode(getValidSearchZipcode(searchTerm));
 
     return filteredSchools
       .filter(({ name, zipcode, neighborhood }) => {
