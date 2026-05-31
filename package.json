@@ -7,7 +7,6 @@
   },
   "scripts": {
     "dev": "npm run migrate-check && next dev",
-    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "migrate-check": "prisma migrate diff --from-schema-datamodel=prisma/schema.prisma --to-schema-datasource=prisma/schema.prisma",
     "build": "prisma migrate reset --force && next build",
     "dbpush": "prisma db push",
