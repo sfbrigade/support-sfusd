@@ -21,7 +21,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   };
   const [showContactForm, setShowContactForm] = useState(false);
   const handleOpen = () => {
-    posthog?.capture?.('contact_us_form_opened');
+    posthog?.capture?.("contact_us_form_opened");
     setShowContactForm(true);
   };
   const handleClose = () => setShowContactForm(false);
@@ -56,7 +56,9 @@ function RootLayout({ children }: { children: React.ReactNode }) {
             {showContactForm && <ContactUs handleClose={handleClose} />}
           </>
         )}
-      <Navbar />
+      <div className={pathname === "/" ? "bg-[#7ce0ed]" : ""}>
+        <Navbar />
+      </div>
       <div className="flex-1">{children}</div>
       <BackToTop />
     </div>
