@@ -150,14 +150,14 @@ rm src/components/SEO.tsx
 - [X] No `Error: Invalid src prop` console errors (would indicate missing `remotePatterns`)
 
 ### SEO / metadata
-- [ ] `<title>` tag is correct on every route in browser DevTools:
+- [X] `<title>` tag is correct on every route in browser DevTools:
   - `/` → `"Support SF Schools - Home"`
   - `/map` → `"Support SF Schools - School Map"`
   - `/about` → `"Support SF Schools - About"`
   - `/school/[stub]` → `"Support SF Schools - [School Name] Profile"`
-- [ ] `<meta name="description">` is populated on all routes
-- [ ] Favicon appears in browser tab (uses `logo_icon.ico`)
-- [ ] OG tags present (check with a link preview tool or `curl` the HTML)
+- [X] `<meta name="description">` is populated on all routes
+- [X] Favicon appears in browser tab (uses `logo_icon.ico`)
+- [X] OG tags present (check with a link preview tool or `curl` the HTML)
 
 ### Robots and sitemap
 - [ ] `http://localhost:3000/robots.txt` returns valid robots file pointing to sitemap URL
