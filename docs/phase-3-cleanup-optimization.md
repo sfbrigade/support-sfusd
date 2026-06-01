@@ -165,9 +165,9 @@ rm src/components/SEO.tsx
 - [X] No `public/robots.txt` conflict (should have been removed if it existed)
 
 ### Dead code removed
-- [ ] `grep -r "from.*SEO"` returns nothing in `src/`
-- [ ] `grep -r "generate-sitemap"` returns nothing in `package.json` and `scripts/`
-- [ ] `grep -r "next/router"` returns nothing in `src/` (all usages migrated to `next/navigation`)
-- [ ] `grep -r "next/head"` returns nothing in `src/` (all usages replaced by metadata API)
-- [ ] `grep -r "getStaticProps\|getServerSideProps"` returns nothing in `src/`
-- [ ] `ls src/pages/` — directory should not exist
+- [X] `grep -r "from.*SEO"` returns nothing in `src/`
+- [X] `grep -r "generate-sitemap"` returns nothing in `package.json` and `scripts/`
+- [X] `grep -r "next/router"` returns nothing in `src/` (all usages migrated to `next/navigation`)
+- [X] `grep -r "next/head"` returns nothing in `src/` (all usages replaced by metadata API)
+- [X] `grep -r "getStaticProps\|getServerSideProps"` returns nothing in `src/`
+- [X] `ls src/pages/` — directory should not exist
