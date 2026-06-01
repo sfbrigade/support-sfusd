@@ -160,9 +160,9 @@ rm src/components/SEO.tsx
 - [X] OG tags present (check with a link preview tool or `curl` the HTML)
 
 ### Robots and sitemap
-- [ ] `http://localhost:3000/robots.txt` returns valid robots file pointing to sitemap URL
-- [ ] `http://localhost:3000/sitemap.xml` is still accessible and valid
-- [ ] No `public/robots.txt` conflict (should have been removed if it existed)
+- [X] `http://localhost:3000/robots.txt` returns valid robots file pointing to sitemap URL
+- [X] `http://localhost:3000/sitemap.xml` is still accessible and valid
+- [X] No `public/robots.txt` conflict (should have been removed if it existed)
 
 ### Dead code removed
 - [ ] `grep -r "from.*SEO"` returns nothing in `src/`
