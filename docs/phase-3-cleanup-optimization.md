@@ -139,15 +139,15 @@ rm src/components/SEO.tsx
 
 ### Configuration
 - [X] `npm run build` completes without errors or warnings about missing directories
-- [x] Tailwind CSS still applies correctly on all pages (fonts, colours, spacing)
-- [x] PostHog rewrites in `next.config.js` still function (check Network tab: `/ingest/*` requests should proxy correctly)
+- [X] Tailwind CSS still applies correctly on all pages (fonts, colours, spacing)
+- [X] PostHog rewrites in `next.config.js` still function (check Network tab: `/ingest/*` requests should proxy correctly)
 
 ### Image optimisation (if `unoptimized` was removed)
-- [ ] Home page background image loads
-- [ ] School banner images (`/school-images/full/[stub].webp`) load and are optimised
-- [ ] School logo images (`/school-images/logo/[stub].webp`) load
-- [ ] About page team member photos load with blur placeholder
-- [ ] No `Error: Invalid src prop` console errors (would indicate missing `remotePatterns`)
+- [X] Home page background image loads
+- [X] School banner images (`/school-images/full/[stub].webp`) load and are optimised
+- [X] School logo images (`/school-images/logo/[stub].webp`) load
+- [X] About page team member photos load with blur placeholder
+- [X] No `Error: Invalid src prop` console errors (would indicate missing `remotePatterns`)
 
 ### SEO / metadata
 - [ ] `<title>` tag is correct on every route in browser DevTools:
