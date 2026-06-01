@@ -138,9 +138,9 @@ rm src/components/SEO.tsx
 ## Verification checklist
 
 ### Configuration
-- [ ] `npm run build` completes without errors or warnings about missing directories
-- [ ] Tailwind CSS still applies correctly on all pages (fonts, colours, spacing)
-- [ ] PostHog rewrites in `next.config.js` still function (check Network tab: `/ingest/*` requests should proxy correctly)
+- [X] `npm run build` completes without errors or warnings about missing directories
+- [x] Tailwind CSS still applies correctly on all pages (fonts, colours, spacing)
+- [x] PostHog rewrites in `next.config.js` still function (check Network tab: `/ingest/*` requests should proxy correctly)
 
 ### Image optimisation (if `unoptimized` was removed)
 - [ ] Home page background image loads
