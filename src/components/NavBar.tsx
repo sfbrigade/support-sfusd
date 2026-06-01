@@ -6,13 +6,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(false);
   const pathname = usePathname();
   const [bg, setBg] = useState("");
 
   useEffect(() => {
-    setOpen(false);
-
     if (pathname === "/map") {
       setBg("bg-[#D7F1FF]");
     } else if (pathname?.startsWith("/school") || pathname === "/about") {
@@ -23,7 +20,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <nav className={"sticky top-0 z-40 w-full p-2 p-4 px-4 text-black " + bg}>
+    <nav className={"w-full p-2 p-4 px-4 text-black " + bg}>
       <div className="container mx-auto max-w-[1280px] font-medium">
         <div className="flex items-center justify-between">
           {/* Home Icon */}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/NavBar";
 import Banner from "@/components/Banner";
 import { usePathname } from "next/navigation";
@@ -13,6 +13,8 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const { isMapView } = useMapContext();
   const posthog = usePostHog();
+  const homeBannerRef = useRef<HTMLDivElement>(null);
+  const homeNavbarRef = useRef<HTMLDivElement>(null);
 
   const [isBannerShowing, setIsBannerShowing] = useState(true);
 
@@ -38,15 +40,51 @@ function RootLayout({ children }: { children: React.ReactNode }) {
 
   /* NOTE: id="root" is currently required as a hook by the JS view logic in `map.tsx` to help constrain the map height to the mobile viewport */
 
+  useEffect(() => {
+    const rootElement = document.getElementById("root");
+
+    if (!rootElement) {
+      return;
+    }
+
+    const applyHomeTopChromeHeight = () => {
+      const bannerHeight = homeBannerRef.current?.offsetHeight ?? 0;
+      const navbarHeight = homeNavbarRef.current?.offsetHeight ?? 0;
+      const topChromeHeight = bannerHeight + navbarHeight;
+      rootElement.style.setProperty(
+        "--home-top-chrome-height",
+        `${topChromeHeight}px`,
+      );
+    };
+
+    if (pathname !== "/") {
+      rootElement.style.setProperty("--home-top-chrome-height", "0px");
+      return;
+    }
+
+    applyHomeTopChromeHeight();
+
+    const observer = new ResizeObserver(applyHomeTopChromeHeight);
+    if (homeBannerRef.current) observer.observe(homeBannerRef.current);
+    if (homeNavbarRef.current) observer.observe(homeNavbarRef.current);
+
+    window.addEventListener("resize", applyHomeTopChromeHeight);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", applyHomeTopChromeHeight);
+    };
+  }, [pathname, isBannerShowing]);
+
   return (
     <div
       id="root"
-      className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`flex flex-col px-0 ${isMapView && pathname === "/map" ? "h-dvh-with-fallback" : pathname === "/" ? "min-h-dvh-with-fallback" : "h-auto"}`}
     >
       {/* Phase 2: replace with route group layouts to remove pathname logic */}
       {(pathname?.startsWith("/school") || pathname === "/") &&
         isBannerShowing && (
-          <>
+          <div ref={homeBannerRef}>
             <div className="block md:hidden">
               <Banner onClose={setToggle}>{bannerContent}</Banner>
             </div>
@@ -54,9 +92,12 @@ function RootLayout({ children }: { children: React.ReactNode }) {
               <Banner>{bannerContent}</Banner>
             </div>
             {showContactForm && <ContactUs handleClose={handleClose} />}
-          </>
+          </div>
         )}
-      <div className={pathname === "/" ? "bg-[#7ce0ed]" : ""}>
+      <div
+        ref={homeNavbarRef}
+        className={`sticky top-0 z-40 ${pathname === "/" ? "bg-[#7ce0ed]" : ""}`}
+      >
         <Navbar />
       </div>
       <div className="flex-1">{children}</div>
