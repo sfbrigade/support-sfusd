@@ -34,6 +34,7 @@ const Navbar = () => {
 
           {/* Links on desktop */}
           <div className="space-x-10 md:flex">
+            <Link href="/map">Explore Schools</Link>
             <Link href="/about">About Us</Link>
           </div>
         </div>
