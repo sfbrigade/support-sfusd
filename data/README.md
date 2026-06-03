@@ -10,6 +10,12 @@ Additional steps are required to transform and load this data into the SupportSF
 
 The static ZIP boundary overlay at `public/geo/sf-zctas.geojson` is derived from U.S. Census Bureau 2020 Census ZIP Code Tabulation Area cartographic boundaries. ZCTAs are approximate area representations of USPS ZIP Codes and should not be treated as exact mail delivery boundaries. The committed file is filtered to ZIP/ZCTA codes used by SFUSD schools in `prisma/schools.json`.
 
+To regenerate the file:
+
+```bash
+npx tsx data/generateSfZctas.ts
+```
+
 ## Backup
 
 The subfolder called `original-17` contains the original list of 17 SF high schools in a couple of different data formats. The `postgres` database tables were exported as CSV files. The queries used for this extraction were saved as well as SQL.
