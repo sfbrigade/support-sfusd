@@ -7,11 +7,13 @@ import type { DropdownItem } from "@/types/school";
 interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
+  onSearchSubmit?: (searchTerm: string) => void;
 }
 
-export default function SearchBar<DropdownItemType = any>({
+export default function SearchBar<DropdownItemType = unknown>({
   onItemSelect,
   onSearch,
+  onSearchSubmit,
 }: SearchBarProps<DropdownItemType>): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownItems, setDropdownItems] = useState<
@@ -36,20 +38,26 @@ export default function SearchBar<DropdownItemType = any>({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // Does not handle keys if dropdown is empty
-    if (dropdownItems.length === 0) {
-      return;
-    }
-
     if (e.key === "ArrowDown") {
+      if (dropdownItems.length === 0) {
+        return;
+      }
       e.preventDefault();
       setCursor((prev) => (prev < dropdownItems.length - 1 ? prev + 1 : prev));
     } else if (e.key === "ArrowUp") {
+      if (dropdownItems.length === 0) {
+        return;
+      }
       e.preventDefault();
       setCursor((prev) => (prev > 0 ? prev - 1 : prev));
     } else if (e.key === "Enter" && cursor >= 0) {
       e.preventDefault();
       handleItemSelect(dropdownItems[cursor]);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      onSearchSubmit?.(searchTerm);
+      setDropdownItems([]);
+      inputRef.current?.blur();
     }
   };
 
