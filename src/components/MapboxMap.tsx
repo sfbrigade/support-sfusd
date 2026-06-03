@@ -39,6 +39,22 @@ const ZCTA_SOURCE_ID = "sf-zctas";
 const ZCTA_FILL_LAYER_ID = "sf-zcta-fill";
 const ZCTA_LINE_LAYER_ID = "sf-zcta-line";
 const EMPTY_ZCTA_FILTER: mapboxgl.Expression = ["==", ["get", "zipcode"], ""];
+const SUPPORT_SFUSD_BLUE = "#3A86FF";
+const ZCTA_OUTLINE_BLUE = "#1D4ED8";
+const ZCTA_BOUNDARY_FILL_OPACITY = 0.18;
+const ZCTA_BOUNDARY_OUTLINE_OPACITY = 0.9;
+const ZCTA_BOUNDARY_OUTLINE_WIDTH = 2;
+
+const ZCTA_FILL_PAINT: mapboxgl.FillPaint = {
+  "fill-color": SUPPORT_SFUSD_BLUE,
+  "fill-opacity": ZCTA_BOUNDARY_FILL_OPACITY,
+};
+
+const ZCTA_LINE_PAINT: mapboxgl.LinePaint = {
+  "line-color": ZCTA_OUTLINE_BLUE,
+  "line-opacity": ZCTA_BOUNDARY_OUTLINE_OPACITY,
+  "line-width": ZCTA_BOUNDARY_OUTLINE_WIDTH,
+};
 
 const extendBoundsWithCoordinates = (
   bounds: mapboxgl.LngLatBounds,
@@ -269,7 +285,6 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
     setZctaLayersLoaded(false);
 
     mapboxgl.accessToken = accessToken;
-
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
@@ -337,10 +352,7 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
               id: ZCTA_FILL_LAYER_ID,
               type: "fill",
               source: ZCTA_SOURCE_ID,
-              paint: {
-                "fill-color": "#3A86FF",
-                "fill-opacity": 0.18,
-              },
+              paint: ZCTA_FILL_PAINT,
               filter: EMPTY_ZCTA_FILTER,
             });
           }
@@ -350,11 +362,7 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
               id: ZCTA_LINE_LAYER_ID,
               type: "line",
               source: ZCTA_SOURCE_ID,
-              paint: {
-                "line-color": "#1D4ED8",
-                "line-opacity": 0.9,
-                "line-width": 2,
-              },
+              paint: ZCTA_LINE_PAINT,
               filter: EMPTY_ZCTA_FILTER,
             });
           }
