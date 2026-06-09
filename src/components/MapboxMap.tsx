@@ -38,23 +38,11 @@ type ZctaFeatureCollection = FeatureCollection<
 const ZCTA_SOURCE_ID = "sf-zctas";
 const ZCTA_FILL_LAYER_ID = "sf-zcta-fill";
 const ZCTA_LINE_LAYER_ID = "sf-zcta-line";
+const ZCTA_LINE_CASING_LAYER_ID = "sf-zcta-line-casing";
 const EMPTY_ZCTA_FILTER: mapboxgl.Expression = ["==", ["get", "zipcode"], ""];
-const SUPPORT_SFUSD_BLUE = "#3A86FF";
-const ZCTA_OUTLINE_BLUE = "#1D4ED8";
-const ZCTA_BOUNDARY_FILL_OPACITY = 0.18;
-const ZCTA_BOUNDARY_OUTLINE_OPACITY = 0.9;
-const ZCTA_BOUNDARY_OUTLINE_WIDTH = 2;
-
-const ZCTA_FILL_PAINT: mapboxgl.FillPaint = {
-  "fill-color": SUPPORT_SFUSD_BLUE,
-  "fill-opacity": ZCTA_BOUNDARY_FILL_OPACITY,
-};
-
-const ZCTA_LINE_PAINT: mapboxgl.LinePaint = {
-  "line-color": ZCTA_OUTLINE_BLUE,
-  "line-opacity": ZCTA_BOUNDARY_OUTLINE_OPACITY,
-  "line-width": ZCTA_BOUNDARY_OUTLINE_WIDTH,
-};
+const ZCTA_FILL_COLOR = "#b7d8ff";
+const ZCTA_LINE_CASING_COLOR = "#ffffff";
+const ZCTA_LINE_COLOR = "#002054";
 
 const extendBoundsWithCoordinates = (
   bounds: mapboxgl.LngLatBounds,
@@ -352,9 +340,33 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
               id: ZCTA_FILL_LAYER_ID,
               type: "fill",
               source: ZCTA_SOURCE_ID,
-              paint: ZCTA_FILL_PAINT,
+              paint: {
+                "fill-color": ZCTA_FILL_COLOR,
+                "fill-opacity": 0.35,
+              },
               filter: EMPTY_ZCTA_FILTER,
             });
+          }
+
+          if (!map.getLayer(ZCTA_LINE_CASING_LAYER_ID)) {
+            const beforeLayerId = map.getLayer(ZCTA_LINE_LAYER_ID)
+              ? ZCTA_LINE_LAYER_ID
+              : undefined;
+
+            map.addLayer(
+              {
+                id: ZCTA_LINE_CASING_LAYER_ID,
+                type: "line",
+                source: ZCTA_SOURCE_ID,
+                paint: {
+                  "line-color": ZCTA_LINE_CASING_COLOR,
+                  "line-opacity": 0.9,
+                  "line-width": 6,
+                },
+                filter: EMPTY_ZCTA_FILTER,
+              },
+              beforeLayerId,
+            );
           }
 
           if (!map.getLayer(ZCTA_LINE_LAYER_ID)) {
@@ -362,11 +374,14 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
               id: ZCTA_LINE_LAYER_ID,
               type: "line",
               source: ZCTA_SOURCE_ID,
-              paint: ZCTA_LINE_PAINT,
+              paint: {
+                "line-color": ZCTA_LINE_COLOR,
+                "line-opacity": 0.9,
+                "line-width": 2,
+              },
               filter: EMPTY_ZCTA_FILTER,
             });
           }
-
           setZctaLayersLoaded(true);
         })
         .catch((error) => {
@@ -591,6 +606,9 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
 
     if (map.getLayer(ZCTA_FILL_LAYER_ID)) {
       map.setFilter(ZCTA_FILL_LAYER_ID, filter);
+    }
+    if (map.getLayer(ZCTA_LINE_CASING_LAYER_ID)) {
+      map.setFilter(ZCTA_LINE_CASING_LAYER_ID, filter);
     }
     if (map.getLayer(ZCTA_LINE_LAYER_ID)) {
       map.setFilter(ZCTA_LINE_LAYER_ID, filter);
