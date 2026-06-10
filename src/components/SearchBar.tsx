@@ -101,17 +101,13 @@ export default function SearchBar<DropdownItemType = unknown>({
         }}
         onKeyDown={handleKeyDown}
       />
-      {dropdownItems.length > 0 && (
+      {(dropdownItems.length > 0 || showNoResults) && (
         <Dropdown
           items={dropdownItems}
           onItemSelect={handleItemSelect}
           cursor={cursor}
+          emptyMessage={showNoResults ? "No results found" : undefined}
         />
-      )}
-      {showNoResults && (
-        <div className="top-30 absolute z-30 flex max-h-[300px] w-full flex-col overflow-auto rounded-lg bg-slate-100 shadow-lg">
-          <div className="px-4 py-2 text-gray-500">No results found</div>
-        </div>
       )}
     </div>
   );
