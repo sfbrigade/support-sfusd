@@ -46,6 +46,7 @@ export default function MapPageClient(props: Props) {
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
+  const [searchFilteredSchools, setSearchFilteredSchools] = useState<SchoolMapPin[] | null>(null);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
@@ -133,21 +134,29 @@ export default function MapPageClient(props: Props) {
   const handleSchoolSearch = async (searchTerm: string) => {
     posthog?.capture("searched_for_school", { searchTerm });
     const searchTermToLowerCase = searchTerm.toLowerCase();
-    return filteredSchools
-      .filter(({ name, zipcode, neighborhood }) => {
-        const nameToLowerCase = name.toLowerCase();
-        const neighborhoodToLowerCase = neighborhood?.toLowerCase();
-        return (
-          nameToLowerCase.includes(searchTermToLowerCase) ||
-          zipcode?.includes(searchTermToLowerCase) ||
-          neighborhoodToLowerCase?.includes(searchTermToLowerCase)
-        );
-      })
-      .map((school) => ({
-        label: school.name,
-        value: school.name,
-        item: school,
-      }));
+
+    if (!searchTerm.trim()) {
+      setSearchFilteredSchools(null);
+      return [];
+    }
+
+    const results = filteredSchools.filter(({ name, zipcode, neighborhood }) => {
+      const nameToLowerCase = name.toLowerCase();
+      const neighborhoodToLowerCase = neighborhood?.toLowerCase();
+      return (
+        nameToLowerCase.includes(searchTermToLowerCase) ||
+        zipcode?.includes(searchTermToLowerCase) ||
+        neighborhoodToLowerCase?.includes(searchTermToLowerCase)
+      );
+    });
+
+    setSearchFilteredSchools(results);
+
+    return results.map((school) => ({
+      label: school.name,
+      value: school.name,
+      item: school,
+    }));
   };
 
   const itemSelect = (selection: DropdownItem<SchoolMapPin>) => {
@@ -189,6 +198,7 @@ export default function MapPageClient(props: Props) {
             <SearchBar
               onItemSelect={itemSelect}
               onSearch={handleSchoolSearch}
+              showDropdown={isMapView}
             />
           </div>
 
@@ -343,6 +353,7 @@ export default function MapPageClient(props: Props) {
                   <SearchBar
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
+                    showDropdown={isMapView}
                   />
                 </div>
                 <div className="w-1/3">
@@ -379,7 +390,7 @@ export default function MapPageClient(props: Props) {
               <MapList
                 setSelectedSchool={setSelectedSchool}
                 selectedSchool={selectedSchool}
-                schools={filteredSchools}
+                schools={searchFilteredSchools ?? filteredSchools}
                 onModalOpen={openModal}
               />
             )}

@@ -7,11 +7,13 @@ import type { DropdownItem } from "@/types/school";
 interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
+  showDropdown?: boolean;
 }
 
 export default function SearchBar<DropdownItemType = any>({
   onItemSelect,
   onSearch,
+  showDropdown = true,
 }: SearchBarProps<DropdownItemType>): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownItems, setDropdownItems] = useState<
@@ -85,7 +87,7 @@ export default function SearchBar<DropdownItemType = any>({
         }}
         onKeyDown={handleKeyDown}
       />
-      {dropdownItems.length > 0 && (
+      {showDropdown && dropdownItems.length > 0 && (
         <Dropdown
           items={dropdownItems}
           onItemSelect={handleItemSelect}
