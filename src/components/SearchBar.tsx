@@ -19,6 +19,7 @@ export default function SearchBar<DropdownItemType = unknown>({
   const [dropdownItems, setDropdownItems] = useState<
     DropdownItem<DropdownItemType>[]
   >([]);
+  const [showNoResults, setShowNoResults] = useState(false);
   const [cursor, setCursor] = useState(-1);
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -27,6 +28,7 @@ export default function SearchBar<DropdownItemType = unknown>({
     setSearchTerm(userInput);
     const searchResults = await onSearch(userInput);
     setDropdownItems(searchResults);
+    setShowNoResults(userInput.trim().length > 0 && searchResults.length === 0);
     setCursor(-1);
   };
 
@@ -34,6 +36,7 @@ export default function SearchBar<DropdownItemType = unknown>({
     setSearchTerm(item.label);
     onItemSelect(item);
     setDropdownItems([]);
+    setShowNoResults(false);
     inputRef.current?.blur();
   };
 
@@ -57,6 +60,7 @@ export default function SearchBar<DropdownItemType = unknown>({
       e.preventDefault();
       onSearchSubmit?.(searchTerm);
       setDropdownItems([]);
+      setShowNoResults(false);
       inputRef.current?.blur();
     }
   };
@@ -83,12 +87,16 @@ export default function SearchBar<DropdownItemType = unknown>({
         onFocus={() => {
           if (searchTerm.length > 0) {
             // Re-trigger search to show dropdown
-            onSearch(searchTerm).then(setDropdownItems);
+            onSearch(searchTerm).then((searchResults) => {
+              setDropdownItems(searchResults);
+              setShowNoResults(searchResults.length === 0);
+            });
           }
         }}
         onBlur={() => {
           // Hide dropdown when input loses focus
           setDropdownItems([]);
+          setShowNoResults(false);
           setCursor(-1);
         }}
         onKeyDown={handleKeyDown}
@@ -99,6 +107,11 @@ export default function SearchBar<DropdownItemType = unknown>({
           onItemSelect={handleItemSelect}
           cursor={cursor}
         />
+      )}
+      {showNoResults && (
+        <div className="top-30 absolute z-30 flex max-h-[300px] w-full flex-col overflow-auto rounded-lg bg-slate-100 shadow-lg">
+          <div className="px-4 py-2 text-gray-500">No results found</div>
+        </div>
       )}
     </div>
   );
