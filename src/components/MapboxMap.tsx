@@ -342,7 +342,7 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
               source: ZCTA_SOURCE_ID,
               paint: {
                 "fill-color": ZCTA_FILL_COLOR,
-                "fill-opacity": 0.35,
+                "fill-opacity": 0.25,
               },
               filter: EMPTY_ZCTA_FILTER,
             });
