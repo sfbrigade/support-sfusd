@@ -8,12 +8,14 @@ interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
   onSearchSubmit?: (searchTerm: string) => void;
+  showDropdown?: boolean;
 }
 
 export default function SearchBar<DropdownItemType = unknown>({
   onItemSelect,
   onSearch,
   onSearchSubmit,
+  showDropdown = true,
 }: SearchBarProps<DropdownItemType>): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownItems, setDropdownItems] = useState<
@@ -101,7 +103,7 @@ export default function SearchBar<DropdownItemType = unknown>({
         }}
         onKeyDown={handleKeyDown}
       />
-      {(dropdownItems.length > 0 || showNoResults) && (
+      {showDropdown && (dropdownItems.length > 0 || showNoResults) && (
         <Dropdown
           items={dropdownItems}
           onItemSelect={handleItemSelect}
