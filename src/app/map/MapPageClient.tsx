@@ -37,6 +37,11 @@ const schoolCardPlaceholderText = summer
   ? "New volunteers will be needed when the new school year begins."
   : "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
+const desktopPlaceholderTitle = schoolCardPlaceholderTitle.replace(
+  /\s*\n\s*/g,
+  " ",
+);
+
 export default function MapPageClient(props: Props) {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
     useMapContext();
@@ -178,7 +183,7 @@ export default function MapPageClient(props: Props) {
   }, [isMapView]);
 
   return (
-    <div className="flex h-full flex-col bg-[#D7F1FF]">
+    <div className="flex h-full min-h-0 flex-col bg-[#D7F1FF]">
       {/* High Priority Modal */}
       <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
 
@@ -273,81 +278,24 @@ export default function MapPageClient(props: Props) {
 
       {/* Main Content Area */}
       <div
-        className={`relative mx-auto flex h-auto flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-4 lg:w-10/12 2xl:w-2/3 ${isMapView ? " w-full flex-1" : ""}`}
+        className={`relative mx-auto flex h-auto flex-col overflow-auto md:min-h-0 md:flex-1 md:overflow-hidden md:gap-4 md:p-4 lg:w-10/12 2xl:w-2/3 ${isMapView ? " w-full" : ""}`}
       >
-        <div className="flex h-full w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 md:grid md:w-auto md:flex-col">
-          {/* School Card or Placeholder */}
-          <div
-            className={`col-span-4 ${isMapView && selectedSchool ? "p-0" : "p-2 md:p-0"}  ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-20 m-4 flex h-fit items-center justify-center rounded-2xl bg-white md:static md:m-0 md:flex md:h-full`}
-          >
-            {isMapView ? (
-              selectedSchool ? (
-                <div className="w-full md:w-auto md:p-4">
-                  <Link
-                    href={`/school/${selectedSchool.stub}`}
-                    className="block md:hidden"
-                  >
-                    <SelectedSchoolCard school={selectedSchool} />
-                  </Link>
-                  <SelectedSchoolCard
-                    school={selectedSchool}
-                    className="hidden md:block"
-                  />
-                </div>
-              ) : (
-                <div className="flex flex-col gap-20 px-5">
-                  <div className="flex w-full flex-col items-center gap-12">
-                    <Image
-                      src="/map-school-logo.png"
-                      alt="Homepage Background"
-                      className="hidden w-1/2 md:inline-block"
-                      width={200}
-                      height={200}
-                    />
-                    <div className="align-center flex flex-col items-center gap-4 text-center">
-                      <h1 className="whitespace-pre-line text-2xl font-medium">
-                        {schoolCardPlaceholderTitle}
-                      </h1>
-                      <p className="md:text-lg">{schoolCardPlaceholderText}</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            ) : (
-              <div className="flex flex-col gap-20 px-5">
-                <div className="flex w-full flex-col items-center gap-12">
-                  <Image
-                    src="/map-school-logo.png"
-                    alt="Homepage Background"
-                    className="w-1/2"
-                    width={200}
-                    height={200}
-                  />
-                  <div className="align-center flex flex-col items-center gap-4 text-center">
-                    <h1 className="whitespace-pre-line text-2xl font-medium">
-                      {schoolCardPlaceholderTitle}
-                    </h1>
-                    <p className="md:text-lg">{schoolCardPlaceholderText}</p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+        {/* DESKTOP ONLY */}
+        <div className="hidden h-full min-h-0 overflow-hidden md:flex md:flex-col md:gap-4">
+          <div className="grid grid-cols-10 gap-4">
+            <div className="col-span-4 rounded-2xl bg-white p-4 text-center">
+              <h1 className="text-2xl font-medium leading-tight">
+                {desktopPlaceholderTitle}
+              </h1>
+              <p className="text-lg">{schoolCardPlaceholderText}</p>
+            </div>
 
-          {/* Map or List View */}
-          <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
-            {/* DESKTOP ONLY: Top Bar with Search, Toggle, Map/List */}
-            <div className="hidden rounded-2xl bg-white p-4 md:block">
-              <div className="flex w-full items-center gap-2">
-                <div className="w-2/3">
-                  <SearchBar
-                    onItemSelect={itemSelect}
-                    onSearch={handleSchoolSearch}
-                  />
-                </div>
-                <div className="w-1/3">
-                  <ToggleButton isMapView={isMapView} toggleView={setToggle} />
-                </div>
+            <div className="col-span-6 rounded-2xl bg-white p-4">
+              <div className="mb-4">
+                <SearchBar
+                  onItemSelect={itemSelect}
+                  onSearch={handleSchoolSearch}
+                />
               </div>
               <FilterBySchoolType
                 selectedSchoolTypes={selectedSchoolTypes}
@@ -358,7 +306,60 @@ export default function MapPageClient(props: Props) {
                 setPriorityFilter={setPriorityFilter}
               />
             </div>
+          </div>
 
+          <div className="grid min-h-0 flex-1 grid-cols-10 gap-4 overflow-hidden">
+            <div className="col-span-4 h-full min-h-0 overflow-hidden rounded-2xl bg-white p-4">
+              <MapList
+                setSelectedSchool={setSelectedSchool}
+                selectedSchool={selectedSchool}
+                schools={filteredSchools}
+                onModalOpen={openModal}
+              />
+            </div>
+
+            <div className="col-span-6 h-full min-h-0 overflow-hidden">
+              <MapboxMap
+                setSelectedSchool={setSelectedSchool}
+                selectedSchool={selectedSchool}
+                schools={filteredSchools}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* MOBILE ONLY */}
+        <div className="flex min-h-[60vh] w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 md:hidden">
+          {/* School Card or Placeholder */}
+          <div
+            className={`${isMapView && selectedSchool ? "p-0" : "p-2"} ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-20 m-4 flex h-fit items-center justify-center rounded-2xl bg-white`}
+          >
+            {isMapView ? (
+              selectedSchool ? (
+                <div className="w-full">
+                  <Link href={`/school/${selectedSchool.stub}`} className="block">
+                    <SelectedSchoolCard school={selectedSchool} />
+                  </Link>
+                </div>
+              ) : (
+                <div className="flex flex-col gap-20 px-5">
+                  <div className="flex w-full flex-col items-center gap-12">
+                    <div className="align-center flex flex-col items-center gap-4 text-center">
+                      <h1 className="whitespace-pre-line text-2xl font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p>{schoolCardPlaceholderText}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            ) : null}
+          </div>
+
+          {/* Map or List View */}
+          <div
+            className={`background relative flex w-full flex-col gap-2 overflow-auto ${isMapView ? "h-[70vh]" : "min-h-[60vh]"}`}
+          >
             {isMapView ? (
               <>
                 <MapboxMap
@@ -366,7 +367,7 @@ export default function MapPageClient(props: Props) {
                   selectedSchool={selectedSchool}
                   schools={filteredSchools}
                 />
-                <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
+                <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg">
                   <div className="align-center flex flex-col items-center gap-0 text-center">
                     <h1 className="whitespace-pre-line text-lg font-medium">
                       {schoolCardPlaceholderTitle}

@@ -426,6 +426,30 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     updateClusters,
   ]);
 
+  useEffect(() => {
+    if (!mapContainer.current || !mapRef.current) return;
+
+    const map = mapRef.current;
+    const container = mapContainer.current;
+
+    const resizeMap = () => {
+      map.resize();
+      updateClusters();
+    };
+
+    const observer = new ResizeObserver(() => {
+      resizeMap();
+    });
+
+    observer.observe(container);
+    window.addEventListener("resize", resizeMap);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", resizeMap);
+    };
+  }, [updateClusters]);
+
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
     // check mapLoaded to avoid race condition where markersRef is not yet initialized
