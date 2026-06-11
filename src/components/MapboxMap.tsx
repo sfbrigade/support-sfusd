@@ -25,7 +25,7 @@ type MapboxMapProps = {
   setSelectedSchool: (school: SchoolMapPin | null) => void;
   selectedSchool: SchoolMapPin | null;
   schools: SchoolMapPin[];
-  selectedZipcode: string | null;
+  selectedZipcode?: string | null;
 };
 
 type ZctaFeature = Feature<Polygon | MultiPolygon, { zipcode: string }>;
@@ -102,7 +102,7 @@ const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
   return isInsideMap && isOnTop;
 };
 
-const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
+const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
   const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
