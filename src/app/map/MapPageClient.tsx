@@ -331,16 +331,12 @@ export default function MapPageClient(props: Props) {
 
             <div className="col-span-6 rounded-2xl bg-white p-4">
               <div className="mb-4 flex w-full items-center gap-2">
-                <div className="w-2/3">
+                <div className="w-full">
                   <SearchBar
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
-                    onSearchSubmit={isMapView ? handleSearchSubmit : undefined}
-                    showDropdown={isMapView}
+                    onSearchSubmit={handleSearchSubmit}
                   />
-                </div>
-                <div className="w-1/3">
-                  <ToggleButton isMapView={isMapView} toggleView={setToggle} />
                 </div>
               </div>
               <FilterBySchoolType
