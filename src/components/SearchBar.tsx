@@ -7,18 +7,21 @@ import type { DropdownItem } from "@/types/school";
 interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
+  onSearchSubmit?: (searchTerm: string) => void;
   showDropdown?: boolean;
 }
 
-export default function SearchBar<DropdownItemType = any>({
+export default function SearchBar<DropdownItemType = unknown>({
   onItemSelect,
   onSearch,
+  onSearchSubmit,
   showDropdown = true,
 }: SearchBarProps<DropdownItemType>): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownItems, setDropdownItems] = useState<
     DropdownItem<DropdownItemType>[]
   >([]);
+  const [showNoResults, setShowNoResults] = useState(false);
   const [cursor, setCursor] = useState(-1);
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -27,6 +30,7 @@ export default function SearchBar<DropdownItemType = any>({
     setSearchTerm(userInput);
     const searchResults = await onSearch(userInput);
     setDropdownItems(searchResults);
+    setShowNoResults(userInput.trim().length > 0 && searchResults.length === 0);
     setCursor(-1);
   };
 
@@ -34,24 +38,32 @@ export default function SearchBar<DropdownItemType = any>({
     setSearchTerm(item.label);
     onItemSelect(item);
     setDropdownItems([]);
+    setShowNoResults(false);
     inputRef.current?.blur();
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // Does not handle keys if dropdown is empty
-    if (dropdownItems.length === 0) {
-      return;
-    }
-
     if (e.key === "ArrowDown") {
+      if (dropdownItems.length === 0) {
+        return;
+      }
       e.preventDefault();
       setCursor((prev) => (prev < dropdownItems.length - 1 ? prev + 1 : prev));
     } else if (e.key === "ArrowUp") {
+      if (dropdownItems.length === 0) {
+        return;
+      }
       e.preventDefault();
       setCursor((prev) => (prev > 0 ? prev - 1 : prev));
     } else if (e.key === "Enter" && cursor >= 0) {
       e.preventDefault();
       handleItemSelect(dropdownItems[cursor]);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      onSearchSubmit?.(searchTerm);
+      setDropdownItems([]);
+      setShowNoResults(false);
+      inputRef.current?.blur();
     }
   };
 
@@ -77,21 +89,26 @@ export default function SearchBar<DropdownItemType = any>({
         onFocus={() => {
           if (searchTerm.length > 0) {
             // Re-trigger search to show dropdown
-            onSearch(searchTerm).then(setDropdownItems);
+            onSearch(searchTerm).then((searchResults) => {
+              setDropdownItems(searchResults);
+              setShowNoResults(searchResults.length === 0);
+            });
           }
         }}
         onBlur={() => {
           // Hide dropdown when input loses focus
           setDropdownItems([]);
+          setShowNoResults(false);
           setCursor(-1);
         }}
         onKeyDown={handleKeyDown}
       />
-      {showDropdown && dropdownItems.length > 0 && (
+      {showDropdown && (dropdownItems.length > 0 || showNoResults) && (
         <Dropdown
           items={dropdownItems}
           onItemSelect={handleItemSelect}
           cursor={cursor}
+          emptyMessage={showNoResults ? "No results found" : undefined}
         />
       )}
     </div>

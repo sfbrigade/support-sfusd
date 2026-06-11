@@ -41,6 +41,7 @@ const desktopPlaceholderTitle = schoolCardPlaceholderTitle.replace(
   /\s*\n\s*/g,
   " ",
 );
+const ZIPCODE_PATTERN = /^\d{5}$/;
 
 export default function MapPageClient(props: Props) {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
@@ -51,7 +52,10 @@ export default function MapPageClient(props: Props) {
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
-  const [searchFilteredSchools, setSearchFilteredSchools] = useState<SchoolMapPin[] | null>(null);
+  const [selectedZipcode, setSelectedZipcode] = useState<string | null>(null);
+  const [searchFilteredSchools, setSearchFilteredSchools] = useState<
+    SchoolMapPin[] | null
+  >(null);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
@@ -138,6 +142,9 @@ export default function MapPageClient(props: Props) {
 
   const handleSchoolSearch = async (searchTerm: string) => {
     posthog?.capture("searched_for_school", { searchTerm });
+    if (!isMapView || !ZIPCODE_PATTERN.test(searchTerm)) {
+      setSelectedZipcode(null);
+    }
     const searchTermToLowerCase = searchTerm.toLowerCase();
 
     if (!searchTerm.trim()) {
@@ -145,15 +152,17 @@ export default function MapPageClient(props: Props) {
       return [];
     }
 
-    const results = filteredSchools.filter(({ name, zipcode, neighborhood }) => {
-      const nameToLowerCase = name.toLowerCase();
-      const neighborhoodToLowerCase = neighborhood?.toLowerCase();
-      return (
-        nameToLowerCase.includes(searchTermToLowerCase) ||
-        zipcode?.includes(searchTermToLowerCase) ||
-        neighborhoodToLowerCase?.includes(searchTermToLowerCase)
-      );
-    });
+    const results = filteredSchools.filter(
+      ({ name, zipcode, neighborhood }) => {
+        const nameToLowerCase = name.toLowerCase();
+        const neighborhoodToLowerCase = neighborhood?.toLowerCase();
+        return (
+          nameToLowerCase.includes(searchTermToLowerCase) ||
+          zipcode?.includes(searchTermToLowerCase) ||
+          neighborhoodToLowerCase?.includes(searchTermToLowerCase)
+        );
+      },
+    );
 
     setSearchFilteredSchools(results);
 
@@ -168,7 +177,15 @@ export default function MapPageClient(props: Props) {
     posthog?.capture("selected_school_from_search", {
       school: selection.item.name,
     });
+    setSelectedZipcode(null);
     setSelectedSchool(selection.item);
+  };
+
+  const handleSearchSubmit = (searchTerm: string) => {
+    const trimmedSearchTerm = searchTerm.trim();
+    setSelectedZipcode(
+      ZIPCODE_PATTERN.test(trimmedSearchTerm) ? trimmedSearchTerm : null,
+    );
   };
 
   const SelectedSchoolCard = (props: {
@@ -203,6 +220,7 @@ export default function MapPageClient(props: Props) {
             <SearchBar
               onItemSelect={itemSelect}
               onSearch={handleSchoolSearch}
+              onSearchSubmit={isMapView ? handleSearchSubmit : undefined}
               showDropdown={isMapView}
             />
           </div>
@@ -317,6 +335,7 @@ export default function MapPageClient(props: Props) {
                   <SearchBar
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
+                    onSearchSubmit={isMapView ? handleSearchSubmit : undefined}
                     showDropdown={isMapView}
                   />
                 </div>
@@ -393,6 +412,7 @@ export default function MapPageClient(props: Props) {
                   setSelectedSchool={setSelectedSchool}
                   selectedSchool={selectedSchool}
                   schools={filteredSchools}
+                  selectedZipcode={selectedZipcode}
                 />
                 <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg">
                   <div className="align-center flex flex-col items-center gap-0 text-center">
