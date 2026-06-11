@@ -9,6 +9,8 @@ type MapListProps = {
   setSelectedSchool: (school: SchoolMapPin | null) => void;
   selectedSchool: SchoolMapPin | null;
   onModalOpen: () => void;
+  selectedZipcode?: string;
+  setSelectedZipcode?: (zipcode: string) => void;
 };
 
 /**
@@ -27,6 +29,8 @@ const MapList = ({
   setSelectedSchool,
   selectedSchool,
   onModalOpen,
+  selectedZipcode: _selectedZipcode,
+  setSelectedZipcode: _setSelectedZipcode,
 }: MapListProps) => {
   return (
     <div className="h-full min-h-0 w-full overflow-y-auto overscroll-contain md:pr-2 md:[scrollbar-gutter:stable]">

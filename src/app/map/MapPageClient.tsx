@@ -51,6 +51,7 @@ export default function MapPageClient(props: Props) {
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
+  const [selectedZipcode, setSelectedZipcode] = useState("");
   const [searchFilteredSchools, setSearchFilteredSchools] = useState<SchoolMapPin[] | null>(null);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -204,6 +205,8 @@ export default function MapPageClient(props: Props) {
               onItemSelect={itemSelect}
               onSearch={handleSchoolSearch}
               showDropdown={isMapView}
+              selectedZipcode={selectedZipcode}
+              setSelectedZipcode={setSelectedZipcode}
             />
           </div>
 
@@ -318,6 +321,8 @@ export default function MapPageClient(props: Props) {
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
                     showDropdown={isMapView}
+                    selectedZipcode={selectedZipcode}
+                    setSelectedZipcode={setSelectedZipcode}
                   />
                 </div>
                 <div className="w-1/3">
@@ -342,6 +347,8 @@ export default function MapPageClient(props: Props) {
                 selectedSchool={selectedSchool}
                 schools={filteredSchools}
                 onModalOpen={openModal}
+                selectedZipcode={selectedZipcode}
+                setSelectedZipcode={setSelectedZipcode}
               />
             </div>
 
