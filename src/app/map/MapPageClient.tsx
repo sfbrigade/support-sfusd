@@ -293,11 +293,22 @@ export default function MapPageClient(props: Props) {
         {/* DESKTOP ONLY */}
         <div className="hidden h-full min-h-0 overflow-hidden md:flex md:flex-col md:gap-4">
           <div className="grid grid-cols-10 gap-4">
-            <div className="col-span-4 rounded-2xl bg-white p-4 text-center">
-              <h1 className="text-2xl font-medium leading-tight">
-                {desktopPlaceholderTitle}
-              </h1>
-              <p className="text-lg">{schoolCardPlaceholderText}</p>
+            <div className="col-span-4 rounded-2xl bg-white p-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/map-school-logo.png"
+                  alt="School placeholder icon"
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 shrink-0"
+                />
+                <div className="text-left">
+                  <h1 className="text-2xl font-medium leading-tight">
+                    {desktopPlaceholderTitle}
+                  </h1>
+                  <p className="text-base leading-snug">{schoolCardPlaceholderText}</p>
+                </div>
+              </div>
             </div>
 
             <div className="col-span-6 rounded-2xl bg-white p-4">
