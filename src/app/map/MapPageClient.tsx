@@ -52,7 +52,9 @@ export default function MapPageClient(props: Props) {
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
-  const [selectedZipcode, setSelectedZipcode] = useState<string | null>(null);
+  const [selectedZipcode, setSelectedZipcode] = useState<string | undefined>(
+    undefined,
+  );
   const [searchFilteredSchools, setSearchFilteredSchools] = useState<
     SchoolMapPin[] | null
   >(null);
@@ -143,7 +145,7 @@ export default function MapPageClient(props: Props) {
   const handleSchoolSearch = async (searchTerm: string) => {
     posthog?.capture("searched_for_school", { searchTerm });
     if (!isMapView || !ZIPCODE_PATTERN.test(searchTerm)) {
-      setSelectedZipcode(null);
+      setSelectedZipcode(undefined);
     }
     const searchTermToLowerCase = searchTerm.toLowerCase();
 
@@ -177,14 +179,14 @@ export default function MapPageClient(props: Props) {
     posthog?.capture("selected_school_from_search", {
       school: selection.item.name,
     });
-    setSelectedZipcode(null);
+    setSelectedZipcode(undefined);
     setSelectedSchool(selection.item);
   };
 
   const handleSearchSubmit = (searchTerm: string) => {
     const trimmedSearchTerm = searchTerm.trim();
     setSelectedZipcode(
-      ZIPCODE_PATTERN.test(trimmedSearchTerm) ? trimmedSearchTerm : null,
+      ZIPCODE_PATTERN.test(trimmedSearchTerm) ? trimmedSearchTerm : undefined,
     );
   };
 
@@ -222,6 +224,8 @@ export default function MapPageClient(props: Props) {
               onSearch={handleSchoolSearch}
               onSearchSubmit={isMapView ? handleSearchSubmit : undefined}
               showDropdown={isMapView}
+              selectedZipcode={selectedZipcode}
+              setSelectedZipcode={setSelectedZipcode}
             />
           </div>
 
@@ -336,6 +340,8 @@ export default function MapPageClient(props: Props) {
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
                     onSearchSubmit={handleSearchSubmit}
+                    selectedZipcode={selectedZipcode}
+                    setSelectedZipcode={setSelectedZipcode}
                   />
                 </div>
               </div>
@@ -357,6 +363,8 @@ export default function MapPageClient(props: Props) {
                 selectedSchool={selectedSchool}
                 schools={filteredSchools}
                 onModalOpen={openModal}
+                selectedZipcode={selectedZipcode}
+                setSelectedZipcode={setSelectedZipcode}
               />
             </div>
 
@@ -365,6 +373,7 @@ export default function MapPageClient(props: Props) {
                 setSelectedSchool={setSelectedSchool}
                 selectedSchool={selectedSchool}
                 schools={filteredSchools}
+                selectedZipcode={selectedZipcode}
               />
             </div>
           </div>
