@@ -29,7 +29,7 @@ const MapList = ({
   onModalOpen,
 }: MapListProps) => {
   return (
-    <div className="h-full min-h-0 w-full overflow-y-auto overscroll-contain">
+    <div className="h-full min-h-0 w-full overflow-y-auto overscroll-contain md:pr-2 md:[scrollbar-gutter:stable]">
       <div className="flex flex-col gap-2 max-md:mb-4 md:gap-4">
         {schools
           .sort((a, b) => a.name.localeCompare(b.name))

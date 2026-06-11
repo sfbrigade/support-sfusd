@@ -142,7 +142,7 @@ const MapListCard = ({
           alt="Arrow Icon"
           width={24}
           height={24}
-          className={`absolute bottom-1.5 right-1.5 transition duration-[700ms] ${
+          className={`absolute bottom-1.5 right-2.5 transition duration-[700ms] ${
             isExpanded ? "rotate-[-180deg]" : "rotate-0"
           }`}
         />
