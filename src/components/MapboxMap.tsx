@@ -40,7 +40,7 @@ const ZCTA_FILL_LAYER_ID = "sf-zcta-fill";
 const ZCTA_LINE_LAYER_ID = "sf-zcta-line";
 const ZCTA_LINE_CASING_LAYER_ID = "sf-zcta-line-casing";
 const EMPTY_ZCTA_FILTER: mapboxgl.Expression = ["==", ["get", "zipcode"], ""];
-const ZCTA_FILL_COLOR = "#b7d8ff";
+const ZCTA_FILL_COLOR = "#ffffff";
 const ZCTA_LINE_CASING_COLOR = "#ffffff";
 const ZCTA_LINE_COLOR = "#002054";
 
