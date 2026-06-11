@@ -6,6 +6,13 @@ import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { useMapContext } from "@/contexts/MapContext";
 import { usePostHog } from "posthog-js/react";
 import Supercluster from "supercluster";
+import type {
+  Feature,
+  FeatureCollection,
+  MultiPolygon,
+  Polygon,
+} from "geojson";
+import type { KeyboardEvent } from "react";
 import {
   SchoolProperties,
   ClusterProperties,
@@ -18,6 +25,50 @@ type MapboxMapProps = {
   setSelectedSchool: (school: SchoolMapPin | null) => void;
   selectedSchool: SchoolMapPin | null;
   schools: SchoolMapPin[];
+  selectedZipcode: string | null;
+};
+
+type ZctaFeature = Feature<Polygon | MultiPolygon, { zipcode: string }>;
+
+type ZctaFeatureCollection = FeatureCollection<
+  Polygon | MultiPolygon,
+  { zipcode: string }
+>;
+
+const ZCTA_SOURCE_ID = "sf-zctas";
+const ZCTA_FILL_LAYER_ID = "sf-zcta-fill";
+const ZCTA_LINE_LAYER_ID = "sf-zcta-line";
+const ZCTA_LINE_CASING_LAYER_ID = "sf-zcta-line-casing";
+const EMPTY_ZCTA_FILTER: mapboxgl.Expression = ["==", ["get", "zipcode"], ""];
+const ZCTA_FILL_COLOR = "#ffffff";
+const ZCTA_LINE_CASING_COLOR = "#ffffff";
+const ZCTA_LINE_COLOR = "#002054";
+
+const extendBoundsWithCoordinates = (
+  bounds: mapboxgl.LngLatBounds,
+  coordinates: unknown,
+) => {
+  if (!Array.isArray(coordinates)) {
+    return;
+  }
+
+  if (
+    typeof coordinates[0] === "number" &&
+    typeof coordinates[1] === "number"
+  ) {
+    bounds.extend([coordinates[0], coordinates[1]]);
+    return;
+  }
+
+  coordinates.forEach((coordinate) => {
+    extendBoundsWithCoordinates(bounds, coordinate);
+  });
+};
+
+const getFeatureBounds = (feature: ZctaFeature) => {
+  const bounds = new mapboxgl.LngLatBounds();
+  extendBoundsWithCoordinates(bounds, feature.geometry.coordinates);
+  return bounds;
 };
 
 const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
@@ -51,10 +102,11 @@ const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
   return isInsideMap && isOnTop;
 };
 
-const MapboxMap = ({ schools }: MapboxMapProps) => {
+const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
   const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
+  const zctaFeaturesRef = useRef<ZctaFeature[]>([]);
   const markersRef = useRef<{ [key: string]: mapboxgl.Marker }>({});
   const clusterMarkersRef = useRef<{ [key: string]: mapboxgl.Marker }>({});
   const clusterIndexRef = useRef<Supercluster<
@@ -62,6 +114,7 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     ClusterProperties
   > | null>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [zctaLayersLoaded, setZctaLayersLoaded] = useState(false);
   const userHasInteracted = useRef(false);
   const posthog = usePostHog();
   const flyToOptions = useMemo(
@@ -216,9 +269,10 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       return;
     }
     if (mapRef.current) return;
+    setMapLoaded(false);
+    setZctaLayersLoaded(false);
 
     mapboxgl.accessToken = accessToken;
-
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
@@ -263,6 +317,76 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
       });
       map.addControl(geolocate);
       map.addControl(new mapboxgl.NavigationControl({ showCompass: false }));
+
+      fetch("/geo/sf-zctas.geojson")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Unable to load SF ZCTA boundaries.");
+          }
+          return response.json() as Promise<ZctaFeatureCollection>;
+        })
+        .then((zctaGeoJson) => {
+          zctaFeaturesRef.current = zctaGeoJson.features;
+
+          if (!map.getSource(ZCTA_SOURCE_ID)) {
+            map.addSource(ZCTA_SOURCE_ID, {
+              type: "geojson",
+              data: zctaGeoJson,
+            });
+          }
+
+          if (!map.getLayer(ZCTA_FILL_LAYER_ID)) {
+            map.addLayer({
+              id: ZCTA_FILL_LAYER_ID,
+              type: "fill",
+              source: ZCTA_SOURCE_ID,
+              paint: {
+                "fill-color": ZCTA_FILL_COLOR,
+                "fill-opacity": 0.25,
+              },
+              filter: EMPTY_ZCTA_FILTER,
+            });
+          }
+
+          if (!map.getLayer(ZCTA_LINE_CASING_LAYER_ID)) {
+            const beforeLayerId = map.getLayer(ZCTA_LINE_LAYER_ID)
+              ? ZCTA_LINE_LAYER_ID
+              : undefined;
+
+            map.addLayer(
+              {
+                id: ZCTA_LINE_CASING_LAYER_ID,
+                type: "line",
+                source: ZCTA_SOURCE_ID,
+                paint: {
+                  "line-color": ZCTA_LINE_CASING_COLOR,
+                  "line-opacity": 0.9,
+                  "line-width": 6,
+                },
+                filter: EMPTY_ZCTA_FILTER,
+              },
+              beforeLayerId,
+            );
+          }
+
+          if (!map.getLayer(ZCTA_LINE_LAYER_ID)) {
+            map.addLayer({
+              id: ZCTA_LINE_LAYER_ID,
+              type: "line",
+              source: ZCTA_SOURCE_ID,
+              paint: {
+                "line-color": ZCTA_LINE_COLOR,
+                "line-opacity": 0.9,
+                "line-width": 2,
+              },
+              filter: EMPTY_ZCTA_FILTER,
+            });
+          }
+          setZctaLayersLoaded(true);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
 
       // Fix Mapbox attribution ARIA role
       const attribInner = mapContainer.current?.querySelector(
@@ -470,7 +594,46 @@ const MapboxMap = ({ schools }: MapboxMapProps) => {
     }
   }, [selectedSchool, mapLoaded, flyToOptions, userHasInteracted]);
 
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!mapLoaded || !map) {
+      return;
+    }
+
+    const filter: mapboxgl.Expression = selectedZipcode
+      ? ["==", ["get", "zipcode"], selectedZipcode]
+      : EMPTY_ZCTA_FILTER;
+
+    if (map.getLayer(ZCTA_FILL_LAYER_ID)) {
+      map.setFilter(ZCTA_FILL_LAYER_ID, filter);
+    }
+    if (map.getLayer(ZCTA_LINE_CASING_LAYER_ID)) {
+      map.setFilter(ZCTA_LINE_CASING_LAYER_ID, filter);
+    }
+    if (map.getLayer(ZCTA_LINE_LAYER_ID)) {
+      map.setFilter(ZCTA_LINE_LAYER_ID, filter);
+    }
+
+    if (!selectedZipcode) {
+      return;
+    }
+
+    const selectedFeature = zctaFeaturesRef.current.find(
+      (feature) => feature.properties.zipcode === selectedZipcode,
+    );
+
+    if (!selectedFeature) {
+      return;
+    }
+
+    map.fitBounds(getFeatureBounds(selectedFeature), {
+      padding: 48,
+      maxZoom: 13.5,
+      duration: 900,
+    });
+  }, [selectedZipcode, mapLoaded, zctaLayersLoaded]);
+
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === "Escape") {
       const searchInputs = document.querySelectorAll<HTMLInputElement>(
         "[data-search-input]",
