@@ -12,6 +12,7 @@ const Card = (props: any) => {
           alt="volunteer image"
           className="rounded-lg object-cover"
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, (max-width: 1536px) 27vw, 22vw"
           placeholder="blur"
           blurDataURL={blurDataURL}
         />
