@@ -277,15 +277,11 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
     setZctaLayersLoaded(false);
 
     mapboxgl.accessToken = accessToken;
-    const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
-    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-    const useMobileView = window.innerWidth < 768 || (isTablet && isPortrait);
-    const initialZoom = useMobileView ? 11 : 11;
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
       center: [-122.435, 37.762],
-      zoom: initialZoom,
+      zoom: 11,
       minZoom: 10.5, // Allow users to zoom out more
       maxZoom: 15, // Increase max zoom to allow closer inspection
       maxBounds: [

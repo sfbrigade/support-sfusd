@@ -115,13 +115,6 @@ export default function MapPageClient(props: Props) {
     };
   }, []);
 
-  useEffect(() => {
-    const storedPriority = sessionStorage.getItem("priorityFilter");
-    if (storedPriority) {
-      setPriorityFilter(JSON.parse(storedPriority));
-    }
-  }, []);
-
   const posthog = usePostHog();
 
   const openModal = () => {
