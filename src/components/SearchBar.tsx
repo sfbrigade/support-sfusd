@@ -9,6 +9,8 @@ interface SearchBarProps<DropdownItemType> {
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
   onSearchSubmit?: (searchTerm: string) => void;
   showDropdown?: boolean;
+  selectedZipcode?: string;
+  setSelectedZipcode?: (zipcode: string) => void;
 }
 
 export default function SearchBar<DropdownItemType = unknown>({
@@ -16,6 +18,8 @@ export default function SearchBar<DropdownItemType = unknown>({
   onSearch,
   onSearchSubmit,
   showDropdown = true,
+  selectedZipcode,
+  setSelectedZipcode,
 }: SearchBarProps<DropdownItemType>): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownItems, setDropdownItems] = useState<
@@ -28,6 +32,7 @@ export default function SearchBar<DropdownItemType = unknown>({
   const onInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const userInput = e.target.value;
     setSearchTerm(userInput);
+    setSelectedZipcode?.(userInput);
     const searchResults = await onSearch(userInput);
     setDropdownItems(searchResults);
     setShowNoResults(userInput.trim().length > 0 && searchResults.length === 0);
@@ -36,11 +41,18 @@ export default function SearchBar<DropdownItemType = unknown>({
 
   const handleItemSelect = (item: DropdownItem<DropdownItemType>) => {
     setSearchTerm(item.label);
+    setSelectedZipcode?.(item.label);
     onItemSelect(item);
     setDropdownItems([]);
     setShowNoResults(false);
     inputRef.current?.blur();
   };
+
+  React.useEffect(() => {
+    if (selectedZipcode !== undefined && selectedZipcode !== searchTerm) {
+      setSearchTerm(selectedZipcode);
+    }
+  }, [selectedZipcode, searchTerm]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "ArrowDown") {

@@ -25,7 +25,7 @@ type MapboxMapProps = {
   setSelectedSchool: (school: SchoolMapPin | null) => void;
   selectedSchool: SchoolMapPin | null;
   schools: SchoolMapPin[];
-  selectedZipcode: string | null;
+  selectedZipcode?: string | null;
 };
 
 type ZctaFeature = Feature<Polygon | MultiPolygon, { zipcode: string }>;
@@ -102,7 +102,7 @@ const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
   return isInsideMap && isOnTop;
 };
 
-const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
+const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
   const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
@@ -549,6 +549,30 @@ const MapboxMap = ({ schools, selectedZipcode }: MapboxMapProps) => {
     updateMarkerSizes,
     updateClusters,
   ]);
+
+  useEffect(() => {
+    if (!mapContainer.current || !mapRef.current) return;
+
+    const map = mapRef.current;
+    const container = mapContainer.current;
+
+    const resizeMap = () => {
+      map.resize();
+      updateClusters();
+    };
+
+    const observer = new ResizeObserver(() => {
+      resizeMap();
+    });
+
+    observer.observe(container);
+    window.addEventListener("resize", resizeMap);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", resizeMap);
+    };
+  }, [updateClusters]);
 
   // Update marker appearance when selectedSchool changes and map is loaded
   useEffect(() => {
