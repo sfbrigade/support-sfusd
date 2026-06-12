@@ -116,6 +116,10 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
   const [mapLoaded, setMapLoaded] = useState(false);
   const [zctaLayersLoaded, setZctaLayersLoaded] = useState(false);
   const userHasInteracted = useRef(false);
+  const initialSelectedSchoolNameRef = useRef<string | null>(
+    selectedSchool?.name ?? null,
+  );
+  const hasSkippedInitialPersistedRecenterRef = useRef(false);
   const posthog = usePostHog();
   const flyToOptions = useMemo(
     () => ({
@@ -273,11 +277,15 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
     setZctaLayersLoaded(false);
 
     mapboxgl.accessToken = accessToken;
+    const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+    const useMobileView = window.innerWidth < 768 || (isTablet && isPortrait);
+    const initialZoom = useMobileView ? 11 : 11;
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/beeseewhy/cltjd5mzb011601ra4fnl3o4b",
-      center: [-122.437, 37.75],
-      zoom: 11, // Start with more zoomed-out view but not too far
+      center: [-122.435, 37.762],
+      zoom: initialZoom,
       minZoom: 10.5, // Allow users to zoom out more
       maxZoom: 15, // Increase max zoom to allow closer inspection
       maxBounds: [
@@ -557,8 +565,20 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
     const container = mapContainer.current;
 
     const resizeMap = () => {
-      map.resize();
-      updateClusters();
+      if (!mapRef.current || mapRef.current !== map) {
+        return;
+      }
+
+      if (!container.isConnected) {
+        return;
+      }
+
+      try {
+        map.resize();
+        updateClusters();
+      } catch {
+        // Map instance may be mid-disposal during responsive layout changes.
+      }
     };
 
     const observer = new ResizeObserver(() => {
@@ -589,6 +609,15 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
           selectedMarker.addTo(mapRef.current);
           updateMarkerAppearance(selectedMarker, true);
           const lngLat = selectedMarker.getLngLat();
+
+          const isPersistedSelectionOnInitialLoad =
+            !hasSkippedInitialPersistedRecenterRef.current &&
+            initialSelectedSchoolNameRef.current === selectedSchool.name;
+
+          if (isPersistedSelectionOnInitialLoad) {
+            hasSkippedInitialPersistedRecenterRef.current = true;
+            return;
+          }
 
           if (!userHasInteracted.current) {
             // Use jumpTo when returning from detail page. it's less dizzying.
