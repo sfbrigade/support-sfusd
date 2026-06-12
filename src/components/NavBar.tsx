@@ -148,7 +148,7 @@ const Navbar = () => {
               onClick={openVolunteerModal}
               className="rounded-lg bg-[#252525] px-4 py-2 text-xs font-semibold text-white"
             >
-              Volunteer Match
+              Find Your Volunteer Match 
             </button>
           </div>
         </div>
@@ -185,9 +185,9 @@ const Navbar = () => {
               <Link href="/map" onClick={closeMenu}>
                 Explore Schools
               </Link>
-              <Link href="/about" onClick={closeMenu}>
+              {/*<Link href="/about" onClick={closeMenu}>
                 How It Works
-              </Link>
+              </Link>*/}
               <Link href="/about" onClick={closeMenu}>
                 About Us
               </Link>
@@ -196,7 +196,7 @@ const Navbar = () => {
                 onClick={openVolunteerModal}
                 className="inline-flex w-fit rounded-lg bg-[#252525] px-4 py-2 text-xs font-semibold text-white"
               >
-                Volunteer Match
+                Find Your Volunteer Match
               </button>
             </div>
           </div>
