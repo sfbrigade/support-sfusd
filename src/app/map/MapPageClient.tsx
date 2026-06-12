@@ -60,18 +60,7 @@ export default function MapPageClient(props: Props) {
   >(null);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [isMobileLikeLayout, setIsMobileLikeLayout] = useState(() => {
-    if (typeof window === "undefined") {
-      return false;
-    }
-
-    const isPhone = window.matchMedia("(max-width: 767px)").matches;
-    const isTabletPortrait = window.matchMedia(
-      "(min-width: 768px) and (max-width: 1023px) and (orientation: portrait)",
-    ).matches;
-
-    return isPhone || isTabletPortrait;
-  });
+  const [isMobileLikeLayout, setIsMobileLikeLayout] = useState(false);
 
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
