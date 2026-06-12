@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import VolunteerSignupModal from "./schoolPageComponents/VolunteerSignupModal";
 import { School } from "@/types/school";
 import emailjs from "@emailjs/browser";
@@ -14,6 +15,7 @@ const Navbar = () => {
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
   const { showToast } = useToast();
   const posthog = usePostHog();
+  const pathname = usePathname();
 
   const volunteerSignupSchool: School = {
     stub: "support-sf-schools",
@@ -114,10 +116,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-40 w-full px-0 py-0 text-black md:px-4 md:py-4">
+    <nav
+      className={`sticky top-0 z-40 w-full px-0 py-0 text-black md:px-4 md:py-4 ${
+        pathname === "/map" || pathname?.startsWith("/school")
+          ? "md:bg-[#D7F1FF]"
+          : ""
+      }`}
+    >
       <div className="mx-auto w-full max-w-[1280px] font-medium">
         {/* Desktop Navigation */}
-        <div className="hidden items-center justify-between rounded-2xl bg-[#F3F3F3] px-4 py-2 md:flex">
+        <div className="hidden items-center justify-between rounded-2xl bg-white px-4 py-2 md:flex">
           <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
             <Image src="/logo.png" alt="Home" width={28} height={28} />
             <p className="text-lg">Support SF Schools</p>
@@ -144,9 +152,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="flex items-center justify-between bg-[#E5E5E5] px-4 py-3 md:hidden">
-          <Link href="/" className="flex items-center" onClick={closeMenu}>
+        <div className="flex items-center justify-between bg-white px-4 py-3 md:hidden">
+          <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
             <Image src="/logo.png" alt="Home" width={32} height={32} />
+            <span className="text-base font-medium">Support SF Schools</span>
           </Link>
           <button
             type="button"
