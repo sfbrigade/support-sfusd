@@ -120,7 +120,9 @@ const Navbar = () => {
       className={`sticky top-0 z-40 w-full px-0 py-0 text-black md:px-4 md:py-4 ${
         pathname === "/map" || pathname?.startsWith("/school")
           ? "md:bg-[#D7F1FF]"
-          : ""
+          : pathname === "/about"
+            ? "md:bg-[#88B6FF]"
+            : ""
       }`}
     >
       <div className="mx-auto w-full max-w-[1280px] font-medium">
