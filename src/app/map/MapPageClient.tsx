@@ -210,7 +210,11 @@ export default function MapPageClient(props: Props) {
     }
   }, [isMapView]);
 
-  const schoolsForDisplay = searchFilteredSchools ?? filteredSchools;
+  const schoolsForDisplay = searchFilteredSchools
+    ? filteredSchools.filter((school) =>
+        searchFilteredSchools.some((s) => s.stub === school.stub),
+      )
+    : filteredSchools;
   const schoolsForListDisplay = selectedZipcode
     ? schoolsForDisplay.filter((school) => school.zipcode === selectedZipcode)
     : schoolsForDisplay;
