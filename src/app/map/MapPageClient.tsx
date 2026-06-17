@@ -233,6 +233,15 @@ export default function MapPageClient(props: Props) {
     }
   }, [isMapView, isMobileLikeLayout]);
 
+  const schoolsForDisplay = searchFilteredSchools
+    ? filteredSchools.filter((school) =>
+        searchFilteredSchools.some((s) => s.stub === school.stub),
+      )
+    : filteredSchools;
+  const schoolsForListDisplay = selectedZipcode
+    ? schoolsForDisplay.filter((school) => school.zipcode === selectedZipcode)
+    : schoolsForDisplay;
+
   return (
     <div className="flex h-full min-h-0 flex-col bg-[#D7F1FF]">
       {/* High Priority Modal */}
@@ -388,7 +397,7 @@ export default function MapPageClient(props: Props) {
               <MapList
                 setSelectedSchool={setSelectedSchool}
                 selectedSchool={selectedSchool}
-                schools={filteredSchools}
+                schools={schoolsForListDisplay}
                 onModalOpen={openModal}
                 selectedZipcode={selectedZipcode}
                 setSelectedZipcode={setSelectedZipcode}
@@ -399,7 +408,7 @@ export default function MapPageClient(props: Props) {
               <MapboxMap
                 setSelectedSchool={setSelectedSchool}
                 selectedSchool={selectedSchool}
-                schools={filteredSchools}
+                schools={schoolsForDisplay}
                 selectedZipcode={selectedZipcode}
               />
             </div>
@@ -445,7 +454,7 @@ export default function MapPageClient(props: Props) {
                 <MapboxMap
                   setSelectedSchool={setSelectedSchool}
                   selectedSchool={selectedSchool}
-                  schools={filteredSchools}
+                  schools={schoolsForDisplay}
                   selectedZipcode={selectedZipcode}
                 />
                 <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg">
@@ -461,7 +470,7 @@ export default function MapPageClient(props: Props) {
               <MapList
                 setSelectedSchool={setSelectedSchool}
                 selectedSchool={selectedSchool}
-                schools={searchFilteredSchools ?? filteredSchools}
+                schools={schoolsForListDisplay}
                 onModalOpen={openModal}
               />
             )}
