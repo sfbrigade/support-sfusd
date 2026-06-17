@@ -249,7 +249,7 @@ export default function MapPageClient(props: Props) {
 
       {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
       <div
-        className={`sticky top-[3.75rem] z-30 flex flex-col gap-2 bg-[#D7F1FF] p-2 ${isMobileLikeLayout ? "" : "hidden"}`}
+        className={`sticky top-[3.75rem] z-30 flex-col gap-2 bg-[#D7F1FF] p-2 ${isMobileLikeLayout ? "flex" : "hidden"}`}
       >
         <div className="flex items-center gap-2">
           <div className="flex-grow">
