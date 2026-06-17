@@ -348,7 +348,7 @@ export default function MapPageClient(props: Props) {
       >
         {/* DESKTOP ONLY */}
         <div
-          className={`h-full min-h-0 overflow-hidden flex flex-col gap-4 ${isMobileLikeLayout ? "hidden" : "flex"}`}
+          className={`h-full min-h-0 overflow-hidden flex-col gap-4 ${isMobileLikeLayout ? "hidden" : "flex"}`}
         >
           <div className="grid grid-cols-10 gap-4">
             <div className="col-span-4 rounded-2xl bg-white p-4">
