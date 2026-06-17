@@ -60,6 +60,7 @@ export default function MapPageClient(props: Props) {
   >(null);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [isMobileLikeLayout, setIsMobileLikeLayout] = useState(false);
 
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
@@ -79,10 +80,28 @@ export default function MapPageClient(props: Props) {
   }, [selectedSchoolTypes, props.schools, priorityFilter]);
 
   useEffect(() => {
-    const storedPriority = sessionStorage.getItem("priorityFilter");
-    if (storedPriority) {
-      setPriorityFilter(JSON.parse(storedPriority));
-    }
+    const updateLayoutMode = () => {
+      const isPhone = window.matchMedia("(max-width: 767px)").matches;
+      const isTabletPortrait = window.matchMedia(
+        "(min-width: 768px) and (max-width: 1023px) and (orientation: portrait)",
+      ).matches;
+      const nextIsMobileLike = isPhone || isTabletPortrait;
+
+      setIsMobileLikeLayout(nextIsMobileLike);
+
+      if (!nextIsMobileLike) {
+        setMobileFiltersOpen(false);
+      }
+    };
+
+    updateLayoutMode();
+    window.addEventListener("resize", updateLayoutMode);
+    window.addEventListener("orientationchange", updateLayoutMode);
+
+    return () => {
+      window.removeEventListener("resize", updateLayoutMode);
+      window.removeEventListener("orientationchange", updateLayoutMode);
+    };
   }, []);
 
   const posthog = usePostHog();
@@ -126,6 +145,10 @@ export default function MapPageClient(props: Props) {
     schools: SchoolMapPin[],
     priorityFilter: boolean,
   ) => {
+    if (schoolTypes.length === 0 && !priorityFilter) {
+      return schools;
+    }
+
     return schools.filter((school) => {
       const matchesSchoolType =
         schoolTypes.length === 0 ||
@@ -203,12 +226,12 @@ export default function MapPageClient(props: Props) {
   );
 
   useEffect(() => {
-    if (isMapView && window.innerWidth <= 768) {
+    if (isMapView && isMobileLikeLayout) {
       window.scrollTo({
         top: 0,
       });
     }
-  }, [isMapView]);
+  }, [isMapView, isMobileLikeLayout]);
 
   const schoolsForDisplay = searchFilteredSchools
     ? filteredSchools.filter((school) =>
@@ -225,7 +248,9 @@ export default function MapPageClient(props: Props) {
       <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
 
       {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
-      <div className="sticky top-[3.75rem] z-30 flex flex-col gap-2 bg-[#D7F1FF] p-2 md:hidden">
+      <div
+        className={`sticky top-[3.75rem] z-30 flex flex-col gap-2 bg-[#D7F1FF] p-2 ${isMobileLikeLayout ? "" : "hidden"}`}
+      >
         <div className="flex items-center gap-2">
           <div className="flex-grow">
             <SearchBar
@@ -257,7 +282,7 @@ export default function MapPageClient(props: Props) {
       </div>
 
       {/* MOBILE ONLY: Filters Drawer */}
-      {mobileFiltersOpen && (
+      {isMobileLikeLayout && mobileFiltersOpen && (
         <div
           className="fixed bottom-0 left-0 z-40 h-full w-full bg-black opacity-50"
           onClick={() => setMobileFiltersOpen(false)}
@@ -265,7 +290,7 @@ export default function MapPageClient(props: Props) {
       )}
 
       <div
-        className={`fixed bottom-0 left-0 right-0 z-40 flex flex-col rounded-t-2xl bg-white shadow-lg transition-transform duration-300 md:hidden ${
+        className={`fixed bottom-0 left-0 right-0 z-40 flex flex-col rounded-t-2xl bg-white shadow-lg transition-transform duration-300 ${isMobileLikeLayout ? "" : "hidden"} ${
           mobileFiltersOpen ? "translate-y-0" : "translate-y-full"
         }`}
         style={{ minHeight: "50vh" }}
@@ -319,10 +344,12 @@ export default function MapPageClient(props: Props) {
 
       {/* Main Content Area */}
       <div
-        className={`relative mx-auto flex h-auto flex-col overflow-auto md:min-h-0 md:flex-1 md:overflow-hidden md:gap-4 md:p-4 lg:w-10/12 2xl:w-2/3 ${isMapView ? " w-full" : ""}`}
+        className={`relative mx-auto flex h-auto flex-col overflow-auto ${isMobileLikeLayout ? "" : "md:min-h-0 md:flex-1 md:overflow-hidden md:gap-4 md:p-4 lg:w-10/12 2xl:w-2/3"} ${isMapView ? " w-full" : ""}`}
       >
         {/* DESKTOP ONLY */}
-        <div className="hidden h-full min-h-0 overflow-hidden md:flex md:flex-col md:gap-4">
+        <div
+          className={`h-full min-h-0 overflow-hidden flex flex-col gap-4 ${isMobileLikeLayout ? "hidden" : "flex"}`}
+        >
           <div className="grid grid-cols-10 gap-4">
             <div className="col-span-4 rounded-2xl bg-white p-4">
               <div className="flex items-center gap-3">
@@ -389,7 +416,9 @@ export default function MapPageClient(props: Props) {
         </div>
 
         {/* MOBILE ONLY */}
-        <div className="flex min-h-[60vh] w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 md:hidden">
+        <div
+          className={`min-h-[60vh] w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 ${isMobileLikeLayout ? "flex" : "hidden"}`}
+        >
           {/* School Card or Placeholder */}
           <div
             className={`${isMapView && selectedSchool ? "p-0" : "p-2"} ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-20 m-4 flex h-fit items-center justify-center rounded-2xl bg-white`}
