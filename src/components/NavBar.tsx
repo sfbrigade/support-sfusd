@@ -137,9 +137,7 @@ const Navbar = () => {
             <Link href="/map" className="hover:underline">
               Explore Schools
             </Link>
-            {/*<Link href="/about" className="hover:underline">
-              How It Works
-            </Link>*/}
+            {/* How It Works is intentionally hidden until that page is built. */}
             <Link href="/about" className="hover:underline">
               About Us
             </Link>
