@@ -37,6 +37,12 @@ const schoolCardPlaceholderText = summer
   ? "New volunteers will be needed when the new school year begins."
   : "All schools are looking for volunteers and donations. Click on the school closest to you to learn more.";
 
+const desktopPlaceholderTitle = schoolCardPlaceholderTitle.replace(
+  /\s*\n\s*/g,
+  " ",
+);
+const ZIPCODE_PATTERN = /^\d{5}$/;
+
 export default function MapPageClient(props: Props) {
   const { isMapView, selectedSchool, setIsMapView, setSelectedSchool } =
     useMapContext();
@@ -46,9 +52,15 @@ export default function MapPageClient(props: Props) {
   );
   const [filteredSchools, setFilteredSchools] = useState(props.schools);
   const [priorityFilter, setPriorityFilter] = useState(false);
-  const [searchFilteredSchools, setSearchFilteredSchools] = useState<SchoolMapPin[] | null>(null);
+  const [selectedZipcode, setSelectedZipcode] = useState<string | undefined>(
+    undefined,
+  );
+  const [searchFilteredSchools, setSearchFilteredSchools] = useState<
+    SchoolMapPin[] | null
+  >(null);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [isMobileLikeLayout, setIsMobileLikeLayout] = useState(false);
 
   useEffect(() => {
     const storedTypes = sessionStorage.getItem("selectedSchoolTypes");
@@ -68,10 +80,28 @@ export default function MapPageClient(props: Props) {
   }, [selectedSchoolTypes, props.schools, priorityFilter]);
 
   useEffect(() => {
-    const storedPriority = sessionStorage.getItem("priorityFilter");
-    if (storedPriority) {
-      setPriorityFilter(JSON.parse(storedPriority));
-    }
+    const updateLayoutMode = () => {
+      const isPhone = window.matchMedia("(max-width: 767px)").matches;
+      const isTabletPortrait = window.matchMedia(
+        "(min-width: 768px) and (max-width: 1023px) and (orientation: portrait)",
+      ).matches;
+      const nextIsMobileLike = isPhone || isTabletPortrait;
+
+      setIsMobileLikeLayout(nextIsMobileLike);
+
+      if (!nextIsMobileLike) {
+        setMobileFiltersOpen(false);
+      }
+    };
+
+    updateLayoutMode();
+    window.addEventListener("resize", updateLayoutMode);
+    window.addEventListener("orientationchange", updateLayoutMode);
+
+    return () => {
+      window.removeEventListener("resize", updateLayoutMode);
+      window.removeEventListener("orientationchange", updateLayoutMode);
+    };
   }, []);
 
   const posthog = usePostHog();
@@ -115,6 +145,10 @@ export default function MapPageClient(props: Props) {
     schools: SchoolMapPin[],
     priorityFilter: boolean,
   ) => {
+    if (schoolTypes.length === 0 && !priorityFilter) {
+      return schools;
+    }
+
     return schools.filter((school) => {
       const matchesSchoolType =
         schoolTypes.length === 0 ||
@@ -133,6 +167,9 @@ export default function MapPageClient(props: Props) {
 
   const handleSchoolSearch = async (searchTerm: string) => {
     posthog?.capture("searched_for_school", { searchTerm });
+    if (!isMapView || !ZIPCODE_PATTERN.test(searchTerm)) {
+      setSelectedZipcode(undefined);
+    }
     const searchTermToLowerCase = searchTerm.toLowerCase();
 
     if (!searchTerm.trim()) {
@@ -140,15 +177,17 @@ export default function MapPageClient(props: Props) {
       return [];
     }
 
-    const results = filteredSchools.filter(({ name, zipcode, neighborhood }) => {
-      const nameToLowerCase = name.toLowerCase();
-      const neighborhoodToLowerCase = neighborhood?.toLowerCase();
-      return (
-        nameToLowerCase.includes(searchTermToLowerCase) ||
-        zipcode?.includes(searchTermToLowerCase) ||
-        neighborhoodToLowerCase?.includes(searchTermToLowerCase)
-      );
-    });
+    const results = filteredSchools.filter(
+      ({ name, zipcode, neighborhood }) => {
+        const nameToLowerCase = name.toLowerCase();
+        const neighborhoodToLowerCase = neighborhood?.toLowerCase();
+        return (
+          nameToLowerCase.includes(searchTermToLowerCase) ||
+          zipcode?.includes(searchTermToLowerCase) ||
+          neighborhoodToLowerCase?.includes(searchTermToLowerCase)
+        );
+      },
+    );
 
     setSearchFilteredSchools(results);
 
@@ -163,7 +202,15 @@ export default function MapPageClient(props: Props) {
     posthog?.capture("selected_school_from_search", {
       school: selection.item.name,
     });
+    setSelectedZipcode(undefined);
     setSelectedSchool(selection.item);
+  };
+
+  const handleSearchSubmit = (searchTerm: string) => {
+    const trimmedSearchTerm = searchTerm.trim();
+    setSelectedZipcode(
+      ZIPCODE_PATTERN.test(trimmedSearchTerm) ? trimmedSearchTerm : undefined,
+    );
   };
 
   const SelectedSchoolCard = (props: {
@@ -179,26 +226,40 @@ export default function MapPageClient(props: Props) {
   );
 
   useEffect(() => {
-    if (isMapView && window.innerWidth <= 768) {
+    if (isMapView && isMobileLikeLayout) {
       window.scrollTo({
         top: 0,
       });
     }
-  }, [isMapView]);
+  }, [isMapView, isMobileLikeLayout]);
+
+  const schoolsForDisplay = searchFilteredSchools
+    ? filteredSchools.filter((school) =>
+        searchFilteredSchools.some((s) => s.stub === school.stub),
+      )
+    : filteredSchools;
+  const schoolsForListDisplay = selectedZipcode
+    ? schoolsForDisplay.filter((school) => school.zipcode === selectedZipcode)
+    : schoolsForDisplay;
 
   return (
-    <div className="flex h-full flex-col bg-[#D7F1FF]">
+    <div className="flex h-full min-h-0 flex-col bg-[#D7F1FF]">
       {/* High Priority Modal */}
       <HighPriorityModal isOpen={modalIsOpen} onClose={closeModal} />
 
       {/* MOBILE ONLY: Top Bar with Search, Toggle, and Filters Button */}
-      <div className="sticky top-[3.75rem] z-30 flex flex-col gap-2 bg-[#D7F1FF] p-2 md:hidden">
+      <div
+        className={`sticky top-[3.75rem] z-30 flex-col gap-2 bg-[#D7F1FF] p-2 ${isMobileLikeLayout ? "flex" : "hidden"}`}
+      >
         <div className="flex items-center gap-2">
           <div className="flex-grow">
             <SearchBar
               onItemSelect={itemSelect}
               onSearch={handleSchoolSearch}
+              onSearchSubmit={isMapView ? handleSearchSubmit : undefined}
               showDropdown={isMapView}
+              selectedZipcode={selectedZipcode}
+              setSelectedZipcode={setSelectedZipcode}
             />
           </div>
 
@@ -221,7 +282,7 @@ export default function MapPageClient(props: Props) {
       </div>
 
       {/* MOBILE ONLY: Filters Drawer */}
-      {mobileFiltersOpen && (
+      {isMobileLikeLayout && mobileFiltersOpen && (
         <div
           className="fixed bottom-0 left-0 z-40 h-full w-full bg-black opacity-50"
           onClick={() => setMobileFiltersOpen(false)}
@@ -229,7 +290,7 @@ export default function MapPageClient(props: Props) {
       )}
 
       <div
-        className={`fixed bottom-0 left-0 right-0 z-40 flex flex-col rounded-t-2xl bg-white shadow-lg transition-transform duration-300 md:hidden ${
+        className={`fixed bottom-0 left-0 right-0 z-40 flex flex-col rounded-t-2xl bg-white shadow-lg transition-transform duration-300 ${isMobileLikeLayout ? "" : "hidden"} ${
           mobileFiltersOpen ? "translate-y-0" : "translate-y-full"
         }`}
         style={{ minHeight: "50vh" }}
@@ -283,81 +344,41 @@ export default function MapPageClient(props: Props) {
 
       {/* Main Content Area */}
       <div
-        className={`relative mx-auto flex h-auto flex-col overflow-auto md:h-[calc(100vh-64px)] md:gap-4 md:p-4 lg:w-10/12 2xl:w-2/3 ${isMapView ? " w-full flex-1" : ""}`}
+        className={`relative mx-auto flex h-auto flex-col overflow-auto ${isMobileLikeLayout ? "" : "md:min-h-0 md:flex-1 md:overflow-hidden md:gap-4 md:p-4 lg:w-10/12 2xl:w-2/3"} ${isMapView ? " w-full" : ""}`}
       >
-        <div className="flex h-full w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 md:grid md:w-auto md:flex-col">
-          {/* School Card or Placeholder */}
-          <div
-            className={`col-span-4 ${isMapView && selectedSchool ? "p-0" : "p-2 md:p-0"}  ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-20 m-4 flex h-fit items-center justify-center rounded-2xl bg-white md:static md:m-0 md:flex md:h-full`}
-          >
-            {isMapView ? (
-              selectedSchool ? (
-                <div className="w-full md:w-auto md:p-4">
-                  <Link
-                    href={`/school/${selectedSchool.stub}`}
-                    className="block md:hidden"
-                  >
-                    <SelectedSchoolCard school={selectedSchool} />
-                  </Link>
-                  <SelectedSchoolCard
-                    school={selectedSchool}
-                    className="hidden md:block"
-                  />
-                </div>
-              ) : (
-                <div className="flex flex-col gap-20 px-5">
-                  <div className="flex w-full flex-col items-center gap-12">
-                    <Image
-                      src="/map-school-logo.png"
-                      alt="Homepage Background"
-                      className="hidden w-1/2 md:inline-block"
-                      width={200}
-                      height={200}
-                    />
-                    <div className="align-center flex flex-col items-center gap-4 text-center">
-                      <h1 className="whitespace-pre-line text-2xl font-medium">
-                        {schoolCardPlaceholderTitle}
-                      </h1>
-                      <p className="md:text-lg">{schoolCardPlaceholderText}</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            ) : (
-              <div className="flex flex-col gap-20 px-5">
-                <div className="flex w-full flex-col items-center gap-12">
-                  <Image
-                    src="/map-school-logo.png"
-                    alt="Homepage Background"
-                    className="w-1/2"
-                    width={200}
-                    height={200}
-                  />
-                  <div className="align-center flex flex-col items-center gap-4 text-center">
-                    <h1 className="whitespace-pre-line text-2xl font-medium">
-                      {schoolCardPlaceholderTitle}
-                    </h1>
-                    <p className="md:text-lg">{schoolCardPlaceholderText}</p>
-                  </div>
+        {/* DESKTOP ONLY */}
+        <div
+          className={`h-full min-h-0 overflow-hidden flex-col gap-4 ${isMobileLikeLayout ? "hidden" : "flex"}`}
+        >
+          <div className="grid grid-cols-10 gap-4">
+            <div className="col-span-4 rounded-2xl bg-white p-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/map-school-logo.png"
+                  alt="School placeholder icon"
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 shrink-0"
+                />
+                <div className="text-left">
+                  <h1 className="text-2xl font-medium leading-tight">
+                    {desktopPlaceholderTitle}
+                  </h1>
+                  <p className="text-base leading-snug">{schoolCardPlaceholderText}</p>
                 </div>
               </div>
-            )}
-          </div>
+            </div>
 
-          {/* Map or List View */}
-          <div className="background relative flex h-full w-full flex-col gap-2 overflow-auto md:col-span-6 md:gap-4 ">
-            {/* DESKTOP ONLY: Top Bar with Search, Toggle, Map/List */}
-            <div className="hidden rounded-2xl bg-white p-4 md:block">
-              <div className="flex w-full items-center gap-2">
-                <div className="w-2/3">
+            <div className="col-span-6 rounded-2xl bg-white p-4">
+              <div className="mb-4 flex w-full items-center gap-2">
+                <div className="w-full">
                   <SearchBar
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
-                    showDropdown={isMapView}
+                    onSearchSubmit={handleSearchSubmit}
+                    selectedZipcode={selectedZipcode}
+                    setSelectedZipcode={setSelectedZipcode}
                   />
-                </div>
-                <div className="w-1/3">
-                  <ToggleButton isMapView={isMapView} toggleView={setToggle} />
                 </div>
               </div>
               <FilterBySchoolType
@@ -369,15 +390,74 @@ export default function MapPageClient(props: Props) {
                 setPriorityFilter={setPriorityFilter}
               />
             </div>
+          </div>
 
+          <div className="grid min-h-0 flex-1 grid-cols-10 gap-4 overflow-hidden">
+            <div className="col-span-4 h-full min-h-0 overflow-hidden rounded-2xl bg-white p-4">
+              <MapList
+                setSelectedSchool={setSelectedSchool}
+                selectedSchool={selectedSchool}
+                schools={schoolsForListDisplay}
+                onModalOpen={openModal}
+                selectedZipcode={selectedZipcode}
+                setSelectedZipcode={setSelectedZipcode}
+              />
+            </div>
+
+            <div className="col-span-6 h-full min-h-0 overflow-hidden">
+              <MapboxMap
+                setSelectedSchool={setSelectedSchool}
+                selectedSchool={selectedSchool}
+                schools={schoolsForDisplay}
+                selectedZipcode={selectedZipcode}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* MOBILE ONLY */}
+        <div
+          className={`min-h-[60vh] w-full grid-cols-10 flex-row-reverse items-center justify-center gap-4 ${isMobileLikeLayout ? "flex" : "hidden"}`}
+        >
+          {/* School Card or Placeholder */}
+          <div
+            className={`${isMapView && selectedSchool ? "p-0" : "p-2"} ${isMapView && selectedSchool !== null ? "flex" : "hidden"} absolute bottom-0 left-0 right-0 z-20 m-4 flex h-fit items-center justify-center rounded-2xl bg-white`}
+          >
+            {isMapView ? (
+              selectedSchool ? (
+                <div className="w-full">
+                  <Link href={`/school/${selectedSchool.stub}`} className="block">
+                    <SelectedSchoolCard school={selectedSchool} />
+                  </Link>
+                </div>
+              ) : (
+                <div className="flex flex-col gap-20 px-5">
+                  <div className="flex w-full flex-col items-center gap-12">
+                    <div className="align-center flex flex-col items-center gap-4 text-center">
+                      <h1 className="whitespace-pre-line text-2xl font-medium">
+                        {schoolCardPlaceholderTitle}
+                      </h1>
+                      <p>{schoolCardPlaceholderText}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            ) : null}
+          </div>
+
+          {/* Map or List View */}
+          <div
+            className={`background relative flex w-full flex-col gap-2 overflow-auto ${isMapView ? "h-[70vh]" : "min-h-[60vh]"}`}
+          >
             {isMapView ? (
               <>
                 <MapboxMap
                   setSelectedSchool={setSelectedSchool}
                   selectedSchool={selectedSchool}
-                  schools={filteredSchools}
+                  schools={schoolsForDisplay}
+                  selectedZipcode={selectedZipcode}
                 />
-                <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg md:hidden">
+                <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg">
                   <div className="align-center flex flex-col items-center gap-0 text-center">
                     <h1 className="whitespace-pre-line text-lg font-medium">
                       {schoolCardPlaceholderTitle}
@@ -390,7 +470,7 @@ export default function MapPageClient(props: Props) {
               <MapList
                 setSelectedSchool={setSelectedSchool}
                 selectedSchool={selectedSchool}
-                schools={searchFilteredSchools ?? filteredSchools}
+                schools={schoolsForListDisplay}
                 onModalOpen={openModal}
               />
             )}

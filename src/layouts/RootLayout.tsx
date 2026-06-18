@@ -57,7 +57,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
           </>
         )}
       <Navbar />
-      <div className="flex-1">{children}</div>
+      <div className="min-h-0 flex-1">{children}</div>
       <BackToTop />
     </div>
   );

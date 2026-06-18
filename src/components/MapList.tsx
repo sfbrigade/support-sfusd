@@ -9,6 +9,8 @@ type MapListProps = {
   setSelectedSchool: (school: SchoolMapPin | null) => void;
   selectedSchool: SchoolMapPin | null;
   onModalOpen: () => void;
+  selectedZipcode?: string;
+  setSelectedZipcode?: (zipcode: string) => void;
 };
 
 /**
@@ -27,10 +29,12 @@ const MapList = ({
   setSelectedSchool,
   selectedSchool,
   onModalOpen,
+  selectedZipcode: _selectedZipcode,
+  setSelectedZipcode: _setSelectedZipcode,
 }: MapListProps) => {
   return (
-    <div className="flex flex-col overflow-auto">
-      <div className="flex flex-col gap-2 overflow-auto max-md:mb-4 md:gap-4">
+    <div className="h-full min-h-0 w-full overflow-y-auto overscroll-contain md:pr-2 md:[scrollbar-gutter:stable]">
+      <div className="flex flex-col gap-2 max-md:mb-4 md:gap-4">
         {schools
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((school) => (
