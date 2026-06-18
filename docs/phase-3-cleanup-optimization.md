@@ -138,36 +138,36 @@ rm src/components/SEO.tsx
 ## Verification checklist
 
 ### Configuration
-- [ ] `npm run build` completes without errors or warnings about missing directories
-- [ ] Tailwind CSS still applies correctly on all pages (fonts, colours, spacing)
-- [ ] PostHog rewrites in `next.config.js` still function (check Network tab: `/ingest/*` requests should proxy correctly)
+- [X] `npm run build` completes without errors or warnings about missing directories
+- [X] Tailwind CSS still applies correctly on all pages (fonts, colours, spacing)
+- [X] PostHog rewrites in `next.config.js` still function (check Network tab: `/ingest/*` requests should proxy correctly)
 
 ### Image optimisation (if `unoptimized` was removed)
-- [ ] Home page background image loads
-- [ ] School banner images (`/school-images/full/[stub].webp`) load and are optimised
-- [ ] School logo images (`/school-images/logo/[stub].webp`) load
-- [ ] About page team member photos load with blur placeholder
-- [ ] No `Error: Invalid src prop` console errors (would indicate missing `remotePatterns`)
+- [X] Home page background image loads
+- [X] School banner images (`/school-images/full/[stub].webp`) load and are optimised
+- [X] School logo images (`/school-images/logo/[stub].webp`) load
+- [X] About page team member photos load with blur placeholder
+- [X] No `Error: Invalid src prop` console errors (would indicate missing `remotePatterns`)
 
 ### SEO / metadata
-- [ ] `<title>` tag is correct on every route in browser DevTools:
+- [X] `<title>` tag is correct on every route in browser DevTools:
   - `/` → `"Support SF Schools - Home"`
   - `/map` → `"Support SF Schools - School Map"`
   - `/about` → `"Support SF Schools - About"`
   - `/school/[stub]` → `"Support SF Schools - [School Name] Profile"`
-- [ ] `<meta name="description">` is populated on all routes
-- [ ] Favicon appears in browser tab (uses `logo_icon.ico`)
-- [ ] OG tags present (check with a link preview tool or `curl` the HTML)
+- [X] `<meta name="description">` is populated on all routes
+- [X] Favicon appears in browser tab (uses `logo_icon.ico`)
+- [X] OG tags present (check with a link preview tool or `curl` the HTML)
 
 ### Robots and sitemap
-- [ ] `http://localhost:3000/robots.txt` returns valid robots file pointing to sitemap URL
-- [ ] `http://localhost:3000/sitemap.xml` is still accessible and valid
-- [ ] No `public/robots.txt` conflict (should have been removed if it existed)
+- [X] `http://localhost:3000/robots.txt` returns valid robots file pointing to sitemap URL
+- [X] `http://localhost:3000/sitemap.xml` is still accessible and valid
+- [X] No `public/robots.txt` conflict (should have been removed if it existed)
 
 ### Dead code removed
-- [ ] `grep -r "from.*SEO"` returns nothing in `src/`
-- [ ] `grep -r "generate-sitemap"` returns nothing in `package.json` and `scripts/`
-- [ ] `grep -r "next/router"` returns nothing in `src/` (all usages migrated to `next/navigation`)
-- [ ] `grep -r "next/head"` returns nothing in `src/` (all usages replaced by metadata API)
-- [ ] `grep -r "getStaticProps\|getServerSideProps"` returns nothing in `src/`
-- [ ] `ls src/pages/` — directory should not exist
+- [X] `grep -r "from.*SEO"` returns nothing in `src/`
+- [X] `grep -r "generate-sitemap"` returns nothing in `package.json` and `scripts/`
+- [X] `grep -r "next/router"` returns nothing in `src/` (all usages migrated to `next/navigation`)
+- [X] `grep -r "next/head"` returns nothing in `src/` (all usages replaced by metadata API)
+- [X] `grep -r "getStaticProps\|getServerSideProps"` returns nothing in `src/`
+- [X] `ls src/pages/` — directory should not exist

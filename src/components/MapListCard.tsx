@@ -80,7 +80,7 @@ const MapListCard = ({
   return (
     <div
       ref={cardRef}
-      className={`grid cursor-pointer grid-cols-10 rounded-lg border-2 bg-white max-md:overflow-hidden ${
+      className={`grid cursor-pointer grid-cols-10 overflow-hidden rounded-lg border-2 bg-white ${
         isExpanded ? "max-h-[300px]" : "max-h-[104px]"
       } transition-max-height relative duration-[700ms]`}
       onClick={onClick}
@@ -142,7 +142,7 @@ const MapListCard = ({
           alt="Arrow Icon"
           width={24}
           height={24}
-          className={`absolute bottom-1.5 right-1.5 transition duration-[700ms] ${
+          className={`absolute bottom-1.5 right-2.5 transition duration-[700ms] ${
             isExpanded ? "rotate-[-180deg]" : "rotate-0"
           }`}
         />
