@@ -39,7 +39,7 @@ export default function HomeClient() {
             className="flex items-center justify-center gap-3 rounded-lg bg-amber-400 px-4 py-4 lg:px-8 shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             onClick={handleClick}
           >
-            <span className="text-sm font-medium leading-7 tracking-wide text-zinc-950 sm:text-base md:text-lg lg:text-xl ">
+            <span className="text-sm font-medium leading-7 tracking-wide text-zinc-950 sm:text-base md:text-lg lg:text-xl">
               Explore Schools
             </span>
             <div className="flex items-center justify-center rounded-full bg-orange-200 p-1">
