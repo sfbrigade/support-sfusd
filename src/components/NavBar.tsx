@@ -130,10 +130,10 @@ const Navbar = () => {
         <div className="hidden items-center justify-between rounded-2xl bg-white px-4 py-2 md:flex">
           <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
             <Image src="/logo.png" alt="Home" width={28} height={28} />
-            <p className="text-lg">Support SF Schools</p>
+            <p className="text-xl text-black">Support SF Schools</p>
           </Link>
 
-          <div className="flex items-center gap-8 text-sm">
+          <div className="flex items-center gap-8 text-xl">
             <Link href="/map" className="hover:underline">
               Explore Schools
             </Link>
@@ -146,7 +146,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={openVolunteerModal}
-              className="rounded-lg bg-[#252525] px-4 py-2 text-xs font-semibold text-white"
+              className="rounded-lg bg-[#252525] px-4 py-2 text-xl font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             >
               Find Your Volunteer Match 
             </button>
@@ -157,7 +157,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between bg-white px-4 py-3 md:hidden">
           <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
             <Image src="/logo.png" alt="Home" width={32} height={32} />
-            <span className="text-base font-medium">Support SF Schools</span>
+            <span className="text-black text-xl font-semibold">Support SF Schools</span>
           </Link>
           <button
             type="button"
@@ -172,7 +172,7 @@ const Navbar = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="h-5 w-5"
+              className="h-10 w-10"
             >
               <path d="M4 7h16M4 12h16M4 17h16" />
             </svg>
@@ -180,8 +180,8 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="border-b border-gray-200 bg-white px-4 py-3 md:hidden">
-            <div className="flex flex-col gap-3 text-sm">
+          <div className="border-b border-gray-200 bg-blue-50 px-4 py-3 md:hidden">
+            <div className="flex flex-col gap-3 text-lg">
               <Link href="/map" onClick={closeMenu}>
                 Explore Schools
               </Link>
@@ -194,7 +194,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={openVolunteerModal}
-                className="inline-flex w-fit rounded-lg bg-[#252525] px-4 py-2 text-xs font-semibold text-white"
+                className="inline-flex w-fit self-center rounded-lg bg-[#252525] px-4 py-2 text-lg font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
               >
                 Find Your Volunteer Match
               </button>
