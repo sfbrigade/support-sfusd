@@ -148,7 +148,7 @@ const Navbar = () => {
               onClick={openVolunteerModal}
               className="rounded-lg bg-[#252525] px-4 py-2 text-xl font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             >
-              Find Your Volunteer Match 
+              Find Your Volunteer Match
             </button>
           </div>
         </div>
