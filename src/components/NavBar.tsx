@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <nav className={"sticky top-0 z-40 w-full px-4 py-4 text-black " + bg}>
+    <nav className={"sticky top-0 z-40 w-full p-2 p-4 px-4 text-black " + bg}>
       <div className="container mx-auto max-w-[1280px] font-medium">
         <div className="flex items-center justify-between">
           {/* Home Icon */}
@@ -35,7 +35,6 @@ const Navbar = () => {
           {/* Links on desktop */}
           <div className="space-x-10 md:flex">
             <Link href="/map">Explore Schools</Link>
-            <Link href="/how-it-works">How It Works</Link>
             <Link href="/about">About Us</Link>
           </div>
         </div>
