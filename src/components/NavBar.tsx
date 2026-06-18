@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import VolunteerSignupModal from "./schoolPageComponents/VolunteerSignupModal";
 import { School } from "@/types/school";
-import emailjs from "@emailjs/browser";
+import { sendVolunteerEmail } from "@/lib/emailjs";
 import { useToast } from "./Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
@@ -88,31 +88,18 @@ const Navbar = () => {
       name: sanitizeName(data.name),
     };
 
-    emailjs
-      .send("service_itlkzak", "template_ee6s74u", sanitized, {
-        publicKey: "10-NnnxJFw9zLmYPf",
-      })
-      .then(() => {
-        emailjs
-          .send("service_xkteori", "template_ldjot9t", sanitized, {
-            publicKey: "D8WCCvG0aRMjhfkml",
-          })
-          .catch((reason: unknown) => {
-            console.error(
-              "FAILED: error sending volunteer confirmation through EmailJS.",
-              reason,
-            );
-          });
-        showToast("Volunteer form submitted successfully! Thank you!");
-      })
-      .catch((reason) => {
+    sendVolunteerEmail(sanitized, {
+      onSuccess: () =>
+        showToast("Volunteer form submitted successfully! Thank you!"),
+      onError: (reason) => {
         showToast("Volunteer form submission failed.");
         console.error(
           "FAILED: error sending volunteer email to Support SF",
           reason,
         );
-      })
-      .finally(closeVolunteerModal);
+      },
+      onFinally: closeVolunteerModal,
+    });
   };
 
   return (
