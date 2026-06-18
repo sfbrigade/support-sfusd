@@ -183,9 +183,7 @@ const Navbar = () => {
               <Link href="/map" onClick={closeMenu}>
                 Explore Schools
               </Link>
-              {/*<Link href="/about" onClick={closeMenu}>
-                How It Works
-              </Link>*/}
+              {/* How It Works is intentionally hidden until that page is built. */}
               <Link href="/about" onClick={closeMenu}>
                 About Us
               </Link>
