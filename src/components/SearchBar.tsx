@@ -54,6 +54,15 @@ export default function SearchBar<DropdownItemType = unknown>({
     }
   }, [selectedZipcode, searchTerm]);
 
+  const handleClear = () => {
+    setSearchTerm("");
+    setSelectedZipcode?.("");
+    setDropdownItems([]);
+    setShowNoResults(false);
+    onSearch("");
+    inputRef.current?.focus();
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "ArrowDown") {
       if (dropdownItems.length === 0) {
@@ -96,7 +105,7 @@ export default function SearchBar<DropdownItemType = unknown>({
         data-search-input
         placeholder="Search Zip Code or School"
         value={searchTerm}
-        className="placeholder-small p-1.4 h-[38px] w-full rounded-lg border-[1.4px] border-gray-400 px-4 py-2 pl-12 focus:border-blue-400"
+        className="placeholder-small p-1.4 h-[38px] w-full rounded-lg border-[1.4px] border-gray-400 px-4 py-2 pl-12 pr-10 focus:border-blue-400"
         onChange={onInputChange}
         onFocus={() => {
           if (searchTerm.length > 0) {
@@ -115,6 +124,17 @@ export default function SearchBar<DropdownItemType = unknown>({
         }}
         onKeyDown={handleKeyDown}
       />
+      {searchTerm.length > 0 && (
+        <button
+          type="button"
+          aria-label="Clear search"
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={handleClear}
+          className="absolute inset-y-0 right-3 flex items-center text-gray-400 hover:text-gray-600"
+        >
+          &#x2715;
+        </button>
+      )}
       {showDropdown && (dropdownItems.length > 0 || showNoResults) && (
         <Dropdown
           items={dropdownItems}
