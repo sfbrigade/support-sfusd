@@ -45,7 +45,7 @@ const SchoolDonation: React.FC<{ school: School }> = ({ school }) => {
                     href={school.donation_url}
                     target="_blank"
                     className={
-                      "w-fit rounded bg-blue-600 p-2 px-8 font-medium text-white"
+                      "w-fit rounded bg-blue-600 p-2 px-8 font-medium text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
                     }
                     onClick={() => posthog?.capture('main_donate_clicked', { school: school.name })}
                   >

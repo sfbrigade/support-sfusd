@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { emailjsConfig } from "@/lib/emailjs";
 import { useToast } from "./Toast/ToastContext";
 
 type ContactUsProps = {
@@ -67,8 +68,8 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
 
     if (form.current) {
       emailjs
-        .sendForm("service_itlkzak", "template_ee6s74u", form.current, {
-          publicKey: "10-NnnxJFw9zLmYPf",
+        .sendForm(emailjsConfig.volunteer.serviceId, emailjsConfig.volunteer.templateId, form.current, {
+          publicKey: emailjsConfig.volunteer.publicKey,
         })
         .then(
           () => {

@@ -37,6 +37,7 @@ interface VolunteerSignupModalProps {
   onClose: () => void;
   school: School;
   onSubmit: (data: VolunteerFormData) => void;
+  showSchoolContext?: boolean;
 }
 
 const customStyles = {
@@ -51,6 +52,7 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
   onClose,
   school,
   onSubmit,
+  showSchoolContext = true,
 }) => {
   Modal.setAppElement("#root");
 
@@ -83,6 +85,9 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
     schoolName: string,
   ) => {
     if (option === "SPECIFIC_INTEREST") {
+      if (!showSchoolContext) {
+        return "There is something specific that I'm interested in";
+      }
       return WHY_INTERESTED_OPTIONS.SPECIFIC_INTEREST.replace(
         "{schoolName}",
         schoolName,
@@ -142,12 +147,16 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
   const renderPage1 = () => (
     <div className="flex flex-col gap-6">
       <h1 className="text-2xl">
-        Thank you for signing up to volunteer with {school.name}!
+        {showSchoolContext
+          ? `Thank you for signing up to volunteer with ${school.name}!`
+          : "Thank you for signing up to volunteer!"}
       </h1>
 
       <div className="flex flex-col gap-4 text-gray-600">
         <h2 className="text-lg ">
-          Why are you interested in volunteering at {school.name}?
+          {showSchoolContext
+            ? `Why are you interested in volunteering at ${school.name}?`
+            : "Why are you interested in volunteering?"}
         </h2>
 
         <div className="flex flex-col gap-3">
@@ -258,7 +267,7 @@ const VolunteerSignupModal: React.FC<VolunteerSignupModalProps> = ({
       isOpen={isOpen}
       onRequestClose={onClose}
       style={customStyles}
-      className="absolute left-1/2 top-1/2 w-4/6 w-5/6 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 shadow-lg md:w-2/3 lg:w-1/2 xl:w-2/5"
+      className="absolute left-1/2 top-1/2 w-5/6 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 shadow-lg md:w-2/3 lg:w-1/2 xl:w-2/5"
     >
       <div className="flex flex-col gap-4">
         {/* Close Button */}
