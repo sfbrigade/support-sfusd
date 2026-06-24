@@ -72,13 +72,13 @@ export default function SchoolHeader({ school }: Props) {
       <div className="flex gap-2">
         <a
           href="#volunteer"
-          className="rounded bg-blue-600 p-2 px-8 font-medium text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
+          className="rounded bg-blue-600 p-2 px-8 font-medium text-white"
         >
           Volunteer
         </a>
         <a
           href="#donate"
-          className="rounded border-2 border-blue-600 p-2 px-8 font-medium text-blue-600 shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
+          className="rounded border-2 border-blue-600 p-2 px-8 font-medium text-blue-600"
         >
           Donate
         </a>

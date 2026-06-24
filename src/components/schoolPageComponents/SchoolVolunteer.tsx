@@ -6,7 +6,7 @@ import { blurDataURL } from "@/lib/imageConfig";
 import VolunteerList from "./VolunteerList";
 import VolunteerSignupModal from "./VolunteerSignupModal";
 import React, { useState } from "react";
-import { sendVolunteerEmail } from "@/lib/emailjs";
+import emailjs from "@emailjs/browser";
 import { useToast } from "../Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
@@ -32,10 +32,25 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
       name: sanitizeName(data.name),
     };
 
-    sendVolunteerEmail(sanitized, {
-      onSuccess: () =>
-        showToast("Volunteer form submitted successfully! Thank you!"),
-      onError: (reason) => {
+    emailjs
+      .send("service_itlkzak", "template_ee6s74u", sanitized, {
+        publicKey: "10-NnnxJFw9zLmYPf",
+      })
+      .then(() => {
+        // only send the confirmation e-mail if the volunteer e-mail makes it
+        emailjs
+          .send("service_xkteori", "template_ldjot9t", sanitized, {
+            publicKey: "D8WCCvG0aRMjhfkml",
+          })
+          .catch((reason: any) => {
+            console.error(
+              "FAILED: error sending 'volunteer-confirmation-auto-reply' through EmailJS.",
+              reason,
+            );
+          });
+        showToast("Volunteer form submitted successfully! Thank you!");
+      })
+      .catch((reason) => {
         // TODO: get copy/strat for failure case and perhaps
         // enhance Toast styling to support both success and failure cases
         showToast("Volunteer form submission failed.");
@@ -43,9 +58,8 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
           "FAILED: error sending volunteer email to Support SF",
           reason,
         );
-      },
-      onFinally: closeModal,
-    });
+      })
+      .finally(closeModal);
   };
 
   /**
@@ -121,7 +135,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 href="https://sfedfund.org/become-a-volunteer/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
+                className="mt-2 w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white"
               >
                 Join the School Day Team
               </a>
@@ -135,7 +149,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
                 programs to PTA events, community projects, and more.
               </p>
               <button
-                className="mt-2 w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
+                className="mt-2 w-full rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white"
                 onClick={() => {
                   posthog?.capture?.("volunteer_form_clicked", {
                     school: school.name,
