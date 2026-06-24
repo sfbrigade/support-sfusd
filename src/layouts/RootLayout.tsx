@@ -49,7 +49,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       id="root"
       className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
-       {(pathname?.startsWith("/school") || pathname === "/") &&
+      {(pathname?.startsWith("/school") || pathname === "/") &&
         isBannerShowing && (
           <>
             <Banner onClose={setToggle}>{bannerContent}</Banner>
