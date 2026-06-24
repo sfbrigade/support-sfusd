@@ -171,6 +171,9 @@ const Navbar = () => {
                 Explore Schools
               </Link>
               {/* How It Works is intentionally hidden until that page is built. */}
+              {/* <Link href="/about" onClick={closeMenu}>
+                How It Works
+              </Link> */}
               <Link href="/about" onClick={closeMenu}>
                 About Us
               </Link>
