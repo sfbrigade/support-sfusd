@@ -128,13 +128,13 @@ const Navbar = () => {
             <Link href="/about" className="hover:underline">
               About Us
             </Link>
-            <button
+            {/*<button
               type="button"
               onClick={openVolunteerModal}
               className="rounded-lg bg-[#252525] px-4 py-2 text-xl font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             >
               Find Your Volunteer Match
-            </button>
+            </button>*/}
           </div>
         </div>
 
@@ -171,16 +171,19 @@ const Navbar = () => {
                 Explore Schools
               </Link>
               {/* How It Works is intentionally hidden until that page is built. */}
+              {/* <Link href="/about" onClick={closeMenu}>
+                How It Works
+              </Link> */}
               <Link href="/about" onClick={closeMenu}>
                 About Us
               </Link>
-              <button
+              {/*<button
                 type="button"
                 onClick={openVolunteerModal}
                 className="inline-flex w-fit self-center rounded-lg bg-[#252525] px-4 py-2 text-lg font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
               >
                 Find Your Volunteer Match
-              </button>
+              </button>*/}
             </div>
           </div>
         )}
