@@ -1,13 +1,15 @@
 "use client";
 
-import  React, {useState } from "react";
+import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/NavBar";
 import { usePathname } from "next/navigation";
 import { useMapContext } from "@/contexts/MapContext";
 import BackToTop from "@/components/BackToTop";
 import Banner from "@/components/Banner";
-import ContactUs from "@/components/ContactUs";
 import { usePostHog } from "posthog-js/react";
+
+const ContactUs = dynamic(() => import("@/components/ContactUs"));
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
