@@ -26,7 +26,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     setShowContactForm(false);
   };
   const handleOpen = () => {
-    posthog?.capture?.('contact_us_form_opened');
+    posthog?.capture?.("contact_us_form_opened");
     setShowContactForm(true);
   };
   const handleClose = () => setShowContactForm(false);
