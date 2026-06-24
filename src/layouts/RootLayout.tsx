@@ -47,12 +47,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       {(pathname?.startsWith("/school") || pathname === "/") &&
         isBannerShowing && (
           <>
-            <div className="block md:hidden">
-              <Banner onClose={setToggle}>{bannerContent}</Banner>
-            </div>
-            <div className="hidden md:block">
-              <Banner>{bannerContent}</Banner>
-            </div>
+            <Banner onClose={setToggle}>{bannerContent}</Banner>
             {showContactForm && <ContactUs handleClose={handleClose} />}
           </>
         )}
