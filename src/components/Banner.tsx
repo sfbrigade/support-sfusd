@@ -8,7 +8,7 @@ const Banner = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div className="flex bg-[#FFDC7C] p-4 text-left text-base font-medium md:text-center">
+    <div className="flex bg-[#FFDC7C] py-1 px-4 text-left text-base font-medium md:text-center">
       <div className="flex-1">{children}</div>
       {onClose && (
         <button onClick={onClose} className="ml-2">
