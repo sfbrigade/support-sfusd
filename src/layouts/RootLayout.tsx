@@ -19,11 +19,12 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const posthog = usePostHog();
 
   const [isBannerShowing, setIsBannerShowing] = useState(true);
+  const [showContactForm, setShowContactForm] = useState(false);
 
   const setToggle = () => {
-    setIsBannerShowing(!isBannerShowing);
+    setIsBannerShowing((prev) => !prev);
+    setShowContactForm(false);
   };
-  const [showContactForm, setShowContactForm] = useState(false);
   const handleOpen = () => {
     posthog?.capture?.('contact_us_form_opened');
     setShowContactForm(true);
