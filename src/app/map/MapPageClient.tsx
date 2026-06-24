@@ -58,6 +58,8 @@ export default function MapPageClient(props: Props) {
   const [searchFilteredSchools, setSearchFilteredSchools] = useState<
     SchoolMapPin[] | null
   >(null);
+  const [zoomToSchool, setZoomToSchool] = useState<SchoolMapPin | null>(null);
+  const [resetMapView, setResetMapView] = useState(0);
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [isMobileLikeLayout, setIsMobileLikeLayout] = useState(false);
@@ -204,6 +206,7 @@ export default function MapPageClient(props: Props) {
     });
     setSelectedZipcode(undefined);
     setSelectedSchool(selection.item);
+    setZoomToSchool(selection.item);
   };
 
   const handleSearchSubmit = (searchTerm: string) => {
@@ -211,6 +214,14 @@ export default function MapPageClient(props: Props) {
     setSelectedZipcode(
       ZIPCODE_PATTERN.test(trimmedSearchTerm) ? trimmedSearchTerm : undefined,
     );
+  };
+
+  const handleSearchClear = () => {
+    setSelectedSchool(null);
+    setSelectedZipcode(undefined);
+    setSearchFilteredSchools(null);
+    setZoomToSchool(null);
+    setResetMapView((n) => n + 1);
   };
 
   const SelectedSchoolCard = (props: {
@@ -257,6 +268,7 @@ export default function MapPageClient(props: Props) {
               onItemSelect={itemSelect}
               onSearch={handleSchoolSearch}
               onSearchSubmit={isMapView ? handleSearchSubmit : undefined}
+              onSearchClear={handleSearchClear}
               showDropdown={isMapView}
               selectedZipcode={selectedZipcode}
               setSelectedZipcode={setSelectedZipcode}
@@ -376,6 +388,7 @@ export default function MapPageClient(props: Props) {
                     onItemSelect={itemSelect}
                     onSearch={handleSchoolSearch}
                     onSearchSubmit={handleSearchSubmit}
+                    onSearchClear={handleSearchClear}
                     selectedZipcode={selectedZipcode}
                     setSelectedZipcode={setSelectedZipcode}
                   />
@@ -410,6 +423,8 @@ export default function MapPageClient(props: Props) {
                 selectedSchool={selectedSchool}
                 schools={schoolsForDisplay}
                 selectedZipcode={selectedZipcode}
+                zoomToSchool={zoomToSchool}
+                resetView={resetMapView}
               />
             </div>
           </div>
@@ -456,6 +471,8 @@ export default function MapPageClient(props: Props) {
                   selectedSchool={selectedSchool}
                   schools={schoolsForDisplay}
                   selectedZipcode={selectedZipcode}
+                  zoomToSchool={zoomToSchool}
+                  resetView={resetMapView}
                 />
                 <div className="fixed bottom-0 left-0 right-0 z-10 m-4 rounded-2xl bg-white p-4 shadow-lg">
                   <div className="align-center flex flex-col items-center gap-0 text-center">

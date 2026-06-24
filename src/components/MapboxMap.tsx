@@ -26,6 +26,8 @@ type MapboxMapProps = {
   selectedSchool: SchoolMapPin | null;
   schools: SchoolMapPin[];
   selectedZipcode?: string | null;
+  zoomToSchool?: SchoolMapPin | null;
+  resetView?: number;
 };
 
 type ZctaFeature = Feature<Polygon | MultiPolygon, { zipcode: string }>;
@@ -102,7 +104,7 @@ const isVisible = (marker: mapboxgl.Marker, map: mapboxgl.Map) => {
   return isInsideMap && isOnTop;
 };
 
-const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
+const MapboxMap = ({ schools, selectedZipcode = null, zoomToSchool = null, resetView = 0 }: MapboxMapProps) => {
   const { selectedSchool, setSelectedSchool } = useMapContext();
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
@@ -120,6 +122,8 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
     selectedSchool?.name ?? null,
   );
   const hasSkippedInitialPersistedRecenterRef = useRef(false);
+  const lastAppliedResetViewRef = useRef(0);
+  const lastAppliedZoomToSchoolRef = useRef<string | null>(null);
   const posthog = usePostHog();
   const flyToOptions = useMemo(
     () => ({
@@ -655,6 +659,35 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
       }
     }
   }, [selectedSchool, mapLoaded, flyToOptions, userHasInteracted]);
+
+  useEffect(() => {
+    if (!mapLoaded || !mapRef.current) return;
+    if (!zoomToSchool) {
+      lastAppliedZoomToSchoolRef.current = null;
+      return;
+    }
+    if (zoomToSchool.stub === lastAppliedZoomToSchoolRef.current) return;
+    lastAppliedZoomToSchoolRef.current = zoomToSchool.stub;
+    mapRef.current.flyTo({
+      center: [parseFloat(zoomToSchool.longitude), parseFloat(zoomToSchool.latitude)],
+      zoom: 15,
+      ...flyToOptions,
+    });
+  }, [zoomToSchool, mapLoaded, flyToOptions]);
+
+  useEffect(() => {
+    if (!mapLoaded || !mapRef.current || resetView === 0) return;
+    if (resetView === lastAppliedResetViewRef.current) return;
+    lastAppliedResetViewRef.current = resetView;
+    const vw = mapRef.current.getContainer().clientWidth;
+    const zoom =
+      vw < 640 ? 10.7 : vw < 1024 ? 10.9 : vw < 1440 ? 11.1 : vw < 1920 ? 11.35 : 11.5;
+    mapRef.current.flyTo({
+      center: [-122.435, 37.762],
+      zoom,
+      ...flyToOptions,
+    });
+  }, [resetView, mapLoaded, flyToOptions]);
 
   useEffect(() => {
     const map = mapRef.current;
