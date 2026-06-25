@@ -2,7 +2,6 @@ import js from "@eslint/js";
 import nextPlugin from "@next/eslint-plugin-next";
 import globals from "globals";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 
 export default [
   {
@@ -17,7 +16,9 @@ export default [
 
   js.configs.recommended,
   {
-    plugins: { "@next/next": nextPlugin, "jsx-a11y": jsxA11yPlugin },
+    plugins: {
+      "@next/next": nextPlugin,
+    },
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs["core-web-vitals"].rules,
@@ -28,7 +29,10 @@ export default [
     languageOptions: {
       sourceType: "module",
       ecmaVersion: "latest",
-      globals: { ...globals.browser, ...globals.node },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     rules: {},
   },
@@ -50,7 +54,6 @@ export default [
       ...(await import("@typescript-eslint/eslint-plugin")).default.configs
         .recommended.rules,
       "@typescript-eslint/no-unused-vars": "warn",
-      ...jsxA11yPlugin.configs.recommended.rules,
     },
   },
 ];
