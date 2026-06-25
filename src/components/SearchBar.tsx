@@ -8,6 +8,7 @@ interface SearchBarProps<DropdownItemType> {
   onItemSelect: (item: DropdownItem<DropdownItemType>) => void;
   onSearch: (searchTerm: string) => Promise<DropdownItem<DropdownItemType>[]>;
   onSearchSubmit?: (searchTerm: string) => void;
+  onSearchClear?: () => void;
   showDropdown?: boolean;
   selectedZipcode?: string;
   setSelectedZipcode?: (zipcode: string) => void;
@@ -17,6 +18,7 @@ export default function SearchBar<DropdownItemType = unknown>({
   onItemSelect,
   onSearch,
   onSearchSubmit,
+  onSearchClear,
   showDropdown = true,
   selectedZipcode,
   setSelectedZipcode,
@@ -33,6 +35,9 @@ export default function SearchBar<DropdownItemType = unknown>({
     const userInput = e.target.value;
     setSearchTerm(userInput);
     setSelectedZipcode?.(userInput);
+    if (!userInput) {
+      onSearchClear?.();
+    }
     const searchResults = await onSearch(userInput);
     setDropdownItems(searchResults);
     setShowNoResults(userInput.trim().length > 0 && searchResults.length === 0);
@@ -56,11 +61,9 @@ export default function SearchBar<DropdownItemType = unknown>({
 
   const handleClear = () => {
     setSearchTerm("");
-    setSelectedZipcode?.("");
     setDropdownItems([]);
     setShowNoResults(false);
-    onSearch("");
-    inputRef.current?.focus();
+    onSearchClear?.();
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
