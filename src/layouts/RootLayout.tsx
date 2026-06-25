@@ -36,14 +36,11 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     setIsBannerShowing(false);
     setShowContactForm(false);
   };
-
   const handleOpen = () => {
     posthog?.capture?.("contact_us_form_opened");
     setShowContactForm(true);
   };
-
   const handleClose = () => setShowContactForm(false);
-
   const bannerContent = (
     <>
       <strong>BETA:</strong> This website is in beta - let us know if you have
@@ -58,7 +55,6 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       <span className="hidden md:inline"> to help us improve it</span>.
     </>
   );
-
   return (
     <div
       id="root"
