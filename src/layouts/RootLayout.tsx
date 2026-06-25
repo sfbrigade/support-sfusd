@@ -34,9 +34,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   }, []);
 
   const handleBannerClose = () => {
-    sessionStorage.setItem(BETA_BANNER_DISMISSED_KEY, "true");
     setIsBannerShowing(false);
     setShowContactForm(false);
+
+    try {
+      sessionStorage.setItem(BETA_BANNER_DISMISSED_KEY, "true");
+    } catch {
+      // Ignore storage errors; banner is still dismissed for this render session.
+    }
   };
 
   const handleOpen = () => {
