@@ -17,24 +17,31 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const { isMapView } = useMapContext();
   const posthog = usePostHog();
 
-  const [isBannerShowing, setIsBannerShowing] = useState(true);
+  const [isBannerShowing, setIsBannerShowing] = useState<boolean | null>(null);
   const [showContactForm, setShowContactForm] = useState(false);
 
   /* NOTE: id="root" is currently required as a hook by the JS view logic in `map.tsx` to help constrain the map height to the mobile viewport */
 
   useEffect(() => {
-    const isBannerDismissed =
-      sessionStorage.getItem(BETA_BANNER_DISMISSED_KEY) === "true";
-
-    if (isBannerDismissed) {
-      setIsBannerShowing(false);
+    try {
+      const isBannerDismissed =
+        sessionStorage.getItem(BETA_BANNER_DISMISSED_KEY) === "true";
+      setIsBannerShowing(!isBannerDismissed);
+    } catch {
+      // If storage is unavailable, default to showing the banner.
+      setIsBannerShowing(true);
     }
   }, []);
 
   const handleBannerClose = () => {
-    sessionStorage.setItem(BETA_BANNER_DISMISSED_KEY, "true");
     setIsBannerShowing(false);
     setShowContactForm(false);
+
+    try {
+      sessionStorage.setItem(BETA_BANNER_DISMISSED_KEY, "true");
+    } catch {
+      // Ignore storage errors; banner is still dismissed for this render session.
+    }
   };
   const handleOpen = () => {
     posthog?.capture?.("contact_us_form_opened");
