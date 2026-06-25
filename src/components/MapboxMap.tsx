@@ -443,6 +443,11 @@ const MapboxMap = ({ schools, selectedZipcode = null }: MapboxMapProps) => {
 
       // Create all school markers (they'll be shown/hidden by updateClusters)
       schools.forEach((school) => {
+        // Remove any previously tracked marker for this school (guards against
+        // double-invocation in React Strict Mode where map.on("load") can fire
+        // from a prior map instance after cleanup, adding orphaned elements)
+        markersRef.current[school.name]?.remove();
+
         // create an HTML element for each school
         const el = document.createElement("button");
         el.className = "marker";

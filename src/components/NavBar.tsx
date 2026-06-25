@@ -115,7 +115,11 @@ const Navbar = () => {
       <div className="mx-auto w-full max-w-[1280px] font-medium">
         {/* Desktop Navigation */}
         <div className="hidden items-center justify-between rounded-2xl bg-white px-4 py-2 md:flex">
-          <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
+          <Link
+            href="/"
+            className="flex items-center gap-3"
+            onClick={closeMenu}
+          >
             <Image src="/logo.png" alt="Home" width={28} height={28} />
             <p className="text-xl text-black">Support SF Schools</p>
           </Link>
@@ -124,7 +128,10 @@ const Navbar = () => {
             <Link href="/map" className="hover:underline">
               Explore Schools
             </Link>
-            {/* How It Works is intentionally hidden until that page is built. */}
+
+            <Link href="/how-it-works" className="hover:underline">
+              How It Works
+            </Link>
             <Link href="/about" className="hover:underline">
               About Us
             </Link>
@@ -170,7 +177,9 @@ const Navbar = () => {
               <Link href="/map" onClick={closeMenu}>
                 Explore Schools
               </Link>
-              {/* How It Works is intentionally hidden until that page is built. */}
+              <Link href="/how-it-works" onClick={closeMenu}>
+                How It Works
+              </Link>
               <Link href="/about" onClick={closeMenu}>
                 About Us
               </Link>
