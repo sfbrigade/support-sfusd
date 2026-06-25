@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/NavBar";
 import { usePathname } from "next/navigation";
@@ -10,6 +10,7 @@ import Banner from "@/components/Banner";
 import { usePostHog } from "posthog-js/react";
 
 const ContactUs = dynamic(() => import("@/components/ContactUs"));
+const BETA_BANNER_DISMISSED_KEY = "betaBannerDismissed";
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -21,8 +22,18 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   const [isBannerShowing, setIsBannerShowing] = useState(true);
   const [showContactForm, setShowContactForm] = useState(false);
 
-  const setToggle = () => {
-    setIsBannerShowing((prev) => !prev);
+  useEffect(() => {
+    const isBannerDismissed =
+      sessionStorage.getItem(BETA_BANNER_DISMISSED_KEY) === "true";
+
+    if (isBannerDismissed) {
+      setIsBannerShowing(false);
+    }
+  }, []);
+
+  const handleBannerClose = () => {
+    sessionStorage.setItem(BETA_BANNER_DISMISSED_KEY, "true");
+    setIsBannerShowing(false);
     setShowContactForm(false);
   };
   const handleOpen = () => {
@@ -52,7 +63,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       {(pathname?.startsWith("/school") || pathname === "/") &&
         isBannerShowing && (
           <>
-            <Banner onClose={setToggle}>{bannerContent}</Banner>
+            <Banner onClose={handleBannerClose}>{bannerContent}</Banner>
             {showContactForm && <ContactUs handleClose={handleClose} />}
           </>
         )}
