@@ -1,12 +1,12 @@
 import { School } from "@/types/school";
 import Image from "next/image";
 import BannerWrapper from "./BannerWrapper";
-import Link from "next/link";
 import { blurDataURL } from "@/lib/imageConfig";
 import VolunteerList from "./VolunteerList";
 import VolunteerSignupModal from "./VolunteerSignupModal";
 import React, { useState } from "react";
 import { sendVolunteerEmail } from "@/lib/emailjs";
+import { isStrictEmail } from "@/lib/validation";
 import { useToast } from "../Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
@@ -21,7 +21,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
 
   const handleFormSubmit = (data: { email: string; name: string }) => {
     // validate the email addr field
-    if (!isEmail(data.email)) {
+    if (!isStrictEmail(data.email)) {
       alert("Please enter a valid email address");
       return;
     }
@@ -62,19 +62,15 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
    */
   function sanitizeName(nameInput: string): string {
     return nameInput
-      .replace(/[\x00-\x1F\x7F]/g, " ")
+      .split("")
+      .map((character) => {
+        const characterCode = character.charCodeAt(0);
+        return characterCode <= 31 || characterCode === 127 ? " " : character;
+      })
+      .join("")
       .replace(/\s+/g, " ")
       .trim()
       .slice(0, 100);
-  }
-
-  function isEmail(emailInput: string) {
-    let regEmail =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!regEmail.test(emailInput)) {
-      return false;
-    }
-    return true;
   }
 
   return (

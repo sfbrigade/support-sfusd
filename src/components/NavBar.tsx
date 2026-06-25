@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import VolunteerSignupModal from "./schoolPageComponents/VolunteerSignupModal";
 import { School } from "@/types/school";
 import { sendVolunteerEmail } from "@/lib/emailjs";
+import { isStrictEmail } from "@/lib/validation";
 import { useToast } from "./Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
@@ -66,12 +67,6 @@ const Navbar = () => {
       .slice(0, 100);
   };
 
-  const isEmail = (emailInput: string) => {
-    const emailRegex =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return emailRegex.test(emailInput);
-  };
-
   const openVolunteerModal = () => {
     closeMenu();
     posthog?.capture?.("navbar_volunteer_match_clicked");
@@ -83,7 +78,7 @@ const Navbar = () => {
   };
 
   const handleVolunteerFormSubmit = (data: { email: string; name: string }) => {
-    if (!isEmail(data.email)) {
+    if (!isStrictEmail(data.email)) {
       showToast("Please enter a valid email address.");
       return;
     }
