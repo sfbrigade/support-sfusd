@@ -22,23 +22,11 @@ export default function StepBoxPreviewPage() {
 
       <StepBox
         stepNumber={2}
-        title="Explore Schools"
-        description="Browse schools on the map and find one that's right for you."
-        button={
-          <Link
-            href="/map"
-            className="bg-brand-sunglow text-brand-navy inline-flex items-center gap-[10px] rounded-lg px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] transition-opacity hover:opacity-90"
-          >
-            Explore Schools
-          </Link>
-        }
+        title="We Match You with Opportunities"
+        description="Based on your responses we will connect you with our recommendation from our growing list of partner organizations, to set up a volunteer placement:"
       />
 
-      <StepBox
-        stepNumber={3}
-        title="No button variant"
-        description="This step has no CTA button."
-      />
+      <StepBox stepNumber={3} title="Partner Organizations" />
     </main>
   );
 }
