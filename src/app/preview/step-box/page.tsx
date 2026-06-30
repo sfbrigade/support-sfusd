@@ -14,7 +14,7 @@ export default function StepBoxPreviewPage() {
         button={
           <Link
             href="/survey"
-            className="bg-brand-sunglow text-brand-navy inline-flex items-center gap-[10px] rounded-lg px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-[10px] rounded-lg bg-brand-sunglow px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] text-brand-navy transition-opacity hover:opacity-90"
           >
             Take the Volunteer Survey
           </Link>
@@ -33,7 +33,7 @@ export default function StepBoxPreviewPage() {
         Mobile Variant
       </h2>
 
-      <div className="flex w-[392px] flex-col gap-4 px-[15px] py-[11px]">
+      <div className="flex w-[392px] flex-col gap-4 bg-white px-[15px] py-[11px]">
         <StepBoxMobile
           stepNumber={1}
           title="Take the Volunteer Survey"
@@ -41,7 +41,7 @@ export default function StepBoxPreviewPage() {
           button={
             <Link
               href="/survey"
-              className="bg-brand-azure inline-flex w-full items-center justify-center gap-[10px] rounded-lg px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] text-white transition-opacity hover:opacity-90"
+              className="inline-flex w-full items-center justify-center gap-[10px] rounded-lg bg-brand-azure px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] text-white transition-opacity hover:opacity-90"
             >
               Take the Volunteer Survey
             </Link>

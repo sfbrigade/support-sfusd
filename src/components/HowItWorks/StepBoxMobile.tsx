@@ -14,19 +14,19 @@ const StepBoxMobile = ({
   button,
 }: StepBoxMobileProps) => {
   return (
-    <div className="flex flex-col items-center gap-4 rounded-[25px] bg-white p-5">
-      <div className="bg-brand-sunglow flex h-9 w-9 shrink-0 items-center justify-center gap-[10px] rounded-full p-[10px]">
-        <span className="text-brand-navy font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em]">
+    <div className="flex flex-col items-center gap-4 rounded-[25px] bg-brand-sunglow/30 p-5">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center gap-[10px] rounded-full bg-brand-sunglow p-[10px]">
+        <span className="font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em] text-brand-navy">
           {stepNumber}
         </span>
       </div>
 
       <div className="flex w-full flex-col gap-6">
-        <h3 className="text-brand-azure text-center font-fredoka text-[24px] font-medium leading-none">
+        <h3 className="text-center font-fredoka text-[24px] font-medium leading-none text-brand-azure">
           {title}
         </h3>
         {description && description.length > 0 && (
-          <p className="text-brand-raisin font-lato text-base font-normal leading-6 tracking-[0.02em]">
+          <p className="font-lato text-base font-normal leading-6 tracking-[0.02em] text-brand-raisin">
             {description}
           </p>
         )}
