@@ -12,6 +12,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        brand: {
+          sunglow: "#FFC627",
+          azure: "#3A86FF",
+          raisin: "#272728",
+          navy: "#0B1F44",
+        },
+      },
       fontFamily: {
         fredoka: ["var(--font-fredoka)", "sans-serif"],
         lato: ["var(--font-lato)", "sans-serif"],
