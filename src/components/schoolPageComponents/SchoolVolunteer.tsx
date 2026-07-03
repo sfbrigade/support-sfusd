@@ -6,7 +6,7 @@ import VolunteerList from "./VolunteerList";
 import VolunteerSignupModal from "./VolunteerSignupModal";
 import React, { useState } from "react";
 import { sendVolunteerEmail } from "@/lib/emailjs";
-import { isStrictEmail } from "@/lib/validation";
+import { isStrictEmail, sanitizeName } from "@/lib/validation";
 import { useToast } from "../Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
@@ -47,31 +47,6 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
       onFinally: closeModal,
     });
   };
-
-  /**
-   * Sanitizes a name input string by removing control characters, normalizing whitespace,
-   * and limiting the length.
-   *
-   * @param nameInput - The raw name string to be sanitized
-   * @returns A sanitized name string with control characters removed, whitespace normalized,
-   * trimmed, and limited to 100 characters
-   *
-   * @remarks
-   * This is a basic sanitizer to prevent someone from embedding a crazy long string in the
-   * name field to use our auto-reply as a spamming tool.
-   */
-  function sanitizeName(nameInput: string): string {
-    return nameInput
-      .split("")
-      .map((character) => {
-        const characterCode = character.charCodeAt(0);
-        return characterCode <= 31 || characterCode === 127 ? " " : character;
-      })
-      .join("")
-      .replace(/\s+/g, " ")
-      .trim()
-      .slice(0, 100);
-  }
 
   return (
     <section id="volunteer" className="flex scroll-mt-20 flex-col gap-10">

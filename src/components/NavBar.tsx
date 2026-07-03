@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import VolunteerSignupModal from "./schoolPageComponents/VolunteerSignupModal";
 import { School } from "@/types/school";
 import { sendVolunteerEmail } from "@/lib/emailjs";
-import { isStrictEmail } from "@/lib/validation";
+import { isStrictEmail, sanitizeName } from "@/lib/validation";
 import { useToast } from "./Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
@@ -52,19 +52,6 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setOpen(false);
-  };
-
-  const sanitizeName = (nameInput: string): string => {
-    return nameInput
-      .split("")
-      .map((character) => {
-        const characterCode = character.charCodeAt(0);
-        return characterCode <= 31 || characterCode === 127 ? " " : character;
-      })
-      .join("")
-      .replace(/\s+/g, " ")
-      .trim()
-      .slice(0, 100);
   };
 
   const openVolunteerModal = () => {
