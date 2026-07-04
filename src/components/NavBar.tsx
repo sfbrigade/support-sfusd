@@ -126,7 +126,7 @@ const Navbar = () => {
               onClick={openVolunteerModal}
               className="font-[family:var(--font-fredoka)] rounded-lg bg-[#252525] px-4 py-2 text-xl font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             >
-              Find Your Volunteer Match
+              Volunteer Your Way
             </button>
           </div>
         </div>
@@ -196,7 +196,7 @@ const Navbar = () => {
                     onClick={openVolunteerModal}
                     className="font-[family:var(--font-fredoka)] flex w-full items-center justify-center rounded-2xl bg-[#252525] px-5 py-3.5 text-[17px] font-semibold text-white shadow-[0_10px_24px_rgba(0,0,0,0.22)]"
                   >
-                    Find Your Volunteer Match
+                    Volunteer Your Way
                   </button>
                 </div>
               </div>
