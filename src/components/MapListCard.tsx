@@ -49,7 +49,11 @@ const MapListCard = ({
   const learnMoreRef = useRef<HTMLAnchorElement>(null);
 
   const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
-    if (e.propertyName === "max-height" && isExpanded) {
+    if (
+      e.propertyName === "max-height" &&
+      isExpanded &&
+      e.currentTarget === e.target
+    ) {
       cardRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   };
@@ -80,14 +84,11 @@ const MapListCard = ({
   return (
     <div
       ref={cardRef}
-      className={`grid cursor-pointer grid-cols-10 overflow-hidden rounded-lg border-2 bg-white ${
-        isExpanded ? "max-h-[300px]" : "max-h-[104px]"
-      } transition-max-height relative duration-[700ms]`}
+      className="relative grid cursor-pointer grid-cols-10 overflow-hidden rounded-lg border-2 bg-white"
       onClick={onClick}
-      onTransitionEnd={handleTransitionEnd}
     >
       <div className="col-span-6 justify-center overflow-hidden px-4 pb-4 transition-all ease-in-out md:col-span-7">
-        <div className="flex h-[104px] flex-col justify-center">
+        <div className="flex min-h-[104px] flex-col justify-start py-2">
           {school.priority && (
             <button
               onClick={(e) => {
@@ -101,13 +102,18 @@ const MapListCard = ({
           )}
           <div className="flex grid-cols-6 flex-col md:grid md:items-center md:gap-2">
             <div className="col-span-4 font-bold md:text-xl">{name}</div>
-            <div className="col-span-2 text-gray-600 max-md:text-sm">
+            <div className="col-span-2 break-words text-gray-600 max-md:text-sm">
               {neighborhood}
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 max-md:text-sm">
+        <div
+          className={`transition-max-height overflow-hidden duration-[700ms] ${
+            isExpanded ? "max-h-[200px]" : "max-h-0"
+          } flex flex-col gap-5 max-md:text-sm`}
+          onTransitionEnd={handleTransitionEnd}
+        >
           <VolunteerList school={school} fullCard={false} />
           <Link
             ref={learnMoreRef}
@@ -123,11 +129,7 @@ const MapListCard = ({
           </Link>
         </div>
       </div>
-      <div
-        className={`transition-max-height relative col-span-4 rounded-r-lg duration-[700ms] md:col-span-3 ${
-          isExpanded ? "max-h-[300px]" : "max-h-[104px]"
-        }`}
-      >
+      <div className="relative col-span-4 min-h-[104px] rounded-r-lg md:col-span-3">
         <Image
           src={`/school-images/full/${stub}.webp`}
           placeholder="blur"
