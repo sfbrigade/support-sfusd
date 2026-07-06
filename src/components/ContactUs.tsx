@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { emailjsConfig } from "@/lib/emailjs";
+import { isStrictEmail } from "@/lib/validation";
 import { useToast } from "./Toast/ToastContext";
 
 type ContactUsProps = {
@@ -29,17 +30,6 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
   const { showToast } = useToast();
 
   /**
-   * isEmail: Validates the email input using a regular expression.
-   */
-  function isEmail(emailInput: string) {
-    let regEmail =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!regEmail.test(emailInput)) {
-      return false;
-    }
-    return true;
-  }
-  /**
    * handleChange: Updates the form data when the user types in the input fields.
    */
   function handleChange(
@@ -61,16 +51,21 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
    */
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!isEmail(formData.email)) {
+    if (!isStrictEmail(formData.email)) {
       alert("Please enter a valid email address");
       return;
     }
 
     if (form.current) {
       emailjs
-        .sendForm(emailjsConfig.volunteer.serviceId, emailjsConfig.volunteer.templateId, form.current, {
-          publicKey: emailjsConfig.volunteer.publicKey,
-        })
+        .sendForm(
+          emailjsConfig.volunteer.serviceId,
+          emailjsConfig.volunteer.templateId,
+          form.current,
+          {
+            publicKey: emailjsConfig.volunteer.publicKey,
+          },
+        )
         .then(
           () => {
             showToast("Your message has been sent!");
@@ -107,7 +102,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="mx-auto max-w-md flex flex-col gap-4"
+              className="mx-auto flex max-w-md flex-col gap-4"
             >
               <div>
                 <label className="mb-2 block text-gray-500" htmlFor="name">
@@ -178,7 +173,6 @@ const ContactUs: React.FC<ContactUsProps> = ({ handleClose }) => {
                   Cancel
                 </button>
               </div>
-              
             </form>
           </div>
         </div>

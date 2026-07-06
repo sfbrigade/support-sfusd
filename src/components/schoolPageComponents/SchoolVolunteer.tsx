@@ -1,12 +1,12 @@
 import { School } from "@/types/school";
 import Image from "next/image";
 import BannerWrapper from "./BannerWrapper";
-import Link from "next/link";
 import { blurDataURL } from "@/lib/imageConfig";
 import VolunteerList from "./VolunteerList";
 import VolunteerSignupModal from "./VolunteerSignupModal";
 import React, { useState } from "react";
 import { sendVolunteerEmail } from "@/lib/emailjs";
+import { isStrictEmail, sanitizeName } from "@/lib/validation";
 import { useToast } from "../Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
@@ -21,7 +21,7 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
 
   const handleFormSubmit = (data: { email: string; name: string }) => {
     // validate the email addr field
-    if (!isEmail(data.email)) {
+    if (!isStrictEmail(data.email)) {
       alert("Please enter a valid email address");
       return;
     }
@@ -47,35 +47,6 @@ const SchoolVolunteer: React.FC<{ school: School }> = ({ school }) => {
       onFinally: closeModal,
     });
   };
-
-  /**
-   * Sanitizes a name input string by removing control characters, normalizing whitespace,
-   * and limiting the length.
-   *
-   * @param nameInput - The raw name string to be sanitized
-   * @returns A sanitized name string with control characters removed, whitespace normalized,
-   * trimmed, and limited to 100 characters
-   *
-   * @remarks
-   * This is a basic sanitizer to prevent someone from embedding a crazy long string in the
-   * name field to use our auto-reply as a spamming tool.
-   */
-  function sanitizeName(nameInput: string): string {
-    return nameInput
-      .replace(/[\x00-\x1F\x7F]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim()
-      .slice(0, 100);
-  }
-
-  function isEmail(emailInput: string) {
-    let regEmail =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!regEmail.test(emailInput)) {
-      return false;
-    }
-    return true;
-  }
 
   return (
     <section id="volunteer" className="flex scroll-mt-20 flex-col gap-10">

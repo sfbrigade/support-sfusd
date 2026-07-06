@@ -34,7 +34,7 @@ export default function HowItWorksClient() {
       {/* Hero background — cable car + grass + Coit Tower */}
       <div className="absolute bottom-0 left-0 right-0 z-0 h-[40vw]">
         <Image
-          src="/how-it-works/hero-bg.svg"
+          src="/how-it-works/hero-bg.png"
           alt="San Francisco cable car and Coit Tower"
           fill
           className="object-contain object-bottom"
