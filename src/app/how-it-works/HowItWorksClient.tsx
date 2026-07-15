@@ -4,12 +4,44 @@ import Image from "next/image";
 import Link from "next/link";
 import StepBox from "@/components/HowItWorks/StepBox";
 import StepBoxMobile from "@/components/HowItWorks/StepBoxMobile";
+import PartnerCard from "@/components/HowItWorks/PartnerCard";
 
 const STEP_2 = {
   title: "We Match You with Opportunities",
   description:
     "Based on your responses we will connect you with our recommendation from our growing list of partner organizations, to set up a volunteer placement:",
 };
+
+const PARTNERS = [
+  {
+    logoSrc: "/how-it-works/partners-logos/organization-sf-ed-fund.svg",
+    logoAlt: "SF Ed Fund logo",
+    name: "SF Ed Fund",
+    description:
+      "It's a nonprofit that officially partners with the school district on in-school support, including volunteer placement. They typically place volunteers in classrooms Monday-Friday.",
+  },
+  {
+    logoSrc: "/how-it-works/partners-logos/organization-good-neighbor-lab.svg",
+    logoAlt: "Good Neighbor Lab logo",
+    name: "Good Neighbor Lab",
+    description:
+      "It's a nonprofit that connects San Francisco residents with local civic institutions in their neighborhoods.",
+  },
+  {
+    logoSrc: "/how-it-works/partners-logos/organization-mission-bit.svg",
+    logoAlt: "Mission Bit logo",
+    name: "Mission Bit",
+    description:
+      "a San Francisco-based nonprofit that offers free coding programs and career pathways for high school students.",
+  },
+  {
+    logoSrc: "/how-it-works/partners-logos/organization-826-valencia.svg",
+    logoAlt: "826 Valencia logo",
+    name: "826 Valencia",
+    description:
+      "a city-wide nonprofit supporting under-resourced students with writing skills.",
+  },
+];
 
 export default function HowItWorksClient() {
   return (
@@ -98,6 +130,61 @@ export default function HowItWorksClient() {
             title={STEP_2.title}
             description={STEP_2.description}
           />
+        </div>
+      </section>
+
+      {/* ===== Step 3 — Partner Organizations ===== */}
+      <section className="relative w-full overflow-hidden bg-[#D7F1FF]">
+        {/* SF skyline background (desktop) — fills the entire section */}
+        <div className="pointer-events-none absolute inset-0 z-0 hidden md:block">
+          <Image
+            src="/how-it-works/step-03-sf-skyline.png"
+            alt=""
+            aria-hidden="true"
+            fill
+            className="object-cover object-bottom"
+          />
+        </div>
+
+        {/* SF skyline background (mobile) — sits at the top */}
+        <div className="md:hidden">
+          <Image
+            src="/how-it-works/step03-mobile.svg"
+            alt=""
+            aria-hidden="true"
+            width={393}
+            height={217}
+            className="h-auto w-full"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-12 pt-8 md:px-12 md:py-16 lg:px-20">
+          {/* Header (desktop) */}
+          <div className="mb-8 hidden md:block">
+            <StepBox stepNumber={3} title="Partner Organizations" />
+          </div>
+
+          {/* Mobile: header + cards united in one white card. Desktop: transparent passthrough */}
+          <div className="rounded-[25px] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] md:bg-transparent md:p-0 md:shadow-none">
+            {/* Header (mobile) — centered number + title */}
+            <div className="mb-6 flex flex-col items-center gap-4 md:hidden">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-sunglow">
+                <span className="font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em] text-brand-navy">
+                  3
+                </span>
+              </div>
+              <h3 className="font-fredoka text-[28px] font-medium leading-none tracking-[0.02em] text-brand-azure">
+                Partner Organizations
+              </h3>
+            </div>
+
+            <div className="flex max-w-[680px] flex-col gap-4">
+              {PARTNERS.map((partner) => (
+                <PartnerCard key={partner.name} {...partner} />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>
