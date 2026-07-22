@@ -14,7 +14,7 @@ const StepBoxMobile = ({
   button,
 }: StepBoxMobileProps) => {
   return (
-    <div className="flex flex-col items-center gap-4 rounded-[25px] bg-brand-sunglow/30 p-5">
+    <div className="flex flex-col items-center gap-4 rounded-[25px] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
       <div className="flex h-9 w-9 shrink-0 items-center justify-center gap-[10px] rounded-full bg-brand-sunglow p-[10px]">
         <span className="font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em] text-brand-navy">
           {stepNumber}
