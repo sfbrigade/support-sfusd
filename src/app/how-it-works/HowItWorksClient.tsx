@@ -6,6 +6,12 @@ import StepBox from "@/components/HowItWorks/StepBox";
 import StepBoxMobile from "@/components/HowItWorks/StepBoxMobile";
 import PartnerCard from "@/components/HowItWorks/PartnerCard";
 
+const STEP_1 = {
+  title: "Take the Volunteer Survey",
+  description:
+    "You can take our Volunteer Survey to find the best match for your interests. Or Explore Schools on your own.",
+};
+
 const STEP_2 = {
   title: "We Match You with Opportunities",
   description:
@@ -46,7 +52,7 @@ const PARTNERS = [
 export default function HowItWorksClient() {
   return (
     <>
-      <section className="relative flex h-full flex-col overflow-hidden bg-[#D7F1FF]">
+      <section className="relative flex h-full flex-col overflow-hidden bg-[#E9FAFC]">
         {/* Center content */}
         <div className="z-10 flex flex-1 flex-col items-center justify-center px-4 pb-[5vh] text-center">
           <h1 className="mb-6 font-fredoka text-6xl font-semibold text-[#5B6FE8]">
@@ -94,10 +100,56 @@ export default function HowItWorksClient() {
         </div>
       </section>
 
-      {/* ===== Step 1 goes here ===== */}
+      {/* ===== Step 1 — Take the Volunteer Survey ===== */}
+      <section className="w-full bg-[#E9FAFC]">
+        {/* Desktop / tablet: full-width illustration with the step card overlaid in the center */}
+        <div className="relative hidden w-full md:block">
+          <Image
+            src="/how-it-works/step01-how-it-works.svg"
+            alt="Volunteers with a donation box and the Golden Gate Bridge"
+            width={1440}
+            height={522}
+            className="h-auto w-full"
+          />
+          <div className="absolute left-1/2 top-1/2 w-[34%] max-w-[460px] -translate-x-1/2 -translate-y-1/2">
+            <StepBox
+              stepNumber={1}
+              title={STEP_1.title}
+              description={STEP_1.description}
+              button={
+                <Link
+                  href="/survey"
+                  className="bg-brand-sunglow text-brand-navy inline-flex items-center gap-[10px] rounded-lg px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] transition-opacity hover:opacity-90"
+                >
+                  Take the Volunteer Survey
+                </Link>
+              }
+            />
+          </div>
+        </div>
+
+        {/* Mobile: centered step card (no illustration) */}
+        <div className="mx-auto flex max-w-md flex-col gap-4 px-4 py-8 md:hidden">
+          <StepBoxMobile
+            stepNumber={1}
+            title={STEP_1.title}
+            description={STEP_1.description}
+            button={
+              <Link
+                href="/survey"
+                className="bg-brand-azure inline-flex w-full items-center justify-center gap-[10px] rounded-lg px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] text-white transition-opacity hover:opacity-90"
+              >
+                Take the Volunteer Survey
+              </Link>
+            }
+          />
+        </div>
+      </section>
+
+      {/* ===== Step 1 ends ===== */}
 
       {/* ===== Step 2 — We Match You with Opportunities ===== */}
-      <section className="w-full bg-[#D7F1FF]">
+      <section className="w-full bg-[#E9FAFC]">
         {/* Desktop / tablet: full-width illustration with the step card overlaid on the right */}
         <div className="relative hidden w-full md:block">
           <Image
@@ -134,7 +186,7 @@ export default function HowItWorksClient() {
       </section>
 
       {/* ===== Step 3 — Partner Organizations ===== */}
-      <section className="relative w-full overflow-hidden bg-[#D7F1FF]">
+      <section className="relative w-full overflow-hidden bg-[#E9FAFC]">
         {/* SF skyline background (desktop) — fills the entire section */}
         <div className="pointer-events-none absolute inset-0 z-0 hidden md:block">
           <Image
@@ -169,12 +221,12 @@ export default function HowItWorksClient() {
           <div className="rounded-[25px] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] md:bg-transparent md:p-0 md:shadow-none">
             {/* Header (mobile) — centered number + title */}
             <div className="mb-6 flex flex-col items-center gap-4 md:hidden">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-sunglow">
-                <span className="font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em] text-brand-navy">
+              <div className="bg-brand-sunglow flex h-9 w-9 items-center justify-center rounded-full">
+                <span className="text-brand-navy font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em]">
                   3
                 </span>
               </div>
-              <h3 className="font-fredoka text-[28px] font-medium leading-none tracking-[0.02em] text-brand-azure">
+              <h3 className="text-brand-azure font-fredoka text-[28px] font-medium leading-none tracking-[0.02em]">
                 Partner Organizations
               </h3>
             </div>

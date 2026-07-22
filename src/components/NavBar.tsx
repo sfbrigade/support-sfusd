@@ -92,13 +92,13 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 z-40 w-full px-4 py-4 text-black md:px-4 md:py-4 ${
-        pathname === "/map" ||
-        pathname?.startsWith("/school") ||
         pathname === "/how-it-works"
-          ? "md:bg-[#D7F1FF]"
-          : pathname === "/about"
-            ? "md:bg-[#88B6FF]"
-            : ""
+          ? "md:bg-[#E9FAFC]"
+          : pathname === "/map" || pathname?.startsWith("/school")
+            ? "md:bg-[#D7F1FF]"
+            : pathname === "/about"
+              ? "md:bg-[#88B6FF]"
+              : ""
       }`}
     >
       <div className="font-[family:var(--font-fredoka)] mx-auto w-full max-w-[1280px] font-medium">
