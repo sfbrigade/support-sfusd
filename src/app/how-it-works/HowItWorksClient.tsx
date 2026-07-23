@@ -130,7 +130,7 @@ export default function HowItWorksClient() {
             alt="A schoolhouse and two volunteers being matched together"
             width={196}
             height={95}
-            className="h-auto w-full"
+            className="mx-auto h-auto w-[70%]"
           />
           <StepBoxMobile
             stepNumber={2}
