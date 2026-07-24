@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { usePostHog } from "posthog-js/react";
+import OurMission from "@/components/HomePage/OurMission";
 
 export default function HomeClient() {
   const router = useRouter();
@@ -53,6 +54,7 @@ export default function HomeClient() {
           </button>
         </section>
       </main>
+      <OurMission />
       {/* Image Container */}
       <div className="fixed inset-x-0 bottom-0 z-[-1] h-full bg-gradient-to-b from-[#7CE0ED] to-[#E3FCFF]">
         <Image
