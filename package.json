@@ -19,10 +19,12 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@gsap/react": "^2.1.2",
     "@neondatabase/serverless": "^1.1.0",
     "@prisma/client": "^5.13.0",
     "@reduxjs/toolkit": "^2.9.0",
     "dotenv": "^17.3.1",
+    "gsap": "^3.15.0",
     "image-size": "^2.0.1",
     "mapbox-gl": "^2.15.0",
     "next": "^16.1.6",

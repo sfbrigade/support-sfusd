@@ -1,16 +1,27 @@
-import type { ReactNode } from "react";
+import type { ReactNode, Ref } from "react";
 
 type StepBoxProps = {
   stepNumber: number;
   title: string;
   description?: string;
   button?: ReactNode;
+  /** Ref to the numbered badge circle — used to anchor the desktop timeline connectors. */
+  badgeRef?: Ref<HTMLDivElement>;
 };
 
-const StepBox = ({ stepNumber, title, description, button }: StepBoxProps) => {
+const StepBox = ({
+  stepNumber,
+  title,
+  description,
+  button,
+  badgeRef,
+}: StepBoxProps) => {
   return (
     <div className="flex items-start gap-[clamp(1rem,2.2vw,1.5rem)]">
-      <div className="flex h-[clamp(2.5rem,3.3vw,3rem)] w-[clamp(2.5rem,3.3vw,3rem)] shrink-0 items-center justify-center rounded-full bg-brand-sunglow">
+      <div
+        ref={badgeRef}
+        className="flex h-[clamp(2.5rem,3.3vw,3rem)] w-[clamp(2.5rem,3.3vw,3rem)] shrink-0 items-center justify-center rounded-full bg-brand-sunglow"
+      >
         <span className="font-fredoka text-[clamp(1.5rem,2.5vw,2.25rem)] font-semibold leading-none tracking-[0.02em] text-brand-navy">
           {stepNumber}
         </span>
