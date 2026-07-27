@@ -197,7 +197,7 @@ export default function HowItWorksClient() {
             easily find ways to volunteer and donate to San Francisco public
             schools.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-1 font-semibold text-gray-800">
+          <div className="invisible mt-10 flex flex-col items-center gap-1 font-semibold text-gray-800 md:visible">
             <span>Start Here</span>
             <span ref={startHereArrowRef} className="text-xl">
               ↓
