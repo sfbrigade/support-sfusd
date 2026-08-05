@@ -7,9 +7,17 @@ import { usePostHog } from "posthog-js/react";
 const ContactUs = dynamic(() => import("@/components/ContactUs"));
 
 const SOCIAL_ICONS = [
-  { src: "/icons/instagram-icon.svg", label: "Instagram" },
-  { src: "/icons/facebook-icon.svg", label: "Facebook" },
-  { src: "/icons/globe-icon.svg", label: "Website" },
+  {
+    src: "/icons/instagram-icon.svg",
+    label: "Instagram",
+    href: "https://www.instagram.com/supportsfschools/",
+  },
+  { src: "/icons/facebook-icon.svg", label: "Facebook", href: "" },
+  {
+    src: "/icons/globe-icon.svg",
+    label: "Website",
+    href: "https://www.supportsfschools.org/",
+  },
 ];
 
 const Footer = () => {
@@ -23,10 +31,10 @@ const Footer = () => {
   const handleClose = () => setShowContactForm(false);
 
   return (
-    <footer className="text-brand-raisin bg-[#FFC627] p-8 font-fredoka text-xl font-normal">
+    <footer className="bg-[#FFC627] p-8 font-fredoka text-xl font-normal text-brand-raisin">
       <ul className="flex flex-col gap-0.5">
         <li>
-          <a href="https://www.supportsfschools.org/">SupportSFschool.org</a>
+          <a href="https://www.supportsfschools.org/">SupportSFschools.org</a>
         </li>
         <li>
           <a href="https://www.supportsfschools.org/about">About Us</a>
@@ -42,11 +50,17 @@ const Footer = () => {
       </ul>
       <div className="mt-2 flex gap-2">
         {SOCIAL_ICONS.map((icon) => (
-          <a key={icon.label} aria-label={icon.label}>
+          <a
+            key={icon.label}
+            aria-label={icon.label}
+            href={icon.href || undefined}
+            target={icon.href ? "_blank" : undefined}
+            rel={icon.href ? "noopener noreferrer" : undefined}
+          >
             {/* CSS mask tints the (hardcoded-fill) SVG to raisin without editing the shared asset */}
             <span
               aria-hidden="true"
-              className="bg-brand-raisin block h-8 w-8"
+              className="block h-8 w-8 bg-brand-raisin"
               style={{
                 maskImage: `url(${icon.src})`,
                 WebkitMaskImage: `url(${icon.src})`,

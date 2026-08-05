@@ -126,7 +126,7 @@ export default function HowItWorksClient() {
               button={
                 <Link
                   href="/survey"
-                  className="bg-brand-sunglow text-brand-navy inline-flex items-center gap-[10px] rounded-lg px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] transition-opacity hover:opacity-90"
+                  className="inline-flex items-center gap-[10px] rounded-lg bg-brand-sunglow px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] text-brand-navy transition-opacity hover:opacity-90"
                 >
                   Take the Volunteer Survey
                 </Link>
@@ -144,7 +144,7 @@ export default function HowItWorksClient() {
             button={
               <Link
                 href="/survey"
-                className="bg-brand-azure inline-flex w-full items-center justify-center gap-[10px] rounded-lg px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] text-white transition-opacity hover:opacity-90"
+                className="inline-flex w-full items-center justify-center gap-[10px] rounded-lg bg-brand-azure px-4 py-3 font-lato text-base font-bold leading-7 tracking-[0.005em] text-white transition-opacity hover:opacity-90"
               >
                 Take the Volunteer Survey
               </Link>
@@ -228,12 +228,12 @@ export default function HowItWorksClient() {
           <div className="rounded-[25px] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] md:bg-transparent md:p-0 md:shadow-none">
             {/* Header (mobile) — centered number + title */}
             <div className="mb-6 flex flex-col items-center gap-4 md:hidden">
-              <div className="bg-brand-sunglow flex h-9 w-9 items-center justify-center rounded-full">
-                <span className="text-brand-navy font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-sunglow">
+                <span className="font-fredoka text-[24px] font-semibold leading-none tracking-[0.02em] text-brand-navy">
                   3
                 </span>
               </div>
-              <h3 className="text-brand-azure font-fredoka text-[28px] font-medium leading-none tracking-[0.02em]">
+              <h3 className="font-fredoka text-[28px] font-medium leading-none tracking-[0.02em] text-brand-azure">
                 Partner Organizations
               </h3>
             </div>
@@ -288,10 +288,7 @@ export default function HowItWorksClient() {
         </div>
       </section>
 
-      {/* Footer — mobile only for now */}
-      <div className="md:hidden">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }
