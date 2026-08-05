@@ -98,7 +98,9 @@ const Navbar = () => {
             ? "md:bg-[#D7F1FF]"
             : pathname === "/about"
               ? "md:bg-[#88B6FF]"
-              : ""
+              : pathname === "/" || pathname === "/image-preview"
+                ? ""
+                : "bg-[#E9FAFC]"
       }`}
     >
       <div className="font-[family:var(--font-fredoka)] mx-auto w-full max-w-[1280px] font-medium">
