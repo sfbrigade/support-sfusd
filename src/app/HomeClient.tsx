@@ -22,7 +22,7 @@ export default function HomeClient() {
   return (
     <>
       <div className="relative">
-        <div className="fixed inset-x-0 top-0 z-50">
+        <div className="fixed inset-x-0 top-[34px] z-50 md:top-[30px]">
           <Navbar />
         </div>
 
