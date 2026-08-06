@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function OurMission() {
 	return (
-		<section className="w-full bg-[#E6F8FC] py-6 md:py-12">
+		<section className="flex min-h-dvh-with-fallback w-full items-center bg-[#E6F8FC] py-6 md:py-12">
 			<div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
 				<div className="hidden items-end gap-8 md:flex lg:gap-10">
 					<div className="w-full max-w-[660px]">
@@ -21,12 +21,12 @@ export default function OurMission() {
 							Our Mission
 						</h2>
 
-						<p className="mt-5 text-[35px] leading-[1.38] text-[#2A2A2A]">
+						<p className="mt-5 text-[24px] leading-[1.38] text-[#2A2A2A]">
 							Our goal is to strengthen communities and neighborhoods by
 							<span className="font-bold"> connecting people with their local schools.</span>
 						</p>
 
-						<p className="mt-8 text-[35px] leading-[1.38] text-[#2A2A2A]">
+						<p className="mt-8 text-[24px] leading-[1.38] text-[#2A2A2A]">
 							We believe San Franciscans can be part of a school community,
 							even if they aren&apos;t parents of current students.
 						</p>
@@ -38,13 +38,13 @@ export default function OurMission() {
 						Our Mission
 					</h2>
 
-					<p className="mt-6 text-[42px] leading-[1.2] text-black">
+					<p className="mt-6 text-[20px] leading-[1.2] text-black">
 						Our goal to
 						<span className="text-[#357BE8]"> strengthen communities and neighborhoods</span>
 						<span> by connecting people with their local schools.</span>
 					</p>
 
-					<p className="mt-7 text-[42px] leading-[1.2] text-black">
+					<p className="mt-7 text-[20px] leading-[1.2] text-black">
 						We believe
 						<span className="text-[#357BE8]"> San Franciscans can be part of a school community,</span>
 						<span> even if they aren&apos;t parents of current students.</span>
