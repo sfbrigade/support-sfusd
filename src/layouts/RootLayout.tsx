@@ -65,7 +65,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="root"
-      className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/" || pathname === "/how-it-works" ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/how-it-works" ? "h-dvh-with-fallback" : "h-auto"}`}
     >
       {(pathname?.startsWith("/school") || pathname === "/") &&
         isBannerShowing && (
@@ -74,7 +74,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
             {showContactForm && <ContactUs handleClose={handleClose} />}
           </>
         )}
-      <Navbar />
+      {pathname !== "/" && <Navbar />}
       <div className="min-h-0 flex-1">{children}</div>
       <BackToTop />
     </div>
