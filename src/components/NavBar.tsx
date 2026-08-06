@@ -92,8 +92,10 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 z-40 w-full px-4 py-4 text-black md:px-4 md:py-4 ${
-        pathname === "/how-it-works"
-          ? "md:bg-[#E9FAFC]"
+        pathname === "/"
+          ? "bg-transparent"
+          : pathname === "/how-it-works"
+            ? "md:bg-[#E9FAFC]"
           : pathname === "/map" || pathname?.startsWith("/school")
             ? "md:bg-[#D7F1FF]"
             : pathname === "/about"

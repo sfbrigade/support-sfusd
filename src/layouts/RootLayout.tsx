@@ -42,6 +42,8 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     } catch {
       // Ignore storage errors; banner is still dismissed for this render session.
     }
+
+    window.dispatchEvent(new Event("beta-banner-visibility-changed"));
   };
   const handleOpen = () => {
     posthog?.capture?.("contact_us_form_opened");
@@ -70,7 +72,9 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       {(pathname?.startsWith("/school") || pathname === "/") &&
         isBannerShowing && (
           <>
-            <Banner onClose={handleBannerClose}>{bannerContent}</Banner>
+            <div data-beta-banner="true">
+              <Banner onClose={handleBannerClose}>{bannerContent}</Banner>
+            </div>
             {showContactForm && <ContactUs handleClose={handleClose} />}
           </>
         )}
