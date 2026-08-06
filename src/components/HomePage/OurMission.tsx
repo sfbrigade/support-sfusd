@@ -7,7 +7,7 @@ export default function OurMission() {
 				<div className="hidden items-end gap-8 md:flex lg:gap-10">
 					<div className="w-full max-w-[660px]">
 						<Image
-							src="/home-page/Our-Mission.png"
+							src="/home-page/Our-Mission.svg"
 							alt="Illustration showing a school and community members"
 							width={750}
 							height={460}
