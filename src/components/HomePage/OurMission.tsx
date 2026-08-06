@@ -39,7 +39,7 @@ export default function OurMission() {
 					</h2>
 
 					<p className="mt-6 text-[20px] leading-[1.2] text-black">
-						Our goal to
+						Our goal is to
 						<span className="text-[#357BE8]"> strengthen communities and neighborhoods</span>
 						<span> by connecting people with their local schools.</span>
 					</p>
