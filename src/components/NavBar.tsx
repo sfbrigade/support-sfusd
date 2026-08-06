@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,7 +12,7 @@ import { isStrictEmail, sanitizeName } from "@/lib/validation";
 import { useToast } from "./Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
-const Navbar = () => {
+const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
   const [isOpen, setOpen] = useState(false);
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
   const { showToast } = useToast();
@@ -91,6 +92,7 @@ const Navbar = () => {
 
   return (
     <nav
+      style={{ top: `${topOffset}px` } as CSSProperties}
       className={`sticky top-0 z-40 w-full px-4 py-4 text-black md:px-4 md:py-4 ${
         pathname === "/"
           ? "bg-transparent"

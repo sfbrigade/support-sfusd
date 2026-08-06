@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { usePostHog } from "posthog-js/react";
@@ -11,51 +10,6 @@ import Navbar from "@/components/NavBar";
 export default function HomeClient() {
   const router = useRouter();
   const posthog = usePostHog();
-  const [bannerOffset, setBannerOffset] = useState(0);
-
-  useEffect(() => {
-    let resizeObserver: ResizeObserver | null = null;
-
-    const getBannerElement = () =>
-      document.querySelector('[data-beta-banner="true"]') as HTMLElement | null;
-
-    const updateBannerOffset = () => {
-      const bannerElement = getBannerElement();
-      setBannerOffset(bannerElement?.offsetHeight ?? 0);
-    };
-
-    const reconnectResizeObserver = () => {
-      resizeObserver?.disconnect();
-
-      const bannerElement = getBannerElement();
-      if (!bannerElement || typeof ResizeObserver === "undefined") {
-        return;
-      }
-
-      resizeObserver = new ResizeObserver(() => {
-        updateBannerOffset();
-      });
-
-      resizeObserver.observe(bannerElement);
-    };
-
-    const mutationObserver = new MutationObserver(() => {
-      updateBannerOffset();
-      reconnectResizeObserver();
-    });
-
-    updateBannerOffset();
-    reconnectResizeObserver();
-
-    mutationObserver.observe(document.body, { childList: true, subtree: true });
-    window.addEventListener("resize", updateBannerOffset);
-
-    return () => {
-      mutationObserver.disconnect();
-      resizeObserver?.disconnect();
-      window.removeEventListener("resize", updateBannerOffset);
-    };
-  }, []);
 
   const handleClick = () => {
     posthog?.capture("explore_schools_clicked");
@@ -69,7 +23,10 @@ export default function HomeClient() {
   return (
     <>
       <div className="relative">
-        <div className="fixed inset-x-0 top-0 z-50">
+        <div
+          className="fixed inset-x-0 z-50"
+          style={{ top: "var(--navbar-top-offset, 0px)" }}
+        >
           <Navbar />
         </div>
 
@@ -119,8 +76,8 @@ export default function HomeClient() {
           </section>
         </main>
       </div>
-      <OurProcess />
       <OurMission />
+      <OurProcess />
     </>
   );
 }
