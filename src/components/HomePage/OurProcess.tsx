@@ -14,7 +14,7 @@ const PROCESS_STEPS: ProcessStep[] = [
     number: 1,
     title: "Take our Volunteer Survey",
     description: "to find the opportunity that matches your interests.",
-    imageSrc: "/HomePage/our-process-left.png",
+    imageSrc: "/HomePage/our-process-left.svg",
     imageAlt: "Volunteers filling out a survey",
   },
   {
@@ -28,7 +28,7 @@ const PROCESS_STEPS: ProcessStep[] = [
     number: 3,
     title: "...from growing list of",
     description: "partner organizations, to set up a volunteer placement.",
-    imageSrc: "/HomePage/our-process-right.png",
+    imageSrc: "/HomePage/our-process-right.svg",
     imageAlt: "Community members and landmarks representing partner organizations",
   },
 ];

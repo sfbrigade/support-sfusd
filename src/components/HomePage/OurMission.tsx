@@ -52,7 +52,7 @@ export default function OurMission() {
 
           <div className="mt-8">
             <Image
-              src="/home-page/Our-Mission.png"
+              src="/HomePage/Our-Mission.svg"
               alt="Illustration showing a school and community members"
               width={900}
               height={900}
