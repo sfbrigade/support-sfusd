@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function OurMission() {
 	return (
-		<section className="flex min-h-dvh-with-fallback w-full items-center bg-[#E6F8FC] py-6 md:py-12">
-			<div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-				<div className="hidden items-end gap-8 md:flex lg:gap-10">
-					<div className="w-full max-w-[660px]">
+		<section className="flex min-h-dvh-with-fallback w-full items-center bg-[#E6F8FC] py-10 md:py-12">
+			<div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+				<div className="hidden items-end gap-8 md:flex lg:gap-10 xl:gap-14">
+					<div className="w-full max-w-[660px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[880px]">
 						<Image
 							src="/home-page/Our-Mission.svg"
 							alt="Illustration showing a school and community members"
@@ -16,17 +16,17 @@ export default function OurMission() {
 						/>
 					</div>
 
-          <div className="w-full rounded-[26px] bg-white p-8 lg:p-10">
-            <h2 className="text-[48px] font-medium leading-none text-[#357BE8]">
+          <div className="w-full rounded-[26px] bg-white p-8 lg:p-10 xl:p-12 2xl:p-14">
+            <h2 className="text-[48px] font-medium leading-none text-[#357BE8] lg:text-[52px] xl:text-[60px] 2xl:text-[68px]">
               Our Mission
             </h2>
 
-            <p className="mt-5 text-[24px] leading-[1.38] text-[#2A2A2A]">
+            <p className="mt-5 text-[24px] leading-[1.38] text-[#2A2A2A] lg:mt-6 lg:text-[26px] xl:text-[28px] 2xl:text-[30px]">
               Our goal is to strengthen communities and neighborhoods by
               <span className="font-bold"> connecting people with their local schools.</span>
             </p>
 
-            <p className="mt-8 text-[24px] leading-[1.38] text-[#2A2A2A]">
+            <p className="mt-8 text-[24px] leading-[1.38] text-[#2A2A2A] lg:mt-9 lg:text-[26px] xl:text-[28px] 2xl:text-[30px]">
               We believe San Franciscans can be part of a school community,
               even if they aren&apos;t parents of current students.
             </p>
@@ -52,7 +52,7 @@ export default function OurMission() {
 
           <div className="mt-8">
             <Image
-              src="/HomePage/Our-Mission.svg"
+              src="/home-page/Our-Mission.svg"
               alt="Illustration showing a school and community members"
               width={900}
               height={900}
