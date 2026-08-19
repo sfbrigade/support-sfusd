@@ -230,7 +230,7 @@ export default function Opportunities() {
         </h2>
 
         <p className="mt-3 max-w-[560px] text-center text-[15px] text-[#5B5B5B] md:mt-4 md:max-w-[640px] md:text-[18px] lg:max-w-[700px] lg:text-[20px] xl:max-w-[820px] xl:text-[22px]">
-          Here are some schools that have available volunteer opportunities right now.
+          Here are some organizations offering volunteer opportunities right now.
         </p>
 
         <div className="relative mt-5 flex w-full items-center gap-3 lg:mt-6 xl:mt-6">
