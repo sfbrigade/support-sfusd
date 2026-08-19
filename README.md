@@ -70,6 +70,8 @@ To run this project locally, please perform the following steps:
 
     - Alternatively, you can open [http://[LAN_IP]:3000](http://[LAN_IP]:3000) on another device, such as a phone on the same network. Replace `LAN_IP` with the IP address of your development server, which can be found inside of the "LAN url" part of the `npm run dev` log.
 
+For the Opportunities CMS and `/admin` workflow, see [Payload Opportunities setup](docs/payload-opportunities.md).
+
 <br>
 
 # Mapbox

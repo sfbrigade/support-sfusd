@@ -1,5 +1,9 @@
+import { withPayload } from "@payloadcms/next/withPayload";
+import { ip } from "address";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  agentRules: false,
   images: {},
   async rewrites() {
     return [
@@ -25,7 +29,7 @@ const nextConfig = {
   },
 };
 
-nextConfig.webpack = (config, _context) => {
+nextConfig.webpack = (config) => {
   config.module.rules.push({
     test: /\.pdf$/,
     use: {
@@ -39,9 +43,9 @@ nextConfig.webpack = (config, _context) => {
   return config;
 };
 
-module.exports = nextConfig;
+export default withPayload(nextConfig);
 
 /* log local IP address to console to easily visit dev server on LAN */
 if (process.env.NODE_ENV === "development") {
-  console.info(`				LAN url: http://${require("address").ip()}:3000`);
+  console.info(`				LAN url: http://${ip()}:3000`);
 }
