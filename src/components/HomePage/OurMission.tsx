@@ -2,7 +2,12 @@ import Image from "next/image";
 
 export default function OurMission() {
 	return (
-		<section className="flex min-h-dvh-with-fallback w-full items-center bg-[#E6F8FC] py-10 md:py-12">
+		<section
+			className="flex min-h-dvh-with-fallback w-full items-center bg-[#E6F8FC] pb-10 md:pb-12"
+			style={{
+				paddingTop: "calc(var(--navbar-top-offset, 0px) + clamp(5.5rem, 12vh, 7.5rem))",
+			}}
+		>
 			<div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
 				<div className="hidden items-end gap-8 md:flex lg:gap-10 xl:gap-14">
 					<div className="w-full max-w-[660px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[880px]">

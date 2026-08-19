@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { usePostHog } from "posthog-js/react";
 import OurProcess from "@/components/HomePage/OurProcess";
 import OurMission from "@/components/HomePage/OurMission";
+import Opportunities from "@/components/HomePage/Opportunities";
 import Navbar from "@/components/NavBar";
 
 export default function HomeClient() {
@@ -78,6 +79,7 @@ export default function HomeClient() {
       </div>
       <OurMission />
       <OurProcess />
+      <Opportunities />
     </>
   );
 }

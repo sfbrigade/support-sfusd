@@ -5,47 +5,12 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import VolunteerSignupModal from "./schoolPageComponents/VolunteerSignupModal";
-import { School } from "@/types/school";
-import { sendVolunteerEmail } from "@/lib/emailjs";
-import { isStrictEmail, sanitizeName } from "@/lib/validation";
-import { useToast } from "./Toast/ToastContext";
 import { usePostHog } from "posthog-js/react";
 
 const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
   const [isOpen, setOpen] = useState(false);
-  const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
-  const { showToast } = useToast();
   const posthog = usePostHog();
   const pathname = usePathname();
-
-  const volunteerSignupSchool: School = {
-    stub: "support-sf-schools",
-    name: "Support SF Public Schools",
-    address: null,
-    neighborhood: null,
-    priority: false,
-    latitude: "0",
-    longitude: "0",
-    about: "",
-    about_bp: [],
-    volunteer_form_url: "",
-    donation_url: null,
-    donation_text: "",
-    testimonial: null,
-    testimonial_author: null,
-    testimonial_video: null,
-    testimonial_img: null,
-    notable_video: null,
-    principal: "",
-    instagram_url: null,
-    facebook_url: null,
-    website_url: null,
-    metrics: [],
-    programs: [],
-    zipcode: null,
-    school_type: [],
-  };
 
   const toggleMenu = () => {
     setOpen((previousState) => !previousState);
@@ -55,39 +20,8 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
     setOpen(false);
   };
 
-  const openVolunteerModal = () => {
-    closeMenu();
+  const trackVolunteerClick = () => {
     posthog?.capture?.("navbar_volunteer_match_clicked");
-    setIsVolunteerModalOpen(true);
-  };
-
-  const closeVolunteerModal = () => {
-    setIsVolunteerModalOpen(false);
-  };
-
-  const handleVolunteerFormSubmit = (data: { email: string; name: string }) => {
-    if (!isStrictEmail(data.email)) {
-      showToast("Please enter a valid email address.");
-      return;
-    }
-
-    const sanitized = {
-      ...data,
-      name: sanitizeName(data.name),
-    };
-
-    sendVolunteerEmail(sanitized, {
-      onSuccess: () =>
-        showToast("Volunteer form submitted successfully! Thank you!"),
-      onError: (reason) => {
-        showToast("Volunteer form submission failed.");
-        console.error(
-          "FAILED: error sending volunteer email to Support SF",
-          reason,
-        );
-      },
-      onFinally: closeVolunteerModal,
-    });
   };
 
   return (
@@ -123,19 +57,17 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
             <Link href="/map" className="hover:underline">
               Explore Schools
             </Link>
-            <Link href="/how-it-works" className="hover:underline">
-              How It Works
-            </Link>
+          
             <Link href="/about" className="hover:underline">
               About Us
             </Link>
-            <button
-              type="button"
-              onClick={openVolunteerModal}
-              className="font-[family:var(--font-fredoka)] rounded-lg bg-[#252525] px-4 py-2 text-xl font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
+            <Link
+              href="/how-it-works"
+              onClick={trackVolunteerClick}
+              className="font-[family:var(--font-fredoka)] rounded-lg bg-[#FFC627] px-4 py-2 text-xl font-semibold text-black shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             >
               Volunteer Your Way
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -189,9 +121,6 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
                     <Link href="/map" onClick={closeMenu}>
                       Explore Schools
                     </Link>
-                    <Link href="/how-it-works" onClick={closeMenu}>
-                      How It Works
-                    </Link>
                     <Link href="/about" onClick={closeMenu}>
                       About Us
                     </Link>
@@ -199,26 +128,21 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
 
                   <div className="my-5 h-px bg-[#D9D9D9]" />
 
-                  <button
-                    type="button"
-                    onClick={openVolunteerModal}
-                    className="font-[family:var(--font-fredoka)] flex w-full items-center justify-center rounded-2xl bg-[#252525] px-5 py-3.5 text-[17px] font-semibold text-white shadow-[0_10px_24px_rgba(0,0,0,0.22)]"
+                  <Link
+                    href="/how-it-works"
+                    onClick={() => {
+                      closeMenu();
+                      trackVolunteerClick();
+                    }}
+                    className="font-[family:var(--font-fredoka)] flex w-full items-center justify-center rounded-2xl bg-[#FFC627] px-5 py-3.5 text-[17px] font-semibold text-black shadow-[0_10px_24px_rgba(0,0,0,0.22)]"
                   >
                     Volunteer Your Way
-                  </button>
+                  </Link>
                 </div>
               </div>
             </>
           )}
         </div>
-
-        <VolunteerSignupModal
-          isOpen={isVolunteerModalOpen}
-          onClose={closeVolunteerModal}
-          school={volunteerSignupSchool}
-          onSubmit={handleVolunteerFormSubmit}
-          showSchoolContext={false}
-        />
       </div>
     </nav>
   );

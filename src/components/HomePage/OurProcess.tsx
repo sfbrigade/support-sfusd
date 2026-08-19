@@ -35,7 +35,12 @@ const PROCESS_STEPS: ProcessStep[] = [
 
 export default function OurProcess() {
   return (
-    <section className="flex min-h-dvh-with-fallback w-full items-center bg-[#FDF6E8] py-10 md:py-12">
+    <section
+      className="flex min-h-dvh-with-fallback w-full items-center bg-[#FDF6E8] pb-10 md:pb-12"
+      style={{
+        paddingTop: "calc(var(--navbar-top-offset, 0px) + clamp(5.5rem, 12vh, 7.5rem))",
+      }}
+    >
       <div className="mx-auto flex w-full max-w-[1600px] flex-col items-center px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <h2 className="text-center text-[38px] font-medium leading-none text-[#357BE8] md:text-[48px] lg:text-[52px] xl:text-[60px] 2xl:text-[68px]">
           Our Process
@@ -70,7 +75,7 @@ export default function OurProcess() {
         </div>
 
         <Link
-          href="/survey"
+          href="/how-it-works"
           className="mt-8 inline-flex items-center justify-center rounded-md bg-[#3A86FF] px-5 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90 md:mt-10 md:px-8 md:py-3 md:text-base lg:mt-12 lg:text-lg"
         >
           Volunteer Your Way
