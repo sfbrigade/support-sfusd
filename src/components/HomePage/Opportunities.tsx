@@ -202,11 +202,20 @@ export default function Opportunities() {
   const [page, setPage] = useState(0);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-    const updateItemsPerView = () => setItemsPerView(mediaQuery.matches ? 3 : 1);
+    const mqDesktop = window.matchMedia("(min-width: 1024px)");
+    const mqTablet = window.matchMedia("(min-width: 640px)");
+    const updateItemsPerView = () => {
+      if (mqDesktop.matches) setItemsPerView(3);
+      else if (mqTablet.matches) setItemsPerView(2);
+      else setItemsPerView(1);
+    };
     updateItemsPerView();
-    mediaQuery.addEventListener("change", updateItemsPerView);
-    return () => mediaQuery.removeEventListener("change", updateItemsPerView);
+    mqDesktop.addEventListener("change", updateItemsPerView);
+    mqTablet.addEventListener("change", updateItemsPerView);
+    return () => {
+      mqDesktop.removeEventListener("change", updateItemsPerView);
+      mqTablet.removeEventListener("change", updateItemsPerView);
+    };
   }, []);
 
   const totalPages = Math.max(1, Math.ceil(OPPORTUNITIES.length / itemsPerView));
@@ -249,7 +258,7 @@ export default function Opportunities() {
             onClick={() => goToPage(page - 1)}
             aria-label="Previous opportunities"
             disabled={totalPages <= 1}
-            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 md:flex lg:h-12 lg:w-12"
+            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 sm:flex lg:h-12 lg:w-12"
           >
             <ChevronIcon direction="left" />
           </button>
@@ -262,7 +271,7 @@ export default function Opportunities() {
               {Array.from({ length: totalPages }).map((_, pageIndex) => (
                 <div
                   key={pageIndex}
-                  className="grid w-full shrink-0 grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 lg:gap-10"
+                  className="grid w-full shrink-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:gap-10"
                 >
                   {OPPORTUNITIES.slice(
                     pageIndex * itemsPerView,
@@ -280,7 +289,7 @@ export default function Opportunities() {
             onClick={() => goToPage(page + 1)}
             aria-label="Next opportunities"
             disabled={totalPages <= 1}
-            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 md:flex lg:h-12 lg:w-12"
+            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 sm:flex lg:h-12 lg:w-12"
           >
             <ChevronIcon direction="right" />
           </button>
