@@ -72,8 +72,12 @@ workflow applies committed Payload migrations before the Next.js production
 build. Setup and day-to-day commands are documented in
 `docs/payload-opportunities.md`.
 
-Local uploads are written to the ignored `media/` directory. This works for
-development, but it is not durable on Vercel's ephemeral filesystem.
+Local uploads are written to the ignored `media/` directory. On Vercel, the
+official Payload Vercel Blob adapter stores uploads in a connected public Blob
+store instead. Vercel uploads go directly from Payload Admin to Blob storage,
+require the platform-provided `BLOB_READ_WRITE_TOKEN`, and use randomized
+filename suffixes. A missing token fails a Vercel build rather than falling
+back to ephemeral disk storage.
 
 The integration has been checked with type generation, import-map generation,
 TypeScript validation, Prisma schema validation, Payload migrations, a
@@ -83,8 +87,9 @@ anonymous writes.
 
 ## Recommended next steps
 
-1. Add a persistent storage adapter, such as Payload's Vercel Blob adapter,
-   before relying on uploaded media in preview or production deployments.
+1. Create and connect a public Vercel Blob store for every deployed environment,
+   then re-upload or migrate any existing local-only Media files that must be
+   available there.
 2. Build the public Featured Opportunities component using
    `getOpportunities`, including loading, empty, and error states.
 3. Review the production migration process so database migrations run safely

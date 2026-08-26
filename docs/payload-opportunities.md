@@ -116,12 +116,27 @@ independently.
   `first-register` flow works only while the Users collection is empty; later
   users are created by an authenticated admin.
 
-## Media limitation
+## Media storage
 
-Uploads currently use the local `media/` directory. This is suitable for local
-development only. Vercel filesystems are ephemeral, so uploaded files in branch
-previews or production are not persistent.
+Storage is selected automatically by the runtime environment:
 
-TODO: add Payload's Vercel Blob storage adapter before relying on uploaded media
-in persistent deployments. That change is intentionally separate from this
-initial integration.
+- Ordinary local development (including `vercel dev`) writes uploads to the
+  ignored `media/` directory.
+- Vercel preview and production deployments (`VERCEL=1`) use the official
+  Payload Vercel Blob adapter. Local disk writes are disabled in those
+  deployments.
+
+To prepare a Vercel project, create a **public** Blob store in the project's
+Storage settings and connect it to the environments that host this application.
+Vercel then supplies `BLOB_READ_WRITE_TOKEN`; redeploy after connecting the
+store. A Vercel build fails early when this token is missing so a deployment
+cannot silently fall back to its ephemeral filesystem.
+
+Uploads from Payload Admin go directly from the browser to Blob storage. This
+avoids Vercel's server upload-size limit, still requires an authenticated
+Payload user, and adds a random filename suffix to prevent collisions. Public
+Blob URLs are also allowlisted for Next.js image optimization.
+
+This change does not copy existing local files into Blob storage. Any Media
+records that must work on Vercel need their files uploaded to the connected
+Blob store (re-uploading through Payload Admin is the simplest option).

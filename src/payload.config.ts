@@ -1,4 +1,5 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
+import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import path from "node:path";
 import { buildConfig } from "payload";
 import sharp from "sharp";
@@ -10,6 +11,15 @@ const payloadDatabaseURL =
   process.env.PAYLOAD_DATABASE_URL ||
   process.env.POSTGRES_URL_NON_POOLING ||
   "";
+const useVercelBlobStorage =
+  process.env.VERCEL === "1" && process.env.NODE_ENV !== "development";
+const vercelBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
+
+if (useVercelBlobStorage && !vercelBlobToken) {
+  throw new Error(
+    "BLOB_READ_WRITE_TOKEN is required for Payload media storage on Vercel.",
+  );
+}
 
 export default buildConfig({
   admin: {
@@ -27,6 +37,17 @@ export default buildConfig({
     // Payload owns this schema; Prisma continues to own the public schema.
     schemaName: "payload",
   }),
+  plugins: [
+    vercelBlobStorage({
+      addRandomSuffix: true,
+      clientUploads: true,
+      collections: {
+        [Media.slug]: true,
+      },
+      enabled: useVercelBlobStorage,
+      token: vercelBlobToken,
+    }),
+  ],
   secret: process.env.PAYLOAD_SECRET || "",
   sharp,
   typescript: {
