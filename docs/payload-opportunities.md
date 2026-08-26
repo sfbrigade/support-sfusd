@@ -25,8 +25,15 @@ URLs.
 
    `PAYLOAD_DATABASE_URL` must be a server-only Postgres connection string for
    the same database Prisma uses. A direct/non-pooled connection is preferred
-   for schema operations. When it is omitted, Payload falls back to
-   `POSTGRES_URL_NON_POOLING`.
+   for schema operations. When it is omitted, Payload falls back first to
+   `POSTGRES_URL_NON_POOLING`, then to the existing pooled
+   `POSTGRES_PRISMA_URL`.
+
+   For Vercel Preview and Production, configure at least
+   `POSTGRES_PRISMA_URL`, `PAYLOAD_SECRET`, and `BLOB_READ_WRITE_TOKEN` in the
+   corresponding deployment environments. Prefer also configuring
+   `POSTGRES_URL_NON_POOLING` or `PAYLOAD_DATABASE_URL` with Neon's direct
+   connection URL. Do not use a `localhost` URL on Vercel.
 
 3. Start local Postgres using the existing instructions in
    [`docker/README.md`](../docker/README.md), then prepare the existing Prisma
@@ -101,11 +108,11 @@ npm run payload:migrate
 ```
 
 Review generated migrations to confirm every statement remains inside the
-`payload` schema. The existing Vercel build command now runs
-`payload migrate` after its existing Prisma preparation step and before
-`next build`, so committed Payload migrations are applied on ordinary branch
-deployments. `npm run payload:migrate` remains available for running them
-independently.
+`payload` schema. The Vercel build command runs the production-safe
+`prisma migrate deploy`, followed by `payload migrate` and `next build`, so both
+sets of committed migrations are applied on ordinary branch deployments.
+Neither migration step resets existing data. `npm run payload:migrate` remains
+available for running Payload migrations independently.
 
 ## Access behavior
 

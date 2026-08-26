@@ -60,16 +60,19 @@ tables must not be added to `prisma/schema.prisma`, and Prisma should not be
 used to migrate them.
 
 Payload reads its server-only connection from `PAYLOAD_DATABASE_URL`, falling
-back to `POSTGRES_URL_NON_POOLING`, and uses `PAYLOAD_SECRET` for authentication
-and cryptographic operations. The required variables are documented in
-`.env.example`.
+back to `POSTGRES_URL_NON_POOLING` and then `POSTGRES_PRISMA_URL`. It rejects
+missing connection information and localhost database URLs on Vercel rather
+than allowing the PostgreSQL client to silently target the deployment
+container. Payload uses `PAYLOAD_SECRET` for authentication and cryptographic
+operations. The required variables are documented in `.env.example`.
 
 ## Development and deployment support
 
 Package scripts were added for generating Payload types and the admin import
 map, creating and applying migrations, and running TypeScript checks. The build
-workflow applies committed Payload migrations before the Next.js production
-build. Setup and day-to-day commands are documented in
+workflow applies committed Prisma migrations with `prisma migrate deploy`,
+then applies Payload migrations before the Next.js production build. It does
+not reset deployed data. Setup and day-to-day commands are documented in
 `docs/payload-opportunities.md`.
 
 Local uploads are written to the ignored `media/` directory. On Vercel, the
@@ -92,8 +95,8 @@ anonymous writes.
    available there.
 2. Build the public Featured Opportunities component using
    `getOpportunities`, including loading, empty, and error states.
-3. Review the production migration process so database migrations run safely
-   and separately from any destructive Prisma reset behavior.
+3. Consider moving database migrations from the application build into a
+   dedicated release step if deployment concurrency or database scale grows.
 4. Add automated access-control and API tests for public reads, authenticated
    writes, media relationships, and URL validation.
 5. Revisit editorial workflow needs after real usage; add drafts, publishing,

@@ -10,12 +10,35 @@ import { Users } from "./collections/Users.ts";
 const payloadDatabaseURL =
   process.env.PAYLOAD_DATABASE_URL ||
   process.env.POSTGRES_URL_NON_POOLING ||
+  process.env.POSTGRES_PRISMA_URL ||
   "";
-const useVercelBlobStorage =
+const isVercelDeployment =
   process.env.VERCEL === "1" && process.env.NODE_ENV !== "development";
 const vercelBlobToken = process.env.BLOB_READ_WRITE_TOKEN;
 
-if (useVercelBlobStorage && !vercelBlobToken) {
+if (!payloadDatabaseURL) {
+  throw new Error(
+    "Payload requires PAYLOAD_DATABASE_URL, POSTGRES_URL_NON_POOLING, or POSTGRES_PRISMA_URL.",
+  );
+}
+
+if (isVercelDeployment) {
+  let payloadDatabaseHostname: string;
+
+  try {
+    payloadDatabaseHostname = new URL(payloadDatabaseURL).hostname;
+  } catch {
+    throw new Error("Payload received an invalid PostgreSQL connection URL.");
+  }
+
+  if (["127.0.0.1", "::1", "localhost"].includes(payloadDatabaseHostname)) {
+    throw new Error(
+      "Payload cannot use a localhost PostgreSQL connection in a Vercel deployment.",
+    );
+  }
+}
+
+if (isVercelDeployment && !vercelBlobToken) {
   throw new Error(
     "BLOB_READ_WRITE_TOKEN is required for Payload media storage on Vercel.",
   );
@@ -44,7 +67,7 @@ export default buildConfig({
       collections: {
         [Media.slug]: true,
       },
-      enabled: useVercelBlobStorage,
+      enabled: isVercelDeployment,
       token: vercelBlobToken,
     }),
   ],
