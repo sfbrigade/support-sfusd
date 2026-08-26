@@ -33,7 +33,7 @@ if (isVercelDeployment) {
 
   if (["127.0.0.1", "::1", "localhost"].includes(payloadDatabaseHostname)) {
     throw new Error(
-      "Payload cannot use a localhost PostgreSQL connection in a Vercel deployment.",
+      `Payload cannot use a localhost PostgreSQL connection in a Vercel deployment: ${payloadDatabaseURL}`,
     );
   }
 }
