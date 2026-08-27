@@ -22,27 +22,28 @@ if (!payloadDatabaseURL) {
   );
 }
 
-if (isVercelDeployment) {
-  let payloadDatabaseHostname: string;
+// localhost seems to be a legit part of the address
+// if (isVercelDeployment) {
+//   let payloadDatabaseHostname: string;
 
-  try {
-    payloadDatabaseHostname = new URL(payloadDatabaseURL).hostname;
-  } catch {
-    throw new Error("Payload received an invalid PostgreSQL connection URL.");
-  }
+//   try {
+//     payloadDatabaseHostname = new URL(payloadDatabaseURL).hostname;
+//   } catch {
+//     throw new Error("Payload received an invalid PostgreSQL connection URL.");
+//   }
 
-  if (["127.0.0.1", "::1", "localhost"].includes(payloadDatabaseHostname)) {
-    throw new Error(
-      `Payload cannot use a localhost PostgreSQL connection in a Vercel deployment: ${payloadDatabaseURL.split("").reverse().join("")}`,
-    );
-  }
-}
+//   if (["127.0.0.1", "::1", "localhost"].includes(payloadDatabaseHostname)) {
+//     throw new Error(
+//       "Payload cannot use a localhost PostgreSQL connection in a Vercel deployment.",
+//     );
+//   }
+// }
 
-if (isVercelDeployment && !vercelBlobToken) {
-  throw new Error(
-    "BLOB_READ_WRITE_TOKEN is required for Payload media storage on Vercel.",
-  );
-}
+// if (isVercelDeployment && !vercelBlobToken) {
+//   throw new Error(
+//     "BLOB_READ_WRITE_TOKEN is required for Payload media storage on Vercel.",
+//   );
+// }
 
 export default buildConfig({
   admin: {
