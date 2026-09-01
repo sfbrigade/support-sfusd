@@ -95,6 +95,12 @@ async function main() {
     }),
   );
   for (const opportunity of opportunities) {
+    opportunity.start_date = opportunity.start_date
+      ? new Date(opportunity.start_date)
+      : null;
+    opportunity.end_date = opportunity.end_date
+      ? new Date(opportunity.end_date)
+      : null;
     await prisma.opportunity.create({
       data: opportunity,
     });
