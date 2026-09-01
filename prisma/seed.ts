@@ -88,6 +88,17 @@ async function main() {
       data: addPrismaCreateStatements(school),
     });
   }
+
+  const opportunities = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "opportunities.json"), {
+      encoding: "utf-8",
+    }),
+  );
+  for (const opportunity of opportunities) {
+    await prisma.opportunity.create({
+      data: opportunity,
+    });
+  }
 }
 
 main()
