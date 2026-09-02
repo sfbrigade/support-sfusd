@@ -85,7 +85,7 @@
     "ts-node": "^10.9.2",
     "tsx": "4.22.4",
     "typescript": "^5.2.2",
-    "vercel": "^33.5.3"
+    "vercel": "^59.5.0"
   },
   "prettier": {
     "plugins": [
