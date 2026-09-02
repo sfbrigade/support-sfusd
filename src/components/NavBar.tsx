@@ -96,15 +96,15 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
       className={`sticky top-0 z-40 w-full px-4 py-4 text-black md:px-4 md:py-4 ${
         pathname === "/"
           ? "bg-transparent"
-          : pathname === "/how-it-works"
+          : pathname === "/volunteer-your-way"
             ? "md:bg-[#E9FAFC]"
-          : pathname === "/map" || pathname?.startsWith("/school")
-            ? "md:bg-[#D7F1FF]"
-            : pathname === "/about"
-              ? "md:bg-[#88B6FF]"
-              : pathname === "/" || pathname === "/image-preview"
-                ? ""
-                : "bg-[#E9FAFC]"
+            : pathname === "/map" || pathname?.startsWith("/school")
+              ? "md:bg-[#D7F1FF]"
+              : pathname === "/about"
+                ? "md:bg-[#88B6FF]"
+                : pathname === "/" || pathname === "/image-preview"
+                  ? ""
+                  : "bg-[#E9FAFC]"
       }`}
     >
       <div className="font-[family:var(--font-fredoka)] mx-auto w-full max-w-[1280px] font-medium">
@@ -123,7 +123,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
             <Link href="/map" className="hover:underline">
               Explore Schools
             </Link>
-            <Link href="/how-it-works" className="hover:underline">
+            <Link href="/volunteer-your-way" className="hover:underline">
               How It Works
             </Link>
             <Link href="/about" className="hover:underline">
@@ -189,7 +189,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
                     <Link href="/map" onClick={closeMenu}>
                       Explore Schools
                     </Link>
-                    <Link href="/how-it-works" onClick={closeMenu}>
+                    <Link href="/volunteer-your-way" onClick={closeMenu}>
                       How It Works
                     </Link>
                     <Link href="/about" onClick={closeMenu}>
