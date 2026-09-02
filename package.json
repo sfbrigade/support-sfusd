@@ -28,6 +28,7 @@
     "@neondatabase/serverless": "^1.1.0",
     "@payloadcms/db-postgres": "3.88.0",
     "@payloadcms/next": "3.88.0",
+    "@payloadcms/storage-vercel-blob": "3.88.0",
     "@payloadcms/ui": "3.88.0",
     "@prisma/client": "^5.13.0",
     "@reduxjs/toolkit": "^2.9.0",

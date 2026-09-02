@@ -1,10 +1,25 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 import { ip } from "address";
 
+const vercelBlobStoreId = process.env.BLOB_READ_WRITE_TOKEN?.match(
+  /^vercel_blob_rw_([a-z\d]+)_[a-z\d]+$/i,
+)?.[1]?.toLowerCase();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   agentRules: false,
-  images: {},
+  images: {
+    remotePatterns: vercelBlobStoreId
+      ? [
+          {
+            hostname: `${vercelBlobStoreId}.public.blob.vercel-storage.com`,
+            pathname: "/**",
+            port: "",
+            protocol: "https",
+          },
+        ]
+      : [],
+  },
   async rewrites() {
     return [
       {
