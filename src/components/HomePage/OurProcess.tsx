@@ -44,7 +44,7 @@ export default function OurProcess() {
         paddingTop: "calc(var(--navbar-top-offset, 0px) + clamp(5.5rem, 12vh, 7.5rem))",
       }}
     >
-      <div className="mx-auto flex w-full max-w-[1600px] flex-col items-center px-4 sm:px-6 lg:px-8 xl:px-10 max-[809px]:max-w-[350px] min-[810px]:max-[1199px]:max-w-[730px] min-[1440px]:px-[72px] min-[1920px]:px-[88px] min-[2560px]:px-[96px]">
+      <div className="mx-auto flex w-full max-w-[1600px] flex-col items-center px-4 sm:px-6 lg:px-8 xl:px-10 max-[809px]:max-w-[350px] max-[809px]:px-0 min-[810px]:max-[1199px]:max-w-[730px] min-[810px]:max-[1199px]:px-0 min-[1440px]:px-[72px] min-[1920px]:px-[88px] min-[2560px]:px-[96px]">
         <h2 className="text-center text-[32px] font-medium leading-none text-[#357BE8] xl:text-[60px] min-[810px]:text-[56px] min-[1440px]:text-[64px] min-[1920px]:text-[72px] min-[2560px]:text-[80px]">
           Our Process
         </h2>

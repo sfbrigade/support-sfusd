@@ -27,7 +27,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
   return (
     <nav
       style={{ top: `${topOffset}px` } as CSSProperties}
-      className={`sticky top-0 z-40 w-full px-4 py-4 text-black md:px-4 md:py-4 ${
+      className={`sticky top-0 z-40 w-full py-4 text-black md:py-4 ${
         pathname === "/"
           ? "bg-transparent"
           : pathname === "/how-it-works"
@@ -41,7 +41,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
                 : "bg-[#E9FAFC]"
       }`}
     >
-      <div className="font-[family:var(--font-fredoka)] mx-auto w-full max-w-[1280px] font-medium">
+      <div className="font-[family:var(--font-fredoka)] mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-10 font-medium max-[809px]:max-w-[350px] max-[809px]:px-0 min-[810px]:max-[1199px]:max-w-[730px] min-[810px]:max-[1199px]:px-0 min-[1440px]:px-[72px] min-[1920px]:px-[88px] min-[2560px]:px-[96px]">
         {/* Desktop Navigation */}
         <div className="hidden items-center justify-between rounded-2xl bg-white px-4 py-2 md:flex">
           <Link
