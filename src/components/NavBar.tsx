@@ -55,7 +55,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
 
           <div className="flex items-center gap-8 text-xl">
             <Link href="/map" className="hover:underline">
-              Explore Schools
+              Find a Public School
             </Link>
           
             <Link href="/about" className="hover:underline">
@@ -119,7 +119,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
                 <div className="font-[family:var(--font-fredoka)] ml-auto w-full max-w-[340px] rounded-[26px] bg-white px-7 py-6 shadow-[0_20px_50px_rgba(0,0,0,0.16)] ring-1 ring-black/5">
                   <div className="flex flex-col gap-6 text-[17px] font-semibold text-[#10263A]">
                     <Link href="/map" onClick={closeMenu}>
-                      Explore Schools
+                      Find a Public School
                     </Link>
                     <Link href="/about" onClick={closeMenu}>
                       About Us

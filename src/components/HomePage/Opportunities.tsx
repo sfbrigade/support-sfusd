@@ -162,17 +162,17 @@ function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
       />
 
       <div className="flex flex-1 flex-col gap-1.5 p-5 lg:p-5 xl:p-5">
-        <p className="italic text-[13px] text-black lg:text-[15px]">{opportunity.provider}</p>
+        <p className="italic text-[10px] text-black min-[810px]:text-[12px] min-[1440px]:text-[12px] min-[1920px]:text-[13px] min-[2560px]:text-[14px]">{opportunity.provider}</p>
 
-        <h3 className="text-[18px] font-medium leading-snug text-[#2A2A2A] lg:text-[20px] xl:text-[22px]">
+        <h3 className="text-[14px] font-medium leading-snug text-[#2A2A2A] xl:text-[22px] min-[810px]:text-[16px] min-[1440px]:text-[20px] min-[1920px]:text-[22px] min-[2560px]:text-[24px]">
           {opportunity.title}
         </h3>
 
-        <p className="text-[14px] leading-snug text-[#5B5B5B] lg:text-[15px] xl:text-[16px]">
+        <p className="text-[12px] leading-snug text-[#5B5B5B] xl:text-[16px] min-[810px]:text-[14px] min-[1440px]:text-[20px] min-[1920px]:text-[22px] min-[2560px]:text-[24px]">
           {opportunity.description}
         </p>
 
-        <div className="mt-1 flex flex-col gap-1.5 text-[13px] text-[#5B5B5B] lg:text-[14px]">
+        <div className="mt-1 flex flex-col gap-1.5 text-[12px] text-[#5B5B5B] min-[810px]:text-[14px] min-[1440px]:text-[12px] min-[1920px]:text-[13px] min-[2560px]:text-[14px]">
           <span className="flex items-center gap-2">
             <CalendarIcon />
             {opportunity.date}
@@ -185,9 +185,9 @@ function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
 
         <Link
           href="/survey"
-          className="mt-auto inline-flex w-fit items-center gap-2 self-start rounded-md border border-[#3A86FF] bg-white px-4 py-1.5 text-sm font-semibold text-[#3A86FF] transition hover:bg-[#EAF3FF] lg:px-5 lg:py-2"
+          className="mt-auto inline-flex w-fit items-center gap-2 self-start rounded-md border border-[#3A86FF] bg-white px-4 py-1.5 text-sm font-semibold text-[#3A86FF] transition hover:bg-[#EAF3FF] lg:px-5 lg:py-2 min-[810px]:text-[16px] min-[1440px]:text-[16px] min-[1920px]:text-[18px] min-[2560px]:text-[20px]"
         >
-          Get Started
+          Sign up on their website
           <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#3A86FF]">
             <ArrowRightIcon />
           </span>
@@ -202,20 +202,11 @@ export default function Opportunities() {
   const [page, setPage] = useState(0);
 
   useEffect(() => {
-    const mqDesktop = window.matchMedia("(min-width: 1024px)");
-    const mqTablet = window.matchMedia("(min-width: 640px)");
-    const updateItemsPerView = () => {
-      if (mqDesktop.matches) setItemsPerView(3);
-      else if (mqTablet.matches) setItemsPerView(2);
-      else setItemsPerView(1);
-    };
+    const mqDesktop = window.matchMedia("(min-width: 810px)");
+    const updateItemsPerView = () => setItemsPerView(mqDesktop.matches ? 3 : 1);
     updateItemsPerView();
     mqDesktop.addEventListener("change", updateItemsPerView);
-    mqTablet.addEventListener("change", updateItemsPerView);
-    return () => {
-      mqDesktop.removeEventListener("change", updateItemsPerView);
-      mqTablet.removeEventListener("change", updateItemsPerView);
-    };
+    return () => mqDesktop.removeEventListener("change", updateItemsPerView);
   }, []);
 
   const totalPages = Math.max(1, Math.ceil(OPPORTUNITIES.length / itemsPerView));
@@ -228,18 +219,18 @@ export default function Opportunities() {
 
   return (
     <section
-      className="flex min-h-dvh-with-fallback w-full items-center bg-[#FDF6E8] pb-6 md:pb-7"
+      className="flex w-full items-center bg-[#FDF6E8] pb-[60px] min-[810px]:min-h-dvh-with-fallback min-[810px]:pb-[80px]"
       style={{
         paddingTop: "calc(var(--navbar-top-offset, 0px) + clamp(5.5rem, 12vh, 7.5rem))",
       }}
     >
-      <div className="relative mx-auto flex w-full max-w-[1600px] flex-col items-center px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
-        <h2 className="text-center text-[38px] font-medium leading-none text-[#357BE8] md:text-[48px] lg:text-[52px] xl:text-[60px] 2xl:text-[68px]">
+      <div className="relative mx-auto flex w-full max-w-[1600px] flex-col items-center px-4 sm:px-6 lg:px-8 xl:px-10 max-[809px]:max-w-[350px] min-[810px]:max-[1199px]:max-w-[730px] min-[1440px]:px-[72px] min-[1920px]:px-[88px] min-[2560px]:px-[96px]">
+        <h2 className="text-center text-[32px] font-medium leading-none text-[#357BE8] xl:text-[60px] min-[810px]:text-[56px] min-[1440px]:text-[64px] min-[1920px]:text-[72px] min-[2560px]:text-[80px]">
           Featured Opportunities
         </h2>
 
-        <p className="mt-3 max-w-[560px] text-center text-[15px] text-[#5B5B5B] md:mt-4 md:max-w-[640px] md:text-[18px] lg:max-w-[700px] lg:text-[20px] xl:max-w-[820px] xl:text-[22px]">
-          Here are some organizations offering volunteer opportunities right now.
+        <p className="mt-3 max-w-[350px] text-center text-[14px] text-[#5B5B5B] md:max-w-[640px] lg:max-w-[700px] xl:max-w-[820px] xl:text-[22px] min-[810px]:text-[16px] min-[1440px]:text-[24px] min-[1920px]:text-[28px] min-[2560px]:text-[32px]">
+          Here are some upcoming volunteer opportunities you can sign up for today.
         </p>
 
         <div className="relative mt-5 flex w-full items-center gap-3 lg:mt-6 xl:mt-6">
@@ -250,7 +241,7 @@ export default function Opportunities() {
             height={174}
             aria-hidden="true"
             priority={false}
-            className="pointer-events-none absolute -top-[70px] right-[10px] z-0 hidden w-[90px] md:block lg:-top-[88px] lg:right-[12px] lg:w-[110px] xl:-top-[105px] xl:right-[16px] xl:w-[130px]"
+            className="pointer-events-none absolute -top-[70px] right-[10px] z-0 hidden w-[90px] min-[810px]:block lg:-top-[88px] lg:right-[12px] lg:w-[110px] xl:-top-[105px] xl:right-[16px] xl:w-[130px]"
           />
 
           <button
@@ -258,7 +249,7 @@ export default function Opportunities() {
             onClick={() => goToPage(page - 1)}
             aria-label="Previous opportunities"
             disabled={totalPages <= 1}
-            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 sm:flex lg:h-12 lg:w-12"
+            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 min-[810px]:flex lg:h-12 lg:w-12"
           >
             <ChevronIcon direction="left" />
           </button>
@@ -271,7 +262,7 @@ export default function Opportunities() {
               {Array.from({ length: totalPages }).map((_, pageIndex) => (
                 <div
                   key={pageIndex}
-                  className="grid w-full shrink-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:gap-10"
+                  className="grid w-full shrink-0 grid-cols-1 gap-6 min-[810px]:grid-cols-3 min-[810px]:gap-4 lg:gap-8 xl:gap-10"
                 >
                   {OPPORTUNITIES.slice(
                     pageIndex * itemsPerView,
@@ -289,7 +280,7 @@ export default function Opportunities() {
             onClick={() => goToPage(page + 1)}
             aria-label="Next opportunities"
             disabled={totalPages <= 1}
-            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 sm:flex lg:h-12 lg:w-12"
+            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#357BE8] shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition hover:bg-[#EAF3FF] disabled:pointer-events-none disabled:opacity-0 min-[810px]:flex lg:h-12 lg:w-12"
           >
             <ChevronIcon direction="right" />
           </button>
@@ -322,13 +313,13 @@ export default function Opportunities() {
             className="w-[80px] lg:w-[100px] xl:w-[110px]"
           />
 
-          <p className="text-[15px] text-[#2A2A2A] lg:text-[18px] xl:text-[20px]">
-            Don&apos;t see what interests you? Fill out our volunteer form.
+          <p className="text-[14px] text-[#2A2A2A] lg:text-[18px] xl:text-[20px]">
+            Looking to get involved a different way? Start here:
           </p>
 
           <Link
             href="/how-it-works"
-            className="inline-flex items-center justify-center rounded-md bg-[#3A86FF] px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 lg:px-8 lg:py-3 lg:text-base"
+            className="inline-flex items-center justify-center rounded-md bg-[#3A86FF] px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 lg:px-8 lg:py-3 lg:text-base min-[1440px]:text-[16px] min-[1920px]:text-[18px] min-[2560px]:text-[20px]"
           >
             Volunteer Your Way
           </Link>
