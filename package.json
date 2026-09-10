@@ -14,10 +14,12 @@
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier . --write",
+    "test:a11y": "playwright install && playwright test",
     "image-sync": "tsx prisma/image-sync.ts",
     "data-sync": "tsx prisma/data-sync.ts"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.11.3",
     "@emailjs/browser": "^4.3.3",
     "@neondatabase/serverless": "^1.1.0",
     "@prisma/client": "^5.13.0",
@@ -39,6 +41,7 @@
     "@eslint/eslintrc": "^3.3.4",
     "@eslint/js": "^9.39.3",
     "@next/eslint-plugin-next": "^16.1.6",
+    "@playwright/test": "^1.61.0",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
