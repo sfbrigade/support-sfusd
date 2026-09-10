@@ -86,30 +86,37 @@ You need to sign up for Mapbox to run the project locally.
 
 We're using Prisma as our ORM. If you're unsure of what it is or what it does here is a [link](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma#how-does-prisma-orm-work) to the prisma documentation regarding how it works and why its used
 
+> **Production no longer resets on every deploy.** The `build` script now runs `prisma migrate deploy`, which only applies migrations that haven't been applied yet — it never drops or wipes existing data. A full wipe + reseed only happens when someone explicitly runs `npm run db-reset-and-seed` (see [Seeding](#seeding) below).
+
 ### Model changes
 
 [Prisma documentation on prototyping schema](https://www.prisma.io/docs/orm/prisma-migrate/workflows/prototyping-your-schema)
 
 - If you want to make changes to any model in prisma, the schema file within the prisma folder is where those changes will take place
-- Once you have made the changes to a model you're going to run this command in your terminal
-
-  - The CLI will ask if you want to continue knowing that you will lose data, because we are seeding data and there is no user changes being made to our data this is completely acceptable
+- For **local prototyping only**, you can push schema changes straight to your local database without creating a migration file:
 
   ```sh
      npx prisma db push
   ```
 
-- This will execute the changes required to make the vercel postgres database schema reflect the state of our prisma schema
+- Once you're happy with the model changes, create a real migration so the change is tracked and can reach production via `prisma migrate deploy`:
+
+  ```sh
+     npx prisma migrate dev --name <describe-the-change>
+  ```
+
+  This writes a new folder under `prisma/migrations/` — commit it along with your schema change. `migrate deploy` (run automatically on every production build) only applies migrations from this folder, so a schema change that was only ever pushed with `db push` will never reach production.
 
 ### Seeding
 
-- After running `npx prisma db push` we lose all the data so we need to seed our database with all the school information, run this command in your terminal after making changes to the model
-
-  - it should be noted that if you're making changes to the model the seed script will also need to be updated to account for the new fields that were added
+- `prisma/seed.ts` populates the database from `prisma/schools.json` using `create` (not `upsert`), so it only works against an **empty** database — it's not safe to run against a database that already has data in it.
+- Production keeps its data across deploys now. To intentionally wipe the database and reseed it from scratch (e.g. after a model change, or to reset stale data), run:
 
   ```sh
-     npx prisma db seed
+     npm run db-reset-and-seed
   ```
+
+  This is destructive — it drops all data, reapplies every migration, then reseeds from `prisma/schools.json`. Only run it against a database you're fine erasing (point `.env` at local/Docker Postgres for local testing, or at the Vercel Postgres URLs if you specifically intend to reset production).
 
   <br>
 
