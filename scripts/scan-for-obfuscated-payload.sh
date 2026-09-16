@@ -26,6 +26,7 @@ EXCLUDE_ARGS=(
   ':!.next/*'
   ':!node_modules/*'
   ':!prisma/schools.json'
+  ':!scripts/scan-for-obfuscated-payload.sh'
 )
 
 echo "== Check 1: known obfuscator signature =="
