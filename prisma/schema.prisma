@@ -36,6 +36,7 @@ model School {
   website_url        String?
   metrics            Metric[]
   programs           Program[]
+  opportunities      Opportunity[]
 }
 
 model Metric {
@@ -57,6 +58,21 @@ model Program {
   url      String?
   img      String?
   category ProgramCategory
+}
+
+model Opportunity {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  organization  String
+  title         String
+  description   String
+  start_date    DateTime? @db.Date
+  end_date      DateTime? @db.Date
+  time_text     String?
+  is_year_round Boolean   @default(false)
+  location      String
+  school_stub   String?
+  school        School?   @relation(fields: [school_stub], references: [stub])
+  is_test       Boolean   @default(false)
 }
 
 enum MetricCategory {
