@@ -1,0 +1,34 @@
+name: Repo mirror backup
+
+# Creates a full, restorable snapshot (every branch, tag, and PR ref) as a
+# git bundle and stores it as a workflow artifact on a schedule. Runs
+# independently of any one developer's machine.
+#
+# To restore from a downloaded bundle:
+#   git clone support-sfusd-<date>.bundle restored-repo
+#   cd restored-repo && git push --mirror <target-remote-url>
+on:
+  schedule:
+    - cron: "0 8 * * 0" # every Sunday at 08:00 UTC
+  workflow_dispatch: {} # allow running it manually from the Actions tab
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror-clone the repo
+        run: |
+          git clone --mirror https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git mirror.git
+
+      - name: Create bundle
+        run: |
+          DATE=$(date +%Y%m%d)
+          git -C mirror.git bundle create "../support-sfusd-$DATE.bundle" --all
+          git -C mirror.git bundle verify "../support-sfusd-$DATE.bundle"
+          echo "BUNDLE_NAME=support-sfusd-$DATE.bundle" >> "$GITHUB_ENV"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.BUNDLE_NAME }}
+          path: ${{ env.BUNDLE_NAME }}
+          retention-days: 90
