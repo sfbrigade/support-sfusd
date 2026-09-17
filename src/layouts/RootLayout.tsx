@@ -102,7 +102,9 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     </>
   );
 
-  const navbarTopOffset = isBannerShowing ? bannerHeight + NAVBAR_BANNER_GAP : 0;
+  const navbarTopOffset = isBannerShowing
+    ? bannerHeight + NAVBAR_BANNER_GAP
+    : 0;
   const rootLayoutStyle = {
     "--navbar-top-offset": `${navbarTopOffset}px`,
   } as CSSProperties;
@@ -110,7 +112,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="root"
-      className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/how-it-works" ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/volunteer-your-way" ? "h-dvh-with-fallback" : "h-auto"}`}
       style={rootLayoutStyle}
     >
       {isBannerShowing && (
