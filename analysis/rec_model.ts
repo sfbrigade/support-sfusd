@@ -15,7 +15,7 @@ export class Recommender {
   _rules = [[19, 20], [18], [23, 24], [30], [23, 24, 25, 26, 28, 29]];
 
   _partners = ["826", "MB", "EF", "GNL"];
-  _partner_requirements = [[0, 2], [0, 1], [2, 3, 4], [0]];
+  _partner_requirements = [[0, 2], [0, 1], [2, 3, 4], []];
 
   wts(i: number, j: number) {
     return this._weights[i * this._partners.length + j];
