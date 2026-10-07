@@ -356,7 +356,7 @@ export default function MapPageClient(props: Props) {
 
       {/* Main Content Area */}
       <div
-        className={`relative mx-auto flex h-auto flex-col overflow-auto ${isMobileLikeLayout ? "" : "md:min-h-0 md:flex-1 md:overflow-hidden md:gap-4 md:p-4 lg:w-10/12 2xl:w-2/3"} ${isMapView ? " w-full" : ""}`}
+        className={`relative mx-auto flex h-auto flex-col overflow-auto ${isMobileLikeLayout ? "" : "md:min-h-0 md:flex-1 md:overflow-hidden md:gap-4 md:p-10 lg:w-10/12 2xl:w-2/3"} ${isMapView ? " w-full" : ""}`}
       >
         {/* DESKTOP ONLY */}
         <div
