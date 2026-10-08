@@ -55,7 +55,7 @@ export default function OurProcess() {
               key={step.number}
               className="relative mx-auto w-full max-w-[350px] rounded-[10px] bg-white px-4 pb-4 pt-5 text-center shadow-[0_2px_8px_rgba(0,0,0,0.06)] md:max-w-[320px] md:px-6 md:pb-6 md:pt-7 lg:max-w-[380px] lg:px-7 lg:pb-7 lg:pt-8 xl:max-w-[440px] xl:px-8 2xl:max-w-[480px]"
             >
-              <div className="absolute -top-3 left-1/2 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-[#3A86FF] text-xs font-bold text-white lg:h-7 lg:w-7 lg:text-sm xl:h-8 xl:w-8 min-[1440px]:text-[12px] min-[1920px]:text-[13px] min-[2560px]:text-[14px]">
+              <div className="absolute -top-5 left-1/2 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full bg-[#3A86FF] text-sm font-bold text-white lg:h-9 lg:w-9 lg:text-base xl:h-10 xl:w-10 xl:text-base min-[1440px]:text-[12px] min-[1920px]:text-[13px] min-[2560px]:text-[14px]">
                 {step.number}
               </div>
 
