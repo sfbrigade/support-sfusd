@@ -1,0 +1,18 @@
+name: Security scan
+
+# Runs on every push (any branch) and every PR, independent of what any
+# individual developer has pulled locally. This is the server-side backstop
+# for the postcss.config.js obfuscated-payload incident (Sept 2026) —
+# a stale/infected branch gets caught here even if someone pushes or opens
+# a PR without first pulling the fix.
+on:
+  push:
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan for obfuscated payload / suspicious concealment
+        run: bash scripts/scan-for-obfuscated-payload.sh
