@@ -58,7 +58,7 @@ export default function HomeClient() {
             </div>
 
             <Link
-              href="/how-it-works"
+              href="/volunteer-your-way"
               onClick={trackHeroVolunteerClick}
               className="flex items-center justify-center gap-3 rounded-lg bg-amber-400 px-4 py-4 lg:px-8 shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             >

@@ -30,15 +30,15 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
       className={`sticky top-0 z-40 w-full py-4 text-black md:py-4 ${
         pathname === "/"
           ? "bg-transparent"
-          : pathname === "/how-it-works"
+          : pathname === "/volunteer-your-way"
             ? "md:bg-[#E9FAFC]"
-          : pathname === "/map" || pathname?.startsWith("/school")
-            ? "md:bg-[#D7F1FF]"
-            : pathname === "/about"
-              ? "md:bg-[#88B6FF]"
-              : pathname === "/" || pathname === "/image-preview"
-                ? ""
-                : "bg-[#E9FAFC]"
+            : pathname === "/map" || pathname?.startsWith("/school")
+              ? "md:bg-[#D7F1FF]"
+              : pathname === "/about"
+                ? "md:bg-[#88B6FF]"
+                : pathname === "/" || pathname === "/image-preview"
+                  ? ""
+                  : "bg-[#E9FAFC]"
       }`}
     >
       <div className="font-[family:var(--font-fredoka)] mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-10 font-medium max-[809px]:max-w-[350px] max-[809px]:px-0 min-[810px]:max-[1199px]:max-w-[730px] min-[810px]:max-[1199px]:px-0 min-[1440px]:px-[72px] min-[1920px]:px-[88px] min-[2560px]:px-[96px]">
@@ -62,7 +62,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
               About Us
             </Link>
             <Link
-              href="/how-it-works"
+              href="/volunteer-your-way"
               onClick={trackVolunteerClick}
               className="font-[family:var(--font-fredoka)] rounded-lg bg-[#FFC627] px-4 py-2 text-xl font-semibold text-black shadow-[0_6px_14px_rgba(0,0,0,0.25)]"
             >
@@ -129,7 +129,7 @@ const Navbar = ({ topOffset = 0 }: { topOffset?: number }) => {
                   <div className="my-5 h-px bg-[#D9D9D9]" />
 
                   <Link
-                    href="/how-it-works"
+                    href="/volunteer-your-way"
                     onClick={() => {
                       closeMenu();
                       trackVolunteerClick();
