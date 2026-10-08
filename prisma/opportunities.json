@@ -1,0 +1,38 @@
+[
+  {
+    "organization": "SF Ed Fund",
+    "title": "Back to School Setup Day",
+    "description": "Help set up teacher's classrooms!",
+    "start_date": "2026-08-14",
+    "end_date": null,
+    "time_text": "9AM-4PM",
+    "is_year_round": false,
+    "location": "City-wide",
+    "school_stub": null,
+    "is_test": true
+  },
+  {
+    "organization": "Mission Bit",
+    "title": "Coding project volunteer",
+    "description": "Help students with summer coding projects!",
+    "start_date": "2026-06-23",
+    "end_date": "2026-07-30",
+    "time_text": "4-6PM",
+    "is_year_round": false,
+    "location": "329 Bryant St. SF",
+    "school_stub": null,
+    "is_test": true
+  },
+  {
+    "organization": "Good Neighbor Lab",
+    "title": "Cantonese translation support",
+    "description": "Translate elementary school communication into Cantonese",
+    "start_date": null,
+    "end_date": null,
+    "time_text": null,
+    "is_year_round": true,
+    "location": "Remote",
+    "school_stub": null,
+    "is_test": true
+  }
+]
