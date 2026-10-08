@@ -81,7 +81,7 @@ export default function OurProcess() {
         </div>
 
         <Link
-          href="/how-it-works"
+          href="/volunteer-your-way"
           className="mt-8 inline-flex items-center justify-center rounded-md bg-[#3A86FF] px-5 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90 md:mt-10 md:px-8 md:py-3 md:text-base min-[1440px]:text-[16px] min-[1920px]:text-[18px] min-[2560px]:text-[20px]"
         >
           Volunteer Your Way

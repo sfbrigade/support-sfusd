@@ -318,7 +318,7 @@ export default function Opportunities() {
           </p>
 
           <Link
-            href="/how-it-works"
+            href="/volunteer-your-way"
             className="inline-flex items-center justify-center rounded-md bg-[#3A86FF] px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 lg:px-8 lg:py-3 lg:text-base min-[1440px]:text-[16px] min-[1920px]:text-[18px] min-[2560px]:text-[20px]"
           >
             Volunteer Your Way
