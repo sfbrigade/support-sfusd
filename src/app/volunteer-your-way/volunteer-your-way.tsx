@@ -33,7 +33,7 @@ const TIMELINE_MOB1_FROM = { x: 2, y: 4 }; // near the hero "Start Here" sign
 const TIMELINE_MOB1_TO = { x: 4, y: 125.5 }; // near step 1's circle
 const TIMELINE_MOB2_FROM = { x: 60, y: 20 }; // near step 1's circle
 const TIMELINE_MOB2_TO = { x: 85, y: 260 }; // near step 2's circle
-const TIMELINE_MOB3_FROM = { x: -30, y: 20a }; // near step 2's circle
+const TIMELINE_MOB3_FROM = { x: -30, y: 20 }; // near step 2's circle
 const TIMELINE_MOB3_TO = { x: -35, y: 290 }; // near step 3's circle
 const CIRCLE_GAP_MOB = 14;
 
