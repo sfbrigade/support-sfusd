@@ -14,9 +14,11 @@ type Circle = { center: Point; radius: number };
 /**
  * Finds the numbered circle badge (rendered by StepBox) inside a step's
  * positioning wrapper, so we can measure where it actually landed on screen.
+ * Falls back to the wrapper itself when there's no badge inside it — e.g. a
+ * plain marker div used to anchor a line to a non-circle point.
  */
 function findCircle(el: HTMLElement | null): HTMLElement | null {
-  return el?.querySelector<HTMLElement>(".bg-brand-sunglow") ?? null;
+  return el?.querySelector<HTMLElement>(".bg-brand-sunglow") ?? el;
 }
 
 function measureCircle(

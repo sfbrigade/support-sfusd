@@ -27,6 +27,16 @@ const CIRCLE_GAP = 30;
 const UP = { x: 0, y: -1 };
 const DOWN = { x: 0, y: 1 };
 
+// Mobile connector lines (hero → 1 → 2 → 3), one asset per segment — same
+// idea as the desktop lines, but no scroll reveal for now, just placement.
+const TIMELINE_MOB1_FROM = { x: 2, y: 4 }; // near the hero "Start Here" sign
+const TIMELINE_MOB1_TO = { x: 4, y: 125.5 }; // near step 1's circle
+const TIMELINE_MOB2_FROM = { x: 60, y: 20 }; // near step 1's circle
+const TIMELINE_MOB2_TO = { x: 85, y: 260 }; // near step 2's circle
+const TIMELINE_MOB3_FROM = { x: -30, y: 20a }; // near step 2's circle
+const TIMELINE_MOB3_TO = { x: -35, y: 290 }; // near step 3's circle
+const CIRCLE_GAP_MOB = 14;
+
 const STEP_1 = {
   title: "Share Your Preferences",
   description: (
@@ -57,6 +67,11 @@ export default function VolunteerYourWayClient() {
   const circle2Ref = useRef<HTMLDivElement>(null);
   const circle3Ref = useRef<HTMLDivElement>(null);
 
+  const heroMobRef = useRef<HTMLDivElement>(null);
+  const circle1MobRef = useRef<HTMLDivElement>(null);
+  const circle2MobRef = useRef<HTMLDivElement>(null);
+  const circle3MobRef = useRef<HTMLDivElement>(null);
+
   const timeline1Style = useConnectorLine(
     containerRef,
     circle1Ref,
@@ -84,6 +99,35 @@ export default function VolunteerYourWayClient() {
     },
   );
 
+  // Mobile connector lines — static placement only, no scroll reveal yet.
+  const timelineMob1Style = useConnectorLine(
+    containerRef,
+    heroMobRef,
+    circle1MobRef,
+    TIMELINE_MOB1_FROM,
+    TIMELINE_MOB1_TO,
+    62,
+    { toGap: CIRCLE_GAP_MOB, toDirection: UP },
+  );
+  const timelineMob2Style = useConnectorLine(
+    containerRef,
+    circle1MobRef,
+    circle2MobRef,
+    TIMELINE_MOB2_FROM,
+    TIMELINE_MOB2_TO,
+    249,
+    { toGap: CIRCLE_GAP_MOB, toDirection: UP },
+  );
+  const timelineMob3Style = useConnectorLine(
+    containerRef,
+    circle2MobRef,
+    circle3MobRef,
+    TIMELINE_MOB3_FROM,
+    TIMELINE_MOB3_TO,
+    148,
+    { toGap: CIRCLE_GAP_MOB, toDirection: UP },
+  );
+
   // Scroll-driven reveal — purely additive clip-paths layered on top of the
   // positioning above; doesn't affect left/top/width/rotation at all.
   const timeline1ScrollProgress = useScrollRevealProgress(
@@ -95,6 +139,23 @@ export default function VolunteerYourWayClient() {
     circle2Ref,
     circle3Ref,
     0.55,
+  );
+
+  // Same scroll-driven reveal for the mobile lines.
+  const timelineMob1ScrollProgress = useScrollRevealProgress(
+    heroMobRef,
+    circle1MobRef,
+    0.9,
+  );
+  const timelineMob2ScrollProgress = useScrollRevealProgress(
+    circle1MobRef,
+    circle2MobRef,
+    0.9,
+  );
+  const timelineMob3ScrollProgress = useScrollRevealProgress(
+    circle2MobRef,
+    circle3MobRef,
+    0.9,
   );
 
   // A soft gradient instead of a hard clip edge: the dotted line curves
@@ -115,6 +176,9 @@ export default function VolunteerYourWayClient() {
   };
   const timeline1PartBMask = revealMask(timeline1ScrollProgress);
   const timeline2Mask = revealMask(timeline2ScrollProgress);
+  const timelineMob1Mask = revealMask(timelineMob1ScrollProgress);
+  const timelineMob2Mask = revealMask(timelineMob2ScrollProgress);
+  const timelineMob3Mask = revealMask(timelineMob3ScrollProgress);
 
   return (
     <>
@@ -171,6 +235,54 @@ export default function VolunteerYourWayClient() {
           />
         )}
 
+        {/* Dotted connector lines (mobile only) — same scroll-driven reveal
+            as the desktop lines. */}
+        {timelineMob1Style && (
+          <Image
+            src="/volunteer-your-way/Timeline1-mob.svg"
+            alt=""
+            aria-hidden="true"
+            width={62}
+            height={130}
+            className="pointer-events-none absolute z-20 block h-auto md:hidden"
+            style={{
+              ...timelineMob1Style,
+              maskImage: timelineMob1Mask,
+              WebkitMaskImage: timelineMob1Mask,
+            }}
+          />
+        )}
+        {timelineMob2Style && (
+          <Image
+            src="/volunteer-your-way/Timeline2-mob.svg"
+            alt=""
+            aria-hidden="true"
+            width={249}
+            height={298}
+            className="pointer-events-none absolute z-20 block h-auto md:hidden"
+            style={{
+              ...timelineMob2Style,
+              maskImage: timelineMob2Mask,
+              WebkitMaskImage: timelineMob2Mask,
+            }}
+          />
+        )}
+        {timelineMob3Style && (
+          <Image
+            src="/volunteer-your-way/Timeline3-mob.svg"
+            alt=""
+            aria-hidden="true"
+            width={148}
+            height={327}
+            className="pointer-events-none absolute z-20 block h-auto md:hidden"
+            style={{
+              ...timelineMob3Style,
+              maskImage: timelineMob3Mask,
+              WebkitMaskImage: timelineMob3Mask,
+            }}
+          />
+        )}
+
         <section className="relative flex flex-col overflow-hidden bg-[#E9FAFC] md:h-full">
           {/* Center content */}
           <div className="z-10 flex flex-1 flex-col items-center justify-start px-4 pt-20 text-center md:justify-center md:pb-[5vh] md:pt-0">
@@ -201,13 +313,19 @@ export default function VolunteerYourWayClient() {
           </div>
 
           {/* Hero background (mobile) */}
-          <div className="mb-8 mt-6 md:hidden">
+          <div className="relative mb-8 mt-6 md:hidden">
             <Image
               src="/volunteer-your-way/bg-mobile.svg"
               alt=""
               width={393}
               height={110}
               className="h-auto w-full"
+            />
+            {/* Plain marker (no circle badge) anchoring where the mobile
+                connector line starts, next to the "Start Here" sign. */}
+            <div
+              ref={heroMobRef}
+              className="absolute left-[53%] top-[38%] h-px w-px"
             />
           </div>
         </section>
@@ -236,7 +354,10 @@ export default function VolunteerYourWayClient() {
           </div>
 
           {/* Mobile: centered step card (no illustration) */}
-          <div className="mx-auto flex max-w-md flex-col gap-4 px-4 py-8 md:hidden">
+          <div
+            ref={circle1MobRef}
+            className="relative z-10 mx-auto flex max-w-md flex-col gap-4 px-4 py-8 md:hidden"
+          >
             <StepBoxMobile
               stepNumber={1}
               title={STEP_1.title}
@@ -277,7 +398,10 @@ export default function VolunteerYourWayClient() {
           </div>
 
           {/* Mobile: illustration stacked above the step card */}
-          <div className="mx-auto flex max-w-md flex-col gap-4 px-4 py-8 md:hidden">
+          <div
+            ref={circle2MobRef}
+            className="relative z-10 mx-auto flex max-w-md flex-col gap-4 px-4 py-8 md:hidden"
+          >
             <StepBoxMobile
               stepNumber={2}
               title={STEP_2.title}
@@ -321,7 +445,10 @@ export default function VolunteerYourWayClient() {
             </div>
 
             {/* Mobile: centered step card */}
-            <div className="mx-auto flex max-w-md flex-col gap-4 py-4 md:hidden">
+            <div
+              ref={circle3MobRef}
+              className="relative z-10 mx-auto flex max-w-md flex-col gap-4 py-4 md:hidden"
+            >
               <StepBoxMobile
                 stepNumber={3}
                 title={STEP_3.title}
