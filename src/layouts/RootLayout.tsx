@@ -109,10 +109,18 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     "--navbar-top-offset": `${navbarTopOffset}px`,
   } as CSSProperties;
 
+  const isDvhLocked =
+    (isMapView && pathname === "/map") || pathname === "/volunteer-your-way";
+  const heightClass = isDvhLocked
+    ? "h-dvh-with-fallback"
+    : pathname === "/survey" || pathname === "/survey/questions"
+      ? "h-auto md:h-dvh-with-fallback"
+      : "h-auto";
+
   return (
     <div
       id="root"
-      className={`flex flex-col px-0 ${(isMapView && pathname === "/map") || pathname === "/volunteer-your-way" ? "h-dvh-with-fallback" : "h-auto"}`}
+      className={`flex flex-col px-0 ${heightClass}`}
       style={rootLayoutStyle}
     >
       {isBannerShowing && (
