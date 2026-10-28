@@ -113,7 +113,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     (isMapView && pathname === "/map") || pathname === "/volunteer-your-way";
   const heightClass = isDvhLocked
     ? "h-dvh-with-fallback"
-    : pathname === "/survey"
+    : pathname === "/survey" || pathname === "/survey/questions"
       ? "h-auto md:h-dvh-with-fallback"
       : "h-auto";
 
