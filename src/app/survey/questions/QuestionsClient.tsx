@@ -1,8 +1,8 @@
 "use client";
 
-import LoadingState from "./LoadingState";
+import ResultState from "./ResultState";
 
 export default function QuestionsClient() {
-  // TODO: question steps + result state will be added here as a step state machine.
-  return <LoadingState />;
+  // TODO: question steps + loading state will be added here as a step state machine.
+  return <ResultState />;
 }

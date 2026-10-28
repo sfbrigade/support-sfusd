@@ -14,15 +14,28 @@ export default function LoadingState() {
 function DesktopLoadingState() {
   return (
     <section className="relative hidden w-full flex-col items-center overflow-hidden bg-white px-4 py-16 md:flex md:h-full md:bg-[#E9FAFC]">
-      {/* Grass + mascot — scaled to its natural aspect ratio, anchored to the bottom */}
-      <Image
-        src="/survey-page/loading-grass-desktop.svg"
-        alt=""
-        aria-hidden="true"
-        width={1440}
-        height={234}
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-auto w-full"
-      />
+      {/* Grass + mascot — grass scaled to its natural aspect ratio, anchored to the
+          bottom; the mascot is positioned as a percentage of the shared 1440x234
+          canvas so it lines up exactly where it sat in the original combined art */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0">
+        <Image
+          src="/survey-page/grass-bottom.svg"
+          alt=""
+          aria-hidden="true"
+          width={1440}
+          height={234}
+          className="h-auto w-full"
+        />
+        <Image
+          src="/survey-page/loading-orange.svg"
+          alt=""
+          aria-hidden="true"
+          width={150}
+          height={192}
+          className="absolute left-[44.79%] top-0 h-auto w-[10.42%]"
+        />
+      </div>
+
       {/* Clouds — scaled to its own natural aspect ratio, anchored to the top */}
       <Image
         src="/survey-page/loading-clouds-desktop.svg"
@@ -32,7 +45,7 @@ function DesktopLoadingState() {
         height={262}
         className="pointer-events-none absolute inset-x-0 top-12 z-0 h-auto w-full"
       />
-      l
+
       {/* Content — the dots are the anchor: they sit at the exact vertical
           center of the section, with the heading/message positioned relative to them */}
       <div className="absolute left-1/2 top-1/2 z-10 flex w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col items-center px-4 text-center">
