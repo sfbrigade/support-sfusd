@@ -189,11 +189,19 @@ export default function VolunteerYourWayClient() {
         {/* SF skyline background (mobile) — full-bleed, sits below the card */}
         <div className="md:hidden">
           <Image
-            src="/volunteer-your-way/step03-mobile.svg"
-            alt=""
+            src="/volunteer-your-way/step03.png"
+            alt="skyline-image"
             aria-hidden="true"
             width={393}
             height={217}
+            className="h-auto w-full"
+          />
+          <Image
+            src="/volunteer-your-way/step03-mobile-bottom.svg"
+            alt="gress-image"
+            width={393}
+            height={29}
+            aria-hidden="true"
             className="h-auto w-full"
           />
         </div>
