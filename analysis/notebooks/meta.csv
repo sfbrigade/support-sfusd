@@ -1,0 +1,40 @@
+Category,Symbol,Index,Question,Response
+motivation,general_support,0,Why are you interested in volunteering in SF public schools?,I generally support public education
+motivation,local_school,1,Why are you interested in volunteering in SF public schools?,I live nearby and would like to help a local school
+motivation,alumni,2,Why are you interested in volunteering in SF public schools?,I'm an alumni
+motivation,current_parent,3,Why are you interested in volunteering in SF public schools?,I'm a parent or guardian of a current student
+motivation,alumni_parent,4,Why are you interested in volunteering in SF public schools?,I'm a parent or guardian of an alumni
+motivation,share_skills,5,Why are you interested in volunteering in SF public schools?,There are specific skills I'm interested in sharing with students
+interests,stem,6,What types of volunteer opportunities are you interested in helping with?,AI / Computer Science / STEM
+interests,career,7,What types of volunteer opportunities are you interested in helping with?,Career / College Prep
+interests,mentorship,8,What types of volunteer opportunities are you interested in helping with?,Mentorship / Mindfulness
+interests,event,9,What types of volunteer opportunities are you interested in helping with?,"Event Volunteering (field trips, festivals, etc.)"
+interests,gardening,10,What types of volunteer opportunities are you interested in helping with?,Gardening
+interests,reading,11,What types of volunteer opportunities are you interested in helping with?,Reading and Writing tutoring
+interests,remote_friendly,12,What types of volunteer opportunities are you interested in helping with?,"Remote friendly options (website, translation, etc.)"
+interests,maintenance,13,What types of volunteer opportunities are you interested in helping with?,School Maintenance
+interests,sports,14,What types of volunteer opportunities are you interested in helping with?,Sports
+interests,other,15,What types of volunteer opportunities are you interested in helping with?,Other
+grade,elementary,16,What grade levels are you interested in supporting?,Elementary (K-5)
+grade,middle,17,What grade levels are you interested in supporting?,Middle (6-8)
+grade,high,18,What grade levels are you interested in supporting?,High (9-12)
+student_contact,direct_1to1,19,How closely do you want to work with students?,Directly with students 1:1
+student_contact,classroom,20,How closely do you want to work with students?,Directly with students in a classroom setting
+student_contact,behind_scenes,21,How closely do you want to work with students?,"Behind the scenes support for the school or support organization (admin tasks, fundraising, translation)"
+student_contact,other,22,How closely do you want to work with students?,Other
+availability,weekday_morning_ip,23,When are you interested in volunteering?,"Mon-Fri 8am-3pm, in person"
+availability,weekday_afternoon_ip,24,When are you interested in volunteering?,"Mon-Fri 3-6pm, in person"
+availability,weekday_morning_remote,25,When are you interested in volunteering?,"Mon-Fri 8am-3pm, remote"
+availability,weekday_afternoon_remote,26,When are you interested in volunteering?,"Mon-Fri 3-6pm, remote"
+availability,weekends_ip,27,When are you interested in volunteering?,Weekends in person
+availability,weekday_evening,28,When are you interested in volunteering?,Weekdays after 6pm
+availability,flexible_schedule,29,When are you interested in volunteering?,I'm flexible
+frequency,weekly,30,How often are you interested in volunteering?,Weekly
+frequency,occasionally,31,How often are you interested in volunteering?,Occasionally
+frequency,unsure,32,How often are you interested in volunteering?,Not sure yet
+specific,specific_school,33,Is there a specific school or neighborhood you are interested in?,Specific school
+specific,specific_neighborhood,34,Is there a specific school or neighborhood you are interested in?,Specific neighborhood
+specific,priority_school,35,Is there a specific school or neighborhood you are interested in?,I'm open to volunteering at a Priority School
+contact,name,36,Provide your contact info so we can help you find the right fit.,Name
+contact,email,37,Provide your contact info so we can help you find the right fit.,Email
+contact,phone,38,Provide your contact info so we can help you find the right fit.,Phone
