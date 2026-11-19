@@ -180,10 +180,13 @@ export default function AboutClient() {
         </h1>
         <Image
           src="/about-graphic.png"
-          alt="Arrow Icon"
+          alt="Support SF Schools illustration"
           className="w-10/12 lg:w-6/12"
-          width={240}
-          height={240}
+          width={2737}
+          height={930}
+          // Keep in sync with md:px-36 on the parent and the w-10/12 / lg:w-6/12 widths
+          sizes="(min-width: 1024px) calc(50vw - 144px), (min-width: 768px) calc(83.33vw - 240px), 83.33vw"
+          priority
         />
       </div>
       <div className="mx-auto flex max-md:px-8 md:w-5/6 lg:w-4/6">
